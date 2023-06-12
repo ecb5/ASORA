@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Joseph Fourier and His Series</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="Interegnum.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="Interegnum.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="FindingAnswers.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
+<li><div class="toc-item"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
+<li><div class="toc-item"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
+<li><div class="toc-item"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
+<li><div class="toc-item"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
+<ul class="structural"><li>
+<div class="toc-item"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
+<ul class="structural"><li class="active"><div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
+</li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
+<li><div class="toc-item"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
+<li><div class="toc-item"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
+<li><div class="toc-item"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
+<li><div class="toc-item"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
+<li><div class="toc-item"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
+<li>
+<div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#subsection-4" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
+<li><div class="toc-item"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
+<li><div class="toc-item"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Epilogues-NatureNumbers.html#subsection-5" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
+<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
+<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="section-11"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span>
+</h2>
+<div class="para" id="p-411">Applying mathematics to physical problems such as heat flow in a solid body drew much attention in the latter part of the 1700’s and the early part of the 1800’s. One of the people to attack the heat flow problem was</div>
+<figure class="figure figure-like" id="figure-26"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Fourier.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.1.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Fourier/" target="_blank">Jean Baptiste Joseph Fourier</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 13 </sup></a></figcaption></figure><div class="para" id="p-412"> Jean Baptiste Joseph Fourier.  Fourier submitted a manuscript on the subject, <i class="foreign">Sur la propagation de la chaleur</i> (<em class="emphasis">On the Propagation of Heat</em>), to the <i class="foreign">Institut National des Sciences et des Arts</i> in 1807.  These ideas were subsequently published in <i class="foreign">La theorie analytique de la chaleur</i> (<em class="emphasis">The Analytic Theory of Heat (1822)</em>).</div>
+<div class="para logical" id="p-413">
+<div class="para">To examine Fourier’s ideas, consider the example of a thin wire of length one, which is perfectly insulated and whose endpoints are held at a fixed temperature of zero. Given an initial temperature distribution in the wire, the problem is to monitor the temperature of the wire at any point <span class="process-math">\(x\)</span> and at any time <span class="process-math">\(t\text{.}\)</span> Specifically, if we let <span class="process-math">\(u(x,t)\)</span> denote the temperature of the wire at point <span class="process-math">\(x\in[0,1]\)</span> at time <span class="process-math">\(t\geq 0\text{,}\)</span> then it can be shown that <span class="process-math">\(u\)</span> must satisfy the one-dimensional heat equation <span class="process-math">\(\rho^2\frac{\partial^2u}{\partial x^2}=\frac{\partial u}{\partial t}\text{,}\)</span> where <span class="process-math">\(\rho^2\)</span> is a positive constant known as the thermal diffusivity. If the initial temperature distribution is given by the function <span class="process-math">\(f(x)\text{,}\)</span> then the <span class="process-math">\(u\)</span> we are seeking must satisfy all of the following</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho^2\frac{\partial^2u}{\partial x^2}=\frac{\partial u}{\partial t}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="md-34">
+\begin{align*}
+u(0,t)\amp =u(1,t)=0,\ \ \forall\,t\geq 0\\
+u(x,0)\amp =f(x),\ \ \forall\,x\in[\,0,1]\text{.}
+\end{align*}
+</div>
+</div>
+<div class="para logical" id="p-414">
+<div class="para">To solve this, Fourier employed what is now referred to as Fourier’s method of separation of variables. Specifically, Fourier looked for solutions of the form <span class="process-math">\(u(x,t)=X(x)T(t)\text{;}\)</span> that is, solutions where the <span class="process-math">\(x\)</span>-part can be separated from the <span class="process-math">\(t\)</span>-part. Assuming that <span class="process-math">\(u\)</span> has this form, we get <span class="process-math">\(\frac{\partial^2u}{\partial x^2}=X^{\prime\prime}T\)</span> and <span class="process-math">\(\frac{\partial u}{\partial t}=X\,T^{\prime}\text{.}\)</span> Substituting these into the differential equation <span class="process-math">\(\rho^2\frac{\partial^2u}{\partial x^2}=\frac{\partial u}{\partial t}\text{,}\)</span> we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho^2X^{\prime\prime}T=X T^\prime\text{  or  } \frac{X^{\prime\prime}}{X}=\frac{T^\prime}{\rho^2T}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-415">
+<div class="para">Since the left-hand side involves no <span class="process-math">\(t\)</span>’s and the right-hand side involves no <span class="process-math">\(x\)</span>’s, both sides must equal a constant <span class="process-math">\(k\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X^{\prime\prime}=k X\text{ and } T^\prime=\rho^2k T\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="problem example-like" id="prob_HarmonicMotion"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.1.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-416"> Show that <span class="process-math">\(T=Ce^{\rho^2kt}\)</span> satisfies the equation <span class="process-math">\(T^\prime=\rho^2k T\text{,}\)</span> where <span class="process-math">\(C\text{,}\)</span> and <span class="process-math">\(\rho\)</span> are arbitrary constants. Use the physics of the problem to show that if <span class="process-math">\(u\)</span> is not constantly zero, then <span class="process-math">\(k\lt 0\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><div class="para" id="p-417">Consider <span class="process-math">\(\lim_{t\rightarrow\infty}u(x,t)\text{.}\)</span>
+</div></div></div>
+</div></article><div class="para" id="p-418">Using the result from <a href="" class="xref" data-knowl="./knowl/prob_HarmonicMotion.html" title="Problem 6.1.2">problem 6.1.2</a> that <span class="process-math">\(k\lt 0\text{,}\)</span> we will let <span class="process-math">\(k=-p^2\text{.}\)</span>
+</div>
+<article class="problem example-like" id="problem-48"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.1.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-419"> Show that <span class="process-math">\(X=A\sin\left(px\right)+B\cos\left(px\right)\)</span> satisfies the equation <span class="process-math">\(X\,''=-p^2X\text{,}\)</span> where <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are arbitrary constants. Use the boundary conditions <span class="process-math">\(u(0,t)=u(1,t)=0\text{,}\)</span> <span class="process-math">\(\forall\,t\geq 0\)</span> to show that <span class="process-math">\(B=0\)</span> and <span class="process-math">\(A\sin p=0\text{.}\)</span> Conclude that if <span class="process-math">\(u\)</span> is not constantly zero, then <span class="process-math">\(p=n\pi\text{,}\)</span> where <span class="process-math">\(n\)</span> is any integer.</div></article><article class="problem example-like" id="problem-49"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.1.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-420"></div> <div class="para" id="p-421">Show that if <span class="process-math">\(u_1\)</span> and <span class="process-math">\(u_2\)</span> satisfy the equations <span class="process-math">\(\rho^2\frac{\partial^2u}{\partial x^2}=\frac{\partial
+u}{\partial t}\)</span> and <span class="process-math">\(u(0,t)=u(1,t)=0, \forall\,t\geq
+0\)</span> then <span class="process-math">\(u=A_1u_1+A_2u_2\)</span> satisfy these as well, where <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\)</span> are arbitrary constants.</div></article><div class="para logical" id="p-422">
+<div class="para"> Putting all of these results together, Fourier surmised that the general solution to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\rho^2\frac{\partial^2u}{\partial x^2}=\frac{\partial u}{\partial t} u(0,t)=u(1,t)=0, \,\forall\,t\geq 0
+\end{equation*}
+</div>
+<div class="para">could be expressed as the series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+u(x,t)=\sum_{n=1}^\infty A_ne^{-(\rho n\pi)^2t}\sin\left(n\pi x\right)\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-423">
+<div class="para">All that is left is to have <span class="process-math">\(u\)</span> satisfy the initial condition <span class="process-math">\(u(x,0)=f(x)\text{,}\)</span> <span class="process-math">\(\forall\,x\in[\,0,1]\text{.}\)</span> That is, we need to find coefficients <span class="process-math">\(A_n\text{,}\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=u(x,0)=\sum_{n=1}^\infty A_n\sin\left(n\pi x\right)\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-424">The idea of representing a function as a series of sine waves was proposed by Daniel Bernoulli in 1753 while examining the problem of modeling a vibrating string. Unfortunately for Bernoulli, he didn’t know how to compute the coefficients in such a series representation. What distinguished Fourier was that he developed a technique to compute these coefficients. The key is the result of the following problem.</div>
+<article class="problem example-like" id="prob_SinOrthogonality"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.1.5</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-425">
+<div class="para"> Let <span class="process-math">\(n\)</span> and <span class="process-math">\(m\)</span> be positive integers. Show</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{x=0}^1\sin\left(n\pi x\right)\sin\left(m\pi x\right)\dx{ x}= \left\{\begin{matrix}0\amp \text{ if } n\neq m\\ \frac{1}{2}\amp \text{ if } n=m \end{matrix} \right.. {}
+\end{equation*}
+</div>
+</div></article><div class="para logical" id="p-426">
+<div class="para">Armed with the result from <a href="" class="xref" data-knowl="./knowl/prob_SinOrthogonality.html" title="Problem 6.1.5">Problem 6.1.5</a>,  Fourier could compute the coefficients <span class="process-math">\(A_n\)</span> in the series representation <span class="process-math">\(f(x)=\sum_{n=1}^\infty A_n \sin\left(n\pi x\right)\)</span> in the following manner. Since we are trying to find <span class="process-math">\(A_n\)</span> for a particular (albeit general) <span class="process-math">\(n\text{,}\)</span> we will temporarily change the index in the summation from <span class="process-math">\(n\)</span> to <span class="process-math">\(j\text{.}\)</span> With this in mind, consider</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob_SinOrthogonality.html" id="md-35">
+\begin{align*}
+\int_{x=0}^1f(x)\sin\left(n\pi x\right)\dx{ x} \amp =\int_{x=0}^1\left(\sum_{j=1}^\infty A_j\text{ sin } \left(j\pi x\right)\right)\sin\left(n\pi x\right)\dx{ x}\\
+\amp =\sum_{j=1}^\infty A_j\int_{x=0}^1\sin\left(j\pi x\right)\sin\left(n\pi x\right)\dx{ x}\\
+\amp =A_n\cdot\frac{1}{2}
+\end{align*}
+</div>
+</div>
+<div class="para" id="p-427">This leads to the formula <span class="process-math">\(A_n=2\int_{x=0}^1f(x)\sin\left(n\pi x\right)d x\text{.}\)</span>
+</div>
+<div class="para" id="p-428">The above series <span class="process-math">\(f(x)=\sum_{n=1}^\infty A_n\sin\left(n\pi x\right)\)</span> with <span class="process-math">\(A_n=2\int_{x=0}^1f(x)\sin\left(n\pi x\right)\dx{ x}\)</span> is called the <em class="emphasis">Fourier (sine) series of <span class="process-math">\(\boldsymbol{f}\)</span></em>.</div>
+<article class="example example-like" id="example-2"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.1.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-429">Let’s apply this to the following function, <span class="process-math">\(f(x)=\frac{1}{2}-\abs{x-\frac{1}{2}}\text{,}\)</span> whose graph of this function is seen below.</div> <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/FourierEx1.png" class="contained"></div></article><article class="problem example-like" id="problem-51"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.1.7</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-430">
+<div class="para"> Let <span class="process-math">\(n\)</span> be a positive integer. Show that if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=\frac{1}{2}-\abs{x-\frac{1}{2}}
+\end{equation*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{x=0}^1f(x)\sin\left(n\pi x\right)d x = \frac{2}{\left(n\pi\right)^2}\sin\left(\frac{n\pi}{2}\right)
+\end{equation*}
+</div>
+<div class="para">and show that the Fourier sine series of <span class="process-math">\(f\)</span> is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=\sum_{n=1}^\infty\frac{4}{\left(n\pi\right)^2}\sin\left(\frac{n\pi}{2} \right)\sin\left(n\pi x\right)=\frac{4}{\pi^2}\sum_{k=0}^\infty\frac{\left(-1\right)^k}{\left(2k+1\right)^2}\sin\left(\left(2k+1\right)\pi x\right).{}
+\end{equation*}
+</div>
+</div></article><div class="para logical" id="p-431">
+<div class="para">To check if this series really does, in fact, represent <span class="process-math">\(f\)</span> on <span class="process-math">\([0,1]\text{,}\)</span> let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S_N(x)=\frac{4}{\pi^2}\sum_{k=0}^N\frac{\left(-1\right)^k}{\left(2k+1\right)^2} \sin\left(\left(2k+1\right)\pi x\right)
+\end{equation*}
+</div>
+<div class="para">be the <span class="process-math">\(N^{th}\)</span> partial sum of the series and use the graphing tool below to view the graph of <span class="process-math">\(S_N(x)\)</span> for several values of <span class="process-math">\(N\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="p-432">That is, <span class="process-math">\(S_N\)</span> denotes the <span class="process-math">\(N^{th}\)</span> partial sum of the series. We will graph <span class="process-math">\(S_N\)</span> for <span class="process-math">\(N=1,\,2,\,5,\,50\text{.}\)</span>
+</div>
+<div class="para" id="p-433">                           </div>
+<figure class="figure figure-like" id="figure-27"><iframe src="https://www.desmos.com/calculator/jp8nvhadqk" id="interactive-1" width="750" height="375"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.1.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para logical" id="p-434">
+<div class="para">As you can see, it appears that as we add more terms to the partial sum, <span class="process-math">\(S_N\text{,}\)</span> it looks more and more like the original function <span class="process-math">\(f(x)=\frac{1}{2}-\abs{x-\frac{1}{2}}\text{.}\)</span> This would lead us to believe that the series converges to the function and that</div>
+<div class="displaymath process-math" id="PDE_sol">
+\begin{equation}
+f(x)=\frac{4}{\pi^2}\sum_{k=0}^\infty\frac{\left(-1\right)^k}{\left(2k+1\right)^2}\sin\left(\left(2k+1\right)\pi x\right)\text{.}\tag{1}
+\end{equation}
+</div>
+<div class="para">is a valid representation of <span class="process-math">\(f\)</span> as a Fourier series.</div>
+</div>
+<div class="para" id="p-435">Recall, that when we represented a function as a power series, we freely differentiated and integrated the series term by term as though it was a polynomial. Let’s do the same with this Fourier series.</div>
+<div class="para logical" id="p-436">
+<div class="para">To start, notice that the derivative of</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=\frac{1}{2}-\abs{x-\frac{1}{2}}
+\end{equation*}
+</div>
+<div class="para">is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^\prime(x) = \begin{cases}1\amp \text{ if } \,\text{ } 0\leq x\lt \frac{1}{2}\\ -1\amp \text{ if } \,\frac{1}{2}\lt x\leq 1 \end{cases} \text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-437">This derivative does not exist at <span class="process-math">\(x=\frac{1}{2}\)</span> and its graph is given by</div>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/Ch2fig1.png" class="contained"></div>
+<div class="para logical" id="p-438">
+<div class="para">If we differentiate the Fourier series term-by-term, we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{4}{\pi}\sum_{k=0}^\infty\frac{\left(-1\right)^k}{\left(2k+1\right)} \cos\left(\left(2k+1\right)\pi x\right)\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-439">Again, if we let <span class="process-math">\(C_N(x)=\frac{4}{\pi}\sum_{k=0}^N\frac{\left(-1\right)^k}{\left(2k+1\right)} \cos\left(\left(2k+1\right)\pi x\right)\)</span> be the <span class="process-math">\(N^{th}\)</span> partial sum of this Fourier cosine series and plot <span class="process-math">\(C_N(x)\)</span> for <span class="process-math">\(N=1,2,5,50\text{,}\)</span> we obtain</div>
+<figure class="figure figure-like" id="figure-28"><iframe src="https://www.desmos.com/calculator/0qatde8f0w" id="interactive-2" width="750" height="375"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.1.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-440">In fact, if we were to graph the series <span class="process-math">\(\frac{4}{\pi}\sum_{k=0}^\infty\frac{\left(-1\right)^k}{\left(2k+1\right)}\)</span> cos<span class="process-math">\(\left(\left(2k+1\right)\pi x\right)\text{,}\)</span> we would obtain</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;"><div class="sbspanel middle" style="width:100%;"><img src="external/images/FourierEx10.png" class="contained"></div></div></div>
+<div class="para" id="p-441">Notice that this agrees with the graph of <span class="process-math">\(f^\prime\text{,}\)</span> except that <span class="process-math">\(f^\prime\)</span> didn’t exist at <span class="process-math">\(x=\frac{1}{2}\text{,}\)</span> and this series takes on the value <span class="process-math">\(0\)</span> at <span class="process-math">\(x=\frac{1}{2}\text{.}\)</span> Notice also, that every partial sum of this series is continuous, since it is a finite combination of continuous cosine functions. This agrees with what you learned in calculus, the (finite) sum of continuous functions is always continuous. In the 1700’s, this was also assumed to be true for infinite series, because every time a power series converged to a function, that function happened to be continuous. This never failed for power series, so this example was a bit disconcerting as it is an example of the sum of <em class="emphasis">infinitely many</em> continuous functions which is, in this case, discontinuous. Was it possible that there was some power series which converged to a function which was not continuous? Even if there wasn’t, what was the difference between power series and this Fourier series?</div>
+<div class="para logical" id="p-442">
+<div class="para">Even more disconcerting is what happens if we try differentiating the series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{4}{\pi}\sum_{k=0}^\infty\frac{\left(-1\right)^k}{\left(2k+1\right)} \cos\left(\left(2k+1\right)\pi x\right)
+\end{equation*}
+</div>
+<div class="para">term-by-term. Given the above graph of this series, the derivative of it should be constantly 0, except at <span class="process-math">\(x=\frac{1}{2}\text{,}\)</span> where the derivative wouldn’t exist. Using the old adage that the derivative of a sum is the sum of the derivatives, we differentiate this series term-by-term to obtain the series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+4\sum_{k=0}^\infty\left(-1\right)^{k+1}\sin\left(\left(2k+1\right)\pi x\right)\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-443">If we sum the first forty terms of this series, we get <figure class="figure figure-like" id="figure-29"><iframe src="https://www.desmos.com/calculator/pvcgqtqso6" id="interactive-3" width="750" height="375"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.1.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure>
+</div>
+<div class="para" id="p-444">We knew that there might be a problem at <span class="process-math">\(x=\frac{1}{2}\)</span> but this is crazy! The series seems to not be converging to zero at all!</div>
+<article class="problem example-like" id="prob_FourierDiverge"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.1.11</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-445">
+<div class="para"> Show that when <span class="process-math">\(x=\frac{1}{4}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+4\sum_{k=0}^\infty\left(-1\right)^{k+1} \sin\left(\left(2k+1\right)\pi x\right)=4\left(-\frac{1}{\sqrt{2}}+\frac{1}{\sqrt{2}}+\frac{1}{\sqrt{2}}- \frac{1}{\sqrt{2}}-\frac{1}{\sqrt{2}}+\cdots\right)\text{.}
+\end{equation*}
+</div>
+</div></article><div class="para logical" id="p-446">
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/prob_FourierDiverge.html" title="Problem 6.1.11">Problem 6.1.11</a> shows that when we differentiate the series</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob_FourierDiverge.html">
+\begin{equation*}
+\frac{4}{\pi}\sum_{k=0}^\infty\frac{\left(-1\right)^k}{\left(2k+1\right)} \cos\left(\left(2k+1\right)\pi x\right)
+\end{equation*}
+</div>
+<div class="para">term by term, this differentiated series doesn’t converge to anything at <span class="process-math">\(x=\frac{1}{4}\text{,}\)</span> let alone converge to zero. In this case, the old calculus rule that the derivative of a sum is the sum of the derivatives does not apply for this infinite sum, though it did apply before. As if the continuity issue wasn’t bad enough before, this was even worse. Power series were routinely differentiated and integrated term-by-term. This was part of their appeal. They were treated like “infinite polynomials.” Either there is some power series lurking that refuses to behave nicely, or there is some property that power series have that not all Fourier series have.</div>
+</div>
+<div class="para" id="p-447">Could it be that everything we did in <a href="PowerSeriesQuestions.html" class="internal" title="Chapter 5: Questions Concerning Power Series">Chapter 5</a> was bogus?</div>
+<div class="para" id="p-448">Fortunately, the answer to that question is no. Power series are generally much more well-behaved than Fourier series. Whenever a power series converges, the function it converges to will be continuous. As long as one stays inside the interval of convergence, power series can be differentiated and integrated term-by-term. Power series have something going for them that your average Fourier series does not. (We need to develop the machinery to know what that something is.) None of this is any more obvious to us than it was to mathematicians at the beginning of the nineteenth century. What they did know was that relying on intuition was perilous and rigorous formulations were needed to either justify or dismiss these intuitions. In some sense, the nineteenth century was the “morning after” the mathematical party that went on throughout the eighteenth century.</div>
+<article class="problem example-like" id="prob_Fourier_Series-orthogonality"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.1.12</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-449">
+<div class="para"> Let <span class="process-math">\(n\)</span> and <span class="process-math">\(m\)</span> be positive integers. Show</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{x=0}^1\cos\left(n\pi x\right)\cos\left(m\pi x\right)\dx{ x}=\left\{ \begin{matrix}0\amp \text{ if } n\neq m\\ \frac{1}{2}\amp \text{ if } n=m \end{matrix} \right.\text{.}
+\end{equation*}
+</div>
+</div></article><article class="problem example-like" id="prob_fouriercoef"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.1.13</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-450">
+<div class="para"> Use the result of <a href="" class="xref" data-knowl="./knowl/prob_Fourier_Series-orthogonality.html" title="Problem 6.1.12">Problem 6.1.12</a> to show that if</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob_Fourier_Series-orthogonality.html">
+\begin{equation*}
+f(x)=\sum_{n=1}^\infty B_n\cos\left(n\pi x\right)
+\end{equation*}
+</div>
+<div class="para">on <span class="process-math">\([0,1]\text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob_Fourier_Series-orthogonality.html">
+\begin{equation*}
+B_m=2\int_{x=0}^1f(x)\cos\left(m\pi x\right)\dx{ x}.{}
+\end{equation*}
+</div>
+</div></article><article class="problem example-like" id="problem-55"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.1.14</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-451">
+<div class="para"> Apply the result of <a href="" class="xref" data-knowl="./knowl/prob_fouriercoef.html" title="Problem 6.1.13">Problem 6.1.13</a> to show that the Fourier cosine series of <span class="process-math">\(f(x)=x-\frac{1}{2}\)</span> on <span class="process-math">\([0,1]\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob_fouriercoef.html">
+\begin{equation*}
+\frac{-4}{\pi^2}\sum_{k=0}^\infty\frac{1}{\left(2k+1\right)^2}\cos \left((2k+1)\pi x\right)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-452">Let <span class="process-math">\(C(x,N)=\frac{-4}{\pi^2}\sum_{k=0}^N\frac{1}{\left(2k+1\right)^2}\cos \left((2k+1)\pi x\right)\)</span> and plot <span class="process-math">\(C(x,N)\)</span> for <span class="process-math">\(N=1,2,5,50\)</span> <span class="process-math">\(x\in[\,0,1]\text{.}\)</span> How does this compare to the function <span class="process-math">\(f(x)=x-\frac{1}{2}\)</span> on <span class="process-math">\([\,0,1]\text{?}\)</span> What if you plot it for <span class="process-math">\(x\in[\,0,2]?\)</span>
+</div></article><article class="problem example-like" id="problem-56"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.1.15</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="task-51"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="p-453">
+<div class="para">Differentiate the series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{-4}{\pi^2}\sum_{k=0}^\infty\frac{1}{\left(2k+1\right)^2}\cos \left((2k+1)\pi x\right)
+\end{equation*}
+</div>
+<div class="para">term by term and plot various partial sums for that series on <span class="process-math">\([\,0,1]\text{.}\)</span> How does this compare to the derivative of <span class="process-math">\(f(x)=x-\frac{1}{2}\)</span> on that interval?</div>
+</div></article><article class="task exercise-like" id="task-52"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-454">Differentiate the series you obtained in part a and plot various partial sums of that on <span class="process-math">\([\,0,1]\text{.}\)</span> How does this compare to the second derivative of <span class="process-math">\(f(x)=x-\frac{1}{2}\)</span> on that interval?</div></article></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Fourier/</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="Interegnum.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="FindingAnswers.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

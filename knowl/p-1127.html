@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Suppose <span class="process-math">\(f_1, f_2, f_3, f_4 \ldots\)</span> are all continuous at <span class="process-math">\(a\)</span> and that <span class="process-math">\(\sum_{n=1}^\infty f_n=f\text{.}\)</span> Let <span class="process-math">\(\eps&gt;0\text{.}\)</span> Since <span class="process-math">\(f_n\)</span> is continuous at <span class="process-math">\(a,\)</span> we can choose <span class="process-math">\(\delta_n&gt;0\)</span> such that if <span class="process-math">\(\abs{x-a}\lt \delta_n,\)</span> then <span class="process-math">\(\abs{f_n(x)-f_n(a)}\lt \frac{\eps}{2^n}\text{.}\)</span> Let <span class="process-math">\(\delta=\inf(\delta_1,\delta_2,\delta_3,\ldots)\text{.}\)</span> If <span class="process-math">\(\abs{x-a}\lt \delta\)</span> then</div>
+<div class="displaymath process-math">
+\begin{align*}
+\abs{f(x)-f(a)} \amp =  \abs{\sum_{n=1}^\infty f_n(x)  -  \sum_{n=1}^\infty f_n(a) }\\
+\amp = \abs{\sum_{n=1}^\infty \left(f_n(x)-f_n(a)\right) }\\
+\amp \le \sum_{n=1}^\infty \abs{f_n(x)-f_n(a) }\\
+\amp \le \sum_{n=1}^\infty \frac{\eps}{2^n}\\
+\amp \le \eps\sum_{n=1}^\infty \frac{1}{2^n}\\
+\amp =   \eps\text{.}
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="PowerSeriesRedux-UnifConv.html#p-1127" class="internal">in-context</a></span>
+</body>
+</html>

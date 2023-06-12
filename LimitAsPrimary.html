@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Limit as a Primary Tool</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="SeqRealNum.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="Convergence.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="DivergentSeq.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
+<li><div class="toc-item"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
+<li><div class="toc-item"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
+<li><div class="toc-item"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
+<li><div class="toc-item"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
+<ul class="structural"><li>
+<div class="toc-item"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
+</li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
+<li><div class="toc-item"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
+<li><div class="toc-item"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
+<li><div class="toc-item"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
+<li><div class="toc-item"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
+<li><div class="toc-item"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
+<li>
+<div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#subsection-4" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
+<li><div class="toc-item"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
+<li><div class="toc-item"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Epilogues-NatureNumbers.html#subsection-5" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
+<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
+<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="LimitAsPrimary"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span>
+</h2>
+<div class="para" id="p-525">As you’ve seen from the previous sections, the formal definition of the convergence of a sequence is meant to capture rigorously our intuitive understanding of convergence. However, the definition itself is an unwieldy tool. If only there was a way to be rigorous without having to run back to the definition each time. Fortunately, there is a way. If we can use the definition to prove some general rules about limits then we could use these rules whenever they applied and be assured that everything was still rigorous. A number of these should look familiar from calculus.</div>
+<article class="problem example-like" id="problem-65"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-526"> Let <span class="process-math">\(\left(c\right)_{n=1}^\infty=(c,c,c,\ldots)\)</span> be a constant sequence. Show that <span class="process-math">\(\lim_{n\rightarrow\infty}c=c\text{.}\)</span>
+</div></article><div class="para" id="p-527">In proving the familiar limit theorems, the following will prove to be a very useful tool.</div>
+<article class="lemma theorem-like" id="Tri-RevTri-Ineq"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-528"><dl class="description-list">
+<dt id="TriangleIneq">Triangle Inequality:</dt>
+<dd><div class="para logical" id="p-529">
+<div class="para">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be real numbers. Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|a+b|\leq|a|+|b|\text{.}
+\end{equation*}
+</div>
+</div></dd>
+<dt id="InvTriangleIneq">Reverse Triangle Inequality:</dt>
+<dd><div class="para logical" id="p-530">
+<div class="para">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be real numbers. Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|a|-|b|\leq\abs{a-b} {}
+\end{equation*}
+</div>
+</div></dd>
+</dl></div></article><article class="problem example-like" id="Tri-RevTri-Ineq_prob"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="task-59"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-531">Prove <a href="" class="xref" data-knowl="./knowl/Tri-RevTri-Ineq.html" title="Lemma 7.2.2">Lemma 7.2.2</a>.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like"><div class="para" id="p-532">For the Reverse Triangle Inequality, consider <span class="process-math">\(|a|=|a-b+b|\text{.}\)</span>
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-60"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-533">Show <span class="process-math">\(||a|-|b||\leq|a-b|\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-14" id="hint-14"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-14"><div class="hint solution-like"><div class="para" id="p-534">You want to show <span class="process-math">\(|a|-|b|\leq|a-b|\)</span> and <span class="process-math">\(-(|a|-|b|)\leq|a-b|\text{.}\)</span>
+</div></div></div>
+</div></article></article><article class="theorem theorem-like" id="thm_SumOfSequences"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.2.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-535"> If <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}a_n=a\)</span> and <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}b_n=b\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\left(a_n+b_n\right)=a+b\text{.}\)</span>
+</div></article><div class="para" id="p-536">We will often informally state this theorem as “the limit of a sum is the sum of the limits.” However, to be absolutely precise, what it says is that if we already know that two sequences converge, then the sequence formed by summing the corresponding terms of those two sequences will converge and, in fact, converge to the sum of those individual limits. We’ll provide the scrapwork for the proof of this and leave the formal write-up as an exercise. Note the use of the triangle inequality in the proof.</div>
+<div class="para" id="p-537"></div>
+<article class="problem example-like" id="problem-67"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-538"> Prove <a href="" class="xref" data-knowl="./knowl/thm_SumOfSequences.html" title="Theorem 7.2.4">Theorem 7.2.4</a>.</div> <div class="para" id="p-539"><dfn class="terminology">SCRAPWORK:</dfn></div> <div class="para logical" id="p-540">
+<div class="para">If we let <span class="process-math">\(\eps&gt;0\text{,}\)</span> then we want <span class="process-math">\(N\)</span> so that if <span class="process-math">\(n&gt;N\text{,}\)</span> then <span class="process-math">\(\big|\left(a_n+b_n\right)-\left(a+b\right)\big|\lt \eps\text{.}\)</span> We <em class="emphasis">know</em> that <span class="process-math">\(\limit{n}{\infty}{a_n}=a\)</span> and <span class="process-math">\(\limit{n}{\infty}{b_n}=b\text{,}\)</span> so we can make <span class="process-math">\(\big|a_n-a\big|\)</span> and  <span class="process-math">\(\big|b_n-b\big|\)</span> as small as we wish, provided we make <span class="process-math">\(n\)</span> large enough. Let’s go back to what we want, to see if we can close the gap between what we know and what we want.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left|\left(a_n+b_n\right)-\left(a+b\right)\right|=\left|\left(a_n-a\right)+\left(b_n-b\right)\right|\leq\left|a_n-a\right|+\left|b_n-b\right|
+\end{equation*}
+</div>
+<div class="para">by the triangle inequality. To make this whole thing less than <span class="process-math">\(\eps\text{,}\)</span> it makes sense to make each part less than <span class="process-math">\(\frac{\eps}{2}\text{.}\)</span> it makes sense to make each part less than <span class="process-math">\(\frac{\eps}{2}\text{.}\)</span> Fortunately, we can do that as the definitions of <span class="process-math">\(\limit{n}{\infty}{a_n}=a\)</span> and <span class="process-math">\(\limit{n}{\infty}{b_n}=b\)</span> allow us to make <span class="process-math">\(\big|a_n-a\big|\)</span> and <span class="process-math">\(\big|b_n-b\big|\)</span> arbitrarily small. Specifically, since <span class="process-math">\(\limit{n}{\infty}{a_n}=a\text{,}\)</span> there exists an <span class="process-math">\(N_1\)</span> such that if <span class="process-math">\(n&gt;N_1\)</span> then <span class="process-math">\(\big|a_n-a\big|\lt \frac{\eps}{2}\text{.}\)</span> Also since <span class="process-math">\(\limit{n}{\infty}{b_n}=b\text{,}\)</span> there exists an <span class="process-math">\(N_2\)</span> such that if <span class="process-math">\(n&gt;N_2\)</span> then <span class="process-math">\(\big|b_n-b\big|\lt \frac{\eps}{2}\text{.}\)</span> Since we want both of these to occur, it makes sense to let <span class="process-math">\(N=\)</span>max<span class="process-math">\(\left(N_1,N_2\right)\text{.}\)</span> This should be the <span class="process-math">\(N\)</span> that we seek.</div>
+</div></article><article class="theorem theorem-like" id="thm_LimitOfProduct"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.2.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-541"> If <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}a_n=a\)</span> and <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}b_n=b\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\left(a_n b_n\right)=a b\text{.}\)</span>
+</div></article><div class="para logical" id="p-542">
+<div class="para">
+<dfn class="terminology">SCRAPWORK:</dfn> Given <span class="process-math">\(\eps&gt;0\text{,}\)</span> we want <span class="process-math">\(N\)</span> so that if <span class="process-math">\(n&gt;N\text{,}\)</span> then <span class="process-math">\(\big|a_n  b_n-a  b\big|\lt \eps\text{.}\)</span> One of the standard tricks in analysis is to “uncancel.” In this case we will subtract and add a convenient term. Normally these would “cancel out,” which is why we say that we will uncancel to put them back in. You already saw an example of this in proving the Reverse Triangle Inequality (<a href="" class="xref" data-knowl="./knowl/Tri-RevTri-Ineq_prob.html" title="Problem 7.2.3">Problem 7.2.3</a>). In the present case, consider</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/Tri-RevTri-Ineq_prob.html" id="md-36">
+\begin{align*}
+\left|a_n  b_n-a  b\right|\amp =\left|a_n  b_n-a_n b+a_n b-a  b\right|\\
+\amp \leq\left|a_n  b_n-a_n  b\right|+\left|a_n b-a b\right|\\
+\amp =\left|a_n\right|\left|b_n-b\right|+\left|b\right|\left|a_n-a\right|\text{.}
+\end{align*}
+</div>
+</div>
+<div class="para" id="p-543">We can make this whole thing less than <span class="process-math">\(\eps\text{,}\)</span> provided we make each term in the sum less than <span class="process-math">\(\frac{\eps}{2}\text{.}\)</span> We can make <span class="process-math">\(\big|b\big|\big|a_n-a\big|\lt \frac{\eps}{2}\)</span> if we make <span class="process-math">\(\big|a_n-a\big|\lt \frac{\eps}{2|b|}\text{.}\)</span> But wait! What if <span class="process-math">\(b=0\text{?}\)</span> We could handle this as a separate case or we can do the following “slick trick.” Notice that we can add one more line to the above string of inequalities: <span class="process-math">\(\left|a_n\right|\left|b_n-b\right|+\left|b\right|\left|a_n-a\right|\lt \left|a_n \right|\left|b_n-b\right|+\left(\left|b\right|+1\right)\left|a_n-a \right|\text{.}\)</span> Now we can make <span class="process-math">\(\left|a_n-a\right|\lt \frac{\eps}{2\left(|b|+1\right)}\)</span> and not worry about dividing by zero.</div>
+<div class="para" id="p-544">Making <span class="process-math">\(\big|a_n\big|\big|b_n-b\big|\lt \frac{\eps}{2}\)</span> requires a bit more finesse. At first glance, one would be tempted to try and make <span class="process-math">\(\big|b_n-b\big|\lt \frac{\eps}{2|a_n|}\text{.}\)</span> Even if we ignore the fact that we could be dividing by zero (which we could handle), we have a bigger problem. According to the definition of <span class="process-math">\(\lim_{n\rightarrow\infty}b_n=b\text{,}\)</span> we can make <span class="process-math">\(\big|b_n-b\big|\)</span> smaller than any given fixed positive number, as long as we make <span class="process-math">\(n\)</span> large enough (larger than some <span class="process-math">\(N\)</span> which goes with a given epsilon). Unfortunately, <span class="process-math">\(\frac{\eps}{2|a_n|}\)</span> is not fixed as it has the variable <span class="process-math">\(n\)</span> in it; there is no reason to believe that a single <span class="process-math">\(N\)</span> will work with all of these simultaneously. To handle this impasse, we need the following:</div>
+<article class="lemma theorem-like" id="lemma_BoundedConvergent"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">7.2.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-545"><em class="alert">A Convergent Sequence Is Bounded.</em></div> <div class="para" id="p-546">If <span class="process-math">\(\lim_{n\rightarrow\infty}a_n=a\text{,}\)</span> then there exists <span class="process-math">\(B&gt;0\)</span> such that <span class="process-math">\(|a_n|\leq B\)</span> for all <span class="process-math">\(n\text{.}\)</span>
+</div></article><article class="problem example-like" id="prob_BoundedConvergent"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.8</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-547">Prove <a href="" class="xref" data-knowl="./knowl/lemma_BoundedConvergent.html" title="Lemma 7.2.7">Lemma 7.2.7</a>.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-15" id="hint-15"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-15"><div class="hint solution-like">
+<div class="para" id="p-548">We know that there exists <span class="process-math">\(N\)</span> such that if <span class="process-math">\(n&gt;N\text{,}\)</span> then <span class="process-math">\(\abs{a_n-a}\lt 1\text{.}\)</span>  Let <span class="process-math">\(B=\)</span>max<span class="process-math">\(\left(\abs{a_1},\abs{a_2},\ldots,\abs{a_{\lceil{N}\rceil}},\abs{a}+1\right)\text{,}\)</span> where <span class="process-math">\(\lceil{N}\rceil\)</span> represents the smallest integer greater than or equal to <span class="process-math">\(N\text{.}\)</span>  Also, notice that this is not a convergence proof so it is not safe to think of <span class="process-math">\(N\)</span> as a large number.</div> <aside class="aside aside-like" id="aside-11"><div class="para" id="p-549">Actually, this is a dangerous habit to fall into even in convergence proofs.</div></aside>
+</div></div>
+</div></article><div class="para logical" id="p-550">
+<div class="para">Armed with this bound <span class="process-math">\(B\text{,}\)</span> we can add on one more inequality to the above scrapwork to get</div>
+<div class="displaymath process-math" id="md-37">
+\begin{align*}
+\left|a_n\cdot b_n-a\cdot b\right|\amp =\left|a_n\cdot b_n-a_n\cdot b+a_n\cdot b-a\cdot b\right|\\
+\amp \leq\left|a_n\cdot b_n-a_n\cdot b\right|+\left|a_n\cdot b-a\cdot b\right|\\
+\amp =\left|a_n\right|\left|b_n-b\right|+\left|b\right|\left|a_n-a\right|\\
+\amp \lt B\left|b_n-b\right|+\left(\left|b\right|+1\right)\left|a_n-a\right|
+\end{align*}
+</div>
+</div>
+<div class="para" id="p-551">At this point, we should be able to make the last line of this less than <span class="process-math">\(\eps\text{.}\)</span>
+</div>
+<div class="para" id="p-552"><dfn class="terminology">END OF SCRAPWORK</dfn></div>
+<article class="problem example-like" id="problem-69"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.9</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-553"> Prove <a href="" class="xref" data-knowl="./knowl/thm_LimitOfProduct.html" title="Theorem 7.2.6">Theorem 7.2.6</a>.</div></article><article class="corollary theorem-like" id="cor_1"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">7.2.10</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-554">(Corollary to <a href="" class="xref" data-knowl="./knowl/thm_LimitOfProduct.html" title="Theorem 7.2.6">Theorem 7.2.6</a>) If <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}a_n=a\)</span> and <span class="process-math">\(c\in\mathbb{R}\text{,}\)</span> then <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}c\cdot a_n=c\cdot a\text{.}\)</span>
+</div></article><article class="problem example-like" id="problem-70"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.11</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-555"> Prove  <a href="" class="xref" data-knowl="./knowl/cor_1.html" title="Corollary 7.2.10">Corollary 7.2.10</a>.</div></article><div class="para" id="p-556">Just as <a href="" class="xref" data-knowl="./knowl/thm_LimitOfProduct.html" title="Theorem 7.2.6">Theorem 7.2.6</a> says that the limit of a product is the product of the limits, we can prove the analogue for quotients.</div>
+<article class="theorem theorem-like" id="thm_LimitOfQuotient"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.2.12</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-557"> Suppose <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}a_n=a\)</span> and <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}b_n=b\text{.}\)</span> Also suppose <span class="process-math">\(b\neq 0\)</span> and <span class="process-math">\(b_n\neq 0,\forall\,n\text{.}\)</span> Then <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\left(\frac{a_n}{b_n}\right)=\frac{a}{b}\text{.}\)</span>
+</div></article><article class="problem example-like" id="problem-71"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.13</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-558"> Prove <a href="" class="xref" data-knowl="./knowl/thm_LimitOfQuotient.html" title="Theorem 7.2.12">Theorem 7.2.12</a>.</div> <div class="para" id="p-559"><dfn class="terminology">SCRAPWORK</dfn></div> <div class="para" id="p-560">To prove this, let’s look at the special case of trying to prove <span class="process-math">\(\lim_{n\rightarrow\infty}\left(\frac{1}{b_n}\right)=\frac{1}{b}\text{.}\)</span> The general case will follow from this and <a href="" class="xref" data-knowl="./knowl/thm_LimitOfProduct.html" title="Theorem 7.2.6">Theorem 7.2.6</a>. Consider <span class="process-math">\(\big|\frac{1}{b_n}-\frac{1}{b}\big|=\frac{|b-b_n|}{|b_n||b|}\text{.}\)</span> We are faced with the same dilemma as before; we need to get <span class="process-math">\(\big|\frac{1}{b_n}\big|\)</span> bounded above. This means we need to get <span class="process-math">\(|b_n|\)</span> bounded away from zero (at least for large enough <span class="process-math">\(n\)</span>).</div> <div class="para" id="p-561">This can be done as follows. Since <span class="process-math">\(b\neq 0\text{,}\)</span> then <span class="process-math">\(\frac{|b|}{2}&gt;0\text{.}\)</span> Thus, by the definition of <span class="process-math">\(\lim_{n\rightarrow\infty}b_n=b\)</span> , there exists <span class="process-math">\(N_1\)</span> such that if <span class="process-math">\(n&gt;N_1\text{,}\)</span> then <span class="process-math">\(|b\mathopen|-|b_n|\leq\big|b-b_n\big|\lt \frac{|b|}{2}\text{.}\)</span> Thus when <span class="process-math">\(n&gt;N_1\text{,}\)</span> <span class="process-math">\(\frac{|b|}{2}\lt |b_n|\)</span> and so <span class="process-math">\(\frac{1}{|b_n|}\lt \frac{2}{|b|}\text{.}\)</span> This says that for <span class="process-math">\(n&gt;N_1\text{,}\)</span> <span class="process-math">\(\frac{|b-b_n|}{|b_n||b|}\lt \frac{2}{|b|^2}|b-b_n|\text{.}\)</span> We should be able to make this smaller than a given <span class="process-math">\(\eps&gt;0\text{,}\)</span> provided we make <span class="process-math">\(n\)</span> large enough.</div></article><div class="para" id="p-562">These theorems allow us to compute limits of complicated sequences and rigorously verify that these are, in fact, the correct limits without resorting to the definition of a limit.</div>
+<article class="problem example-like" id="problem-72"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.14</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-563">
+<div class="para"> Identify all of the theorems implicitly used to show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\frac{3n^3-100n+1}{5n^3+4n^2-7}=\lim_{n \rightarrow\infty}\frac{n^3\left(3-\frac{100}{n^2}+\frac{1}{n^3}\right)}{n^3 \left(5+\frac{4}{n}-\frac{7}{n^3}\right)}=\frac{3}{5}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-564">Notice that this presumes that all of the individual limits exist. This will become evident as the limit is decomposed.</div></article><div class="para" id="p-565">There is one more tool that will prove to be valuable.</div>
+<article class="theorem theorem-like" id="thm_SqueezeTheorem"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.2.15</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-566"><dfn class="terminology">Squeeze Theorem for Sequences</dfn></div> <div class="para" id="p-567">Let <span class="process-math">\(\left(r_n\right),\left(s_n\right)\text{,}\)</span> and <span class="process-math">\(\left(t_n\right)\)</span> be sequences of real numbers with <span class="process-math">\(r_n\leq s_n\leq t_n,\forall\)</span> positive integers <span class="process-math">\(n\text{.}\)</span> Suppose <span class="process-math">\(\lim_{n\rightarrow\infty}r_n=s=\lim_{n\rightarrow\infty}t_n\text{.}\)</span> Then <span class="process-math">\(\left(s_n\right)\)</span> must converge and <span class="process-math">\(\lim_{n\rightarrow\infty}s_n=s\text{.}\)</span>
+</div></article><article class="problem example-like" id="problem-73"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.16</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-568">Prove <a href="" class="xref" data-knowl="./knowl/thm_SqueezeTheorem.html" title="Theorem 7.2.15">Theorem 7.2.15</a>.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-16" id="hint-16"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-16"><div class="hint solution-like"><div class="para" id="p-569">This is probably a place where you would want to use <span class="process-math">\(s-\eps\lt s_n\lt s+\eps\)</span> instead of <span class="process-math">\(|s_n-s|\lt
+\eps\text{.}\)</span>
+</div></div></div>
+</div></article><div class="para" id="p-570">The Squeeze Theorem holds even if <span class="process-math">\(r_n\leq s_n\leq t_n\)</span> holds for only sufficiently large <span class="process-math">\(n\text{;}\)</span> i.e., for <span class="process-math">\(n\)</span> larger than some fixed <span class="process-math">\(N_0\text{.}\)</span> This is true because when you find an <span class="process-math">\(N_1\)</span> that works in the original proof, this can be modified by choosing <span class="process-math">\(N=\)</span>max<span class="process-math">\(\left(N_0,N_1\right)\text{.}\)</span> Also note that this theorem really says two things: <span class="process-math">\(\left(s_n\right)\)</span> converges and it converges to <span class="process-math">\(s\text{.}\)</span> This subtle point affects how one should properly use the Squeeze Theorem.</div>
+<article class="example example-like" id="example_SqzeEx"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.17</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-571">Prove <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\frac{n+1}{n^2}=0\text{.}\)</span>
+</div></article><article class="proof" id="proof-8"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3>
+<div class="para" id="p-572">Notice that <span class="process-math">\(0\leq\frac{n+1}{n^2}\leq\frac{n+n}{n^2}=\frac{2}{n}\text{.}\)</span> Since <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}0=0=\lim_{n\rightarrow\infty}\frac{2}{n}\text{,}\)</span> then by the Squeeze Theorem, <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\frac{n+1}{n^2}=0\text{.}\)</span>
+</div></article><div class="para" id="p-573">Notice that this proof is completely rigorous. Also notice that this is the proper way to use the Squeeze Theorem. Here is an example of an {improper} use of the Squeeze Theorem.</div>
+<div class="para logical" id="p-574">
+<div class="para">How <em class="emphasis">not</em> to prove <a href="" class="xref" data-knowl="./knowl/example_SqzeEx.html" title="Example 7.2.17">Example 7.2.17</a>. Notice that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/example_SqzeEx.html">
+\begin{equation*}
+0\leq\frac{n+1}{n^2}\leq\frac{n+n}{n^2}=\frac{2}{n}\text{,}
+\end{equation*}
+</div>
+<div class="para">so</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/example_SqzeEx.html">
+\begin{equation*}
+0=\lim_{n\rightarrow\infty}0 \leq \lim_{n\rightarrow\infty}\frac{n+1}{n^2}\leq\lim_{n\rightarrow\infty}\frac{2}{n}=0
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/example_SqzeEx.html">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\frac{n+1}{n^2}=0\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-575">This is incorrect in form because it presumes that <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{n+1}{n^2}\)</span> exists, which we don’t yet know. If we knew that the limit existed to begin with, then this would be fine. The Squeeze Theorem proves that the limit does in fact exist, but it must be so stated.</div>
+<div class="para" id="p-576">These general theorems will allow us to rigorously explore convergence of power series in the next chapter without having to appeal directly to the definition of convergence. However, you should remember that we used the definition to prove these results and there will be times when we will need to apply the definition directly. However, before we go into that, let’s examine divergence a bit more closely.</div></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="SeqRealNum.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="DivergentSeq.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

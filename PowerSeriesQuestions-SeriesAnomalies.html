@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Series Anomalies</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="PowerSeriesQuestions-TaylorsFormula.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="PowerSeriesQuestions.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="PowerSeriesQuestions-AddProb.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
+<li><div class="toc-item"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
+<li><div class="toc-item"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
+<li><div class="toc-item"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
+<ul class="structural"><li>
+<div class="toc-item"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
+</li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
+<li><div class="toc-item"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
+<li><div class="toc-item"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
+<li><div class="toc-item"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
+<li><div class="toc-item"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
+<li><div class="toc-item"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
+<li>
+<div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#subsection-4" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
+<li><div class="toc-item"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
+<li><div class="toc-item"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Epilogues-NatureNumbers.html#subsection-5" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
+<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
+<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="PowerSeriesQuestions-SeriesAnomalies"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Series Anomalies</span>
+</h2>
+<div class="para" id="p-372">Up to this point, we have been somewhat frivolous in our approach to series. This approach mirrors eighteenth century mathematicians who ingeniously exploited calculus and series to provide mathematical and physical results which were virtually unobtainable before. Mathematicans were eager to push these techniques as far as they could to obtain their results and they often showed good intuition regarding what was mathematically acceptable and what was not. However, as the envelope was pushed, questions about the validity of the methods surfaced.</div>
+<div class="para logical" id="p-373">
+<div class="para">As an illustration consider the series expansion</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{1+x}=1-x+x^2-x^3+\cdots\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-374">
+<div class="para">If we substitute <span class="process-math">\(x=1\)</span> into this equation, we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{2}=1-1+1-1+\cdots\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-375">If we group the terms as follows <span class="process-math">\((1-1)+(1-1)+\cdots\text{,}\)</span> the series would equal <span class="process-math">\(0\text{.}\)</span> A regrouping of <span class="process-math">\(1+(-1+1)+(-1+1)+\cdots\)</span> provides an answer of <span class="process-math">\(1\text{.}\)</span> This violation of the associative law of addition did not escape the mathematicians of the 1700’s. In his 1760 paper <span class="booktitle">On Divergent Series</span> Euler said:</div>
+<blockquote class="blockquote" id="blockquote-3"><div class="para" id="p-376">Notable enough, however are the controversies over the series <span class="process-math">\(1-1+1-1+etc\text{,}\)</span>  whose sum was given by Leibniz as <span class="process-math">\(\frac{1}{2}\text{,}\)</span> although others disagree . . . Understanding of this question is to be sought in the word “sum;” this idea, if thus conceived - namely, the sum of a series is said to be that quantity to which it is brought closer as more terms of a series are taken - has relevance only for the convergent series, and we should in general give up this idea of sum for divergent series. On the other hand, as series in analysis arise from the expansion of fractions or irrational quantities or even of transcendentals, it will, in turn, be permissible in calculation to substitute in place of such series that quantity out of whose development it is produced.</div></blockquote>
+<div class="para logical" id="p-377">
+<div class="para">Even with this formal approach to series, an interesting question arises. The series for the antiderivative of <span class="process-math">\(\frac{1}{1+x}\)</span> <em class="emphasis">does</em> converge for <span class="process-math">\(x=1\)</span> while this one does not. Specifically, taking the antiderivative of the above series, we obtain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ln(1+x)=x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-378">If we substitute <span class="process-math">\(x=1\)</span> into this series, we obtain <span class="process-math">\(\ln 2=1-\frac{1}{2}+\frac{1}{3}-\cdots\text{.}\)</span> It is not hard to see that such an alternating series converges. The following picture shows why. In this diagram, <span class="process-math">\(S_n\)</span> denotes the partial sum <span class="process-math">\(1-\frac{1}{2}+\frac{1}{3}-\cdots+\frac{(-1)^{n+1}}{n}\text{.}\)</span>
+</div>
+<div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/images/AltHarmonic.png" class="contained"></div>
+<div class="para" id="p-379">From the diagram we can see <span class="process-math">\(S_2\leq S_4\leq S_6\leq\cdots\leq\cdots\leq S_5\leq S_3\leq S_1\)</span> and <span class="process-math">\(S_{2k+1}-S_{2k}=\frac{1}{2k+1}\text{.}\)</span> It seems that the sequence of partial sums will converge to whatever is in the “middle.” Our diagram indicates that it is ln <span class="process-math">\(2\)</span> in the middle but actually this is not obvious. Nonetheless it is interesting that one series converges for <span class="process-math">\(x=1\)</span> but the other does not.</div>
+<article class="problem example-like" id="problem-43"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-380">
+<div class="para"> Use the fact that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1-\frac{1}{2}+\frac{1}{3}-\cdots+\frac{(-1)^{2k+1}}{2k}\leq\ln 2\leq 1-\frac{1}{2}+\frac{1}{3}-\cdots+\frac{(-1)^{2k+2}}{2k+1}
+\end{equation*}
+</div>
+<div class="para">to determine how many terms of the series <span class="process-math">\(\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n}\)</span> should be added together to approximate <span class="process-math">\(\ln 2\)</span> to within <span class="process-math">\(.0001\)</span> without actually computing what <span class="process-math">\(\ln 2\)</span> is.</div>
+</div></article><div class="para" id="p-381">There is an even more perplexing situation brought about by these examples. An infinite sum such as <span class="process-math">\(1-1+1-1+\cdots\)</span> appears to not satisfy the associative law for addition. While a convergent series such as <span class="process-math">\(1-\frac{1}{2}+\frac{1}{3}-\cdots\)</span> does satisfy the associative law, it does not satisfy the commutative law. In fact, it does not satisfy it rather spectacularly.</div>
+<div class="para" id="p-382">A generalization of the following result was stated and proved by Bernhard Riemann  in 1854.</div>
+<article class="theorem theorem-like" id="thm_rearrangements"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-383">Let <span class="process-math">\(a\)</span> be any real number. There exists a rearrangement of the series <span class="process-math">\(1-\frac{1}{2}+\frac{1}{3}-\cdots\)</span> which converges to <span class="process-math">\(a\text{.}\)</span>
+</div></article><div class="para" id="p-384">This theorem shows that a series is most decidedly <em class="emphasis">not</em> a great big sum. It follows that a power series is <em class="emphasis">not</em> a great big polynomial.</div>
+<div class="para logical" id="p-385">
+<div class="para">To set the stage, consider the <em class="emphasis">harmonic series</em> </div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=1}^\infty\frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\cdots\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-386">
+<div class="para">Even though the individual terms in this series converge to <span class="process-math">\(0\text{,}\)</span> the series still diverges (to infinity) as evidenced by the inequality</div>
+<div class="displaymath process-math" id="md-24">
+\begin{align*}
+\left(1+\frac{1}{2}\right)\amp +\left(\frac{1}{3}+\frac{1}{4}\right)+\left(\frac{1}{5}+\frac{1}{6}+ \frac{1}{7}+\frac{1}{8}\right)+\left(\frac{1}{9}+\cdots+\frac{1}{16}\right)+\cdots\\
+\amp &gt;\frac{1}{2}+\left(\frac{1}{4}+\frac{1}{4}\right)+\left(\frac{1}{8}+ \frac{1}{8}+\frac{1}{8}+\frac{1}{8}\right)+\left(\frac{1}{16}+\cdots+\frac{1}{16}\right)+\cdots\\
+\amp =\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\cdots\\
+\amp =   \infty\text{.}
+\end{align*}
+</div>
+</div>
+<div class="para logical" id="p-387">
+<div class="para">Armed with this fact, we can see why <a href="" class="xref" data-knowl="./knowl/thm_rearrangements.html" title="Theorem 5.2.2">Theorem 5.2.2</a> is true. First note that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_rearrangements.html">
+\begin{equation*}
+-\frac{1}{2}-\frac{1}{4}-\frac{1}{6}-\cdots=-\frac{1}{2}(1+\frac{1}{2}+ \frac{1}{3}+\cdots)=-\infty
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_rearrangements.html">
+\begin{equation*}
+1+\frac{1}{3}+\frac{1}{5}+\cdots\geq\frac{1}{2}+\frac{1}{4}+\frac{1}{6}+\ldots= \infty\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-388">This says that if we add enough terms of <span class="process-math">\(-\frac{1}{2}-\frac{1}{4}-\frac{1}{6}-\cdots\)</span> we can make such a sum as small as we wish and if we add enough terms of <span class="process-math">\(1+\frac{1}{3}+\frac{1}{5}+\cdots\)</span> we can make such a sum as large as we wish. This provides us with the general outline of the proof. The trick is to add just enough positive terms until the sum is just greater than <span class="process-math">\(a\text{.}\)</span> Then we start to add on negative terms until the sum is just less than <span class="process-math">\(a\text{.}\)</span> Picking up where we left off with the positive terms, we add on just enough positive terms until we are just above <span class="process-math">\(a\)</span> again. We then add on negative terms until we are below <span class="process-math">\(a\text{.}\)</span> In essence, we are bouncing back and forth around <span class="process-math">\(a\text{.}\)</span> If we do this carefully, then we can get this rearrangement to converge to <span class="process-math">\(a\text{.}\)</span> The notation in the proof below gets a bit hairy, but keep this general idea in mind as you read through it.</div>
+<div class="para logical" id="p-389">
+<div class="para">Let <span class="process-math">\(O_1\)</span> be the first odd integer such that <span class="process-math">\(1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}&gt;a\text{.}\)</span> Now choose <span class="process-math">\(E_1\)</span> to be the first even integer such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{1}{2}-\frac{1}{4}-\frac{1}{6}-\cdots-\frac{1}{E_1} \lt a-\left(1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}\right)\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-390">
+<div class="para">Thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4} - \frac{1}{6}-\cdots-\frac{1}{E_1}\lt a\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-391">
+<div class="para">Notice that we still have <span class="process-math">\(\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots=\infty\text{.}\)</span> With this in mind, choose <span class="process-math">\(O_2\)</span> to be the first odd integer with</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots\frac{1}{O_2}&gt;a-\left(1+\frac{1}{3}+ \frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}-\frac{1}{6}-\cdots- \frac{1}{E_1}\right)\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-392">
+<div class="para">Thus we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a\lt 1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}-\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="p-393">
+<div class="para">Furthermore, since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}-\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2-2}\lt a
+\end{equation*}
+</div>
+<div class="para">we have</div>
+<div class="displaymath process-math" id="md-25">
+\begin{align*}
+\amp \left|1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}-\cdots\right.\\
+\amp \left.-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}-a\right|\lt \frac{1}{O_2}\text{.}
+\end{align*}
+</div>
+</div>
+<div class="para logical" id="p-394">
+<div class="para">In a similar fashion choose <span class="process-math">\(E_2\)</span> to be the first even integer such that</div>
+<div class="displaymath process-math" id="md-26">
+\begin{align*}
+1+\frac{1}{3}+\frac{1}{5}+\cdots\amp +\frac{1}{O_1}-\frac{1}{2}- \frac{1}{4}-\frac{1}{6}-\amp \cdots\\
+\amp -\frac{1}{E_1}+ \frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots\\
+\amp +\frac{1}{O_2}-\frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots\\
+\amp -\frac{1}{E_2}\lt a\text{.}
+\end{align*}
+</div>
+</div>
+<div class="para logical" id="p-395">
+<div class="para">Since</div>
+<div class="displaymath process-math" id="md-27">
+\begin{align*}
+1+\frac{1}{3}+\frac{1}{5}\amp +\cdots+\frac{1}{O_1}-\frac{1}{2}- \frac{1}{4}-\frac{1}{6}-\cdots-\frac{1}{E_1}\\
+\amp +\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+\frac{1}{O_2}- \frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots-\frac{1}{E_2-2}&gt;a
+\end{align*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math" id="md-28">
+\begin{align*}
+\left|1+\frac{1}{3}\right.+\frac{1}{5}\amp +\cdots+\frac{1}{O_1}-\frac{1}{2}- \frac{1}{4}-\frac{1}{6}-\cdots-\frac{1}{E_1}\\
+\amp +\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+\frac{1}{O_2}- \frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots-\left.\frac{1}{E_2}-a\right|\\
+\amp \lt \frac{1}{E_2}\text{.}
+\end{align*}
+</div>
+</div>
+<div class="para logical" id="p-396">
+<div class="para">Again choose <span class="process-math">\(O_3\)</span> to be the first odd integer such that</div>
+<div class="displaymath process-math" id="md-29">
+\begin{align*}
+a\lt 1+\frac{1}{3}\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}-\cdots\\
+\amp -\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}+ \cdots\\
+\amp -\frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots-\frac{1}{E_2}+\frac{1}{O_2+2}+ \frac{1}{O_2+4}+\cdots+\frac{1}{O_3}
+\end{align*}
+</div>
+<div class="para">and notice that</div>
+<div class="displaymath process-math" id="md-30">
+\begin{align*}
+\left|1+\frac{1}{3}\right.\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}\\
+\amp -\frac{1}{6}-\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}+\cdots\\
+\amp -\frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots-\frac{1}{E_2}+\frac{1}{O_2+2}+ \frac{1}{O_2+4}+\cdots+\left.\frac{1}{O_3}-a\right|\\
+\amp \lt \frac{1}{O_3}\text{.}
+\end{align*}
+</div>
+</div>
+<div class="para logical" id="p-397">
+<div class="para">Continue defining <span class="process-math">\(O_k\)</span>and <span class="process-math">\(E_k\)</span> in this fashion. Since <span class="process-math">\(\lim_{k\rightarrow\infty}\frac{1}{O_k}=\,\lim_{k\rightarrow\infty} \frac{1}{E_k}=0\text{,}\)</span> it is evident that the partial sums</div>
+<div class="displaymath process-math" id="md-31">
+\begin{align*}
+1+\frac{1}{3}\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}\\
+\amp -\frac{1}{6}-\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots\\
+\amp + \frac{1}{O_2}+\cdots -\frac{1}{E_{k-2}+2}-\frac{1}{E_{k-2}+4}-\cdots\\
+\amp -\frac{1}{E_{k-1}}+  \frac{1}{O_{k-1}+2}+\frac{1}{O_{k-1}+4}+\cdots+\frac{1}{O_k}
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="md-32">
+\begin{align*}
+1+\frac{1}{3}\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}\\
+\amp -\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}+\cdots\\
+\amp -\frac{1}{E_{k-2}+2}-\frac{1}{E_{k-2}+4}-\cdots-\frac{1}{E_{k-1}}
+\end{align*}
+</div>
+<div class="para">must converge to <span class="process-math">\(a\text{.}\)</span> Furthermore, it is evident that every partial sum of the rearrangement</div>
+<div class="displaymath process-math" id="md-33">
+\begin{align*}
+1+\frac{1}{3}\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}\\
+\amp -\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}+\cdots
+\end{align*}
+</div>
+<div class="para">is trapped between two such extreme partial sums. This forces the entire rearranged series to converge to <span class="process-math">\(a\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="p-398">The next two problems are similar to the above, but notationally are easier since we don’t need to worry about converging to an actual number. We only need to make the rearrangement grow (or shrink in the case of <a href="" class="xref" data-knowl="./knowl/prob_RearrangeDivToNegInf.html" title="Problem 5.2.4">problem 5.2.4</a>) without bound.</div>
+<article class="problem example-like" id="problem-44"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-399">Show that there is a rearrangement of <span class="process-math">\(1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots\)</span> which diverges to <span class="process-math">\(\infty\text{.}\)</span>
+</div></article><article class="problem example-like" id="prob_RearrangeDivToNegInf"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-400">Show that there is a rearrangement of <span class="process-math">\(1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots\)</span> which diverges to <span class="process-math">\(-\infty\text{.}\)</span>
+</div></article><div class="para" id="p-401">It is fun to know that we can rearrange some series to make them add up to anything you like but there is a more fundamental idea at play here. That the negative terms of the alternating Harmonic Series <em class="emphasis">diverge</em> to negative infinity and the positive terms <em class="emphasis">diverge</em> to positive infinity make the <em class="emphasis">convergence</em> of the alternating series very special.</div>
+<div class="para" id="p-402">Consider, first we add <span class="process-math">\(1\text{.}\)</span> This is one of the positive terms so our sum is starting to increase without bound. Next we add <span class="process-math">\(-1/2\)</span> which is one of the negative terms so our sum has turned around and is now starting to decrease without bound. Then another positive term is added: increasing without bound. Then another negative term: decreasing. And so on. The convergence of the alternating Harmonic Series is the result of a delicate balance between a tendency to run off to positive infinity and back to negative infinity. When viewed in this light it is not really too surprising that rearranging the terms can destroy this delicate balance.</div>
+<div class="para" id="p-403">Naturally, the alternating Harmonic Series is not the only such series. Any such series is said to converge “conditionally” — the condition being the specific arrangement of the terms.</div>
+<div class="para" id="p-404">To stir the pot a bit more, some series do satisfy the commutative property. More specifically, one can show that any rearrangement of the series <span class="process-math">\(1-\frac{1}{2^2}+\frac{1}{3^2}-\cdots\)</span> must converge to the same value as the original series (which happens to be <span class="process-math">\(\int_{x=0}^1\frac{\text{ ln } (1+x)}{x}dx\approx.8224670334\)</span>). Why does one series behave so nicely whereas the other does not?</div>
+<div class="para" id="p-405">Issues such as these and, more generally, the validity of using the infinitely small and infinitely large certainly existed in the 1700’s, but they were overshadowed by the utility of the calculus. Indeed, foundational questions raised by the above examples, while certainly interesting and of importance, did not significantly deter the exploitation of calculus in studying physical phenomena. However, the envelope eventually was pushed to the point that not even the most practically oriented mathematician could avoid the foundational issues.</div></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="PowerSeriesQuestions-TaylorsFormula.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="PowerSeriesQuestions-AddProb.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

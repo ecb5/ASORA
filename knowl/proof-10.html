@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para logical">
+<div class="para">First note that the binomial series is, in fact, the Taylor series for the function <span class="process-math">\(f(x)=\sqrt{1+x}\)</span> expanded about <span class="process-math">\(a=0\text{.}\)</span> If we let <span class="process-math">\(x\)</span> be a fixed number with <span class="process-math">\(0\leq x\leq 1\text{,}\)</span> then it suffices to show that the Lagrange form of the remainder converges to <span class="process-math">\(0\text{.}\)</span> With this in mind, notice that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^{(n+1)}(t)=\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-n\right)\left(1+t\right)^{\frac{1}{2}-(n+1)}
+\end{equation*}
+</div>
+<div class="para">and so the Lagrange form of the remainder is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}= \frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots \left(\frac{1}{2}-n\right)}{(n+1)!}\frac{x^{n+1}}{(1+c)^{n+\frac{1}{2}}}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c\)</span> is some number between <span class="process-math">\(0\)</span> and <span class="process-math">\(x\text{.}\)</span> Since <span class="process-math">\(0\leq x\leq 1\)</span> and <span class="process-math">\(1+c\geq 1\text{,}\)</span> then we have <span class="process-math">\(\frac{1}{1+c}\leq 1\text{,}\)</span> and so</div>
+<div class="displaymath process-math">
+\begin{align*}
+0\amp \leq \left|\frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-n\right)}{(n+1)!}\frac{x^{n+1}}{(1+c)^{n+\frac{1}{2}}}\right|\\
+\amp =\frac{\left(\frac{1}{2}\right)\left(1-\frac{1}{2}\right)\cdots\left(n-\frac{1}{2}\right)}{(n+1)!}\frac{x^{n+1}}{(1+c)^{n+\frac{1}{2}}}\\
+\amp =\frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)\left(\frac{3}{2}\right)\left(\frac{5}{2}\right)\cdots\left(\frac{2n-1}{2}\right)}{(n+1)!}\left(x^{n+1}\right)\frac{1}{(1+c)^{n+\frac{1}{2}}}\\
+\amp \leq\frac{1\cdot 1\cdot 3\cdot5\cdot\,\cdots\,\cdot\left(2n-1\right)}{2^{^{n+1}}(n+1)!}\\
+\amp =\frac{1\cdot 3\cdot 5\cdot\,\cdots\,\cdot\left(2n-1\right)\cdot 1}{2\cdot4\cdot 6\cdot\,\cdots\,\cdot 2n\cdot\left(2n+2\right)}\\
+\amp =\frac{1}{2}\cdot\frac{3}{4}\cdot\frac{5}{6}\cdot\cdots\,\cdot\frac{2n-1}{2n}\cdot\frac{1}{2n+2}\\
+\amp \leq\frac{1}{2n+2}\text{.}
+\end{align*}
+</div>
+</div> <div class="para logical">
+<div class="para">Since <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{1}{2n+2}=0=\,\lim_{n\rightarrow\infty}0\text{,}\)</span> then by the Squeeze Theorem,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\abs{\frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}}=0, \text{ so } \lim_{n\rightarrow\infty}\left(\frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}\right)=0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Thus the Taylor series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1+\frac{1}{2}x+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)}{2!}x^2+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)\left(\frac{1}{2}-2\right)}{3!}x^3+\cdots
+\end{equation*}
+</div>
+<div class="para">converges to <span class="process-math">\(\sqrt{1+x}\)</span> for <span class="process-math">\(0\leq x\leq 1\text{.}\)</span>
+</div>
+</div></article><span class="incontext"><a href="TaylorSeries-LagrFormRem.html#proof-10" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="Epilogues.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="Epilogues.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="Epilogues-BuildRealNumbers.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
+<li>
+<div class="toc-item"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
+<li><div class="toc-item"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
+<li><div class="toc-item"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
+<li><div class="toc-item"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
+<li><div class="toc-item"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
+<li><div class="toc-item"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
+<ul class="structural"><li>
+<div class="toc-item"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
+</li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
+<li><div class="toc-item"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
+<li><div class="toc-item"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
+<li><div class="toc-item"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
+<li><div class="toc-item"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
+<li><div class="toc-item"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
+<li>
+<div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#subsection-4" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
+<li><div class="toc-item"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
+<li><div class="toc-item"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
+<ul class="structural">
+<li class="active">
+<div class="toc-item"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="Epilogues-NatureNumbers.html#subsection-5" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
+<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
+<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="Epilogues-NatureNumbers"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span>
+</h2>
+<section class="introduction" id="introduction-32"><div class="para" id="p-1426">
+<em class="alert">Interlocuters</em>:<em class="emphasis">Salviati, Sagredo, and Simplicio; Three Friends of Galileo Galilei</em>
+</div> <div class="para" id="p-1427">
+<em class="alert">Setting</em>: Three friends meet in a garden for lunch in Renassaince Italy.  Prior to their meal they discuss the book <em class="emphasis">How We Got From There to Here: A Story of Real Analysis.</em> How they obtained a copy is not clear.</div> <div class="para" id="p-1428">
+<em class="alert">Salviati</em>: My good sirs. I have read this very strange volume as I hope you have?</div> <div class="para" id="p-1429">
+<em class="alert">Sagredo</em>: I have and I also found it very strange.</div> <div class="para" id="p-1430">
+<em class="alert">Simplicio</em>: Very strange indeed; at once silly and mystifying.</div> <div class="para" id="p-1431">
+<em class="alert">Salviati</em>: Silly? How so?</div> <div class="para" id="p-1432">
+<em class="alert">Simplicio</em>: These authors begin their tome with the question, “What is a number?” This is an unusually silly question, don’t you think? Numbers are numbers. Everyone knows what they are.</div> <div class="para" id="p-1433">
+<em class="alert">Sagredo</em>: I thought so as well until I reached the last chapter. But now I am not so certain. What about this quantity <span class="process-math">\(\aleph_0?\)</span> If this counts the positive integers, isn’t it a number? If not, then how can it count anything? If so, then what number is it? These questions plague me ’til I scarcely believe I know anything anymore.</div> <div class="para" id="p-1434">
+<em class="alert">Simplicio</em>: Of course <span class="process-math">\(\aleph_0\)</span> is not a number! It is simply a new name for the infinite, and infinity is not a number.</div> <div class="para" id="p-1435">
+<em class="alert">Sagredo</em>: But isn’t <span class="process-math">\(\aleph_0\)</span> the cardinality of the set of natural numbers, <span class="process-math">\(\NN\text{,}\)</span> in just the same way that the cardinality of the set <span class="process-math">\(S=\left\{Salviati, Sagredo, Simplicio\right\}\)</span> is <span class="process-math">\(3?\)</span> If <span class="process-math">\(3\)</span> is a number, then why isn’t <span class="process-math">\(\aleph_0?\)</span>
+</div> <div class="para" id="p-1436">
+<em class="alert">Simplicio</em>: Ah, my friend, like our authors you are simply playing with words. You count the elements in the set <span class="process-math">\(S=\left\{Salviati, Sagredo, Simplicio\right\};\)</span> you see plainly that the <em class="emphasis">number of elements</em> it contains is <span class="process-math">\(3\)</span> and then you change your language. Rather than saying that the <em class="emphasis">number of elements</em> in <span class="process-math">\(S\)</span> is <span class="process-math">\(3\)</span> you say that the <em class="emphasis">cardinality</em> is <span class="process-math">\(3\text{.}\)</span> But clearly “cardinality” and “number of elements” mean the same thing.</div> <div class="para" id="p-1437">Similarly you use the symbol <span class="process-math">\(\NN\)</span> to denote the set of positive integers. With your new word and symbol you make the statement “the <em class="emphasis">cardinality</em> (number of elements) of <span class="process-math">\(\NN\)</span> is <span class="process-math">\(\aleph_0\text{.}\)</span>” This statement has the same grammatical form as the statement “the <em class="emphasis">number of elements</em> (cardinality) of <span class="process-math">\(S\)</span> is three.” Since three <em class="emphasis">is</em> a number you conclude that <span class="process-math">\(\aleph_0\)</span> is also a number.</div> <div class="para" id="p-1438">But this is simply nonsense dressed up to sound sensible. If we unwind our notation and language, your statement is simply, “The number of positive integers is infinite.” This is obviously nonsense because infinity is <em class="emphasis">not</em> a number.</div> <div class="para" id="p-1439">Even if we take infinity as an undefined term and try to define it by your statement this is still nonsense since you are using the word “number” to define a new “number” called infinity. This definition is circular. Thus it is no definition at all. It is nonsense.</div> <div class="para" id="p-1440">
+<em class="alert">Salviati</em>: Your reasoning on this certainly seems sound.</div> <div class="para" id="p-1441">
+<em class="alert">Simplicio</em>: Thank you.</div> <div class="para" id="p-1442">
+<em class="alert">Salviati</em>:  However, there are a couple of small points I would like to examine more closely if you will indulge me?</div> <div class="para" id="p-1443">
+<em class="alert">Simplicio</em>: Of course. What troubles you?</div> <div class="para" id="p-1444">
+<em class="alert">Salviati</em>: You’ve said that we cannot use the word “number” to define numbers because this would be circular reasoning. I entirely agree, but I am not sure this is what our authors are doing.</div> <div class="para" id="p-1445">Consider the set <span class="process-math">\(\left\{1, 2, 3\right\}\text{.}\)</span> Do you agree that it contains three elements?</div> <div class="para" id="p-1446">
+<em class="alert">Simplicio</em>: Obviously.</div> <div class="para" id="p-1447">
+<em class="alert">Sagredo</em>: Ah! I see your point! That there are three elements does <em class="emphasis">not</em> depend on what those elements are. Any set with three elements has three elements regardless of the nature of the elements. Thus saying that the set <span class="process-math">\(\left\{1, 2, 3\right\}\)</span> contains three elements does not define the word “number” in a circular manner because it is irrelevant that the <em class="emphasis">number</em> 3 is one of the elements of the set. Thus to say that three is the cardinality of the set <span class="process-math">\(\left\{1, 2, 3\right\}\)</span> has the same meaning as saying that there are three elements in the set <span class="process-math">\(\left\{Salviati, Sagredo, Simplicio\right\}\text{.}\)</span> In both cases the number “<span class="process-math">\(3\)</span>” is the name that we give to the totality of the elements of each set.</div> <div class="para" id="p-1448">
+<em class="alert">Salviati</em>:  Precisely. In exactly the same way <span class="process-math">\(\aleph_0\)</span> is the symbol we use to denote the totality of the set of positive integers.</div> <div class="para" id="p-1449">Thus <span class="process-math">\(\aleph_0\)</span> is a number in the same sense that ’<span class="process-math">\(3\)</span>’ is a number, is it not?</div> <div class="para" id="p-1450">
+<em class="alert">Simplicio</em>:  I see that we can say in a meaningful way that three is the cardinality of any set with . . . well, . . . with three elements (it becomes very difficult to talk about these things) but this is simply a tautology! It is a way of saying that a set which has three elements has three elements!</div> <div class="para" id="p-1451">This means only that we have counted them and we had to stop at three. In order to do this we must have numbers first. Which, of course, we do. As I said, everyone knows what numbers are.</div> <div class="para" id="p-1452">
+<em class="alert">Sagredo</em>:  I must confess, my friend, that I become more confused as we speak. I am no longer certain that I really know what a number is. Since you seem to have retained your certainty can you clear this up for me? Can you tell me what a number is?</div> <div class="para" id="p-1453">
+<em class="alert">Simplicio</em>:  Certainly. A number is what we have just been discussing. It is what you have when you stop counting. For example, three is the totality (to use your phrase) of the elements of the sets <span class="process-math">\(\left\{Salviati, Sagredo, Simplicio\right\}\)</span> or <span class="process-math">\(\left\{1, 2, 3\right\}\)</span> because when I count the elements in either set I have to stop at three. Nothing less, nothing more. Thus three is a number.</div> <div class="para" id="p-1454">
+<em class="alert">Salviati</em>:  But this definition only confuses me! Surely you will allow that fractions are numbers? What is counted when we end with, say <span class="process-math">\(4/5\)</span> or <span class="process-math">\(1/5?\)</span>
+</div> <div class="para" id="p-1455">
+<em class="alert">Simplicio</em>:  This is simplicity itself. <span class="process-math">\(4/5\)</span> is the number we get when we have divided something into <span class="process-math">\(5\)</span> equal pieces and we have counted four of these fifths. This is four-fifths. You see? Even the language we use naturally bends itself to our purpose.</div> <div class="para" id="p-1456">
+<em class="alert">Salviati</em>:  But what of one-fifth? In order to count one fifth we must first divide something into fifths. To do this we must know what one-fifth is, musn’t we? We seem to be using the word “number” to define itself again. Have we not come full circle and gotten nowhere?</div> <div class="para" id="p-1457">
+<em class="alert">Simplicio</em>:  I confess this had not occurred to me before. But your objection is easily answered. To count one-fifth we simply divide our “something” into tenths. Then we count two of them. Since two-tenths is the same as one-fifth the problem is solved. Do you see?</div> <div class="para" id="p-1458">
+<em class="alert">Sagredo</em>:  I see your point but it will not suffice at all! It merely replaces the question, “What is one-fifth?” with, “What is one-tenth?” Nor will it do to say that one-tenth is merely two-twentieths. This simply shifts the question back another level.</div> <div class="para" id="p-1459">Archimedes said, “Give me a place to stand and a lever long enough and I will move the earth.” But of course he never moved the earth because he had nowhere to stand. We seem to find ourselves in Archimedes’ predicament: We have no place to stand.</div> <div class="para" id="p-1460">
+<em class="alert">Simplicio</em>:  I confess I don’t see a way to answer this right now. However I’m sure an answer can be found if we only think hard enough. In the meantime I cannot accept that <span class="process-math">\(\aleph_0\)</span> is a number. It is, as I said before, infinity and infinity is not a number! We may as well believe in fairies and leprechauns if we call infinity a number.</div> <div class="para" id="p-1461">
+<em class="alert">Sagredo</em>:  But again we’ve come full circle. We cannot say definitively that <span class="process-math">\(\aleph_0\)</span> is or is not a number until we can state with confidence what a number is. And even if we could find solid ground on which to solve the problem of fractions, what of <span class="process-math">\(\sqrt{2}?\)</span> Or <span class="process-math">\(\pi?\)</span> Certainly these are numbers but I see no way to count to either of them.</div> <div class="para" id="p-1462">
+<em class="alert">Simplicio</em>:  Alas! I am beset by demons! I am bewitched! I no longer believe what I <em class="emphasis">know</em> to be true!</div> <div class="para" id="p-1463">
+<em class="alert">Salviati</em>:  Perhaps things are not quite as bad as that. Let us consider further. You said earlier that we all know what numbers are, and I agree. But perhaps your statement needs to be more precisely formulated. Suppose we say instead that we all know what numbers <em class="emphasis">need</em> to be? Or that we know what we <em class="emphasis">want</em> numbers to be?</div> <div class="para" id="p-1464">Even if we cannot say with certainly what numbers <em class="emphasis">are</em> surely we can say what we want and need for them to be. Do you agree?</div> <div class="para" id="p-1465">
+<em class="alert">Sagredo</em>:  I do.</div> <div class="para" id="p-1466">
+<em class="alert">Simplicio</em>:  And so do I.</div> <div class="para" id="p-1467">
+<em class="alert">Salviati</em>:  Then let us invent numbers anew, as if we’ve never seen them before, always keeping in mind those properties we need for numbers to have. If we take this as a starting point then the question we need to address is, “What do we need numbers to be?”</div> <div class="para" id="p-1468">
+<em class="alert">Sagredo</em>:  This is obvious! We need to be able to add them and we need to be able to multiply them together, and the result should also be a number.</div> <div class="para" id="p-1469">
+<em class="alert">Simplicio</em>:  And subtract and divide too, of course.</div> <div class="para" id="p-1470">
+<em class="alert">Sagredo</em>:  I am not so sure we actually need these. Could we not <em class="emphasis">define</em> “subtract two from three” to be “add negative two to three” and thus dispense with subtraction and division?</div> <div class="para" id="p-1471">
+<em class="alert">Simplicio</em>:  I suppose we can but I see no advantage in doing so. Why not simply have subtraction and division as we’ve always known them?</div> <div class="para" id="p-1472">
+<em class="alert">Sagredo</em>:  The advantage is parsimony. Two arithmetic operations are easier to keep track of than four. I suggest we go forward with only addition and multiplication for now. If we find we need subtraction or division we can consider them later.</div> <div class="para logical" id="p-1473">
+<div class="para">
+<em class="alert">Simplicio</em>:  Agreed. And I now see another advantage. Obviously addition and multiplication must not depend on order. That is, if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are numbers then <span class="process-math">\(x+y\)</span> must be equal to <span class="process-math">\(y+x\)</span> and <span class="process-math">\(xy\)</span> must be equal to <span class="process-math">\(yx\text{.}\)</span> This is not true for subtraction, for <span class="process-math">\(3-2\)</span> does <em class="emphasis">not</em> equal <span class="process-math">\(2-3\text{.}\)</span> But if we define subtraction as you suggest then this symmetry is preserved:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x+(-y) = (-y)+x\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-1474">
+<div class="para">
+<em class="alert">Sagredo</em>:  Excellent! Another property we will require of numbers occurs to me now. When adding or multiplying more than two numbers it should not matter where we begin. That is, if <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> are numbers it should be true that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x+y)+z = x+(y+z)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x\cdot y)\cdot z = x\cdot(y\cdot z)\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1475">
+<em class="alert">Simplicio</em>:  Yes! We have it! Any objects which combine in these precise ways can be called numbers.</div> <div class="para" id="p-1476">
+<em class="alert">Salviati</em>:  Certainly these properties are necessary, but I don’t think they are yet sufficient to our purpose. For example, the number <span class="process-math">\(1\)</span> is unique in that it is the only number which, when multiplying another number leaves it unchanged.</div> <div class="para" id="p-1477">For example:  <span class="process-math">\(1\cdot3=3\text{.}\)</span> Or, in general, if <span class="process-math">\(x\)</span> is a number then <span class="process-math">\(1\cdot x =x\text{.}\)</span>
+</div> <div class="para" id="p-1478">
+<em class="alert">Sagredo</em>:  Yes. Indeed. It occurs to me that the number zero plays a similar role for addition: <span class="process-math">\(0+x=x\text{.}\)</span>
+</div> <div class="para" id="p-1479">
+<em class="alert">Salviati</em>:  It does not seem to me that addition and multiplication, as we have defined them, force <span class="process-math">\(1\)</span> or <span class="process-math">\(0\)</span> into existence so I believe we will have to postulate their existence independently.</div> <div class="para" id="p-1480">
+<em class="alert">Sagredo</em>:  Is this everything then? Is this all we require of numbers?</div> <div class="para" id="p-1481">
+<em class="alert">Simplicio</em>:  I don’t think we are quite done yet. How shall we get division?</div> <div class="para" id="p-1482">
+<em class="alert">Sagredo</em>:  In the same way that we defined subtraction to be the addition of a negative number, can we not define division to be multiplication by a reciprocal? For example, <span class="process-math">\(3\)</span> divided by <span class="process-math">\(2\)</span> can be considered <span class="process-math">\(3\)</span> <em class="emphasis">multiplied</em> by <span class="process-math">\(1/2\text{,}\)</span> can it not?</div> <div class="para" id="p-1483">
+<em class="alert">Salviati</em>:  I think it can. But observe that <em class="emphasis">every</em> number will need to have a corresponding negative so that we can subtract any amount. And again nothing we’ve discussed so far forces these negative numbers into existence so we will have to postulate their existence separately.</div> <div class="para" id="p-1484">
+<em class="alert">Simplicio</em>:  And in the same way every number will need a reciprocal so that we can divide by any amount.</div> <div class="para" id="p-1485">
+<em class="alert">Sagredo</em>:  Every number that is, except zero.</div> <div class="para" id="p-1486">
+<em class="alert">Simplicio</em>:  Yes, this is true. Strange is it not, that of them all only this one number needs no reciprocal? Shall we also postulate that zero has no reciprocal?</div> <div class="para" id="p-1487">
+<em class="alert">Salviati</em>: I don’t see why we should. Possibly <span class="process-math">\(\aleph_0\)</span> is the reciprocal of zero. Or possibly not. But I see no need to concern ourselves with things we do not need.</div> <div class="para" id="p-1488">
+<em class="alert">Simplicio</em>: Is this everything then? Have we discovered all that we need for numbers to be?</div> <div class="para" id="p-1489">
+<em class="alert">Salviati</em>: I believe there is only one property missing. We have postulated addition and we have postulated multiplication and we have described the numbers zero and one which play similar roles for addition and multiplication respectively. But we have not described how addition and multiplication work together.</div> <div class="para logical" id="p-1490">
+<div class="para">That is, we need a rule of distribution:  If <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> are all numbers then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x\cdot(y+z) = x\cdot y+x\cdot z\text{.}
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1491">With this in place I believe we have everything we need.</div> <div class="para" id="p-1492">
+<em class="alert">Simplicio</em>:  Indeed. We can also see from this that <span class="process-math">\(\aleph_0\)</span> cannot be a number since, in the first place, it cannot be added to another number and in the second, even if it could be added to a number the result is surely not also a number.</div> <div class="para" id="p-1493">
+<em class="alert">Salviati</em>:  My dear Simplicio, I fear you have missed the point entirely! Our axioms do not declare what a number is, only how it behaves with respect to addition and multiplication with other numbers. Thus it is a mistake to presume that “numbers” are only those objects that we have always believed them to be. In fact, it now occurs to me that “addition” and “multiplication” also needn’t be seen as the operations we have always believed them to be.</div> <div class="para logical" id="p-1494">
+<div class="para">For example suppose we have three objects, <span class="process-math">\(\left\{a, b, c\right\}\)</span> and suppose that we define “addition” and “multiplication” by the following tables:</div>
+<div class="displaymath process-math" id="md-55">
+\begin{align*}
+\begin{array}{c|ccc} 
++\amp a\amp b\amp c\\\hline 
+a\amp a\amp b\amp c\\
+b\amp b\amp c\amp a\\ 
+c\amp c\amp a\amp b 
+\end{array}  
+\amp \amp \amp \amp \amp \amp 
+\begin{array}{c|ccc} 
+\cdot\amp a\amp b\amp c\\\hline 
+a\amp a\amp a\amp a\\ 
+b\amp a\amp b\amp c\\ 
+c\amp a\amp c\amp b 
+\end{array} 
+\end{align*}
+</div>
+</div> <div class="para" id="p-1495">I submit that our set along with these definitions satisfy all of our axioms and thus <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> qualify to be called “numbers.”</div> <div class="para" id="p-1496">
+<em class="alert">Simplicio</em>:  This cannot be! There is no zero, no one!</div> <div class="para" id="p-1497">
+<em class="alert">Sagredo</em>:  But there is. Do you not see that <span class="process-math">\(a\)</span> plays the role of zero — if you add it to any number you get that number back. Similarly <span class="process-math">\(b\)</span> plays the role of one.</div> <div class="para" id="p-1498">
+<em class="alert">Simplicio</em>: This is astonishing! If <span class="process-math">\(a, b\)</span> and <span class="process-math">\(c\)</span> can be numbers then I am less sure than ever that I know what numbers are! Why, if we replace <span class="process-math">\(a, b\text{,}\)</span> and <span class="process-math">\(c\)</span> with <em class="emphasis">Simplicio</em> <em class="emphasis">Sagredo,</em> and <em class="emphasis">Salviati</em> then <em class="emphasis">we</em> become numbers ourselves!</div> <div class="para" id="p-1499">
+<em class="alert">Salviati</em>:  Perhaps we will have to be content with knowing how numbers behave rather than knowing what they are.</div> <div class="para" id="p-1500">However I confess that I have a certain affection for the numbers I grew up with. Let us call those the “real” numbers. Any other set of numbers, such as our <span class="process-math">\(\left\{a,b,c\right\}\)</span> above we will call a field of numbers, since they seem to provide us with new ground to explore. Or perhaps just a <em class="emphasis">number field</em>?</div> <div class="para" id="p-1501">As we have been discussing this I have been writing down our axioms.  They are these.  Numbers are any objects which satisfy all of the following properties:</div> <div class="para" id="p-1502"><em class="alert">AXIOMS OF NUMBERS</em></div> <div class="para logical" id="p-1503"><dl class="description-list">
+<dt id="li-112">Axiom I: Definition of Operations</dt>
+<dd><div class="para" id="p-1504">They can be combined by two operations, denoted “<span class="process-math">\(\cdot\)</span>” and “+”.</div></dd>
+<dt id="li-113">Axiom II: Closure</dt>
+<dd><div class="para" id="p-1505">If <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> are numbers then <span class="process-math">\(x+y\)</span> is also a number. <span class="process-math">\(x\cdot y\)</span> is also a number.</div></dd>
+<dt id="li-114">Axiom II: Commutativity</dt>
+<dd><div class="para" id="p-1506">
+<span class="process-math">\(x+y=y+x\)</span> <span class="process-math">\(x\cdot y=y\cdot x\)</span>
+</div></dd>
+<dt id="li-115">Axiom III: Associativity</dt>
+<dd><div class="para" id="p-1507">
+<span class="process-math">\((x+y)+z=x+(y+z)\)</span> <span class="process-math">\((x\cdot y)\cdot z = x\cdot(y\cdot z)\)</span>
+</div></dd>
+<dt id="li-116">Axiom IV: Additive Identity</dt>
+<dd><div class="para logical" id="p-1508">
+<div class="para">There is a number, denoted <span class="process-math">\(0\text{,}\)</span> such that for any number, <span class="process-math">\(x\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x+0=x\text{.}
+\end{equation*}
+</div>
+</div></dd>
+<dt id="li-117">Axiom V: Multiplicative Identity</dt>
+<dd><div class="para logical" id="p-1509">
+<div class="para">There is a number, denoted <span class="process-math">\(1\text{,}\)</span> such that for any number, <span class="process-math">\(x\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1\cdot x=x\text{.}
+\end{equation*}
+</div>
+</div></dd>
+<dt id="li-118">Axiom VI: Additive Inverses</dt>
+<dd><div class="para logical" id="p-1510">
+<div class="para">Given any number, <span class="process-math">\(x\text{,}\)</span> there is a number, denoted <span class="process-math">\(-x\text{,}\)</span> with the property that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x+(-x)=0\text{.}
+\end{equation*}
+</div>
+</div></dd>
+<dt id="li-119">Axiom VII: Multiplicative Inverse</dt>
+<dd><div class="para logical" id="p-1511">
+<div class="para">Given any number, <span class="process-math">\(x\ne0\text{,}\)</span> there is a number, denoted <span class="process-math">\(x^{-1}\text{,}\)</span> with the property that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x\cdot x^{-1} =1\text{.}
+\end{equation*}
+</div>
+</div></dd>
+<dt id="li-120">Axiom VIII: The Distributive Property</dt>
+<dd><div class="para logical" id="p-1512">
+<div class="para">If <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> are numbers then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x\cdot(y+z) = x\cdot y+x\cdot z\text{.}
+\end{equation*}
+</div>
+</div></dd>
+</dl></div>                                                             <div class="para" id="p-1513">
+<em class="alert">Sagredo</em>: My friend, this is a thing of surpassing beauty! All seems clear to me now. Numbers are any group of objects which satisfy our axioms. That is, a number is anything that <em class="emphasis">acts</em> like a number.</div> <div class="para" id="p-1514">
+<em class="alert">Salviati</em>:  Yes this seems to be true.</div> <div class="para" id="p-1515">
+<em class="alert">Simplicio</em>:  But wait! We have not settled the question: Is <span class="process-math">\(\aleph_0\)</span> a number or not?</div> <div class="para" id="p-1516">
+<em class="alert">Salviati</em>:  If everything we have just done is valid then <span class="process-math">\(\aleph_0\)</span> <em class="emphasis">could be</em> a number. And so could <span class="process-math">\(\aleph_1\text{,}\)</span><span class="process-math">\(\aleph_2 \ldots\)</span> <em class="emphasis">if</em> we can find a way to define addition and multiplication on the set <span class="process-math">\(\left\{\aleph_0, \aleph_1, \aleph_2 \ldots\right\}\)</span> in a manner that agrees with our axioms.</div> <div class="para" id="p-1517">
+<em class="alert">Sagredo</em>:  An arithmetic of infinities! This is a very strange idea. Can such a thing be made sensible?</div> <div class="para" id="p-1518">
+<em class="alert">Simplicio</em>:  Not, I think, before lunch. Shall we retire to our meal?</div></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span>
+</h3>
+<article class="problem example-like" id="problem-211"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.1.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-1519">Show that <span class="process-math">\(0\neq 1\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-59" id="hint-59"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-59"><div class="hint solution-like"><div class="para" id="p-1520">Show that if <span class="process-math">\(x\neq0\text{,}\)</span> then <span class="process-math">\(0\cdot x \neq x\text{.}\)</span>
+</div></div></div>
+</div></article><article class="problem example-like" id="problem-212"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.1.2</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-33">
+<div class="para" id="p-1521">Consider the set of ordered pairs of integers: <span class="process-math">\(\left\{(x,y)|x, y \in \ZZ\right\}\text{,}\)</span> and define addition and multiplication as follows:</div> <div class="para logical" id="p-1522"><ul class="disc">
+<li id="li-121">
+<span class="heading"><span class="title">Addition:.</span></span><div class="para" id="p-1523"><span class="process-math">\(\displaystyle (a,b)+(c,d) = (ad+bc, bd)\)</span></div>
+</li>
+<li id="li-122">
+<span class="heading"><span class="title">Multiplication:.</span></span><div class="para" id="p-1524"><span class="process-math">\((a,b)\cdot(c,d) = (ac, bd)\text{.}\)</span></div>
+</li>
+</ul></div>
+</div>
+<article class="task exercise-like" id="task-154"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="p-1525">
+<div class="para">If we add the convention that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(ab, ad) = (b,d)
+\end{equation*}
+</div>
+<div class="para">show that this set with these operations forms a number field.</div>
+</div></article><article class="task exercise-like" id="task-155"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-1526">Which number field is this?</div></article></article><article class="problem example-like" id="problem-213"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.1.3</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-34">
+<div class="para" id="p-1527">Consider the set of ordered pairs of real numbers, <span class="process-math">\(\left\{(x,y)|x, y\in\RR\right\}\text{,}\)</span> and define addition and multiplication as follows:</div> <div class="para logical" id="p-1528"><ul class="disc">
+<li id="li-123">
+<span class="heading"><span class="title">Addition:.</span></span><div class="para" id="p-1529"><span class="process-math">\(\displaystyle (a,b)+(c,d) = (a+c, b+d)\)</span></div>
+</li>
+<li id="li-124">
+<span class="heading"><span class="title">Multiplication:.</span></span><div class="para" id="p-1530"><span class="process-math">\((a,b)\cdot(c,d) = (ac- bd,ad+bc)\text{.}\)</span></div>
+</li>
+</ul></div>
+</div>
+<article class="task exercise-like" id="task-156"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-1531">Show that this set with these operations forms a number field.</div></article><article class="task exercise-like" id="task-157"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-1532">Which number field is this?</div></article></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="Epilogues.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="Epilogues-BuildRealNumbers.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
