@@ -1,0 +1,702 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="NumbersRealRational">
+  <title>Numbers, Real (<m>\RR</m>) and Rational (<m>\QQ</m>)</title>
+  <introduction>
+    <p>
+      The set of real numbers (denoted,
+      <m>\RR</m>) is badly named.
+      The real numbers are no more or less real <mdash /> in the non-mathematical sense that they exist <mdash /> than any other set of numbers,
+      just like the set of rational numbers (<m>\QQ</m>),
+      the set of integers (<m>\ZZ</m>),
+      or the set of natural numbers
+      (<m>\NN</m>).
+      The name <q>real numbers</q> is (almost) an historical anomaly not unlike the name
+      <q>Pythagorean Theorem</q>
+      which was actually known and understood long before Pythagoras lived.
+    </p>
+
+    <p>
+      When calculus was being invented in the <m>17</m>th century,
+      numbers were 
+thoroughly understood,
+ or so it was believed.
+    </p>
+<aside>
+<p>
+      Some would say <q>re-invented.</q>
+      See <xref ref="russo96__forgot_revol"></xref>, or <xref ref="netz07__archim_codex"></xref>.
+<!-- [<a knowl="russo96__forgot_revol.knowl">13</a>, -->
+<!--       <a knowl="netz07__archim_codex.knowl">9</a>]. -->
+</p>
+
+      </aside>
+<p>
+      They were, after all, just numbers.
+      Combine them.
+      We call that addition.
+      If you add them repeatedly we call it multiplication.
+      Subtraction and division were similarly understood.
+    </p>
+
+    <p>
+      It was (and still is) useful to visualize these things in a more concrete way.
+      If we take a stick of length 2 and another of length 3 and lay them end-to-end we get a length of 5.
+      This is addition.
+      If we lay them end-to-end but at right angles then our two sticks are the length and width of a rectangle whose area is 6.
+      This is multiplication.
+    </p>
+
+    <p>
+      Of course measuring lengths with whole numbers has limitations,
+      but these are not hard to fix.
+      If we have a length (stick) of length 1 and another of length 2, then we can find another whose length when compared to 1 is the same
+      (has the same proportion)
+      as <m>1</m> is to <m>2</m>.
+      That number of course, is <m>1/2</m>.
+    </p>
+<figure xml:id="Fractions"><title></title>
+<caption></caption>
+      <image width="75%" source="images/Fractions.png" /> 
+</figure>
+      <p>
+      Notice how fraction notation reflects the operation of comparing
+      1 to 2.  This comparison is usually referred to as the
+      <em>ratio</em> of <m>1</m> to <m>2</m> so numbers of this sort
+      are called <em>rational numbers.</em> The set of rational
+      numbers is denoted <m>\QQ</m> for quotients.  In grade school
+      they were introduced to you as fractions.  Once fractions are
+      understood, this visualization using line segments (sticks)
+      leads quite naturally to their representation with the rational
+      number line.  
+</p>
+<figure xml:id="RationalNumberLine"><title></title>
+<caption>The Rational Number Line</caption>
+<image width="100%" source="images/RationalNumberLine.png" /> 
+</figure>
+    <p>
+      This seems to work as a visualization because the rational
+      numbers and the points on a line seem to share certain
+      properties.  Chief among these is that between any two points on
+      the rational line there is another point, just as between any
+      two rational numbers there is another rational number.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          <idx><h><m>\QQ</m></h><h>rational numbers exist between rational numbers</h></idx>
+          Let <m>a, b, c, d\in\NN</m> and find a rational number between <m>a/b</m> and <m>c/d</m>.
+        </p>
+      </statement>
+    </problem>
+    
+    <p>
+      This is all very clean and satisfying until we examine it just a bit closer.
+      Then it becomes quite mysterious.
+      Consider again the rational numbers <m>a/b</m> and <m>c/d</m>.
+      If we think of these as lengths we can ask, "Is there a third length,
+      say <m>\alpha</m>,
+      such that we can divide <m>a/b</m> into <m>M</m> pieces,
+      each of length <m>\alpha</m> <em>and also</em>
+      divide <m>c/d</m> into <m>N</m> pieces each of length <m>\alpha?</m>" A few minutes thought should convince you that this is the same as the problem of finding a common denominator so <m>\alpha=\frac{1}{bd}</m> will work nicely.
+      (Confirm this yourself.)
+    </p>
+
+    <p>
+      You may be wondering what we're making all of this fuss about.
+      <em>Obviously</em> this is <em>always</em> true.
+      In fact the previous paragraph gives an outline of a very nice little proof of this.
+      Here are the theorem and its proof presented formally.
+    </p>
+
+    <theorem xml:id="thm_CommonDenominatorsExist">
+      <statement>
+        <p>
+          <idx><h>common denominators</h></idx>
+          Suppose <m>a, b, c, d \in\NN</m> be integers.
+          There is a number <m>\alpha\in\QQ</m> such that <m>M\alpha=a/b</m> and
+          <m>N\alpha=c/d</m> where <m>M</m> and <m>N</m> are also integers.
+        </p>
+      </statement>
+    </theorem>
+
+    <proof>
+      <p>
+        To prove this theorem we will display <m>\alpha</m>, <m>M</m> and <m>N</m>.
+        It is your responsibility to confirm that these actually work.
+        Here they are: <m>\alpha=1/bd</m>,
+        <m>M=ad</m>, and <m>N=cb</m>.
+      </p>
+    </proof>
+
+    <problem>
+      <statement>
+        <p>
+          <idx><h>common denominators</h></idx> Confirm that
+          <m>\alpha, M, \text{ and } N</m> as given in the proof of
+          <xref ref="thm_CommonDenominatorsExist">Theorem</xref>
+          satisfy the requirements of the theorem.
+        </p>
+      </statement>
+    </problem>
+
+    <!-- <p> -->
+    <!--   It should be clear that it is necessary for <m>a</m>, <m>b</m>, -->
+    <!--   <m>c</m>, -->
+    <!--   and <m>d</m> to be integers for everything to work out. -->
+    <!--   Otherwise <m>M</m> and <m>N</m> will not also be integers as required. -->
+    <!-- </p> -->
+
+    <p>
+      <xref ref="thm_CommonDenominatorsExist">Theorem</xref> suggests the following very deep and important question: Are there lengths which can <em>not</em>
+      be expressed as the ratio of two integer lengths?
+      The answer, of course, is yes.
+      Otherwise we wouldn't have asked the question.
+      Notice that for such numbers our proof of <xref ref="thm_CommonDenominatorsExist">Theorem</xref> is not valid
+      (why not?).
+    </p>
+
+    <p>
+      One of the best known examples of such a number is the circumference of a circle with diameter 1.
+      This is the number usually denoted by <m>\pi</m>.
+      But circles are extremely complex objects <mdash /> they only seem simple because they are so familiar.
+      Arising as it does from a circle,
+      you would expect the number <m>\pi</m> to be very complex as well and this is true.
+      In fact <m>\pi</m> is an exceptionally weird number for a variety of reasons.
+      Let's start with something a little easier to think about.
+    </p>
+
+    <p>
+      <idx><h><m>\sqrt{2}</m></h><h>is irrational</h></idx> 
+      Squares are simple.
+      Two sets of parallel lines at right angles, all of the same length.
+      What could be simpler?
+      If we construct a square with sides having length 1 then its diagonal has length <m>\sqrt{2}</m>. 
+      </p>
+<figure xml:id="Sqrt2"><title></title>
+<caption>A construction of <m>\sqrt{2}</m></caption>
+      <image width="50%" source="images/Sqrt2.png" />
+</figure>
+
+    <p>
+This is a
+      number which cannot be expressed as the <em>ratio</em> of two
+      integers.  That is, it is <em>irrational.</em> This has been
+      known since ancient times, but it is still quite disconcerting
+      when first encountered.  It seems so counter-intuitive that the
+      intellect rebels.  <q>This can't be right,</q> it says.
+      <q>That's just crazy!</q>
+    </p>
+
+    <p>
+      Nevertheless it is true and we can prove it is true as follows.
+    </p>
+
+    <p>
+      What happens if we suppose that the square root of two <em>can</em>
+      be expressed as a ratio of integers?
+      We will show that this leads irrevocably to a conclusion that is manifestly not true.
+    </p>
+
+    <p>
+      Suppose <m>\sqrt{2}=a/b</m> where <m>a</m> and <m>b</m> are integers.
+      Suppose further that the fraction <m>a/b</m> is in lowest terms.
+      <em>This assumption is crucial because if <m>a/b</m> is in lowest terms we know that at most only one of them is even.</em>
+    </p>
+
+    <p>
+      So
+      <md>
+        <mrow>\frac{a}{b} \amp = \sqrt{2}.</mrow>
+        <intertext>Squaring both sides gives:</intertext>
+        <mrow>a^2 \amp = 2b^2.</mrow>
+        <intertext>Therefore <m>a^2</m> is even. But if <m>a^2</m> is even then <m>a</m> must be even also (why?). If <m>a</m> is even then <m>a=2k</m> for some integer <m>k</m>. Therefore</intertext>
+        <mrow>4k^2\amp =2b^2\textit{ or}</mrow>
+        <mrow>2k^2\amp = b^2</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Therefore <m>b^2</m> is also even and so <m>b</m> must be even too.
+      But this is impossible.
+      We've just concluded that <m>a</m> and <m>b</m> are both even and this conclusion follows directly from our initial assumption that at most one of them could be even.
+    </p>
+
+    <p>
+      This is nonsense.
+      Where is our error?
+      It is not in any single step of our reasoning.
+      That was all solid.
+      Check it again to be sure.
+    </p>
+
+    <p>
+      Therefore our error must be in the initial assumption that
+      <m>\sqrt{2}</m> could be expressed as a fraction.
+      That assumption must therefore be false.
+      In other words, <m>\sqrt{2}</m> cannot be so expressed.
+    </p>
+
+    <problem><title>Irrational Numbers</title>
+    <idx><h><m>\RR</m></h><h>irrational numbers drill, 5 parts</h></idx>
+    <introduction>
+      <p>
+        Show that each of the following numbers is irrational:
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          <m>\sqrt{3}</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\sqrt{5}</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\sqrt[3]{2}</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>i</m> <m>(=\sqrt{-1})</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          The square root of every positive integer which is not the square of an integer.
+        </p>
+      </statement>
+    </task>
+    </problem>
+
+    <p>
+          <idx><h><m>\sqrt{2}</m></h><h>meaning of</h></idx>
+      The fact that <m>\sqrt{2}</m> is not rational is cute and interesting,
+      but unless, like the Pythagoreans of ancient Greece,
+      you have a strongly held religious conviction that all numbers are rational,
+      it does not seem terribly important.
+      On the other hand, the very existence of
+      <m>\sqrt{2}</m> raises some interesting questions.
+      For example what can the symbol <m>4^{\sqrt{2}}</m> possibly mean?
+      If the exponent were a rational number,
+      say <m>m/n</m>, then clearly <m>4^{m/n}=\sqrt[n]{4^m}</m>.
+      But since <m>\sqrt{2}\neq m/n</m> for <em>any</em>
+      integers <m>m</m> and <m>n</m> how do we interpret
+      <m>4^{\sqrt{2}}?</m> Does it have any meaning at all?
+      The more you think about this,
+      the more puzzling the existence of irrational numbers becomes.
+      Suppose for example we reconsider the construction of a line segment of length <m>\sqrt{2}</m>.
+      It is clear that the construction works and that we really can build such a line segment.
+      It exists.
+    </p>
+
+    <p>
+      Repeat the construction but this time let's put the base side on the rational line.
+      </p>
+<figure xml:id="Sqrt2OnRatLine">
+<title>
+</title>
+<caption>
+</caption>
+      <image width="50%" source="images/Sqrt2OnRatLine.png" /> 
+</figure>
+    <p>
+      We know that the diagonal of this square is <m>\sqrt{2}</m> as indicated.
+      And we know that <m>\sqrt{2}</m> is not a rational number.
+    </p>
+
+    <p>
+      Now leave the diagonal pinned at <m>(0,0)</m> but allow it to rotate down so that it coincides with the <m>x-</m>axis.
+    </p>
+<figure xml:id="Sqrt2Irrational">
+<title>
+</title>
+<caption>
+</caption>
+      <image width="50%" source="images/Sqrt2Irrational.png" /> 
+</figure>
+    <p>
+      The end of our diagonal will trace out an arc of the circle with radius <m>\sqrt{2}</m>.
+      When the diagonal coincides with the <m>x-</m>axis,
+      its endpoint will obviously be the point <m>(\sqrt{2}, 0)</m> as shown.
+    </p>
+
+    <p>
+      But wait!
+      We're using the <em>rational</em>
+      number line for our <m>x-</m>axis.
+      That means the only points on the <m>x-</m>axis are those that correspond to rational numbers
+      (fractions).
+      But we know that <m>\sqrt{2}</m> is not rational!
+      Conclusion: There is no point <m>(\sqrt{2},0)</m>.
+      It simply doesn't exist.
+    </p>
+
+    <p>
+      Put differently,
+      there is a hole in the rational number line right where <m>\sqrt{2}</m> should be.
+    </p>
+<figure xml:id="RationalLineWithHoles">
+<title>
+</title>
+<caption>
+</caption>
+      <image width="100%" source="images/RationalLineWithHoles.png" />
+</figure>
+
+    <p>
+      This is weird!
+    </p>
+
+    <p>
+      Recall that between any two rational numbers there is always another.
+      This fact is what led us to represent the rational numbers with a line in the first place.
+    </p>
+    <p>
+      But it's even worse than that.
+      It's straightforward to show that <m>\sqrt{3}</m>,
+      <m>\sqrt{5}</m>, etc. are all irrational too.
+      So are <m>\pi</m> and <m>e</m>,
+      though they aren't as easy to show.
+      It seems that the rational line has a bunch of holes in it.
+      Infinitely many.
+    </p>
+
+    <p>
+      And yet, the following theorem is true
+    </p>
+
+    <theorem xml:id="thm_IrrationalBetweenIrrationals">
+      <statement>
+        <p>
+          <idx><h><m>\RR</m></h><h>real numbers exist between real numbers</h></idx>
+          <ol label="(a)">
+            <li>
+              <p>
+                Between any two distinct real numbers there is a rational number.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Between any two distinct real numbers there is an irrational number.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      Both parts of this theorem rely on a judicious use of what is now called the Archimedean Property of the Real Number System,
+      which can be formally stated as follows.
+    </p>
+
+    <principle>
+      <title>The Archimedean Property</title>
+      <statement>
+        <p>
+          <idx><h>Archimedean Property</h></idx>
+        Given any two positive real numbers, <m>a</m> and <m>b</m>,
+        there is a positive integer, <m>n</m> such that <m>na>b</m>.
+        </p>
+      </statement>
+    </principle>
+
+    <!-- <p> -->
+    <!--   <term>Archimedean Property:</term> <idx><h>Archimedean Property</h><h>statement of</h></idx> Given any two positive real numbers, -->
+    <!--   <m>a</m> and <m>b</m>, -->
+    <!--   there is a positive integer, <m>n</m> such that <m>na>b</m>. -->
+    <!-- </p> -->
+
+    <p>
+      Physically this says that we can empty an ocean <m>b</m> with a teaspoon <m>a</m>,
+      provided we are willing to use the teaspoon a large number of times <m>n</m>.
+    </p>
+
+    <p>
+      This is such an intuitively straightforward concept that it is easy to accept it without proof.
+      Until the invention of calculus,
+      and even for some time after that, it was simply assumed.
+      However as the foundational problems posed by the concepts of calculus were understood and solved we were eventually led to a deeper understanding of the complexities of the real number system.
+      The Archimedean Property is no longer taken as an unproved axiom,
+      but rather it is now understood to be a consequence of other axioms.
+      We will show this later,
+      but for now we will accept it as obviously true just as Archimedes did.
+    </p>
+
+    <p>
+      With the invention of calculus,
+      mathematicians of the seventeenth century began to use objects which didn't satisfy the Archimedean Property
+      (in fact, so did Archimedes).
+      As we shall see in the next chapter,
+      when Leibniz wrote the first paper on his version of the calculus,
+      he<idx><h>Leibniz, Gottfried Wilhelm</h><h>and infinitesimals</h></idx> followed this practice by explicitly laying out rules for manipulating infinitely small quantities
+      (infinitesimals).
+      These were taken to be actual numbers which are not zero and yet smaller than any real number.
+      The notation he used was <m>\dx{ x}</m>
+      (an infinitely small displacement in the <m>x</m> direction),
+      and <m>\dx{ y}</m>
+      (an infinitely small displacement in the <m>y</m> direction).
+      These symbols should look familiar to you.
+      They are the same <m>\dx{ y}</m> and <m>\dx{ x}</m> used to form the derivative symbol
+      <m>\dfdx{y}{x}</m> that you learned about in calculus.
+    </p>
+
+    <p>
+      Mathematicians of the seventeenth and eighteenth centuries made amazing scientific and mathematical progress exploiting these infinitesimals,
+      even though they were foundationally suspect.
+      No matter how many times you add the infinitesimal <m>\dx{ x}</m> to itself the result will not be bigger than,
+      say <m>10^{-1000}</m>, which is very bizarre.
+    </p>
+
+    <p>
+      When foundational issues came to the forefront,
+      infinitesimals fell somewhat out of favor.
+      You probably didn't use them very much in calculus.
+      Most of the time you probably used the prime notation,
+      <m>f^\prime(x)</m> introduced by Lagrange
+          <idx><h>Lagrange, Joseph-Louis</h></idx>
+      in the eighteenth century.
+      Some of the themes in this book are: Why differentials fell out of favor,
+      what were they replaced with and how the modern notations you learned in calculus evolved over time.
+    </p>
+
+    <p>
+      To conclude this aside on the Archimedean Property,
+      the idea of infinitesimals was revisited in the twentieth century by the logician Abraham Robinson in<nbsp /><xref ref="robinson74__non_stand_analy" />.
+      Robinson was able to put the idea of infinitesimals on a solid logical foundation.
+      But in the 18th century,
+      the existence of infinitesimal numbers was shaky to say the very least.
+      However this did not prevent mathematicians from successfully exploiting these infinitely small quantities.
+    </p>
+
+    <p>
+      We will come back to this saga in later chapters,
+      but for now we return to <xref ref="thm_IrrationalBetweenIrrationals">Theorem</xref>.
+    </p>
+
+    <proof>
+<title>Sketch of Proof</title>
+      <p>
+        We will outline the proof of part (a) of <xref ref="thm_IrrationalBetweenIrrationals">Theorem</xref>
+        and indicate how it can be used to prove part b.
+      </p>
+
+      <p>
+        Let <m>\alpha</m> and <m>\beta</m> be real numbers with <m>\alpha > \beta</m>.
+        There are two cases.
+
+        <ul>
+          <li>
+            <title>Case 1:</title>
+            <p>
+              <m>\alpha-\beta > 1</m>.
+              In this case there is at least one integer between <m>\alpha</m> and <m>\beta</m>.
+              Since integers are rational we are done.
+            </p>
+          </li>
+
+          <li>
+            <title>Case 2:</title>
+            <p>
+              <m>\alpha-\beta \le 1</m>.  In this case, by the
+              Archimedean Property there is a positive integer, say
+              <m>n</m>, such that <m>n(\alpha-\beta) = n\alpha-n\beta
+              > 1</m>.  Now there will be an integer between
+              <m>n\alpha</m> and <m>n\beta</m>.  You should now be
+              able to find a rational number between <m>\alpha</m> and
+              <m>\beta</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </proof>
+
+    <p>
+      For part b, divide <m>\alpha</m> and <m>\beta</m> by any positive irrational number and apply part a.
+      There are a couple of details to keep in mind.
+      These are considered in the following problem.
+    </p>
+
+    <problem>
+      <idx><h><m>\RR</m></h><h>products of rationals and irrationals</h></idx>
+      <task>
+        <statement>
+          <p>
+            Prove that the product of a nonzero rational number
+            and an irrational number is irrational.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use the result of part (a) to prove <xref
+            ref="thm_IrrationalBetweenIrrationals">Theorem</xref>.
+          </p>
+        </statement>
+      </task>
+    </problem>
+
+    <p>
+      As a practical matter,
+      the existence of irrational numbers isn't really very important.
+      In light of <xref ref="thm_IrrationalBetweenIrrationals">Theorem</xref>, any irrational number can be approximated arbitrarily closely by a rational number.
+      So if we're designing a bridge and
+      <m>\sqrt{2}</m> is needed we just use <m>1.414</m> instead.
+      The error introduced is less than
+      <m>0.001 =1/1000</m> so it probably doesn't matter.
+    </p>
+
+    <p>
+      But from a theoretical point of view this is devastating.
+      When calculus was invented,
+      the rational numbers were suddenly not up to the task of justifying the concepts and operations we needed to work with.
+    </p>
+
+    <p>
+      Newton<idx><h>Newton, Isaac</h><h>foundation of calculus</h></idx> explicitly founded his version of calculus on the assumption that we can think of variable quantities as being generated by a continuous motion.
+      If our number system has holes in it such continuous motion is impossible because we have no way to jump over the gaps.
+      So Newton simply postulated that there were no holes.
+      He filled in the hole where <m>\sqrt{2}</m> should be.
+      He simply said, yes there is a number there called
+      <m>\sqrt{2}</m> and he did the same with all of the other holes.
+    </p>
+
+    <p>
+      To be sure there is no record of Newton explicitly saying,
+      <q>Here's how I'm going to fill in the holes in the rational number line.</q>
+      Along with everyone else at the time,
+      he simply assumed there were no holes and moved on.
+      It took about <m>200</m> years of puzzling and arguing over the contradictions,
+      anomalies and paradoxes to work out the consequences of that apparently simple assumption.
+      The task may not yet be fully accomplished,
+      but by the 20th century the properties of the real number system (<m>\RR</m>) as an extension of the rational number system (<m>\QQ</m>) were well understood.
+      Here are both systems visualized as lines:
+    </p>
+<figure xml:id="RandQ">
+<title>
+</title>
+<caption>
+<m>\RR</m> and <m>\QQ</m>
+</caption>
+      <image width="100%" source="images/RandQ.png" /> 
+</figure>
+
+    <p>
+      Impressive, no?
+    </p>
+    <p>
+      The reason they look alike,
+      except for the labels <m>\RR</m> and <m>\QQ</m> of course,
+      is that our ability to draw sketches of the objects we're studying utterly fails when we try to sketch <m>\RR</m>,
+      as different from <m>\QQ</m>.
+      All of the holes in <m>\QQ</m> really are there,
+      but the non-holes are packed together so closely that we can't separate them in a drawing.
+      This inability to sketch the objects we study will be a frequent source of frustration.
+    </p>
+
+    <p>
+      Of course, this will not stop us from drawing sketches.
+      When we do, our imaginations will save us because it
+      <em>is</em> possible to <em>imagine</em>
+      <m>\QQ</m> as distinct from <m>\RR</m>.
+      But put away the idea that a sketch is an accurate representation of anything.
+      At best our sketches will only be aids to the imagination.
+    </p>
+
+    <p>
+      So, at this point we will simply assume the existence of the real numbers.
+      We will assume also that they have all of the properties that we are used to.
+      This is perfectly acceptable as long as we make our assumptions explicit.
+      However we need to be aware that, so far,
+      the existence and properties of the real numbers is an <em>assumption</em>
+      that has not been logically derived.
+      Any time we make an assumption we need to be prepared to either abandon it completely if we find that it leads to nonsensical results,
+      or to re-examine the assumption in the light of these results to see if we can find another assumption that subsumes the first and explains the (apparently) nonsensical results.
+    </p>
+  </introduction>
+
+
+
+<section xml:id="NumbersRealRational-AddProbs">
+  <title>Additional Problems</title>
+  <!-- <problem> -->
+    <!-- <statement> -->
+<!-- <exercises> -->
+<problem>
+  <idx><h><m>\QQ</m></h><h>sums and products of rational and irrational numbers</h></idx>
+<introduction>
+<p>
+  Determine if each of the following is always rational or always irrational. Justify your answers.
+</p>
+</introduction>
+  <task>
+    <statement>
+      <p>
+        The sum of two rational numbers.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        The sum of two irrational numbers.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        The sum of a rational and an irrational number.
+      </p>
+    </statement>
+  </task>
+</problem>
+  <!-- </problem> -->
+
+<!-- <exercise> -->
+  <problem>
+    <statement>
+      <p>
+        <idx><h><m>\QQ</m></h><h>creating irrationals from rationals</h></idx>
+        <idx><h><m>\RR</m></h><h>irrational numbers</h></idx>
+        <idx><h><m>\QQ</m></h><h>is it possible to have two rational numbers, <m>a</m> and <m>b</m>, such that <m>a^b</m> is irrational</h>
+        </idx> 
+        Is it possible to have two rational numbers,
+        <m>a</m> and <m>b</m>, such that <m>a^b</m> is irrational?
+        If so, display an example of such <m>a</m> and <m>b</m>.
+        If not, prove that it is not possible.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <idx><h><m>\QQ</m></h><h>creating rationals from irrationals</h></idx>
+    <idx><h><m>\RR</m></h><h>irrational numbers</h></idx>
+    <idx><h><m>\QQ</m></h><h>is it possible to have two irrational numbers, <m>a</m> and <m>b</m>, such that <m>a^b</m> is rational</h></idx> 
+    <statement>
+      <p>
+        Decide if it is possible to have two irrational numbers,
+        <m>a</m> and <m>b</m>, such that <m>a^b</m> is rational.
+        Prove it in either case.
+      </p>
+    </statement>
+  </problem>
+</section>
+
+
+</chapter>
+

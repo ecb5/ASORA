@@ -1,0 +1,341 @@
+
+
+<section>
+  <title>Lagrange's Form of the Remainder</title>
+  <p>
+    Joseph-Louis Lagrange
+        <idx><h>Lagrange, Joseph-Louis</h></idx>
+    provided an alternate form for the remainder in Taylor series in his 1797 work {Th\a'eorie des functions analytiques.} Lagrange's form of the remainder is as follows.
+  </p>
+
+  <theorem xml:id="thm_LagrangeRemainder">
+    <statement>
+      <p>
+        <term>Lagrange's Form of the Remainder</term> 
+      </p>
+      <p>
+        <idx><h>Lagrange's form of the remainder</h></idx> 
+        Suppose <m>f</m> is a function such that
+        <m>f^{(n+1)}(t)</m> is continuous on an interval containing <m>a</m> and <m>x</m>.
+        Then
+        <me>
+          f(x)-\left(\sum_{j=0}^n\frac{f^{(j)}(a)}{j!}(x-a)^j\right)=\frac{f^{\, (n+1)}(c)}{(n+1)!}(x-a)^{n+1}
+        </me>
+        where <m>c</m> is some number between <m>a</m> and <m>x</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Note first that the result is true when <m>x=a</m> as both sides reduce to 0
+      (in that case <m>c=x=a</m>.)
+      We will prove the case where <m>a\lt x</m>;
+      the case <m>x\lt a</m> will be an exercise.
+    </p>
+
+    <p>
+      First, we already have
+      <me>
+        f(x)-\left(\sum_{j=0}^n\frac{f^{(j)}(a)}{j!}(x-a)^j\right)=\frac{1}{n!} \int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d t
+      </me>
+      so it suffices to show that
+      <me>
+        \int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d t=\,\frac{f^{\,(n+1)}(c)}{n+1}(x-a)^{n+1}
+      </me>
+      for some <m>c</m> with <m>c\in[\,a,x]</m>.
+      To this end, let
+      <me>
+        M=\max_{a\le t\le x}\left(f^{(n+1)}(t)\right)
+      </me>
+      and
+      <me>
+        m=\min_{a\le t\le x}\left(f^{(n+1)}(t)\right)
+      </me>.
+    </p>
+
+    <p>
+      Note that for all <m>t\in[\,a,x]</m>,
+      we have <m>m\leq f^{(n+1)}(t)\leq M</m>.
+      Since <m>x-t\geq 0</m>, this gives us
+      <men xml:id="eq_LagRem1">
+        m\left(x-t\right)^n\leq f^{(n+1)}(t)(x-t)^n\leq M(x-t)^n
+      </men>
+      and so
+      <men xml:id="eq_LagRem2">
+        \int_{t=a}^xm\left(x-t\right)^n\d t\leq\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d t\leq \int_{t=a}^xM(x-t)^n\d t
+      </men>.
+    </p>
+
+    <p>
+      Computing the outside integrals, we have
+      <me>
+        m\int_{t=a}^x\left(x-t\right)^n\d t\leq\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d t\leq M\int_{t=a}^x(x-t)^n\d t
+      </me>
+      <men xml:id="eq_LagRem3">
+        m\frac{(x-a)^{n+1}}{n+1}\leq\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d t\leq M\frac{(x-a)^{n+1}}{n+1}
+      </men>
+      <me>
+        m\leq\frac{\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d t}{\left(\frac{(x-a)^{n+1}}{n+1} \right)}\leq M
+      </me>.
+    </p>
+
+    <p>
+      Since
+      <me>
+        \frac{\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d t}{\left(\frac{(x-a)^{n+1}}{n+1} \right)}
+      </me>
+      is a value that lies between the maximum and minimum of <m>f^{(n+1)}</m> on <m>[\,a,x]</m>,
+      then by the Intermediate Value Theorem,
+      there must exist a number <m>c\in[\,a,x]</m> with
+      <me>
+        f^{(n+1)}(c)=\frac{\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d t}{\left( \frac{(x-a)^{n+1}}{n+1}\right)}
+      </me>.
+    </p>
+
+    <p>
+      This gives us
+      <me>
+        \int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d t=\,\frac{f^{\,(n+1)}(c)}{n+1}(x-a)^{n+1}
+      </me>.
+    </p>
+
+    <p>
+      And the result follows.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Lagrange's form of the remainder</h><h><m>x\lt a</m></h></idx>
+        Prove <xref ref="thm_LagrangeRemainder">Theorem</xref> for the case where <m>x\lt a</m>. 
+            <hint>
+              <p>
+                Note that
+                <me>
+                  \int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d t=(-1)^{n+1}\int_{t=x}^af^{(n+1)}(t)(t-x)^n\d t
+                </me>.
+              </p>
+              
+              <p>
+                Use the same argument on this integral.
+                It will work out in the end.
+                Really!
+                You just need to keep track of <em>all</em> of the negatives.
+              </p>
+            </hint>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    This is <em>not</em> Lagrange's proof.  He did not use the
+    integral form of the remainder.  However, this is similar to
+    Lagrange's proof in that he also used the Intermediate Value
+    Theorem (IVT)
+    <idx><h>Intermediate Value Theorem (IVT)</h></idx> 
+    and Extreme Value Theorem (EVT)
+    <idx><h>Extreme Value Theorem (EVT)</h></idx> 
+    much as we did.  In Lagrange's day, these were taken to be obviously true for a continuous function and we have followed Lagrange's
+    <idx><h>Lagrange, Joseph-Louis</h></idx> lead by assuming the IVT and
+the EVT. However, in mathematics we need to keep our assumptions few
+and simple.  The IVT and the EVT do not satisfy this need in the sense
+that both can be proved from simpler ideas.  We will return to this in
+<xref ref="chpt_IVTEVT">Chapter</xref>.
+  </p>
+
+  <p>
+    Also, a word of caution about this: Lagrange's form of the remainder is <m>\frac{f^{\,(n+1)}(c)}{(n+1)!}</m> <m>(x-a)^{n+1}</m>,
+    where <m>c</m> is some number between <m>a</m> and <m>x</m>.
+    The proof does not indicate what this <m>c</m> might be and,
+    in fact, this <m>c</m> changes as <m>n</m> changes.
+    All we know is that this <m>c</m> lies between <m>a</m> and <m>x</m>.
+    To illustrate this issue and its potential dangers,
+    consider the following problem where we have a chance to compute the value of <m>c</m> for the function <m>f(x)=\frac{1}{1+x}</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>series</h><h>Geometric series</h><h>as a Taylor series</h></idx>
+            <idx><h>series</h><h>Geometric series</h></idx>
+        This problem investigates the Taylor series representation
+        <me>
+          \frac{1}{1+x}=1-x+x^2-x^3+\cdots
+        </me>.
+        <ol label="(a)">
+          <li>
+            <p>
+              Use the fact that <m>\frac{1-(-x)^{n+1}}{1+x}=1-x+x^2-x^3+\cdots+(-x)^n</m> to compute the remainder <m>\frac{1}{1+x}-\left(1-x+x^2-x^3+\cdots+(-x)^n\right)</m>.
+              Specifically,
+              compute this remainder when <m>x=1</m> and conclude that the Taylor series does not converge to <m>\frac{1}{1+x}</m> when <m>x=1</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compare the remainder in part a with the Lagrange form of the remainder to determine what <m>c</m> is when <m>x=1</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Consider the following argument: If <m>f(x)=\frac{1}{1+x}</m>, then
+              <me>
+                f^{(n+1)}(c)=\frac{(-1)^{n+1}(n+1)!}{(1+c)^{n+2}}
+              </me>
+              so the Lagrange form of the remainder when <m>x=1</m> is given by
+              <me>
+                \frac{(-1)^{n+1}(n+1)!}{(n+1)!(1+c)^{n+2}}=\frac{(-1)^{n+1}}{(1+c)^{n+2}}
+              </me>
+              where <m>c\in[\,0,1]</m>.
+              It can be seen in part b that <m>c\neq 0</m>.
+              Thus <m>1+c>1</m> and so by <xref ref="prob_sequences3">Problem</xref>
+              of <xref ref="chpt_Convergence">Chapter</xref>,
+              the Lagrange remainder converges to <m>0</m> as <m>n\rightarrow\infty</m>.
+              This argument would suggest that the Taylor series converges to <m>\frac{1}{1+x}</m> for <m>x=1</m>.
+              However, we know from part (a) that this is incorrect.
+              What is wrong with the argument?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Even though there are potential dangers in misusing the Lagrange form of the remainder,
+    it is a useful form.
+    For example, armed with the Lagrange form of the remainder,
+    we can prove the following theorem.
+  </p>
+
+  <theorem xml:id="thm_BinomialSeriesConverges">
+    <statement>
+      <p>
+            <idx><h>series</h><h>Binomial Series, the</h></idx>
+            <idx><h>Binomial Series, the</h><h>converges on the interval <m>[0,1]</m></h></idx>
+        The binomial series
+        <me>
+          1+\frac{1}{2}x+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)}{2!}x^2+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)\left(\frac{1}{2}-2\right)}{3!}x^3+\cdots
+        </me>
+        converges to <m>\sqrt{1+x}</m> for <m>x\in[0,1]</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      First note that the binomial series is, in fact,
+      the Taylor series for the function
+      <m>f(x)=\sqrt{1+x}</m> expanded about <m>a=0</m>.
+      If we let <m>x</m> be a fixed number with <m>0\leq x\leq 1</m>,
+      then it suffices to show that the Lagrange form of the remainder converges to <m>0</m>.
+      With this in mind, notice that
+      <me>
+        f^{(n+1)}(t)=\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-n\right)\left(1+t\right)^{\frac{1}{2}-(n+1)}
+      </me>
+      and so the Lagrange form of the remainder is
+      <me>
+        \frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}= \frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots \left(\frac{1}{2}-n\right)}{(n+1)!}\frac{x^{n+1}}{(1+c)^{n+\frac{1}{2}}}
+      </me>
+      where <m>c</m> is some number between <m>0</m> and <m>x</m>.
+      Since <m>0\leq x\leq 1</m> and <m>1+c\geq 1</m>,
+      then we have <m>\frac{1}{1+c}\leq 1</m>, and so
+      <md>
+        <mrow>0\amp \leq \left|\frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-n\right)}{(n+1)!}\frac{x^{n+1}}{(1+c)^{n+\frac{1}{2}}}\right|</mrow>
+        <mrow>\amp =\frac{\left(\frac{1}{2}\right)\left(1-\frac{1}{2}\right)\cdots\left(n-\frac{1}{2}\right)}{(n+1)!}\frac{x^{n+1}}{(1+c)^{n+\frac{1}{2}}}</mrow>
+        <mrow>\amp =\frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)\left(\frac{3}{2}\right)\left(\frac{5}{2}\right)\cdots\left(\frac{2n-1}{2}\right)}{(n+1)!}\left(x^{n+1}\right)\frac{1}{(1+c)^{n+\frac{1}{2}}}</mrow>
+        <mrow>\amp \leq\frac{1\cdot 1\cdot 3\cdot5\cdot\,\cdots\,\cdot\left(2n-1\right)}{2^{^{n+1}}(n+1)!}</mrow>
+        <mrow>\amp =\frac{1\cdot 3\cdot 5\cdot\,\cdots\,\cdot\left(2n-1\right)\cdot 1}{2\cdot4\cdot 6\cdot\,\cdots\,\cdot 2n\cdot\left(2n+2\right)}</mrow>
+        <mrow>\amp =\frac{1}{2}\cdot\frac{3}{4}\cdot\frac{5}{6}\cdot\cdots\,\cdot\frac{2n-1}{2n}\cdot\frac{1}{2n+2}</mrow>
+        <mrow>\amp \leq\frac{1}{2n+2}</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Since <m>\lim_{n\rightarrow\infty}\frac{1}{2n+2}=0=\,\lim_{n\rightarrow\infty}0</m>,
+      then by the Squeeze Theorem,
+      <me>
+        \lim_{n\rightarrow\infty}\abs{\frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}}=0, \text{ so } \lim_{n\rightarrow\infty}\left(\frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}\right)=0
+      </me>.
+    </p>
+
+    <p>
+      Thus the Taylor series
+      <me>
+        1+\frac{1}{2}x+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)}{2!}x^2+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)\left(\frac{1}{2}-2\right)}{3!}x^3+\cdots
+      </me>
+      converges to <m>\sqrt{1+x}</m> for <m>0\leq x\leq 1</m>.
+    </p>
+  </proof>
+
+  <p>
+    Unfortunately, this proof will not work for <m>-1\lt x\lt 0</m>.
+    In this case, the fact that
+    <m>x\leq c\leq 0</m> makes<m>\,1+c\leq 1</m>.
+    Thus <m>\frac{1}{1+c}\geq 1</m> and so the inequality
+    <me>
+      \frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)\left(\frac{3}{2}\right)\left(\frac{5}{2}\right)\cdots\left(\frac{2n-1}{2}\right)}{(n+1)!}\frac{|x|^{n+1}}{(1+c)^{n+\frac{1}{2}}}\leq\frac{1\cdot 1\cdot 3\cdot 5\cdot\,\cdots\,\cdot\left(2n-1\right)}{2^{^{n+1}}(n+1)!}
+    </me>
+    may not hold.
+  </p>
+
+  <problem xml:id="prob_Taylor_Series-Binomial_Series_and">
+    <statement>
+      <p>
+            <idx><h>series</h><h>Binomial Series, the</h></idx>
+            <idx><h>Binomial Series is a Taylor series</h></idx>
+        Show that if <m>-\frac{1}{2}\leq x\leq c\leq 0</m>, then <m>|\frac{x}{1+c}|\leq 1</m> and modify the above proof to show that the binomial series converges to <m>\sqrt{1+x}</m> for <m>x\in\left[-\frac{1}{2},0\right]</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    To take care of the case where <m>-1\lt x\lt -\frac{1}{2}</m>,
+    we will use yet another form of the remainder for Taylor series.
+    However before we tackle that,
+    we will use the Lagrange form of the remainder to address something mentioned in <xref ref="chpt_PowerSeriesQuestions">Chapter</xref>.
+    Recall that we noticed that the series representation
+    <me>
+      \frac{1}{1+x}=1-x+x^2-x^3+\cdots
+    </me>
+    did not work when <m>x=1</m>,
+    however we noticed that the series obtained by integrating term by term did seem to converge to the antiderivative of <m>\frac{1}{1+x}</m>.
+    Specifically, we have the Taylor series
+    <me>
+      \ln\left(1+x\right)=x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots
+    </me>.
+  </p>
+
+  <p>
+    Substituting <m>x=1</m> into this provided the convergent series <m>1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots</m>.
+    We made the claim that this, in fact,
+    converges to <m>\ln 2</m>, but that this was not obvious.
+    The Lagrange form of the remainder gives us the machinery to prove this.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Lagrange's remainder form of the remainder</h><h> <m>\ln 2</m></h></idx>
+        <ol label="(a)">
+          <li>
+            <p>
+              Compute the Lagrange form of the remainder for the Maclaurin series for <m>\ln\left(1+x\right)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Show that when <m>x=1</m>,
+              the Lagrange form of the remainder converges to <m>0</m> and so the equation <m>\ln 2=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots</m> is actually correct.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

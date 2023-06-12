@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:03:07-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.5</span><span class="period">.</span>
+</h3>
+<p>Use the definition of convergence to zero to prove</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\frac{n+4}{n^2+1}=0\text{.}
+\end{equation*}
+</div>
+<p><dfn class="terminology">SCRAPWORK</dfn></p>
+<p>Given an <span class="process-math">\(\eps&gt;0\text{,}\)</span> we need to see how large to make <span class="process-math">\(n\)</span> in order to guarantee that <span class="process-math">\(|\frac{n+4}{n^2+1}|\lt \eps\text{.}\)</span> First notice that <span class="process-math">\(\frac{n+4}{n^2+1}\lt \frac{n+4}{n^2}\text{.}\)</span> Also, notice that if <span class="process-math">\(n&gt;4\text{,}\)</span> then <span class="process-math">\(n+4\lt n+n=2n\text{.}\)</span> So as long as <span class="process-math">\(n&gt;4\text{,}\)</span> we have <span class="process-math">\(\frac{n+4}{n^2+1}\lt \frac{n+4}{n^2}\lt \frac{2n}{n^2}=\frac{2}{n}\text{.}\)</span> We can make this less than <span class="process-math">\(\eps\)</span> if we make <span class="process-math">\(n&gt;\frac{2}{\eps}\text{.}\)</span> This means we need to make <span class="process-math">\(n&gt;4\)</span> and <span class="process-math">\(n&gt;\frac{2}{\eps}\text{,}\)</span> simultaneously. These can be done if we let <span class="process-math">\(N\)</span> be the maximum of these two numbers. This sort of thing comes up regularly, so the notation <span class="process-math">\(N=\max\left(4,\frac{2}{\eps}\right)\)</span> was developed to mean the maximum of these two numbers. Notice that if <span class="process-math">\(N=\max\left(4, \frac{2}{\eps}\right)\)</span> then <span class="process-math">\(N\geq 4\)</span> and <span class="process-math">\(N\geq\frac{2}{\eps}\text{.}\)</span> We're now ready for the formal proof.</p></article><span class="incontext"><a href="SeqRealNum.html#sec_defin-conv-sequ" class="internal">in-context</a></span>
+</body>
+</html>

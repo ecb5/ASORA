@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:23-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Newton and Leibniz Get Started</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="CalcIn17th18thCentury.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="CalcIn17th18thCentury.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="ExponentAdditionProperty.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="CalcIn17th18thCentury.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="CalcIn17th18thCentury.html" title="Up">Up</a><a class="next-button button toolbar-item" href="ExponentAdditionProperty.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="active">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="CalcIn17th18thCentury-NewtLeibStart"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span>
+</h2>
+<section class="subsection" id="sec_leibn-calc-rules"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.1</span> <span class="title">Leibniz's Calculus Rules</span>
+</h3>
+<figure class="figure figure-like" id="figure-11"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/Leibniz.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/" target="_blank">Gottfried Wilhelm Leibniz</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 1 </sup></a></figcaption></figure><p id="p-164">The rules for calculus were first laid out in Gottfried Wilhelm Leibniz's 1684 paper <i class="foreign">Nova methodus pro maximis et minimis, itemque tangentibus, quae nec fractas nec irrationales, quantitates moratur, et singulare pro illi calculi genus</i> (A New Method for Maxima and Minima as Well as Tangents, Which is Impeded Neither by Fractional Nor by Irrational Quantities, and a Remarkable Type of Calculus for This). Leibniz started with subtraction.  That is, if <span class="process-math">\(x_1\)</span> and <span class="process-math">\(x_2\)</span> are very close together then their difference, <span class="process-math">\(\Delta
+x=x_2-x_1\text{,}\)</span> is very small.  He expanded this idea to say that if <span class="process-math">\(x_1\)</span> and <span class="process-math">\(x_2\)</span> are <em class="emphasis">infinitely</em> close together (but still distinct) then their difference, <span class="process-math">\(\dx{ x}\text{,}\)</span> is infinitesimally small (but not zero).</p>
+<aside class="aside aside-like" id="aside-8"><h4 class="heading"><span class="title"><i class="foreign">Calculus Differentialis</i>.</span></h4>
+<p id="p-165">This translates, loosely, as the calculus of differences.</p></aside><p id="p-166">This idea is logically very suspect and Leibniz knew it.  But he also knew that when he used his <i class="foreign">calculus differentialis</i> he was getting correct answers to some very hard problems.  So he persevered.</p>
+<p id="p-167">Leibniz called both <span class="process-math">\(\Delta x\)</span> and <span class="process-math">\(\dx{ x}\)</span> “differentials” (Latin for difference) because he thought of them as, essentially, the same thing.  Over time it has become customary to refer to the infinitesimal <span class="process-math">\(\dx{ x}\)</span> as a differential, reserving “difference” for the finite case, <span class="process-math">\(\Delta x\text{.}\)</span>  This is why calculus is often called “differential calculus.”</p>
+<p id="p-168">In his paper Leibniz gave rules for dealing with these infinitely small differentials.  Specifically, given a variable quantity <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(dx\)</span> represented an infinitesimal change in <span class="process-math">\(x\text{.}\)</span>  Differentials are related via the slope of the tangent line to a curve.  That is, if <span class="process-math">\(y=f(x)\text{,}\)</span> then <span class="process-math">\(\dx{ y}\)</span> and <span class="process-math">\(\dx{ x}\)</span> are related by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dx{ y}=\text{ (slope of the tangent line) } \cdot \dx{ x}\text{.}
+\end{equation*}
+</div>
+<p id="p-169">Leibniz then divided by <span class="process-math">\(\dx{ x}\)</span> giving</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dfdx{y}{x}= \text{ (slope of the tangent line). }
+\end{equation*}
+</div>
+<p id="p-170">The elegant and expressive notation Leibniz invented was so useful that it has been retained through the years despite some profound changes in the underlying concepts.  For example, Leibniz and his contemporaries would have viewed the symbol <span class="process-math">\(\dfdx{y}{x}\)</span> as an actual quotient of infinitesimals, whereas today we define it via the limit concept first suggested by Newton.  </p>
+<p id="p-171">As a result the rules governing these differentials are very modern in appearance: </p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
+\begin{align*}
+\dx{(\text{ constant } )}\amp =0\\
+\dx{(z-y+w+x)}\amp =\dx{ z}-\dx{ y}+\dx{ w}+\dx{ x}\\
+\dx{(xv)}\amp =x\dx{ v}+v\dx{ x}\\
+\dx{\left(\frac{v}{y}\right)}\amp =\frac{y\dx{ v}-v\dx{ y}}{yy}\\
+\end{align*}
+<p class="intertext">and, when <span class="process-math">\(a\)</span> is an integer:</p>
+\begin{align*}
+\dx{(x^a)}\amp =ax^{a-1}\dx{ x}\text{.}
+\end{align*}
+</div>
+<p id="p-172">Leibniz states these rules without proof: “. . . the demonstration of all this will be easy to one who is experienced in such matters . . ..” As an example, mathematicians in Leibniz's day would be expected to understand intuitively that if <span class="process-math">\(c\)</span> is a constant, then <span class="process-math">\(d(c)=c-c=0\text{.}\)</span>  Likewise, <span class="process-math">\(d(x+y)=dx+dy\)</span> is really an extension of <span class="process-math">\((x_2+y_2)-(x_1+y_1)=(x_2-x_1)+(y_2-y_1)\text{.}\)</span></p></section><section class="subsection" id="LeibnizProductRule"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.2</span> <span class="title">Leibniz's Approach to the Product Rule</span>
+</h3>
+<p id="p-173"> The explanation of the product rule using differentials is a bit more involved, but Leibniz expected that mathematicans would be fluent enough to derive it.  The product <span class="process-math">\(p=xv\)</span> can be thought of as the area of the following rectangle</p>
+<figure class="figure figure-like" id="fig1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/fig1.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-174">With this in mind, <span class="process-math">\(\dx{ p}=\dx{(xv)}\)</span> can be thought of as the change in area when <span class="process-math">\(x\)</span> is changed by <span class="process-math">\(\dx{ x}\)</span> and <span class="process-math">\(v\)</span> is changed by <span class="process-math">\(\dx{ v}\text{.}\)</span>  This can be seen as the L shaped region in the following drawing.</p>
+<figure class="figure figure-like" id="fig2"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/fig2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-175">By dividing the L shaped region into 3 rectangles we obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_LeibnizProductRule">
+\begin{equation}
+\dx{(xv)}=x\dx{ v}+v\dx{ x}+\dx{ x}\,\dx{ v}\text{.}\tag{4.1.1}
+\end{equation}
+</div>
+<p id="p-176">Even though <span class="process-math">\(\dx{ x}\)</span> and <span class="process-math">\(\dx{ v}\)</span> are infinitely small, Leibniz reasoned that <span class="process-math">\(\dx{ x}\,\dx{ v}\)</span> is <em class="emphasis">even more</em> infinitely small (quadratically infinitely small?)  compared to <span class="process-math">\(x\dx{ v}\)</span> and <span class="process-math">\(v\dx{ x}\)</span> and can thus be ignored leaving</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dx{ (xv)}=x\dx{ v}+v\dx{ x}\text{.}
+\end{equation*}
+</div>
+<p id="p-177">You should feel some discomfort at the idea of simply tossing the product <span class="process-math">\(\dx{ x}\,\dx{ v}\)</span> aside because it is “comparatively small.” This means you have been well trained, and have thoroughly internalized Newton's  dictum <a href="" class="xref" data-knowl="./knowl/newton45__sir_isaac_two_treat_quadr.html" title="Bibliographic Entry 10">[10]</a>: “The smallest errors may not, in mathematical matters, be scorned.” It is logically untenable to toss aside an expression just because it is small.  Even less so should we be willing to ignore an expression on the grounds that it is “infinitely smaller” than another quantity which is itself “infinitely small.”</p>
+<p id="p-178">Newton and Leibniz both knew this as well as we do.  But they also knew that their methods <em class="emphasis">worked</em>.  They gave verifiably correct answers to problems which had, heretofore, been completely intractable.  It is the mark of their genius that both men persevered in spite of the very evident difficulties their methods entailed.</p></section><section class="subsection" id="NewtonsApproach"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">4.1.3</span> <span class="title">Newton's Approach to the Product Rule</span>
+</h3>
+<p id="p-179">In the Principia, Newton “proved” the Product Rule as follows: Let <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> be “flowing quantites” and consider the rectangle, <span class="process-math">\(R\text{,}\)</span> whose sides are <span class="process-math">\(x\)</span> and <span class="process-math">\(v\text{.}\)</span>  <span class="process-math">\(R\)</span> is also a flowing quantity and we wish to find its fluxion (derivative) at any time.</p>
+<aside class="historical aside-like" id="historical-1"><h4 class="heading"><span class="title">Newton's ‘Method of Fluxions’.</span></h4>
+<p id="p-180">Newton's approach to calculus — his ‘Method of Fluxions’ — depended fundamentally on motion. That is, he viewed his variables (fluents) as changing (flowing or fluxing) in time.  The rate of change of a fluent he called a fluxion.  As a foundation both Leibniz's and Newton's approaches have fallen out of favor, although both are still universally used as a conceptual approach, a “way of thinking,” about the ideas of calculus.</p></aside><p id="p-181">First increment <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> by <span class="process-math">\(\frac{\Delta x}{2}\)</span> and <span class="process-math">\(\frac{\Delta v}{2}\)</span> respectively. Then the corresponding increment of <span class="process-math">\(R\)</span> is</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_prodruleinc">
+\begin{equation}
+\left(x+\frac{\Delta x}{2}\right)\left(v+\frac{\Delta v}{2}\right) = xv + x\frac{\Delta v}{2} + v\frac{\Delta x}{2} +\frac{\Delta x\Delta v}{4}\text{.}\tag{4.1.2}
+\end{equation}
+</div>
+<p id="p-182">Now decrement <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> by the same amounts:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_prodruledec">
+\begin{equation}
+\left(x-\frac{\Delta x}{2}\right)\left(v-\frac{\Delta v}{2}\right) = xv - x\frac{\Delta v}{2} - v\frac{\Delta x}{2} + \frac{\Delta x\Delta v}{4}\text{.}\tag{4.1.3}
+\end{equation}
+</div>
+<p id="p-183">Subtracting the right side of <a href="" class="xref" data-knowl="./knowl/eq_prodruledec.html" title="Equation 4.1.3">equation (4.1.3)</a> from the right side of <a href="" class="xref" data-knowl="./knowl/eq_prodruleinc.html" title="Equation 4.1.2">equation (4.1.2)</a> gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_prodruledec.html ./knowl/eq_prodruleinc.html">
+\begin{equation*}
+\Delta R = x\Delta v + v\Delta x
+\end{equation*}
+</div>
+<p class="continuation">which is the total change of <span class="process-math">\(R = xv\)</span> over the intervals <span class="process-math">\(\Delta x\)</span> and <span class="process-math">\(\Delta v\)</span> and also recognizably the Product Rule.</p>
+<figure class="figure figure-like" id="Newton"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/Newton.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.4<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/" target="_blank">Isaac Newton</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 2 </sup></a></figcaption></figure><p id="p-184">This argument is no better than Leibniz's as it relies heavily on the number <span class="process-math">\(1/2\)</span> to make it work.  If we take any other increments in <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> whose total lengths are <span class="process-math">\(\Delta x\)</span> and <span class="process-math">\(\Delta v\)</span> it will simply not work.  Try it and see.</p>
+<p id="p-185">In Newton's defense, he wasn't really trying to justify his mathematical methods in the Principia.  His attention there was on physics, not math, so he was really just trying to give a convincing demonstration of his methods.  You may decide for yourself how convincing his demonstration is.</p>
+<p id="p-186"> Notice that there is no mention of limits of difference quotients or derivatives.  In fact, the term derivative was not coined until 1797, by Lagrange.  In a sense, these topics were not necessary at the time, as Leibniz and Newton both assumed that the curves they dealt with had tangent lines and, in fact, Leibniz explicitly used the tangent line to relate two differential quantities.  This was consistent with the thinking of the time and for the duration of this chapter we will also assume that all quantities are differentiable.  As we will see later this assumption leads to difficulties.</p>
+<p id="p-187">Both Newton and Leibniz were satisfied that their calculus provided answers that agreed with what was known at the time.  For example <span class="process-math">\(\dx{ \left(x^2\right)}=\dx{\left(xx\right)}=x\dx{ x}+x\dx{ x}=2x\dx{ x}\)</span> and <span class="process-math">\(\dx{\left(x^3\right)}=\dx{\left(x^2x\right)}=x^2\dx{ x}+x\dx{\left(x^2\right)}\)</span> <span class="process-math">\(=x^2+x\left(2x\dx{ x}\right)=3x^2\dx{ x}\text{,}\)</span><span class="process-math">\(\)</span> results that were essentially derived by others in different ways.</p>
+<article class="problem example-like" id="problem-14"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-14"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-14"><article class="problem example-like"><article class="task exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-188">Use Leibniz's product rule <span class="process-math">\(\dx{ \left(xv\right)}=x\dx{ v}+v\dx{ x}\)</span> to show that if <span class="process-math">\(n\)</span> is a positive integer then <span class="process-math">\(\dx{ \left(x^n\right)}=nx^{n-1}\dx{ x}\)</span></p></article><article class="task exercise-like" id="task-12"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-189">Use Leibniz's product rule to derive the quotient rule</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dx{ \left(\frac{v}{y}\right)}=\frac{y\,\dx{ v}-v\,\dx{ y}}{yy}\text{.}
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-13"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-190">Use the quotient rule to show that if <span class="process-math">\(n\)</span>is a positive integer, then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\dx{ \left(x^{-n}\right)}=-nx^{-n-1}\dx{ x}.
+\end{equation*}
+</div></article></article></div>
+<article class="problem example-like" id="problem-15"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-15"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-15"><article class="problem example-like"><p id="p-191"> Let <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> be integers with <span class="process-math">\(q\neq 0\text{.}\)</span> Show that <span class="process-math">\(\dx{ \left(x^{\frac{p}{q}}\right)}=\frac{p}{q}x^{\frac{p}{q}-1}\dx{ x}\)</span></p></article></div>
+<p id="p-192">Leibniz also provided applications of his calculus to prove its worth. As an example he derived Snell's Law of Refraction from his calculus rules as follows.</p>
+<p id="p-193">Given that light travels through air at a speed of <span class="process-math">\(v_a\)</span> and travels through water at a speed of <span class="process-math">\(v_w\)</span> the problem is to find the fastest path from point <span class="process-math">\(A\)</span> to point <span class="process-math">\(B\text{.}\)</span></p>
+<figure class="figure figure-like" id="snellfig"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/snellfig.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.7<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-194">According to Fermat's Principle of Least Time, this fastest path is the one that light will travel.</p>
+<p id="p-195">Using the fact that <span class="process-math">\(\text{ Time } =\text{ Distance }
+/\text{ Velocity }\)</span> and the labeling in the picture below we can obtain a formula for the time <span class="process-math">\(T\)</span> it takes for light to travel from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{.}\)</span></p>
+<figure class="figure figure-like" id="snellfig2"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/snellfig2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="displaymath process-math" data-contains-math-knowls="" id="p-196">
+\begin{equation*}
+T=\frac{\sqrt{x^2+a^2}}{v_a}+\frac{\sqrt{(c-x)^2+b^2}}{v_w}
+\end{equation*}
+</div>
+<p id="p-197">Using the rules of Leibniz's calculus, we obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+\begin{align*}
+\dx{ T}\amp = \left(\frac{1}{v_a}\frac{1}{2}\left(x^2+a^2\right)^{-\frac{1}{2}} (2x)+\frac{1}{v_w}\frac{1}{2}((c-x)^2+b^2)^{-\frac{1}{2}}(2(c-x)(-1))\right) \dx{ x}\\
+\amp =\left(\frac{1}{v_a}\frac{x}{\sqrt{x^2+a^2}}-\frac{1}{v_w}\frac{c-x}{\sqrt{(c-x)^2+b^2}}\right)\dx{ x}\text{.}
+\end{align*}
+</div>
+<p id="p-198">Using the fact that at the minimum value for <span class="process-math">\(T\text{,}\)</span> <span class="process-math">\(\dx{ T}=0\text{,}\)</span> we have that the fastest path from <span class="process-math">\(A\)</span>to <span class="process-math">\(B\)</span> must satisfy <span class="process-math">\(\frac{1}{v_a}\frac{x}{\sqrt{x^2+a^2}}=\frac{1}{v_w}\frac{c-x}{\sqrt{(c-x)^2+b^2}}\text{.}\)</span> Inserting the following angles</p>
+<figure class="figure figure-like" id="snellfig3"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/snellfig3.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-199">we get that the path that light travels must satisfy <span class="process-math">\(\frac{\sin\theta_a}{v_a}=\frac{\sin\theta_w}{v_w}\)</span> which is Snell's Law.</p>
+<p id="p-200"> To compare 18th century and modern techniques we will consider Johann Bernoulli's solution of the Brachistochrone problem. In 1696, Bernoulli posed, and solved, the Brachistochrone problem; that is, to find the shape of a frictionless wire joining points A and B so that the time it takes for a bead to slide down under the force of gravity is as small as possible.</p>
+<figure class="figure figure-like" id="brachfig1"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/brachfig1.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-201">Bernoulli posed this “path of fastest descent” problem to challenge the mathematicians of Europe and used his solution to demonstrate the power of Leibniz's calculus as well as his own ingenuity.  </p>
+<blockquote class="blockquote" id="blockquote-1"><p id="p-202">I, Johann Bernoulli, address the most brilliant mathematicians in the world. Nothing is more attractive to intelligent people than an honest, challenging problem, whose possible solution will bestow fame and remain as a lasting monument. Following the example set by Pascal, Fermat, etc., I hope to gain the gratitude of the whole scientific community by placing before the finest mathematicians of our time a problem which will test their methods and the strength of their intellect. If someone communicates to me the solution of the proposed problem, I shall publicly declare him worthy of praise. <a href="" class="xref" data-knowl="./knowl/Bernoulli_bio_mactutor.html" title="Bibliographic Entry 11">[11]</a></p></blockquote>
+<figure class="figure figure-like" id="figure-19"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/BernoulliJohann.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.11<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" target="_blank">Johann Bernoulli</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 3 </sup></a></figcaption></figure><p id="p-203">In addition to Johann's, solutions were obtained from Newton,  Leibniz, Johann's brother Jacob Bernoulli,  and the Marquis de l'Hopital <a href="" class="xref" data-knowl="./knowl/struik69__sourc_book_mathem.html" title="Bibliographic Entry 15">[15]</a>.  At the time there was an ongoing and very vitriolic controversy raging over whether Newton or Leibniz had been the first to invent calculus.  An advocate of the methods of Leibniz, Bernoulli did not believe Newton would be able to solve the problem using his methods. Bernoulli attempted to embarrass Newton by sending him the problem.  However Newton did solve it.</p>
+<p id="p-204">At this point in his life Newton had all but quit science and mathematics and was fully focused on his administrative duties as Master of the Mint.  In part due to rampant counterfeiting, England's money had become severely devalued and the nation was on the verge of economic collapse.  The solution was to recall all of the existing coins, melt them down, and strike new ones.  As Master of the Mint this job fell to Newton <a href="" class="xref" data-knowl="./knowl/levenson09__newton_count.html" title="Bibliographic Entry 8">[8]</a>.  As you might imagine this was a rather Herculean task.  Nevertheless, according to his niece:</p>
+<blockquote class="blockquote" id="blockquote-2"><p id="p-205">When the problem in 1696 was sent by Bernoulli–Sir I.N. was in the midst of the hurry of the great recoinage and did not come home till four from the Tower very much tired, but did not sleep till he had solved it, which was by four in the morning.</p></blockquote>
+<p id="p-206">He is later reported to have complained, “I do not love . . . to be . . . teezed by forreigners about Mathematical things” <a href="" class="xref" data-knowl="./knowl/dunham90__journ_throug_genius.html" title="Bibliographic Entry 2">[2]</a>.</p>
+<p id="p-207"> Newton submitted his solution anonymously, presumably to avoid more controversy.  Nevertheless the methods used were so distinctively Newton's that Bernoulli is said to have exclaimed “<i class="foreign">Tanquam ex ungue leonem</i>.”</p>
+<aside class="aside aside-like" id="aside-9"><h4 class="heading"><span class="title"><i class="foreign">Tanquam ex ungue leonem</i>.</span></h4>
+<p id="p-208">“I know the lion by his claw.”</p></aside><p id="p-209"> Bernoulli's ingenious solution starts, interestingly enough, with Snell's Law of Refraction. He begins by considering the stratified medium in the following figure, where an object travels with velocities <span class="process-math">\(v_1,\,v_2,\,v_3,\,\ldots\)</span> in the various layers.</p>
+<figure class="figure figure-like" id="brachfig2"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/brachfig2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.12<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-210">By repeatedly applying Snell's Law he concluded that the fastest path must satisfy</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\sin \theta_1}{v_1}=\frac{\sin \theta_2}{v_2}=\frac{\sin\theta_3}{v_3}=\cdots\text{.}
+\end{equation*}
+</div>
+<p id="p-211">In other words, the ratio of the sine of the angle that the curve makes with the vertical and the speed remains constant along this fastest path.</p>
+<p id="p-212">If we think of a continuously changing medium as stratified into infinitesimal layers and extend Snell's law to an object whose speed is constantly changing,</p>
+<figure class="figure figure-like" id="snellfig4"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/snellfig4.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.13<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-213">then along the fastest path, the ratio of the sine of the angle that the curve's tangent makes with the vertical, <span class="process-math">\(\alpha\text{,}\)</span> and the speed, <span class="process-math">\(v\text{,}\)</span> must remain constant.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\text{ sin } \alpha}{v}=c\text{.}
+\end{equation*}
+</div>
+<p id="p-214">If we include axes and let <span class="process-math">\(P\)</span> denote the position of the bead at a particular time then we have the following picture.</p>
+<figure class="figure figure-like" id="snellfig5"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/snellfig5.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.1.14<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-215">In the above figure, <span class="process-math">\(s\)</span> denotes the length that the bead has traveled down to point <span class="process-math">\(P\)</span>(that is, the arc length of the curve from the origin to that point) and <span class="process-math">\(a\)</span> denotes the tangential component of the acceleration due to gravity <span class="process-math">\(g\text{.}\)</span>  Since the bead travels only under the influence of gravity then <span class="process-math">\(\dfdx{v}{t}=a\text{.}\)</span></p>
+<p id="p-216">To get a sense of how physical problems were approached using Leibniz's calculus we will use the above equation to show that <span class="process-math">\(v=\sqrt{2gy}\text{.}\)</span></p>
+<p id="p-217">By similar triangles we have <span class="process-math">\(\frac{a}{g}=\frac{\dx{ y}}{\dx{ s}}\text{.}\)</span> As a student of Leibniz, Bernoulli would have regarded <span class="process-math">\(\frac{\dx{ y}}{\dx{ s}}\)</span> as a fraction so</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+\begin{align*}
+a\dx{ s} \amp = g\dx{ y}\\
+\end{align*}
+<p class="intertext">and since acceleration is the rate of change of velocity we have</p>
+\begin{align*}
+\frac{\dx{ v}}{\dx{ t}}\dx{ s} \amp = g\dx{ y}.\\
+\end{align*}
+<p class="intertext">Again, 18th century European mathematicians regarded <span class="process-math">\(\dx{ v}, \dx{ t}\text{,}\)</span> and <span class="process-math">\(\dx{ s}\)</span> as infinitesimally small numbers which nevertheless obey all of the usual rules of algebra. Thus we can rearrange the above to get</p>
+\begin{align*}
+\frac{\dx{ s}}{\dx{ t}}\dx{ v} \amp = g\dx{ y}.\\
+\end{align*}
+<p class="intertext">Since <span class="process-math">\(\frac{\dx{ s}}{\dx{ t}}\)</span> is the rate of change of position with respect to time it is, in fact, the velocity of the bead. That is</p>
+\begin{align*}
+v\dx{ v} \amp = g\dx{ y}.\\
+\end{align*}
+<p class="intertext">Bernoulli would have interpreted this as a statement that two rectangles of height <span class="process-math">\(v\)</span> and <span class="process-math">\(g\text{,}\)</span> with respective widths <span class="process-math">\(\dx{ v}\)</span> and <span class="process-math">\(\dx{ y}\)</span> have equal area. Summing (integrating) all such rectangles we get:</p>
+\begin{align*}
+\int{}v\dx{ v} \amp = \int{}g\dx{ y}\\
+\frac{v^2}{2} \amp = gy
+\end{align*}
+</div>
+<p class="continuation">or</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_brach_vel">
+\begin{equation}
+v=\sqrt{2gy}\text{.}\tag{4.1.4}
+\end{equation}
+</div>
+<p id="p-218">You are undoubtedly uncomfortable with the cavalier manipulation of infinitesimal quantities you've just witnessed, so we'll pause for a moment now to compare a modern development of <a href="" class="xref" data-knowl="./knowl/eq_brach_vel.html" title="Equation 4.1.4">equation (4.1.4)</a> to Bernoulli's. As before we begin with the equation:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_brach_vel.html" id="md-7">
+\begin{align*}
+\frac{a}{g}\amp = \dfdx{y}{s}\\
+a \amp = g\dfdx{y}{s}.\\
+\end{align*}
+<p class="intertext">Moreover, since acceleration is the derivative of velocity this is the same as:</p>
+\begin{align*}
+\dfdx{v}{t} \amp = g\dfdx{y}{s}.\\
+\end{align*}
+<p class="intertext">Now observe that by the Chain Rule <span class="process-math">\(\dfdx{v}{t} = \dfdx{v}{s}\dfdx{s}{t}\text{.}\)</span> The physical interpretation of this formula is that velocity will depend on <span class="process-math">\(s\text{,}\)</span> how far down the wire the bead has moved, but that the distance traveled will depend on how much time has elapsed. Therefore</p>
+\begin{align*}
+\dfdx{v}{s}\dfdx{s}{t} \amp = g\dfdx{y}{s}\\
+\end{align*}
+<p class="intertext">or</p>
+\begin{align*}
+\dfdx{s}{t}\dfdx{v}{s} \amp = g\dfdx{y}{s}\\
+\end{align*}
+<p class="intertext">and since <span class="process-math">\(\dfdx{s}{t} = v\)</span> we have</p>
+\begin{align*}
+v\dfdx{v}{s} \amp = g\dfdx{y}{s}\\
+\end{align*}
+<p class="intertext">Integrating both sides with respect to <span class="process-math">\(s\)</span> gives:</p>
+\begin{align*}
+\int{}v\dfdx{v}{s}d s \amp = g\int{}\dfdx{y}{s}d s\\
+\int{}vd v \amp = g\int{}d y\\
+\end{align*}
+<p class="intertext">and integrating gives</p>
+\begin{align*}
+\frac{v^2}{2} \amp = gy
+\end{align*}
+</div>
+<p class="continuation">as before.</p>
+<p id="p-219">In effect, in the modern formulation we have traded the simplicity and elegance of differentials for a comparatively cumbersome repeated use of the Chain Rule. No doubt you noticed when taking Calculus that in the differential notation of Leibniz, the Chain Rule looks like “canceling” an expression in the top and bottom of a fraction: <span class="process-math">\(\dfdx{y}{u}\dfdx{u}{x} = \dfdx{y}{x}\text{.}\)</span> This is because for 18th century mathematicians, this is exactly what it was.</p>
+<p id="p-220">To put it another way, 18th century mathematicians wouldn't have recognized a need for what we call the Chain Rule because this operation was a triviality for them. Just reduce the fraction. This begs the question: Why did we abandon such a clear, simple interpretation of our symbols in favor of the, comparatively, more cumbersome modern interpretation? This is one of the questions we will try to answer in this course.</p>
+<p id="p-221">Returning to the Brachistochrone problem we observe that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="mdn-3">
+\begin{align}
+\frac{\sin\alpha}{v} \amp = c\notag\\
+\end{align}
+<p class="intertext">and since <span class="process-math">\(\sin\alpha = \frac{d x}{d s}\)</span>   we see that</p>
+\begin{align}
+\frac{\frac{d x}{d s}}{\sqrt{2gy}} \amp = c\notag\\
+\frac{d x}{\sqrt{2gy(ds)^2}} \amp = c\notag\\
+\frac{d x}{\sqrt{2gy\left[(d x)^2+(d y)^2\right]}} \amp = c\text{.}\tag{4.1.5}
+\end{align}
+</div>
+<p id="p-222">Bernoulli was then able to solve this differential equation.</p>
+<article class="problem example-like" id="problem-16"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-16"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.1.15</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-16"><article class="problem example-like"><p id="p-223"> Show that the equations <span class="process-math">\(x=\frac{\phi-\sin \phi}{4gc^2},\,y=\frac{1-\cos \phi}{4gc^2}\)</span> satisfy equation <a href="" class="xref" data-knowl="./knowl/eq_Brachistochrone.html" title="Equation 4.1.5">(4.1.5)</a>. Bernoulli recognized this solution to be an inverted cycloid, the curve traced by a fixed point on a circle as the circle rolls along a horizontal surface.</p></article></div>
+<p id="p-224">This illustrates the state of calculus in the late 1600's and early 1700's; the foundations of the subject were a bit shaky but there was no denying its power.</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-7"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Leibniz/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Newton/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-9"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

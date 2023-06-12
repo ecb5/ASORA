@@ -1,0 +1,19 @@
+
+jing: EpadelHistory.ptx Introduction.ptx Preface.ptx Background.ptx Founding.ptx Establishment.ptx Emigres.ptx WWIIAndAfter.ptx Expansion.ptx EPADEL.ptx SpringMeetings.ptx Appendix1.ptx Appendix2.ptx Appendix3.ptx Appendix4.ptx Appendix5.ptx Appendix6.ptx
+	java -classpath jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar ~/jing-trang/build/jing.jar /home/ecb5/PreText/mathbook/schema/pretext.rng EPaDelHistory.ptx
+
+
+EPaDelHistory.tex: EpadelHistory.ptx Introduction.ptx Preface.ptx Background.ptx Founding.ptx Establishment.ptx Emigres.ptx WWIIAndAfter.ptx Expansion.ptx EPADEL.ptx SpringMeetings.ptx Appendix1.ptx Appendix2.ptx Appendix3.ptx Appendix4.ptx Appendix5.ptx Appendix6.ptx
+	xsltproc --xinclude /home/ecb5/PreText/mathbook/xsl/pretext-latex.xsl EPaDelHistory.ptx > EPaDelHistory.tex
+
+EPaDelHistory.html: EpadelHistory.ptx Introduction.ptx Preface.ptx Background.ptx Founding.ptx Establishment.ptx Emigres.ptx WWIIAndAfter.ptx Expansion.ptx EPADEL.ptx SpringMeetings.ptx Appendix1.ptx Appendix2.ptx Appendix3.ptx Appendix4.ptx Appendix5.ptx Appendix6.ptx
+	xsltproc --xinclude /home/ecb5/PreText/mathbook/xsl/pretext-html.xsl EPaDelHistory.ptx
+
+pdf: EPaDelHistory.tex
+	pdflatex EPaDelHistory.tex
+	pdflatex EPaDelHistory.tex
+	evince EPaDelHistory.pdf
+
+html: EPaDelHistory.html
+
+all: jing html pdf

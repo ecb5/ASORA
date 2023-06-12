@@ -1,0 +1,389 @@
+
+
+<section xml:id="sec_CantorsTheorem">
+  <title>Cantor's Theorem and Its Consequences</title>
+
+  <figure>
+    <caption>Richard Dedekind<idx><h>Dedekind, Richard</h><h>portrait of</h></idx></caption>
+    <image width="35%" source="images/Dedekind.png" />
+  </figure>
+
+  <p>
+    Once Cantor showed that there were two types of infinity
+    (countable and uncountable), the following question was natural,
+    <q>Do all uncountable sets have the same cardinality?</q>
+  </p>
+
+  <p>
+    Just like not all <q>non-dogs</q>
+    are cats, there is, offhand,
+    no reason to believe that all uncountable sets should be the same size.
+    However constructing uncountable sets of different sizes is not as easy as it sounds.
+  </p>
+
+  <p>
+    <idx>
+        <h>Dedekind, Richard</h>
+    </idx>
+    <idx>
+        <h>Cantor, Georg</h>
+         <h>unit interval and unit square have equal cardinalty</h>
+    </idx>
+    For example, what about the line segment represented by the
+    interval <m>[0,1]</m> and the square represented by the set
+    <m>[0,1]\times[0,1]=\left\{(x,y)|0\leq x,y\leq 1\right\}</m>.
+    Certainly the two dimensional square must be a larger infinite set
+    than the one dimensional line segment.  Remarkably, Cantor showed
+    that these two sets were the same cardinality.  In his 1877
+    correspondence of this result to his friend and fellow
+    mathematician, Richard Dedekind, even Cantor remarked, <q>I see
+    it, but I don't believe it!</q>
+  </p>
+
+  <p>
+    The following gives the original idea of Cantor's proof.
+    Cantor devised the following function <m>f:[0,1]\times[0,1]\rightarrow [0,1]</m>.
+    First, we represent the coordinates of any point
+    <m>(x,y)\in [0,1]\times[0,1]</m> by their decimal representations
+    <m>x=0.a_1 a_2 a_3\ldots</m> and <m>y=0.b_1 b_2 b_3\ldots</m>.
+    Even terminating decimals can be written this way as we could write <m>0.5=0.5000\ldots</m>.
+    We can then define <m>f(x,y)</m> by
+    <me>
+      f((0.a_1 a_2 a_3\ldots ,0.b_1 b_2 b_3\ldots))=0.a_1 b_1 a_2 b_2 a_3 b_3\ldots
+    </me>.
+  </p>
+
+  <p>
+    This relatively simple idea has some technical difficulties in it related to the following result.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>series</h><h>Geometric series</h><h><m>(0.\bar{9})</m> converges to <m>1</m></h></idx>
+        Consider the sequence <m>(0.9,0.99,0.999,\ldots)</m>.
+        Determine that this sequence converges and,
+        in fact, it converges to <m>1</m>.
+        This suggests that <m>0.999\ldots=1</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Similarly, we have <m>0.04999\ldots=0.05000\ldots</m>, etc.
+    To make the decimal representation of a real number in <m>[0,1]</m> unique,
+    we must make a consistent choice of writing a terminating decimal as one that ends in an infinite string of zeros or an infinite string of nines [with the one exception
+    <m>0=0.000\ldots</m> ]. No matter which choice we make,
+    we could never make this function onto.
+    For example,
+    <m>109/1100=0.09909090\ldots</m> would have as its pre-image
+    <m>(0.0999\ldots,0.9000\ldots)</m> which would be a mix of the two conventions.
+  </p>
+
+  <p>
+    Cantor was able to overcome this technicality to demonstrate a one
+    to one correspondence, but instead we will note that in either
+    convention, the function is one-to-one, so this says that the set
+    <m>[0,1]\times[0,1]</m> is the same cardinality as some
+    (uncountable) subset of <m>\RR</m>.  The fact that this has the
+    same cardinality as <m>\RR</m> is something we will come back to.
+    But first we'll try construct an uncountable set which does not
+    have the same cardinality as <m>\RR</m>.  To address this issue,
+    Cantor proved the following in 1891.
+  </p>
+
+  <theorem xml:id="thm_CantorsTheorem">
+    <statement>
+      <p>
+        <alert>Cantor's Theorem</alert>
+      </p>
+      <p>
+        <idx>
+            <h>Cantor, Georg</h>
+             <h>Cantor's Theorem</h>
+        </idx>
+        Let <m>S</m> be any set.  Then there is no one-to-one
+        correspondence between <m>S</m> and <m>P(S)</m>, the set of
+        all subsets of <m>S</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Since <m>S</m> can be put into one-to-one correspondence with a subset of <m>P(S)</m> (<m>a\rightarrow \left\{a\right\}</m>),
+    then this says that <m>P(S)</m> is at least as large as S. In the finite case
+    <m>\abs{P(S)}</m> is strictly greater than <m>\abs{S}</m> as the following problem shows.
+    It also demonstrates why <m>P(S)</m> is called the power set of <m>S</m>.
+  </p>
+
+  <problem xml:id="prob_PowerSet">
+    <statement>
+      <p>
+            <idx>
+              <h>sets</h>
+              <h>power set</h>
+            </idx>
+            <idx>
+              <h>sets</h>
+              <h>cardinality of a power set</h>
+            </idx>
+            <idx>
+              <h>cardinality</h>
+              <h>of a power set</h>
+            </idx>
+        Prove: If <m>\abs{S}=n</m>, then <m>\abs{ P(S)}=2^n</m>. 
+      </p>
+            <hint>
+              <p>
+                Let <m>S={a_1,a_2,\ldots,a_n}</m>.
+                Consider the following correspondence between the elements of <m>P(S)</m> and the set <m>T</m> of all <m>n</m>-tuples of yes (Y) or no (N):
+                <md>
+                  <mrow>\{ \}  \amp \leftrightarrow \{N,N,N,\ldots,N\}</mrow>
+                  <mrow>\{a_1\}\amp \leftrightarrow \{Y,N,N,\ldots ,N\}</mrow>
+                  <mrow>\{a_2\}\amp \leftrightarrow \{N,Y,N,\ldots,N\}</mrow>
+                  <mrow>\amp \vdots</mrow>
+                  <mrow>S\amp \leftrightarrow \{Y,Y,Y,\ldots,Y\}</mrow>
+                </md>
+              </p>
+              
+              <p>
+                How many elements are in <m>T?</m>
+              </p>
+            </hint>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx>
+            <h>Cantor, Georg</h>
+             <h>Cantor's Theorem</h>
+        </idx>
+        Prove <xref ref="thm_CantorsTheorem">Cantor's Theorem</xref>.
+      </p>
+      <hint> 
+        Assume for contradiction, that there is a one-to-one
+        correspondence <m>f:S\rightarrow P(S)</m>.
+        Consider <m>A=\left\{x\in S|x\not\in f(x)\right\}</m>.
+        Since <m>f</m> is onto, then there is <m>a\in A</m> such
+        that <m>A=f(a)</m>.  Is <m>a\in A</m> or is <m>a\not\in
+        A?</m>
+      </hint>
+    </statement>
+  </problem>
+
+  <p>
+    Actually it turns out that <m>\RR</m> and <m>P(\NN)</m> have the same cardinality.
+    This can be seen in a roundabout way using some of the above ideas from <xref ref="prob_PowerSet">Problem</xref>.
+    Specifically,
+    let <m>T</m> be the set of all sequences of zeros or ones
+    (you can use <m>Y</m>s or <m>N</m>s, if you prefer).
+    Then it is straightforward to see that <m>T</m> and <m>P(\NN)</m> have the same cardinality.
+  </p>
+
+  <p>
+    If we consider <m>(0,1]</m>, which has the same cardinality as <m>\RR</m>,
+    then we can see that this has the same cardinality as <m>T</m> as well.
+    Specifically, if we think of the numbers in binary,
+    then every real number in <m>[0,1]</m> can be written as
+    <m>\sum_{j=1}^\infty \frac{a_j}{2^j} =(a_1,a_2,\ldots)</m> where <m>a_j\in\left\{0,1\right\}</m>.
+    We have to account for the fact that binary representations such as <m>0.0111\ldots</m> and
+    <m>0.1000\ldots</m> represent the same real number
+    (say that no representations will end in an infinite string of zeros),
+    then we can see that <m>[0,1]</m> has the same cardinality as <m>T-U</m>,
+    where <m>U</m> is the set of all sequences ending in an infinite string of zeros.
+    It turns out that <m>U</m> itself is a countable set.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>countable sets</h><h>countable union of finite sets</h></idx>
+        Let <m>U_n=\{(a_1,a_2,a_3,\ldots)\ |\ a_j\in \{0,1\} \text{ and } a_{n+1}=a_{n+2}=\cdots=0\}</m>.
+        Show that for each <m>n</m>,
+        <m>U_n</m> is finite and use this to conclude that <m>U</m> is countably infinite.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The following two problems show that deleting a countable set from an uncountable set does not change its cardinality.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>sets</h><h>countably infinite subsets</h></idx>
+        Let <m>S</m> be an infinite set.
+        Prove that <m>S</m> contains a countably infinite subset.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>countable sets</h><h>deleting a countable subset</h></idx>
+        Suppose <m>X</m> is an uncountable set and <m>Y\subset X</m> is countably infinite.
+        Prove that <m>X</m> and <m>X-Y</m> have the same cardinality. 
+      </p>
+      <hint>
+        <p>
+          Let <m>Y=Y_0</m>.
+          If <m>X-Y_0</m> is an infinite set,
+          then by the previous problem it contains a countably infinite set <m>Y_1</m>.
+          Likewise if <m>X-(Y_0\cup Y_1)</m> is infinite it also contains an infinite set <m>Y_2</m>.
+          Again, if <m>X-(Y_0\cup Y_1\cup Y_2)</m> is an infinite set then it contains an infinite set <m>Y_3</m>, etc.
+          For <m>n=1, 2, 3,\ldots </m>,
+          let <m>f_n:Y_{n-1}\rightarrow Y_n</m> be a one-to-one correspondence and define <m>f:X\rightarrow X-Y</m> by
+          <me>
+            \begin{cases}f(x)=f_n(x), \amp \text{ if }  x\in Y_n, n=0,1,2,\ldots\\ f(x)=x, \amp \text{ if }  x\in X-(\cup_{n=0}^\infty Y_n ) \end{cases} 
+          </me>.
+        </p>
+      </hint>
+      <p>
+        Show that <m>f</m> is one-to-one and onto.
+      </p>
+
+    </statement>
+  </problem>
+
+  <p>
+    The above problems say that <m>R</m>, <m>T-U</m>,
+    <m>T</m>, and <m>P(N)</m> all have the same cardinality.
+  </p>
+
+  <p>
+    As was indicated before, Cantor's 
+        <idx><h>Cantor, Georg</h></idx>
+    work on infinite sets had a profound impact on mathematics in the beginning of the twentieth century.
+    For example, in examining the proof of Cantor's Theorem,
+    the eminent logician Bertrand Russell devised his famous paradox in 1901.
+    Before this time,
+    a set was naively thought of as just a collection of objects.
+    Through the work of Cantor and others,
+    sets were becoming a central object of study in mathematics as many mathematical concepts were being reformulated in terms of sets.
+    The idea was that set theory was to be a unifying theme of mathematics.
+    This paradox set the mathematical world on its ear.
+  </p>
+
+  <p>
+    {Russell's Paradox} 
+        <idx><h>Russell's Paradox</h></idx>
+    Consider the set of all sets which are not elements of themselves.
+    We call this set <m>D</m> and ask,
+    <q>Is <m>D\in D?</m></q> Symbolically, this set is
+    <me>
+      D=\{S\ |\ S\not \in S\}
+    </me>.
+  </p>
+
+  <p>
+    If <m>D\in D</m>, then by definition, <m>D\not\in D</m>.
+    If <m>D\not\in D</m>, then by definition, <m>D\in D</m>.
+  </p>
+
+  <p>
+    If you look back at the proof of Cantor's Theorem,
+    this was basically the idea that gave us the contradiction.
+    To have such a contradiction occurring at the most basic level of mathematics was scandalous.
+    It forced a number of mathematicians and logicians to carefully devise the axioms by which sets could be constructed.
+    To be honest,
+    most mathematicians still approach set theory from a naive point of view as the sets we typically deal with fall under the category of what we would call
+    <q>normal sets.</q> In fact,
+    such an approach is officially called Naive Set Theory
+    (as opposed to Axiomatic Set Theory).
+    However, attempts to put set theory and logic on solid footing led to the modern study of symbolic logic and ultimately the design of computer (machine) logic.
+  </p>
+
+  <p>
+    Another place where Cantor's work had a profound influence in modern logic comes from something we alluded to before.
+    We showed before that the unit square
+    <m>[0,1]\times [0,1]</m> had the same cardinality as an uncountable subset of <m>\RR</m>.
+    In fact, Cantor 
+        <idx><h>Cantor, Georg</h></idx>
+    showed that the unit square had the same cardinality as <m>\RR</m> itself and was moved to advance the following in 1878.
+  </p>
+
+  <p>
+<conjecture>
+  <p>
+    <alert>The Continuum Hypothesis</alert>
+  </p>
+  <p>
+    <idx><h>Continuum Hypothesis</h><h>original</h></idx> Every uncountable subset of <m>\RR</m> has the same cardinality as <m>\RR</m>.
+  </p>
+</conjecture>
+  </p>
+  <p>
+    Cantor was unable to prove or disprove this conjecture
+    (along with every other mathematician).
+    In fact, proving or disproving this conjecture,
+    which was dubbed the Continuum Hypothesis,
+    was one of Hilbert's famous 23 problems presented as a challenge to mathematicians at the International Congress of Mathematicians in 1900.
+  </p>
+
+  <p>
+    Since <m>\RR</m> has the same cardinality as <m>P(\NN)</m>,
+    then the Continuum Hypothesis was generalized to the:
+  </p>
+
+<conjecture>
+  <p>
+    <alert>The Generalized Continuum Hypothesis</alert>
+  </p>
+  <p>
+    <idx><h>Continuum Hypothesis</h><h>generalized</h></idx> Given an infinite set <m>S</m>,
+    there is no infinite set which has a cardinality strictly between that of <m>S</m> and its power set <m>P(S)</m>.
+  </p>
+</conjecture>
+  <p>
+    Efforts to prove or disprove this were in vain and with good reason.
+    In 1940, the logician Kurt G&#xf6;del showed that the Continuum Hypothesis could not be disproved from the Zermelo-Fraenkel Axioms of set theory<fn>
+    One of the formal axiomatic approaches to set theory established by Ernst Zermelo in 1908 and revised by Abraham Fraenkel in 1921.
+    </fn>.
+    In 1963, Paul Cohen showed that the Continuum Hypothesis could not be proved using the Zermelo-Fraenkel Axioms.
+    In other words,
+    the Zermelo-Fraenkel Axioms do not contain enough information to decide the truth of the hypothesis.
+  </p>
+
+  <p>
+    We are willing to bet that at this point your head might be swimming a bit with uncertainty.
+    If so, then know that these are the same feelings that the mathematical community experienced in the mid twentieth century.
+    In the past,
+    mathematics was seen as a model of logical certainty.
+    It is disconcerting to find that there are statements that are <q>undecidable.</q>
+    In fact, G&#xf6;del proved in 1931 that a consistent finite axiom system that contained the axioms of arithmetic would always contain undecidable statements which could neither be proved true nor false with those axioms.
+    Mathematical knowledge would always be incomplete.
+  </p>
+
+  <figure>
+    <caption>Kurt G&#xf6;del<idx><h>G&#xf6;del, Kurt</h><h>portrait of</h></idx></caption>
+    <image width="35%" source="images/Godel.png" />
+  </figure>
+
+  <p>
+    So by trying to put the foundations of calculus on solid ground,
+    we have come to a point where we can never obtain mathematical certainty.
+    Does this mean that we should throw up our hands and concede defeat?
+    Should we be paralyzed with fear of trying anything?
+    Certainly not!
+    As we mentioned before,
+    most mathematicians do well by taking a pragmatic approach:
+    using their mathematics to solve problems that they encounter.
+    In fact, it is typically the problems that motivate the mathematics.
+    It is true that mathematicians take chances that don't always pan out,
+    but they still take these chances, often with success.
+    Even when the successes lead to more questions, as they typically do,
+    tackling those questions usually leads to a deeper understanding.
+    At the very least,
+    our incomplete understanding means we will always have more questions to answer,
+    more problems to solve.
+  </p>
+
+  <p>
+    What else could a mathematician ask for?
+  </p>
+</section>
+

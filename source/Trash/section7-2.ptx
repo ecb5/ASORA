@@ -1,0 +1,94 @@
+
+
+<section>
+  <title>Proof of the Intermediate Value Theorem</title>
+  <p>
+    We now have all of the tools to prove the Intermediate Value Theorem (<term>IVT</term>).
+  </p>
+
+  <theorem xml:id="IntermediateValueTheorem">
+    <statement>
+      <p>
+        <term>Intermediate Value Theorem</term>
+      </p>
+      <p>
+        <idx><h>Intermediate Value Theorem (IVT)</h></idx> 
+         Suppose <m>f(x)</m> is continuous on 
+          <m>[a,b]</m> and <m>v</m> is any real number between 
+          <m>f(a)</m> and <m>f(b)</m>.
+          Then there exists a real number
+          <m>c\in[\,a,b]</m> such that <m>f(c)=v</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+<title>Sketch of Proof</title>
+    <p>
+      We have two cases to consider:
+      <m>f(a)\leq v\leq f(b)</m> and <m>f(a)\geq v\geq f(b)</m>.
+    </p>
+
+    <p>
+      We will look at the case <m>f(a)\leq v\leq f(b)</m>.
+      Let <m>x_1=a</m> and <m>y_1=b</m>,
+      so we have <m>x_1\leq y_1</m> and <m>f(x_1)\leq v\leq f(y_1)</m>.
+      Let <m>\,m_1</m> be the midpoint of
+      <m>[\,x_1,y_1]</m> and notice that we have either
+      <m>f(m_1)\leq v</m> or <m>f(m_1)\geq v</m>.
+      If <m>f(m_1)\leq v</m> , then we relabel <m>x_2=m_1</m> and <m>y_2=y_1</m>.
+      If <m>f(m_1)\geq v</m> , then we relabel <m>x_2=x_1</m> and <m>y_2=m_1</m>.
+      In either case, we end up with <m>x_1\leq x_2\leq y_2\leq y_1</m>,
+      <m>y_2-x_2=\frac{1}{2}\left(y_1-x_1\right)</m>,
+      <m>f(x_1)\leq v\leq f(y_1)</m>,
+      and <m>f(x_2)\leq v\leq f(y_2)</m>.
+    </p>
+
+    <p>
+      Now play the same game with the interval <m>[\,x_2,y_2]</m>.
+      If we keep playing this game,
+      we will generate two sequences
+      <m>\left(x_n\right)</m> and <m>\left(y_n\right)</m>,
+      satisfying all of the conditions of the nested interval property.
+      These sequences will also satisfy the following extra property:
+      <m>\forall</m> <m>n,\,f(x_n)\leq v\leq f(y_n)</m>.
+      By the NIP, there exists a <m>c</m> such that
+      <m>\,x_n\leq c\leq y_n</m>, <m>\forall</m> <m>n</m>.
+      This should be the <m>c</m> that we seek though this is not obvious.
+      Specifically, we need to show that <m>f(c)=v</m>.
+      This should be where the continuity of <m>f</m> at <m>c</m> and the extra property on
+      <m>\left(x_n\right)</m>and <m>\left(y_n\right)</m> come into play.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Intermediate Value Theorem (IVT)</h><h>the case <m>f(a)\leq v\leq f(b)</m></h></idx>
+        Turn the ideas of the previous paragraphs into a formal proof of the IVT for the case <m>f(a)\leq v\leq f(b)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Intermediate Value Theorem (IVT)</h><h>the case <m>f(a)\geq v\geq f(b)</m></h></idx>
+        We can modify the proof of the case <m>f(a)\leq v\leq f(b)</m> into a proof of the IVT for the case <m>f(a)\geq v\geq f(b)</m>.
+        However, there is a sneakier way to prove this case by applying the IVT to the function <m>-f</m>.
+        Do this to prove the IVT for the case <m>f(a)\geq v\geq f(b)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>polynomials</h><h>with odd degree must have a root</h></idx>
+            <idx><h>a polynomial with odd degree must have a root</h></idx>
+        Use the IVT to prove that any polynomial of odd degree must have a real root.
+      </p>
+    </statement>
+  </problem>
+</section>
+

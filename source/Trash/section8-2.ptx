@@ -1,0 +1,605 @@
+
+
+<section>
+  <title>Uniform Convergence: Integrals and Derivatives</title>
+  <introduction>
+    <p>
+      We saw in the previous section that if
+      <m>\left(f_n\right)</m> is a sequence of continuous functions which converges uniformly to <m>f</m> on an interval,
+      then <m>f</m> must be continuous on the interval as well.
+      This was not necessarily true if the convergence was only pointwise,
+      as we saw a sequence of continuous functions defined on
+      <m>(-\infty,\infty)</m> converging pointwise to a Fourier series that was not continuous on the real line.
+      Uniform convergence guarantees some other nice properties as well.
+    </p>
+
+    <theorem xml:id="th_UniformIntegralConvergence">
+      <statement>
+        <p>
+              <idx><h>uniform convergence</h><h>integration and</h></idx>
+              <idx><h>integral of the uniform limit of functions</h></idx>
+          Suppose <m>f_n</m> and <m>f</m> are integrable and <m>f_n\unif f</m> on <m>[a,b]</m>.
+          Then
+          <me>
+            \lim_{n\rightarrow\infty}\int_{x=a}^b f_n(x)\d x=\int_{x=a}^bf(x)\d x. {}
+          </me>
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>uniform convergence</h><h>integration and</h></idx>
+              Prove <xref ref="th_UniformIntegralConvergence">Theorem</xref>. 
+              <hint> 
+                For <m>\eps>0</m>, we need to make <m>|f_n(x)-f(x)|\lt \frac{\eps}{b-a}</m>, for all <m>x\in[a,b]</m>.
+              </hint>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Notice that this theorem is not true if the convergence is only pointwise,
+      as illustrated by the following.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          <idx><h>convergence</h><h>pointwise convergence</h></idx>
+          <idx><h>convergence</h><h>uniform convergence</h></idx>
+          <idx><h>convergence</h><h>pointwise vs. uniform convergence</h></idx>
+          Consider the sequence of functions <m>\left(f_n\right)</m> given by
+          <me>
+            f_n(x)= \begin{cases}n\amp \text{ if } x\in\left(0,\frac{1}{n}\right)\\ 0\amp \text{ otherwise } \end{cases} 
+          </me>.
+          <ol label="(a)">
+            <li>
+              <p>
+                Show that <m>f_n\ptwise 0</m> on <m>[0,1]</m>,
+                but <m>\limit{n}{\infty}{\int_{x=0}^1f_n(x)\d x\neq\int_{x=0}^10\d x.}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Can the convergence be uniform?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Applying this result to power series we have the following.
+    </p>
+
+    <corollary xml:id="cor_IntConvUni">
+      <statement>
+        <p>
+          If
+          <m>\sum_{n=0}^\infty a_nx^n</m> converges uniformly<fn>
+          Notice that we must explicitly assume uniform convergence.
+          This is because we have not <em>yet</em>
+          proved that power series actually do converge uniformly.
+          </fn> to <m>f</m> on an interval containing <m>0</m> and <m>x</m> then <m>\int_{t=0}^xf(t)\d t=\sum_{n=1}^\infty\left(\frac{a_n}{n+1}x^{n+1}\right)</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <problem>
+      <statement>
+        <p>
+          <idx><h>power series</h><h>term by term integral of</h></idx>
+          <idx><h>integration</h><h>term by term integration of power series</h></idx>
+          Prove <xref ref="cor_IntConvUni">Corollary</xref>. 
+          <hint> Remember that
+            <me>
+              \displaystyle \sum_{n=0}^\infty f_n(x) = \lim_{N\rightarrow\infty}\sum_{n=0}^N f_n(x). 
+            </me>
+          </hint>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Surprisingly,
+      the issue of term-by-term differentiation depends not on the uniform convergence of <m>\left(f_n\right)</m>,
+      but on the uniform convergence of <m>\left(f^\prime_n\right)</m>.
+      More precisely, we have the following result.
+    </p>
+
+    <theorem xml:id="thm_UniformDerivativeConvergence">
+      <statement>
+        <p>
+              <idx><h>pointwise convergence</h><h>derivative and</h></idx>
+              <idx><h>differentiation</h><h>of the pointwise limit of functions</h></idx>
+          Suppose for every <m>n\in\NN</m> <m>f_n</m> is differentiable, <m>f_n^\prime</m> is continuous, <m>f_n\ptwise f</m>, and <m>f_n^\prime\unif g</m> on an interval, <m>I</m>.
+          Then <m>f</m> is differentiable and <m>f^\prime = g</m> on <m>I</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>sequences</h><h>differentiation of a sequence of functions</h></idx>
+              <idx><h>differentiation</h><h>differentiation of a sequence of functions</h></idx>
+              Prove <xref ref="thm_UniformDerivativeConvergence">Theorem</xref>. 
+              <hint> Let <m>a</m> be an arbitrary fixed point in <m>I</m> and let <m>x\in I</m>.
+                By the Fundamental Theorem of Calculus, we have
+                <me>
+                  \int_{t=a}^x f^\prime_n(t)\d t=f_n(x)-f_n(a)
+                </me>.
+                  Take the limit of both sides and differentiate with respect to <m>x</m>.
+        </hint>
+        </p>
+
+      </statement>
+    </problem>
+
+    <p>
+      As before, applying this to power series gives the following result.
+    </p>
+
+    <corollary xml:id="cor_UniformConvergenceDerivative">
+      <statement>
+        <p>
+          If
+          <m>\sum_{n=0}^\infty a_nx^n</m> converges pointwise to <m>f</m> on an interval containing <m>0</m> and <m>x</m> and
+          <m>\sum_{n=1}^\infty a_nnx^{n-1}</m> converges uniformly on an interval containing <m>0</m> and <m>x</m>,
+          then <m>f^\prime(x)=\sum_{n=1}^\infty a_nnx^{n-1}</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>power series</h><h>term by term derivative of</h></idx>
+              <idx><h>differentiation</h><h>term by term differentiation of power series</h></idx>
+          Prove <xref ref="cor_UniformConvergenceDerivative">Corollary</xref>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The above results say that a power series can be differentiated and integrated term-by-term as long as the convergence is uniform.
+      Fortunately it is, in general,
+      true that when a power series converges the convergence of it and its integrated and differentiated series is also uniform
+      (almost).
+    </p>
+
+    <p>
+      However we do not yet have all of the tools necessary to see this.
+      To build these tools requires that we return briefly to our study,
+      begun in <xref ref="chpt_Convergence">Chapter</xref>,
+      of the convergence of sequences.
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>Cauchy Sequences</title>
+    <p>
+      Knowing that a sequence or a series converges and knowing what it converges to are typically two different matters.
+      For example,
+      we know that <m>\sum_{n=0}^\infty\frac{1}{n!}</m>and <m>\sum_{n=0}^\infty\frac{1}{n!\,n!}</m> both converge.
+      The first converges to <m>e</m>,
+      which has meaning in other contexts.
+      We don't know what the second one converges to,
+      other than to say it converges to <m>\sum_{n=0}^\infty\frac{1}{n!\,n!}</m>.
+      In fact, that question might not have much meaning without some other context in which <m>\sum_{n=0}^\infty\frac{1}{n!\,n!}</m> arises naturally.
+      Be that as it may, we need to look at the convergence of a series
+      (or a sequence for that matter)
+      without necessarily knowing what it might converge to.
+      We make the following definition.
+    </p>
+
+    <definition xml:id="def_CauchySequence">
+      <statement>
+        <p>
+              <idx><h>sequences</h><h>Cauchy sequences</h></idx>
+          Let <m>\left(s_n\right)</m> be a sequence of real numbers.
+          We say that <m>\left(s_n\right)</m>is a
+          <term>Cauchy sequence</term>
+          if for any <m>\eps>0</m>,
+          there exists a real number <m>N</m> such that if <m>m,n>N</m>,
+          then <m>|s_m-s_n|\lt \eps</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Notice that this definition says that the terms in a Cauchy sequence get arbitrarily close to each other and that there is no reference to getting close to any particular fixed real number.
+      Furthermore,
+      you have already seen lots of examples of Cauchy sequences as illustrated by the following result.
+    </p>
+
+    <theorem xml:id="thm_Converge-_Cauchy">
+      <statement>
+        <p>
+              <idx><h>sequences</h><h>convergence</h></idx>
+              <idx><h>convergence</h><h>of a sequence</h><h>implies Cauchy sequence</h></idx>
+          Suppose <m>\left(s_n\right)</m> is a sequence of real numbers which converges to <m>s</m>.
+          Then <m>\left(s_n\right)</m> is a Cauchy sequence.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      Intuitively, this result makes sense.
+      If the terms in a sequence are getting arbitrarily close to <m>s</m>,
+      then they should be getting arbitrarily close to each other.<fn>
+      But the converse isn't nearly as clear.
+      In fact, it isn't true in the rational numbers.
+      </fn> This is the basis of the proof.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>sequences</h><h>convergence</h></idx>
+              <idx><h>convergence</h><h>of a sequence</h><h> implies Cauchy sequence</h></idx>
+              Prove <xref ref="thm_Converge-_Cauchy">Theorem</xref>. 
+              <hint>
+                <m>|s_m-s_n|=|s_m-s+s-s_n|\leq|s_m-s\mathopen|+|s-s_n|</m>.
+              </hint>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      So any convergent sequence is automatically Cauchy.
+      For the real number system, the converse is also true and,
+      in fact, is equivalent to any of our completeness axioms:
+      the NIP, the Bolzano-Weierstrass Theorem, or the LUB Property.
+      Thus, this could have been taken as our completeness axiom and we could have used it to prove the others.
+      One of the most convenient ways to prove this converse is to use the Bolzano-Weierstrass Theorem.
+      To do that, we must first show that a Cauchy sequence must be bounded.
+      This result is reminiscent of the fact that a convergent sequence is bounded
+      (<xref ref="lemma_BoundedConvergent">Lemma</xref>
+      of <xref ref="chpt_Convergence">Chapter</xref>)
+      and the proof is very similar.
+    </p>
+
+    <lemma xml:id="lemma_Cauchy-_Bounded">
+      <statement>
+        <p>
+          Suppose
+          <m>\left(s_n\right)</m> <m></m>is a Cauchy sequence.
+          Then there exists <m>B>0</m> such that <m>|s_n|\leq B</m> for all <m>n</m>.
+        </p>
+      </statement>
+    </lemma>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>sequences</h><h>Cauchy sequences</h><h>every Cauchy sequence is bounded</h></idx>
+          Prove <xref ref="lemma_Cauchy-_Bounded">Lemma</xref>. 
+              <hint> This is similar to <xref ref="prob_BoundedConvergent">problem</xref> of <xref ref="chpt_Convergence">Chapter</xref>.
+          There exists <m>N</m> such that if <m>m,n>N</m>then
+          <m>|s_n-s_m|\lt 1.\</m>, Choose a fixed <m>m>N</m> and let <m>B=\max\left(\abs{s_1}, \abs{s_2}, \ldots, \abs{s_{\lceil N\rceil}}, \abs{s_m}+1\right)</m>.
+              </hint>
+        </p>
+      </statement>
+    </problem>
+
+    <theorem xml:id="thm_Cauchy-_Converge">
+      <statement>
+        <p>
+          <alert>Cauchy sequences converge</alert>
+        </p>
+        <p>
+          <idx><h>sequences</h><h>Cauchy sequences</h><h>convergence of</h></idx>
+          Suppose <m>\left(s_n\right)</m>is a Cauchy sequence of real numbers.
+          There exists a real number <m>s</m> such that
+          <m>\lim_{n\rightarrow\infty}s_n=s</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <proof>
+<title>Sketch of Proof</title>
+      <p>
+        We know that <m>\left(s_n\right)</m> <m></m>is bounded,
+        so by the Bolzano-Weierstrass Theorem,
+        it has a convergent subsequence
+        <m>\left(s_{n_k}\right)</m> converging to some real number <m>s</m>.
+        We have <m>|s_n-s|=|s_n-s_{n_k}+s_{n_k}-s|\leq|s_n-s_{n_k}\mathopen|+|s_{n_k}-s|</m>.
+        If we choose <m>n</m> and <m>n_k</m> large enough,
+        we should be able to make each term arbitrarily small.
+      </p>
+    </proof>
+
+    <problem xml:id="prob_Cauchy_sequences_Cauchy_implies_convergence">
+      <statement>
+        <p>
+          <idx><h>sequences</h><h>Cauchy sequences</h><h>convergence of</h></idx>
+          Provide a formal proof of <xref ref="thm_Cauchy-_Converge">Theorem</xref>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      From <xref ref="thm_Converge-_Cauchy">Theorem</xref>
+      we see that every Cauchy sequence converges in <m>\RR</m>.
+      Moreover the proof of this fact depends on the Bolzano-Weierstrass Theorem which,
+      as we have seen,
+      is equivalent to our completeness axiom,
+      the Nested Interval Property.
+      What this means is that if there is a Cauchy sequence which does not converge then the NIP is not true.
+      A natural question to ask is if every Cauchy sequence converges does the NIP follow?
+      That is, is the convergence of Cauchy sequences also equivalent to our completeness axiom?
+      The following theorem shows that the answer is yes.
+    </p>
+
+    <theorem xml:id="thm_ConvCauchyEquivNIP">
+      <statement>
+        <p>
+              <idx><h>sequences</h><h>Cauchy sequences</h><h>convergence of is equivalent to the NIP</h></idx>
+          Suppose every Cauchy sequence converges.
+          Then the Nested Interval Property is true.
+        </p>
+      </statement>
+    </theorem>
+
+    <problem xml:id="prob_Cauchy_sequences_Cauchy_implies_NIP">
+      <statement>
+        <p>
+              <idx><h>sequences</h><h>Cauchy sequences</h><h>convergence of is equivalent to the NIP</h></idx>
+          Prove <xref ref="thm_ConvCauchyEquivNIP">Theorem</xref>. 
+              <hint> 
+                If we start with two sequences <m>\left(x_n\right)</m> and <m>\left(y_n\right)</m>, satisfying all of the conditions of the NIP, you should be able to show that these are both Cauchy sequences.
+              </hint>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      <xref ref="prob_Cauchy_sequences_Cauchy_implies_convergence">Problems</xref>
+      and <xref ref="prob_Cauchy_sequences_Cauchy_implies_NIP"></xref>
+      tell us that the following are equivalent:
+      the Nested Interval Property,
+      the Bolzano-Weierstrass Theorem,
+      the Least Upper Bound Property,
+      and the convergence of Cauchy sequences.
+      Thus any one of these could have been taken as the completeness axiom of the real number system and then used to prove the each of the others as a theorem according to the following dependency graph:
+      <image width="100%" source="images/CompletenessAxioms.png" />
+    </p>
+
+    <p>
+      Since we can get from any node on the graph to any other,
+      simply by following the implications
+      (indicated with arrows),
+      any one of these statements is logically equivalent to each of the others.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>sequences</h><h>Cauchy sequences</h><h>don't always converge in <m>\QQ</m></h></idx>
+          Since the convergence of Cauchy sequences can be taken as the completeness axiom for the real number system, it does not hold for the rational number system.
+          Give an example of a Cauchy sequence of rational numbers which does not converge to a rational number.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      If we apply the above ideas to series we obtain the following important result,
+      which will provide the basis for our investigation of power series.
+    </p>
+
+    <theorem xml:id="thm_CauchyCriterion">
+      <statement>
+        <p>
+          <alert>Cauchy Criterion</alert>
+        </p>
+        <p> 
+          <idx><h>series</h><h>Cauchy Criterion</h></idx> 
+          <idx><h>Cauchy, Augustin</h><h>Cauchy Criterion</h></idx>
+          The series <m>\sum_{k=0}^\infty a_k</m> converges if and only if <m>\forall \eps>0</m>,
+          <m>\exists N</m> such that if <m>m>n>N</m> then <m>|\sum_{k=n+1}^ma_k|\lt \eps</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>series</h><h>Cauchy criterion</h></idx>
+              <idx><h>Cauchy, Augustin</h><h>Cauchy Criterion</h></idx>
+          Prove the Cauchy criterion.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      At this point several of the tests for convergence that you probably learned in calculus are easily proved.
+      For example:
+    </p>
+
+    <problem xml:id="prob_NthTermTest">
+      <statement>
+        <p>
+          <alert>The <m>n</m>th Term Test</alert>
+        </p>
+        <p>
+              <idx><h><m>n</m>th term test</h></idx>
+              <idx><h>divergence</h><h>of a series</h><h><m>n</m>th term test</h></idx> 
+          Show that if <m>\sum_{n=1}^\infty a_n</m> converges then <m>\limit{n}{\infty}{a_n}=0</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          <alert>The Strong Cauchy Criterion</alert>
+        </p>
+        <p>
+          <idx><h>series</h><h>Cauchy Criterion</h><h>Strong Cauchy Criterion</h></idx>
+          Show that <m>\displaystyle\sum_{k=1}^\infty a_k</m>
+          converges if and only
+          if <m>\limit{n}{\infty}{\sum_{k=n+1}^\infty a_k}=0</m>.
+
+          <hint> The hardest part of this problem is recognizing that
+          it is really about the limit of a sequence as
+          in <xref ref="chpt_Convergence">Chapter</xref>. 
+          </hint>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      You may also recall the Comparison Test from studying series in calculus:
+      suppose <m>0\leq a_n\leq b_n</m>,
+      if <m>\sum b_n</m> converges then <m>\sum a_n</m> converges.
+      This result follows from the fact that the partial sums of
+      <m>\sum a_n</m> form an increasing sequence which is bounded above by <m>\sum b_n</m>.
+      (See <xref ref="cor_IncBoundedConverge">Corollary</xref>
+      of <xref ref="chpt_IVTEVT">Chapter</xref>.)
+      The Cauchy Criterion allows us to extend this to the case where the terms <m>a_n</m> could be negative as well.
+      This can be seen in the following theorem.
+    </p>
+
+    <theorem xml:id="thm_ComparisonTest">
+      <statement>
+        <p>
+          <alert>Comparison Test</alert>
+        </p>
+        <p>
+          <idx><h>series</h><h>Comparison Test</h></idx> 
+          Suppose <m>|a_n|\leq b_n</m> for all <m>n</m>.
+          If <m>\sum b_n</m> converges then <m>\sum a_n</m> also converges.
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>series</h><h>the Comparison Test</h></idx>
+              <idx><h>convergence</h><h>of a series</h><h>Comparison Test</h></idx>
+          Prove <xref ref="thm_ComparisonTest">Theorem</xref>. 
+              <hint> 
+                Use the Cauchy criterion with the fact that <m>\abs{\sum_{k=n+1}^ma_k}\leq\sum_{k=n+1}^m\abs{a_k}</m>.
+              </hint> 
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The following definition is of marked importance in the study of series.
+    </p>
+
+    <definition xml:id="AbsoluteConvergence">
+      <statement>
+        <p>
+          <alert>Absolute Convergence</alert>
+        </p>
+        <p>
+              <idx><h>convergence</h><h>of a series</h><h>absolute</h></idx>
+          Given a series <m>\sum a_n</m>, the series <m>\sum|a_n|</m> is called the {absolute series} of <m>\sum\boldsymbol{a}_{\boldsymbol{n}}</m> and if <m>\sum|a_n|</m>converges then we say that <m>\sum\boldsymbol{a}_{\boldsymbol{n}}</m> converges absolutely.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The significance of this definition comes from the following result.
+    </p>
+
+    <corollary xml:id="cor_AbsConv-_Conv">
+      <statement>
+        <p>
+          If
+          <m>\sum a_n</m> converges absolutely,
+          then <m>\sum a_n</m> converges.
+        </p>
+      </statement>
+    </corollary>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>convergence</h><h>of a series</h><h>absolute convergence implies convergence</h></idx>
+          Show that <xref ref="cor_AbsConv-_Conv">Corollary</xref> is a direct consequence of <xref ref="thm_ComparisonTest">Theorem</xref>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>absolute convergence</h><h> vs. the absolute value of a series</h></idx>
+          If <m>\sum_{n=0}^\infty|a_n|=s</m>, then does it follow that <m>s=|\sum_{n=0}^\infty a_n|</m>?
+          Justify your answer.
+          What can be said?
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The converse of <xref ref="cor_AbsConv-_Conv">Corollary</xref>
+      is not true as evidenced by the series <m>\sum_{n=0}^\infty\frac{(-1)^n}{n+1}</m>.
+      As we noted in <xref ref="chpt_PowerSeriesQuestions">Chapter</xref>,
+      this series converges to ln <m>2</m>.
+      However, its absolute series is the Harmonic
+          <idx><h>Harmonic Series</h></idx>
+      Series which diverges.
+      Any such series which converges,
+      but not absolutely, is said to <alert>converge conditionally</alert>.
+      Recall also that in <xref ref="chpt_PowerSeriesQuestions">Chapter</xref>,
+      we showed that we could rearrange the terms of the series
+      <m>\sum_{n=0}^\infty\frac{(-1)^n}{n+1}</m> to make it converge to any number we wished.
+      We noted further that all rearrangements of the series
+      <m>\sum_{n=0}^\infty\frac{(-1)^n}{\left(n+1\right)^2}</m> converged to the same value.
+      The difference between the two series is that the latter converges absolutely whereas the former does not.
+      Specifically, we have the following result.
+    </p>
+
+    <theorem xml:id="thm_RearrageAbsConv">
+      <statement>
+        <p>
+              <idx><h>series</h><h>rearrangements</h></idx>
+              <idx><h>absolute convergence</h><h>all rearrangements of an absolutely convergent series converge to the same limit</h></idx>
+          Suppose <m>\sum a_n</m> converges absolutely and let <m>s=\sum_{n=0}^\infty a_n</m>.
+          Then any rearrangement of <m>\sum a_n</m> must converge to <m>s</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <proof>
+<title>Sketch of Proof</title>
+      <p>
+        We will first show that this result is true in the case where <m>a_n\geq 0</m>.
+        If <m>\sum b_n</m> represents a rearrangement of <m>\sum a_n</m>,
+        then notice that the sequence of partial sums
+        <m>\left(\sum_{k=0}^nb_k\right)_{n=0}^\infty</m>is an increasing sequence which is bounded by <m>s</m>.
+        By <xref ref="cor_IncBoundedConverge">Corollary</xref>
+        of <xref ref="chpt_IVTEVT">Chapter</xref>,
+        this sequence must converge to some number <m>t</m> and <m>t\leq s</m>.
+        Furthermore <m>\sum a_n</m> is also a rearrangement of <m>\sum b_n</m>.
+        Thus the result holds for this special case. (Why?) For the general case,
+        notice that <m>a_n=\frac{|a_n\mathopen|+a_n}{2}-\frac{|a_n\mathopen|-a_n}{2}</m> and that <m>\sum\frac{|a_n\mathopen|+a_n}{2}</m> and
+        <m>\sum\frac{|a_n\mathopen|-a_n}{2}</m> are both convergent series with nonnegative terms.
+        By the special case <m>\sum\frac{|b_n\mathopen|+b_n}{2}=</m> <m>\sum\frac{|a_n\mathopen|+a_n}{2}</m> and
+        <m>\sum\frac{|b_n\mathopen|-b_n}{2}=</m> <m>\sum\frac{|a_n\mathopen|-a_n}{2}</m>.
+      </p>
+    </proof>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>series</h><h>rearrangements</h></idx>
+              <idx><h>rearrangements of absolutely convergent series</h></idx>
+          Fill in the details and provide a formal proof of <xref ref="thm_RearrageAbsConv">Theorem</xref>.
+        </p>
+      </statement>
+    </problem>
+  </subsection>
+</section>
+

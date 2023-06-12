@@ -1,0 +1,413 @@
+
+
+<section>
+  <title>The Definition of the Limit of a Function</title>
+  <p>
+    Since these days the limit concept is generally regarded as the starting point for calculus,
+    you might think it is a little strange that we've chosen to talk about continuity first.
+    But historically,
+    the formal definition of a limit came after the formal definition of continuity.
+    In some ways,
+    the limit concept was part of a unification of all the ideas of calculus that were studied previously and,
+    subsequently, it became the basis for all ideas in calculus.
+    For this reason it is logical to make it the first topic covered in a calculus course.
+  </p>
+
+  <p>
+    To be sure, limits were always lurking in the background.
+    In his attempts to justify his calculations, Newton 
+        <idx><h>Newton, Isaac</h></idx>
+    used what he called his doctrine of
+    <q>Ultimate Ratios.</q>
+    Specifically the ratio <m>\frac{(x+h)^2-x^2}{h} = \frac{2xh+h^2}{h} = 2x+h</m> becomes the ultimate ratio <m>2x</m> at the last instant of time before <m>h</m> - an
+    <q>evanescent quantity</q>
+    - vanishes<nbsp />(<xref ref="grabiner81__origin_cauch_rigor_calculy"/>, p. 33).
+    Similarly Leibniz's<idx><h>Leibniz, Gottfried Wilhelm</h></idx>
+    <q>infinitely small</q>
+    differentials <m>\d x</m> and <m>\d y</m> can be seen as an attempt to get
+    <q>arbitrarily close</q>
+    to <m>x</m> and <m>y</m>, respectively.
+    This is the idea at the heart of calculus:
+    to get arbitrarily close to, say,
+    <m>x</m> without actually reaching it.
+  </p>
+
+  <p>
+    As we saw in <xref ref="chpt_PowerSeriesQuestions">Chapter</xref>, Lagrange
+        <idx><h>Lagrange, Joseph-Louis</h></idx>
+    tried to avoid the entire issue of
+    <q>arbitrary closesness,</q>
+    both in the limit and differential forms when,
+    in 1797, he attempted to found calculus on infinite series.
+  </p>
+
+  <p>
+    Although Lagrange's 
+    <idx><h>Lagrange, Joseph-Louis</h></idx>
+    efforts failed, they set the stage for Cauchy 
+    <idx><h>Cauchy, Augustin</h></idx>
+    to provide a definition of derivative which in turn relied on his precise formulation of a limit.
+    Consider the following example:
+    to determine the slope of the tangent line (derivative) of <m>f(x) = \sin x</m> at <m>x=0</m>.
+    We consider the graph of the difference quotient <m>D(x) =\frac{\sin x }{x}</m>.
+  </p>
+        <image width="56%" source="images/SinGraph.png" />
+  <p>
+    From the graph,
+    it appears that <m>D(0) =1</m> but we must be careful.
+    <m>D(0)</m> doesn't even exist!
+    Somehow we must convey the idea that <m>D(x)</m> will approach <m>1</m> as <m>x</m> approaches <m>0</m>,
+    even though the function is not defined at <m>0</m>.
+    Cauchy's idea was that the limit of <m>D(x)</m> would equal <m>1</m> because we can make <m>D(x)</m> differ from 1 by as little as we wish<nbsp />(<xref ref="jahnke03__histor_analy"/>, p. 158).
+  </p>
+
+  <p>
+    Karl Weierstrass 
+        <idx><h>Weierstrass, Karl</h></idx>
+    made these ideas precise in his lectures on analysis at the University of Berlin (1859-60) and provided us with our modern formulation.
+  </p>
+
+  <definition xml:id="def_limit">
+    <statement>
+      <p>
+            <idx><h>limit</h></idx>
+        We say <m>\limit{x}{a}{f(x)} =L</m> provided that for each <m>\eps>0</m>,
+        there exists <m>\delta>0</m> such that if
+        <m>0\lt \abs{x-a}\lt \delta</m> then <m>\abs{f(x)-L}\lt \eps</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Before we delve into this,
+    notice that it is very similar to the definition of the continuity of <m>f(x)</m> at <m>x=a</m>.
+    In fact we can readily see that <m>f \text{ is continuous at } x=a \text{ if and only if } \limit{x}{a}{f(x)} = f(a)</m>.
+  </p>
+
+  <p>
+    There are two differences between this definition and the definition of continuity and they are related.
+    The first is that we replace the value <m>f(a)</m> with <m>L</m>.
+    This is because the function may not be defined at <m>a</m>.
+    In a sense the limiting value <m>L</m> is the value <m>f</m> would have
+    <em>if it were defined and continuous at <m>a</m>.</em>
+    The second is that we have replaced
+    <me>
+      \abs{x-a}\lt \delta
+    </me>
+    with
+    <me>
+      0\lt \abs{x-a}\lt \delta
+    </me>.
+  </p>
+
+  <p>
+    Again, since <m>f</m> needn't be defined at <m>a</m>,
+    we will not even consider what happens when <m>x=a</m>.
+    This is the only purpose for this change.
+  </p>
+
+  <p>
+    As with the definition of the limit of a sequence,
+    this definition does not determine what <m>L</m> is,
+    it only verifies that your guess for the value of the limit is correct.
+  </p>
+
+  <p>
+    Finally, a few comments on the differences and similiarities between this limit and the limit of a sequence are in order,
+    if for no other reason than because we use the same notation (<m>\lim</m>) for both.
+  </p>
+
+  <p>
+    When we were working with sequences in <xref ref="chpt_Convergence">Chapter</xref>
+    and wrote things like <m>\limit{n}{\infty}{a_n}</m> we were thinking of <m>n</m> as an integer that got bigger and bigger.
+    To put that more mathematically,
+    the limit parameter <m>n</m> was taken from the set of positive integers,
+    or <m>n\in \NN</m>.
+  </p>
+
+  <p>
+    For both continuity and the limit of a function we write things like
+    <m>\limit{x}{a}{f(x)}</m> and think of <m>x</m> as a variable that gets arbitrarily close to the number <m>a</m>.
+    Again, to be more mathematical in our language we would say that the limit parameter <m>x</m> is taken from the <m>\ldots</m> Well,
+    actually, this is interesting isn't it?
+    Do we need to take <m>x</m> from <m>\QQ</m> or from <m>\RR?</m> The requirement in both cases is simply that we be able to choose <m>x</m> arbitrarily close to <m>a</m>.
+    From <xref ref="thm_IrrationalBetweenIrrationals">Theorem</xref>
+    of <xref ref="cha_numb-real-rati">Chapter</xref>
+    we see that this is possible whether <m>x</m> is rational or not,
+    so it seems either will work.
+    This leads to the pardoxical sounding conclusion that we do not need a continuum (<m>\RR</m>) to have continuity.
+    This seems strange.
+  </p>
+
+  <p>
+    Before we look at the above example,
+    let's look at some algebraic examples to see the definition in use.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Consider the function <m>D(x)=\frac{x^2-1}{x-1}</m>, <m>x\neq 1</m>.
+        You probably recognize this as the difference quotient used to compute the derivative of <m>f(x)=x^2</m> at <m>x=1</m>,
+        so we strongly suspect that <m>\limit{x}{1}{\frac{x^2-1}{x-1}}=2</m>.
+        Just as when we were dealing with limits of sequences,
+        we should be able to use the definition to verify this.
+        And as before, we will start with some scrapwork.
+      </p>
+
+        <p>
+          <term>SCRAPWORK</term>
+        </p>
+        <p>
+          Let <m>\eps>0</m>.
+          We wish to find a <m>\delta>0</m> such that if
+          <m>0\lt \abs{x-1}\lt \delta</m> then <m>\abs{\frac{x^2-1}{x-1}-2}\lt \eps</m>.
+          With this in mind, we perform the following calculations
+          <me>
+            \abs{\frac{x^2-1}{x-1}-2}=\abs{(x+1)-2} = \abs{x-1}
+          </me>.
+        </p>
+
+        <p>
+          Now we have a handle on <m>\delta</m> that will work in the definition and we'll give the formal proof that
+          <me>
+            \limit{x}{1}{\frac{x^2-1}{x-1}}=2
+          </me>.
+        </p>
+
+    </statement>
+
+    <proof>
+      <p>
+        Let <m>\eps>0</m> and let <m>\delta=\eps</m>.
+        If <m>0\lt \abs{x-1}\lt \delta</m>, then
+        <me>
+          \abs{\frac{x^2-1}{x-1}-2}=\abs{(x+1)-2}=\abs{x-1}\lt \delta=\eps
+        </me>.
+      </p>
+    </proof>
+  </example>
+
+  <p>
+    As in our previous work with sequences and continuity,
+    notice that the scrapwork is not part of the formal proof (though it was necessary to determine an appropriate <m>\delta)</m>.
+    Also, notice that <m>0\lt \abs{x-1}</m> was not really used except to ensure that <m>x\neq 1</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>limit</h><h><m>\limit{x}{a}{\frac{x^2-a^2}{x-a}}=2a</m></h></idx>
+        Use the definition of a limit to verify that
+        <me>
+          \limit{x}{a}{\frac{x^2-a^2}{x-a}}=2a.{}
+        </me>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>verifying limits via continuity</h></idx>
+        Use the definition of a limit to verify each of the following limits.
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>\limit{x}{1}{\frac{x^3-1}{x-1}}=3</m>
+              <hint>
+                <md>
+                  <mrow>\abs{\frac{x^3-1}{x-1}-3} \amp = \abs{x^2+x+1-3}</mrow>
+                  <mrow>\amp \leq\abs{x^2-1}+\abs{x-1}</mrow>
+                  <mrow>\amp =\abs{(x-1+1)^2-1}+\abs{x-1}</mrow>
+                  <mrow>\amp =\abs{(x-1)^2+2(x-1)}+\abs{x-1}</mrow>
+                  <mrow>\amp \leq\abs{x-1}^2 + 3\abs{x-1}</mrow>
+                </md>.
+              </hint>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\limit{x}{1}{\frac{\sqrt{x}-1}{x-1}}=1/2</m>
+              <hint>
+                <md>
+                  <mrow>\abs{\frac{\sqrt{x}-1}{x-1}-\frac12}\amp = \abs{\frac{1}{\sqrt{x}+1}-\frac12}</mrow>
+                  <mrow>\amp =\abs{\frac{2-\left(\sqrt{x}+1\right)}{2\left(\sqrt{x}+1\right)}}</mrow>
+                  <mrow>\amp =\abs{\frac{1-x}{2\left(1+\sqrt{x}\right)^2}}</mrow>
+                  <mrow>\amp \leq\frac12\abs{x-1}.{}</mrow>
+                </md>
+              </hint>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Let's go back to the original problem:
+    to show that <m>\limit{x}{0}{\textstyle\frac{\sin x}{x}}=1</m>.
+  </p>
+
+  <p>
+    While rigorous, our definition of continuity is quite cumbersome.
+    We really need to develop some tools we can use to show continuity rigorously without having to refer directly to the definition.
+    We have already seen in <xref ref="thm_LimDefOfContinuity">Theorem</xref> one way to do this.
+    Here is another.
+    The key is the observation we made after the definition of a limit:
+    <me>
+      f \text{ is continuous at } x=a \text{ if and only if } \limit{x}{a}{f(x)}=f(a)
+    </me>.
+  </p>
+
+  <p>
+    Read another way, we could say that
+    <m>\limit{x}{a}{f(x)}=L</m> provided that if we redefine <m>f(a)=L</m> (or define <m>f(a)=L</m> in the case where <m>f(a)</m> is not defined) then <m>f</m> becomes continuous at <m>a</m>.
+    This allows us to use all of the machinery we proved about continuous functions and limits of sequences.
+  </p>
+
+  <p>
+    For example,
+    the following corollary to <xref ref="thm_LimDefOfContinuity">Theorem</xref>
+    comes virtually for free once we've made the observation above.
+  </p>
+
+  <corollary xml:id="cor_limit-by-sequences">
+    <statement>
+      <p>
+
+        <m>\limit{x}{a}{f(x)}=L</m> if and only if <m>f</m> satisfies the following property:
+        <me>
+          \forall \text{ sequences }  (x_n), x_n\ne a, \text{ if } \limit{n}{\infty}{x_n}=a \text{ then }   \limit{n}{\infty}{f(x_n)}=L. {}
+        </me>
+      </p>
+    </statement>
+  </corollary>
+
+  <p>
+    Armed with this,
+    we can prove the following familiar limit theorems from calculus.
+  </p>
+
+  <theorem xml:id="thm_CalcLimits">
+    <statement>
+      <p>
+            <idx><h>limit</h><h>properties of</h></idx>
+        Suppose <m>\limit{x}{a}{f(x)}=L</m> and <m>\limit{x}{a}{g(x)}=M</m>, then
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>\limit{x}{a}{\left(f(x)+g(x)\right)}=L+M</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\limit{x}{a}{\left(f(x)\cdot g(x)\right)}=L\cdot M</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\limit{x}{a}{\left(\frac{f(x)}{g(x)}\right)}=L/M</m> provided <m>M\ne0</m> and <m>g(x)\ne{}0</m>,
+              for <m>x</m> sufficiently close to a
+              (but not equal to <m>a</m>).
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We will prove part (a) to give you a feel for this and let you prove parts (b) and (c).
+  </p>
+
+  <proof>
+    <p>
+      Let <m>\left(x_n\right)</m> be a sequence such that
+      <m>x_n\ne a</m> and <m>\limit{n}{\infty}{x_n}=a</m>.
+      Since <m>\limit{x}{a}{f(x)} = L</m> and <m>\limit{x}{a}{g(x)} = M</m> we see that
+      <m>\limit{n}{\infty}{f(x_n)} = L</m> and <m>\limit{n}{\infty}{g(x_n)} = M</m>.
+      By <xref ref="thm_SumOfSequences">Theorem</xref>
+      of <xref ref="chpt_Convergence">Chapter</xref>,
+      we have <m>\limit{n}{\infty}{f(x_n)+g(x_n)}=L+M</m>.
+      Since <m>\left\{x_n\right\}</m> was an arbitrary sequence with
+      <m>x_n\ne a</m> and <m>\limit{n}{\infty}{x_n} = a</m> we have
+      <me>
+        \limit{x}{a}{f(x)+g(x)} = L+M
+      </me>.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>limit</h><h>properties of</h></idx>
+            <idx><h>verify limit laws from calculus</h></idx>
+        Prove parts (b) and (c) of <xref ref="thm_CalcLimits">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    More in line with our current needs,
+    we have a reformulation of the Squeeze Theorem.
+  </p>
+
+  <theorem xml:id="thm_SqueezeTheoremFunctions">
+    <statement>
+      <p>
+        <alert>Squeeze Theorem for functions</alert>
+      </p>
+      <p>
+        <idx><h>Squeeze Theorem</h><h>for functions</h></idx> 
+        Suppose <m>f(x)\le g(x) \le h(x)</m>,
+        for <m>x</m> sufficiently close to <m>a</m>
+        (but not equal to <m>a</m>).
+        If <m>\limit{x}{a}{f(x)}=L=\limit{x}{a}{h(x)}</m>,
+        then <m>\limit{x}{a}{g(x)}=L</m> also.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Squeeze Theorem</h><h>for functions</h></idx>
+        Prove <xref ref="thm_SqueezeTheoremFunctions">Theorem</xref>. 
+            <hint>
+              Use <xref ref="thm_SqueezeTheorem">Theorem</xref>, the Squeeze Theorem for sequences  from <xref ref="chpt_Convergence">Chapter</xref>.
+            </hint>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Returning to <m>\limit{x}{0}{\frac{\sin x}{x}}</m> we'll see that the Squeeze Theorem is just what we need.
+    First notice that since <m>D(x)=\sin x/x</m> is an even function,
+    we only need to focus on <m>x>0</m> in our inequalities.
+    Consider the unit circle.
+    <image width="60%" source="images/UnitCircle.png" />
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Topologist's sine function</h><h> continuous at zero</h></idx>
+        Use the fact that
+        <me>
+          \text{ area } (\Delta OAC)\lt \text{ area } (\text{ sector } OAC)\lt \text{ area } (\Delta OAB)
+        </me>
+        to show that if <m>0\lt x\lt \pi/2</m>,
+        then <m>\cos x\lt \sin x/x\lt 1</m>.
+        Use the fact that all of these functions are even to extend the inequality for
+        <m>-\pi/2\lt x\lt 0</m> and use the Squeeze Theorem to show <m>\limit{x}{0}{\textstyle\frac{\sin x}{x}}=1</m>.
+      </p>
+    </statement>
+  </problem>
+</section>
+

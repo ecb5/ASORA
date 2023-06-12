@@ -1,0 +1,514 @@
+
+
+<section>
+  <title>Completeness of the Real Number System</title>
+  <p>
+    Recall that in deriving the Lagrange and Cauchy forms of the remainder for Taylor series,
+    we made use of the Extreme Value Theorem (<term>EVT</term>) and Intermediate Value Theorem (<term>IVT</term>).
+    In <xref ref="chpt_Continuity">Chapter</xref>,
+    we produced an analytic definition of continuity that we can use to prove these theorems.
+    To provide the rest of the necessary tools we need to explore the make-up of the real number system.
+    To illustrate what we mean,
+    suppose that we only used the rational number system.
+    We could still use our definition of continuity and could still consider continuous functions such as <m>f(x)=x^2</m>.
+    Notice that <m>2</m> is a value that lies between <m>f(1)=1</m>and <m>f(2)=4</m>.
+    <image width="37%" source="images/Ch6fig1.png" />
+  </p>
+
+  <p>
+    The IVT says that somewhere between <m>1</m> and <m>2</m>,
+    <m>f</m> must take on the value <m>2</m>.
+    That is, there must exist some number
+    <m>c\in[1,2]</m> such that <m>f(c)=2</m>.
+    You might say, <q>Big deal!
+    Everyone knows <m>c=\sqrt{2}</m> works.</q>
+  </p>
+
+  <p>
+    However, we are only working with rational numbers and
+    <m>\sqrt{2}</m> <m></m>is not rational.
+    As we saw in <xref ref="cha_numb-real-rati">Chapter</xref>
+    the rational number system has holes in it,
+    whereas the real number system doesn't.
+    Again, <q>Big deal!
+    Let's just say that the real number system contains (square) roots.</q>
+  </p>
+
+  <p>
+    This sounds reasonable and it actually works for square roots,
+    but consider the function <m>f(x)=x-\cos x</m>.
+    We know this is a continuous function.
+    We also know that <m>f(0)=-1</m> and <m>f(\frac{\pi}{2})=\frac{\pi}{2}</m>.
+    According to the IVT, there should be some number
+    <m>c\in[\,0,\frac{\pi}{2}]</m>, where <m>f(c)=0</m>.
+    The graph is below.
+    <image width="37%" source="images/Ch6fig2.png" />
+  </p>
+
+  <p>
+    The situation is not as transparent as before.
+    What would this mysterious <m>c</m> be where the curve crosses the <m>x</m> axis?
+    Somehow we need to convey the idea that the real number system is a continuum.
+    That is, it has no <q>holes</q> in it.
+  </p>
+
+  <p>
+    How about this?
+    Why don't we just say that it has no holes in it?
+    Sometimes the simple answer works best!
+    But not in this case.
+    How are we going to formulate a rigorous proof based on this statement?
+    Just like with convergence and continuity,
+    what we need is a rigorous way to convey this idea that the real number system does not have any holes,
+    that it is <em>complete.</em>
+  </p>
+
+  <p>
+    We will see that there are several different,
+    but equivalent ways to convey this notion of completeness.
+    We will explore some of them in this chapter.
+    For now we adopt the following as our
+    <em>Completeness Axiom</em>
+    for the real number system.
+  </p>
+
+<axiom title="NestedIntervalProperty">
+  <p>
+    <alert>Nested Interval Property of the Real Number System (<term>NIP</term>)</alert>
+     Suppose we have two sequences of real numbers <m>\left(x_n\right)</m>and
+    <m>\left(y_n\right)</m> satisfying the following conditions:
+
+    <ol>
+      <li>
+        <p>
+          <m>x_1\leq x_2\leq x_3\leq\ldots</m> (<m>\left(x_n\right)</m> is non-decreasing)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>y_1\geq y_2\geq y_3\geq\ldots</m> (<m>\left(y_n\right)\</m>,is non-increasing)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\forall</m> <m>n</m>, <m>x_n\leq y_n</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\lim_{n\rightarrow\infty}\left(y_n-x_n\right)=0</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    Then there exists a unique number <m>c</m> such that <m>x_n\leq c\leq y_n</m> for all <m>n</m>.
+  </p>
+</axiom>
+  <p>
+    Geometrically, we have the following situation.
+    <image width="75%" source="images/Ch6fig3.png" />
+  </p>
+
+  <p>
+    Notice that we have two sequences
+    <m>\left(x_n\right)</m> and <m>\left(y_n\right)</m>, one increasing
+    (really non-decreasing)
+    and one decreasing
+    (non-increasing).
+    These sequences do not pass each other.
+    In fact, the following is true:
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Nested Interval Property (NIP)</h><h>endpoints</h></idx>
+            <idx><h>in the NIP, show that all left endpoints are less than all right endpoints</h></idx>
+        Let <m>(x_n), (y_n)</m> be sequences as in the NIP. Show that for all <m>n, m \in\NN</m>, <m>x_n\le y_m</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    They are also coming together in the sense that <m>\lim_{n\rightarrow\infty}\left(y_n-x_n\right)=0</m>.
+    The NIP says that in this case there is a unique real number <m>c</m> in the middle of all of this \lbrack
+    <m>x_n\leq c\leq y_n</m> for all <m>n</m>\rbrack.
+    <image width="75%" source="images/Ch6fig4.png" />
+  </p>
+
+  <p>
+    If there was no such <m>c</m> then there would be a hole where these two sequences come together.
+    The NIP guarantees that there is no such hole.
+    We do not need to prove this since an axiom is,
+    by definition, a self evident truth.
+    We are taking it on faith that the real number system obeys this law.
+    The next problem shows that the completeness property distinguishes the real number system from the rational number system.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Least Upper Bound Property (LUBP)</h><h>implies the existence of irrational numbers</h></idx>
+
+        <ol label="a">
+          <li>
+            <p>
+              Find two sequences of rational numbers <m>\left(x_n\right)</m>and
+              <m>\left(y_n\right)</m> which satisfy properties 1-4 of the NIP and such that there is no rational number <m>c</m> satisfying the conclusion of the NIP.  
+              <hint>
+                Consider the decimal expansion of an irrational number.
+              </hint>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find two sequences of rational numbers <m>\left(x_n\right)</m> and
+              <m>\left(y_n\right)</m> which satisfy properties 1-4 of the NIP and such that there is a rational number <m>c</m> satisfying the conclusion of the NIP.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    You might find the name Nested Interval Property to be somewhat curious.
+    One way to think about this property is to consider that we have a sequence of
+    <q>nested closed intervals</q>
+    <m>[\,x_1,y_1]\supseteq[\,x_2,y_2]\supseteq[\,x_3,y_3]\supseteq\cdots</m> whose lengths
+    <m>\,y_n-x_n</m> are <q>shrinking to <m>0</m>.</q>
+    The conclusion is that the intersection of these intervals is non-empty and,
+    in fact, consists of a single point.
+    That is, <m>\bigcap_{n=1}^\infty[x_n,y_n]=\{c\}</m>.
+  </p>
+
+  <p>
+    It appears that the sequences <m>\left(x_n\right)</m> and
+    <m>\left(y_n\right)</m> in the NIP converge to <m>c</m>.
+    This is, in fact, true and can be proven rigorously.
+    In what follows,
+    this will prove to be a valuable piece of information.
+  </p>
+
+  <theorem xml:id="thm_ConvergeToC">
+    <statement>
+      <p>
+            <idx><h>Nested Interval Property (NIP)</h><h>endpoints</h></idx>
+            <idx><h>limit</h><h>of interval endpoints in the NIP</h></idx>
+        Suppose that we have two sequences <m>\left(x_n\right)</m> and <m>\left(y_n\right)</m> satisfying all of the assumptions of the Nested Interval Property.
+        If <m>c</m> is the unique number such that <m>x_n\leq c\leq y_n</m> for all <m>n</m>,
+        then <m>\lim_{n\rightarrow\infty}x_n=c</m> and <m>\lim_{n\rightarrow\infty}y_n=c</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Nested Interval Property (NIP)</h><h>endpoints</h></idx>
+            <idx><h>in the NIP the endpoints converge as sequences</h></idx>
+        Prove <xref ref="thm_ConvergeToC">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    To illustrate the idea that the NIP
+    <q>plugs the holes</q> in the real line,
+    we will prove the existence of square roots of nonnegative real numbers.
+  </p>
+
+  <theorem xml:id="thm_SqrtsExist">
+    <statement>
+      <p>
+        <idx><h>Problem</h><h><xref ref="thm_SqrtsExist">Problem</xref></h> <h>square roots exist</h></idx>
+        Suppose <m>a\in\mathbb{R},\,a\geq 0</m>.
+        There exists a real number <m>c\geq 0</m> such that <m>c^2=a</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Notice that we can't just say,
+    <q>Let <m>c=\sqrt{a}</m>,</q> since the idea is to show that this square root exists.
+    In fact, throughout this proof,
+    we cannot really use a square root symbol as we haven't yet proved that they
+    (square roots)
+    exist.
+    We will give the idea behind the proof as it illustrates how the NIP is used.
+  </p>
+
+  <proof>
+<title>Sketch of Proof</title>
+    <p>
+      Our strategy is to construct two sequences which will <q>narrow in</q>
+      on the number <m>c</m> that we seek.
+      With that in mind, we need to find a number <m>x_1</m> such that
+      <m>x_1^2\leq a</m> and a number <m>y_1</m> such that <m>y_1^2\geq a</m>.
+      (Remember that we can't say
+      <m>\sqrt{x_1}</m> or<m>\sqrt{y_1}</m>.)
+      There are many possibilities,
+      but how about <m>x_1=0</m> and
+      <m>y_1=a+1?</m> You can check that these will satisfy <m>x_1^2\leq a\leq</m> <m>y_1^2</m>.
+      Furthermore <m>x_1\leq y_1</m>.
+      This is the starting point.
+    </p>
+
+    <p>
+      The technique we will employ is often called a bisection technique,
+      and is a useful way to set ourselves up for applying the NIP. Let <m>m_1</m> be the midpoint of the interval <m>[\,x_1,y_1]</m>.
+      Then either we have <m>m_1^2\leq a</m> or <m>m_1^2\geq a</m>.
+      In the case <m>m_1^2\leq a</m>,
+      we really want <m>m_1</m> to take the place of <m>x_1</m> since it is larger than <m>\,x_1</m>,
+      but still represents an underestimate for what would be the square root of <m>a</m>.
+      This thinking prompts the following move.
+      If <m>m_1^2\leq a</m>,
+      we will relabel things by letting <m>x_2=m_1</m> and <m>y_2=y_1</m>.
+      The situation looks like this on the number line.
+      <image width="56%" source="images/Ch6fig5.png" />
+    </p>
+
+    <p>
+      In the other case where <m>a\leq m_1^2</m>,
+      we will relabel things by letting <m>x_2=x_1</m> and <m>y_2=m_1</m>.
+      The situation looks like this on the number line.
+      <image width="56%" source="images/Ch6fig6.png" />
+    </p>
+
+    <p>
+      In either case,
+      we've reduced the length of the interval where the square root lies to half the size it was before.
+      Stated in more specific terms,
+      in either case we have the same results:
+      <me>
+        x_1\leq x_2\leq y_2\leq y_1;\ \  x_1^2\leq a\leq y_1^2;\ \  x_2^2\leq a\leq y_2^2
+      </me>
+      and
+      <me>
+        y_2-x_2=\frac{1}{2}\left(y_1-x_1\right)
+      </me>.
+    </p>
+
+    <p>
+      Now we play the same game,
+      but instead we start with the interval <m>[x_2,y_2]</m>.
+      Let <m>m_2</m> be the midpoint of <m>[x_2,y_2]</m>.
+      Then we have <m>m_2^2\leq a</m> or <m>m_2^2\geq a</m>.
+      If <m>m_2^2\leq a</m>, we relabel <m>x_3=m_2</m> and <m>y_3=y_2</m>.
+      If <m>a\leq m_2^2</m>, we relabel <m>x_3=x_2</m> and <m>y_3=m_2</m>.
+      In either case, we end up with
+      <me>
+        x_1\leq x_2\leq x_3\leq y_3\leq y_2\leq y_1;\ \   x_1^2\leq a\leq y_1^2;\ \  x_2^2\leq a\leq y_2^2;\ \   x_3^2\leq a\leq y_3^2
+      </me>
+      and
+      <me>
+        y_3-x_3=\frac{1}{2}\left(y_2-x_2\right)=\frac{1}{2^2}\left(y_1-x_1\right)
+      </me>.
+    </p>
+
+    <p>
+      Continuing in this manner, we will produce two sequences,
+      <m>\left(x_n\right)</m>and
+      <m>\left(y_n\right)</m> satisfying the following conditions:
+
+      <ol>
+        <li>
+          <p>
+            <m>x_1\leq x_2\leq x_3\leq\ldots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>y_1\geq y_2\geq y_3\geq\ldots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\forall</m> <m>n</m>, <m>x_n\leq y_n</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\lim_{n\rightarrow\infty}\left(y_n-x_n\right)=\,\lim_{n\rightarrow\infty}\frac{1}{2^{n-1}}\left(y_1-x_1\right)=0</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            These sequences also satisfy the following property:
+            <me>
+              \forall n,\,x_n^2\leq a\leq y_n^2
+            </me>
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      Properties 1-4 tell us that <m>\left(x_n\right)</m>and
+      <m>\left(y_n\right)</m> satisfy all of the conditions of the NIP, so we can conclude that there must exist a real number <m>c</m> such that <m>x_n\leq c\leq y_n</m> for all <m>n</m>.
+      At this point,
+      you should be able to use property 5. to show that <m>c^2=a</m> as desired.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Nested Interval Property (NIP)</h><h>square roots of integers, and</h></idx>
+            <idx><h>Nested Interval Property (NIP)</h><h>implies the existence of square roots of integers</h></idx>
+        Turn the above outline into a formal proof of <xref ref="thm_SqrtsExist">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The bisection method we employed in the proof of <xref ref="thm_SqrtsExist">Theorem</xref>
+    is pretty typical of how we will use the NIP, as taking midpoints ensures that we will create a sequence of
+    <q>nested intervals.</q>
+    We will employ this strategy in the proofs of the IVT and EVT. Deciding how to relabel the endpoints of our intervals will be determined by what we want to do with these two sequences of real numbers.
+    This will typically lead to a fifth property,
+    which will be crucial in proving that the <m>c</m> guaranteed by the NIP does what we want it to do.
+    Specifically, in the above example,
+    we always wanted our candidate for
+    <m>\sqrt{a}</m> to be in the interval <m>[\,x_n,y_n]</m>.
+    This judicious choice led to the extra Property<nbsp />5:
+    <m>\forall</m> <m>n,\,x_n^2\leq a\leq y_n^2</m>.
+    In applying the NIP to prove the IVT and EVT, we will find that properties 1-4 will stay the same.
+    Property<nbsp />5 is what will change based on the property we want <m>c</m> to have.
+  </p>
+
+  <p>
+    Before we tackle the IVT and EVT, let's use the NIP to address an interesting question about the Harmonic Series.
+    <idx><h>series</h><h>slow divergence of the Harmonic Series</h></idx>
+    Recall that the Harmonic Series,
+    <m>1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots</m>, grows without bound,
+    that is, <m>\sum_{n=1}^\infty\frac{1}{n}=\infty</m>.
+    The question is how slowly does this series grow?
+    For example,
+    how many terms would it take before the series surpasses 100? 1000? 10000?
+    Leonhard Euler
+        <idx><h>Euler, Leonhard</h></idx>
+    decided to tackle this problem in the following way.
+    Euler decided to consider the <m>\lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+ \frac{1}{n}\right)-\text{ ln } \left(n+1\right)\right)</m>.
+    This limit is called Euler's constant and is denoted by <m>\gamma</m>.
+    This says that for <m>n</m> large,
+    we have <m>1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\approx</m>ln<m>\left(n+1\right)+\gamma</m>.
+    If we could approximate <m>\gamma</m>,
+    then we could replace the inequality
+    <m>1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\geq 100</m> with the more tractable inequality ln<m>\left(n+1\right)+\gamma</m> <m>\geq 0</m> and solve for <m>n</m> in this.
+    This should tell us roughly how many terms would need to be added in the Harmonic Series to surpass 100.
+    Approximating <m>\gamma</m> with a computer is not too bad.
+    We could make <m>n</m> as large as we wish in
+    <m>\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\right)-</m>ln<m>\left(1+n\right)</m> to make closer approximations for <m>\gamma</m>.
+    The real issue is, <alert>HOW DO WE KNOW THAT</alert>
+    <me>
+      \lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\right)-\text{ ln } \left(\text{n} +1\right)\right)
+    </me>
+    <alert>ACTUALLY EXISTS?</alert>
+  </p>
+
+  <p>
+    You might want to say that obviously it should,
+    but let us point out that as of the printing of this book (2013),
+    it is not even known if <m>\gamma</m> is rational or irrational.
+    So, in our opinion the existence of this limit is not so obvious.
+    This is where the NIP will come into play;
+    we will use it to show that this limit, in fact, exists.
+    The details are in the following problem.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Euler, Leonhard</h><h>Euler's constant <m>(\gamma)</m></h><h>existence of</h></idx>
+        The purpose of this problem is to show that
+        <me>
+          \lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+ \frac{1}{n}\right)-\ln\left(n+1\right)\right)
+        </me>
+        exists.
+
+        <ol label="a">
+          <li>
+            <p>
+              Let <m>x_n=\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\right)-\ln\left(n+1 \right)</m>.
+              Use the following diagram to show
+              <me>
+                x_1\leq x_2\leq x_3\leq\cdots
+              </me>
+<figure>
+              <image width="84%" source="images/Ch6fig7.png" />
+</figure>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Let <m>z_n=\ln\left(n+1\right)-\left(\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n+1} \right)</m>.
+              Use a similar diagram to show that <m>z_1\leq z_2\leq z_3\leq\cdots</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Let <m>y_n=1-z_n</m>.
+              Show that <m>\left(x_n\right)</m> and
+              <m>\left(y_n\right)</m> satisfy the hypotheses of the nested interval property and use the NIP to conclude that there is a real number <m>\gamma</m> such that <m>x_n\leq\gamma\leq y_n</m> for all <m>n</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Conclude that <m>\lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+ \frac{1}{n}\right)-\ln\left(n+1\right)\right)=\gamma</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Euler, Leonhard</h><h>Euler's constant <m>(\gamma)</m></h><h>approximating</h></idx>
+        Use the fact that <m>x_n\leq\gamma\leq y_n</m> for all <m>n</m> to approximate <m>\gamma</m> to three decimal places.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Euler, Leonhard</h><h>Euler's constant <m>(\gamma)</m></h><h>slow convergence to</h></idx>
+        <ol label="a">
+          <li>
+            <p>
+              Use the fact that for large <m>n</m>,
+              <m>1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\approx \ln\left(n+1\right)+ \gamma</m> to determine approximately how large <m>n</m> must be to make
+              <me>
+                1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\geq 100
+              </me>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Suppose we have a supercomputer which can add 10 trillion terms of the Harmonic Series per second.
+              Approximately how many earth lifetimes would it take for this computer to sum the Harmonic Series until it surpasses 100?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

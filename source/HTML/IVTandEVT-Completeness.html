@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:34-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Completeness of the Real Number System</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="IVTandEVT.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="IVTandEVT.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="IVTandEVT-ProofOfIVT.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="IVTandEVT.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="IVTandEVT.html" title="Up">Up</a><a class="next-button button toolbar-item" href="IVTandEVT-ProofOfIVT.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="active">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="IVTandEVT-Completeness"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span>
+</h2>
+<p id="p-949">Recall that in deriving the Lagrange and Cauchy forms of the remainder for Taylor series, we made use of the Extreme Value Theorem (<dfn class="terminology">EVT</dfn>) and Intermediate Value Theorem (<dfn class="terminology">IVT</dfn>). In <a href="Continuity.html" class="internal" title="Chapter 9: Continuity: What It Isn't and What It Is">Chapter 9</a>, we produced an analytic definition of continuity that we can use to prove these theorems. To provide the rest of the necessary tools we need to explore the make-up of the real number system. To illustrate what we mean, suppose that we only used the rational number system. We could still use our definition of continuity and could still consider continuous functions such as <span class="process-math">\(f(x)=x^2\text{.}\)</span> Notice that <span class="process-math">\(2\)</span> is a value that lies between <span class="process-math">\(f(1)=1\)</span>and <span class="process-math">\(f(2)=4\text{.}\)</span></p>
+<div class="image-box" style="width: 37%; margin-left: 31.5%; margin-right: 31.5%;"><img src="images/Ch6fig1.png" class="contained"></div>
+<p id="p-950">The IVT says that somewhere between <span class="process-math">\(1\)</span> and <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(f\)</span> must take on the value <span class="process-math">\(2\text{.}\)</span> That is, there must exist some number <span class="process-math">\(c\in[1,2]\)</span> such that <span class="process-math">\(f(c)=2\text{.}\)</span> You might say, “Big deal! Everyone knows <span class="process-math">\(c=\sqrt{2}\)</span> works.”</p>
+<p id="p-951">However, we are only working with rational numbers and <span class="process-math">\(\sqrt{2}\)</span> <span class="process-math">\(\)</span>is not rational. As we saw in <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a> the rational number system has holes in it, whereas the real number system doesn't. Again, “Big deal! Let's just say that the real number system contains (square) roots.”</p>
+<p id="p-952">This sounds reasonable and it actually works for square roots, but consider the function <span class="process-math">\(f(x)=x-\cos x\text{.}\)</span> We know this is a continuous function. We also know that <span class="process-math">\(f(0)=-1\)</span> and <span class="process-math">\(f(\frac{\pi}{2})=\frac{\pi}{2}\text{.}\)</span> According to the IVT, there should be some number <span class="process-math">\(c\in[\,0,\frac{\pi}{2}]\text{,}\)</span> where <span class="process-math">\(f(c)=0\text{.}\)</span> The graph is below.</p>
+<div class="image-box" style="width: 37%; margin-left: 31.5%; margin-right: 31.5%;"><img src="images/Ch6fig2.png" class="contained"></div>
+<p id="p-953">The situation is not as transparent as before. What would this mysterious <span class="process-math">\(c\)</span> be where the curve crosses the <span class="process-math">\(x\)</span> axis? Somehow we need to convey the idea that the real number system is a continuum. That is, it has no “holes” in it.</p>
+<p id="p-954">How about this? Why don't we just say that it has no holes in it? Sometimes the simple answer works best! But not in this case. How are we going to formulate a rigorous proof based on this statement? Just like with convergence and continuity, what we need is a rigorous way to convey this idea that the real number system does not have any holes, that it is <em class="emphasis">complete.</em></p>
+<p id="p-955">We will see that there are several different, but equivalent ways to convey this notion of completeness. We will explore some of them in this chapter. For now we adopt the following as our <em class="emphasis">Completeness Axiom</em> for the real number system.</p>
+<article class="axiom theorem-like" id="axiom-1"><h3 class="heading">
+<span class="type">Axiom</span><span class="space"> </span><span class="codenumber">10.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Nested Interval Property of the Real Number System (<dfn class="terminology">NIP</dfn>).</span>
+</h3>
+<p id="p-956">Suppose we have two sequences of real numbers <span class="process-math">\(\left(x_n\right)\)</span>and <span class="process-math">\(\left(y_n\right)\)</span> satisfying the following conditions:</p>
+<ol id="p-957" class="decimal">
+<li id="li-57"><p id="p-958"><span class="process-math">\(x_1\leq x_2\leq x_3\leq\ldots\)</span> (this says that the sequence, <span class="process-math">\(\left(x_n\right)\text{,}\)</span> is non-decreasing)</p></li>
+<li id="li-58"><p id="p-959"><span class="process-math">\(y_1\geq y_2\geq y_3\geq\ldots\)</span> (this says that the sequence, <span class="process-math">\(\left(y_n\right)\text{,}\)</span> is non-increasing) </p></li>
+<li id="li-59"><p id="p-960"><span class="process-math">\(\forall\)</span> <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(x_n\leq y_n\)</span></p></li>
+<li id="li-60"><p id="p-961"><span class="process-math">\(\displaystyle \lim_{n\rightarrow\infty}\left(y_n-x_n\right)=0\)</span></p></li>
+</ol>
+<p id="p-962">Then there exists a unique number <span class="process-math">\(c\)</span> such that <span class="process-math">\(x_n\leq
+c\leq y_n\)</span> for all <span class="process-math">\(n\text{.}\)</span></p></article><p id="p-963">Geometrically, we have the following situation.</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/Ch6fig3.png" class="contained"></div>
+<p id="p-964">Notice that we have two sequences <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\text{,}\)</span> one increasing (really non-decreasing) and one decreasing (non-increasing). These sequences do not pass each other. In fact, the following is true:</p>
+<article class="problem example-like" id="problem-136"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-136"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-136"><article class="problem example-like"><p id="p-965">Let <span class="process-math">\((x_n), (y_n)\)</span> be sequences as in the NIP. Show that for all <span class="process-math">\(n, m \in\NN\text{,}\)</span> <span class="process-math">\(x_n\le y_m\text{.}\)</span></p></article></div>
+<p id="p-966">They are also coming together in the sense that <span class="process-math">\(\lim_{n\rightarrow\infty}\left(y_n-x_n\right)=0\text{.}\)</span>  The NIP says that in this case there is a unique real number <span class="process-math">\(c\)</span> in the middle of all of this \lbrack <span class="process-math">\(x_n\leq c\leq y_n\)</span> for all <span class="process-math">\(n\)</span>\rbrack.</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/Ch6fig4.png" class="contained"></div>
+<p id="p-967">If there was no such <span class="process-math">\(c\)</span> then there would be a hole where these two sequences come together.  The NIP guarantees that there is no such hole.  We do not need to prove this since an axiom is, by definition, a self evident truth.  We are taking it on faith that the real number system obeys this law.  The next problem shows that the completeness property distinguishes the real number system from the rational number system.</p>
+<article class="problem example-like" id="problem-137"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-137"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.3</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-137"><article class="problem example-like"><article class="task exercise-like" id="task-119"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-968">Find two sequences of rational numbers <span class="process-math">\(\left(x_n\right)\)</span>and <span class="process-math">\(\left(y_n\right)\)</span> which satisfy properties 1-4 of the NIP and such that there is no rational number <span class="process-math">\(c\)</span> satisfying the conclusion of the NIP.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-31" id="hint-31"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-31"><div class="hint solution-like"><p id="p-969">Consider the decimal expansion of an irrational number.</p></div></div>
+</div></article><article class="task exercise-like" id="task-120"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-970">Find two sequences of rational numbers <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\)</span> which satisfy properties 1-4 of the NIP and such that there is a rational number <span class="process-math">\(c\)</span> satisfying the conclusion of the NIP.</p></article></article></div>
+<p id="p-971">You might find the name “Nested Interval Property” to be somewhat curious. One way to think about this property is to consider that we have a sequence of “nested closed intervals” <span class="process-math">\([\,x_1,y_1]\supseteq[\,x_2,y_2]\supseteq[\,x_3,y_3]\supseteq\cdots\)</span> whose lengths <span class="process-math">\(\,y_n-x_n\)</span> are “shrinking to <span class="process-math">\(0\text{.}\)</span>” The conclusion is that the intersection of these intervals is non-empty and, in fact, consists of a single point. That is, <span class="process-math">\(\bigcap_{n=1}^\infty[x_n,y_n]=\{c\}\text{.}\)</span></p>
+<p id="p-972">It appears that the sequences <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\)</span> in the NIP converge to <span class="process-math">\(c\text{.}\)</span> This is, in fact, true and can be proven rigorously. In what follows, this will prove to be a valuable piece of information.</p>
+<article class="theorem theorem-like" id="thm_ConvergeToC"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.1.4</span><span class="period">.</span>
+</h3>
+<p id="p-973"> Suppose that we have two sequences <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\)</span> satisfying all of the assumptions of the Nested Interval Property. If <span class="process-math">\(c\)</span> is the unique number such that <span class="process-math">\(x_n\leq c\leq y_n\)</span> for all <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=c\)</span> and <span class="process-math">\(\lim_{n\rightarrow\infty}y_n=c\text{.}\)</span></p></article><article class="problem example-like" id="problem-138"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-138"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.5</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-138"><article class="problem example-like"><p id="p-974"> Prove <a href="" class="xref" data-knowl="./knowl/thm_ConvergeToC.html" title="Theorem 10.1.4">Theorem 10.1.4</a>.</p></article></div>
+<p id="p-975">To illustrate the idea that the NIP “plugs the holes” in the real line, we will prove the existence of square roots of nonnegative real numbers.</p>
+<article class="theorem theorem-like" id="thm_SqrtsExist"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.1.6</span><span class="period">.</span>
+</h3>
+<p id="p-976">Suppose <span class="process-math">\(a\in\mathbb{R},\,a\geq 0\text{.}\)</span> There exists a real number <span class="process-math">\(c\geq 0\)</span> such that <span class="process-math">\(c^2=a\text{.}\)</span></p></article><p id="p-977">Notice that we can't just say, “Let <span class="process-math">\(c=\sqrt{a}\text{,}\)</span>” since the idea is to show that this square root exists. In fact, throughout this proof, we cannot really use a square root symbol as we haven't yet proved that they (square roots) exist. We will give the idea behind the proof as it illustrates how the NIP is used.</p>
+<article class="hiddenproof" id="proof-22"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-22"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-22"><article class="hiddenproof"><p id="p-978">Our strategy is to construct two sequences which will “narrow in” on the number <span class="process-math">\(c\)</span> that we seek. With that in mind, we need to find a number <span class="process-math">\(x_1\)</span> such that <span class="process-math">\(x_1^2\leq a\)</span> and a number <span class="process-math">\(y_1\)</span> such that <span class="process-math">\(y_1^2\geq a\text{.}\)</span> (Remember that we can't say <span class="process-math">\(\sqrt{x_1}\)</span> or<span class="process-math">\(\sqrt{y_1}\text{.}\)</span>) There are many possibilities, but how about <span class="process-math">\(x_1=0\)</span> and <span class="process-math">\(y_1=a+1?\)</span> You can check that these will satisfy <span class="process-math">\(x_1^2\leq a\leq\)</span> <span class="process-math">\(y_1^2\text{.}\)</span> Furthermore <span class="process-math">\(x_1\leq y_1\text{.}\)</span> This is the starting point.</p>
+<p id="p-979">The technique we will employ is often called a bisection technique, and is a useful way to set ourselves up for applying the NIP. Let <span class="process-math">\(m_1\)</span> be the midpoint of the interval <span class="process-math">\([\,x_1,y_1]\text{.}\)</span> Then either we have <span class="process-math">\(m_1^2\leq a\)</span> or <span class="process-math">\(m_1^2\geq a\text{.}\)</span> In the case <span class="process-math">\(m_1^2\leq a\text{,}\)</span> we really want <span class="process-math">\(m_1\)</span> to take the place of <span class="process-math">\(x_1\)</span> since it is larger than <span class="process-math">\(\,x_1\text{,}\)</span> but still represents an underestimate for what would be the square root of <span class="process-math">\(a\text{.}\)</span> This thinking prompts the following move. If <span class="process-math">\(m_1^2\leq a\text{,}\)</span> we will relabel things by letting <span class="process-math">\(x_2=m_1\)</span> and <span class="process-math">\(y_2=y_1\text{.}\)</span> The situation looks like this on the number line.</p>
+<div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="images/Ch6fig5.png" class="contained"></div>
+<p id="p-980">In the other case where <span class="process-math">\(a\leq m_1^2\text{,}\)</span> we will relabel things by letting <span class="process-math">\(x_2=x_1\)</span> and <span class="process-math">\(y_2=m_1\text{.}\)</span> The situation looks like this on the number line.</p>
+<div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="images/Ch6fig6.png" class="contained"></div>
+<p id="p-981">In either case, we've reduced the length of the interval where the square root lies to half the size it was before. Stated in more specific terms, in either case we have the same results:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x_1\leq x_2\leq y_2\leq y_1;\ \  x_1^2\leq a\leq y_1^2;\ \  x_2^2\leq a\leq y_2^2
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y_2-x_2=\frac{1}{2}\left(y_1-x_1\right)\text{.}
+\end{equation*}
+</div>
+<p id="p-982">Now we play the same game, but instead we start with the interval <span class="process-math">\([x_2,y_2]\text{.}\)</span> Let <span class="process-math">\(m_2\)</span> be the midpoint of <span class="process-math">\([x_2,y_2]\text{.}\)</span> Then we have <span class="process-math">\(m_2^2\leq a\)</span> or <span class="process-math">\(m_2^2\geq a\text{.}\)</span> If <span class="process-math">\(m_2^2\leq a\text{,}\)</span> we relabel <span class="process-math">\(x_3=m_2\)</span> and <span class="process-math">\(y_3=y_2\text{.}\)</span> If <span class="process-math">\(a\leq m_2^2\text{,}\)</span> we relabel <span class="process-math">\(x_3=x_2\)</span> and <span class="process-math">\(y_3=m_2\text{.}\)</span> In either case, we end up with</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x_1\leq x_2\leq x_3\leq y_3\leq y_2\leq y_1;\ \   x_1^2\leq a\leq y_1^2;\ \  x_2^2\leq a\leq y_2^2;\ \   x_3^2\leq a\leq y_3^2
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y_3-x_3=\frac{1}{2}\left(y_2-x_2\right)=\frac{1}{2^2}\left(y_1-x_1\right)\text{.}
+\end{equation*}
+</div>
+<p id="p-983">Continuing in this manner, we will produce two sequences, <span class="process-math">\(\left(x_n\right)\)</span>and <span class="process-math">\(\left(y_n\right)\)</span> satisfying the following conditions:</p>
+<ol class="decimal">
+<li id="li-61"><p id="p-984"><span class="process-math">\(\displaystyle x_1\leq x_2\leq x_3\leq\ldots\)</span></p></li>
+<li id="li-62"><p id="p-985"><span class="process-math">\(\displaystyle y_1\geq y_2\geq y_3\geq\ldots\)</span></p></li>
+<li id="li-63"><p id="p-986"><span class="process-math">\(\forall\)</span> <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(x_n\leq y_n\)</span></p></li>
+<li id="li-64"><p id="p-987"><span class="process-math">\(\displaystyle \lim_{n\rightarrow\infty}\left(y_n-x_n\right)=\,\lim_{n\rightarrow\infty}\frac{1}{2^{n-1}}\left(y_1-x_1\right)=0\)</span></p></li>
+<li id="li-65">
+<p id="p-988">These sequences also satisfy the following property:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\forall n,\,x_n^2\leq a\leq y_n^2
+\end{equation*}
+</div>
+</li>
+</ol>
+<p id="p-989">Properties 1-4 tell us that <span class="process-math">\(\left(x_n\right)\)</span>and <span class="process-math">\(\left(y_n\right)\)</span> satisfy all of the conditions of the NIP, so we can conclude that there must exist a real number <span class="process-math">\(c\)</span> such that <span class="process-math">\(x_n\leq c\leq y_n\)</span> for all <span class="process-math">\(n\text{.}\)</span> At this point, you should be able to use property 5. to show that <span class="process-math">\(c^2=a\)</span> as desired.</p></article></div>
+<article class="problem example-like" id="problem-139"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-139"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.7</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-139"><article class="problem example-like"><p id="p-990"> Turn the above outline into a formal proof of <a href="" class="xref" data-knowl="./knowl/thm_SqrtsExist.html" title="Theorem 10.1.6">Theorem 10.1.6</a>.</p></article></div>
+<p id="p-991">The bisection method we employed in the proof of <a href="" class="xref" data-knowl="./knowl/thm_SqrtsExist.html" title="Theorem 10.1.6">Theorem 10.1.6</a> is pretty typical of how we will use the NIP, as taking midpoints ensures that we will create a sequence of “nested intervals.” We will employ this strategy in the proofs of the IVT and EVT. Deciding how to relabel the endpoints of our intervals will be determined by what we want to do with these two sequences of real numbers. This will typically lead to a fifth property, which will be crucial in proving that the <span class="process-math">\(c\)</span> guaranteed by the NIP does what we want it to do. Specifically, in the above example, we always wanted our candidate for <span class="process-math">\(\sqrt{a}\)</span> to be in the interval <span class="process-math">\([\,x_n,y_n]\text{.}\)</span> This judicious choice led to the extra Property 5: <span class="process-math">\(\forall\)</span> <span class="process-math">\(n,\,x_n^2\leq a\leq y_n^2\text{.}\)</span> In applying the NIP to prove the IVT and EVT, we will find that properties 1-4 will stay the same. Property 5 is what will change based on the property we want <span class="process-math">\(c\)</span> to have.</p>
+<p id="p-992">Before we tackle the IVT and EVT, let's use the NIP to address an interesting question about the Harmonic Series.  Recall that the Harmonic Series, <span class="process-math">\(1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots\text{,}\)</span> grows without bound, that is, <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n}=\infty\text{.}\)</span>  The question is how slowly does this series grow?  For example, how many terms would it take before the series surpasses 100? 1000? 10000?  Leonhard Euler  decided to tackle this problem in the following way.  Euler decided to consider the <span class="process-math">\(\lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+
+\frac{1}{n}\right)-\text{ ln } \left(n+1\right)\right)\text{.}\)</span>  This limit is called Euler's constant and is denoted by <span class="process-math">\(\gamma\text{.}\)</span> This says that for <span class="process-math">\(n\)</span> large, we have <span class="process-math">\(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\approx\)</span>ln<span class="process-math">\(\left(n+1\right)+\gamma\text{.}\)</span> If we could approximate <span class="process-math">\(\gamma\text{,}\)</span> then we could replace the inequality <span class="process-math">\(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\geq
+100\)</span> with the more tractable inequality ln<span class="process-math">\(\left(n+1\right)+\gamma\)</span> <span class="process-math">\(\geq 0\)</span> and solve for <span class="process-math">\(n\)</span> in this.  This should tell us roughly how many terms would need to be added in the Harmonic Series to surpass 100. Approximating <span class="process-math">\(\gamma\)</span> with a computer is not too bad.  We could make <span class="process-math">\(n\)</span> as large as we wish in <span class="process-math">\(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\right)-\)</span>ln<span class="process-math">\(\left(1+n\right)\)</span> to make closer approximations for <span class="process-math">\(\gamma\text{.}\)</span>  The real issue is, <em class="alert">HOW DO WE KNOW THAT</em></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\right)-\text{ ln } \left(\text{n} +1\right)\right)
+\end{equation*}
+</div>
+<p class="continuation"><em class="alert">ACTUALLY EXISTS?</em></p>
+<p id="p-993">You might want to say that obviously it should, but let us point out that as of the printing of this book (2013), it is not even known if <span class="process-math">\(\gamma\)</span> is rational or irrational. So, in our opinion the existence of this limit is not so obvious. This is where the NIP will come into play; we will use it to show that this limit, in fact, exists. The details are in the following problem.</p>
+<article class="problem example-like" id="problem-140"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-140"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.8</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-140"><article class="problem example-like"><div class="introduction" id="introduction-23">
+<p id="p-994">The purpose of this problem is to show that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+ \frac{1}{n}\right)-\ln\left(n+1\right)\right)
+\end{equation*}
+</div>
+<p class="continuation">exists.</p>
+</div>
+<article class="task exercise-like" id="task-121"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-995">Let <span class="process-math">\(x_n=\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\right)-\ln\left(n+1 \right)\text{.}\)</span> Use the following diagram to show</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x_1\leq x_2\leq x_3\leq\cdots
+\end{equation*}
+</div>
+<div class="image-box" style="width: 84%; margin-left: 8%; margin-right: 8%;"><img src="images/Ch6fig7.png" class="contained"></div></article><article class="task exercise-like" id="task-122"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-996">Let <span class="process-math">\(z_n=\ln\left(n+1\right)-\left(\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n+1} \right)\text{.}\)</span> Use a similar diagram to show that <span class="process-math">\(z_1\leq z_2\leq z_3\leq\cdots\text{.}\)</span></p></article><article class="task exercise-like" id="task-123"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-997">Let <span class="process-math">\(y_n=1-z_n\text{.}\)</span>  Show that <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\)</span> satisfy the hypotheses of the nested interval property and use the NIP to conclude that there is a real number <span class="process-math">\(\gamma\)</span> such that <span class="process-math">\(x_n\leq\gamma\leq
+y_n\)</span> for all <span class="process-math">\(n\text{.}\)</span></p></article><article class="task exercise-like" id="task-124"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<p id="p-998">Conclude that <span class="process-math">\(\lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+
+\frac{1}{n}\right)-\ln\left(n+1\right)\right)=\gamma\text{.}\)</span></p></article></article></div>
+<article class="problem example-like" id="problem-141"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-141"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.9</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-141"><article class="problem example-like"><p id="p-999">Use the fact that <span class="process-math">\(x_n\leq\gamma\leq y_n\)</span> for all <span class="process-math">\(n\)</span> to approximate <span class="process-math">\(\gamma\)</span> to three decimal places.</p></article></div>
+<article class="problem example-like" id="problem-142"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-142"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.10</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-142"><article class="problem example-like"><article class="task exercise-like" id="task-125"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-1000">Use the fact that for large <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\approx
+\ln\left(n+1\right)+ \gamma\)</span> to determine approximately how large <span class="process-math">\(n\)</span> must be to make</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\geq 100\text{.}
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-126"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-1001">Suppose we have a supercomputer which can add 10 trillion terms of the Harmonic Series per second. Approximately how many earth lifetimes would it take for this computer to sum the Harmonic Series until it surpasses 100?</p></article></article></div></section></div></main>
+</div>
+</body>
+</html>

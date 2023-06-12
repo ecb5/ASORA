@@ -1,0 +1,484 @@
+\begin{theindex}
+
+  \item \(\QQ\)
+    \subitem \(\QQ\) is countable, \hyperpage{141}
+    \subitem creating irrationals from rationals, \hyperpage{18}
+    \subitem has measure zero in \(\RR\), \hyperpage{141}
+    \subitem is countable, \hyperpage{140}
+    \subitem is it possible to have two rational numbers, \(a\) and \(b\), such that \(a^b\) is irrational, 
+		\hyperpage{18}
+    \subitem rational numbers exist between rational numbers, 
+		\hyperpage{12}
+  \item \(\RR\)
+    \subitem addition of Cauchy sequences, \hyperpage{158}
+    \subitem any complete, linearly ordered field is isomorphic to, 
+		\hyperpage{165}
+    \subitem as Cauchy sequences
+      \subsubitem identify the multiplicative identity, \hyperpage{159}
+    \subitem irrational numbers, \hyperpage{18}
+    \subitem is uncountable
+      \subsubitem Cantor's first proof, \hyperpage{138}
+    \subitem ordering Dedekind cuts, \hyperpage{161}
+    \subitem real numbers exist between real numbers, \hyperpage{15}
+    \subitem the number \(1\) as a Cauchy sequence, \hyperpage{159}
+  \item \(\cos (nx)\)
+    \subitem orthogonality of, \hyperpage{59}
+  \item \(\cos x\)
+    \subitem Taylor's series for, \hyperpage{44}
+  \item \(\infty\)
+    \subitem divergence to, \hyperpage{71}
+    \subitem negative infinity
+      \subsubitem divergence to, \hyperpage{71}
+    \subitem positive infinity
+      \subsubitem divergence to, \hyperpage{71}
+  \item \(\pi\)
+    \subitem first series expansion, \hyperpage{36}
+    \subitem second series expansion, \hyperpage{36}
+  \item \(\sin x\)
+    \subitem as a power series, \hyperpage{39}
+    \subitem orthogonality of, \hyperpage{54}
+    \subitem Taylor's series for, \hyperpage{44}
+  \item \(\sqrt{2+\sqrt{2+\sqrt{2+\sqrt{...}}}}\)
+    \subitem value of, \hyperpage{118}
+  \item \(\sqrt{2}\)
+    \subitem is irrational, \hyperpage{13}
+    \subitem meaning of, \hyperpage{14}
+  \item \(\sqrt{x}\)
+    \subitem is continuous at zero, \hyperpage{91}
+  \item \(b\) is an upper bound of \(S\subseteq \RR\) if and only if \(-b\) is a lower bound of \(-S\), 
+		\hyperpage{120}
+  \item \(e^x\)
+    \subitem \(E(-x)=\left(E(x)\right)^{-1}\), \hyperpage{32}
+    \subitem \(E(0)=1\), \hyperpage{31}
+    \subitem \(E(\frac{1}{n})=\left(E(1)\right)^{1/n}\), \hyperpage{32}
+    \subitem \(E(m)=\left(E(1)\right)^mE(0)=1\), \hyperpage{31}
+    \subitem \(E(mx)=\left(E(x\right))^m\), \hyperpage{32}
+    \subitem \(E(x+y)=E(x)E(y)\), \hyperpage{31}
+    \subitem \(E\left(\frac{m}{n}\right)=\left(E(1)\right)^{m/n}\), 
+		\hyperpage{32}
+    \subitem \(e^{a+b}=e^ae^b\), \hyperpage{76}
+    \subitem definition of \(e\), \hyperpage{32}
+    \subitem Taylor's series for, \hyperpage{44}
+  \item \(g(c)=\frac{c-x}{1+c}\) is increasing on \([x,0]\), 
+		\hyperpage{82}
+  \item \(x^n\)
+    \subitem converges pointwise on \([0,1]\), \hyperpage{124}
+  \item \(x^n\) converges pointwise on \([0,1]\), \hyperpage{124}
+
+  \indexspace
+
+  \item Abel's Lemma, \hyperpage{133}
+  \item Abel's Theorem, \hyperpage{132}
+  \item Abel, Niels Henrik, \hyperpage{123}, \hyperpage{132}
+    \subitem Abel's Lemma, \hyperpage{133}
+    \subitem Abel's Theorem, \hyperpage{132}
+  \item absolute value, \hyperpage{63}
+  \item Archimedean Property, \hyperpage{15}, \hyperpage{120}
+    \subitem and \(\QQ\), \hyperpage{120}
+
+  \indexspace
+
+  \item Bernoulli Jacob, \hyperpage{25}
+  \item Bernoulli, Johann, \hyperpage{24}
+    \subitem Bernoulli's challenge, \hyperpage{24}
+    \subitem portrait of, \hyperpage{25}
+  \item Binomial Series, the
+    \subitem \(g(c)=\frac{c-x}{1+c}\) is increasing, \hyperpage{82}
+    \subitem converges on the interval \([0,1]\), \hyperpage{79}
+    \subitem squaring the, \hyperpage{35}
+  \item Bolzano, Bernhard, \hyperpage{87, 88}, \hyperpage{115}
+    \subitem portrait of, \hyperpage{88}
+  \item Bolzano-Weierstrass Theorem, \hyperpage{115}
+  \item Bolzano-Weierstrass Theorem (BWT), \hyperpage{116}
+    \subitem implies that a  continuous functions on a closed set is bounded, 
+		\hyperpage{116}
+    \subitem implies the NIP, \hyperpage{119}
+  \item Brachistochrone problem, the, \hyperpage{24}, \hyperpage{29}
+    \subitem Bernoulli's solution, \hyperpage{25}
+
+  \indexspace
+
+  \item Cantor, Georg, \hyperpage{134, 135}, \hyperpage{137}, 
+		\hyperpage{139}, \hyperpage{144, 145}, \hyperpage{157}
+    \subitem and the modern view of mathematics, \hyperpage{135}
+    \subitem Cantor's Theorem, \hyperpage{143}
+    \subitem first proof that \(\RR\) is uncountable, \hyperpage{138}
+    \subitem fourth theorem on the uniqueness of Fourier series, 
+		\hyperpage{137}
+    \subitem portrait of, \hyperpage{136}
+    \subitem uniqueness of Fourier series
+      \subsubitem first theorem on, \hyperpage{135}
+      \subsubitem second theorem, \hyperpage{135}
+      \subsubitem third theorem on, \hyperpage{135}
+    \subitem unit interval and unit square have equal cardinalty, 
+		\hyperpage{142}
+  \item Cardano, Girolomo, \hyperpage{6}
+  \item cardinality
+    \subitem countable sets, \hyperpage{139}
+    \subitem equal cardinality, \hyperpage{139}
+  \item Cauchy, Augustin, \hyperpage{42}, \hyperpage{81}, 
+		\hyperpage{88}, \hyperpage{99}, \hyperpage{123}
+    \subitem Cauchy's flawed proof that the limit of continuous functions is continuous, 
+		\hyperpage{123}
+    \subitem portrait of, \hyperpage{83}
+  \item common denominators, \hyperpage{12}
+  \item continuity, \hyperpage{88}
+    \subitem \(\pm\sqrt{x}\) is continuous at zero, \hyperpage{91}
+    \subitem \(f(x) = mx +b\) is continuous everywhere, \hyperpage{90}
+    \subitem Bolzano-Weierstrass Theorem implies a continuous function on a closed set is bounded, 
+		\hyperpage{116}
+    \subitem Cauchy's flawed proof that the limit of continuous functions is continuous, 
+		\hyperpage{123}
+    \subitem definition of, \hyperpage{88}
+    \subitem Extreme Value Theorem (EVT) and, \hyperpage{88}
+    \subitem formal definition of discontinuity, \hyperpage{107}
+    \subitem Heaviside's function is not continuous at zero, 
+		\hyperpage{95}
+    \subitem implied by differentiability, \hyperpage{104}
+    \subitem Intermediate Value Theorem and, \hyperpage{88}
+    \subitem via limits, \hyperpage{94}, \hyperpage{96}
+  \item continuous functions
+    \subitem continuous function on a closed, bounded interval is bounded, 
+		\hyperpage{114}
+    \subitem on a closed set, and the Bolzano-Weierstrass Theorem, 
+		\hyperpage{116}
+    \subitem sum of continuous functions is continuous, \hyperpage{96}
+    \subitem the composition of continuous functions is continuous, 
+		\hyperpage{98}
+    \subitem uniform convergence and, \hyperpage{124}
+    \subitem uniform limit of continuous functions is continuous, 
+		\hyperpage{124}
+  \item Continuum Hypothesis
+    \subitem generalized, \hyperpage{145}
+    \subitem original, \hyperpage{145}
+  \item convergence
+    \subitem of a sequence, \hyperpage{65}
+      \subsubitem convergence to zero drill, \hyperpage{63, 64}
+      \subsubitem implies Cauchy sequence, \hyperpage{126}
+    \subitem of a series
+      \subsubitem absolute, \hyperpage{128}
+      \subsubitem absolute convergence implies convergence, 
+		\hyperpage{129}
+      \subsubitem pointwise, \hyperpage{123}
+    \subitem pointwise convergence, \hyperpage{125}
+    \subitem pointwise vs. uniform convergence, \hyperpage{125}
+    \subitem the radius of convergence of a power series, 
+		\hyperpage{129}
+    \subitem uniform convergence, \hyperpage{125}
+  \item countable sets
+    \subitem countable union of finite sets, \hyperpage{144}
+    \subitem defintion of, \hyperpage{139}
+
+  \indexspace
+
+  \item Dedekind, Richard, \hyperpage{142}, \hyperpage{157}, 
+		\hyperpage{160, 161}
+    \subitem Dedekind cuts, \hyperpage{159, 160}
+      \subsubitem absolute value, \hyperpage{163}
+      \subsubitem addition of, \hyperpage{162}, \hyperpage{164}
+      \subsubitem as sets, \hyperpage{165}
+      \subsubitem closure of, \hyperpage{162}
+      \subsubitem definition of, \hyperpage{160}
+      \subsubitem multiplication of, \hyperpage{162}, \hyperpage{164}
+      \subsubitem multiplication of positive cuts, \hyperpage{162}
+      \subsubitem order properties, \hyperpage{161}
+      \subsubitem ordering of, \hyperpage{161}
+      \subsubitem subtraction of, \hyperpage{164}
+    \subitem portrait of, \hyperpage{142}
+  \item derived sets, \hyperpage{137}
+  \item differentiation
+    \subitem \(f^\prime(a)>0\) implies \(f\) is increasing nearby, 
+		\hyperpage{106}
+    \subitem \(f^\prime(a)\lt 0\) implies \(f\) is decreasing nearby, 
+		\hyperpage{106}
+    \subitem definition of the derivative, \hyperpage{103}
+    \subitem differentiability implies continuity, \hyperpage{104}
+    \subitem if \(f^\prime\lt 0\) on an interval then \(f\) is decreasing, 
+		\hyperpage{106}
+    \subitem of the pointwise limit of functions, \hyperpage{126}
+    \subitem power rule with fractional exponents, \hyperpage{23}
+    \subitem term by term differentiation of power series, 
+		\hyperpage{126}
+  \item divergence
+    \subitem divergence to infinity implies divergence, \hyperpage{71}
+    \subitem of a sequence, \hyperpage{70}
+    \subitem of a series
+      \subsubitem \(n\)th term test, \hyperpage{128}
+
+  \indexspace
+
+  \item Euler, Leonhard, \hyperpage{41}, \hyperpage{45}, 
+		\hyperpage{112}
+    \subitem portrait of, \hyperpage{37}
+  \item Extreme Value Theorem (EVT), \hyperpage{79}, 
+		\hyperpage{118, 119}
+    \subitem continuity and, \hyperpage{88}
+    \subitem Rolle's Theorem, and, \hyperpage{105}
+
+  \indexspace
+
+  \item Fermat's Little Theorem, \hyperpage{9}
+    \subitem problems leading to
+      \subsubitem if \(p\) is prime then \(p\) divides \(p \choose{}k\), 
+		\hyperpage{9}
+      \subsubitem if a prime divides a product of two numbers then it divides one of the factors, 
+		\hyperpage{9}
+      \subsubitem if a prime divides an arbitrary product then it divides one of the factors, 
+		\hyperpage{9}
+  \item Fermat's Theorem, \hyperpage{104}
+    \subitem if \(f(a)\) is a maximum then \(f^\prime(a)=0\), 
+		\hyperpage{104}
+    \subitem if \(f(a)\) is a minimum then \(f^\prime(a)=0\), 
+		\hyperpage{104}
+  \item fields
+    \subitem any complete, linearly ordered field is isomorphic to \(\RR\)., 
+		\hyperpage{165}
+  \item Fourier Series, \hyperpage{58}
+    \subitem Cantor's first theorem on uniqueness, \hyperpage{135}
+    \subitem Cantor's second theorem on uniqueness, \hyperpage{135}
+    \subitem Cantor's third theorem on uniqueness, \hyperpage{135}
+    \subitem computing the coefficients, \hyperpage{59}
+    \subitem cosine series
+      \subsubitem the Fourier cosine series of \(f(x)=x-\frac{1}{2}\), 
+		\hyperpage{59}
+    \subitem divergent Fourier series example, \hyperpage{58}
+    \subitem sine series of an odd function, \hyperpage{54}
+  \item Fourier, Jean Baptiste Joseph, \hyperpage{52--54}, 
+		\hyperpage{134}
+    \subitem portrait of, \hyperpage{52}
+
+  \indexspace
+
+  \item Greatest Lower Bound Property (GLBP)
+    \subitem definition of, \hyperpage{120}
+  \item Gödel, Kurt
+    \subitem portrait of, \hyperpage{145}
+
+  \indexspace
+
+  \item Halmos, Paul, \hyperpage{92}
+    \subitem portrait of, \hyperpage{92}
+  \item Heat Equation, the, \hyperpage{53}
+    \subitem fundamental solutions of, \hyperpage{53}
+    \subitem parameter \(k\) must be less than zero, \hyperpage{53}
+    \subitem solving for \(\xi(x)\), \hyperpage{53}
+
+  \indexspace
+
+  \item Intermediate Value Theorem (IVT), \hyperpage{79}, 
+		\hyperpage{113}
+    \subitem a polynomial with odd degree must have a root, 
+		\hyperpage{114}
+    \subitem continuity and, \hyperpage{88}
+    \subitem the case \(f(a)\geq v\geq f(b)\), \hyperpage{113}
+    \subitem the case \(f(a)\leq v\leq f(b)\), \hyperpage{113}
+
+  \indexspace
+
+  \item Lagrange's form of the remainder, \hyperpage{77}
+    \subitem \(x\lt a\), \hyperpage{78}
+  \item Lagrange, Joseph-Louis, \hyperpage{16}, \hyperpage{22}, 
+		\hyperpage{41}, \hyperpage{43}, \hyperpage{77}, 
+		\hyperpage{79}, \hyperpage{99}
+    \subitem portrait of, \hyperpage{42}
+  \item Least Upper Bound Property (LUBP), \hyperpage{117}, 
+		\hyperpage{120}
+    \subitem doesn't hold in \(\QQ\), \hyperpage{120}
+    \subitem identifying suprema and infima, \hyperpage{120}
+    \subitem implies the Nested Interval Property (NIP), 
+		\hyperpage{119}
+  \item Lebesgue, Henri, \hyperpage{134}
+  \item Leibniz, Gottfried Wilhelm, \hyperpage{3}, \hyperpage{20}, 
+		\hyperpage{28}, \hyperpage{34}, \hyperpage{41}, 
+		\hyperpage{45}, \hyperpage{88}, \hyperpage{99}, 
+		\hyperpage{105}, \hyperpage{141}
+    \subitem and infinitesimals, \hyperpage{16}
+    \subitem differentiation rules, \hyperpage{20}
+    \subitem first calculus publication, \hyperpage{19}
+    \subitem portrait of, \hyperpage{19}
+  \item limit, \hyperpage{100}
+    \subitem \(\lim_{n\rightarrow\infty}b^{\left(\frac{1}{n}\right)}=1\) if \(b>0\), 
+		\hyperpage{66}
+    \subitem \(\limit{x}{a}{f(x)}=f(a)\) implies \(f(x)\) is continuous, 
+		\hyperpage{96}
+    \subitem accumulation point, \hyperpage{136}
+    \subitem accumulation points, \hyperpage{136}
+    \subitem definition of non-existence, \hyperpage{64}
+    \subitem identifing the theorems used in a limit, \hyperpage{69}
+    \subitem of a constant sequence, \hyperpage{66}
+    \subitem of a constant times a sequence, \hyperpage{68}
+    \subitem of interval endpoints in the NIP, \hyperpage{110}
+    \subitem of ratios of polynomials, \hyperpage{73}
+    \subitem products of, \hyperpage{67}
+    \subitem properties of, \hyperpage{102}
+    \subitem quotients of, \hyperpage{68}
+    \subitem Squeeze Theorem for Sequences, \hyperpage{69}
+    \subitem termwise sums of, \hyperpage{67}
+    \subitem verify limit laws from calculus, \hyperpage{102}
+
+  \indexspace
+
+  \item Maclaurin series drills, \hyperpage{39}
+  \item Maclaurin, Colin, \hyperpage{41}
+  \item Mean Value Theorem, the, \hyperpage{104}, \hyperpage{106}
+  \item measure zero, \hyperpage{141}, \hyperpage{153}
+    \subitem \(\QQ\) has measure zero in \(\RR\), \hyperpage{141}
+
+  \indexspace
+
+  \item Nested Interval Property (NIP)
+    \subitem endpoints, \hyperpage{110}
+    \subitem implies the existence of square roots of integers, 
+		\hyperpage{111}
+    \subitem implies the LUBP, \hyperpage{118}
+    \subitem square roots of integers, and, \hyperpage{111}
+    \subitem weak form, \hyperpage{137}
+  \item Newton, Isaac, \hyperpage{20, 21}, \hyperpage{25}, 
+		\hyperpage{34}, \hyperpage{99}, \hyperpage{105}
+    \subitem foundation of calculus, \hyperpage{17}
+    \subitem portrait of, \hyperpage{22}
+  \item number field
+    \subitem linearly ordered, \hyperpage{154}
+
+  \indexspace
+
+  \item orthogonality
+    \subitem of \(\cos nx\), \hyperpage{59}
+    \subitem of \(\sin nx\), \hyperpage{54}
+
+  \indexspace
+
+  \item pointwise convergence, \hyperpage{124}
+    \subitem derivative and, \hyperpage{126}
+  \item polynomials
+    \subitem infinite, \hyperpage{29}
+    \subitem with odd degree must have a root, \hyperpage{114}
+  \item power series
+    \subitem a power series diverges outside it's radius of convergence, 
+		\hyperpage{129}
+    \subitem converge inside radius of convergence, \hyperpage{129}
+    \subitem converge uniformly on their interval of convergence, 
+		\hyperpage{131}
+    \subitem definition of, \hyperpage{29}
+    \subitem drills, \hyperpage{39}
+    \subitem for \(a^x\) expanded about 0, \hyperpage{39}
+    \subitem of \(\sin(x)\), expanded about \(a\), \hyperpage{39}
+    \subitem term by term derivative of, \hyperpage{126}, 
+		\hyperpage{131}
+    \subitem term by term integral of, \hyperpage{125}
+    \subitem the radius of convergence, \hyperpage{129}
+
+  \indexspace
+
+  \item Quadratic Formula
+    \subitem second proof, \hyperpage{7}
+
+  \indexspace
+
+  \item Riemann, Bernhard, \hyperpage{46}
+  \item Rolle's Theorem, \hyperpage{105}
+  \item Russell's Paradox, \hyperpage{144}
+
+  \indexspace
+
+  \item sequences
+    \subitem all subsequences of a convergent sequence converge, 
+		\hyperpage{115}
+    \subitem bounded and non-decreasing, \hyperpage{118}
+    \subitem Cauchy sequences, \hyperpage{126}
+      \subsubitem addition and multiplication of, \hyperpage{158}
+      \subsubitem addition of is well defined, \hyperpage{158}
+      \subsubitem Cauchy's remainder, \hyperpage{81}
+      \subsubitem convergence of, \hyperpage{127}
+      \subsubitem convergence of is equivalent to the NIP, 
+		\hyperpage{127}
+      \subsubitem don't always converge in \(\QQ\), \hyperpage{128}
+      \subsubitem equivalent, \hyperpage{157}
+      \subsubitem real numbers as Cauchy sequences, \hyperpage{158}
+      \subsubitem zero as a Cauchy sequence, \hyperpage{158}
+    \subitem constant multiples of, \hyperpage{68}
+    \subitem constant sequences, \hyperpage{66}
+    \subitem convergence, \hyperpage{65}, \hyperpage{126}
+    \subitem convergence of
+      \subsubitem convergent sequences are bounded, \hyperpage{68}
+    \subitem convergence to zero, \hyperpage{62}
+    \subitem divergence of, \hyperpage{70}
+    \subitem divergence to \(\infty\), \hyperpage{71}
+    \subitem find a bounded sequence of rational numbers such that no subsequence converges to a rational number, 
+		\hyperpage{119}
+    \subitem subsequences, \hyperpage{114}
+    \subitem termwise product of, \hyperpage{68}
+    \subitem termwise quotient of, \hyperpage{68}
+    \subitem termwise sums of, \hyperpage{67}
+    \subitem the sequence of positive integers diverges to infinity, 
+		\hyperpage{71}
+  \item series
+    \subitem \(n\)th term test, \hyperpage{128}
+    \subitem absolute convergence of
+      \subsubitem rearrangements, \hyperpage{129}
+      \subsubitem vs. the absolute value of a series, \hyperpage{129}
+    \subitem Alternating Harmonic Series
+      \subsubitem rearrangements of, \hyperpage{46}
+    \subitem Binomial Series, the, \hyperpage{79}
+      \subsubitem Binomial Series is a Taylor series, \hyperpage{80}
+    \subitem Cauchy Criterion, \hyperpage{128}
+      \subsubitem Strong Cauchy criterion, \hyperpage{128}
+    \subitem Cauchy sequences
+      \subsubitem Cauchy Criterion, \hyperpage{128}
+    \subitem Comparison Test, \hyperpage{128}
+    \subitem Geometric series
+      \subsubitem \((0.\bar{9})\) converges to \(1\), \hyperpage{143}
+      \subsubitem alternating, \hyperpage{39}
+      \subsubitem derivation of the series representation of \(\ln(1+x)\) from, 
+		\hyperpage{39}
+      \subsubitem differentiating, \hyperpage{37}
+      \subsubitem naive derivation, \hyperpage{30}
+    \subitem graph the square root series, \hyperpage{36}
+    \subitem Harmonic Series, \hyperpage{46}, \hyperpage{129}
+      \subsubitem slow divergence of, \hyperpage{112}
+    \subitem rearrangements, \hyperpage{129}
+    \subitem Taylor's series, \hyperpage{75}
+      \subsubitem \(f^{(n)}\lt B,\forall\  n\in\NN\imp\) Taylor series converges, 
+		\hyperpage{75}
+      \subsubitem Cauchy Remainder, \hyperpage{81}
+      \subsubitem expansion of \(e^x, \sin x\), and \(\cos x\), 
+		\hyperpage{44}
+      \subsubitem used to approximate \(\ln 2\), \hyperpage{46}
+    \subitem term by term integration of, \hyperpage{39}
+  \item sets
+    \subitem accumulation points, \hyperpage{136}
+    \subitem countably infinite subsets, \hyperpage{144}
+    \subitem derived sets, \hyperpage{136}
+  \item square roots exist, \hyperpage{110}
+  \item Squeeze Theorem
+    \subitem for functions, \hyperpage{102}
+
+  \indexspace
+
+  \item Taylor's Formula, \hyperpage{40}
+    \subitem use to obtain the general binomial series, \hyperpage{44}
+  \item Taylor's Theorem, \hyperpage{44, 45}
+  \item Taylor, Brook, \hyperpage{41}
+    \subitem portrait of, \hyperpage{41}
+  \item Topologist's sine function
+    \subitem is continuous at zero, \hyperpage{93}
+  \item Triangle Inequalities, \hyperpage{66}
+    \subitem for Integrals, \hyperpage{75}
+    \subitem Reverse Triangle Inequalitiy, \hyperpage{66}
+    \subitem Triangle Inequality, \hyperpage{66}
+
+  \indexspace
+
+  \item uniform convergence, \hyperpage{124}
+    \subitem continuous functions and, \hyperpage{124}
+    \subitem integration and, \hyperpage{125}
+  \item Upper Bound, \hyperpage{117}
+
+  \indexspace
+
+  \item Weierstrass, Karl, \hyperpage{87}, \hyperpage{100}, 
+		\hyperpage{115}, \hyperpage{123}
+    \subitem portrait of, \hyperpage{87}
+  \item Weierstrass-\(M\) Test, \hyperpage{130}
+
+\end{theindex}

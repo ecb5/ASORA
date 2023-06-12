@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:39-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Infinite Sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="BackToFourier.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="BackToFourier.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="BackToFourier-CantorsTheorem.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="BackToFourier.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="BackToFourier.html" title="Up">Up</a><a class="next-button button toolbar-item" href="BackToFourier-CantorsTheorem.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="active">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="BackToFourier-InfiniteSets"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">12.1</span> <span class="title">Infinite Sets</span>
+</h2>
+<p id="p-1312">The following theorem follows directly from our previous work with the NIP and will be very handy later. It basically says that a sequence of nested closed intervals will still have a non-empty intersection even if their lengths do not converge to zero as in the NIP.</p>
+<article class="theorem theorem-like" id="thm_WeakNIP"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.1.1</span><span class="period">.</span>
+</h3>
+<p id="p-1313"> Let <span class="process-math">\(\left(\left[a_n, b_n\right]\right)_{n=1}^\infty\)</span> be a sequence of nested intervals such that <span class="process-math">\(\limit{n}{\infty}{\abs{b_n-a_n}}&gt;0\text{.}\)</span> Then there is at least one <span class="process-math">\(c\in\RR\)</span> such that <span class="process-math">\(c\in\left[a_n, b_n\right]\)</span> for all <span class="process-math">\(n\in\NN\text{.}\)</span></p></article><article class="hiddenproof" id="proof-31"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-31"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><p id="p-1314">By <a href="" class="xref" data-knowl="./knowl/cor_IncBoundedConverge.html" title="Corollary 10.4.5">Corollary 10.4.5</a> of <a href="IVTandEVT.html" class="internal" title="Chapter 10: Intermediate and Extreme Values">Chapter 10</a>, we know that a bounded increasing sequence such as <span class="process-math">\((a_n)\)</span> converges, say to <span class="process-math">\(c\text{.}\)</span> Since <span class="process-math">\(a_n\leq a_m\leq b_n\)</span> for <span class="process-math">\(m&gt;n\)</span> and <span class="process-math">\(\limit{m}{\infty}{a_m}=c\text{,}\)</span> then for any fixed <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(a_n\leq c\leq b_n\text{.}\)</span> This says <span class="process-math">\(c\in\left[a_n, b_n\right]\)</span> for all <span class="process-math">\(n\in\NN\text{.}\)</span></p></article></div>
+<article class="problem example-like" id="problem-199"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-199"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.1.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-199"><article class="problem example-like"><p id="p-1315"> Suppose <span class="process-math">\(\limit{n}{\infty}{\abs{b_n-a_n}}&gt;0\text{.}\)</span>  Show that there are at least two points, <span class="process-math">\(c\)</span> and <span class="process-math">\(d\text{,}\)</span> such that <span class="process-math">\(c\in[a_n, b_n]\)</span> and <span class="process-math">\(d\in[a_n, b_n]\)</span> for all <span class="process-math">\(n\in\NN\text{.}\)</span></p></article></div>
+<p id="p-1316">Our next theorem says that in a certain, very technical sense there are more real numbers than there are counting numbers <a href="" class="xref" data-knowl="./knowl/franks10__cantor_other_proof_rr_uncoun.html" title="Bibliographic Entry 3">[3]</a>. This probably does not seem terribly significant.  After all, there are real numbers which are not counting numbers.  What will make this so startling is that the same cannot be said about all sets which strictly contain the counting numbers.  We will get into the details of this after the theorem is proved.</p>
+<article class="theorem theorem-like" id="thm_NoSeriesContainsAllReals"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.1.3</span><span class="period">.</span>
+</h3>
+<p id="p-1317"><em class="alert">Cantor, (1874)</em></p>
+<p id="p-1318"> Let <span class="process-math">\(S=\left(s_n\right)_{n=1}^\infty\)</span> be a sequence of real numbers.  There is a real number <span class="process-math">\(c\text{,}\)</span> which is not in  <span class="process-math">\(S\text{.}\)</span></p>
+<aside class="aside aside-like" id="aside-19"><p id="p-1319">To streamline things, we are abusing notation here as we are letting <span class="process-math">\(S\)</span> denote both the sequence (which is ordered) and the underlying (unordered) set of entries in the sequence.</p></aside></article><article class="hiddenproof" id="proof-32"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><p id="p-1320">For the sake of obtaining a contradiction assume that the sequence <span class="process-math">\(S\)</span> contains every real number; that is, <span class="process-math">\(S=\RR\text{.}\)</span> As usual we will build a sequence of nested intervals <span class="process-math">\(\left(\left[x_i, y_i\right]\right)_{i=1}^\infty\text{.}\)</span></p>
+<p id="p-1321">Let <span class="process-math">\(x_1\)</span> be the smaller of the first two distinct elements of <span class="process-math">\(S\text{,}\)</span> let <span class="process-math">\(y_1\)</span> be the larger and take <span class="process-math">\(\left[x_1,y_1\right]\)</span> to be the first interval.</p>
+<p id="p-1322">Next we assume that <span class="process-math">\(\left[x_{n-1}, y_{n-1}\right]\)</span> has been constructed and build <span class="process-math">\(\left[x_n, y_n\right]\)</span> as follows. Observe that there are infinitely many elements of <span class="process-math">\(S\)</span> in <span class="process-math">\(\left(x_{n-1}, y_{n-1}\right)\)</span> since <span class="process-math">\(S=\RR\text{.}\)</span> Let <span class="process-math">\(s_m\)</span> and <span class="process-math">\(s_k\)</span> be the <em class="emphasis">first</em> two distinct elements of <span class="process-math">\(S\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+s_m, s_k \in \left(x_{n-1}, y_{n-1}\right) \text{.}
+\end{equation*}
+</div>
+<p id="p-1323">Take <span class="process-math">\(x_n\)</span> to be the smaller and <span class="process-math">\(y_n\)</span> to be the larger of <span class="process-math">\(s_m\)</span> and <span class="process-math">\(s_k\text{.}\)</span> Then <span class="process-math">\(\left[x_n, y_n\right]\)</span> is the <span class="process-math">\(n\)</span>th interval.</p>
+<p id="p-1324">From the way we constructed them it is clear that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left[x_1, y_1\right] \supseteq \left[x_2, y_2\right] \supseteq \left[x_3, y_3\right] \supseteq \ldots\text{.}
+\end{equation*}
+</div>
+<p id="p-1325">Therefore by <a href="" class="xref" data-knowl="./knowl/thm_WeakNIP.html" title="Theorem 12.1.1">Theorem 12.1.1</a> there is a real number, say <span class="process-math">\(c\text{,}\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_WeakNIP.html">
+\begin{equation*}
+c\in\left[x_n, y_n\right] \text{ for all }  n\in\NN\text{.}
+\end{equation*}
+</div>
+<p id="p-1326">In fact, since <span class="process-math">\(x_1\lt x_2\lt x_3\ldots\lt y_3\lt y_2\lt y_1\)</span> it is clear that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_NIP-interval">
+\begin{equation}
+x_n\lt c\lt y_n, \ \forall n\text{.}\tag{12.1.1}
+\end{equation}
+</div>
+<p id="p-1327">We will show that <span class="process-math">\(c\)</span> is the number we seek. That the inequalities in <a href="" class="xref" data-knowl="./knowl/eq_NIP-interval.html" title="Equation 12.1.1">formula (12.1.1)</a> are strict will play a crucial role.</p>
+<p id="p-1328">To see that <span class="process-math">\(c\not\in S\)</span> we suppose that <span class="process-math">\(c\in S\)</span> and derive a contradiction.</p>
+<p id="p-1329">So, suppose that <span class="process-math">\(c=s_p\)</span> for some <span class="process-math">\(p\in\NN\text{.}\)</span> Then only <span class="process-math">\(\left\{s_1, s_2,\ldots,
+s_{p-1}\right\}\)</span> appear before <span class="process-math">\(s_p\)</span> in the sequence <span class="process-math">\(S\text{.}\)</span> Since each <span class="process-math">\(x_n\)</span> is taken from <span class="process-math">\(S\)</span> it follows that only finitely many elements of the sequence <span class="process-math">\((x_n)\)</span> appear before <span class="process-math">\(s_p=c\)</span> in the sequence as well.</p>
+<p id="p-1330">Let <span class="process-math">\(x_l\)</span> be the <em class="emphasis">last</em> element of <span class="process-math">\((x_n)\)</span> which appears before <span class="process-math">\(c=s_p\)</span> in the sequence and consider <span class="process-math">\(x_{l+1}\text{.}\)</span> The way it was constructed, <span class="process-math">\(x_{l+1}\)</span> was one of the first two distinct terms in the sequence <span class="process-math">\(S\)</span> strictly between <span class="process-math">\(x_l\)</span> and <span class="process-math">\(y_l\text{,}\)</span> the other being <span class="process-math">\(y_{l+1}\text{.}\)</span> Since <span class="process-math">\(x_{l+1}\)</span> does not appear before <span class="process-math">\(c=s_p\)</span> in the sequence and <span class="process-math">\(x_l\lt c\lt y_l\text{,}\)</span> it follows that either <span class="process-math">\(c=x_{l+1}\)</span> or <span class="process-math">\(c=y_{l+1}\text{.}\)</span> However, this gives us a contradiction as we know from <a href="" class="xref" data-knowl="./knowl/eq_NIP-interval.html" title="Equation 12.1.1">formula (12.1.1)</a> that <span class="process-math">\(x_{l+1}\lt c\lt y_{l+1}\text{.}\)</span></p>
+<p id="p-1331">Thus <span class="process-math">\(c\)</span> is not an element of <span class="process-math">\(S\text{.}\)</span></p></article></div>
+<p id="p-1332">So how does this theorem show that there are “more” real numbers than counting numbers? Before we address that question we need to be very careful about the meaning of the word 'more' when we're talking about infinite sets.</p>
+<p id="p-1333">First let's consider two finite sets, say <span class="process-math">\(A=\left\{\alpha,\beta,\gamma,\delta\right\}\)</span> and <span class="process-math">\(B=\left\{a,b,c,d,e\right\}\text{.}\)</span> How do we know that <span class="process-math">\(B\)</span> is the bigger set? (It obviously is.) Clearly we can just count the number of elements in both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> Since <span class="process-math">\(\abs{A}=4\)</span> and <span class="process-math">\(\abs{B}=5\)</span> and <span class="process-math">\(4\lt 5\)</span> <span class="process-math">\(B\)</span> is clearly bigger. But we're looking for a way to determine the relative size of two sets without counting them because we have no way of counting the number of elements of an infinite set. Indeed, it isn't even clear what the phrase “the number of elements” might <em class="emphasis">mean</em> when applied to the elements of an infinite set.</p>
+<p id="p-1334">When we count the number of elements in a finite set what we're really doing is matching up the elements of the set with a set of consecutive positive integers, starting at <span class="process-math">\(1\text{.}\)</span> Thus since</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-51">
+\begin{align*}
+1\amp \leftrightarrow\alpha\\
+2\amp \leftrightarrow\beta\\
+3\amp \leftrightarrow\gamma\\
+4\amp \leftrightarrow\delta
+\end{align*}
+</div>
+<p class="continuation">we see that <span class="process-math">\(\abs{A}=4\text{.}\)</span> Moreover, the order of the match-up is unimportant. Thus since</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-52">
+\begin{align*}
+2\amp \leftrightarrow e\\
+3\amp \leftrightarrow a\\
+5\amp \leftrightarrow b\\
+4\amp \leftrightarrow d\\
+1\amp \leftrightarrow c
+\end{align*}
+</div>
+<p class="continuation">it is clear that the elements of <span class="process-math">\(B\)</span> and the set <span class="process-math">\(\left\{1,2,3,4,5\right\}\)</span> can be matched up as well. And it doesn't matter what order either set is in. They both have <span class="process-math">\(5\)</span> elements.</p>
+<p id="p-1335">Such a match-up is called a one-to-one correspondence. In general, if two sets can be put in one-to-one correspondence then they are the same “size.” Of course the word “size” has lots of connotations that will begin to get in the way when we talk about infinite sets, so instead we will say that the two sets have the same <em class="emphasis">cardinality.</em> Speaking loosely, this just means that they are the same size.</p>
+<p id="p-1336">More precisely, if a given set <span class="process-math">\(S\)</span> can be put in one-to-one correspondence with a finite set of consecutive integers, say <span class="process-math">\(\left\{1,2,3,\ldots, N\right\}\text{,}\)</span> then we say that the cardinality of the set is <span class="process-math">\(N\text{.}\)</span> But this just means that both sets have the same cardinality. It is this notion of one-to-one correspondence, along with the next two definitions, which will allow us to compare the sizes (cardinalities) of infinite sets.</p>
+<article class="definition definition-like" id="def_CountableSets"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.1.4</span><span class="period">.</span>
+</h3>
+<p id="p-1337"> Any set which can be put into one-to-one correspondence with <span class="process-math">\(\NN=\left\{1,2,3,\ldots\right\}\)</span> is called a <dfn class="terminology">countably infinite</dfn> set. Any set which is either finite or countably infinite is said to be <dfn class="terminology">countable</dfn>.</p></article><p id="p-1338">Since <span class="process-math">\(\NN\)</span> is an infinite set, we have no symbol to designate its cardinality so we have to invent one. The symbol used by Cantor  and adopted by mathematicians ever since is <span class="process-math">\(\aleph_0\text{.}\)</span> Thus the cardinality of any countably infinite set is <span class="process-math">\(\aleph_0\text{.}\)</span></p>
+<aside class="aside aside-like" id="aside-20"><p id="p-1339"><span class="process-math">\(\aleph{}\)</span> is the first letter of the Hebrew alphabet and is pronounced "aleph." <span class="process-math">\(\aleph_0\)</span> is pronounced "aleph null."</p></aside><p id="p-1340">We have already given the following definition informally. We include it formally here for later reference.</p>
+<article class="definition definition-like" id="def_EqualCardinality"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.1.5</span><span class="period">.</span>
+</h3>
+<p id="p-1341"> If two sets can be put into one-to-one correspondence then they are said to have the <em class="alert">same cardinality</em>.</p></article><p id="p-1342">With these two definitions in place we can see that <a href="" class="xref" data-knowl="./knowl/thm_NoSeriesContainsAllReals.html" title="Theorem 12.1.3">Theorem 12.1.3</a> is nothing less than the statement that the real numbers are not countably infinite. Since it is certainly not finite, then we say that the set of real numbers is uncountable and therefore “bigger” than the natural numbers!</p>
+<p id="p-1343">To see this let us suppose first that each real number appears in the sequence <span class="process-math">\((s_n)_{n=1}^\infty\)</span> exactly once. In that case the indexing of our sequence is really just a one-to-one correspondence between the elements of the sequence and <span class="process-math">\(\NN:\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-53">
+\begin{align*}
+1\amp \leftrightarrow s_1\\
+2\amp \leftrightarrow s_2\\
+3\amp \leftrightarrow s_3\\
+4\amp \leftrightarrow s_4\\
+\amp \ \ \ \vdots
+\end{align*}
+</div>
+<p id="p-1344">If some real numbers are repeated in our sequence then all of the real numbers are a subset of our sequence and will therefore also be countable (see <a href="" class="xref" data-knowl="./knowl/prob_countable_sets_unions_of.html" title="Problem 12.1.7">Problem 12.1.7</a>, part a).</p>
+<p id="p-1345">In either case, every sequence is countable. But our theorem says that <em class="emphasis">no</em> sequence in <span class="process-math">\(\RR\)</span> includes all of <span class="process-math">\(\RR\text{.}\)</span> Therefore <span class="process-math">\(\RR\)</span> is uncountable.</p>
+<p id="p-1346">Most of the sets you have encountered so far in your life have been countable.</p>
+<article class="problem example-like" id="problem-200"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-200"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.1.6</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-200"><article class="problem example-like"><div class="introduction" id="introduction-29"><p id="p-1347">Show that each of the following sets is countable.</p></div>
+<article class="task exercise-like" id="task-138"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-1348"><span class="process-math">\(\left\{2,3,4,5,\ldots\right\}=\left\{n\right\}_{n=2}^\infty\)</span></p></article><article class="task exercise-like" id="task-139"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-1349"><span class="process-math">\(\left\{0,1,2,3,\ldots\right\}=\left\{n\right\}_{n=0}^\infty\)</span></p></article><article class="task exercise-like" id="task-140"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-1350"><span class="process-math">\(\left\{1,4,9,16,\ldots,n^2,\ldots\right\}=\left\{n^2\right\}_{n=1}^\infty\)</span></p></article><article class="task exercise-like" id="task-141"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<p id="p-1351">The set of prime numbers</p></article><article class="task exercise-like" id="task-142"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<p id="p-1352"><span class="process-math">\(\ZZ\)</span></p></article></article></div>
+<p id="p-1353">In fact, if we start with a countable set it is rather difficult to use it to build anything but another countable set.</p>
+<article class="problem example-like" id="prob_countable_sets_unions_of"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_countable_sets_unions_of"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.1.7</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_countable_sets_unions_of"><article class="problem example-like"><div class="introduction" id="introduction-30"><p id="p-1354">Let <span class="process-math">\(\left\{A_i\right\}\)</span> be a collection of countable sets. Show that each of the following sets is also countable:</p></div>
+<article class="task exercise-like" id="task-143"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-1355">Any subset of <span class="process-math">\(A_1\text{.}\)</span></p></article><article class="task exercise-like" id="task-144"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-1356"><span class="process-math">\(A_1\cup A_2\)</span></p></article><article class="task exercise-like" id="task-145"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-1357"><span class="process-math">\(A_1\cup A_2 \cup A_3\)</span></p></article><article class="task exercise-like" id="task-146"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<p id="p-1358"><span class="process-math">\(\displaystyle\bigcup_{i=1}^nA_i\)</span></p></article><article class="task exercise-like" id="task-147"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<p id="p-1359"><span class="process-math">\(\displaystyle\bigcup_{i=1}^\infty A_i\)</span></p></article></article></div>
+<p id="p-1360">It seems that no matter what we do the only example of an uncountably infinite set is <span class="process-math">\(\RR\text{.}\)</span>  But wait!  Remember the rational numbers?  They were similar to the real numbers in many ways.  Perhaps they are uncountably infinite too?</p>
+<p id="p-1361">Alas, no. The rational numbers turn out to be countable too.</p>
+<article class="theorem theorem-like" id="thm_QisCountable"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.1.8</span><span class="period">.</span>
+</h3>
+<p id="p-1362"> Show that <span class="process-math">\(\QQ\)</span> is countable.</p></article><article class="hiddenproof" id="proof-33"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-33"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof"><p id="p-1363">First explain how you know that all of the non-negative rational numbers are in this list:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{0}{1},\frac{0}{2},\frac{1}{1},\frac{0}{3}, \frac{1}{2},\frac{2}{1},\frac{0}{4},\frac{1}{3}, \frac{2}{2}, \frac{3}{1}, \cdots\text{.}
+\end{equation*}
+</div>
+<p id="p-1364">However there is clearly some duplication. To handle this, apply part (a) of <a href="" class="xref" data-knowl="./knowl/prob_countable_sets_unions_of.html" title="Problem 12.1.7">Problem 12.1.7</a>. Does this complete the proof or is there more to do?</p></article></div>
+<article class="problem example-like" id="problem-202"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-202"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.1.9</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-202"><article class="problem example-like"><p id="p-1365"> Prove <a href="" class="xref" data-knowl="./knowl/thm_QisCountable.html" title="Theorem 12.1.8">Theorem 12.1.8</a>.</p></article></div>
+<p id="p-1366">The following corollary says that the cardinality of the real numbers is <em class="emphasis">much</em> larger than the cardinality of the rational numbers, despite the fact that both are infinite.</p>
+<p id="p-1367">That is, as a subset of the reals, the rationals can be contained in a sequence of intervals, the sum of whose lengths can be arbitrarily small. In a sense this says that a countably infinite set is so small (on the transfinite scale) that it is “almost” finite.</p>
+<p id="p-1368"> Usually we express this idea with the statement, “<span class="process-math">\(\QQ\)</span> is a set of <em class="emphasis">measure zero</em> in <span class="process-math">\(\RR\)</span>”. The term “measure” has a precise meaning which we will not pursue. The following corollary contains the essence of the idea.</p>
+<article class="corollary theorem-like" id="cor_Q-MeasureZero"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">12.1.10</span><span class="period">.</span>
+</h3>
+<p id="p-1369">Let <span class="process-math">\(\eps&gt;0\)</span> be given. There is a collection of intervals in <span class="process-math">\(\RR\text{,}\)</span> <span class="process-math">\(I_n=[a_n,b_n]\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\QQ \subset \bigcup_{n=1}^\infty I_n
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty(b_n-a_n)\lt \eps\text{.}
+\end{equation*}
+</div></article><article class="problem example-like" id="problem-203"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-203"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.1.11</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-203"><article class="problem example-like"><p id="p-1370"> Prove <a href="" class="xref" data-knowl="./knowl/cor_Q-MeasureZero.html" title="Corollary 12.1.10">Corollary 12.1.10</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-52" id="hint-52"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-52"><div class="hint solution-like">
+<p id="p-1371">If we had only finitely many rationals to deal with this would be easy. Let <span class="process-math">\(\left\{r_1, r_2, \ldots,
+r_k\right\}\)</span> be these rational numbers and take <span class="process-math">\(a_n=r_n-\frac{\eps}{2(k+1)}\)</span> and <span class="process-math">\(b_n=r_n+\frac{\eps}{2(k+1)}\text{.}\)</span> Then for all <span class="process-math">\(n=1,\ldots, k\)</span> <span class="process-math">\(r_n\in[a_n,b_n]\)</span> and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^kb_n-a_n = \sum_{n=1}^k \frac{\eps}{k+1}=\frac{k\eps}{k+1}\lt\eps\text{.}
+\end{equation*}
+</div>
+<p id="p-1372">The difficulty is, how do we move from the finite to the infinite case?]</p>
+</div></div>
+</div></article></div>
+<p id="p-1373">Notice how this idea hearkens back to the discussion of Leibniz's approach to the Product Rule (<a href="" class="xref" data-knowl="./knowl/eq_LeibnizProductRule.html" title="Equation 4.1.1">equation (4.1.1)</a>). He simply tossed aside the expression <span class="process-math">\(\dx{ x}\dx{ y}\)</span> because it was <em class="emphasis">infinitely small</em> compared to either <span class="process-math">\(x\dx{ y}\)</span> or <span class="process-math">\(y\dx{ x}\text{.}\)</span> Although this isn't quite the same thing we are discussing here it is similar and it is clear that Leibniz's insight and intuition were extremely acute. They were moving him in the right direction, at least.</p>
+<p id="p-1374">All of our efforts to build an uncountable set from a countable one have come to nothing. In fact many sets that at first “feel” like they should be uncountable are in fact countable. This makes the uncountability of <span class="process-math">\(\RR\)</span> all the more remarkable.</p>
+<aside class="aside aside-like" id="aside-21"><p id="p-1375">The failure is in the methods we've used so far.  It is possible to build an uncountable set using just two symbols if we're clever enough, but this would take us too far away from our main topic.</p></aside><p id="p-1376">However if we <em class="emphasis">start</em> with an uncountable set it is relatively easy to build others from it.</p>
+<article class="problem example-like" id="problem-204"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-204"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.1.12</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-204"><article class="problem example-like"><article class="task exercise-like" id="task-148"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-1377">Let <span class="process-math">\((a,b)\)</span> and <span class="process-math">\((c,d)\)</span> be two open intervals of real numbers.  Show that these two sets have the same cardinality by constructing a one-to-one onto function between them.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-53" id="hint-53"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-53"><div class="hint solution-like"><p id="p-1378">A linear function should do the trick.</p></div></div>
+</div></article><article class="task exercise-like" id="task-149"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-1379">Show that any open interval of real numbers has the same cardinality as <span class="process-math">\(\RR\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-54" id="hint-54"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-54"><div class="hint solution-like"><p id="p-1380">Consider the interval <span class="process-math">\((-\pi/2,\pi/2)\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-150"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-1381">Show that <span class="process-math">\((0,1]\)</span> and <span class="process-math">\((0,1)\)</span> have the same cardinality.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-55" id="hint-55"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-55"><div class="hint solution-like"><p id="p-1382">Note that <span class="process-math">\(\left\{1,1/2,1/3,\ldots\right\}\)</span> and <span class="process-math">\(\left\{1/2, 1/3, \ldots\right\}\)</span> have the same cardinality.</p></div></div>
+</div></article><article class="task exercise-like" id="task-151"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<p id="p-1383">Show that <span class="process-math">\([0,1]\)</span> and <span class="process-math">\((0,1)\)</span> have the same cardinality.</p></article></article></div></section></div></main>
+</div>
+</body>
+</html>

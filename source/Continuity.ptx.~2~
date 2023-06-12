@@ -1,0 +1,2144 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chpt_Continuity">
+  <title>Continuity: What It Isn't and What It Is</title>
+
+
+<section>
+  <title>An Analytic Definition of Continuity</title>
+  <p>
+    Before the invention of calculus,
+    the notion of continuity was treated intuitively if it was treated at all.
+    At first pass,
+    it seems a very simple idea based solidly in our experience of the real world.
+    Standing on the bank we see a river flow past us continuously,
+    not by tiny jerks.
+    Even when the flow might seem at first to be discontinuous,
+    as when it drops precipitously over a cliff,
+    a closer examination shows that it really is not.
+    As the water approaches the cliff it speeds up.
+    When it finally goes over it accelerates very quickly but no matter how fast it goes it moves continuously,
+    moving from here to there by occupying every point in between.
+    This is continuous motion.
+    It never disappears over there and instantaneously reappears over here.
+    That would be discontinuous motion.
+  </p>
+
+  <p>
+    Similarly, a thrown stone flies continuously
+    (and smoothly)
+    from release point to landing point,
+    passing through each point in its path.
+  </p>
+
+  <p>
+    But wait.
+  </p>
+
+  <p>
+    If the stone passes through discrete points it must be doing so by teeny tiny little jerks,
+    mustn't it?
+    Otherwise how would it get from one point to the next?
+    Is it possible that motion in the real world,
+    much like motion in a movie,
+    is really composed of tiny jerks from one point to the next but that these tiny jerks are simply too small and too fast for our senses to detect?
+  </p>
+
+  <p>
+    If so, then the real world is more like the rational number line (<m>\QQ</m>) from <xref ref="cha_numb-real-rati">Chapter</xref> than the real number line
+    (<m>\RR</m>).
+    In that case,
+    motion really consists of jumping discretely over the <q>missing</q> points
+    (like <m>\sqrt{2}</m>)
+    as we move from here to there.
+    That may seem like a bizarre idea to you <mdash /> it does to us as well <mdash /> but the idea of continuous motion is equally bizarre.
+    It's just a little harder to see why.
+  </p>
+
+  <p>
+    The real world will be what it is regardless of what we believe it to be,
+    but fortunately in mathematics we are <em>not</em>
+    constrained to live in it.
+    So we won't even try.
+    We will simply postulate that no such jerkiness exists;
+    that all motion is continuous.
+  </p>
+
+  <p>
+    However we <em>are</em> constrained to live with the logical consequences of our assumptions,
+    once they are made.
+    These will lead us into some very deep waters indeed.
+  </p>
+
+  <p>
+    The intuitive treatment of continuity was maintained throughout the 1700's as it was not generally perceived that a truly rigorous definition was necessary.
+    Consider the following definition given by Euler in 1748.
+</p>
+  <sidebyside widths="85%" margins="auto" valign="middle">
+    <p>
+      A continuous curve is one such that its nature can be expressed
+      by a single function of <m>x.</m> If a curve is of such a nature that for
+      its various parts . . . different functions of <m>x</m> are required for its
+      expression, . . . , then we call such a curve discontinuous.
+    </p>
+  </sidebyside>
+  <p>
+    However, the complexities associated with Fourier series and the types of functions that they represented caused mathematicians in the early 1800's to rethink their notions of continuity.
+    As we saw in <xref ref="Interregnum">Part</xref>,
+    the graph of the function defined by the Fourier series
+    <me>
+      \frac{4}{\pi}\sum_{k=0}^\infty\frac{\left(-1\right)^k}{\left(2k+1\right)} \cos \left(\left(2k+1\right)\pi x\right)
+    </me>
+    looked like this:
+  </p>
+
+  <p>
+    <image width="75%" source="images/Ch5fig1.png" />
+  </p>
+
+  <p>
+    This function went against Euler's notion of what a continuous function should be.
+    Here, an infinite sum of continuous cosine curves provided a single expression which resulted in a
+    <q>discontinuous</q> curve.
+    But as we've seen this didn't happen with power series and an intuitive notion of continuity is inadequate to explain the difference.
+    Even more perplexing is the following situation.
+    Intuitively,
+    one would think that a continuous curve should have a tangent line at at least one point.
+    It may have a number of jagged points to it,
+    but it should be <q>smooth</q> somewhere.
+    An example of this would be <m>f(x)=x^{2/3}</m>.
+    Its graph is given by 
+    <image width="75%" source="images/Ch5fig2.png" />
+  </p>
+
+  <p>
+    This function is not differentiable at the origin but it is differentiable everywhere else.
+    One could certainly come up with examples of functions which fail to be differentiable at any number of points but,
+    intuitively, it would be reasonable
+  </p>
+
+  <figure>
+    <caption>Karl Weierstrass<idx><h>Weierstrass, Karl</h><h>portrait of</h></idx></caption>
+    <image width="35%" source="images/Weierstrass.png" />
+  </figure>
+  <p>
+    to expect that a continuous function should be differentiable <em>somewhere</em>.
+    We might conjecture the following:
+  </p>
+
+    <conjecture xml:id="conj_ContImplyDiff">
+    <statement>
+    <p>
+       If <m>f</m> is continuous on an interval <m>I</m> then there is some <m>a\in I</m>, such that <m>f^\prime(a)</m> exists.
+     </p>
+     </statement>
+     </conjecture>   
+
+  <p>
+    Surprisingly, in 1872, Karl Weierstrass 
+        <idx><h>Weierstrass, Karl</h></idx>
+    showed that the above conjecture is <alert>FALSE</alert>. He did this by displaying the counterexample:
+    <me>
+      f(x)=\sum_{n=0}^\infty b^n\cos(a^n\pi x)
+    </me>.
+  </p>
+
+  <p>
+    Weierstrass showed that if <m>a</m> is an odd integer,
+    <m>b\in(0,1)</m>,
+    and <m>ab>1+\frac{3}{2}\pi</m>,
+    then <m>f</m> is continuous everywhere,
+    but is nowhere differentiable.
+    Such a function is somewhat <q>fractal</q> in nature,
+    and it is clear that a definition of continuity relying on intuition is inadequate to study it.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Weierstrass, Karl</h><h>continuous, everywhere non-differentiable function</h></idx>
+            <idx><h>continuity</h><h>Weierstrass's continuous, but non-differentiable function</h></idx>
+
+        <ol label="a">
+          <li>
+            <p>
+              Given <m>f(x)=\sum_{n=0}^\infty\left(\frac{1}{2}\right)^n\cos\left(a^n\pi x\right)</m>,
+              what is the smallest value of <m>a</m> for which <m>f</m> satisfies Weierstrass' criterion to be continuous and nowhere differentiable.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Let <m>f(x,N)=\sum_{n=0}^N\left(\frac{1}{2}\right)^n\cos\left(13^n\pi x\right)</m> and use a computer algebra system to plot <m>f(x,N)</m> for
+              <m>N=0,1,2,3,4,10</m> and <m>x\in[0,1]</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Plot <m>f(x,10)</m> for <m>x\in[\,0,c]</m>,
+              where <m>c=0.1,0.01,0.001,0.0001,0.00001</m>.
+              Based upon what you see in parts b and c, why would we describe the function to be somewhat
+              <q>fractal</q> in nature?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Just as it was important to define convergence with a rigorous definition without appealing to intuition or geometric representations,
+    it is imperative that we define continuity in a rigorous fashion not relying on graphs.
+  </p>
+
+  <p>
+    The first appearance of a definition of continuity which did not rely on geometry or intuition was given in 1817 by Bernhard Bolzano
+        <idx><h>Bolzano, Bernhard</h></idx>
+    in a paper published in the Proceedings of the Prague Scientific Society entitled
+    <foreign>Rein
+    analytischer Beweis des Lehrsatzes dass zwieschen je zwey Werthen,
+    die ein entgegengesetztes Resultat gewaehren, wenigstens eine reele
+    Wurzel der Gleichung liege</foreign> (Purely Analytic Proof of the Theorem
+    that Between Any Two Values that Yield Results of Opposite Sign There
+    Will be at Least One Real Root of the Equation).
+  </p>
+
+
+  <figure>
+    <caption>Bernhard Bolzano<idx><h>Bolzano, Bernhard</h><h>portrait of</h></idx></caption>
+    <image width="35%" source="images/Bolzano.png" />
+  </figure>
+
+  <p>
+    From the title it should be clear that in this paper Bolzano is proving the Intermediate Value Theorem.
+    To do this he needs a completely analytic definition of continuity.
+    The substance of Bolzano's idea is that if <m>f</m> is continuous at a point <m>a</m> then <m>f(x)</m> should be <q>close to</q>
+    <m>f(a)</m> whenever <m>x</m> is
+    <q>close enough to</q> <m>a</m>.
+    More precisely, Bolzano said that <m>f</m> is continuous at <m>a</m> provided
+    <m>\abs{f(x)-f(a)}</m> can be made smaller than any given quantity provided we make <m>\abs{x-a}</m> sufficiently small.
+  </p>
+
+  <p>
+    The language Bolzano uses is very similar to the language Leibniz <idx><h>Leibniz, Gottfried Wilhelm</h></idx> used when he postulated the existence of infinitesimally small numbers.
+    Leibniz said that infinitesimals are
+    <q>smaller than any given quantity but not zero.</q>
+    Bolzano says that <q><m>\abs{f(x)-f(a)}</m> can be made smaller than any given quantity provided we make
+    <m>\abs{x-a}</m> sufficiently small.</q>
+    But Bolzano stops short of saying that <m>\abs{x-a}</m> is
+    <em>infinitesimally</em> small.
+    Given <m>a</m>, we can choose <m>x</m> so that
+    <m>\abs{x-a}</m> is smaller than any real number we could name,
+    say <m>b</m>,
+    provided we name <m>b</m> <em>first</em>,
+    but for any given choice of <m>x</m>,
+    <m>\abs{x-a}</m>, and <m>b</m> are both still real numbers.
+    Possibly very small real numbers to be sure,
+    but real numbers nonetheless.
+    Infinitesimals have no place in Bolzano's construction.
+  </p>
+
+  <p>
+    Bolzano's
+        <idx><h>Bolzano, Bernhard</h></idx>
+    paper was not well known when Cauchy
+        <idx><h>Cauchy, Augustin</h></idx>
+    proposed a similar definition in his
+    <em>Cours d'analyse</em><nbsp /><xref ref="bradley09__cauch_cours" /> of 1821 so it is usually Cauchy who is credited with this definition,
+    but even Cauchy's definition is not quite tight enough for modern standards.
+    It was Karl Weierstrass in 1859 who finally gave the modern definition.
+  </p>
+
+  <definition xml:id="def_continuity">
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>definition of</h></idx>
+            <idx><h>continuity</h></idx>
+        We say that a function {<m>\boldsymbol{f}</m> is continuous at
+        <m>\boldsymbol{a}</m>} provided that for any <m>\eps>0</m>,
+        there exists a <m>\delta>0</m> such that if
+        <m>\abs{x-a}\lt \delta</m> then <m>|f(x)-f(a)|\lt \eps</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Notice that the definition of continuity of a function is done point-by-point.
+    A function can certainly be continuous at some points while discontinuous at others.
+    When we say that <m>f</m> is continuous on an interval,
+    then we mean that it is continuous at every point of that interval and,
+    in theory,
+    we would need to use the above definition to check continuity at each individual point.
+  </p>
+
+  <p>
+    Our definition fits the bill in that it does not rely on either intuition or graphs,
+    but it is this very non-intuitiveness that makes it hard to grasp.
+    It usually takes some time to become comfortable with this definition,
+    let alone use it to prove theorems such as the Extreme Value Theorem 
+<idx><h>Extreme Value Theorem (EVT)</h><h>continuity and</h></idx> 
+<idx><h>continuity</h><h>Extreme Value Theorem (EVT) and</h></idx> 
+and 
+<idx><h>Intermediate Value Theorem (IVT)</h><h>continuity and</h></idx> 
+<idx><h>continuity</h><h>Intermediate Value Theorem and</h></idx> Intermediate Value Theorem.
+    So let's go slowly to develop a feel for it.
+  </p>
+
+  <p>
+    This definition spells out a completely black and white procedure:
+    you give me a positive number <m>\eps</m>,
+    and I must be able to find a positive number <m>\delta</m> which satisfies a certain property.
+    If I can always do that then the function is continuous at the point of interest.
+  </p>
+
+  <p> This definition also makes very precise what we mean when we say
+    that <m>f(x)</m> should be <q>close to</q> <m>f(a)</m> whenever
+    <m>x</m> is <q>close enough to</q> <m>a</m>.  For example,
+    intuitively we know that <m>f(x)=x^2</m> should be continuous at
+    <m>x=2</m>.  This means that we should be able to get <m>x^2</m>
+    to within, say, <m>\eps=.1</m> of <m>4</m> provided we make
+    <m>x</m> close enough to <m>2</m>.  Specifically, we want
+    <m>3.9\lt x^2\lt 4.1</m>.  This happens exactly when
+    <m>\sqrt{3.9}\lt x\lt \sqrt{4.1}</m>.  Using the fact that
+    <m>\sqrt{3.9}\lt 1.98</m> and <m>2.02\lt \sqrt{4.1}</m>, then we
+    can see that if we get <m>x</m> to within <m>\delta=.02</m> of
+    <m>2</m>, then <m>\sqrt{3.9}\lt 1.98\lt x\lt 2.02\lt
+    \sqrt{4.1}</m> and so <m>x^2</m> will be within .<m>1</m> of
+    <m>\,4</m>.  This is very straightforward.  What makes this
+    situation more difficult is that we must be able to do this for
+    any <m>\eps>0</m>.  
+  </p>
+
+  <p>
+    Notice the similarity between this definition and the definition of convergence of a sequence.
+    Both definitions have the challenge of an <m>\eps>0</m>.
+    In the definition of <m>\lim_{n\rightarrow\infty}s_n=s</m>,
+    we had to get <m>s_n</m> to within <m>\eps</m> of <m>s</m> by making <m>n</m> large enough.
+    For sequences,
+    the challenge lies in making <m>\abs{s_n-s}</m> sufficiently small.
+    More precisely,
+    given <m>\eps>0</m> we need to decide how large <m>n</m> should be to guarantee that <m>\abs{s_n-s}\lt \eps</m>.
+  </p>
+
+  <p>
+    In our definition of continuity,
+    we still need to make something small (namely <m>\abs{f(x)-f(a)}\lt \eps</m>),
+    only this time,
+    we need to determine how close <m>x</m> must be to <m>a</m> to ensure this will happen instead of determining how large <m>n</m> must be.
+  </p>
+
+  <p>
+    What makes <m>f</m> continuous at <m>a</m> is the arbitrary nature of <m>\eps</m>
+    (as long as it is positive).
+    As <m>\eps</m> becomes smaller,
+    this forces <m>f(x)</m> to be closer to <m>f(a)</m>.
+    That we can always find a positive distance <m>\delta</m> to work is what we mean when we say that we can make <m>f(x)</m> as close to <m>f(a)</m> as we wish,
+    provided we get <m>x</m> close enough to <m>a</m>.
+    The sequence of pictures below illustrates that the phrase
+    <q>for any <m>\eps>0</m>,
+    there exists a <m>\delta>0</m> such that if
+    <m>|\,x-a|\lt \delta</m> then <m>|f(x)-f(a)|\lt \eps</m></q>
+    can be replaced by the equivalent formulation
+    <q>for any <m>\eps>0</m>,
+    there exists a <m>\delta>0</m> such that if
+    <m>a-\delta\lt x\lt a+\delta</m> then <m>f(a)-\eps\lt f(x)\lt f(a)+\eps</m>.</q>
+    This could also be replaced by the phrase
+    <q>for any <m>\eps>0</m>,
+    there exists a <m>\delta>0</m> such that if
+    <m>x\in(a-\delta,a+\delta)</m> then <m>f(x)\in(f(a)-\eps,f(a)+\eps)</m>.</q>
+    All of these equivalent formulations convey the idea that we can get <m>f(x)</m> to within <m>\eps</m> of <m>f(a)</m>,
+    provided we make <m>x</m> within <m>\delta</m> of <m>a</m>,
+    and we will use whichever formulation suits our needs in a particular application.
+  </p>
+
+  <p>
+    <sbsgroup widths="45% 45%" margins="auto" valign="middle">
+      <sidebyside>
+        <image width="37%" source="images/Ch5fig3a.png" />
+        <image width="37%" source="images/Ch5fig3b.png" />
+      </sidebyside>
+      <sidebyside>
+        <image width="37%" source="images/Ch5fig3c.png" />
+        <image width="37%" source="images/Ch5fig3d.png" />
+      </sidebyside>
+    </sbsgroup>
+  </p>
+
+  <p>
+    The precision of the definition is what allows us to examine continuity without relying on pictures or vague notions such as <q>nearness</q> or
+    <q>getting closer to.</q>
+    We will now consider some examples to illustrate this precision.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Use the definition of continuity to show that <m>f(x)=x</m> is continuous at any point <m>a</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    If we were to draw the graph of this line,
+    then you would likely say that this is obvious.
+    The point behind the definition is that we can back up your intuition in a rigorous manner.
+  </p>
+
+  <proof>
+    <p>
+      Let <m>\eps>0</m>.
+      Let <m>\delta=\eps</m>.
+      If <m>|\,x-a|\lt \delta</m>, then
+      <me>
+        |f(x)-f(a)|=|\,x-a|\lt \eps
+      </me>
+    </p>
+
+    <p>
+      Thus by the definition, <m>f</m> is continuous at <m>a</m>.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h><m>f(x) = mx +b</m> is continuous everywhere</h></idx>
+        Use the definition of continuity to show that if <m>m</m> and <m>b</m> are fixed (but unspecified) real numbers then the function
+        <me>
+          f(x) = mx+b
+        </me>
+        is continuous at every real number <m>a</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <example>
+    <statement>
+      <p>
+        Use the definition of continuity to show that
+        <m>f(x)=x^2</m> is continuous at <m>a=0</m>.
+      </p>
+    </statement>
+  </example>
+
+  <proof>
+    <p>
+      Let <m>\eps>0</m>.
+      Let <m>\delta=\sqrt{\eps}</m>.
+      If <m>|\,x-0|\lt \delta</m>, then <m>|\,x|\lt \sqrt{\eps}</m>.
+      Thus
+      <me>
+        |\,x^2-0^2|=|\,x|^2\lt \left(\sqrt{\eps}\right)^2=\eps
+      </me>.
+    </p>
+
+    <p>
+      Thus by the definition, <m>f</m> is continuous at <m>0</m>.
+    </p>
+  </proof>
+
+  <p>
+    Notice that in these proofs, the challenge of an <m>\eps>0</m> was first given.
+    This is because the choice of <m>\delta</m> must depend upon <m>\eps</m>.
+    Also notice that there was no explanation for our choice of <m>\delta</m>.
+    We just supplied it and showed that it worked.
+    As long as <m>\delta>0</m>, then this is all that is required.
+    In point of fact,
+    the <m>\delta</m> we chose in each example was not the only choice that worked;
+    any smaller <m>\delta</m> would work as well.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>smaller <m>\delta</m>, bigger <m>\eps</m></h></idx>
+            <idx><h>continuity</h><h>smaller <m>\delta</m> works in definition</h></idx>
+            <idx><h>continuity</h><h>larger <m>\eps</m> works in definition</h></idx>
+            <idx><h>prove that a smaller <m>\delta</m> and a larger <m>\eps</m> works in continuity proofs</h></idx>
+
+        <ol label="a">
+          <li>
+            <p>
+              Given a particular <m>\eps>0</m> in the definition of continuity,
+              show that if a particular <m>\delta_0>0</m> satisfies the definition,
+              then any <m>\delta</m> with
+              <m>0\lt \delta\lt \delta_0</m> will also work for this <m>\eps</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Show that if a <m>\delta</m> can be found to satisfy the conditions of the definition of continuity for a particular <m>\eps_0>0</m>,
+              then this <m>\delta</m> will also work for any <m>\,\eps</m> with <m>0\lt \eps_0\lt \eps</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    It wasn't explicitly stated in the definition but when we say
+    <q>if <m>|\,x-a|\lt \delta</m> then <m>|f(x)-f(a)|\lt \eps</m>,</q>
+    we should be restricting ourselves to <m>x</m> values which are in the domain of the function <m>f</m>,
+    otherwise <m>f(x)</m> doesn't make sense.
+    We didn't put it in the definition because that definition was complicated enough without this technicality.
+    Also in the above examples,
+    the functions were defined everywhere so this was a moot point.
+    We will continue with the convention that when we say
+    <q>if <m>|\,x-a|\lt \delta</m> then <m>|f(x)-f(a)|\lt \eps</m>,</q>
+    we will be restricting ourselves to <m>x</m> values which are in the domain of the function <m>f</m>.
+    This will allow us to examine continuity of functions not defined for all <m>x</m> without restating this restriction each time.
+  </p>
+
+  <problem xml:id="prob_extended_sqrt_is_continuous_at_zero">
+    <statement>
+      <p>
+            <idx><h>continuity</h><h><m>\pm\sqrt{x}</m> is continuous at zero</h></idx>
+        Use the definition of continuity to show that
+        <me>
+          f(x)= \begin{cases}\sqrt{x} \amp  \text{ if }  x\ge0\\ -\sqrt{-x} \amp  \text{ if }  x\lt 0 \end{cases}
+        </me>
+        is continuous at <m>a=0</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h><m>\sqrt{x}</m></h><h>is continuous at zero</h></idx>
+        Use the definition of continuity to show that <m>f(x)= \sqrt{x}</m> is continuous at <m>a=0</m>.
+        How is this problem different from <xref ref="prob_extended_sqrt_is_continuous_at_zero">problem</xref>?
+        How is it similar?
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Sometimes the <m>\delta</m> that will work for a particular <m>\eps</m> is fairly obvious to see,
+    especially after you've gained some experience.
+    This is the case in the above examples
+    (at least after looking back at the proofs).
+    However, the task of finding a <m>\delta</m> to work is usually not so obvious and requires some scrapwork.
+    This scrapwork is vital toward producing a <m>\delta</m>,
+    but again is not part of the polished proof.
+    This can be seen in the following example.
+  </p>
+
+  <example xml:id="example_SqrtContinuous">
+    <statement>
+      <p>
+        Use the definition of continuity to prove that
+        <m>f(x)=\sqrt{x}</m> is continuous at <m>a=1</m>.
+      </p>
+    </statement>
+  </example>
+
+    <p>
+      <term>SCRAPWORK</term>
+    </p>
+    <p>
+      As before, the scrapwork for these problems often consists of simply working backwards.
+      Specifically, given an <m>\eps>0</m>,
+      we need to find a <m>\delta>0</m> so that <m>|\sqrt{x}-\sqrt{1}|\lt \eps</m>,
+      whenever <m>|\,x-1|\lt \delta</m>.
+      We work backwards from what we want,
+      keeping an eye on the fact that we can control the size of <m>\abs{x-1}</m>.
+      <me>
+        |\sqrt{x}-\sqrt{1}|=|\frac{\left(\sqrt{x}-1\right)\left(\sqrt{x}+1\right)}{\sqrt{x}+1}|=\frac{|\,x-1|}{\sqrt{x}+1}\lt |\,x-1|
+      </me>.
+    </p>
+
+    <p>
+      This seems to suggest that we should make <m>\delta=\eps</m>.
+      We're now ready for the formal proof.
+    </p>
+
+
+  <proof>
+    <p>
+      Let <m>\eps>0</m>.
+      Let <m>\delta=\eps</m>.
+      If <m>|\,x-1|\lt \delta</m>, then <m>|\,x-1|\lt \eps</m>, and so
+      <me>
+        |\sqrt{x}-\sqrt{1}|=|\frac{\left(\sqrt{x}-1\right)\left(\sqrt{x}+1\right)}{ \sqrt{x}+1}|=\frac{|x-1|}{\sqrt{x}+1}\lt |\,x-1|\lt \eps
+      </me>.
+    </p>
+
+    <p>
+      Thus by definition, <m>f(x)=\sqrt{x}</m> is continuous at <m>1</m>.
+    </p>
+  </proof>
+
+  <figure>
+    <caption>Paul Halmos<idx><h>Halmos, Paul</h><h>portrait of</h></idx></caption>
+    <image width="35%" source="images/Halmos.png" />
+  </figure>
+
+  <p>
+    Bear in mind that someone reading the formal proof will not have seen the scrapwork,
+    so the choice of <m>\delta</m> might seem rather mysterious.
+    However, you are in no way bound to motivate this choice of <m>\delta</m> and usually you should not,
+    unless it is necessary for the formal proof.
+    All you have to do is find this <m>\delta</m> and show that it works.
+    Furthermore, to a trained reader,
+    your ideas will come through when you demonstrate that your choice of <m>\delta</m> works.
+  </p>
+
+  <p>
+    Now reverse this last statement.
+    <em>As</em> a trained reader,
+    when you read the proof of a theorem it is <em>your</em>
+    responsibility to find the scrapwork,
+    to see how the proof works and understand it fully.
+    As the renowned mathematical expositor Paul Halmos
+        <idx><h>Halmos, Paul</h></idx>
+    (1916-2006) said,
+   <q> Don't just read it; fight it! Ask your own questions, look for
+    your own examples, discover your own proofs. Is the hypothesis
+    necessary? Is the converse true? What happens in the classical
+    special case? What about the degenerate cases? Where does the
+    proof use the hypothesis?
+  </q>
+  </p>
+
+  <p>
+    This is the way to learn mathematics.
+    It is really the only way.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h><m>\sqrt{x}</m></h><h>is continuous at every positive real number</h></idx>
+        Use the definition of continuity to show that <m>f(x)=\sqrt{x}</m> is continuous at any positive real number <m>a</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h><m>\sin x</m></h><h>is continuous for <m>0\leq x\lt \frac{\pi}{2}</m></h></idx>
+        <ol label="a">
+          <li>
+            <p>
+              Use a unit circle to show that for <m>0\leq\theta\lt \frac{\pi}{2}</m>,
+              <m>\sin \theta\leq\theta</m> and <m>1-\cos \theta\leq\theta</m> and conclude
+              <m>\abs{\sin \theta}\leq\abs{\theta}</m> and <m>\abs{1-\cos \theta}\leq\abs{\theta}</m> for
+              <m>-\frac{\pi}{2}\lt \theta</m> <m>\lt \frac{\pi}{2}</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use the definition of continuity to prove that
+              <m>f(x)=\sin x</m> is continuous at any point <m>a</m>.  
+              <hint>
+                <m>\sin x=\sin\left(x-a+a\right)</m>.
+              </hint>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h><m>e^x</m> is continuous everywhere</h></idx>
+            <idx><h>continuous functions</h><h><m>e^x</m> is continuous everywhere</h></idx>
+
+        <ol label="a">
+          <li>
+            <p>
+              Use the definition of continuity to show that
+              <m>f(x)=e^x</m> is continuous at <m>a=0</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Show that <m>f(x)=e^x</m> is continuous at any point <m>a</m>.  
+              <hint>
+                Rewrite <m>e^x-e^a</m> as
+              <m>e^{a+(x-a)}-e^a</m> and use what you proved in part a.
+              </hint>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    In the above problems,
+    we used the definition of continuity to verify our intuition about the continuity of familiar functions.
+    The advantage of this analytic definition is that it can be applied when the function is not so intuitive.
+    Consider, for example, the function given at the end of the last chapter.
+    <me>
+      f(x)= \begin{cases}x\,\sin\left(\frac{1}{x}\right),\amp \text{ if } x\neq 0\\ 0\text{,} \amp \text{ if } x=0 \end{cases} 
+    </me>.
+  </p>
+
+  <p>
+    Near zero, the graph of <m>f(x)</m> looks like this:
+    <image width="75%" source="images/Ch5fig4.png" />
+  </p>
+
+  <p>
+    As we mentioned in the previous chapter,
+    since sin<m>\left(\frac{1}{x}\right)</m> oscillates infinitely often as <m>x</m> nears zero this graph must be viewed with a certain amount of suspicion.
+    However our completely analytic definition of continuity shows that this function is, in fact,
+    continuous at 0.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Topologist's sine function</h><h>is continuous at zero</h></idx>
+        Use the definition of continuity to show that
+        <me>
+          f(x)= \begin{cases}x\,\sin\left(\frac{1}{x}\right),\amp \text{ if } x\neq 0\\ 0\text{,} \amp \text{ if } x=0 \end{cases}
+        </me>
+        is continuous at <m>0</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Even more perplexing is the function defined by
+    <me>
+      D(x)= \begin{cases}x\text{,} \amp \text{ if } x\text{ is rational } \\ 0\text{,} \amp \text{ if } x\text{ is irrational } . \end{cases}
+    </me>
+  </p>
+
+  <p>
+    To the naked eye,
+    the graph of this function looks like the lines <m>y=0</m> and <m>y=x</m>.
+    Of course, such a graph would not be the graph of a function.
+    Actually, both of these lines have holes in them.
+    Wherever there is a point on one line there is a
+    <q>hole</q> on the other.
+    Each of these holes are the width of a single point
+    (that is, their <q>width</q> is zero!)
+    so they are invisible to the naked eye
+    (or even magnified under the most powerful microscope available).
+    This idea is illustrated in the following graph 
+<sidebyside>
+<image width="60%" source="images/Ch5fig5.png" /> Can such a function so <q>full of holes</q>
+</sidebyside>
+    actually be continuous anywhere?
+    It turns out that we can use our definition to show that this function is,
+    in fact, continuous at <m>0</m> and at no other point.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>of <m>                D(x)= \begin{cases}x,\amp \text{ if } x\text{ is rational } \\ 0,\amp \text{ if } x\text{ is irrational } \end{cases}
+</m></h></idx>
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Use the definition of continuity to show that the function
+              <me>
+                D(x)= \begin{cases}x,\amp \text{ if } x\text{ is rational } \\ 0,\amp \text{ if } x\text{ is irrational } \end{cases}
+              </me>
+              is continuous at <m>0</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Let <m>a\neq 0</m>.
+              Use the definition of continuity to show that <m>D</m> is not continuous at <m>a</m>.  
+              <hint>
+                You might want to break this up into two cases where <m>a</m> is rational or irrational.
+                Show that no choice of <m>\delta>0</m> will work for <m>\eps=|\,a|</m>.
+                Note that <xref ref="thm_IrrationalBetweenIrrationals">Theorem</xref>
+                of <xref ref="cha_numb-real-rati">Chapter</xref>
+                will probably help here.
+              </hint>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+
+
+
+
+<section>
+  <title>Sequences and Continuity</title>
+  <p>
+    There is an alternative way to prove that the function
+    <me>
+      D(x)=\left\{ \begin{matrix}x\text{,} \amp \text{ if } x\text{ is rational } \\ 0\text{,} \amp \text{ if } x\text{ is irrational } \end{matrix} \right.
+    </me>
+    is not continuous at <m>a\neq 0</m>.
+    We will examine this by looking at the relationship between our definitions of convergence and continuity.
+    The two ideas are actually quite closely connected,
+    as illustrated by the following very useful theorem.
+  </p>
+
+  <theorem xml:id="thm_LimDefOfContinuity">
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>via limits</h></idx>
+        The function <m>f</m> is continuous at <m>a</m> if and only if <m>f</m> satisfies the following property:
+        <me>
+          \forall\text{ sequences } \left(x_n\right)\text{, if } \,\,\lim_{n\rightarrow\infty}x_n=a \text{ then} \lim_{n\rightarrow\infty}f(x_n)=f(a).{}
+        </me>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    <xref ref="thm_LimDefOfContinuity">Theorem</xref>
+    says that in order for <m>f</m> to be continuous,
+    it is necessary and sufficient that any sequence
+    <m>\left(x_n\right)</m> converging to <m>a</m> must force the sequence
+    <m>\left(f(x_n)\right)</m> to converge to <m>f(a)</m>.
+    A picture of this situation is below though,
+    as always, the formal proof will not rely on the diagram.
+<sidebyside>
+    <image width="37%" source="images/Ch5fig6.png" />
+</sidebyside>
+  </p>
+
+  <p>
+    This theorem is especially useful for showing that a function <m>f,</m> is not continuous at a point <m>a</m>;
+    all we need to do is exhibit a sequence
+    <m>\left(x_n\right)</m> converging to <m>a</m> such that the sequence <m>\lim_{n\rightarrow\infty}f(x_n)</m> does
+    <em>not</em> converge to <m>f(a)</m>.
+    Let's demonstrate this idea before we tackle the proof of <xref ref="thm_LimDefOfContinuity">Theorem</xref>.
+  </p>
+
+  <example xml:id="example_HeavisideNotContinuous">
+    <statement>
+      <p>
+        Use <xref ref="thm_LimDefOfContinuity">Theorem</xref> to prove that
+        <me>
+          f(x)= \begin{cases}\frac{|x|}{x}\text{,} \amp \text{ if } x\neq 0\\ 0\text{,} \amp \text{ if } x=0 \end{cases}
+        </me>
+        is not continuous at <m>0</m>.
+      </p>
+
+    <proof>
+      <p>
+        First notice that <m>f</m> can be written as
+        <me>
+          f(x)= \begin{cases}1\amp \text{ if } x>0\\ -1\amp \text{ if } x\lt 0\\ 0\amp \text{ if } x=0 \end{cases} 
+        </me>.
+      </p>
+
+      <p>
+        To show that <m>f</m> is not continuous at <m>0</m>,
+        all we need to do is create a single sequence
+        <m>\left(x_n\right)</m>which converges to <m>0</m>,
+        but for which the sequence
+        <m>\left(f\left(x_n\right)\right)</m> does not converge to <m>f(0)=0</m>.
+        For a function like this one,
+        just about any sequence will do,
+        but let's use <m>\left(\frac{1}{n}\right)</m>,
+        just because it is an old familiar friend.
+      </p>
+
+      <p>
+        We have <m>\displaystyle\lim_{n\rightarrow\infty}\frac{1}{n}=0</m>,
+        but <m>\displaystyle\lim_{n\rightarrow\infty}f\left(\frac{1}{n}\right)=\lim_{n\rightarrow \infty}1=1\neq 0=f(0)</m>.
+        Thus by <xref ref="thm_LimDefOfContinuity">Theorem</xref>,
+        <m>f</m> is not continuous at <m>0</m>.
+      </p>
+    </proof>
+    </statement>
+  </example>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>continuity</h><h>Heaviside's function is not continuous at zero</h></idx>
+        Use <xref ref="thm_LimDefOfContinuity">Theorem</xref> to show that
+        <me>
+          f(x)= \begin{cases}\frac{\abs{x}}{x},\amp \text{ if } x\neq 0\\ a,                   \amp \text{ if } x=0 \end{cases}
+        </me>
+        is not continuous at <m>0</m>,
+        no matter what value <m>a</m> is.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>of <m>                D(x)= \begin{cases}x,\amp \text{ if } x\text{ is rational } \\ 0,\amp \text{ if } x\text{ is irrational } \end{cases}
+</m></h></idx>
+        Use <xref ref="thm_LimDefOfContinuity">Theorem</xref> to show that
+        <me>
+          D(x)= \begin{cases}x\text{,} \amp \text{ if } x\text{ is rational } \\ 0\text{,} \amp \text{ if } x\text{ is irrational } \end{cases}
+        </me>
+        is not continuous at <m>a\neq 0</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Topologist's sine function</h><h>modified version is not continuous at zero</h></idx>
+        The function <m>T(x)=\sin\left(\frac{1}{x}\right)</m> is often called the topologist's sine curve.
+        Whereas <m>\sin x</m> has roots at <m>n\pi</m>,
+        <m>n\in\ZZ</m> and oscillates infinitely often as <m>x\rightarrow\pm\infty</m>,
+        <m>T</m> has roots at <m>\frac{1}{n\pi},\,n\in\ZZ,\,n\neq 0</m>,
+        and oscillates infinitely often as <m>x</m> approaches zero.
+        A rendition of the graph follows.
+        <image width="75%" source="images/Ch5fig7.png" />
+      </p>
+
+      <p>
+        Notice that <m>T</m> is not even defined at <m>x=0</m>.
+        We can extend <m>T</m> to be defined at 0 by simply choosing a value for <m>T(0):</m>
+        <me>
+          T(x)= \begin{cases}\sin\left(\frac{1}{x}\right),\amp \text{ if } x\neq 0\\ b,\amp \text{ if } x=0 \end{cases} 
+        </me>.
+      </p>
+
+      <p>
+        Use <xref ref="thm_LimDefOfContinuity">Theorem</xref>
+        to show that <m>T</m> is not continuous at <m>0</m>,
+        no matter what value is chosen for <m>b</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <proof>
+<title>Sketch of Proof</title>
+<p>
+<term>Sketch of proof of <xref ref="thm_LimDefOfContinuity">Theorem</xref></term>
+</p>
+    <p>
+      We've seen how we can use <xref ref="thm_LimDefOfContinuity">Theorem</xref>,
+      now we need to prove <xref ref="thm_LimDefOfContinuity">Theorem</xref>.
+      The forward direction is fairly straightforward.
+      So we assume that <m>f</m> is continuous at <m>a</m> and start with a sequence
+      <m>\left(x_n\right)</m> which converges to <m>a</m>.
+      What is left to show is that <m>\lim_{n\rightarrow\infty}f(x_n)=f(a)</m>.
+      If you write down the definitions of <m>f</m> being continuous at <m>a</m>,
+      <m>\lim_{n\rightarrow\infty}x_n=a</m>,
+      and <m>\lim_{n\rightarrow\infty}f(x_n)=f(a)</m>,
+      you should be able to get from what you are assuming to what you want to conclude.
+    </p>
+
+    <p>
+      To prove the converse, it is convenient to prove its contrapositive.
+      That is, we want to prove that if <m>f</m> is not continuous at <m>a</m> then we can construct a sequence
+      <m>\left(x_n\right)</m> that converges to <m>a</m> but
+      <m>\left(f(x_n)\right)</m>does not converge to <m>f(a)</m>.
+      First we need to recognize what it means for <m>f</m> to not be continuous at <m>a</m>.
+      This says that somewhere there exists an <m>\eps>0</m>,
+      such that no choice of <m>\delta>0</m> will work for this.
+      That is, for any such <m>\delta</m>,
+      there will exist <m>x</m>,
+      such that <m>|\,x-a|\lt \delta</m>,
+      but <m>|f(x)-f(a)|\geq\eps</m>.
+      With this in mind, if <m>\delta=1</m>,
+      then there will exist an <m>x_1</m> such that <m>|\,x_1-a|\lt 1</m>,
+      but <m>|f(x_1)-f(a)|\geq\eps</m>.
+      Similarly, if <m>\delta=\frac{1}{2}</m>,
+      then there will exist an <m>x_2</m> such that <m>|\,x_2-a|\lt \frac{1}{2}</m>,
+      but <m>|\,f(x_2)-f(a)|\geq\eps</m>.
+      If we continue in this fashion,
+      we will create a sequence <m>\left(x_n\right)</m> such that <m>|\,x_n-a|\lt \frac{1}{n}</m>,
+      but <m>|f(x_n)-f(a)|\geq\eps</m>.
+      This should do the trick.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>via limits</h></idx>
+            <idx><h>limit</h><h><m>\limit{x}{a}{f(x)}=f(a)</m> implies <m>f(x)</m> is continuous</h></idx>
+        Turn the ideas of the previous two paragraphs into a formal proof of <xref ref="thm_LimDefOfContinuity">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <xref ref="thm_LimDefOfContinuity">Theorem</xref> is a very useful result.
+    It is a bridge between the ideas of convergence and continuity so it allows us to bring all of the theory we developed in <xref ref="chpt_Convergence">Chapter</xref>
+    to bear on continuity questions.
+    For example consider the following.
+  </p>
+
+  <theorem xml:id="thm_ContSumProd">
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h>sum of continuous functions is continuous</h></idx>
+        Suppose <m>f</m> and <m>g</m> are both continuous at <m>a</m>.
+        Then <m>f+g</m> and <m>f\cdot g</m> are continuous at <m>a</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      We could use the definition of continuity to prove <xref ref="thm_ContSumProd">Theorem</xref>,
+      but <xref ref="thm_LimDefOfContinuity">Theorem</xref> makes our job much easier.
+      For example, to show that <m>f+g</m> is continuous,
+      consider any sequence <m>\left(x_n\right)</m> which converges to <m>a</m>.
+      Since <m>f</m> is continuous at <m>a</m>,
+      then by <xref ref="thm_LimDefOfContinuity">Theorem</xref>,
+      <m>\lim_{n\rightarrow\infty}f(x_n)=f(a)</m>.
+      Likewise, since <m>g</m> is continuous at <m>a</m>,
+      then <m>\lim_{n\rightarrow\infty}g(x_n)=g(a)</m>.
+      By <xref ref="thm_SumOfSequences">Theorem</xref>
+      of <xref ref="chpt_Convergence">Chapter</xref>,<m></m> <m>\lim_{n\rightarrow\infty}(f+g)(x_n)=\,\lim_{n\rightarrow\infty} \left(f(x_n)+g(x_n)\right)=\,\,\,\lim_{n\rightarrow\infty}f(x_n)+\,\lim_{n \rightarrow\infty}g(x_n)=f(a)+g(a)=(f+g)(a)</m>.
+      Thus by <xref ref="thm_LimDefOfContinuity">Theorem</xref>,
+      <m>f+g</m> is continuous at <m>a</m>.
+      The proof that <m>f\cdot g</m> is continuous at <m>a</m> is similar.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h>the product of continuous functions is continuous</h></idx>
+        Use <xref ref="thm_LimDefOfContinuity">Theorem</xref> to show that if <m>f</m> and <m>g</m> are continuous at <m>a</m>, then <m>f\cdot g</m> is continuous at <m>a</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    By employing <xref ref="thm_ContSumProd">Theorem</xref> a finite number of times,
+    we can see that a finite sum of continuous functions is continuous.
+    That is, if <m>f_1,\,f_2,\,\ldots,\,f_n</m> are all continuous at <m>a</m> then
+    <m>\sum_{j=1}^nf_j</m> is continuous at <m>a</m>.
+    But what about an infinite sum?
+    Specifically,
+    suppose <m>f_1,\,f_2,f_3,\ldots</m> are all continuous at <m>a</m>.
+    Consider the following argument.
+  </p>
+
+  <p>
+    Let <m>\eps>0</m>.
+    Since <m>f_j</m> is continuous at <m>a</m>,
+    then there exists <m>\delta_j>0</m> such that if <m>|\,x-a|\lt \delta_j</m>,
+    then <m>|f_j(x)-f_j(a)|\lt \frac{\eps}{2^j}</m>.
+    Let <m>\delta=</m>min<m>\left(\delta_1,\,\delta_2,\,\ldots\right)</m>.
+    If <m>|\,x-a|\lt \delta</m>, then
+    <me>
+      \left|\sum_{j=1}^\infty f_j(x)-\sum_{j=1}^\infty f_j(a)\right|=\left|\sum_{j=1}^\infty\left(f_j(x)-f_j(a)\right)\right|
+    </me>
+    <me>
+      \leq\,\sum_{j=1}^\infty|f_j(x)-f_j(a)|\lt \sum_{j=1}^\infty\frac{ \eps}{2^j}=\eps
+    </me>.
+  </p>
+
+  <p>
+    Thus by definition,
+    <m>\sum_{j=1}^\infty f_j</m> is continuous at <m>a</m>.
+  </p>
+
+  <p>
+    This argument seems to say that an infinite sum of continuous functions must be continuous
+    (provided it converges).
+    However we know that the Fourier series
+    <me>
+      \frac{4}{\pi}\sum_{k=0}^\infty\frac{\left(-1\right)^k}{\left(2k+1\right)}\cos\left(\left(2k+1\right)\pi x\right)
+    </me>
+    is a counterexample to this,
+    as it is an infinite sum of continuous functions which does not converge to a continuous function.
+    Something fundamental seems to have gone wrong here.
+    Can you tell what it is?
+  </p>
+
+  <p>
+    This is a question we will spend considerable time addressing in <xref ref="chpt_PowerSeriesRedux">Chapter</xref>
+    (in particular,
+    see <xref ref="prob_Cauchy_s_incorrect_proof">problem</xref>)
+    so if you don't see the difficulty, don't worry; you will.
+    In the meantime keep this problem tucked away in your consciousness.
+    It is, as we said, fundamental.
+  </p>
+
+  <p>
+    <xref ref="thm_LimDefOfContinuity">Theorem</xref>
+    will also handle quotients of continuous functions.
+    There is however a small detail that needs to be addressed first.
+    Obviously, when we consider the continuity of <m>f/g</m> at <m>a</m>,<m></m>we need to assume that <m>g(a)\neq 0</m>.
+    However, <m>g</m> may be zero at other values.
+    How do we know that when we choose our sequence
+    <m>\left(x_n\right)</m> converging to <m>a</m> that <m>g(x_n)</m> is not zero?
+    This would mess up our idea of using the corresponding theorem for sequences
+    (<xref ref="thm_LimitOfQuotient">Theorem</xref>
+    from <xref ref="chpt_Convergence">Chapter</xref>).
+    This can be handled with the following lemma.
+  </p>
+
+  <lemma xml:id="lem_BoundedAwayFromZero">
+    <statement>
+      <p>
+      If <m>g</m> is continuous at <m>a</m> and <m>g(a)\neq 0</m>,
+        then there exists <m>\delta>0</m> such that
+        <m>g(x)\neq 0</m> for all <m>x\in(a-\delta,a+\delta)</m>.
+      </p>
+    </statement>
+  </lemma>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuous functions</h>><h>if
+            <m>f</m> is continuouse and <m>f(a)\neq0</m> then <m>f</m>
+            is bounded away from zero near a</h></idx> Prove <xref
+            ref="lem_BoundedAwayFromZero">Lemma</xref>.
+            <hint>
+              Consider the case where <m>g(a)>0</m>.
+              Use the definition with <m>\eps=\frac{g(a)}{2}</m>.
+              The picture is below; make it formal.
+              <image width="75%" source="images/Ch5fig8.png" /> For the case <m>g(a)\lt 0</m>,
+              consider the function <m>-g</m>.
+            </hint>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    A consequence of this lemma is that if we start with a sequence
+    <m>\left(x_n\right)</m> converging to <m>a</m>,
+    then for <m>n</m> sufficiently large, <m>g(x_n)\neq 0</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h>the quotient of continuous functions is continuous</h></idx>
+        Use <xref ref="thm_LimDefOfContinuity">Theorem</xref>, to prove that if <m>f</m> and <m>g</m> are continuous at <m>a</m> and <m>g(a)\neq 0</m>, then <m>f/g</m> is continuous at <m>a</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <theorem xml:id="thm_ContComp">
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h>the composition of continuous functions is continuous</h></idx>
+        Suppose <m>f</m> is continuous at <m>a</m> and <m>g</m> is continuous at <m>f(a)</m>.
+        Then <m>g\circ f</m> is continuous at <m>a.</m> 
+(Note that <m>(g\circ f)(x)=g(f(x))</m>.)
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h>the composition of continuous functions is continuous</h></idx>
+        Prove <xref ref="thm_ContComp">Theorem</xref>
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Using the definition of continuity.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Using <xref ref="thm_LimDefOfContinuity">Theorem</xref>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The above theorems allow us to build continuous functions from other continuous functions.
+    For example,
+    knowing that <m>f(x)=x</m> and <m>g(x)=c</m> are continuous,
+    we can conclude that any polynomial,
+    <me>
+      p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
+    </me>
+    is continuous as well.
+    We also know that functions such as
+    <m>f(x)=\sin\left(e^x\right)</m> are continuous without having to rely on the definition.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>drill problems</h></idx>
+        Show that each of the following is a continuous function at every point in its domain.
+
+        <ol>
+          <li>
+            <p>
+              Any polynomial.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Any rational function. (A rational function is defined to be a ratio of polynomials.)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\cos x</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The other trig functions: <m>\tan(x)</m>,
+              <m>\cot(x)</m>, <m>\sec(x)</m>, and <m>\csc(x)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h><m>\sin e^x</m> is continuous everywhere</h></idx>
+        What allows us to conclude that <m>f(x)=\sin\left(e^x\right)</m> is continuous at any point <m>a</m> without referring back to the definition of continuity?
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <xref ref="thm_LimDefOfContinuity">Theorem</xref>
+    can also be used to study the convergence of sequences.
+    For example,
+    since <m>f(x)=e^x</m> is continuous at any point and <m>\lim_{n\rightarrow\infty}\frac{n+1}{n}=1</m>,
+    then <m>\lim_{n\rightarrow\infty}e^{\left(\frac{n+1}{n}\right)}=e</m>.
+    This also illustrates a certain way of thinking about continuous functions.
+    They are the ones where we can <q>commute</q>
+    the function and a limit of a sequence.
+    Specifically,
+    if <m>f</m> is continuous at <m>a</m> and <m>\lim_{n\rightarrow\infty}x_n=a</m>,
+    then <m>\lim_{n\rightarrow\infty}f(x_n)=f(a)=f\left(\lim_{n\rightarrow\infty}x_n\right)</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>via sequences</h></idx>
+        Compute the following limits.
+        Be sure to point out how continuity is involved.
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>\displaystyle\lim_{n\rightarrow\infty}\sin\left(\frac{n\pi}{2n+1}\right)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle\lim_{n\rightarrow\infty}\sqrt{\frac{n}{n^2+1}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle\lim_{n\rightarrow\infty}e^{\left(\text{ sin } \left(1/n\right)\right)}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Having this rigorous formulation of continuity is necessary for proving the Extreme Value Theorem and the Mean Value Theorem.
+    However there is one more piece of the puzzle to address before we can prove these theorems.
+  </p>
+
+  <p>
+    We will do this in the next chapter,
+    but before we go on it is time to define a fundamental concept that was probably one of the first you learned in calculus: limits.
+  </p>
+</section>
+
+
+
+
+<section>
+  <title>The Definition of the Limit of a Function</title>
+  <p>
+    Since these days the limit concept is generally regarded as the starting point for calculus,
+    you might think it is a little strange that we've chosen to talk about continuity first.
+    But historically,
+    the formal definition of a limit came after the formal definition of continuity.
+    In some ways,
+    the limit concept was part of a unification of all the ideas of calculus that were studied previously and,
+    subsequently, it became the basis for all ideas in calculus.
+    For this reason it is logical to make it the first topic covered in a calculus course.
+  </p>
+
+  <p>
+    To be sure, limits were always lurking in the background.
+    In his attempts to justify his calculations, Newton 
+        <idx><h>Newton, Isaac</h></idx>
+    used what he called his doctrine of
+    <q>Ultimate Ratios.</q>
+    Specifically the ratio <m>\frac{(x+h)^2-x^2}{h} = \frac{2xh+h^2}{h} = 2x+h</m> becomes the ultimate ratio <m>2x</m> at the last instant of time before <m>h</m> - an
+    <q>evanescent quantity</q>
+    - vanishes<nbsp />(<xref ref="grabiner81__origin_cauch_rigor_calculy"/>, p. 33).
+    Similarly Leibniz's<idx><h>Leibniz, Gottfried Wilhelm</h></idx>
+    <q>infinitely small</q>
+    differentials <m>\d x</m> and <m>\d y</m> can be seen as an attempt to get
+    <q>arbitrarily close</q>
+    to <m>x</m> and <m>y</m>, respectively.
+    This is the idea at the heart of calculus:
+    to get arbitrarily close to, say,
+    <m>x</m> without actually reaching it.
+  </p>
+
+  <p>
+    As we saw in <xref ref="chpt_PowerSeriesQuestions">Chapter</xref>, Lagrange
+        <idx><h>Lagrange, Joseph-Louis</h></idx>
+    tried to avoid the entire issue of
+    <q>arbitrary closesness,</q>
+    both in the limit and differential forms when,
+    in 1797, he attempted to found calculus on infinite series.
+  </p>
+
+  <p>
+    Although Lagrange's 
+    <idx><h>Lagrange, Joseph-Louis</h></idx>
+    efforts failed, they set the stage for Cauchy 
+    <idx><h>Cauchy, Augustin</h></idx>
+    to provide a definition of derivative which in turn relied on his precise formulation of a limit.
+    Consider the following example:
+    to determine the slope of the tangent line (derivative) of <m>f(x) = \sin x</m> at <m>x=0</m>.
+    We consider the graph of the difference quotient <m>D(x) =\frac{\sin x }{x}</m>.
+  </p>
+        <image width="56%" source="images/SinGraph.png" />
+  <p>
+    From the graph,
+    it appears that <m>D(0) =1</m> but we must be careful.
+    <m>D(0)</m> doesn't even exist!
+    Somehow we must convey the idea that <m>D(x)</m> will approach <m>1</m> as <m>x</m> approaches <m>0</m>,
+    even though the function is not defined at <m>0</m>.
+    Cauchy's idea was that the limit of <m>D(x)</m> would equal <m>1</m> because we can make <m>D(x)</m> differ from 1 by as little as we wish<nbsp />(<xref ref="jahnke03__histor_analy"/>, p. 158).
+  </p>
+
+  <p>
+    Karl Weierstrass 
+        <idx><h>Weierstrass, Karl</h></idx>
+    made these ideas precise in his lectures on analysis at the University of Berlin (1859-60) and provided us with our modern formulation.
+  </p>
+
+  <definition xml:id="def_limit">
+    <statement>
+      <p>
+            <idx><h>limit</h></idx>
+        We say <m>\limit{x}{a}{f(x)} =L</m> provided that for each <m>\eps>0</m>,
+        there exists <m>\delta>0</m> such that if
+        <m>0\lt \abs{x-a}\lt \delta</m> then <m>\abs{f(x)-L}\lt \eps</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Before we delve into this,
+    notice that it is very similar to the definition of the continuity of <m>f(x)</m> at <m>x=a</m>.
+    In fact we can readily see that <m>f \text{ is continuous at } x=a \text{ if and only if } \limit{x}{a}{f(x)} = f(a)</m>.
+  </p>
+
+  <p>
+    There are two differences between this definition and the definition of continuity and they are related.
+    The first is that we replace the value <m>f(a)</m> with <m>L</m>.
+    This is because the function may not be defined at <m>a</m>.
+    In a sense the limiting value <m>L</m> is the value <m>f</m> would have
+    <em>if it were defined and continuous at <m>a</m>.</em>
+    The second is that we have replaced
+    <me>
+      \abs{x-a}\lt \delta
+    </me>
+    with
+    <me>
+      0\lt \abs{x-a}\lt \delta
+    </me>.
+  </p>
+
+  <p>
+    Again, since <m>f</m> needn't be defined at <m>a</m>,
+    we will not even consider what happens when <m>x=a</m>.
+    This is the only purpose for this change.
+  </p>
+
+  <p>
+    As with the definition of the limit of a sequence,
+    this definition does not determine what <m>L</m> is,
+    it only verifies that your guess for the value of the limit is correct.
+  </p>
+
+  <p>
+    Finally, a few comments on the differences and similiarities between this limit and the limit of a sequence are in order,
+    if for no other reason than because we use the same notation (<m>\lim</m>) for both.
+  </p>
+
+  <p>
+    When we were working with sequences in <xref ref="chpt_Convergence">Chapter</xref>
+    and wrote things like <m>\limit{n}{\infty}{a_n}</m> we were thinking of <m>n</m> as an integer that got bigger and bigger.
+    To put that more mathematically,
+    the limit parameter <m>n</m> was taken from the set of positive integers,
+    or <m>n\in \NN</m>.
+  </p>
+
+  <p>
+    For both continuity and the limit of a function we write things like
+    <m>\limit{x}{a}{f(x)}</m> and think of <m>x</m> as a variable that gets arbitrarily close to the number <m>a</m>.
+    Again, to be more mathematical in our language we would say that the limit parameter <m>x</m> is taken from the <m>\ldots</m> Well,
+    actually, this is interesting isn't it?
+    Do we need to take <m>x</m> from <m>\QQ</m> or from <m>\RR?</m> The requirement in both cases is simply that we be able to choose <m>x</m> arbitrarily close to <m>a</m>.
+    From <xref ref="thm_IrrationalBetweenIrrationals">Theorem</xref>
+    of <xref ref="cha_numb-real-rati">Chapter</xref>
+    we see that this is possible whether <m>x</m> is rational or not,
+    so it seems either will work.
+    This leads to the pardoxical sounding conclusion that we do not need a continuum (<m>\RR</m>) to have continuity.
+    This seems strange.
+  </p>
+
+  <p>
+    Before we look at the above example,
+    let's look at some algebraic examples to see the definition in use.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Consider the function <m>D(x)=\frac{x^2-1}{x-1}</m>, <m>x\neq 1</m>.
+        You probably recognize this as the difference quotient used to compute the derivative of <m>f(x)=x^2</m> at <m>x=1</m>,
+        so we strongly suspect that <m>\limit{x}{1}{\frac{x^2-1}{x-1}}=2</m>.
+        Just as when we were dealing with limits of sequences,
+        we should be able to use the definition to verify this.
+        And as before, we will start with some scrapwork.
+      </p>
+
+        <p>
+          <term>SCRAPWORK</term>
+        </p>
+        <p>
+          Let <m>\eps>0</m>.
+          We wish to find a <m>\delta>0</m> such that if
+          <m>0\lt \abs{x-1}\lt \delta</m> then <m>\abs{\frac{x^2-1}{x-1}-2}\lt \eps</m>.
+          With this in mind, we perform the following calculations
+          <me>
+            \abs{\frac{x^2-1}{x-1}-2}=\abs{(x+1)-2} = \abs{x-1}
+          </me>.
+        </p>
+
+        <p>
+          Now we have a handle on <m>\delta</m> that will work in the definition and we'll give the formal proof that
+          <me>
+            \limit{x}{1}{\frac{x^2-1}{x-1}}=2
+          </me>.
+        </p>
+
+    </statement>
+
+    <proof>
+      <p>
+        Let <m>\eps>0</m> and let <m>\delta=\eps</m>.
+        If <m>0\lt \abs{x-1}\lt \delta</m>, then
+        <me>
+          \abs{\frac{x^2-1}{x-1}-2}=\abs{(x+1)-2}=\abs{x-1}\lt \delta=\eps
+        </me>.
+      </p>
+    </proof>
+  </example>
+
+  <p>
+    As in our previous work with sequences and continuity,
+    notice that the scrapwork is not part of the formal proof (though it was necessary to determine an appropriate <m>\delta)</m>.
+    Also, notice that <m>0\lt \abs{x-1}</m> was not really used except to ensure that <m>x\neq 1</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>limit</h><h><m>\limit{x}{a}{\frac{x^2-a^2}{x-a}}=2a</m></h></idx>
+        Use the definition of a limit to verify that
+        <me>
+          \limit{x}{a}{\frac{x^2-a^2}{x-a}}=2a.{}
+        </me>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>verifying limits via continuity</h></idx>
+        Use the definition of a limit to verify each of the following limits.
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>\limit{x}{1}{\frac{x^3-1}{x-1}}=3</m>
+              <hint>
+                <md>
+                  <mrow>\abs{\frac{x^3-1}{x-1}-3} \amp = \abs{x^2+x+1-3}</mrow>
+                  <mrow>\amp \leq\abs{x^2-1}+\abs{x-1}</mrow>
+                  <mrow>\amp =\abs{(x-1+1)^2-1}+\abs{x-1}</mrow>
+                  <mrow>\amp =\abs{(x-1)^2+2(x-1)}+\abs{x-1}</mrow>
+                  <mrow>\amp \leq\abs{x-1}^2 + 3\abs{x-1}</mrow>
+                </md>.
+              </hint>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\limit{x}{1}{\frac{\sqrt{x}-1}{x-1}}=1/2</m>
+              <hint>
+                <md>
+                  <mrow>\abs{\frac{\sqrt{x}-1}{x-1}-\frac12}\amp = \abs{\frac{1}{\sqrt{x}+1}-\frac12}</mrow>
+                  <mrow>\amp =\abs{\frac{2-\left(\sqrt{x}+1\right)}{2\left(\sqrt{x}+1\right)}}</mrow>
+                  <mrow>\amp =\abs{\frac{1-x}{2\left(1+\sqrt{x}\right)^2}}</mrow>
+                  <mrow>\amp \leq\frac12\abs{x-1}.{}</mrow>
+                </md>
+              </hint>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Let's go back to the original problem:
+    to show that <m>\limit{x}{0}{\textstyle\frac{\sin x}{x}}=1</m>.
+  </p>
+
+  <p>
+    While rigorous, our definition of continuity is quite cumbersome.
+    We really need to develop some tools we can use to show continuity rigorously without having to refer directly to the definition.
+    We have already seen in <xref ref="thm_LimDefOfContinuity">Theorem</xref> one way to do this.
+    Here is another.
+    The key is the observation we made after the definition of a limit:
+    <me>
+      f \text{ is continuous at } x=a \text{ if and only if } \limit{x}{a}{f(x)}=f(a)
+    </me>.
+  </p>
+
+  <p>
+    Read another way, we could say that
+    <m>\limit{x}{a}{f(x)}=L</m> provided that if we redefine <m>f(a)=L</m> (or define <m>f(a)=L</m> in the case where <m>f(a)</m> is not defined) then <m>f</m> becomes continuous at <m>a</m>.
+    This allows us to use all of the machinery we proved about continuous functions and limits of sequences.
+  </p>
+
+  <p>
+    For example,
+    the following corollary to <xref ref="thm_LimDefOfContinuity">Theorem</xref>
+    comes virtually for free once we've made the observation above.
+  </p>
+
+  <corollary xml:id="cor_limit-by-sequences">
+    <statement>
+      <p>
+
+        <m>\limit{x}{a}{f(x)}=L</m> if and only if <m>f</m> satisfies the following property:
+        <me>
+          \forall \text{ sequences }  (x_n), x_n\ne a, \text{ if } \limit{n}{\infty}{x_n}=a \text{ then }   \limit{n}{\infty}{f(x_n)}=L. {}
+        </me>
+      </p>
+    </statement>
+  </corollary>
+
+  <p>
+    Armed with this,
+    we can prove the following familiar limit theorems from calculus.
+  </p>
+
+  <theorem xml:id="thm_CalcLimits">
+    <statement>
+      <p>
+            <idx><h>limit</h><h>properties of</h></idx>
+        Suppose <m>\limit{x}{a}{f(x)}=L</m> and <m>\limit{x}{a}{g(x)}=M</m>, then
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>\limit{x}{a}{\left(f(x)+g(x)\right)}=L+M</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\limit{x}{a}{\left(f(x)\cdot g(x)\right)}=L\cdot M</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\limit{x}{a}{\left(\frac{f(x)}{g(x)}\right)}=L/M</m> provided <m>M\ne0</m> and <m>g(x)\ne{}0</m>,
+              for <m>x</m> sufficiently close to a
+              (but not equal to <m>a</m>).
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We will prove part (a) to give you a feel for this and let you prove parts (b) and (c).
+  </p>
+
+  <proof>
+    <p>
+      Let <m>\left(x_n\right)</m> be a sequence such that
+      <m>x_n\ne a</m> and <m>\limit{n}{\infty}{x_n}=a</m>.
+      Since <m>\limit{x}{a}{f(x)} = L</m> and <m>\limit{x}{a}{g(x)} = M</m> we see that
+      <m>\limit{n}{\infty}{f(x_n)} = L</m> and <m>\limit{n}{\infty}{g(x_n)} = M</m>.
+      By <xref ref="thm_SumOfSequences">Theorem</xref>
+      of <xref ref="chpt_Convergence">Chapter</xref>,
+      we have <m>\limit{n}{\infty}{f(x_n)+g(x_n)}=L+M</m>.
+      Since <m>\left\{x_n\right\}</m> was an arbitrary sequence with
+      <m>x_n\ne a</m> and <m>\limit{n}{\infty}{x_n} = a</m> we have
+      <me>
+        \limit{x}{a}{f(x)+g(x)} = L+M
+      </me>.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>limit</h><h>properties of</h></idx>
+            <idx><h>verify limit laws from calculus</h></idx>
+        Prove parts (b) and (c) of <xref ref="thm_CalcLimits">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    More in line with our current needs,
+    we have a reformulation of the Squeeze Theorem.
+  </p>
+
+  <theorem xml:id="thm_SqueezeTheoremFunctions">
+    <statement>
+      <p>
+        <alert>Squeeze Theorem for functions</alert>
+      </p>
+      <p>
+        <idx><h>Squeeze Theorem</h><h>for functions</h></idx> 
+        Suppose <m>f(x)\le g(x) \le h(x)</m>,
+        for <m>x</m> sufficiently close to <m>a</m>
+        (but not equal to <m>a</m>).
+        If <m>\limit{x}{a}{f(x)}=L=\limit{x}{a}{h(x)}</m>,
+        then <m>\limit{x}{a}{g(x)}=L</m> also.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Squeeze Theorem</h><h>for functions</h></idx>
+        Prove <xref ref="thm_SqueezeTheoremFunctions">Theorem</xref>. 
+            <hint>
+              Use <xref ref="thm_SqueezeTheorem">Theorem</xref>, the Squeeze Theorem for sequences  from <xref ref="chpt_Convergence">Chapter</xref>.
+            </hint>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Returning to <m>\limit{x}{0}{\frac{\sin x}{x}}</m> we'll see that the Squeeze Theorem is just what we need.
+    First notice that since <m>D(x)=\sin x/x</m> is an even function,
+    we only need to focus on <m>x>0</m> in our inequalities.
+    Consider the unit circle.
+    <image width="60%" source="images/UnitCircle.png" />
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Topologist's sine function</h><h> continuous at zero</h></idx>
+        Use the fact that
+        <me>
+          \text{ area } (\Delta OAC)\lt \text{ area } (\text{ sector } OAC)\lt \text{ area } (\Delta OAB)
+        </me>
+        to show that if <m>0\lt x\lt \pi/2</m>,
+        then <m>\cos x\lt \sin x/x\lt 1</m>.
+        Use the fact that all of these functions are even to extend the inequality for
+        <m>-\pi/2\lt x\lt 0</m> and use the Squeeze Theorem to show <m>\limit{x}{0}{\textstyle\frac{\sin x}{x}}=1</m>.
+      </p>
+    </statement>
+  </problem>
+</section>
+
+
+
+
+<section xml:id="sec_deriv-an-afterth">
+  <title>The Derivative, An Afterthought</title>
+  <p>
+    No, the derivative isn't really an afterthought.
+    Along with the integral it is, in fact,
+    one of the most powerful and useful mathematical objects ever devised and we've been working very hard to provide a solid,
+    rigorous foundation for it.
+    In that sense it is a primary focus of our investigations.
+  </p>
+
+  <p>
+    On the other hand,
+    now that we have built up all of the machinery we need to define and explore the concept of the derivative it will appear rather pedestrian alongside ideas like the convergence of power series, Fourier series,
+    and the bizarre properties of <m>\QQ</m> and <m>\RR</m>.
+  </p>
+
+  <p>
+    You spent an entire semester learning about the properties of the derivative and how to use them to explore the properties of functions so we will not repeat that effort here.
+    Instead we will define it formally in terms of the ideas and techniques we've developed thus far.
+  </p>
+
+  <definition xml:id="def_derivative">
+    <statement>
+      <p>
+        <term>The Derivative</term>
+      </p>
+      <p>
+            <idx><h>derivative</h></idx>
+            <idx><h>differentiation</h></idx>
+        Given a function <m>f(x)</m> defined on an interval <m>(a,b)</m> we define
+        <me>
+          f^\prime(x) = \limit{h}{0}{\frac{f(x+h)-f(x)}{h}}.{}
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    There are a few fairly obvious facts about this definition which are nevertheless worth noticing explicitly:
+
+    <ol>
+      <li>
+        <p>
+          The derivative is <em>defined at a point.</em>
+          If it is defined at every point in an interval <m>(a,b)</m> then we say that the derivative exists at every point on the interval.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Since it is defined at a point it is at least theoretically possible for a function to be differentiable at a single point in its entire domain.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Since it is defined as a limit and not all limits exist,
+          functions are not necessarily differentiable.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Since it is defined as a limit,
+          <xref ref="cor_limit-by-sequences">Corollary</xref> applies.
+          That is, <m>f^\prime(x)</m> exists if and only if <m>\forall \text{ sequences }  (h_n),\, h_n\ne 0</m>,
+          if <m>\limit{n}{\infty}{h_n}=0</m> then
+          <me>
+            f^\prime{(x)} = \limit{n}{\infty}{\frac{f(x+h_n)-f(x)}{h_n}}
+          </me>.
+          Since <m>\limit{n}{\infty}{h_n}=0</m> this could also be written as
+          <me>
+            f^\prime{(x)} = \limit{h_n}{0}{\frac{f(x+h_n)-f(x)}{h_n}}
+          </me>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <theorem xml:id="thm_DiffImpCont">
+    <statement>
+      <p>
+        <alert>Differentiability Implies Continuity</alert>
+      </p>
+      <p>
+        <idx><h>continuity</h><h>implied by differentiability</h></idx> 
+        <idx><h>differentiation</h><h>differentiability implies continuity</h></idx> 
+        If <m>f</m> is differentiable at a point <m>c</m> then <m>f</m> is continuous at <m>c</m> as well.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>differentiation</h><h>differentiability implies continuity</h></idx>
+        Prove <xref ref="thm_DiffImpCont">Theorem</xref>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    As we mentioned,
+    the derivative is an extraordinarily useful mathematical tool but it is not our intention to learn to <em>use</em> it here.
+    Our purpose here is to define it rigorously (done) and to show that our formal definition does in fact recover the useful properties you came to know and love in your calculus course.
+  </p>
+
+  <p>
+    The first such property is known as Fermat's Theorem.
+  </p>
+
+  <theorem xml:id="thm_FermatsTheorem">
+    <statement>
+      <p>
+        <term>Fermat's Theorem</term>
+      </p>
+      <p>
+            <idx><h>Fermat's Theorem</h></idx>
+        Suppose <m>f</m> is differentiable in some interval <m>(a,b)</m> containing <m>c</m>.
+        If <m>f(c)\ge f(x)</m> for every <m>x</m> in <m>(a,b)</m>,
+        then <m>f^\prime(c)=0</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Since <m>f^\prime(c)</m> exists we know that if
+      <m>\left(h_n\right)_{n=1}^\infty</m> converges to zero then the sequence
+      <m>a_n = \frac{f\left(c+h_n\right)-f(c)}{h_n}</m> converges to <m>f^\prime(c)</m>.
+      The proof consists of showing that <m>f^\prime(c)\leq 0</m> <em>and</em>
+      that <m>f^\prime(c)\geq 0</m> from which we conclude that <m>f^\prime(c)= 0</m>.
+      We will only show the first part.
+      The second is left as an exercise.
+    </p>
+
+    <p>
+      <em>Claim:</em> <m>f^\prime(c)\leq 0</m>.
+    </p>
+
+    <p>
+      Let <m>n_0</m> be sufficiently large that
+      <m>\frac{1}{n_0}\lt b-c</m> and take <m>\left(h_n\right)=\left(\frac{1}{n}\right)_{n=n_0}^\infty</m>.
+      Then <m>f\left(c+\frac1n\right)-f(c) \leq 0</m> and <m>\frac1n>0</m>, so that
+      <me>
+        \frac{f\left(c+h_n\right)-f(c)}{h_n}\leq 0, \ \ \forall n=n_0, n_0+1, \ldots
+      </me>
+    </p>
+
+    <p>
+      Therefore <m>f^\prime(c) = \limit{h_n}{0}{\frac{f\left(c+h_n\right)-f(c)}{h_n}} \leq 0</m> also.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Fermat's Theorem</h><h>if <m>f(a)</m> is a maximum then
+        <m>f^\prime(a)=0</m></h></idx> Show that
+        <m>f^\prime(c) \geq 0</m> and conclude that <m>f^\prime(c) =0</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Fermat's Theorem</h><h>if <m>f(a)</m> is a minimum then
+        <m>f^\prime(a)=0</m></h></idx> Show that if
+        <m>f(c) \leq f(x)</m> for all <m>x</m> in some interval <m>(a,b)</m> then <m>f^\prime(c) =0</m> too.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Many of the most important properties of the derivative follow from what is called the Mean Value Theorem (<term>MVT</term>) which we now state.
+  </p>
+
+  <theorem xml:id="thm_MVT">
+    <statement>
+      <p>
+        <term>The Mean Value Theorem</term>
+      </p>
+      <p>
+            <idx><h>Mean Value Theorem, the</h></idx>
+        Suppose <m>f^\prime</m> exists for every <m>x\in(a,b)</m> and <m>f</m> is continuous on <m>[a,b]</m>.
+        Then there is a real number <m>c\in(a,b)</m> such that
+        <me>
+          f^\prime(c)=\frac{f(b)-f(a)}{b-a}.{}
+        </me>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    However, it would be difficult to prove the MVT right now.
+    So we will first state and prove Rolle's Theorem,
+    which can be seen as a special case of the MVT. The proof of the MVT will then follow easily.
+  </p>
+
+  <p>
+    Michel Rolle first stated the following theorem in 1691.
+    Given this date and the nature of the theorem it would be reasonable to suppose that Rolle was one of the early developers of calculus but this is not so.
+    In fact, Rolle was disdainful of both Newton 
+        <idx><h>Newton, Isaac</h></idx>
+    and Leibniz's<idx><h>Leibniz, Gottfried Wilhelm</h></idx> versions of calculus,
+    once deriding them as a collection of
+    <q>ingenious fallacies.</q>
+    It is a bit ironic that his theorem is so fundamental to the modern development of the calculus he ridiculed.
+  </p>
+
+  <theorem xml:id="thm_Rolle_s_Theorem">
+    <statement>
+      <p>
+        <term>Rolle's Theorem</term>
+      </p>
+      <p>
+            <idx><h>Rolle's Theorem</h></idx>
+            <idx><h>Rolle's Theorem</h></idx>
+        Suppose <m>f^\prime</m> exists for every <m>x\in(a,b)</m>, <m>f</m> is continuous on <m>[a,b]</m>, and
+        <me>
+          f(a)=f(b)
+        </me>.
+      </p>
+
+      <p>
+        Then there is a real number <m>c\in(a,b)</m> such that
+        <me>
+          f^\prime(c)=0
+        </me>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Since <m>f</m> is continuous on <m>[a,b]</m> we see,
+      by the Extreme Value Theorem,<idx><h>Extreme Value Theorem (EVT)</h><h>Rolle's Theorem,
+      and</h></idx><fn>
+      Any proof that relies on the Extreme Value Theorem is not complete until the EVT has been proved.
+      We'll get to this in <xref ref="chpt_IVTEVT">Chapter</xref>.
+      </fn> that <m>f</m> has both a maximum and a minimum on <m>[a,b]</m>.
+      Denote the maximum by <m>M</m> and the minimum by <m>m</m>.
+      There are several cases:
+
+      <ul>
+        <li>
+          <title>Case 1:</title>
+          <p>
+            <m>f(a)=f(b)=M=m</m>.
+            In this case <m>f(x)</m> is constant
+            (why?).
+            Therefore <m>f^\prime(x)=0</m> for every <m>x\in(a,b)</m>.
+          </p>
+        </li>
+
+        <li>
+          <title>Case 2:</title>
+          <p>
+            <m>f(a)=f(b)=M\neq m</m>.
+            In this case there is a real number
+            <m>c\in(a,b)</m> such that <m>f(c)</m> is a local minimum.
+            By Fermat's Theorem, <m>f^\prime(c)=0</m>.
+          </p>
+        </li>
+
+        <li>
+          <title>Case 3:</title>
+          <p>
+            <m>f(a)=f(b)=m\neq M</m>.
+            In this case there is a real number
+            <m>c\in(a,b)</m> such that <m>f(c)</m> is a local maximum.
+            By Fermat's Theorem, <m>f^\prime(c)=0</m>.
+          </p>
+        </li>
+
+        <li>
+          <title>Case 4:</title>
+          <p>
+            <m>f(a)=f(b)</m> is neither a maximum nor a minimum.
+            In this case there is a real number
+            <m>c_1\in(a,b)</m> such that <m>f(c_1)</m> is a local maximum,
+            and a real number <m>c_2\in(a,b)</m> such that <m>f(c_2)</m> is a local minimum.
+            By Fermat's Theorem, <m>f^\prime(c_1)=f^\prime(c_2)=0</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </proof>
+
+  <p>
+    With Rolle's Theorem in hand we can prove the MVT which is really a corollary to Rolle's Theorem or,
+    more precisely, it is a generalization of Rolle's Theorem.
+    To prove it we only need to find the right function to apply Rolle's Theorem to.
+    The following figure shows a function,
+    <m>f(x)</m>, cut by a secant line,
+    <m>L(x)</m>, from <m>(a, f(a))</m> to <m>(b,f(b))</m>.
+    <image width="56%" source="images/MVT.png" /> The vertical difference from <m>f(x)</m> to the secant line,
+    indicated by <m>\phi(x)</m> in the figure should do the trick.
+    You take it from there.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Mean Value Theorem, the</h></idx>
+        Prove the Mean Value Theorem.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The Mean Value Theorem is extraordinarily useful.
+    Almost all of the properties of the derivative that you used in calculus follow more or less easily from it.
+    For example the following is true.
+  </p>
+
+  <corollary xml:id="cor_PosDerivIncFunc1"> 
+   <statement> 
+    <p> 
+     If <m>f^\prime(x) > 0</m> for every <m>x</m> in the interval
+     <m>(a,b)</m> then for every <m>c,d\in(a,b)</m> where <m>d>c</m> we
+     have <me> f(d) > f(c) </me>.  </p>
+
+    <p>
+     That is, <m>f</m> is increasing on <m>(a,b)</m>.
+    </p>
+    </statement>
+  </corollary>
+
+  <proof>
+    <p>
+      Suppose <m>c</m> and <m>d</m> are as described in the corollary.
+      Then by the Mean Value Theorem there is some number,
+      say <m>\alpha\in(c,d)\subseteq(a,b)</m> such that
+      <me>
+        f^\prime(\alpha)=\frac{f(d)-f(c)}{d-c}
+      </me>.
+    </p>
+
+    <p>
+      Since <m>f^\prime(\alpha)>0</m> and <m>d-c>0</m> we have
+      <m>f(d)-f(c)>0</m>, or <m>f(d)>f(c)</m>.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>differentiation</h><h>positive implies increasing</h></idx>
+            <idx><h>if <m>f^\prime\lt 0</m> on an interval then <m>f</m> is decreasing</h></idx>
+        Show that if <m>f^\prime(x) \lt 0</m> for every <m>x</m> in the interval <m>(a,b)</m> then <m>f</m> is decreasing on <m>(a,b)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <corollary xml:id="cor_PosDerivIncFunc2">
+    <statement>
+      <p>
+       Suppose <m>f</m> is differentiable on some interval <m>(a,b)</m>,
+       <m>f^\prime</m> is continuous on <m>(a,b)</m>,
+       and that <m>f^\prime(c)>0</m> for some <m>c\in (a,b)</m>.
+       Then there is an interval, <m>I\subset (a,b)</m>,
+       containing <m>c</m> such that for every
+       <m>x,
+       y</m> in <m>I</m> where <m>x\ge y</m>, <m>f(x)\ge f(y)</m>.
+      </p>
+    </statement>
+  </corollary>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>differentiation</h><h><m>f^\prime(a)>0</m> implies <m>f</m> is increasing nearby</h></idx>
+        Prove <xref ref="cor_PosDerivIncFunc2">Corollary</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx>
+        <h>differentiation</h>
+         <h><m>f^\prime(a)\lt 0</m> implies <m>f</m> is decreasing nearby</h>
+        </idx>
+        Show that if <m>f</m> is differentiable on some interval <m>(a,b)</m> and that <m>f^\prime(c)\lt 0</m> for some <m>c\in (a,b)</m> then there is an interval, <m>I\subset (a,b)</m>, containing <m>c</m> such that for every <m>x, y</m> in <m>I</m> where <m>x\le y</m>, <m>f(x)\le f(y)</m>.
+      </p>
+    </statement>
+  </problem>
+</section>
+
+
+
+
+<section>
+  <title>Additional Problems</title>
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h>a constant function is continuous</h></idx>
+        Use the definition of continuity to prove that the constant function <m>g(x)=c</m> is continuous at any point <m>a</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h><m>\ln
+            x</m> is continuous everywhere</h></idx>
+        <ol label="a">
+          <li>
+            <p>
+              Use the definition of continuity to prove that <m>\ln x</m> is continuous at <m>1</m>. 
+              <hint>
+                You may want to use the fact
+                <m>\abs{\ln x}\lt \eps\,\Leftrightarrow-\eps\lt \ln x\lt \eps</m> to find a <m>\delta</m>.
+              </hint>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use part (a) to prove that <m>\ln x</m> is continuous at any positive real number <m>a</m>. 
+              <hint>
+                <m>\ln(x)=\ln(x/a)+\ln(a)</m>.
+                This is a combination of functions which are continuous at <m>a</m>.
+                Be sure to explain how you know that
+                <m>\ln(x/a)</m> is continuous at <m>a</m>.
+              </hint>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>formal definition of discontinuity</h></idx>
+        Write a formal definition of the statement <m>f</m> is not continuous at <m>a</m>, and use it to prove that the function <m>f(x)= \begin{cases}x\amp \text{ if } x\neq 1\\ 0\amp \text{ if } x=1 \end{cases}</m> is not continuous at <m>a=1</m>.
+      </p>
+    </statement>
+  </problem>
+</section>
+
+
+</chapter>
+

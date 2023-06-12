@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:34-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Bolzano-Weierstrass Theorem</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="IVTandEVT-ProofOfIVT.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="IVTandEVT.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="IVTandEVT-SupremumAndEVT.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="IVTandEVT-ProofOfIVT.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="IVTandEVT.html" title="Up">Up</a><a class="next-button button toolbar-item" href="IVTandEVT-SupremumAndEVT.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="active">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="IVTandEVT-BWT"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span>
+</h2>
+<p id="p-1011">Once we introduced the Nested Interval Property, the Intermediate Value Theorem followed pretty readily. The proof of Extreme Value (which says that any continuous function <span class="process-math">\(f\)</span>defined on a closed interval <span class="process-math">\([\,a,b]\)</span> must have a maximum and a minimum) takes a bit more work. First we need to show that such a function is bounded.</p>
+<article class="theorem theorem-like" id="thm_CompactBounded"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.3.1</span><span class="period">.</span>
+</h3>
+<p id="p-1012"> A continuous function defined on a closed, bounded interval must be bounded.  That is, let <span class="process-math">\(f\)</span> be a continuous function defined on <span class="process-math">\([\,a,b]\text{.}\)</span>  Then there exists a positive real number <span class="process-math">\(B\)</span> such that <span class="process-math">\(|f(x)|\leq B\)</span> for all <span class="process-math">\(x\in[\,a,b]\text{.}\)</span></p></article><p id="p-1013"><em class="alert">Sketch of Alleged Proof:</em> Let's assume, for contradiction, that there is no such bound <span class="process-math">\(B\text{.}\)</span> This says that for any positive integer <span class="process-math">\(n\text{,}\)</span> there must exist <span class="process-math">\(x_n\in[a,b]\)</span> such that <span class="process-math">\(\abs{f(x_n)}&gt;n\text{.}\)</span> (Otherwise <span class="process-math">\(n\)</span> would be a bound for <span class="process-math">\(f\text{.}\)</span>) <em class="alert">IF</em> the sequence <span class="process-math">\(\left(x_n\right)\)</span> converged to something in <span class="process-math">\([\,a,b]\text{,}\)</span> say <span class="process-math">\(c\text{,}\)</span> then we would have our contradiction. Indeed, we would have <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=c\text{.}\)</span> By the continuity of <span class="process-math">\(f\)</span> at <span class="process-math">\(c\)</span> and <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> of <a href="Continuity.html" class="internal" title="Chapter 9: Continuity: What It Isn't and What It Is">Chapter 9</a>, we would have <span class="process-math">\(\lim_{n\rightarrow\infty}f(x_n)=f(c)\text{.}\)</span> This would say that the sequence <span class="process-math">\(\left(f(x_n)\right)\)</span> converges, so by <a href="" class="xref" data-knowl="./knowl/lemma_BoundedConvergent.html" title="Lemma 7.2.7">Lemma 7.2.7</a> of <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a>, it must be bounded. This would provide our contradiction, as we had <span class="process-math">\(|f(x_n)|&gt;n\text{,}\)</span> for all positive integers <span class="process-math">\(n\text{.}\)</span> <em class="alert">QED?</em></p>
+<p id="p-1014">This would all work well except for one little problem. The way it was constructed, there is no reason to expect the sequence <span class="process-math">\(\left(x_n\right)\)</span> to converge to anything and we can't make such an assumption. That is why we emphasized the <em class="alert">IF</em> above. Fortunately, this idea can be salvaged. While it is true that the sequence <span class="process-math">\(\left(x_n\right)\)</span> may not converge, part of it will. We will need the following definition.</p>
+<article class="definition definition-like" id="def_subsequences"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.3.2</span><span class="period">.</span>
+</h3>
+<p id="p-1015"> Let <span class="process-math">\(\left(n_k\right)_{k=1}^\infty\)</span> be a strictly increasing sequence of positive integers; that is, <span class="process-math">\(n_1\lt n_2\lt n_3\lt \cdots\)</span> . If <span class="process-math">\(\left(x_n\right)_{n=1}^\infty\)</span>is a sequence, then <span class="process-math">\(\left(x_{n_k}\right)_{k=1}^\infty=\left(x_{n_1},x_{n_2},x_{n_3},\ldots \right)\)</span> is called a {subsequence} of <span class="process-math">\(\left(x_n\right)\text{.}\)</span></p></article><p id="p-1016">The idea is that a subsequence of a sequence is a part of the sequence, <span class="process-math">\((x_n)\text{,}\)</span> which is itself a sequence. However, it is a little more restrictive. We can choose any term in our sequence to be part of the subsequence, but once we choose that term, we can't go backwards. This is where the condition <span class="process-math">\(n_1\lt n_2\lt n_3\lt \cdots\)</span> comes in. For example, suppose we started our subsequence with the term <span class="process-math">\(x_{100}\text{.}\)</span> We could not choose our next term to be <span class="process-math">\(x_{99}\text{.}\)</span> The subscript of the next term would have to be greater than 100. In fact, the thing about a subsequence is that it is all in the subscripts; we are really choosing a subsequence <span class="process-math">\(\left(n_k\right)\)</span> of the sequence of subscripts <span class="process-math">\(\left(n\right)\)</span> in <span class="process-math">\(\left(x_n\right)\text{.}\)</span></p>
+<article class="example example-like" id="example-14"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-14"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.3.3</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-14"><article class="example example-like"><div class="introduction" id="introduction-24"><p id="p-1017">Given the sequence <span class="process-math">\(\left(x_n\right)\text{,}\)</span> the following are subsequences.</p></div>
+<article class="task exercise-like" id="task-127"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-1018"><span class="process-math">\(\left(x_2,\,x_4,\,x_6,\,\ldots\right)=\left(x_{2k}\right)_{k=1}^\infty\)</span></p></article><article class="task exercise-like" id="task-128"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-1019"><span class="process-math">\(\left(x_1,\,x_4,\,x_9,\,\ldots\right)=\left(x_{k^2}\right)_{k=1}^ \infty\)</span></p></article><article class="task exercise-like" id="task-129"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-1020"><span class="process-math">\(\left(x_n\right)\)</span> itself.</p></article></article></div>
+<article class="example example-like" id="example-15"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-15"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.3.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-15"><article class="example example-like"><div class="introduction" id="introduction-25"><p id="p-1021">The following are NOT subsequences.</p></div>
+<article class="task exercise-like" id="task-130"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-1022"><span class="process-math">\(\left(x_1,\,x_1,\,x_1,\,\ldots\right)\)</span></p></article><article class="task exercise-like" id="task-131"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-1023"><span class="process-math">\(\left(x_{99},\,x_{100},\,x_{99},\,\ldots\right)\)</span></p></article><article class="task exercise-like" id="task-132"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-1024"><span class="process-math">\(\left(x_1,\,x_2,\,x_3\right)\)</span></p></article></article></div>
+<p id="p-1025">The subscripts in the examples we have seen so far have a discernable pattern, but this need not be the case. For example,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left(x_2,\,x_5,\,x_{12},\,x_{14},\,x_{23},\,\ldots\right)
+\end{equation*}
+</div>
+<p class="continuation">would be a subsequence as long as the subscripts form an increasing sequence themselves.</p>
+<article class="problem example-like" id="problem-146"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-146"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.3.5</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-146"><article class="problem example-like"><p id="p-1026"> Suppose <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=c\text{.}\)</span> Prove that <span class="process-math">\(\lim_{k\rightarrow\infty}x_{n_k}=c\)</span> for any subsequence <span class="process-math">\(\left(x_{n_k}\right)\)</span> of <span class="process-math">\(\left(x_n\right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-32" id="hint-32"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-32"><div class="hint solution-like"><p id="p-1027"><span class="process-math">\(n_k\geq k\text{.}\)</span></p></div></div>
+</div></article></div>
+<p id="p-1028">A very important theorem about subsequences was introduced by Bernhard Bolzano  and, later, independently proven  by Karl Weierstrass. Basically, this theorem says that any bounded sequence of real numbers has a convergent subsequence.</p>
+<article class="theorem theorem-like" id="BolzanoWeierstrass"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.3.6</span><span class="period">.</span>
+</h3>
+<p id="p-1029"><em class="alert">The Bolzano-Weierstrass Theorem</em></p>
+<p id="p-1030"> Let <span class="process-math">\(\left(x_n\right)\)</span> be a sequence of real numbers such that <span class="process-math">\(x_n\in[\,a,b]\text{,}\)</span> <span class="process-math">\(\forall\)</span> <span class="process-math">\(n\text{.}\)</span>  Then there exists <span class="process-math">\(c\in[\,a,b]\)</span> and a subsequence <span class="process-math">\(\left(x_{n_k}\right)\text{,}\)</span> such that <span class="process-math">\(\lim_{k\rightarrow\infty}x_{n_k}=c\text{.}\)</span></p></article><p id="p-1031">As an example of this theorem, consider the sequence</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left((-1)^n\right)=\left(-1,1,-1,1,\ldots\right) \text{.}
+\end{equation*}
+</div>
+<p id="p-1032">This sequence does not converge, but the subsequence</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left((-1)^{2k}\right)=\left(1,1,1,\ldots\right)
+\end{equation*}
+</div>
+<p class="continuation">converges to <span class="process-math">\(1\text{.}\)</span> This is not the only convergent subsequence, as <span class="process-math">\(\left((-1)^{2k+1}\right)=(-1,-1,-1,\,\ldots)\)</span> converges to <span class="process-math">\(-1\text{.}\)</span> Notice that if the sequence is unbounded, then all bets are off; the sequence may have a convergent subsequence or it may not. The sequences <span class="process-math">\(\left(\left((-1)^n+1\right)n\right)\)</span> and <span class="process-math">\(\left(n\right)\)</span> represent these possibilities as the first has, for example, <span class="process-math">\(\left(\left((-1)^{2k+1}+1\right)(2k+1)\right)=(0,0,0,\,\ldots)\)</span> and the second one has none.</p>
+<p id="p-1033">The Bolzano-Weierstrass Theorem says that no matter how “random” the sequence <span class="process-math">\(\left(x_n\right)\)</span> may be, as long as it is bounded then some part of it must converge. This is very useful when one has some process which produces a “random” sequence such as what we had in the idea of the alleged proof in <a href="" class="xref" data-knowl="./knowl/thm_CompactBounded.html" title="Theorem 10.3.1">Theorem 10.3.1</a>.</p>
+<article class="hiddenproof" id="proof-24"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-24"><h3 class="heading"><span class="title">Sketch of a Proof of the Bolzano-Weierstrass Theorem.</span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-24"><article class="hiddenproof"><p id="p-1034">Suppose we have our sequence <span class="process-math">\(\left(x_n\right)\)</span> such that <span class="process-math">\(x_n\in[a,b]\text{,}\)</span> <span class="process-math">\(\forall\)</span> <span class="process-math">\(n\text{.}\)</span> To find our <span class="process-math">\(c\)</span> for the subsequence to converge to we will use the NIP. Since we are already using <span class="process-math">\(\left(x_n\right)\)</span> as our original sequence, we will need to use different letters in setting ourselves up for the NIP. With this in mind, let <span class="process-math">\(a_1=a\)</span> and <span class="process-math">\(b_1=b\text{,}\)</span> and notice that <span class="process-math">\(x_n\in[a_1,b_1]\)</span> for infinitely many <span class="process-math">\(n\text{.}\)</span> (This is, in fact true for all <span class="process-math">\(n\text{,}\)</span> but you'll see why we said it the way we did.) Let <span class="process-math">\(m_1\)</span> be the midpoint of <span class="process-math">\([a_1,b_1]\)</span> and notice that either <span class="process-math">\(x_n\in[a_1,m_1]\)</span> for infinitely many <span class="process-math">\(n\)</span> or <span class="process-math">\(x_n\in[m_1,b_1]\)</span> for infinitely many <span class="process-math">\(n\text{.}\)</span> If <span class="process-math">\(x_n\in[a_1,m_1]\)</span> for infinitely many <span class="process-math">\(n\text{,}\)</span> then we relabel <span class="process-math">\(a_2=a_1\)</span> and <span class="process-math">\(b_2=m_1\text{.}\)</span> If <span class="process-math">\(x_n\in[m_1,b_1]\)</span> for infinitely many <span class="process-math">\(n\text{,}\)</span> then relabel <span class="process-math">\(a_2=m_1\)</span> and <span class="process-math">\(b_2=b_1\text{.}\)</span> In either case, we get <span class="process-math">\(a_1\leq a_2\leq b_2\leq b_1\text{,}\)</span> <span class="process-math">\(b_2-a_2=\frac{1}{2}\left(b_1-a_1\right)\text{,}\)</span> and <span class="process-math">\(x_n\in[a_2,b_2]\)</span> for infinitely many <span class="process-math">\(n\text{.}\)</span></p>
+<p id="p-1035">Now we consider the interval <span class="process-math">\([a_2,b_2]\)</span> and let <span class="process-math">\(m_2\)</span> be the midpoint of <span class="process-math">\([a_2,b_2]\text{.}\)</span> Since <span class="process-math">\(x_n\in[a_2,b_2]\)</span> for infinitely many <span class="process-math">\(n\text{,}\)</span> then either <span class="process-math">\(x_n\in[a_2,m_2]\)</span> for infinitely many <span class="process-math">\(n\)</span> or <span class="process-math">\(x_n\in[m_2,b_2]\)</span> for infinitely many <span class="process-math">\(n\text{.}\)</span> If <span class="process-math">\(x_n\in[a_2,m_2]\)</span> for infinitely many <span class="process-math">\(n\text{,}\)</span> then we relabel <span class="process-math">\(a_3=a_2\)</span> and <span class="process-math">\(b_3=m_2\text{.}\)</span> If <span class="process-math">\(x_n\in[m_2,b_2]\)</span> for infinitely many <span class="process-math">\(n\text{,}\)</span> then we relabel <span class="process-math">\(a_3=m_2\)</span> and <span class="process-math">\(b_3=b_2\text{.}\)</span> In either case, we get <span class="process-math">\(a_1\leq a_2\leq a_3\leq b_3\leq b_2\leq b_1\text{,}\)</span> <span class="process-math">\(b_3-a_3=\frac{1}{2}\left(b_2-a_2\right)=\frac{1}{2^2}\left(b_1-a_1\right)\text{,}\)</span> and <span class="process-math">\(x_n\in[a_3,b_3]\)</span> for infinitely many <span class="process-math">\(n\text{.}\)</span></p>
+<p id="p-1036">If we continue in this manner, we will produce two sequences <span class="process-math">\(\left(a_k\right)\)</span>and <span class="process-math">\(\left(b_k\right)\)</span> with the following properties:</p>
+<ol class="decimal">
+<li id="li-66"><p id="p-1037"><span class="process-math">\(\displaystyle a_1\leq a_2\leq a_3\leq\cdots\)</span></p></li>
+<li id="li-67"><p id="p-1038"><span class="process-math">\(\displaystyle b_1\geq b_2\geq b_3\geq\cdots\)</span></p></li>
+<li id="li-68"><p id="p-1039"><span class="process-math">\(\forall\)</span> <span class="process-math">\(k,\,a_k\leq b_k\)</span></p></li>
+<li id="li-69"><p id="p-1040"><span class="process-math">\(\displaystyle \displaystyle\lim_{k\rightarrow\infty}\left(b_k-a_k\right)=\,\lim_{k\rightarrow\infty} \frac{1}{2^{k-1}}\left(b_1-a_1\right)=0\)</span></p></li>
+<li id="li-70"><p id="p-1041">For each <span class="process-math">\(k\text{,}\)</span> <span class="process-math">\(x_n\in[\,a_k,b_k]\)</span> for infinitely many <span class="process-math">\(n\)</span></p></li>
+</ol>
+<p id="p-1042">By properties 1-5 and the NIP, there exists a unique <span class="process-math">\(c\)</span> such that <span class="process-math">\(c\in[a_k,b_k]\text{,}\)</span> for all <span class="process-math">\(k\text{.}\)</span> In particular, <span class="process-math">\(c\in[a_1,b_1]=[a,b]\text{.}\)</span></p>
+<p id="p-1043">We have our <span class="process-math">\(c\text{.}\)</span> Now we need to construct a subsequence converging to it. Since <span class="process-math">\(x_n\in[a_1,b_1]\)</span> for infinitely many <span class="process-math">\(n\text{,}\)</span> choose an integer <span class="process-math">\(n_1\)</span> such that <span class="process-math">\(x_{n_1}\in[a_1,b_1]\text{.}\)</span> Since <span class="process-math">\(x_n\in[a_2,b_2]\)</span> for infinitely many <span class="process-math">\(n\text{,}\)</span> choose an integer <span class="process-math">\(n_2&gt;n_1\)</span> such that <span class="process-math">\(x_{n_2}\in[a_2,b_2]\text{.}\)</span> (Notice that to make a subsequence it is crucial that <span class="process-math">\(n_2&gt;n_1\text{,}\)</span> and this is why we needed to insist that <span class="process-math">\(x_n\in[a_2,b_2]\)</span> for infinitely many <span class="process-math">\(n\text{.}\)</span>) Continuing in this manner, we should be able to build a subsequence <span class="process-math">\(\left(x_{n_k}\right)\)</span> that will converge to <span class="process-math">\(c\text{.}\)</span> You can supply the details in the following problem.</p></article></div>
+<article class="problem example-like" id="problem-147"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-147"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.3.7</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-147"><article class="problem example-like"><p id="p-1044"> Turn the ideas of the above outline into a formal proof of the Bolzano-Weierstrass Theorem.</p></article></div>
+<article class="problem example-like" id="problem-148"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-148"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.3.8</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-148"><article class="problem example-like"><p id="p-1045"> Use the Bolzano-Weierstrass Theorem to complete the proof of <a href="" class="xref" data-knowl="./knowl/thm_CompactBounded.html" title="Theorem 10.3.1">Theorem 10.3.1</a>.</p></article></div></section></div></main>
+</div>
+</body>
+</html>

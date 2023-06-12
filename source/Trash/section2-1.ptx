@@ -1,0 +1,553 @@
+
+
+<section>
+  <title>Newton and Leibniz Get Started</title>
+  <subsection xml:id="sec_leibn-calc-rules">
+    <title>Leibniz's Calculus Rules</title>
+    <figure>
+      <caption>Gottfried Wilhelm Leibniz<idx><h>Leibniz, Gottfried Wilhelm</h><h>portrait of</h></idx></caption>
+      <image width="35%" source="images/Leibniz.png" />
+    </figure>
+
+    <p>
+      The rules for calculus were first laid out in Gottfried Wilhelm Leibniz's 1684 paper<idx><h>Leibniz, Gottfried Wilhelm</h><h>first calculus publication</h></idx> <foreign>Nova methodus pro maximis et minimis,
+      itemque tangentibus,
+      quae nec fractas nec irrationales, quantitates moratur,
+        et singulare pro illi calculi genus</foreign> (A New Method for Maxima and Minima as Well as Tangents, Which is Impeded Neither by Fractional Nor by Irrational Quantities,
+      and a Remarkable Type of Calculus for This). Leibniz started with subtraction.
+      That is, if <m>x_1</m> and <m>x_2</m> are very close together then their difference,
+      <m>\Delta x=x_2-x_1</m>, is very small.
+      He expanded this idea to say that if <m>x_1</m> and <m>x_2</m> are
+      <em>infinitely</em> close together
+      (but still distinct)
+      then their difference, <m>\d x</m>, is infinitesimally small
+      (but not zero).
+    </p>
+
+    <p>
+      This idea is logically very suspect and Leibniz knew it.
+      But he also knew that when he used his
+      <foreign>calculus differentialis</foreign><fn>
+      This translates, loosely, as the calculus of differences.
+      </fn> he was getting correct answers to some very hard problems.
+      So he persevered.
+    </p>
+
+    <p>
+      Leibniz called both <m>\Delta x</m> and <m>\d x</m> <q>differentials</q>
+      (Latin for difference) because he thought of them as,
+      essentially, the same thing.
+      Over time it has become customary to refer to the infinitesimal <m>\d x</m> as a differential,
+      reserving <q>difference</q> for the finite case, <m>\Delta x</m>.
+      This is why calculus is often called
+      <q>differential calculus.</q>
+    </p>
+
+    <p>
+      In his paper Leibniz gave rules for dealing with these infinitely small differentials.
+      Specifically, given a variable quantity <m>x</m>,
+      <m>dx</m> represented an infinitesimal change in <m>x</m>.
+      Differentials are related via the slope of the tangent line to a curve.
+      That is, if <m>y=f(x)</m>, then <m>\d y</m> and <m>\d x</m> are related by
+      <me>
+        \d y=\text{ (slope of the tangent line) } \cdot \d x
+      </me>.
+    </p>
+
+    <p>
+      Leibniz then divided by <m>\d x</m> giving
+      <me>
+        \dfdx{y}{x}= \text{ (slope of the tangent line). }
+      </me>
+    </p>
+
+    <p>
+      The elegant and expressive notation Leibniz invented was so useful that it has been retained through the years despite some profound changes in the underlying concepts.
+      For example, Leibniz and his contemporaries would have viewed the symbol
+      <m>\dfdx{y}{x}</m> as an actual quotient of infinitesimals,
+      whereas today we define it via the limit concept first suggested by Newton.
+          <idx><h>Newton, Isaac</h></idx>
+    </p>
+
+    <p>
+      As a result the rules governing these differentials are very modern in appearance:
+          <idx><h>Leibniz, Gottfried Wilhelm</h><h>differentiation rules</h></idx>
+      <md>
+        <mrow>\d(\text{ constant } )\amp =0</mrow>
+        <mrow>\d(z-y+w+x)\amp =\d z-\d y+\d w+\d x</mrow>
+        <mrow>\d(xv)\amp =x\d v+v\d x</mrow>
+        <mrow>\d\left(\frac{v}{y}\right)\amp =\frac{y\d v-v\d y}{yy}</mrow>
+        <intertext>and, when <m>a</m> is an integer:</intertext>
+        <mrow>\d(x^a)\amp =ax^{a-1}\d x</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Leibniz states these rules without proof:
+      <q>. . . the demonstration of all this will be easy to one who is experienced in such matters . . ..</q> As an example,
+      mathematicians in Leibniz's day would be expected to understand intuitively that if <m>c</m> is a constant,
+      then <m>d(c)=c-c=0</m>.
+      Likewise, <m>d(x+y)=dx+dy</m> is really an extension of <m>(x_2+y_2)-(x_1+y_1)=(x_2-x_1)+(y_2-y_1)</m>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="LeibnizProductRule">
+    <title>Leibniz's Approach to the Product Rule</title>
+    <p>
+      The explanation of the product rule using differentials is a bit more involved,
+      but Leibniz<idx><h>Leibniz, Gottfried Wilhelm</h></idx> expected that mathematicans would be fluent enough to derive it.
+      The product <m>p=xv</m> can be thought of as the area of the following rectangle
+    </p>
+
+    <p>
+      <image width="50%" source="images/fig1.png" />
+    </p>
+
+    <p>
+      With this in mind,
+      <m>\d p=\d(xv)</m> can be thought of as the change in area when <m>x</m> is changed by <m>\d x</m> and <m>v</m> is changed by <m>\d v</m>.
+      This can be seen as the L shaped region in the following drawing.
+      <image width="90%" source="images/fig2.png" />
+    </p>
+
+    <p>
+      By dividing the L shaped region into 3 rectangles we obtain
+      <men xml:id="eq_LeibnizProductRule">
+        \d(xv)=x\d v+v\d x+\d x\,\d v
+      </men>.
+    </p>
+
+    <p>
+      Even though <m>\d x</m> and <m>\d v</m> are infinitely small, Leibniz reasoned that <m>\d x\,\d v</m> is
+      <em>even more</em> infinitely small
+      (quadratically infinitely small?)
+      compared to <m>x\d v</m> and <m>v\d x</m> and can thus be ignored leaving
+      <me>
+        \d (xv)=x\d v+v\d x
+      </me>.
+    </p>
+
+    <p>
+      You should feel some discomfort at the idea of simply tossing the product <m>\d x\,\d v</m> aside because it is
+      <q>comparatively small.</q>
+      This means you have been well trained,
+      and have thoroughly internalized Newton's 
+          <idx><h>Newton, Isaac</h></idx>
+      dictum<nbsp /><xref ref="newton45__sir_isaac_two_treat_quadr" />:
+      <q>The smallest errors may not, in mathematical matters,
+      be scorned.</q> It is logically untenable to toss aside an expression just because it is small.
+      Even less so should we be willing to ignore an expression on the grounds that it is
+      <q>infinitely smaller</q>
+      than another quantity which is itself
+      <q>infinitely small.</q>
+    </p>
+
+    <p>
+      Newton and Leibniz both knew this as well as we do.
+      But they also knew that their methods <em>worked</em>.
+      They gave verifiably correct answers to problems which had,
+      heretofore, been completely intractable.
+      It is the mark of their genius that both men persevered in spite of the very evident difficulties their methods entailed.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Newton's Approach to the Product Rule</title>
+    <p>
+      In the Principia, Newton <q>proved</q>
+      the Product Rule as follows: Let <m>x</m> and <m>v</m> be <q>flowing<fn>
+      Newton's approach to calculus <mdash /> his <sq>Method of Fluxions</sq> <mdash /> depended fundamentally on motion.
+      That is, he viewed his variables (fluents) as changing
+      (flowing or fluxing)
+      in time.
+      The rate of change of a fluent he called a fluxion.
+      As a foundation both Leibniz's and Newton's approaches have fallen out of favor,
+      although both are still universally used as a conceptual approach,
+      a <q>way of thinking,</q> about the ideas of calculus.
+      </fn> quantites</q>
+      and consider the rectangle, <m>R</m>,
+      whose sides are <m>x</m> and <m>v</m>.
+      <m>R</m> is also a flowing quantity and we wish to find its fluxion (derivative) at any time.
+    </p>
+
+    <p>
+      First increment <m>x</m> and <m>v</m> by
+      <m>\frac{\Delta x}{2}</m> and <m>\frac{\Delta v}{2}</m> respectively.
+      Then the corresponding increment of <m>R</m> is
+      <men xml:id="eq_prodruleinc">
+        \left(x+\frac{\Delta x}{2}\right)\left(v+\frac{\Delta v}{2}\right) = xv + x\frac{\Delta v}{2} + v\frac{\Delta x}{2} +\frac{\Delta x\Delta v}{4}
+      </men>.
+    </p>
+
+    <p>
+      Now decrement <m>x</m> and <m>v</m> by the same amounts:
+      <men xml:id="eq_prodruledec">
+        \left(x-\frac{\Delta x}{2}\right)\left(v-\frac{\Delta v}{2}\right) = xv - x\frac{\Delta v}{2} - v\frac{\Delta x}{2} + \frac{\Delta x\Delta v}{4}
+      </men>.
+    </p>
+
+    <p>
+      Subtracting the right side of <xref ref="eq_prodruledec">equation</xref>
+      from the right side of <xref ref="eq_prodruleinc">equation</xref> gives
+      <me>
+        \Delta R = x\Delta v + v\Delta x
+      </me>
+      which is the total change of <m>R = xv</m> over the intervals <m>\Delta x</m> and
+      <m>\Delta v</m> and also recognizably the Product Rule.
+    </p>
+
+    <figure>
+      <caption>Isaac Newton<idx><h>Newton, Isaac</h><h>portrait of</h></idx></caption>
+      <image width="35%" source="images/Newton.png" />
+    </figure>
+
+    <p>
+      This argument is no better than Leibniz's as it relies heavily on the number <m>1/2</m> to make it work.
+      If we take any other increments in <m>x</m> and <m>v</m> whose total lengths are <m>\Delta x</m> and
+      <m>\Delta v</m> it will simply not work.
+      Try it and see.
+    </p>
+
+    <p>
+      In Newton's defense,
+      he wasn't really trying to justify his mathematical methods in the Principia.
+      His attention there was on physics, not math,
+      so he was really just trying to give a convincing demonstration of his methods.
+      You may decide for yourself how convincing his demonstration is.
+    </p>
+
+    <p>
+      Notice that there is no mention of limits of difference quotients or derivatives.
+      In fact, the term derivative was not coined until 1797, by Lagrange.
+          <idx><h>Lagrange, Joseph-Louis</h></idx>
+      In a sense, these topics were not necessary at the time,
+      as Leibniz and Newton both assumed that the curves they dealt with had tangent lines and,
+      in fact, Leibniz explicitly used the tangent line to relate two differential quantities.
+      This was consistent with the thinking of the time and for the duration of this chapter we will also assume that all quantities are differentiable.
+      As we will see later this assumption leads to difficulties.
+    </p>
+
+    <p>
+      Both Newton and Leibniz were satisfied that their calculus provided answers that agreed with what was known at the time.
+      For example <m>\d \left(x^2\right)=\d \left(xx\right)=x\d x+x\d x=2x\d x</m> and <m>\d\left(x^3\right)=\d\left(x^2x\right)=x^2\d x+x\d\left(x^2\right)</m>
+      <m>=x^2+x\left(2x\d x\right)=3x^2\d x</m>,<m></m> results that were essentially derived by others in different ways.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>Leibniz, Gottfried Wilhelm</h><h>Leibniz's product rule</h></idx>
+              <idx><h>Leibniz's product rule</h></idx>
+          <ol label="(a)">
+            <li>
+              <p>
+                Use Leibniz's product rule
+                <m>\d \left(xv\right)=x\d v+v\d x</m> to show that if <m>n</m> is a positive integer then <m>\d \left(x^n\right)=nx^{n-1}\d x</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Use Leibniz's product rule to derive the quotient rule
+                <me>
+                  \d \left(\frac{v}{y}\right)=\frac{y\,\d v-v\,\d y}{yy}
+                </me>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Use the quotient rule to show that if <m>n</m>is a positive integer, then
+                <me>
+                  \d \left(x^{-n}\right)=-nx^{-n-1}\d x.{}
+                </me>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          <idx><h>differentiation</h><h>power rule with fractional exponents</h></idx>
+          Let <m>p</m> and <m>q</m> be integers with <m>q\neq 0</m>.
+          Show <m>\d \left(x^{\frac{p}{q}}\right)=\frac{p}{q}x^{\frac{p}{q}-1}\d x</m>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Leibniz also provided applications of his calculus to prove its worth.
+      As an example he derived Snell's Law of Refraction from his calculus rules as follows.
+    </p>
+
+    <p>
+      Given that light travels through air at a speed of <m>v_a</m> and travels through water at a speed of <m>v_w</m> the problem is to find the fastest path from point <m>A</m> to point <m>B</m>.
+      <image width="75%" source="images/snellfig.png" />
+    </p>
+
+    <p>
+      According to Fermat's Principle of Least Time,
+      this fastest path is the one that light will travel.
+    </p>
+
+    <p>
+      Using the fact that <m>\text{ Time } =\text{ Distance } /\text{ Velocity }</m> and the labeling in the picture below we can obtain a formula for the time <m>T</m> it takes for light to travel from <m>A</m> to <m>B</m>.
+      <image width="75%" source="images/snellfig2.png" />
+      <me>
+        T=\frac{\sqrt{x^2+a^2}}{v_a}+\frac{\sqrt{(c-x)^2+b^2}}{v_w}
+      </me>
+    </p>
+
+    <p>
+      Using the rules of Leibniz's calculus, we obtain
+      <md>
+        <mrow>\d T\amp = \left(\frac{1}{v_a}\frac{1}{2}\left(x^2+a^2\right)^{-\frac{1}{2}} (2x)+\frac{1}{v_w}\frac{1}{2}((c-x)^2+b^2)^{-\frac{1}{2}}(2(c-x)(-1))\right) \d x</mrow>
+        <mrow>\amp =\left(\frac{1}{v_a}\frac{x}{\sqrt{x^2+a^2}}-\frac{1}{v_w}\frac{c-x}{\sqrt{(c-x)^2+b^2}}\right)\d x</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Using the fact that at the minimum value for <m>T</m>,
+      <m>\d T=0</m>,
+      we have that the fastest path from <m>A</m>to <m>B</m> must satisfy <m>\frac{1}{v_a}\frac{x}{\sqrt{x^2+a^2}}=\frac{1}{v_w}\frac{c-x}{\sqrt{(c-x)^2+b^2}}</m>.
+      Inserting the following angles 
+      <image width="75%" source="images/snellfig3.png" />
+    </p>
+
+    <p>
+      we get that the path that light travels must satisfy
+      <m>\frac{\text{ sin } \theta_a}{v_a}=\frac{\text{ sin } \,\theta_w}{v_w}</m> which is Snell's Law.
+    </p>
+
+    <p>
+      To compare 18th century and modern techniques we will consider Johann Bernoulli's solution of the 
+          <idx><h>Bernoulli, Johann</h></idx>
+          <idx><h>Brachistochrone problem, the</h></idx>
+      Brachistochrone problem.
+      In 1696, Bernoulli posed, and solved,
+      the Brachistochrone problem;
+      that is, to find the shape of a frictionless wire joining points A and B so that the time it takes for a bead to slide down under the force of gravity is as small as possible.
+    </p>
+
+    <p>
+      <image width="75%" source="images/brachfig1.png" />
+    </p>
+
+    <p>
+      Bernoulli posed this <q>path of fastest descent</q>
+      problem to challenge the mathematicians of Europe and used his solution to demonstrate the power of Leibniz's calculus as well as his own ingenuity.
+          <idx><h>Bernoulli, Johann</h><h>Bernoulli's challenge</h></idx>
+    </p>
+
+    <sidebyside widths="85%" margins="auto" valign="middle">
+      <p>
+        I, Johann Bernoulli, address the most brilliant mathematicians in
+        the world. Nothing is more attractive to intelligent people than
+        an honest, challenging problem, whose possible solution will
+        bestow fame and remain as a lasting monument. Following the
+        example set by Pascal, Fermat, etc., I hope to gain the gratitude
+        of the whole scientific community by placing before the finest
+        mathematicians of our time a problem which will test their methods
+        and the strength of their intellect. If someone communicates to me
+        the solution of the proposed problem, I shall publicly declare him
+        worthy of praise. <xref ref="Bernoulli_bio_mactutor" />
+      </p>    
+    </sidebyside>
+
+    <figure>
+      <caption>Johann Bernoulli<idx><h>Bernoulli, Johann</h><h>portrait of</h></idx></caption>
+      <image width="35%" source="images/BernoulliJohann.png" />
+    </figure>
+
+    <p>
+      In addition to Johann's, solutions were obtained from Newton, 
+          <idx><h>Newton, Isaac</h></idx>
+      Leibniz, Johann's brother Jacob Bernoulli, 
+          <idx><h>Bernoulli Jacob</h></idx>
+      and the Marquis de l'Hopital<nbsp /><xref ref="struik69__sourc_book_mathem" />.
+      At the time there was an ongoing and very vitriolic controversy raging over whether Newton or Leibniz had been the first to invent calculus.
+      An advocate of the methods of Leibniz, Bernoulli did not believe Newton would be able to solve the problem using his methods.
+      Bernoulli attempted to embarrass Newton by sending him the problem.
+      However Newton did solve it.
+    </p>
+
+    <p>
+      At this point in his life Newton had all but quit science and mathematics and was fully focused on his administrative duties as Master of the Mint.
+      In part due to rampant counterfeiting, England's money had become severely devalued and the nation was on the verge of economic collapse.
+      The solution was to recall all of the existing coins,
+      melt them down, and strike new ones.
+      As Master of the Mint this job fell to Newton<nbsp /><xref ref="levenson09__newton_count" />.
+      As you might imagine this was a rather Herculean task.
+      Nevertheless, according to his niece:
+    </p>
+
+    <sidebyside widths="85%" margins="auto" valign="middle">
+      <p>
+      When the problem in 1696 was sent by Bernoulli<ndash />Sir I.N. was in
+      the midst of the hurry of the great recoinage and did not come
+      home till four from the Tower very much tired, but did not sleep
+      till he had solved it, which was by four in the morning.
+      </p>
+    </sidebyside>
+
+    <p>
+      He is later reported to have complained, "I do not love . . . to be . . . teezed by forreigners about Mathematical things"  <xref ref="dunham90__journ_throug_genius" />.
+    </p>
+
+    <p>
+      Newton submitted his solution anonymously,
+      presumably to avoid more controversy.
+      Nevertheless the methods used were so distinctively Newton's that Bernoulli <idx><h>Bernoulli, Johann</h><h>Tanquam ex ungue leonem</h></idx> is said to have exclaimed
+      <q><foreign>Tanquam ex ungue leonem</foreign>.</q><fn>  I know the lion
+      by his claw.
+      </fn> 
+    </p>
+
+    <p>
+          <idx><h>Brachistochrone problem, the</h><h>Bernoulli's solution</h></idx>
+      Bernoulli's ingenious solution starts, interestingly enough, with Snell's Law of Refraction.
+      He begins by considering the stratified medium in the following figure,
+      where an object travels with velocities
+      <m>v_1,\,v_2,\,v_3,\,\ldots</m> in the various layers.
+      <image width="75%" source="images/brachfig2.png" />
+    </p>
+
+    <p>
+      By repeatedly applying Snell's Law he concluded that the fastest path must satisfy
+      <me>
+        \frac{\sin \theta_1}{v_1}=\frac{\sin \theta_2}{v_2}=\frac{\sin\theta_3}{v_3}=\cdots
+      </me>.
+    </p>
+
+    <p>
+      In other words,
+      the ratio of the sine of the angle that the curve makes with the vertical and the speed remains constant along this fastest path.
+    </p>
+
+    <p>
+      If we think of a continuously changing medium as stratified into infinitesimal layers and extend Snell's law to an object whose speed is constantly changing,
+        <image width="75%" source="images/snellfig4.png"/>
+      then along the fastest path,
+      the ratio of the sine of the angle that the curve's tangent makes with the vertical,
+      <m>\alpha</m>, and the speed,
+      <m>v</m>, must remain constant.
+      <me>
+        \frac{\text{ sin } \alpha}{v}=c
+      </me>.
+    </p>
+
+    <p>
+      If we include axes and let <m>P</m> denote the position of the bead at a particular time then we have the following picture.
+        <image width="75%" source="images/snellfig5.png" />
+    </p>
+
+    <p>
+      In the above figure,
+      <m>s</m> denotes the length that the bead has traveled down to point <m>P</m>(that is,
+      the arc length of the curve from the origin to that point) and <m>a</m> denotes the tangential component of the acceleration due to gravity <m>g</m>.
+      Since the bead travels only under the influence of gravity then <m>\frac{\d v}{\d t}=a</m>.
+    </p>
+
+    <p>
+      To get a sense of how physical problems were approached using Leibniz's calculus we will use the above equation to show that <m>v=\sqrt{2gy}</m>.
+    </p>
+
+    <p>
+      By similar triangles we have <m>\frac{a}{g}=\frac{\d y}{\d s}</m>.
+      As a student of Leibniz, Bernoulli would have regarded <m>\frac{\d y}{\d s}</m> as a fraction so
+      <md>
+        <mrow>a\d s \amp = g\d y</mrow>
+        <intertext>and since acceleration is the rate of change of velocity we have</intertext>
+        <mrow>\frac{\d v}{\d t}\d s \amp = g\d y.</mrow>
+        <intertext>Again, 18th century European mathematicians regarded <m>\d v, \d t</m>, and <m>\d s</m> as infinitesimally small numbers which nevertheless obey all of the usual rules of algebra. Thus we can rearrange the above to get</intertext>
+        <mrow>\frac{\d s}{\d t}\d v \amp = g\d y.</mrow>
+        <intertext>Since <m>\frac{\d s}{\d t}</m> is the rate of change of position with respect to time it is, in fact, the velocity of the bead. That is</intertext>
+        <mrow>v\d v \amp = g\d y.</mrow>
+        <intertext>Bernoulli would have interpreted this as a statement that two rectangles of height <m>v</m> and <m>g</m>, with respective widths <m>\d v</m> and <m>\d y</m> have equal area. Summing (integrating) all such rectangles we get:</intertext>
+        <mrow>\int{}v\d v \amp = \int{}g\d y</mrow>
+        <mrow>\frac{v^2}{2} \amp = gy</mrow>
+      </md>
+      or
+      <men xml:id="eq_brach_vel">
+        v=\sqrt{2gy}
+      </men>.
+    </p>
+
+    <p>
+      You are undoubtedly uncomfortable with the cavalier manipulation of infinitesimal quantities you've just witnessed,
+      so we'll pause for a moment now to compare a modern development of <xref ref="eq_brach_vel">equation</xref> to Bernoulli's.
+      As before we begin with the equation:
+      <md>
+        <mrow>\frac{a}{g}\amp = \dfdx{y}{s}</mrow>
+        <mrow>a \amp = g\dfdx{y}{s}.</mrow>
+        <intertext>Moreover, since acceleration is the derivative of velocity this is the same as:</intertext>
+        <mrow>\dfdx{v}{t} \amp = g\dfdx{y}{s}.</mrow>
+        <intertext>Now observe that by the Chain Rule <m>\dfdx{v}{t} = \dfdx{v}{s}\dfdx{s}{t}</m>. The physical interpretation of this formula is that velocity will depend on <m>s</m>, how far down the wire the bead has moved, but that the distance traveled will depend on how much time has elapsed. Therefore</intertext>
+        <mrow>\dfdx{v}{s}\dfdx{s}{t} \amp = g\dfdx{y}{s}</mrow>
+        <intertext>or</intertext>
+        <mrow>\dfdx{s}{t}\dfdx{v}{s} \amp = g\dfdx{y}{s}</mrow>
+        <intertext>and since <m>\dfdx{s}{t} = v</m> we have</intertext>
+        <mrow>v\dfdx{v}{s} \amp = g\dfdx{y}{s}</mrow>
+        <intertext>Integrating both sides with respect to <m>s</m> gives:</intertext>
+        <mrow>\int{}v\dfdx{v}{s}d s \amp = g\int{}\dfdx{y}{s}d s</mrow>
+        <mrow>\int{}vd v \amp = g\int{}d y</mrow>
+        <intertext>and integrating gives</intertext>
+        <mrow>\frac{v^2}{2} \amp = gy</mrow>
+      </md>
+      as before.
+    </p>
+
+    <p>
+      In effect, in the modern formulation we have traded the simplicity and elegance of differentials for a comparatively cumbersome repeated use of the Chain Rule.
+      No doubt you noticed when taking Calculus that in the differential notation of Leibniz,<idx><h>Leibniz, Gottfried Wilhelm</h></idx> the Chain Rule looks like <q>canceling</q>
+      an expression in the top and bottom of a fraction:
+      <m>\dfdx{y}{u}\dfdx{u}{x} = \dfdx{y}{x}</m>.
+      This is because for 18th century mathematicians,
+      this is exactly what it was.
+    </p>
+
+    <p>
+      To put it another way, 18th century mathematicians wouldn't have recognized a need for what we call the Chain Rule because this operation was a triviality for them.
+      Just reduce the fraction.
+      This begs the question: Why did we abandon such a clear,
+      simple interpretation of our symbols in favor of the,
+      comparatively, more cumbersome modern interpretation?
+      This is one of the questions we will try to answer in this course.
+    </p>
+
+    <p>
+      Returning to the Brachistochrone problem we observe that
+      <mdn>
+        <mrow number="no">\frac{\sin\alpha}{v} \amp = c</mrow>
+        <intertext>and since <m>\sin\alpha = \frac{d x}{d s}</m>   we see that</intertext>
+        <mrow number="no">\frac{\frac{d x}{d s}}{\sqrt{2gy}} \amp = c</mrow>
+        <mrow number="no">\frac{d x}{\sqrt{2gy(ds)^2}} \amp = c</mrow>
+        <mrow xml:id="eq_Brachistochrone">\frac{d x}{\sqrt{2gy\left[(d x)^2+(d y)^2\right]}} \amp = c</mrow>
+      </mdn>.
+    </p>
+
+    <p>
+      Bernoulli was then able to solve this differential equation.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>Brachistochrone problem, the</h></idx>
+          Show that the equations <m>x=\frac{t-\sin t}{4gc^2},\,y=\frac{1-\cos t}{4gc^2}</m> satisfy equation <xref ref="eq_Brachistochrone"></xref>.
+          Bernoulli recognized this solution to be an inverted cycloid,
+          the curve traced by a fixed point on a circle as the circle rolls along a horizontal surface.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      This illustrates the state of calculus in the late 1600's and early 1700's;
+      the foundations of the subject were a bit shaky but there was no denying its power.
+    </p>
+  </subsection>
+</section>
+

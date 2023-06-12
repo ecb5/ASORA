@@ -1,0 +1,415 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chpt_BackToFourier">
+  <title>Back to the Real Numbers</title>
+  <introduction>
+    <p>
+      As we have seen, when they converge,
+      power series are very well behaved and Fourier (trigonometric) series are not necessarily.
+      The fact that trigonometric series were so interesting made them a lightning rod for mathematical study in the late nineteenth century.
+    </p>
+
+    <p>
+      For example, consider the question of uniqueness.
+      We saw in <xref ref="chapt_taylor-series">Chapter</xref>
+      that if a function could be represented by a power series,
+      then that series must be the Taylor series.
+      More precisely, if
+      <me>
+        f(x)=\sum_{n=0}^\infty a_n(x-a)^n, \text{  then  }  a_n=\frac{f^{(n)}(a)}{n!}
+      </me>.
+    </p>
+
+    <p>
+      But what can be said about the uniqueness of a trigonometric series?
+      If we can represent a function <m>f</m> as a general trigonometric series
+      <me>
+        f(x)=\sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x)
+      </me>,
+      then must this be the Fourier series with the coefficients as determined by Fourier?
+          <idx><h>Fourier, Jean Baptiste Joseph</h></idx>
+    </p>
+
+    <p>
+      For example,
+      if <m>\sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x)</m> converges to <m>f</m> uniformly on the interval <m>(0,1)</m>,
+      then because of the uniform convergence, Fourier's term-by-term integration which we saw in <xref ref="Interregnum">Part</xref>
+      is perfectly legitimate and the coefficients are,
+      of necessity, the coefficients he computed.
+      However we have seen that the convergence of a Fourier series need not be uniform.
+      This does not mean that we cannot integrate term-by-term,
+      but it does say that we can't be sure that term-by-term integration of a Fourier series will yield the integral of the associated function.
+    </p>
+
+    <p>
+          <idx><h>Lebesgue, Henri</h></idx> 
+          <idx><h>Cantor, Georg</h></idx> 
+          This led to a generalization of the integral by Henri
+          Lebesgue in 1905.  Lebesgue's profound work settled the
+          issue of whether or not a bounded pointwise converging
+          trigonometric series is the Fourier series of a function,
+          but we will not go in this direction.  We will instead focus
+          on work that Georg Cantor did in the years just prior.
+          Cantor's work was also profound and had far reaching
+          implications in modern mathematics.  It also leads to some
+          very weird conclusions.<fn> 'Weird' does not mean false.  It
+          simply means that some of Cantor's results can be hard to
+          accept, even after you have seen the proof and verified its
+          validity.
+      </fn> 
+    </p>
+
+    <p>
+      To begin, let's suppress the underlying function and suppose we have
+      <me>
+        \sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x) = \sum_{n=0}^\infty(a^\prime_n\cos n\pi x\,+b^\prime_n\sin n\pi x)
+      </me>.
+    </p>
+
+    <p>
+      We ask: If these two series are equal must it be true that <m>a_n=a^\prime_n</m> and
+      <m>b_n=b^\prime_n?</m> We can reformulate this uniqueness question as follows: Suppose
+      <me>
+        \sum_{n=0}^\infty\left((a_n-a^\prime_n)\cos n\pi x\,+(b_n-b^\prime_n)\sin n\pi x\right) = 0
+      </me>.
+    </p>
+
+    <p>
+      If we let <m>c_n = a_n-a^\prime_n</m> and <m>d_n = b_n=b^\prime_n</m>,
+      then the question becomes: If <m>\sum_{n=0}^\infty\left(c_n\cos n\pi x\,+d_n\sin n\pi x\right) = 0</m>,
+      then will <m>c_n=d_n=0?</m> It certainly seems reasonable to suppose so,
+      but at this point we have enough experience with infinite sums to know that we need to be <em>very</em>
+      careful about relying on the intuition we have honed on finite sums.
+    </p>
+
+    <p>
+      <idx>
+          <h>Cantor, Georg</h>
+           <h>and the modern view of mathematics</h>
+      </idx>
+      The answer to this seemingly basic question leads to some very
+      profound results.  In particular, answering this question led
+      the mathematician Georg Cantor (1845-1918) to study the makeup
+      of the real number system.  This in turn opened the door to the
+      modern view of mathematics of the twentieth century.  In
+      particular, Cantor proved the following result in 1871<nbsp
+      />(<xref ref="jahnke03__histor_analy"/>, p. 305).
+    </p>
+
+    <theorem xml:id="thm_Cantor-uniqueness-of-trig-series">
+      <statement>
+        <p>
+          <alert>Cantor</alert>
+        </p>
+        <p>
+          <idx>
+              <h>Cantor, Georg</h>
+          </idx> 
+           <idx>
+              <h>Cantor, Georg</h>
+               <h>uniqueness of Fourier series</h>
+                <h>first theorem on</h>
+           </idx> 
+           <idx>
+             <h>Fourier Series</h>
+             <h>Cantor's first theorem on uniqueness</h>
+           </idx>
+         If the trigonometric series
+          <me>
+            \sum_{n=0}^\infty\left(c_n\cos n\pi  x\,+d_n\sin n\pi x\right) = 0
+          </me>,
+        </p>
+
+        <p>
+          <q>with the exception of certain values of <m>x</m>,</q>
+          then all of its coefficients vanish.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      In his attempts to nail down precisely which <q>certain values</q>
+      could be exceptional, Cantor was led to examine the nature of subsets of real numbers and ultimately to give a precise definition of the concept of infinite sets and to define an arithmetic of
+      <q>infinite numbers.</q> (Actually,
+      he called them {transfinite numbers} because,
+      by definition, numbers are finite.)
+    </p>
+
+    <p>
+      As a first step toward identifying those
+      <q>certain values,</q> Cantor 
+      proved the following theorem,
+      which we will state but not prove.
+    </p>
+
+    <theorem xml:id="thm_Cantor_1870">
+      <statement>
+        <p>
+          <alert>Cantor, (1870)</alert>
+        </p>
+        <p>
+          <idx>
+              <h>Cantor, Georg</h>
+               <h> uniqueness of Fourier series</h>
+                <h>second theorem</h></idx>
+           <idx>
+             <h>Fourier Series</h>
+             <h>Cantor's second theorem on uniqueness</h>
+           </idx>
+   If the trigonometric series
+          <me>
+            \sum_{n=0}^\infty\left(c_n\cos n\pi  x\,+d_n\sin n\pi x\right) = 0
+          </me>,
+          for all <m>x\in\RR</m> then all of its coefficients vanish.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      He then extended this to the following:
+    </p>
+
+    <theorem xml:id="thm_Cantor-1871-b">
+      <statement>
+        <p>
+          <alert>Cantor, (1871)</alert>
+        </p>
+        <p>
+          <idx>
+            <h>Cantor, Georg</h>
+             <h>uniqueness of Fourier series</h>
+              <h>third theorem on</h>
+          </idx> 
+           <idx>
+             <h>Fourier Series</h>
+             <h>Cantor's third theorem on uniqueness</h>
+           </idx>
+          If the trigonometric series
+          <me>
+            \sum_{n=0}^\infty\left(c_n\cos n\pi  x\,+d_n\sin n\pi x\right) = 0
+          </me>,
+          for all but finitely many <m>x\in\RR</m> then all of its coefficients vanish.
+        </p>
+      </statement>
+    </theorem>
+
+    <figure>
+      <caption>Georg Cantor
+       <idx><h>Cantor, Georg</h>
+             <h>portrait of</h>
+       </idx>
+      </caption>
+      <image width="35%" source="images/Cantor.png" />
+    </figure>
+
+    <p>
+      Observe that this is not a trivial generalization.
+      Although the exceptional points are constrained to be finite in number,
+      this number could still be extraordinarily large.
+      That is, even if the series given above differed from zero on
+      <m>10^{10^{100000}}</m> distinct points in the interval
+      <m>(0, 10^{10^{-100000}})</m> the coefficients still vanish.
+      This remains true even if at each of these
+      <m>10^{10^{100000}}</m> points the series converges to <m>10^{10^{100000}}</m>.
+      This is truly remarkable when you think of it this way.
+    </p>
+
+    <p>
+      At this point Cantor became more interested in these exceptional points than in the Fourier series problem that he'd started with.
+      The next task he set for himself was to see just how general the set of exceptional points could be.
+      Following Cantor's lead we make the following definitions.
+    </p>
+
+    <definition xml:id="def_accumulation-point">
+      <statement>
+        <p>
+              <idx><h>limit</h><h>accumulation point</h></idx>
+              <idx><h>accumulation point</h></idx>
+          Let <m>S\subseteq \RR</m> and let <m>a</m> be a real number.
+          We say that <m>a</m> is a <term>limit point</term>
+          (or an <term>accumulation point</term>)
+          of <m>S</m> if there is a sequence <m>(a_n)</m> with
+          <m>a_n\in S-\left\{a\right\}</m> which converges to <m>a</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>accumulation points</h></idx>
+              <idx><h>accumulation points</h></idx>
+          Let <m>S\subseteq\RR</m> and let <m>a</m> be a real number.
+          Prove that <m>a</m> is a limit point of <m>S</m> if and only if for every <m>\eps>0</m> the intersection
+          <me>
+            (a-\eps, a+\eps) \cap S-\left\{a\right\} \neq \emptyset.{}
+          </me>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The following definition gets to the heart of the matter.
+    </p>
+
+    <definition xml:id="def_derived-set">
+      <statement>
+        <p>
+              <idx><h>derived sets</h></idx>
+          Let <m>S\subseteq\RR</m>.
+          The set of all limit points of <m>S</m> is called the
+          <term>derived set</term> of <m>S</m>.
+          The derived set is denoted <m>S^{\prime}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Don't confuse the derived set of a set with the derivative of a function.
+      They are completely different objects despite the similarity of both the language and notation.
+      The only thing that they have in common is that they were somehow
+      <q>derived</q> from something else.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          <idx><h>derived sets</h></idx>
+          Determine the derived set, <m>S^\prime</m>, of each of the following sets.
+
+          <ol label="(a)">
+            <li>
+              <title>\hskip1in{}(a)</title>
+              <p>
+                <m>S=\left\{\frac11, \frac12, \frac13, \ldots\right\}</m>
+              </p>
+            </li>
+
+            <li>
+              <title>\hskip1in{}(b)</title>
+              <p>
+                <m>S=\left\{0,\frac11, \frac12, \frac13, \ldots\right\}</m>
+              </p>
+            </li>
+
+            <li>
+              <title>\hskip1in{}(c)</title>
+              <p>
+                <m>S=(0,1]</m>
+              </p>
+            </li>
+
+            <li>
+              <title>\hskip1in{}(d)</title>
+              <p>
+                <m>S=\left[\left.0,1/2\right)\right.\cup\left.\left(1/2,1\right.\right]</m>
+              </p>
+            </li>
+
+            <li>
+              <title>\hskip1in{}(e)</title>
+              <p>
+                <m>S=\QQ</m>
+              </p>
+            </li>
+
+            <li>
+              <title>\hskip1in{}(f)</title>
+              <p>
+                <m>S=\RR-\QQ</m>
+              </p>
+            </li>
+
+            <li>
+              <title>\hskip1in{}(g)</title>
+              <p>
+                <m>S=\ZZ</m>
+              </p>
+            </li>
+
+            <li>
+              <title>\hskip1in{}(h)</title>
+              <p>
+                Any finite set <m>S</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>derived sets</h></idx>
+          Let <m>S\subseteq\RR</m>.
+
+          <ol label="(a)">
+            <li>
+              <title>\hskip1in{}(a)</title>
+              <p>
+                Prove that <m>\left(S^{\,\prime}\right)^{\,\prime}\subseteq S^{\,\prime}</m>.
+              </p>
+            </li>
+
+            <li>
+              <title>\hskip1in{}(b)</title>
+              <p>
+                Give an example where these two sets are equal.
+              </p>
+            </li>
+
+            <li>
+              <title>\hskip1in{}(c)</title>
+              <p>
+                Give an example where these two sets are not equal.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The notion of the derived set forms the foundation of Cantor's exceptional set of values.
+      Specifically,
+      let <m>S</m> again be a set of real numbers and consider the following sequence of sets:
+      <me>
+        S^{\,\prime}\supseteq \left(S^\prime\right)^\prime\supseteq \left(\left(S^\prime\right)^\prime\right)^\prime\supseteq \cdots
+      </me>.
+    </p>
+
+    <p>
+      Cantor
+          <idx><h>Cantor, Georg</h></idx>
+      showed that if, at some point,
+      one of these derived sets is empty,
+      then the uniqueness property still holds.
+      Specifically, we have:
+    </p>
+
+    <theorem xml:id="thm_Cantor-1871">
+      <statement>
+        <p>
+          <alert>Cantor, (1871)</alert>
+        </p>
+        <p>
+          <idx>
+              <h>Cantor, Georg</h>
+               <h>fourth theorem on the uniqueness of Fourier series</h>
+          </idx>
+          Let <m>S</m> be a subset of the real numbers with the
+          property that one of its derived sets is empty.  Then if the
+          trigonometric series <m>\sum_{n=0}^\infty\left(c_n\cos n\pi
+          x\,+d_n\sin n\pi x\right)</m> is zero for all
+          <m>x\in\RR-S</m>, then all of the coefficients of the series
+          vanish.
+        </p>
+      </statement>
+    </theorem>
+  </introduction>
+
+  <xi:include  href="sec_infinite-sets.ptx" />
+  <xi:include  href="sec_CantorsTheorem.ptx" />
+</chapter>
+

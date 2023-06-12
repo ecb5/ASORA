@@ -1,0 +1,1874 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="CalcIn17th18thCentury">
+  <title>Calculus in the 17th and 18th Centuries</title>
+  <section xml:id="CalcIn17th18thCentury-NewtLeibStart">
+    <title>Newton and Leibniz Get Started</title>
+    <subsection xml:id="sec_leibn-calc-rules">
+      <title>Leibniz's Calculus Rules</title>
+      <figure>
+        <caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/" visual="mathshistory.st-andrews.ac.uk/Biographies/Leibniz/">Gottfried Wilhelm Leibniz</url></caption>
+        <idx><h>Leibniz, Gottfried Wilhelm</h><h>portrait of</h></idx>
+        <image width="35%" source="images/Leibniz.png" />
+      </figure>
+
+      <p>
+        The rules for calculus were first laid out in Gottfried
+        Wilhelm Leibniz's 1684 paper<idx><h>Leibniz, Gottfried
+        Wilhelm</h><h>first calculus publication</h></idx>
+        <foreign>Nova methodus pro maximis et minimis, itemque
+        tangentibus, quae nec fractas nec irrationales, quantitates
+        moratur, et singulare pro illi calculi genus</foreign> (A New
+        Method for Maxima and Minima as Well as Tangents, Which is
+        Impeded Neither by Fractional Nor by Irrational Quantities,
+        and a Remarkable Type of Calculus for This). Leibniz started
+        with subtraction.  That is, if <m>x_1</m> and <m>x_2</m> are
+        very close together then their difference, <m>\Delta
+        x=x_2-x_1</m>, is very small.  He expanded this idea to say
+        that if <m>x_1</m> and <m>x_2</m> are <em>infinitely</em>
+        close together (but still distinct) then their difference,
+        <m>\dx{ x}</m>, is infinitesimally small (but not zero).
+      </p>
+
+        <aside>
+          <title>
+            <foreign>Calculus Differentialis</foreign>
+          </title>
+          <p>
+            This translates, loosely, as the
+            calculus of differences.
+          </p>  
+        </aside>
+      <p>
+        This idea is logically very suspect and Leibniz knew it.  But
+        he also knew that when he used his <foreign>calculus
+        differentialis</foreign> he was getting correct answers
+        to some very hard problems.  So he persevered.
+      </p>
+
+      <p>
+        Leibniz called both <m>\Delta x</m> and <m>\dx{ x}</m>
+        <q>differentials</q> (Latin for difference) because he thought
+        of them as, essentially, the same thing.  Over time it has
+        become customary to refer to the infinitesimal <m>\dx{ x}</m> as
+        a differential, reserving <q>difference</q> for the finite
+        case, <m>\Delta x</m>.  This is why calculus is often called
+        <q>differential calculus.</q>
+      </p>
+
+      <p>
+        In his paper Leibniz gave rules for dealing with these
+        infinitely small differentials.  Specifically, given a
+        variable quantity <m>x</m>, <m>dx</m> represented an
+        infinitesimal change in <m>x</m>.  Differentials are related
+        via the slope of the tangent line to a curve.  That is, if
+        <m>y=f(x)</m>, then <m>\dx{ y}</m> and <m>\dx{ x}</m> are related by
+        <me>
+          \dx{ y}=\text{ (slope of the tangent line) } \cdot \dx{ x}
+          </me>.
+      </p>
+
+      <p>
+        Leibniz then divided by <m>\dx{ x}</m> giving
+        <me>
+          \dfdx{y}{x}= \text{ (slope of the tangent line). }
+        </me>
+      </p>
+
+      <p>
+        The elegant and expressive notation Leibniz invented was so
+        useful that it has been retained through the years despite
+        some profound changes in the underlying concepts.  For
+        example, Leibniz and his contemporaries would have viewed the
+        symbol <m>\dfdx{y}{x}</m> as an actual quotient of
+        infinitesimals, whereas today we define it via the limit
+        concept first suggested by Newton.  <idx><h>Newton,
+        Isaac</h></idx>
+      </p>
+
+      <p>
+        As a result the rules governing these differentials are very modern in appearance:
+        <idx><h>Leibniz, Gottfried Wilhelm</h><h>differentiation rules</h></idx>
+        <md>
+          <mrow>\dx{(\text{ constant } )}\amp =0</mrow>
+          <mrow>\dx{(z-y+w+x)}\amp =\dx{ z}-\dx{ y}+\dx{ w}+\dx{ x}</mrow>
+          <mrow>\dx{(xv)}\amp =x\dx{ v}+v\dx{ x}</mrow>
+          <mrow>\dx{\left(\frac{v}{y}\right)}\amp =\frac{y\dx{ v}-v\dx{ y}}{yy}</mrow>
+          <intertext>and, when <m>a</m> is an integer:</intertext>
+          <mrow>\dx{(x^a)}\amp =ax^{a-1}\dx{ x}</mrow>
+          </md>.
+      </p>
+
+      <p>
+        Leibniz states these rules without proof: <q>. . . the
+        demonstration of all this will be easy to one who is
+        experienced in such matters . . ..</q> As an example,
+        mathematicians in Leibniz's day would be expected to
+        understand intuitively that if <m>c</m> is a constant, then
+        <m>d(c)=c-c=0</m>.  Likewise, <m>d(x+y)=dx+dy</m> is really an
+        extension of <m>(x_2+y_2)-(x_1+y_1)=(x_2-x_1)+(y_2-y_1)</m>.
+      </p>
+    </subsection>
+
+    <subsection xml:id="LeibnizProductRule">
+      <title>Leibniz's Approach to the Product Rule</title>
+      <p>
+        <idx><h>Leibniz, Gottfried Wilhelm</h></idx> 
+        The explanation of the product rule using differentials is a
+        bit more involved, but Leibniz expected that mathematicans
+        would be fluent enough to derive it.  The product <m>p=xv</m>
+        can be thought of as the area of the following rectangle
+      </p>
+
+      <figure xml:id="fig1">
+        <title>
+        </title>
+        <caption>
+        </caption>
+        <image width="50%" source="images/fig1.png" />
+      </figure>
+
+      <p>
+        With this in mind, <m>\dx{ p}=\dx{(xv)}</m> can be thought of as the
+        change in area when <m>x</m> is changed by <m>\dx{ x}</m> and
+        <m>v</m> is changed by <m>\dx{ v}</m>.  This can be seen as the L
+        shaped region in the following drawing.
+      </p>
+      <figure xml:id="fig2">
+        <title>
+        </title>
+        <caption>
+        </caption>
+        <image width="90%" source="images/fig2.png" />
+      </figure>
+
+      <p>
+        By dividing the L shaped region into 3 rectangles we obtain
+        <men xml:id="eq_LeibnizProductRule">
+          \dx{(xv)}=x\dx{ v}+v\dx{ x}+\dx{ x}\,\dx{ v}
+          </men>.
+      </p>
+
+      <p>
+        Even though <m>\dx{ x}</m> and <m>\dx{ v}</m> are infinitely small,
+        Leibniz reasoned that <m>\dx{ x}\,\dx{ v}</m> is <em>even more</em>
+        infinitely small (quadratically infinitely small?)  compared
+        to <m>x\dx{ v}</m> and <m>v\dx{ x}</m> and can thus be ignored
+        leaving
+        <me>
+          \dx{ (xv)}=x\dx{ v}+v\dx{ x}
+          </me>.
+      </p>
+
+      <p>
+        You should feel some discomfort at the idea of simply tossing
+        the product <m>\dx{ x}\,\dx{ v}</m> aside because it is
+        <q>comparatively small.</q> This means you have been well
+        trained, and have thoroughly internalized Newton's
+        <idx><h>Newton, Isaac</h></idx> dictum<nbsp /><xref
+        ref="newton45__sir_isaac_two_treat_quadr" />: <q>The smallest
+        errors may not, in mathematical matters, be scorned.</q> It is
+        logically untenable to toss aside an expression just because
+        it is small.  Even less so should we be willing to ignore an
+        expression on the grounds that it is <q>infinitely smaller</q>
+        than another quantity which is itself <q>infinitely small.</q>
+      </p>
+
+      <p>
+        Newton and Leibniz both knew this as well as we do.  But they
+        also knew that their methods <em>worked</em>.  They gave
+        verifiably correct answers to problems which had, heretofore,
+        been completely intractable.  It is the mark of their genius
+        that both men persevered in spite of the very evident
+        difficulties their methods entailed.
+      </p>
+    </subsection>
+
+    <subsection xml:id="NewtonsApproach">
+      <title>Newton's Approach to the Product Rule</title>
+      <p>
+        In the Principia, Newton <q>proved</q> the Product Rule as
+        follows: Let <m>x</m> and <m>v</m> be
+        <q>
+          flowing quantites
+        </q>
+        and consider the rectangle, <m>R</m>, whose sides are <m>x</m>
+        and <m>v</m>.  <m>R</m> is also a flowing quantity and we wish
+        to find its fluxion (derivative) at any time.
+      </p>
+      <historical><title>Newton's <sq>Method of Fluxions</sq></title>
+      <p>
+        Newton's approach to calculus <mdash /> his <sq>Method of
+        Fluxions</sq> <mdash /> depended fundamentally on motion.
+        That is, he viewed his variables (fluents) as changing
+        (flowing or fluxing) in time.  The rate of change of a
+        fluent he called a fluxion.  As a foundation both Leibniz's
+        and Newton's approaches have fallen out of favor, although
+        both are still universally used as a conceptual approach, a
+        <q>
+          way of thinking,
+        </q> 
+        about the ideas of calculus.
+      </p>
+      </historical>
+      <p>
+        First increment <m>x</m> and <m>v</m> by
+        <m>\frac{\Delta x}{2}</m> and <m>\frac{\Delta v}{2}</m> respectively.
+        Then the corresponding increment of <m>R</m> is
+        <men xml:id="eq_prodruleinc">
+          \left(x+\frac{\Delta x}{2}\right)\left(v+\frac{\Delta v}{2}\right) = xv + x\frac{\Delta v}{2} + v\frac{\Delta x}{2} +\frac{\Delta x\Delta v}{4}
+          </men>.
+      </p>
+
+      <p>
+        Now decrement <m>x</m> and <m>v</m> by the same amounts:
+        <men xml:id="eq_prodruledec">
+          \left(x-\frac{\Delta x}{2}\right)\left(v-\frac{\Delta v}{2}\right) = xv - x\frac{\Delta v}{2} - v\frac{\Delta x}{2} + \frac{\Delta x\Delta v}{4}
+          </men>.
+      </p>
+
+      <p>
+        Subtracting the right side of <xref ref="eq_prodruledec">equation</xref>
+        from the right side of <xref ref="eq_prodruleinc">equation</xref> gives
+        <me>
+          \Delta R = x\Delta v + v\Delta x
+        </me>
+        which is the total change of <m>R = xv</m> over the intervals <m>\Delta x</m> and
+        <m>\Delta v</m> and also recognizably the Product Rule.
+      </p>
+
+      <figure xml:id="Newton">
+        <title>
+        </title>
+        <caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Newton/" visual="mathshistory.st-andrews.ac.uk/Biographies/Newton/">Isaac Newton</url></caption>
+        <idx><h>Newton, Isaac</h><h>portrait of</h></idx>
+        <image width="35%" source="images/Newton.png" />
+      </figure>
+
+      <p>
+        This argument is no better than Leibniz's as it relies
+        heavily on the number <m>1/2</m> to make it work.  If we
+        take any other increments in <m>x</m> and <m>v</m> whose
+        total lengths are <m>\Delta x</m> and <m>\Delta v</m> it
+        will simply not work.  Try it and see.
+      </p>
+
+      <p>
+        In Newton's defense, he wasn't really trying to justify his
+        mathematical methods in the Principia.  His attention there
+        was on physics, not math, so he was really just trying to
+        give a convincing demonstration of his methods.  You may
+        decide for yourself how convincing his demonstration is.
+      </p>
+
+      <p>
+        <idx><h>Lagrange, Joseph-Louis</h></idx>
+        Notice that there is no mention of limits of difference
+        quotients or derivatives.  In fact, the term derivative was
+        not coined until 1797, by Lagrange.  In a sense, these
+        topics were not necessary at the time, as Leibniz and Newton
+        both assumed that the curves they dealt with had tangent
+        lines and, in fact, Leibniz explicitly used the tangent line
+        to relate two differential quantities.  This was consistent
+        with the thinking of the time and for the duration of this
+        chapter we will also assume that all quantities are
+        differentiable.  As we will see later this assumption leads
+        to difficulties.
+      </p>
+
+      <p>
+        Both Newton and Leibniz were satisfied that their calculus
+        provided answers that agreed with what was known at the
+        time.  For example <m>\dx{ \left(x^2\right)}=\dx{\left(xx\right)}=x\dx{ x}+x\dx{ x}=2x\dx{ x}</m> and
+        <m>\dx{\left(x^3\right)}=\dx{\left(x^2x\right)}=x^2\dx{ x}+x\dx{\left(x^2\right)}</m> <m>=x^2+x\left(2x\dx{ x}\right)=3x^2\dx{ x}</m>,<m></m> results that were essentially
+        derived by others in different ways.
+      </p>
+
+      <problem>
+        <idx><h>Leibniz, Gottfried Wilhelm</h><h>Leibniz's product rule</h></idx>
+        <idx><h>Leibniz's product rule</h></idx>
+        <task>
+          <statement>
+            <p>
+              Use Leibniz's product rule
+              <m>\dx{ \left(xv\right)}=x\dx{ v}+v\dx{ x}</m> 
+              to show that if <m>n</m> is a positive integer then
+              <m>\dx{ \left(x^n\right)}=nx^{n-1}\dx{ x}</m>
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Use Leibniz's product rule to derive the quotient rule
+              <me>
+                \dx{ \left(\frac{v}{y}\right)}=\frac{y\,\dx{ v}-v\,\dx{ y}}{yy}
+                </me>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Use the quotient rule to show that if <m>n</m>is a positive integer, then
+              <me>
+                \dx{ \left(x^{-n}\right)}=-nx^{-n-1}\dx{ x}.
+              </me>
+            </p>
+          </statement>
+        </task>
+      </problem>
+
+      <problem>
+        <statement>
+          <p>
+            <idx><h>differentiation</h><h>power rule with fractional exponents</h></idx>
+            Let <m>p</m> and <m>q</m> be integers with <m>q\neq 0</m>.
+            Show that <m>\dx{ \left(x^{\frac{p}{q}}\right)}=\frac{p}{q}x^{\frac{p}{q}-1}\dx{ x}</m>
+          </p>
+        </statement>
+      </problem>
+
+      <p>
+        Leibniz also provided applications of his calculus to prove its worth.
+        As an example he derived Snell's Law of Refraction from his calculus rules as follows.
+      </p>
+
+      <p>
+        Given that light travels through air at a speed of
+        <m>v_a</m> and travels through water at a speed of
+        <m>v_w</m> the problem is to find the fastest path from
+        point <m>A</m> to point <m>B</m>.
+      </p>
+
+      <figure xml:id="snellfig">
+        <title>
+        </title>
+        <caption>
+        </caption>
+        <image width="75%" source="images/snellfig.png" />
+      </figure>
+
+      <p>
+        According to Fermat's Principle of Least Time, this fastest
+        path is the one that light will travel.
+      </p>
+
+      <p>
+        Using the fact that <m>\text{ Time } =\text{ Distance }
+        /\text{ Velocity }</m> and the labeling in the picture below
+        we can obtain a formula for the time <m>T</m> it takes for
+        light to travel from <m>A</m> to <m>B</m>.
+      </p>
+      <figure xml:id="snellfig2">
+        <title>
+        </title>
+        <caption>
+        </caption>
+        <image width="75%" source="images/snellfig2.png" />
+      </figure>
+      <p>
+        <me>
+          T=\frac{\sqrt{x^2+a^2}}{v_a}+\frac{\sqrt{(c-x)^2+b^2}}{v_w}
+        </me>
+      </p>
+
+      <p>
+        Using the rules of Leibniz's calculus, we obtain
+        <md>
+          <mrow>\dx{ T}\amp = \left(\frac{1}{v_a}\frac{1}{2}\left(x^2+a^2\right)^{-\frac{1}{2}} (2x)+\frac{1}{v_w}\frac{1}{2}((c-x)^2+b^2)^{-\frac{1}{2}}(2(c-x)(-1))\right) \dx{ x}</mrow>
+          <mrow>\amp =\left(\frac{1}{v_a}\frac{x}{\sqrt{x^2+a^2}}-\frac{1}{v_w}\frac{c-x}{\sqrt{(c-x)^2+b^2}}\right)\dx{ x}</mrow>
+          </md>.
+      </p>
+
+      <p>
+        Using the fact that at the minimum value for <m>T</m>, <m>\dx{ T}=0</m>, we have that the fastest path from <m>A</m>to
+        <m>B</m> must satisfy
+        <m>\frac{1}{v_a}\frac{x}{\sqrt{x^2+a^2}}=\frac{1}{v_w}\frac{c-x}{\sqrt{(c-x)^2+b^2}}</m>.
+        Inserting the following angles
+      </p>
+      <figure xml:id="snellfig3">
+        <title>
+        </title>
+        <caption>
+        </caption>
+        <image width="75%" source="images/snellfig3.png" />
+      </figure>
+
+      <p>
+        we get that the path that light travels must satisfy
+        <m>\frac{\sin\theta_a}{v_a}=\frac{\sin\theta_w}{v_w}</m> which
+        is Snell's Law.
+      </p>
+
+      <p>
+        <idx><h>Bernoulli, Johann</h> </idx> 
+        <idx><h>Brachistochrone problem, the</h></idx>
+        To compare 18th century and modern techniques we will consider
+        Johann Bernoulli's solution of the Brachistochrone problem.
+        In 1696, Bernoulli posed, and solved, the Brachistochrone
+        problem; that is, to find the shape of a frictionless wire
+        joining points A and B so that the time it takes for a bead to
+        slide down under the force of gravity is as small as possible.
+      </p>
+
+
+      <figure xml:id="brachfig1">
+        <title>
+        </title>
+        <caption>
+        </caption>
+        <image width="75%" source="images/brachfig1.png" />
+      </figure>
+
+
+      <p>
+        Bernoulli posed this <q>path of fastest descent</q> problem to
+        challenge the mathematicians of Europe and used his solution
+        to demonstrate the power of Leibniz's calculus as well as his
+        own ingenuity.  <idx><h>Bernoulli, Johann</h><h>Bernoulli's
+        challenge</h></idx>
+      </p>
+
+      <blockquote>
+        <p>
+          I, Johann Bernoulli, address the most brilliant mathematicians in
+          the world. Nothing is more attractive to intelligent people than
+          an honest, challenging problem, whose possible solution will
+          bestow fame and remain as a lasting monument. Following the
+          example set by Pascal, Fermat, etc., I hope to gain the gratitude
+          of the whole scientific community by placing before the finest
+          mathematicians of our time a problem which will test their methods
+          and the strength of their intellect. If someone communicates to me
+          the solution of the proposed problem, I shall publicly declare him
+          worthy of praise. <xref ref="Bernoulli_bio_mactutor" />
+        </p>    
+      </blockquote>
+
+      <figure>
+        <caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/" visual="mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/">Johann Bernoulli</url></caption>
+        <idx><h>Bernoulli, Johann</h><h>portrait of</h></idx>
+        <image width="35%" source="images/BernoulliJohann.png" />
+      </figure>
+
+      <p>
+        In addition to Johann's, solutions were obtained from Newton,
+        <idx><h>Newton, Isaac</h></idx> Leibniz, Johann's brother
+        Jacob Bernoulli, <idx><h>Bernoulli Jacob</h></idx> and the
+        Marquis de l'Hopital <xref ref="struik69__sourc_book_mathem" />.  At the time there was
+        an ongoing and very vitriolic controversy raging over whether
+        Newton or Leibniz had been the first to invent calculus.  An
+        advocate of the methods of Leibniz, Bernoulli did not believe
+        Newton would be able to solve the problem using his methods.
+        Bernoulli attempted to embarrass Newton by sending him the
+        problem.  However Newton did solve it.
+      </p>
+
+      <p>
+        At this point in his life Newton had all but quit science and
+        mathematics and was fully focused on his administrative duties
+        as Master of the Mint.  In part due to rampant counterfeiting,
+        England's money had become severely devalued and the nation
+        was on the verge of economic collapse.  The solution was to
+        recall all of the existing coins, melt them down, and strike
+        new ones.  As Master of the Mint this job fell to Newton <xref
+        ref="levenson09__newton_count" />.  As you might imagine this
+        was a rather Herculean task.  Nevertheless, according to his
+        niece:
+      </p>
+
+      <blockquote>
+        <p>
+          When the problem in 1696 was sent by Bernoulli<ndash />Sir
+          I.N. was in the midst of the hurry of the great recoinage
+          and did not come home till four from the Tower very much
+          tired, but did not sleep till he had solved it, which was by
+          four in the morning.
+        </p>
+      </blockquote>
+
+      <p>
+        He is later reported to have complained, 
+        <q>
+          I do not love . . . to be . . . teezed by forreigners about
+          Mathematical things
+          </q> <xref ref="dunham90__journ_throug_genius" />.
+        </p>
+
+        <p>
+          <idx><h>Bernoulli, Johann</h><h><foreign>"Tanquam ex ungue leonem"</foreign></h></idx>
+          Newton submitted his solution anonymously, presumably to avoid
+          more controversy.  Nevertheless the methods used were so
+          distinctively Newton's that Bernoulli is said to have
+          exclaimed <q><foreign>Tanquam ex ungue
+          leonem</foreign>.</q>
+        </p>
+        <aside>
+          <title>
+            <foreign>Tanquam ex ungue leonem</foreign>
+          </title>
+          <p>
+            <q>I know the lion by his claw.</q>
+            </p>
+          </aside> 
+
+      <p>
+        <idx><h>Brachistochrone problem, the</h><h>Bernoulli's solution</h></idx>
+        Bernoulli's ingenious solution starts, interestingly enough, with Snell's Law of Refraction.
+        He begins by considering the stratified medium in the following figure,
+        where an object travels with velocities
+        <m>v_1,\,v_2,\,v_3,\,\ldots</m> in the various layers.
+      </p>
+      <figure xml:id="brachfig2">
+        <title>
+        </title>
+        <caption>
+        </caption>
+        <image width="75%" source="images/brachfig2.png" />
+      </figure>
+
+      <p>
+        By repeatedly applying Snell's Law he concluded that the fastest path must satisfy
+        <me>
+          \frac{\sin \theta_1}{v_1}=\frac{\sin \theta_2}{v_2}=\frac{\sin\theta_3}{v_3}=\cdots
+          </me>.
+        </p>
+
+        <p>
+          In other words, the ratio of the sine of the angle that the
+          curve makes with the vertical and the speed remains constant
+          along this fastest path.
+        </p>
+
+        <p>
+          If we think of a continuously changing medium as stratified
+          into infinitesimal layers and extend Snell's law to an object
+          whose speed is constantly changing,
+        </p>
+        <figure xml:id="snellfig4">
+          <title>
+          </title>
+          <caption>
+          </caption>
+          <image width="75%" source="images/snellfig4.png"/>
+        </figure>
+        <p>
+          then along the fastest path,
+          the ratio of the sine of the angle that the curve's tangent makes with the vertical,
+          <m>\alpha</m>, and the speed,
+          <m>v</m>, must remain constant.
+          <me>
+            \frac{\text{ sin } \alpha}{v}=c
+            </me>.
+</p>
+
+<p>
+  If we include axes and let <m>P</m> denote the position of
+  the bead at a particular time then we have the following
+  picture.
+</p>
+<figure xml:id="snellfig5">
+  <title>
+</title>
+<caption>
+</caption>
+<image width="75%" source="images/snellfig5.png" />
+</figure>
+
+<p>
+  In the above figure, <m>s</m> denotes the length that the bead
+  has traveled down to point <m>P</m>(that is, the arc length of
+  the curve from the origin to that point) and <m>a</m> denotes
+  the tangential component of the acceleration due to gravity
+  <m>g</m>.  Since the bead travels only under the influence of
+  gravity then <m>\dfdx{v}{t}=a</m>.
+</p>
+
+<p>
+  To get a sense of how physical problems were approached using
+  Leibniz's calculus we will use the above equation to show that
+  <m>v=\sqrt{2gy}</m>.
+</p>
+
+<p>
+  By similar triangles we have 
+  <m>\frac{a}{g}=\frac{\dx{ y}}{\dx{ s}}</m>.  
+  As a student of Leibniz, Bernoulli would have regarded 
+  <m>\frac{\dx{ y}}{\dx{ s}}</m> as a fraction so
+
+  <md>
+    <mrow>a\dx{ s} \amp = g\dx{ y}</mrow>
+    <intertext>
+     and since acceleration is the rate of change of velocity we have
+    </intertext>
+    <mrow>\frac{\dx{ v}}{\dx{ t}}\dx{ s} \amp = g\dx{ y}.</mrow>
+    <intertext>
+
+Again, 18th century European mathematicians regarded <m>\dx{ v}, \dx{ t}</m>, and <m>\dx{ s}</m> as infinitesimally small numbers which nevertheless obey all of the usual rules of algebra. Thus we can rearrange the above to get</intertext>
+
+<mrow>\frac{\dx{ s}}{\dx{ t}}\dx{ v} \amp = g\dx{ y}.</mrow>
+<intertext>Since <m>\frac{\dx{ s}}{\dx{ t}}</m> is the rate of change of position with respect to time it is, in fact, the velocity of the bead. That is</intertext>
+<mrow>v\dx{ v} \amp = g\dx{ y}.</mrow>
+<intertext>Bernoulli would have interpreted this as a statement that two rectangles of height <m>v</m> and <m>g</m>, with respective widths <m>\dx{ v}</m> and <m>\dx{ y}</m> have equal area. Summing (integrating) all such rectangles we get:</intertext>
+<mrow>\int{}v\dx{ v} \amp = \int{}g\dx{ y}</mrow>
+<mrow>\frac{v^2}{2} \amp = gy</mrow>
+</md>
+or
+<men xml:id="eq_brach_vel">
+  v=\sqrt{2gy}
+  </men>.
+</p>
+
+<p>
+  You are undoubtedly uncomfortable with the cavalier manipulation of infinitesimal quantities you've just witnessed,
+  so we'll pause for a moment now to compare a modern development of <xref ref="eq_brach_vel">equation</xref> to Bernoulli's.
+  As before we begin with the equation:
+  <md>
+    <mrow>\frac{a}{g}\amp = \dfdx{y}{s}</mrow>
+    <mrow>a \amp = g\dfdx{y}{s}.</mrow>
+    <intertext>Moreover, since acceleration is the derivative of velocity this is the same as:</intertext>
+    <mrow>\dfdx{v}{t} \amp = g\dfdx{y}{s}.</mrow>
+    <intertext>Now observe that by the Chain Rule <m>\dfdx{v}{t} = \dfdx{v}{s}\dfdx{s}{t}</m>. The physical interpretation of this formula is that velocity will depend on <m>s</m>, how far down the wire the bead has moved, but that the distance traveled will depend on how much time has elapsed. Therefore</intertext>
+    <mrow>\dfdx{v}{s}\dfdx{s}{t} \amp = g\dfdx{y}{s}</mrow>
+    <intertext>or</intertext>
+    <mrow>\dfdx{s}{t}\dfdx{v}{s} \amp = g\dfdx{y}{s}</mrow>
+    <intertext>and since <m>\dfdx{s}{t} = v</m> we have</intertext>
+    <mrow>v\dfdx{v}{s} \amp = g\dfdx{y}{s}</mrow>
+    <intertext>Integrating both sides with respect to <m>s</m> gives:</intertext>
+    <mrow>\int{}v\dfdx{v}{s}d s \amp = g\int{}\dfdx{y}{s}d s</mrow>
+    <mrow>\int{}vd v \amp = g\int{}d y</mrow>
+    <intertext>and integrating gives</intertext>
+    <mrow>\frac{v^2}{2} \amp = gy</mrow>
+  </md>
+  as before.
+</p>
+
+<p>
+  In effect, in the modern formulation we have traded the simplicity and elegance of differentials for a comparatively cumbersome repeated use of the Chain Rule.
+  No doubt you noticed when taking Calculus that in the differential notation of Leibniz,<idx><h>Leibniz, Gottfried Wilhelm</h></idx> the Chain Rule looks like <q>canceling</q>
+  an expression in the top and bottom of a fraction:
+  <m>\dfdx{y}{u}\dfdx{u}{x} = \dfdx{y}{x}</m>.
+  This is because for 18th century mathematicians,
+  this is exactly what it was.
+</p>
+
+<p>
+  To put it another way, 18th century mathematicians wouldn't have recognized a need for what we call the Chain Rule because this operation was a triviality for them.
+  Just reduce the fraction.
+  This begs the question: Why did we abandon such a clear,
+  simple interpretation of our symbols in favor of the,
+  comparatively, more cumbersome modern interpretation?
+  This is one of the questions we will try to answer in this course.
+</p>
+
+<p>
+  Returning to the Brachistochrone problem we observe that
+  <mdn>
+    <mrow number="no">\frac{\sin\alpha}{v} \amp = c</mrow>
+    <intertext>and since <m>\sin\alpha = \frac{d x}{d s}</m>   we see that</intertext>
+    <mrow number="no">\frac{\frac{d x}{d s}}{\sqrt{2gy}} \amp = c</mrow>
+    <mrow number="no">\frac{d x}{\sqrt{2gy(ds)^2}} \amp = c</mrow>
+    <mrow xml:id="eq_Brachistochrone">\frac{d x}{\sqrt{2gy\left[(d x)^2+(d y)^2\right]}} \amp = c</mrow>
+    </mdn>.
+</p>
+
+<p>
+  Bernoulli was then able to solve this differential equation.
+</p>
+
+<problem>
+  <statement>
+    <p>
+      <idx><h>Brachistochrone problem, the</h></idx>
+      Show that the equations <m>x=\frac{\phi-\sin \phi}{4gc^2},\,y=\frac{1-\cos \phi}{4gc^2}</m> satisfy equation <xref ref="eq_Brachistochrone"></xref>.
+      Bernoulli recognized this solution to be an inverted cycloid,
+      the curve traced by a fixed point on a circle as the circle rolls along a horizontal surface.
+    </p>
+  </statement>
+</problem>
+
+<p>
+  This illustrates the state of calculus in the late 1600's and early 1700's;
+  the foundations of the subject were a bit shaky but there was no denying its power.
+</p>
+</subsection>
+</section>
+
+<section xml:id="ExponentAdditionProperty">
+  <title>Power Series as Infinite Polynomials</title>
+  <p>
+    <idx><h>polynomials</h><h>infinite</h></idx>
+    Applied to polynomials, the rules of differential and integral
+    calculus are straightforward.  Indeed, differentiating and
+    integrating polynomials represent some of the easiest tasks in a
+    calculus course.  For example, computing <m>\int(7-x+x^2)\dx{ x}</m> is
+    relatively easy compared to computing <m>\int\sqrt[3]{1+x^3}\dx{ x}</m>.  Unfortunately, not all functions can be expressed as a
+    polynomial.  For example, <m>f(x)=\sin x</m> cannot be since a
+    polynomial has only finitely many roots and the sine function has
+    infinitely many roots, namely <m>\{n\pi|\,n\in\ZZ\}</m>.  A standard
+    technique in the 18th century was to write such functions as an
+    <q>infinite polynomial,</q> what we typically refer to as a power
+    series.  Unfortunately an <q>infinite polynomial</q> is a much more
+    subtle object than a mere polynomial, which by definition is finite.
+    For now we will not concern ourselves with these subtleties.  We
+    will follow the example of our forebears and manipulate all
+    <q>polynomial-like</q> objects (finite or infinite) as if they are
+    polynomials.
+  </p>
+
+  <definition xml:id="def_PowerSeries">
+    <statement>
+      <p>
+        <idx><h>power series</h><h>definition of</h></idx>
+        A <term>power series centered at
+        <m>\boldsymbol{a}</m></term> is a series of the form
+        <me>
+          \sum_{n=0}^\infty a_n(x-a)^n=a_0+a_1(x-a)+a_2(x-a)^2+\cdots
+          </me>.
+      </p>
+
+      <p>
+        Often we will focus on the behavior of power series
+        <m>\sum_{n=0}^\infty a_nx^n</m>, centered around <m>0</m>,
+        as the series centered around other values of <m>a</m> are obtained by shifting a series centered at <m>0</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Before we continue, we will make the following notational comment.
+    The most advantageous way to represent a series is using summation notation since there can be no doubt about the pattern to the terms.
+    After all, this notation contains a formula for the general term.
+    This being said,
+    there are instances where writing this formula is not practical.
+    In these cases,
+    it is acceptable to write the sum by supplying the first few terms and using ellipses
+    (the three dots).
+    If this is done,
+    then enough terms must be included to make the pattern clear to the reader.
+  </p>
+
+  <p>
+    Returning to our definition of a power series, consider,
+    for example,
+    the <idx><h>series</h><h>Geometric series</h><h>naive derivation</h></idx> geometric series <m>\sum_{n=0}^\infty x^n=1+x+x^2+\cdots</m>.
+    If we multiply this series by <m>(1-x)</m>, we obtain
+    <me>
+      (1-x)(1+x+x^2+\cdots)=(1+x+x^2+\cdots)-(x+x^2+x^3+\cdots)=1
+      </me>.
+  </p>
+
+  <p>
+    This leads us to the power series representation
+    <me>
+      \frac{1}{1-x}=1+x+x^2+\cdots=\sum_{n=0}^\infty x^n
+      </me>.
+  </p>
+
+  <p>
+    If we substitute <m>x=\frac{1}{10}</m> into the above,
+    we obtain
+    <me>
+      1+\frac{1}{10}+\left(\frac{1}{10}\right)^2+\left(\frac{1}{10}\right)^3+ \cdots=\frac{1}{1-\frac{1}{10}}=\frac{10}{9}
+      </me>.
+  </p>
+
+  <p>
+    This agrees with the fact that <m>.333\ldots=\frac{1}{3}</m>,
+    and so <m>.111\ldots=\frac{1}{9}</m>,
+    and <m>1.111\ldots=\frac{10}{9}</m>.
+  </p>
+
+  <p>
+    There are limitations to these formal manipulations however.
+    Substituting <m>x=1</m> or <m>x=2</m> yields the questionable results
+    <me>
+      \frac{1}{0}=1+1+1+\cdots\,\text{  and  }  \,\frac{1}{-1}=1+2+2^2+\cdots
+      </me>.
+  </p>
+
+  <p>
+    We are missing something important here,
+    though it may not be clear exactly what.
+    A series representation of a function works <em>sometimes,</em>
+    but there are some problems.
+    For now, we will continue to follow the example of our 18th century predecessors and ignore them.
+    That is, for the rest of this section we will focus on the formal manipulations to obtain and use power series representations of various functions.
+    Keep in mind that this is all highly suspect until we can resolve problems like those just given.
+  </p>
+
+  <p>
+    Power series became an important tool in analysis in the 1700's.  By
+    representing various functions as power series they could be dealt
+    with as if they were (infinite) polynomials.  The following is an
+    example.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Solve the following Initial Value problem: Find <m>y(x)</m>
+          given that <m>\frac{\dx{ y}}{\dx{ x}}=y,\,y(0)=1</m>.
+      </p>
+      <aside>
+        <p>
+          A few seconds of thought should convince you that the solution
+          of this problem is <m>y(x) = e^x</m>.  We will ignore this for
+          now in favor of emphasising the technique.
+        </p>  
+          </aside>
+
+
+      <p>
+        Assuming the solution can be expressed as a power series we have
+        <me>
+          y=\sum_{n=0}^\infty a_nx^n=a_0+a_1x+a_2x^2+\cdots
+          </me>.
+      </p>
+
+      <p>
+        Differentiating gives us
+        <me>
+          \frac{\dx{ y}}{\dx{ x}}=a_1+2a_2x+3a_3x^2+4a_4x^3+\ldots
+          </me>.
+      </p>
+
+      <p>
+        Since <m>\frac{\dx{ y}}{\dx{ x}}=y</m> we see that
+        <me>
+          a_1=a_0\,,\,2a_2=a_1\,,\,3a_3=a_2\,,\,\ldots,\,na_n=a_{n-1}\,,\ldots
+          </me>.
+      </p>
+
+      <p>
+        This leads to the relationship
+        <me>
+          a_n=\frac{1}{n}a_{n-1}=\frac{1}{n(n-1)}a_{n-2}=\cdots=\frac{1}{n!}a_0
+          </me>.
+      </p>
+
+      <p>
+        Thus the series solution of the differential equation is
+        <me>
+          y=\sum_{n=0}^\infty\frac{a_0}{n!}x^n=a_0\sum_{n=0}^\infty\frac{1}{n!}x^n
+          </me>.
+      </p>
+
+      <p>
+        Using the initial condition <m>y(0)=1</m>,
+        we get <m>1=a_0(1+0+\frac{1}{2!}0^2+\cdots)=a_0</m>.
+        Thus the solution to the initial problem is <m>y=\sum_{n=0}^\infty\frac{1}{n!}x^n</m>.
+        Let's call this function <m>E(x)</m>.
+        Then by definition
+        <me>
+          E(x)=\sum_{n=0}^\infty\frac{1}{n!}x^n=1+\frac{x^1}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+\,\ldots
+          </me>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Let's examine some properties of this function.
+    The first property is clear from the definition.
+  </p>
+
+  <p>
+    <idx><h><m>e^x</m></h><h><m>E(0)=1</m></h></idx>
+    <term>Property 1</term>. 
+    <m>E(0)=1</m>
+  </p>
+
+  <p>
+    <idx><h><m>e^x</m></h><h><m>E(x+y)=E(x)E(y)</m></h></idx>
+    <term>Property 2</term>. 
+    <m>E(x+y)=E(x)E(y)</m>.
+  </p>
+
+  <p>
+    To see this we multiply the two series together, so we have
+    <md>
+      <mrow>E(x)E(y) \amp =\left(\sum_{n=0}^\infty\frac{1}{n!}x^n\right)\left(\sum_{n=0}^\infty\frac{1}{n!}y^n\right)</mrow>
+      <mrow>\amp =\left(\frac{x^0}{0!}+\frac{x^1}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+\,\ldots\right)\left(\frac{y^0}{0!}+\frac{y^1}{1!}+\frac{y^2}{2!}+\frac{y^3}{3!}+\,\ldots\right)</mrow>
+      <mrow>\amp =\frac{x^0}{0!}\frac{y^0}{0!}+\frac{x^0}{0!}\frac{y^1}{1!}+\frac{x^1}{1!}\frac{y^0}{0!}+\frac{x^0}{0!}\frac{y^2}{2!}+\frac{x^1}{1!}\frac{y^1}{1!}+\frac{x^2}{2!}\frac{y^0}{0!}</mrow>
+      <mrow>\amp \ \ \ \ \ \  +\frac{x^0}{0!}\frac{y^3}{3!}+\frac{x^1}{1!}\frac{y^2}{2!}+\frac{x^2}{2!}\frac{y^1}{1!}+\frac{x^3}{3!}\frac{y^0}{0!}+\,\ldots</mrow>
+      <mrow>\amp =\frac{x^0}{0!}\frac{y^0}{0!}+\left(\frac{x^0}{0!}\frac{y^1}{1!}+ \frac{x^1}{1!}\frac{y^0}{0!}\right)</mrow>
+      <mrow>\amp \ \ \ \ \ \  +\left(\frac{x^0}{0!}\frac{y^2}{2!}+\frac{x^1}{1!}\frac{y^1}{1!}+\frac{x^2}{2!}\frac{y^0}{0!}\right)</mrow>
+      <mrow>\amp \ \ \ \ \ \ +\left(\frac{x^0}{0!}\frac{y^3}{3!}+\frac{x^1}{1!}\frac{y^2}{2!}+\frac{x^2}{2!}\frac{y^1}{1!}+\frac{x^3}{3!}\frac{y^0}{0!}\right)+\,\ldots</mrow>
+      <mrow>\amp =\frac{1}{0!}+\frac{1}{1!}\left(\frac{1!}{0!1!}x^0y^1+\frac{1!}{1!0!}x^1y^0\right)</mrow>
+      <mrow>\amp \ \ \ \ \ \ +\frac{1}{2!}\left(\frac{2!}{0!2!}x^0y^2+\frac{2!}{1!1!}x^1y^1+\frac{2!}{2!0!}x^2y^0\right)</mrow>
+      <mrow>\amp \ \ \ \ \ \ +\frac{1}{3!}\left(\frac{3!}{0!3!}x^0y^3+\frac{3!}{1!2!}x^1y^2+\frac{3!}{2!1!}x^2y^1+\frac{3!}{3!0!}x^3y^0\right)+\ldots</mrow>
+    </md>
+    <mdn>
+      <mrow number="no">E(x)E(y) \amp =\frac{1}{0!}+\frac{1}{1!}\left(\binom{1}{0}x^0y^1+\binom{1}{1}x^1y^0\right)</mrow>
+      <mrow number="no">\amp \ \ \ \ \ \ +\frac{1}{2!}\left(\binom{2}{0}x^0y^2+\binom{2}{1}x^1y^1+\binom{2}{2}x^2y^0\right)</mrow>
+      <mrow number="no">\amp \ \ \ \ \ \ +\frac{1}{3!}\left(\binom{3}{0}x^0y^3+\binom{3}{1}x^1y^2+\binom{3}{2}x^2y^1+\binom{3}{3}x^3y^0\right)+\ldots</mrow>
+      <mrow number="no">\amp =\frac{1}{0!}+\frac{1}{1!}\left(x+y\right)^1+\frac{1}{2!}\left(x+y\right)^2+\frac{1}{3!}\left(x+y\right)^3+\ldots</mrow>
+      <mrow xml:id="eq_ExponentAdditionProperty"> \amp =E(x+y)</mrow>
+      </mdn>.
+  </p>
+
+  <p>
+    <idx><h><m>e^x</m></h><h><m>E(m)=\left(E(1)\right)^mE(0)=1</m></h></idx>
+    <term>Property 3</term>. If <m>m</m> is a positive integer then <m>E(mx)=\left(E(x\right))^m</m>.
+    In particular, <m>E(m)=\left(E(1)\right)^m</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h><m>e^x</m></h><h><m>E(mx)=\left(E(x\right))^m</m></h></idx>
+        Prove Property 3.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <term>Property 4</term>. <m>E(-x)=\frac{1}{E(x)}=\left(E(x)\right)^{-1}</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h><m>e^x</m></h><h><m>E(-x)=\left(E(x)\right)^{-1}</m></h></idx>
+        Prove Property 4.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <term>Property 5</term>. If <m>n</m> is an integer with <m>n\neq 0</m>,
+    then <m>E(\frac{1}{n})=\sqrt[n]{E(1)}=\left(E(1)\right)^{1/n}</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h><m>e^x</m></h><h><m>E(\frac{1}{n})=\left(E(1)\right)^{1/n}</m></h></idx>
+        Prove Property 5.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <term>Property 6</term>. If <m>m</m> and <m>n</m> are integers with <m>n\neq 0</m>,
+    then <m>E\left(\frac{m}{n}\right)=\left(E(1)\right)^{m/n}</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h><m>e^x</m></h><h><m>E\left(\frac{m}{n}\right)=\left(E(1)\right)^{m/n}</m></h></idx>
+        Prove Property 6.
+      </p>
+    </statement>
+  </problem>
+
+  <definition xml:id="def_e">
+    <statement>
+      <p>
+        <idx><h><m>e^x</m></h><h>definition of <m>e</m></h></idx>
+        Let <m>E(1)</m> be denoted by the number <m>e</m>.
+        Using the series <m>e=E(1)=\sum_{n=0}^\infty\frac{1}{n!}</m>,
+        we can approximate <m>e</m> to any degree of accuracy.
+        In particular <m>e\approx 2.71828</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    In light of Property<nbsp />6,
+    we see that for any rational number <m>r</m>, <m>E(r)=e^r</m>.
+    Not only does this give us the series representation
+    <m>e^r=\sum_{n=0}^\infty\frac{1}{n!}r^n</m> for any rational number <m>r</m>,
+    but it gives us a way to define <m>e^x</m> for irrational values of <m>x</m> as well.
+    That is, we can define
+    <me>
+      e^x=E(x)=\sum_{n=0}^\infty\frac{1}{n!}x^n
+    </me>
+    for any real number <m>x</m>.
+  </p>
+
+  <p>
+    As an illustration,
+    we now have <m>e^{\sqrt{2}}=\sum_{n=0}^\infty\frac{1}{n!}\left(\sqrt{2}\right)^n</m>.
+    The expression <m>e^{\sqrt{2}}</m> is meaningless if we try to interpret it as one irrational number raised to another.
+    What does it mean to raise anything to the <m>\sqrt{2}</m> power?
+    However the series <m>\sum_{n=0}^\infty\frac{1}{n!}\left(\sqrt{2}\right)^n</m> does seem to have meaning and it can be used to extend the exponential function to irrational exponents.
+    In fact, defining the exponential function via this series answers the question we raised in  <xref ref="NumbersRealRational"></xref>: What does <m>4^{\sqrt{2}}</m> mean?
+  </p>
+
+  <p>
+    It means <m>\displaystyle 4^{\sqrt{2}} = e^{\sqrt{2}\log 4} = \sum_{n=0}^\infty\frac{(\sqrt{2}\log 4)^n}{n!}</m>.
+  </p>
+
+  <p>
+    This may seem to be the long way around just to define something as simple as exponentiation.
+    But this is a fundamentally misguided attitude.
+    Exponentiation only <em>seems</em>
+    simple because we've always thought of it as repeated multiplication
+    (in <m>\ZZ</m>)
+    or root-taking
+    (in <m>\QQ</m>).
+    When we expand the operation to the real numbers this simply can't be the way we interpret something like <m>4^{\sqrt{2}}</m>.
+    How do you take the product of
+    <m>\sqrt{2}</m> copies of <m>4?</m> The concept is meaningless.
+    What we need is an interpretation of
+    <m>4^{\sqrt{2}}</m> which is consistent with,
+    say <m>4^{3/2} = \left(\sqrt{4}\right)^3=8</m>.
+    This is exactly what the series representation of <m>e^x</m> provides.
+  </p>
+
+  <p>
+    We also have a means of computing integrals as series.
+    For example, the famous <q>bell shaped</q>
+    curve given by the function
+    <m>f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}</m> is of vital importance in statistics and must be integrated to calculate probabilities.
+    The power series we developed gives us a method of integrating this function.
+    For example, we have
+    <md>
+      <mrow>\int_{x=0}^b\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}d x \amp  =\frac{1}{\sqrt{2\pi}}\int_{x=0}^b\left(\sum_{n=0}^\infty\frac{1}{n!}\left(\frac{-x^2}{2}\right)^n\right)d x</mrow>
+      <mrow>\amp =\frac{1}{\sqrt{2\pi}}\,\sum_{n=0}^\infty\left(\frac{\left(-1\right)^n}{n!2^n}\int_{x=0}^bx^{2n}d x\right)</mrow>
+      <mrow>\amp =\frac{1}{\sqrt{2\pi}}\,\sum_{n=0}^\infty\left(\frac{\left(-1\right)^nb^{2n+1}}{n!2^n\left(2n+1\right)}\right)</mrow>
+      </md>.
+  </p>
+
+  <p>
+    This series can be used to approximate the integral to any degree of accuracy.
+    The ability to provide such calculations made power series of paramount importance in the 1700's.
+  </p>
+
+  <problem>
+    <idx><h>series</h><h>solutions of <m>\frac{\dx^2y}{\dx{ x}^2}=-y</m></h></idx>
+    <task>
+      <statement>
+        <p>
+          Show that if <m>y=\sum_{n=0}^\infty a_nx^n</m> satisfies the
+          differential equation <m>\frac{\dx^2y}{\dx{ x}^2}=-y</m>,
+          then
+          <me>
+            a_{n+2}=\frac{-1}{\left(n+2\right)\left(n+1\right)}\,a_n
+          </me>
+          and conclude that
+          <me>
+            y=a_0+a_1x-\frac{1}{2!}\,a_0x^2-\frac{1}{3!}\,a_1x^3+\frac{1}{4!}\,a_0x^4+\frac{1}{5!}\,a_1x^5-\frac{1}{6!}\,a_0x^6-\frac{1}{7!}\,a_1x^7+\cdots
+            </me>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Since <m>y=\sin x</m> satisfies <m>\frac{\dx^2y}{\dx{
+          x}^2}=-y</m>, we see that
+          <me>
+            \sin x=a_0+a_1x-\frac{1}{2!}\,a_0x^2-\frac{1}{3!}\,a_1x^3+\frac{1}{4!}\,a_0x^4+\frac{1}{5!}\,a_1x^5-\frac{1}{6!}\,a_0x^6-\frac{1}{7!}\,a_1x^7+\cdots
+          </me>
+          for some constants <m>a_0</m> and <m>a_1</m>.  Show that in
+          this case <m>a_0=0</m> and <m>a_1=1</m> and obtain
+          <me>
+            \sin x=x-\frac{1}{3!}\,x^3+\frac{1}{5!}x^5-\frac{1}{7!}x^7+\cdots=\sum_{n=0}^\infty\frac{\left(-1\right)^n}{\left(2n+1\right)!}x^{2n+1}
+            </me>.
+        </p>
+      </statement>
+    </task>
+</problem>
+
+<problem>
+  <idx><h><m>\sin x</m></h><h>derivative of series form</h></idx>
+  <idx><h>differentiation</h><h>of <m>\sin x</m> as a series</h></idx>
+  <task>
+    <statement>
+      <p>
+        Use the series
+        <me>
+          \sin x=x-\frac{1}{3!}\,x^3+\frac{1}{5!}x^5-\frac{1}{7!}x^7+\cdots=\sum_{n=0}^\infty\frac{\left(-1\right)^n}{\left(2n+1\right)!}x^{2n+1}
+        </me>
+        to obtain the series
+        <me>
+          \cos x=1-\frac{1}{2!}\,x^2+\frac{1}{4!}x^4-\frac{1}{6!}x^6+\cdots=\sum_{n=0}^\infty\frac{\left(-1\right)^n}{\left(2n\right)!}x^{2n}
+          </me>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Let
+        <m>s(x,N)=\sum_{n=0}^N\frac{\left(-1\right)^n}{\left(2n+1\right)!}x^{2n+1}</m>
+        and
+        <m>c(x,N)=\sum_{n=0}^N\frac{\left(-1\right)^n}{\left(2n\right)!}x^{2n}</m>
+        and use a computer algebra system to plot these
+        for<m>\,-4\pi\leq x\leq 4\pi,\,\,N=1,2,5,\,10,\,15</m>.
+        Describe what is happening to the series as N becomes larger.
+      </p>
+    </statement>
+  </task>
+</problem>
+
+<problem xml:id="prob_alternating_harmonic_series">
+  <idx><h>series</h><h>Geometric series</h><h>used to derive arctangent series</h></idx>
+  <idx><h>series</h><h><m>\tan^{-1}x</m></h></idx>
+  <statement>
+    <p>
+      Use the geometric series,
+      <m>\frac{1}{1-x}=1+x+x^2+x^3+\cdots=\sum_{n=0}^\infty x^n</m>,
+      to obtain a series for <m>\frac{1}{1+x^2}</m> and use this to
+      obtain the series
+      <me>
+        \arctan x=x-\frac{1}{3}x^3+\frac{1}{5}x^5-\cdots=\sum_{n=0}^\infty(-1)^n \frac{1}{2n+1}x^{2n+1}
+        </me>.
+    </p>
+
+    <p>
+      Use the series above to obtain the series <m>\frac{\pi}{4}=\sum_{n=0}^\infty(-1)^n\frac{1}{2n+1}</m>.
+    </p>
+  </statement>
+</problem>
+
+  <p>
+    The series for arctangent was known by James Gregory (1638-1675)
+    and it is sometimes referred to as <q>Gregory's series.</q>
+    Leibniz<idx><h>Leibniz, Gottfried Wilhelm</h></idx> independently
+    discovered
+    <m>\frac{\pi}{4}=1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\cdots</m>
+    by examining the area of a circle.  Though it gives us a means for
+    approximating <m>\pi</m> to any desired accuracy, the series
+    converges too slowly to be of any practical use.  For example, if
+    we compute the sum of the first <m>1000</m> terms we get
+    <me>
+      4\left(\sum_{n=0}^{1000}(-1)^n\frac{1}{2n+1}\right)\approx 3.142591654
+    </me>
+    which only approximates <m>\pi</m> to two decimal places.
+  </p>
+
+  <p>
+    Newton 
+    <idx><h>Newton, Isaac</h></idx>
+    knew of these results and the general scheme of using series to compute areas under curves.
+    These results motivated Newton to provide a series approximation for <m>\pi</m> as well, which,
+    hopefully, would converge faster.
+    We will use modern terminology to streamline Newton's ideas.
+    First notice that <m>\frac{\pi}{4}=\int_{x=0}^1\sqrt{1-x^2}\dx{ x}</m> as this integral gives the area of one quarter of the unit circle.
+    The trick now is to find series that represents <m>\sqrt{1-x^2}</m>.
+  </p>
+
+  <p>
+    To this end we start with the binomial theorem
+    <me>
+      \left(a+b\right)^N=\sum_{n=0}^N\binom{N}{n}a^{N-n}b^n
+      </me>,
+      where
+      <md>
+        <mrow>\binom{N}{n}\amp =\frac{N!}{n!\left(N-n\right)!}</mrow>
+        <mrow>\amp =\frac{N\left(N-1\right)\left(N-2\right)\cdots\left(N-n+1\,\right)}{n!}</mrow>
+        <mrow>\amp =\frac{\prod_{j=0}^{n-1}\left(N-j\right)}{n!}</mrow>
+        </md>.
+  </p>
+
+  <p>
+    Unfortunately,
+    we now have a small problem with our notation which will be a source of confusion later if we don't fix it.
+    So we will pause to address this matter.
+    We will come back to the binomial expansion afterward.
+  </p>
+
+  <p>
+    This last expression is becoming awkward in much the same way that an expression like
+    <me>
+      1+\frac{1}{2}+\left(\frac{1}{2}\right)^2+\left(\frac{1}{2}\right)^3+\ldots+\left(\frac{1}{2}\right)^k
+    </me>
+    is awkward.
+    Just as this sum is less cumbersome when written as <m>\sum_{n=0}^k\left(\frac{1}{2}\right)^n</m> the <em>product</em>
+    <me>
+      N\left(N-1\right)\left(N-2\right)\cdots\left(N-n+1\,\right)
+    </me>
+    is less cumbersom when we write it as <m>\prod_{j=0}^{n-1}\left(N-j\right)</m>.
+  </p>
+
+  <p>
+    A capital pi (<m>\Pi</m>) is used to denote a product in the same way that a capital sigma (<m>\Sigma</m>) is used to denote a sum.
+    The most familiar example would be writing
+    <me>
+      n!=\prod_{j=1}^{n}j
+      </me>.
+  </p>
+
+  <p>
+    Just as it is convenient to define <m>0!=1</m>, we will find it
+    convenient to define <m>\prod_{j=1}^{0}=1</m>.  Similarly, the
+    fact that <m>\binom{N}{0}=1</m> leads to the convention
+    <m>\prod_{j=0}^{-1}\left(N-j\right)=1</m>.  Strange as this may
+    look, it is convenient and <em>is</em> consistent with the
+    convention <m>\sum_{j=0}^{-1}s_j=0</m>.
+  </p>
+
+  <p>
+    Returning to the binomial expansion and recalling our convention
+    <me>
+      \prod_{j=0}^{-1}\left(N-j\right)=1
+      </me>,
+      we can write,
+      <me>
+        \left(1+x\right)^N=1+\sum_{n=1}^N\left(\frac{\prod_{j=0}^{n-1}\left(N-j\right)}{n!}\right)x^n = \sum_{n=0}^N\left(\frac{\prod_{j=0}^{n-1}\left(N-j\right)}{n!}\right)x^n
+        </me>.
+  </p>
+  <p>
+    These two representations probably look the same at first.
+    Take a moment and be sure you see where they differ.
+  </p> 
+  <!--     <aside> -->
+  <!-- <hint>      The <q>1</q> is missing in the last expression.</hint> -->
+  <!-- </aside> -->
+
+  <p>
+    There is an advantage to using this convention
+    (especially when programing a product into a computer),
+    but this is not a deep mathematical insight.
+    It is just a notational convenience and we don't want you to fret over it,
+    so we will use both formulations
+    (at least initially).
+  </p>
+
+  <p>
+    Notice that we can extend the above definition of
+    <m>\binom{N}{n}</m> to values <m>n>N</m>.
+    In this case,
+    <m>\prod_{j=0}^{n-1}\left(N-j\right)</m> will equal 0 as one of the factors in the product will be <m>0</m>
+    (the one where <m>n=N</m>).
+    This gives us that <m>\binom{N}{n}=0</m> when <m>n>N</m> and so
+    <me>
+      \left(1+x\right)^N=1+\sum_{n=1}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(N-j\right)}{n!}\text{ } \right)x^n= \sum_{n=0}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(N-j\right)}{n!}\text{ } \right)x^n
+    </me>
+    holds true for any nonnegative integer <m>N</m>.
+    Essentially Newton asked if it could be possible that the above equation could hold values of <m>N</m> which are not nonnegative integers.
+    For example,
+    if the equation held true for <m>N=\frac{1}{2}</m> , we would obtain
+    <me>
+      \left(1+x\right)^{\frac{1}{2}}=1+\sum_{n=1}^\infty\left(\frac{ \prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}\right)x^n=\sum_{n=0}^\infty\left(\frac{ \prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}\right)x^n
+    </me>
+    or
+    <men xml:id="eq_BinomialSeries">
+      \left(1+x\right)^{\frac{1}{2}}=1+\frac{1}{2}x+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)}{2!}x^2+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)\left(\frac{1}{2}-2\right)}{3!}x^3+\cdots
+      </men>.
+  </p>
+
+  <p>
+    Notice that since <m>1/2</m> is not an integer the series no longer terminates.
+    Although Newton did not prove that this series was correct
+    (nor did we),
+    he tested it by multiplying the series by itself.
+    When he saw that by squaring the series he started to obtain <m>1+x+0\,x^2+0\,x^3+\cdots</m>,
+    he was convinced that the series was exactly equal to <m>\sqrt{1+x}</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Binomial Series, the</h><h>squaring the</h></idx>
+      </p>
+
+      <p>
+        Consider the series representation
+        <md>
+          <mrow>\left(1+x\right)^{\frac{1}{2}}\amp =1+\sum_{n=1}^\infty\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}x^n</mrow>
+          <mrow>\amp  =\sum_{n=0}^\infty\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}x^n</mrow>
+          </md>.
+      </p>
+
+      <p>
+        Multiply this series by itself and compute the coefficients for
+        <m>x^0,\,x^1,\,x^2,\,x^3,\,x^4</m> in the resulting series.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="prob_SqrtSeriesProb">
+    <statement>
+      <p>
+        <idx><h>series</h><h>graph the square root series</h></idx>
+        Let
+        <me>
+          S(x,M)=\sum_{n=0}^M\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j \right)}{n!}x^n
+          </me>.
+      </p>
+
+      <p>
+        Use a computer algebra system to plot <m>S(x,M)</m> for
+        <m>M=5,\,10,\,15,\,95,\,100</m> and compare these to the graph for <m>\sqrt{1+x}</m>.
+        What seems to be happening?
+        For what values of <m>x</m> does the series appear to converge to <m>\sqrt{1+x}?</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Convinced that he had the correct series, Newton used it to find a series representation of <m>\int_{x=0}^1\sqrt{1-x^2} \dx{ x}</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h><m>\pi</m></h><h>first series expansion</h></idx>
+        Use the series <m>\displaystyle \left(1+x\right)^{\frac{1}{2}}=\sum_{n=0}^\infty\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}x^n</m> to obtain the series
+        <md>
+          <mrow>\frac{\pi}{4}\amp =\int_{x=0}^1\sqrt{1-x^2} \dx{ x}</mrow>
+          <mrow>\amp =\sum_{n=0}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}\text{ } \right)\left(\frac{\left(-1\right)^n}{2n+1}\right)</mrow>
+          <mrow>\amp =1-\frac{1}{6}-\frac{1}{40}-\frac{1}{112}-\frac{5}{1152}-\cdots</mrow>
+          </md>.
+      </p>
+
+      <p>
+        Use a computer algebra system to sum the first 100 terms of this series and compare the answer to <m>\frac{\pi}{4}</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Again, Newton had a series which could be verified (somewhat) computationally.
+    This convinced him even further that he had the correct series.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h><m>\pi</m></h><h>second series expansion</h></idx>
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Show that
+              <me>
+                \int_{x=0}^{1/2}\sqrt{x-x^2}\dx{ x}=\sum_{n=0}^\infty\frac{(-1)^n\,\,\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{\sqrt{2\,}n!\left(2n+3\right)2^n}
+              </me>
+              and use this to show that
+              <me>
+                \pi=16\left(\sum_{n=0}^\infty\frac{(-1)^n\,\,\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{\sqrt{2\,}n!\left(2n+3\right)2^n}\right)
+                </me>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              We now have two series for calculating <m>\pi:</m>  the one from part (a) and the one derived earlier, namely
+              <me>
+                \pi=4\left(\sum_{n=0}^\infty\frac{(-1)^n\,\,}{2n+1}\right)
+                </me>.
+                We will explore which one converges to <m>\pi</m> faster.
+                With this in mind,
+                define <m>S1(N)=16\left(\sum_{n=0}^N\frac{(-1)^n\,\,\prod_{j=0}^{n-1}\left( \frac{1}{2}-j\right)}{\sqrt{2\,}n!\left(2n+3\right)2^n}\right)</m> and <m>S2(N)=4\left(\sum_{n=0}^N\frac{(-1)^n\,\,}{2n+1}\right)</m>.
+                Use a computer algebra system to compute <m>S1(N)</m>and <m>S2(N)</m> for <m>N=5,10,15,20</m>.
+                Which one appears to converge to <m>\pi</m> faster?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    In general the series representation
+    <md>
+      <mrow>\left(1+x\right)^\alpha \amp  =\sum_{n=0}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(\alpha-j\right)}{n!}\text{ } \right)x^n</mrow>
+      <mrow>\amp =1+\alpha x+\frac{\alpha\left(\alpha-1\right)}{2!}x^2+\frac{\alpha\left(\alpha-1\right)\left(\alpha-2\right)}{3!}x^3+\cdots</mrow>
+    </md>
+    is called the <term>binomial series</term> (or Newton's binomial series).
+    This series is correct when <m>\alpha</m> is a non-negative integer
+    (after all, that is how we got the series).
+    We can also see that it is correct when <m>\alpha=-1</m> as we obtain
+    <md>
+      <mrow>\left(1+x\right)^{-1}\amp =\sum_{n=0}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(-1-j\right)}{n!}\text{ } \right)x^n</mrow>
+      <mrow>\amp =1+(-1)x+\frac{-1\left(-1-1\right)}{2!}x^2+\frac{-1\left(-1-1\right)\left(-1-2\right)}{3!}x^3+\cdots</mrow>
+      <mrow>\amp =1-x+x^2-x^3+\cdots</mrow>
+    </md>
+    which can be obtained from the geometric series <m>\frac{1}{1-x}=1+x+x^2+\cdots</m> .
+  </p>
+
+  <p>
+    In fact, the binomial series is the correct series representation
+    for all values of the exponent <m>\alpha</m> (though we haven't
+    proved this yet).
+  </p>
+
+  <problem>
+    <idx><h>Binomial Series, the</h></idx>
+    <idx><h>Binomial Series, the</h><h>as a power series centered at zero</h></idx>
+    <introduction>
+      <p>
+        Let <m>k</m> be a positive integer.
+        Find the power series, centered at zero,
+        for <m>f(x) = \left(1-x\right)^{-k}</m> by
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Differentiating the <idx><h>series</h><h>Geometric series</h><h>differentiating</h></idx> geometric series <m>\left(k-1\right)</m> times.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Applying the binomial series.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Compare these two results.
+        </p>
+      </statement>
+    </task>
+  </problem>
+
+  <figure>
+    <caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Euler/" visual="mathshistory.st-andrews.ac.uk/Biographies/Euler/">Leonhard Euler</url></caption>
+    <idx><h>Euler, Leonhard</h><h>portrait of</h></idx>
+    <image width="35%" source="images/Euler.png" />
+  </figure>
+
+  <p>
+    Leonhard Euler was a master at exploiting power series.
+    In 1735, the 28 year-old Euler won acclaim for what is now called the Basel problem:
+    to find a closed form for <m>\sum_{n=1}^\infty\frac{1}{n^2}</m>.
+    Other mathematicans knew that the series converged,
+    but Euler was the first to find its exact value.
+    The following problem essentially provides Euler's solution.
+  </p>
+
+  <problem><title>The Basel Problem</title>
+  <idx><h>Euler, Leonhard</h><h>Basel Problem, the</h></idx>
+  <task>
+    <statement>
+      <p>
+        Show that the power series for
+        <m>\frac{\sin x}{x}</m> is given by <m>1-\frac{1}{3!}x^2+\frac{1}{5!}x^4-\cdots</m>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Use (a) to infer that the roots of
+        <m>1-\frac{1}{3!}x^2+\frac{1}{5!}x^4-\cdots</m> are
+        given by
+        <me>
+          x=\pm\pi,\,\pm 2\pi,\,\pm 3\pi,\,\ldots
+        </me>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Suppose <m>p(x)=a_0+a_1x+\cdots+a_nx^n</m> is a
+        polynomial with roots <m>r_1,\,r_2,\,\ldots,r_n</m>.
+        Show that if <m>a_0\neq</m> <m>0</m>, then all the roots
+        are non-zero and
+        <me>
+          p(x)=a_0\left(1-\frac{x}{r_1}\right)\left(1-\frac{x}{r_2}\right)\cdots\left(1-\frac{x}{r_n}\right)
+          </me>.
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Assuming that the result in part (c) holds for an infinite polynomial (power series),
+        deduce that
+        <md>
+          <mrow>1-\frac{1}{3!}x^2+\frac{1}{5!}x^4-\cdots\amp =\left(1-\left(\frac{x}{\pi}\right)^2\right)\left(1-\left(\frac{x}{2\pi}\right)^2\right)\left(1-\left(\frac{x}{3\pi}\right)^2\right)\cdots</mrow>
+        </md>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Expand this product to deduce
+        <me>
+          \sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}.{}
+        </me>
+      </p>
+    </statement>
+  </task>
+  </problem>
+
+  <problem><title>Euler's Formula</title>
+  <idx><h>Euler, Leonhard</h><h>Euler's Formula</h></idx>
+  <task>
+    <statement>
+      <p>
+        Use  the power series expansion of <m>e^x</m>, <m>\sin x,</m> and <m>\cos x</m> to derive <term>Euler's Formula</term>:
+<me>
+e^{i\theta} = cos\theta+i\sin\theta.
+</me>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Use Euler's formula to derive the Addition/Subtraction formulas from Trigonometry:
+        <me>
+          \sin(\alpha\pm\beta) = \sin\alpha\cos\beta\pm\sin\beta\cos\alpha
+        </me>
+        <me>
+          \cos(\alpha\pm\beta) = \cos\alpha\cos\beta\mp\sin\alpha\sin\beta
+        </me>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Use Euler's formula to show that
+        <me>
+          \sin 2\theta = 2\cos\theta\sin\theta
+        </me>
+        <me>
+          \cos 2\theta =\cos^2\theta-\sin^2\theta
+        </me>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Use Euler's formula to show that
+        <me>
+          \sin 3\theta = 3\cos^2\theta\sin\theta-\sin^3\theta
+        </me>
+        <me>
+          \cos 3\theta=\cos^3\theta-\cos\theta\sin^2\theta
+        </me>
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Find a formula <m>\sin(n\theta)</m> and <m>\cos(n\theta)</m>
+        for any positive integer <m>n</m>.
+      </p>
+    </statement>
+  </task>
+</problem>
+
+</section>
+
+
+
+<!-- <section xml:id="CalcIn17th18thCentury-AddProb"> -->
+<!--   <title>Additional Problems</title> -->
+<!--   <problem> -->
+<!--     <statement> -->
+<!--       <p> -->
+<!--         <idx><h>series</h><h>Geometric series</h><h>alternating</h></idx> -->
+<!--         <idx><h>series</h><h>Geometric series</h><h>derivation of the series representation of <m>\ln(1+x)</m> from</h></idx> -->
+<!--         Use the geometric series to obtain the series -->
+<!--         <md> -->
+<!--           <mrow>\ln \left(1+x\right)\amp =x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots</mrow> -->
+<!--           <mrow>\amp =\sum_{n=0}^\infty\frac{(-1)^n}{n+1}x^{n+1}.{}</mrow> -->
+<!--         </md> -->
+<!--       </p> -->
+<!--     </statement> -->
+<!--   </problem> -->
+
+<!--   <problem> -->
+<!--     <statement> -->
+<!--       <p> -->
+<!--         <idx><h>power series</h><h> drills</h></idx> -->
+<!--         <em>Without</em> using Taylor's Theorem, represent the -->
+<!--         following functions as power series expanded about 0 -->
+<!--         (i.e., in the form <m>\sum_{n=0}^\infty a_nx^n</m>). -->
+<!--         <ol label="(a)"> -->
+<!--           <li> -->
+<!--             <p> -->
+<!--               <m>\ln\left(1-x^2\right)</m> -->
+<!--             </p> -->
+<!--           </li> -->
+
+<!--           <li> -->
+<!--             <p> -->
+<!--               <m>\frac{x}{1+x^2}</m> -->
+<!--             </p> -->
+<!--           </li> -->
+
+<!--           <li> -->
+<!--             <p> -->
+<!--               <m>\arctan \left(x^3\right)</m> -->
+<!--             </p> -->
+<!--           </li> -->
+
+<!--           <li> -->
+<!--               <m>\ln\left(2+x\right)</m> -->
+<!--               <hint> -->
+<!-- <p> -->
+<!--                 <m>2+x=2\left(1+\frac{x}{2}\right)</m> -->
+<!-- </p> -->
+<!--               </hint> -->
+<!--           </li> -->
+<!--         </ol> -->
+<!--       </p> -->
+<!--     </statement> -->
+<!--   </problem> -->
+
+<!--   <problem> -->
+<!--     <statement> -->
+<!--       <p> -->
+<!--         <idx><h>power series</h><h>for <m>a^x</m> expanded about 0</h></idx> -->
+<!--         Let <m>a</m> be a positive real number. -->
+<!--         Find a power series for <m>a^x</m> expanded about 0.  -->
+<!--       </p> -->
+<!--     </statement> -->
+<!--     <hint> -->
+<!-- <p> -->
+<!--       <m>a^x=e^{\ln\,\left(a^x\right)}</m> -->
+<!-- </p> -->
+<!--     </hint> -->
+<!--   </problem> -->
+
+<!--   <problem> -->
+<!--     <statement> -->
+<!--       <p> -->
+<!--         <idx><h>power series</h><h>of <m>\sin(x)</m>, expanded about <m>a</m></h></idx> -->
+<!--         <idx><h><m>\sin x</m></h><h>as a power series</h></idx> -->
+<!--         Represent the function <m></m>sin <m>x</m> as a power series expanded about <m>a</m> (i.e., in the form <m>\sum_{n=0}^\infty a_n\left(x-a\right)^n</m>).  -->
+<!--       </p> -->
+<!--     </statement> -->
+<!--     <hint> -->
+<!-- <p> -->
+<!--       <m>\sin x=\sin \left(a+x-a\right)</m>. -->
+<!-- </p> -->
+<!--     </hint> -->
+<!--   </problem> -->
+
+<!--   <problem> -->
+<!--     <statement> -->
+<!--       <p> -->
+<!--         <idx><h>Maclaurin series drills</h></idx> <em>Without</em> using Taylor's Theorem, represent the following functions as a power series expanded about <m>a</m> for the given value of <m>a</m> (i.e., in the form <m>\sum_{n=0}^\infty a_n\left(x-a\right)^n</m>). -->
+
+<!--         <ol label="(a)"> -->
+<!--           <li> -->
+<!--             <p> -->
+<!--               <m>\ln x</m>, <m>a=1</m> -->
+<!--             </p> -->
+<!--           </li> -->
+
+<!--           <li> -->
+<!--             <p> -->
+<!--               <m>e^x</m>, <m>a=3</m> -->
+<!--             </p> -->
+<!--           </li> -->
+
+<!--           <li> -->
+<!--             <p> -->
+<!--               <m>x^3+2x^2+3</m> , <m>a=1</m> -->
+<!--             </p> -->
+<!--           </li> -->
+
+<!--           <li> -->
+<!--             <p> -->
+<!--               <m>\frac{1}{x}</m> , <m>a=5</m> -->
+<!--             </p> -->
+<!--           </li> -->
+<!--         </ol> -->
+<!--       </p> -->
+<!--     </statement> -->
+<!--   </problem> -->
+
+<!--   <problem> -->
+<!--     <statement> -->
+<!--       <p> -->
+<!--         <idx><h>series</h><h>term by term integration of </h></idx> -->
+<!--         Evaluate the following integrals as series. -->
+
+<!--         <ol label="(a)"> -->
+<!--           <li> -->
+<!--             <p> -->
+<!--               <m>\displaystyle\int_{x=0}^1e^{x^2}\dx{ x}</m> -->
+<!--             </p> -->
+<!--           </li> -->
+
+<!--           <li> -->
+<!--             <p> -->
+<!--               <m>\displaystyle\int_{x=0}^1\frac{1}{1+x^4}\dx{ x}</m> -->
+<!--             </p> -->
+<!--           </li> -->
+
+<!--           <li> -->
+<!--             <p> -->
+<!--               <m>\displaystyle\int_{x=0}^1\sqrt[3]{1-x^3}\dx{ x}</m> -->
+<!--             </p> -->
+<!--           </li> -->
+<!--         </ol> -->
+<!--       </p> -->
+<!--     </statement> -->
+<!--   </problem> -->
+<!-- </section> -->
+<section xml:id="CalcIn17th18thCentury-AddProb">
+  <title>Additional Problems</title>
+  <problem>
+    <statement>
+      <p>
+        <idx><h>series</h><h>Geometric series</h><h>alternating</h></idx>
+        <idx><h>series</h><h>Geometric series</h><h>derivation of the series representation of <m>\ln(1+x)</m> from</h></idx>
+        Use the geometric series to obtain the series
+        <md>
+          <mrow>\ln \left(1+x\right)\amp =x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots</mrow>
+          <mrow>\amp =\sum_{n=0}^\infty\frac{(-1)^n}{n+1}x^{n+1}.{}</mrow>
+        </md>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <introduction>
+      <p>
+        <idx><h>power series</h><h> drills</h></idx>
+        <em>Without</em> using Taylor's Theorem, represent the
+        following functions as power series expanded about 0
+        (i.e., in the form <m>\sum_{n=0}^\infty a_nx^n</m>).
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          <m>\ln\left(1-x^2\right)</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\frac{x}{1+x^2}</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\arctan \left(x^3\right)</m>
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          <m>\ln\left(2+x\right)</m>
+        </p>
+      </statement>
+      <hint>
+        <p>
+          <m>2+x=2\left(1+\frac{x}{2}\right)</m>
+        </p>
+      </hint>
+    </task>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>power series</h><h>for <m>a^x</m> expanded about 0</h></idx>
+        Let <m>a</m> be a positive real number.
+        Find a power series for <m>a^x</m> expanded about 0. 
+      </p>
+    </statement>
+    <hint>
+      <p>
+        <m>a^x=e^{\ln\,\left(a^x\right)}</m>
+      </p>
+    </hint>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>power series</h><h>of <m>\sin(x)</m>, expanded about <m>a</m></h></idx>
+        <idx><h><m>\sin x</m></h><h>as a power series</h></idx>
+        Represent the function <m></m>sin <m>x</m> as a power series expanded about <m>a</m> (i.e., in the form <m>\sum_{n=0}^\infty a_n\left(x-a\right)^n</m>). 
+      </p>
+    </statement>
+    <hint>
+      <p>
+        <m>\sin x=\sin \left(a+x-a\right)</m>.
+      </p>
+    </hint>
+  </problem>
+
+  <problem>
+    <introduction>
+      <p>
+        <idx><h>Maclaurin series drills</h></idx> <em>Without</em> using Taylor's Theorem, represent the following functions as a power series expanded about <m>a</m> for the given value of <m>a</m> (i.e., in the form <m>\sum_{n=0}^\infty a_n\left(x-a\right)^n</m>).
+      </p>
+    </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>\ln x</m>, <m>a=1</m>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            <m>e^x</m>, <m>a=3</m>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            <m>x^3+2x^2+3</m> , <m>a=1</m>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            <m>\frac{1}{x}</m> , <m>a=5</m>
+          </p>
+        </statement>
+      </task>
+
+    </problem>
+
+  <problem>
+<introduction>
+      <p>
+        <idx><h>series</h><h>term by term integration of </h></idx>
+        Evaluate the following integrals as series.
+      </p>
+</introduction>
+<task>
+<statement>
+            <p>
+              <m>\displaystyle\int_{x=0}^1e^{x^2}\dx{ x}</m>
+            </p>
+</statement>
+</task>
+
+<task>
+<statement>
+            <p>
+              <m>\displaystyle\int_{x=0}^1\frac{1}{1+x^4}\dx{ x}</m>
+            </p>
+</statement>
+</task>
+<task>
+<statement>
+            <p>
+              <m>\displaystyle\int_{x=0}^1\sqrt[3]{1-x^3}\dx{ x}</m>
+            </p>
+</statement>
+</task>
+  </problem>
+</section>
+
+
+</chapter>
+

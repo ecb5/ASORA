@@ -1,0 +1,1616 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="IVTandEVT">
+  <title>Intermediate and Extreme Values</title>
+
+
+<section xml:id="IVTandEVT-Completeness">
+  <title>Completeness of the Real Number System</title>
+  <p>
+    Recall that in deriving the Lagrange and Cauchy forms of the remainder for Taylor series,
+    we made use of the Extreme Value Theorem (<term>EVT</term>) and Intermediate Value Theorem (<term>IVT</term>).
+    In <xref ref="Continuity">Chapter</xref>,
+    we produced an analytic definition of continuity that we can use to prove these theorems.
+    To provide the rest of the necessary tools we need to explore the make-up of the real number system.
+    To illustrate what we mean,
+    suppose that we only used the rational number system.
+    We could still use our definition of continuity and could still consider continuous functions such as <m>f(x)=x^2</m>.
+    Notice that <m>2</m> is a value that lies between <m>f(1)=1</m> and <m>f(2)=4</m>.
+  </p>
+
+    <image width="37%" source="images/Ch6fig1.png" />
+
+  <p>
+    The IVT says that somewhere between <m>1</m> and <m>2</m>,
+    <m>f</m> must take on the value <m>2</m>.
+    That is, there must exist some number
+    <m>c\in[1,2]</m> such that <m>f(c)=2</m>.
+    You might say, <q>Big deal!
+    Everyone knows <m>c=\sqrt{2}</m> works.</q>
+  </p>
+
+  <p>
+    However, we are only working with rational numbers and
+    <m>\sqrt{2}</m> <m></m>is not rational.
+    As we saw in <xref ref="NumbersRealRational">Chapter</xref>
+    the rational number system has holes in it,
+    whereas the real number system doesn't.
+    Again, <q>Big deal!
+    Let's just say that the real number system contains (square) roots.</q>
+  </p>
+
+  <p>
+    This sounds reasonable and it actually works for square roots,
+    but consider the function <m>f(x)=x-\cos x</m>.
+    We know this is a continuous function.
+    We also know that <m>f(0)=-1</m> and <m>f(\frac{\pi}{2})=\frac{\pi}{2}</m>.
+    According to the IVT, there should be some number
+    <m>c\in[\,0,\frac{\pi}{2}]</m>, where <m>f(c)=0</m>.
+    The graph is below.
+  </p>
+
+    <image width="37%" source="images/Ch6fig2.png" />
+
+  <p>
+    The situation is not as transparent as before.
+    What would this mysterious <m>c</m> be where the curve crosses the <m>x</m> axis?
+    Somehow we need to convey the idea that the real number system is a continuum.
+    That is, it has no <q>holes</q> in it.
+  </p>
+
+  <p>
+    How about this?
+    Why don't we just say that it has no holes in it?
+    Sometimes the simple answer works best!
+    But not in this case.
+    How are we going to formulate a rigorous proof based on this statement?
+    Just like with convergence and continuity,
+    what we need is a rigorous way to convey this idea that the real number system does not have any holes,
+    that it is <em>complete.</em>
+  </p>
+
+  <p>
+    We will see that there are several different,
+    but equivalent ways to convey this notion of completeness.
+    We will explore some of them in this chapter.
+    For now we adopt the following as our
+    <em>Completeness Axiom</em>
+    for the real number system.
+  </p>
+
+  <axiom><title>Nested Interval Property of the Real Number System (<term>NIP</term>)</title>
+  <statement>
+    <p>
+      Suppose we have two sequences of real numbers
+      <m>\left(x_n\right)</m>and <m>\left(y_n\right)</m> satisfying the
+      following conditions:
+    </p>
+    <p>
+      <ol>
+        <li>
+          <p>
+            <m>x_1\leq x_2\leq x_3\leq\ldots</m> (this says that the sequence, <m>\left(x_n\right)</m>, is non-decreasing)
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            <m>y_1\geq y_2\geq y_3\geq\ldots</m> (this says that the sequence, <m>\left(y_n\right)</m>, is non-increasing)
+<!-- (this says that the sequence, <m>\left(y_n\right)\</m>,is non-increasing) -->
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\forall</m> <m>n</m>, <m>x_n\leq y_n</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\lim_{n\rightarrow\infty}\left(y_n-x_n\right)=0</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Then there exists a unique number <m>c</m> such that <m>x_n\leq
+      c\leq y_n</m> for all <m>n</m>.
+    </p>
+  </statement>
+  </axiom>
+  <p>
+    Geometrically, we have the following situation.
+  </p>
+
+    <image width="75%" source="images/Ch6fig3.png" />
+
+  <p>
+    Notice that we have two sequences
+    <m>\left(x_n\right)</m> and <m>\left(y_n\right)</m>, one increasing
+    (really non-decreasing)
+    and one decreasing
+    (non-increasing).
+    These sequences do not pass each other.
+    In fact, the following is true:
+  </p>
+
+  <problem>
+    <idx><h>Nested Interval Property (NIP)</h><h>endpoints</h></idx>
+    <statement>
+      <p>
+        Let <m>(x_n), (y_n)</m> be sequences as in the NIP. Show that
+        for all <m>n, m \in\NN</m>, <m>x_n\le y_m</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    They are also coming together in the sense that
+    <m>\lim_{n\rightarrow\infty}\left(y_n-x_n\right)=0</m>.  The NIP
+    says that in this case there is a unique real number <m>c</m> in
+    the middle of all of this <m>x_n\leq c\leq y_n</m> for all
+    <m>n\in\NN</m>.
+  </p>
+
+    <image width="75%" source="images/Ch6fig4.png" />
+
+  <p>
+    If there was no such <m>c</m> then there would be a hole where
+    these two sequences come together.  The NIP guarantees that there
+    is no such hole.  We do not need to prove this since an axiom is,
+    by definition, a self evident truth.  We are taking it on faith
+    that the real number system obeys this law.  The next problem
+    shows that the completeness property distinguishes the real number
+    system from the rational number system.
+  </p>
+
+  <problem>
+    <idx><h>Least Upper Bound Property (LUBP)</h><h>implies the existence of irrational numbers</h></idx>
+    <task>
+      <statement>
+        <p>
+          Find two sequences of rational numbers
+          <m>\left(x_n\right)</m>and <m>\left(y_n\right)</m> which
+          satisfy properties 1-4 of the NIP and such that there is
+          no rational number <m>c</m> satisfying the conclusion of
+          the NIP.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Consider the decimal expansion of an irrational number.
+        </p>
+      </hint>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Find two sequences of rational numbers
+          <m>\left(x_n\right)</m> and <m>\left(y_n\right)</m> which
+          satisfy properties 1-4 of the NIP and such that there is a
+          rational number <m>c</m> satisfying the conclusion of the
+          NIP.
+        </p>
+      </statement>
+    </task>
+  </problem>
+
+  <p>
+    You might find the name <q>Nested Interval Property</q> to be somewhat curious.
+    One way to think about this property is to consider that we have a sequence of
+    <q>nested closed intervals</q>
+    <m>[\,x_1,y_1]\supseteq[\,x_2,y_2]\supseteq[\,x_3,y_3]\supseteq\cdots</m> whose lengths
+    <m>\,y_n-x_n</m> are <q>shrinking to <m>0</m>.</q>
+    The conclusion is that the intersection of these intervals is non-empty and,
+    in fact, consists of a single point.
+    That is, <m>\bigcap_{n=1}^\infty[x_n,y_n]=\{c\}</m>.
+  </p>
+
+  <p>
+    It appears that the sequences <m>\left(x_n\right)</m> and
+    <m>\left(y_n\right)</m> in the NIP converge to <m>c</m>.
+    This is, in fact, true and can be proven rigorously.
+    In what follows,
+    this will prove to be a valuable piece of information.
+  </p>
+
+  <theorem xml:id="thm_ConvergeToC">
+    <statement>
+      <p>
+            <idx><h>Nested Interval Property (NIP)</h><h>endpoints</h></idx>
+            <idx><h>limit</h><h>of interval endpoints in the NIP</h></idx>
+        Suppose that we have two sequences <m>\left(x_n\right)</m> and <m>\left(y_n\right)</m> satisfying all of the assumptions of the Nested Interval Property.
+        If <m>c</m> is the unique number such that <m>x_n\leq c\leq y_n</m> for all <m>n</m>,
+        then <m>\lim_{n\rightarrow\infty}x_n=c</m> and <m>\lim_{n\rightarrow\infty}y_n=c</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Nested Interval Property (NIP)</h><h>endpoints</h></idx>
+        Prove <xref ref="thm_ConvergeToC">Theorem</xref>.
+      </p>
+    </statement>
+
+  </problem>
+
+  <p>
+    To illustrate the idea that the NIP <q>plugs the holes</q> in the
+    real line, we will prove the existence of square roots of
+    nonnegative real numbers.
+  </p>
+
+  <theorem xml:id="thm_SqrtsExist">
+    <idx><h>square roots exist</h></idx>
+    <statement>
+      <p>
+        Suppose <m>a\in\mathbb{R},\,a\geq 0</m>.
+        There exists a real number <m>c\geq 0</m> such that <m>c^2=a</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Notice that we can't just say,
+    <q>Let <m>c=\sqrt{a}</m>,</q> since the idea is to show that this square root exists.
+    In fact, throughout this proof,
+    we cannot really use a square root symbol as we haven't yet proved that they
+    (square roots)
+    exist.
+    We will give the idea behind the proof as it illustrates how the NIP is used.
+  </p>
+
+  <proof>
+<title>Sketch of Proof</title>
+    <p>
+      Our strategy is to construct two sequences which will <q>narrow in</q>
+      on the number <m>c</m> that we seek.
+      With that in mind, we need to find a number <m>x_1</m> such that
+      <m>x_1^2\leq a</m> and a number <m>y_1</m> such that <m>y_1^2\geq a</m>.
+      (Remember that we can't say
+      <m>\sqrt{x_1}</m> or<m>\sqrt{y_1}</m>.)
+      There are many possibilities,
+      but how about <m>x_1=0</m> and
+      <m>y_1=a+1?</m> You can check that these will satisfy <m>x_1^2\leq a\leq</m> <m>y_1^2</m>.
+      Furthermore <m>x_1\leq y_1</m>.
+      This is the starting point.
+    </p>
+
+    <p>
+      The technique we will employ is often called a bisection technique,
+      and is a useful way to set ourselves up for applying the NIP. Let <m>m_1</m> be the midpoint of the interval <m>[\,x_1,y_1]</m>.
+      Then either we have <m>m_1^2\leq a</m> or <m>m_1^2\geq a</m>.
+      In the case <m>m_1^2\leq a</m>,
+      we really want <m>m_1</m> to take the place of <m>x_1</m> since it is larger than <m>\,x_1</m>,
+      but still represents an underestimate for what would be the square root of <m>a</m>.
+      This thinking prompts the following move.
+      If <m>m_1^2\leq a</m>,
+      we will relabel things by letting <m>x_2=m_1</m> and <m>y_2=y_1</m>.
+      The situation looks like this on the number line.
+    </p>
+
+      <image width="56%" source="images/Ch6fig5.png" />
+
+    <p>
+      In the other case where <m>a\leq m_1^2</m>,
+      we will relabel things by letting <m>x_2=x_1</m> and <m>y_2=m_1</m>.
+      The situation looks like this on the number line.
+    </p>
+
+      <image width="56%" source="images/Ch6fig6.png" />
+
+    <p>
+      In either case,
+      we've reduced the length of the interval where the square root lies to half the size it was before.
+      Stated in more specific terms,
+      in either case we have the same results:
+      <me>
+        x_1\leq x_2\leq y_2\leq y_1;\ \  x_1^2\leq a\leq y_1^2;\ \  x_2^2\leq a\leq y_2^2
+      </me>
+      and
+      <me>
+        y_2-x_2=\frac{1}{2}\left(y_1-x_1\right)
+      </me>.
+    </p>
+
+    <p>
+      Now we play the same game,
+      but instead we start with the interval <m>[x_2,y_2]</m>.
+      Let <m>m_2</m> be the midpoint of <m>[x_2,y_2]</m>.
+      Then we have <m>m_2^2\leq a</m> or <m>m_2^2\geq a</m>.
+      If <m>m_2^2\leq a</m>, we relabel <m>x_3=m_2</m> and <m>y_3=y_2</m>.
+      If <m>a\leq m_2^2</m>, we relabel <m>x_3=x_2</m> and <m>y_3=m_2</m>.
+      In either case, we end up with
+      <me>
+        x_1\leq x_2\leq x_3\leq y_3\leq y_2\leq y_1;\ \   x_1^2\leq a\leq y_1^2;\ \  x_2^2\leq a\leq y_2^2;\ \   x_3^2\leq a\leq y_3^2
+      </me>
+      and
+      <me>
+        y_3-x_3=\frac{1}{2}\left(y_2-x_2\right)=\frac{1}{2^2}\left(y_1-x_1\right)
+      </me>.
+    </p>
+
+    <p>
+      Continuing in this manner, we will produce two sequences,
+      <m>\left(x_n\right)</m>and
+      <m>\left(y_n\right)</m> satisfying the following conditions:
+
+      <ol>
+        <li>
+          <p>
+            <m>x_1\leq x_2\leq x_3\leq\ldots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>y_1\geq y_2\geq y_3\geq\ldots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\forall</m> <m>n</m>, <m>x_n\leq y_n</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\lim_{n\rightarrow\infty}\left(y_n-x_n\right)=\,\lim_{n\rightarrow\infty}\frac{1}{2^{n-1}}\left(y_1-x_1\right)=0</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            These sequences also satisfy the following property:
+            <me>
+              \forall n,\,x_n^2\leq a\leq y_n^2
+            </me>
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      Properties 1-4 tell us that <m>\left(x_n\right)</m>and
+      <m>\left(y_n\right)</m> satisfy all of the conditions of the NIP, so we can conclude that there must exist a real number <m>c</m> such that <m>x_n\leq c\leq y_n</m> for all <m>n</m>.
+      At this point,
+      you should be able to use property 5. to show that <m>c^2=a</m> as desired.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Nested Interval Property (NIP)</h><h>square roots of integers, and</h></idx>
+            <idx><h>Nested Interval Property (NIP)</h><h>implies the existence of square roots of integers</h></idx>
+        Turn the above outline into a formal proof of <xref ref="thm_SqrtsExist">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The bisection method we employed in the proof of <xref ref="thm_SqrtsExist">Theorem</xref>
+    is pretty typical of how we will use the NIP, as taking midpoints ensures that we will create a sequence of
+    <q>nested intervals.</q>
+    We will employ this strategy in the proofs of the IVT and EVT. Deciding how to relabel the endpoints of our intervals will be determined by what we want to do with these two sequences of real numbers.
+    This will typically lead to a fifth property,
+    which will be crucial in proving that the <m>c</m> guaranteed by the NIP does what we want it to do.
+    Specifically, in the above example,
+    we always wanted our candidate for
+    <m>\sqrt{a}</m> to be in the interval <m>[\,x_n,y_n]</m>.
+    This judicious choice led to the extra Property<nbsp />5:
+    <m>\forall</m> <m>n,\,x_n^2\leq a\leq y_n^2</m>.
+    In applying the NIP to prove the IVT and EVT, we will find that properties 1-4 will stay the same.
+    Property<nbsp />5 is what will change based on the property we want <m>c</m> to have.
+  </p>
+
+  <p>
+    Before we tackle the IVT and EVT, let's use the NIP to address an
+    interesting question about the Harmonic Series.
+    <idx><h>series</h><h>Harmonic Series</h><h>slow divergence of</h></idx> 
+    Recall that the Harmonic Series,
+    <m>1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots</m>, grows without
+    bound, that is, <m>\sum_{n=1}^\infty\frac{1}{n}=\infty</m>.  The
+    question is how slowly does this series grow?  For example, how
+    many terms would it take before the series surpasses 100? 1000?
+    10000?  Leonhard Euler <idx><h>Euler, Leonhard</h></idx> decided
+    to tackle this problem in the following way.  Euler decided to
+    consider the
+    <m>\lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+
+    \frac{1}{n}\right)-\text{ ln } \left(n+1\right)\right)</m>.  This
+    limit is called Euler's constant and is denoted by <m>\gamma</m>.
+    This says that for <m>n</m> large, we have
+    <m>1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\approx</m>ln<m>\left(n+1\right)+\gamma</m>.
+    If we could approximate <m>\gamma</m>, then we could replace the
+    inequality <m>1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\geq
+    100</m> with the more tractable inequality
+    ln<m>\left(n+1\right)+\gamma</m> <m>\geq 0</m> and solve for
+    <m>n</m> in this.  This should tell us roughly how many terms
+    would need to be added in the Harmonic Series to surpass 100.
+    Approximating <m>\gamma</m> with a computer is not too bad.  We
+    could make <m>n</m> as large as we wish in
+    <m>\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\right)-</m>ln<m>\left(1+n\right)</m>
+    to make closer approximations for <m>\gamma</m>.  The real issue
+    is, <alert>HOW DO WE KNOW THAT</alert>
+    <me>
+      \lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\right)-\text{ ln } \left(\text{n} +1\right)\right)
+    </me>
+    <alert>ACTUALLY EXISTS?</alert>
+  </p>
+
+  <p>
+    You might want to say that obviously it should,
+    but let us point out that as of the printing of this book (2013),
+    it is not even known if <m>\gamma</m> is rational or irrational.
+    So, in our opinion the existence of this limit is not so obvious.
+    This is where the NIP will come into play;
+    we will use it to show that this limit, in fact, exists.
+    The details are in the following problem.
+  </p>
+
+  <problem>
+    <idx><h>Euler, Leonhard</h><h>Euler's constant <m>(\gamma)</m></h><h>existence of</h></idx>
+    <introduction>
+      <p>
+        The purpose of this problem is to show that
+        <me>
+          \lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+ \frac{1}{n}\right)-\ln\left(n+1\right)\right)
+        </me>
+        exists.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Let <m>x_n=\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\right)-\ln\left(n+1 \right)</m>.
+          Use the following diagram to show
+          <me>
+            x_1\leq x_2\leq x_3\leq\cdots
+          </me>
+        </p>
+        <image width="84%" source="images/Ch6fig7.png" />
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>z_n=\ln\left(n+1\right)-\left(\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n+1} \right)</m>.
+          Use a similar diagram to show that <m>z_1\leq z_2\leq z_3\leq\cdots</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Let <m>y_n=1-z_n</m>.  Show that <m>\left(x_n\right)</m> and
+          <m>\left(y_n\right)</m> satisfy the hypotheses of the nested
+          interval property and use the NIP to conclude that there is
+          a real number <m>\gamma</m> such that <m>x_n\leq\gamma\leq
+          y_n</m> for all <m>n</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Conclude that
+          <m>\lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+
+          \frac{1}{n}\right)-\ln\left(n+1\right)\right)=\gamma</m>.
+        </p>
+      </statement>
+    </task>
+  </problem>
+
+  <problem>
+    <idx><h>Euler, Leonhard</h><h>Euler's constant <m>(\gamma)</m></h><h>approximating</h></idx>
+    <statement>
+      <p>
+        Use the fact that <m>x_n\leq\gamma\leq y_n</m> for all
+        <m>n</m> to approximate <m>\gamma</m> to three decimal places.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <idx><h>Euler, Leonhard</h><h>Euler's constant <m>(\gamma)</m></h><h>slow convergence to</h></idx>
+    <task>
+      <statement>
+        <p>
+          Use the fact that for large <m>n</m>,
+          <m>1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\approx
+          \ln\left(n+1\right)+ \gamma</m> to determine
+          approximately how large <m>n</m> must be to make
+          <me>
+            1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\geq 100
+            </me>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Suppose we have a supercomputer which can add 10
+          trillion terms of the Harmonic Series per second.
+          Approximately how many earth lifetimes would it take for
+          this computer to sum the Harmonic Series until it
+          surpasses 100?
+        </p>
+      </statement>
+    </task>
+  </problem>
+</section>
+
+
+
+
+<section xml:id="IVTandEVT-ProofOfIVT">
+  <title>Proof of the Intermediate Value Theorem</title>
+  <p>
+    We now have all of the tools to prove the Intermediate Value Theorem (<term>IVT</term>).
+  </p>
+
+  <theorem xml:id="IntermediateValueTheorem">
+    <statement>
+      <p>
+        <term>Intermediate Value Theorem</term>
+      </p>
+      <p>
+        <idx><h>Intermediate Value Theorem (IVT)</h></idx> 
+         Suppose <m>f(x)</m> is continuous on 
+          <m>[a,b]</m> and <m>v</m> is any real number between 
+          <m>f(a)</m> and <m>f(b)</m>.
+          Then there exists a real number
+          <m>c\in[\,a,b]</m> such that <m>f(c)=v</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+<title>Sketch of Proof</title>
+    <p>
+      We have two cases to consider:
+      <m>f(a)\leq v\leq f(b)</m> and <m>f(a)\geq v\geq f(b)</m>.
+    </p>
+
+    <p>
+      We will look at the case <m>f(a)\leq v\leq f(b)</m>.
+      Let <m>x_1=a</m> and <m>y_1=b</m>,
+      so we have <m>x_1\leq y_1</m> and <m>f(x_1)\leq v\leq f(y_1)</m>.
+      Let <m>\,m_1</m> be the midpoint of
+      <m>[\,x_1,y_1]</m> and notice that we have either
+      <m>f(m_1)\leq v</m> or <m>f(m_1)\geq v</m>.
+      If <m>f(m_1)\leq v</m> , then we relabel <m>x_2=m_1</m> and <m>y_2=y_1</m>.
+      If <m>f(m_1)\geq v</m> , then we relabel <m>x_2=x_1</m> and <m>y_2=m_1</m>.
+      In either case, we end up with <m>x_1\leq x_2\leq y_2\leq y_1</m>,
+      <m>y_2-x_2=\frac{1}{2}\left(y_1-x_1\right)</m>,
+      <m>f(x_1)\leq v\leq f(y_1)</m>,
+      and <m>f(x_2)\leq v\leq f(y_2)</m>.
+    </p>
+
+    <p>
+      Now play the same game with the interval <m>[\,x_2,y_2]</m>.
+      If we keep playing this game,
+      we will generate two sequences
+      <m>\left(x_n\right)</m> and <m>\left(y_n\right)</m>,
+      satisfying all of the conditions of the nested interval property.
+      These sequences will also satisfy the following extra property:
+      <m>\forall</m> <m>n,\,f(x_n)\leq v\leq f(y_n)</m>.
+      By the NIP, there exists a <m>c</m> such that
+      <m>\,x_n\leq c\leq y_n</m>, <m>\forall</m> <m>n</m>.
+      This should be the <m>c</m> that we seek though this is not obvious.
+      Specifically, we need to show that <m>f(c)=v</m>.
+      This should be where the continuity of <m>f</m> at <m>c</m> and the extra property on
+      <m>\left(x_n\right)</m>and <m>\left(y_n\right)</m> come into play.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Intermediate Value Theorem (IVT)</h><h>the case <m>f(a)\leq v\leq f(b)</m></h></idx>
+        Turn the ideas of the previous paragraphs into a formal proof of the IVT for the case <m>f(a)\leq v\leq f(b)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Intermediate Value Theorem (IVT)</h><h>the case <m>f(a)\geq v\geq f(b)</m></h></idx>
+        We can modify the proof of the case <m>f(a)\leq v\leq f(b)</m> into a proof of the IVT for the case <m>f(a)\geq v\geq f(b)</m>.
+        However, there is a sneakier way to prove this case by applying the IVT to the function <m>-f</m>.
+        Do this to prove the IVT for the case <m>f(a)\geq v\geq f(b)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>polynomials</h><h>with odd degree must have a root</h></idx>
+            <idx><h>Intermediate Value Theorem (IVT)</h><h>a polynomial with odd degree must have a root</h></idx>
+        Use the IVT to prove that any polynomial of odd degree must have a real root.
+      </p>
+    </statement>
+  </problem>
+</section>
+
+
+
+
+<section xml:id="IVTandEVT-BWT">
+  <title>The Bolzano-Weierstrass Theorem</title>
+  <p>
+    Once we introduced the Nested Interval Property,
+    the Intermediate Value Theorem followed pretty readily.
+    The proof of Extreme Value
+    (which says that any continuous function <m>f</m>defined on a closed interval <m>[\,a,b]</m> must have a maximum and a minimum)
+    takes a bit more work.
+    First we need to show that such a function is bounded.
+  </p>
+
+  <theorem xml:id="thm_CompactBounded">
+    <statement>
+      <p>
+     <idx><h>continuous functions</h><h>continuous function on a closed, bounded interval is bounded</h></idx> 
+     A continuous function defined on a closed, bounded interval must
+     be bounded.  That is, let <m>f</m> be a continuous function
+     defined on <m>[\,a,b]</m>.  Then there exists a positive real
+     number <m>B</m> such that <m>|f(x)|\leq B</m> for all
+     <m>x\in[\,a,b]</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    <alert>Sketch of Alleged Proof:</alert> Let's assume,
+    for contradiction, that there is no such bound <m>B</m>.
+    This says that for any positive integer <m>n</m>,
+    there must exist <m>x_n\in[a,b]</m> such that <m>\abs{f(x_n)}>n</m>.
+    (Otherwise <m>n</m> would be a bound for <m>f</m>.)
+    <alert>IF</alert> the sequence <m>\left(x_n\right)</m> converged to something in <m>[\,a,b]</m>,
+    say <m>c</m>, then we would have our contradiction.
+    Indeed, we would have <m>\lim_{n\rightarrow\infty}x_n=c</m>.
+    By the continuity of <m>f</m> at <m>c</m> and <xref ref="thm_LimDefOfContinuity">Theorem</xref>
+    of <xref ref="Continuity">Chapter</xref>,
+    we would have <m>\lim_{n\rightarrow\infty}f(x_n)=f(c)</m>.
+    This would say that the sequence <m>\left(f(x_n)\right)</m> converges,
+    so by <xref ref="lemma_BoundedConvergent">Lemma</xref>
+    of <xref ref="Convergence">Chapter</xref>, it must be bounded.
+    This would provide our contradiction,
+    as we had <m>|f(x_n)|>n</m>, for all positive integers <m>n</m>. <alert>QED?</alert>
+  </p>
+
+  <p>
+    This would all work well except for one little problem.
+    The way it was constructed,
+    there is no reason to expect the sequence
+    <m>\left(x_n\right)</m> to converge to anything and we can't make such an assumption.
+    That is why we emphasized the <alert>IF</alert> above.
+    Fortunately, this idea can be salvaged.
+    While it is true that the sequence
+    <m>\left(x_n\right)</m> may not converge, part of it will.
+    We will need the following definition.
+  </p>
+
+  <definition xml:id="def_subsequences">
+    <statement>
+      <p>
+            <idx><h>sequences</h><h>subsequences</h></idx>
+        Let <m>\left(n_k\right)_{k=1}^\infty</m> be a strictly increasing sequence of positive integers;
+        that is, <m>n_1\lt n_2\lt n_3\lt \cdots</m> . If <m>\left(x_n\right)_{n=1}^\infty</m>is a sequence,
+        then <m>\left(x_{n_k}\right)_{k=1}^\infty=\left(x_{n_1},x_{n_2},x_{n_3},\ldots \right)</m> is called a {subsequence} of <m>\left(x_n\right)</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    The idea is that a subsequence of a sequence is a part of the sequence,
+    <m>(x_n)</m>, which is itself a sequence.
+    However, it is a little more restrictive.
+    We can choose any term in our sequence to be part of the subsequence,
+    but once we choose that term, we can't go backwards.
+    This is where the condition <m>n_1\lt n_2\lt n_3\lt \cdots</m> comes in.
+    For example,
+    suppose we started our subsequence with the term <m>x_{100}</m>.
+    We could not choose our next term to be <m>x_{99}</m>.
+    The subscript of the next term would have to be greater than 100.
+    In fact, the thing about a subsequence is that it is all in the subscripts;
+    we are really choosing a subsequence
+    <m>\left(n_k\right)</m> of the sequence of subscripts
+    <m>\left(n\right)</m> in <m>\left(x_n\right)</m>.
+  </p>
+
+  <example>
+    <idx><h>sequences</h><h>subsequences</h></idx>
+    <introduction>
+      <p>
+        Given the sequence <m>\left(x_n\right)</m>,
+        the following are subsequences.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          <m>\left(x_2,\,x_4,\,x_6,\,\ldots\right)=\left(x_{2k}\right)_{k=1}^\infty</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\left(x_1,\,x_4,\,x_9,\,\ldots\right)=\left(x_{k^2}\right)_{k=1}^ \infty</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\left(x_n\right)</m> itself.
+        </p>
+      </statement>
+    </task>
+  </example>
+
+  <example>
+    <idx><h>sequences</h><h>not subsequences</h></idx>
+    <introduction>
+      <p>
+        The following are NOT subsequences.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          <m>\left(x_1,\,x_1,\,x_1,\,\ldots\right)</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\left(x_{99},\,x_{100},\,x_{99},\,\ldots\right)</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\left(x_1,\,x_2,\,x_3\right)</m>
+        </p>
+      </statement>
+    </task>
+</example>
+
+  <p>
+    The subscripts in the examples we have seen so far have a discernable pattern,
+    but this need not be the case.
+    For example,
+    <me>
+      \left(x_2,\,x_5,\,x_{12},\,x_{14},\,x_{23},\,\ldots\right)
+    </me>
+    would be a subsequence as long as the subscripts form an increasing sequence themselves.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>sequences</h><h>all subsequences of a convergent sequence converge</h></idx>
+        Suppose <m>\lim_{n\rightarrow\infty}x_n=c</m>.
+        Prove that <m>\lim_{k\rightarrow\infty}x_{n_k}=c</m> for any subsequence
+        <m>\left(x_{n_k}\right)</m> of <m>\left(x_n\right)</m>. 
+      </p>
+    </statement>
+        <hint>
+<p>
+          <m>n_k\geq k</m>.
+</p>
+        </hint>
+  </problem>
+
+  <p>
+    A very important theorem about subsequences was introduced by Bernhard Bolzano 
+        <idx><h>Bolzano, Bernhard</h></idx>
+    and, later, independently proven 
+        <idx><h>Weierstrass, Karl</h></idx>
+    by Karl Weierstrass.
+    Basically, this theorem says that any bounded sequence of real numbers has a convergent subsequence.
+  </p>
+
+  <theorem xml:id="BolzanoWeierstrass">
+    <statement>
+      <p>
+        <alert>The Bolzano-Weierstrass Theorem</alert>
+      </p>
+      <p>
+        <idx><h>Bolzano-Weierstrass Theorem</h></idx>  
+        Let <m>\left(x_n\right)</m> be a sequence of real numbers such
+        that <m>x_n\in[\,a,b]</m>, <m>\forall</m> <m>n</m>.  Then
+        there exists <m>c\in[\,a,b]</m> and a subsequence
+        <m>\left(x_{n_k}\right)</m>, such that
+        <m>\lim_{k\rightarrow\infty}x_{n_k}=c</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    As an example of this theorem, consider the sequence
+    <me>
+      \left((-1)^n\right)=\left(-1,1,-1,1,\ldots\right) 
+    </me>.
+  </p>
+
+  <p>
+    This sequence does not converge, but the subsequence
+    <me>
+      \left((-1)^{2k}\right)=\left(1,1,1,\ldots\right)
+    </me>
+    converges to <m>1</m>.
+    This is not the only convergent subsequence,
+    as <m>\left((-1)^{2k+1}\right)=(-1,-1,-1,\,\ldots)</m> converges to <m>-1</m>.
+    Notice that if the sequence is unbounded, then all bets are off;
+    the sequence may have a convergent subsequence or it may not.
+    The sequences <m>\left(\left((-1)^n+1\right)n\right)</m> and
+    <m>\left(n\right)</m> represent these possibilities as the first has,
+    for example,
+    <m>\left(\left((-1)^{2k+1}+1\right)(2k+1)\right)=(0,0,0,\,\ldots)</m> and the second one has none.
+  </p>
+
+  <p>
+    The Bolzano-Weierstrass Theorem says that no matter how <q>random</q>
+    the sequence <m>\left(x_n\right)</m> may be,
+    as long as it is bounded then some part of it must converge.
+    This is very useful when one has some process which produces a <q>random</q>
+    sequence such as what we had in the idea of the alleged proof in <xref ref="thm_CompactBounded">Theorem</xref>.
+  </p>
+
+  <proof>
+<title>Sketch of a Proof of the Bolzano-Weierstrass Theorem</title>
+    <p>
+      Suppose we have our sequence <m>\left(x_n\right)</m> such that
+      <m>x_n\in[a,b]</m>, <m>\forall</m> <m>n</m>.
+      To find our <m>c</m> for the subsequence to converge to we will use the NIP. Since we are already using
+      <m>\left(x_n\right)</m> as our original sequence,
+      we will need to use different letters in setting ourselves up for the NIP. With this in mind,
+      let <m>a_1=a</m> and <m>b_1=b</m>,
+      and notice that <m>x_n\in[a_1,b_1]</m> for infinitely many <m>n</m>.
+      (This is, in fact true for all <m>n</m>,
+      but you'll see why we said it the way we did.)
+      Let <m>m_1</m> be the midpoint of
+      <m>[a_1,b_1]</m> and notice that either
+      <m>x_n\in[a_1,m_1]</m> for infinitely many <m>n</m> or
+      <m>x_n\in[m_1,b_1]</m> for infinitely many <m>n</m>.
+      If <m>x_n\in[a_1,m_1]</m> for infinitely many <m>n</m>,
+      then we relabel <m>a_2=a_1</m> and <m>b_2=m_1</m>.
+      If <m>x_n\in[m_1,b_1]</m> for infinitely many <m>n</m>,
+      then relabel <m>a_2=m_1</m> and <m>b_2=b_1</m>.
+      In either case, we get <m>a_1\leq a_2\leq b_2\leq b_1</m>,
+      <m>b_2-a_2=\frac{1}{2}\left(b_1-a_1\right)</m>,
+      and <m>x_n\in[a_2,b_2]</m> for infinitely many <m>n</m>.
+    </p>
+
+    <p>
+      Now we consider the interval
+      <m>[a_2,b_2]</m> and let <m>m_2</m> be the midpoint of <m>[a_2,b_2]</m>.
+      Since <m>x_n\in[a_2,b_2]</m> for infinitely many <m>n</m>,
+      then either <m>x_n\in[a_2,m_2]</m> for infinitely many <m>n</m> or
+      <m>x_n\in[m_2,b_2]</m> for infinitely many <m>n</m>.
+      If <m>x_n\in[a_2,m_2]</m> for infinitely many <m>n</m>,
+      then we relabel <m>a_3=a_2</m> and <m>b_3=m_2</m>.
+      If <m>x_n\in[m_2,b_2]</m> for infinitely many <m>n</m>,
+      then we relabel <m>a_3=m_2</m> and <m>b_3=b_2</m>.
+      In either case,
+      we get <m>a_1\leq a_2\leq a_3\leq b_3\leq b_2\leq b_1</m>,
+      <m>b_3-a_3=\frac{1}{2}\left(b_2-a_2\right)=\frac{1}{2^2}\left(b_1-a_1\right)</m>,
+      and <m>x_n\in[a_3,b_3]</m> for infinitely many <m>n</m>.
+    </p>
+
+    <p>
+      If we continue in this manner,
+      we will produce two sequences <m>\left(a_k\right)</m>and
+      <m>\left(b_k\right)</m> with the following properties:
+
+      <ol>
+        <li>
+          <p>
+            <m>a_1\leq a_2\leq a_3\leq\cdots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>b_1\geq b_2\geq b_3\geq\cdots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\forall</m> <m>k,\,a_k\leq b_k</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\displaystyle\lim_{k\rightarrow\infty}\left(b_k-a_k\right)=\,\lim_{k\rightarrow\infty} \frac{1}{2^{k-1}}\left(b_1-a_1\right)=0</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            For each <m>k</m>,
+            <m>x_n\in[\,a_k,b_k]</m> for infinitely many <m>n</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      By properties 1-5 and the NIP, there exists a unique <m>c</m> such that <m>c\in[a_k,b_k]</m>,
+      for all <m>k</m>.
+      In particular, <m>c\in[a_1,b_1]=[a,b]</m>.
+    </p>
+
+    <p>
+      We have our <m>c</m>.
+      Now we need to construct a subsequence converging to it.
+      Since <m>x_n\in[a_1,b_1]</m> for infinitely many <m>n</m>,
+      choose an integer <m>n_1</m> such that <m>x_{n_1}\in[a_1,b_1]</m>.
+      Since <m>x_n\in[a_2,b_2]</m> for infinitely many <m>n</m>,
+      choose an integer <m>n_2>n_1</m> such that <m>x_{n_2}\in[a_2,b_2]</m>.
+      (Notice that to make a subsequence it is crucial that <m>n_2>n_1</m>,
+      and this is why we needed to insist that
+      <m>x_n\in[a_2,b_2]</m> for infinitely many <m>n</m>.)
+      Continuing in this manner,
+      we should be able to build a subsequence
+      <m>\left(x_{n_k}\right)</m> that will converge to <m>c</m>.
+      You can supply the details in the following problem.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Bolzano-Weierstrass Theorem (BWT)</h></idx>
+        Turn the ideas of the above outline into a formal proof of the Bolzano-Weierstrass Theorem.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Bolzano-Weierstrass Theorem (BWT)</h><h>implies that a  continuous functions on a closed set is bounded</h></idx>
+            <idx><h>continuous functions</h><h>on a closed set, and the Bolzano-Weierstrass Theorem</h></idx>
+            <idx><h>continuity</h><h>Bolzano-Weierstrass Theorem implies a continuous function on a closed set is bounded</h></idx>
+        Use the Bolzano-Weierstrass Theorem to complete the proof of <xref ref="thm_CompactBounded">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+</section>
+
+
+
+
+<section xml:id="IVTandEVT-SupremumAndEVT">
+  <title>The Supremum and the Extreme Value Theorem</title>
+  <p>
+    <xref ref="thm_CompactBounded">Theorem</xref>
+    says that a continuous function on a closed,
+    bounded interval must be bounded.
+    Boundedness, in and of itself,
+    does not ensure the existence of a maximum or minimum.
+    We must also have a closed, bounded interval.
+    To illustrate this,
+    consider the continuous function <m>f(x)=</m>tan<m>^{-1}x</m> defined on the (unbounded) interval <m>\left(-\infty,\infty\right)</m>.
+  </p>
+
+    <image width="75%" source="images/Ch6fig8.png" />
+
+  <p>
+    This function is bounded between
+    <m>-\frac{\pi}{2}</m>and <m>\frac{\pi}{2}</m>,
+    but it does not attain a maximum or minimum as the lines
+    <m>y=\pm\frac{\pi}{2}</m> are horizontal asymptotes.
+    Notice that if we restricted the domain to a closed,
+    bounded interval then it would attain its extreme values on that interval
+    (as guaranteed by the <term>EVT</term>).
+  </p>
+
+  <p>
+    To find a maximum we need to find the smallest possible upper bound for the range of the function.
+    This prompts the following definitions.
+  </p>
+
+  <definition xml:id="def_UpperBound">
+    <statement>
+      <p>
+            <idx><h>Upper Bound</h></idx>
+        Let <m>S\subseteq\mathbb{R}</m> and let <m>b</m> be a real number.
+        We say that <m>b</m> is an upper bound of
+        <m>S</m> provided <m>b\geq x</m> for all <m>x\in S</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    For example, if <m>S=(0,1)</m>,
+    then any <m>b</m> with <m>b\geq 1</m> would be an upper bound of <m>S</m>.
+    Furthermore,
+    the fact that <m>b</m> is not an element of the set <m>S</m> is immaterial.
+    Indeed, if <m>T=[\,0,1]</m>,
+    then any <m>b</m> with <m>b\geq 1</m> would still be an upper bound of <m>T</m>.
+    Notice that, in general, if a set has an upper bound,
+    then it has infinitely many since any number larger than that upper bound would also be an upper bound.
+    However, there is something special about the smallest upper bound.
+  </p>
+
+  <definition xml:id="def_LeastUpperBound"><title>Least Upper Bound Property (<term>LUBP</term>)</title>
+  <idx><h>Least Upper Bound Property (LUBP)</h></idx>
+    <statement>
+      <p>
+        Let <m>S\subseteq\mathbb{R}</m> and let <m>b</m> be a real
+        number.  We say that <m>b</m> is the <em>least upper
+        bound</em> of <m>S</m> provided
+      </p>
+<p>
+      <ol label="(a)">
+        <li>
+          <p>
+            <m>b\geq x</m> for all <m>x\in S</m>. (<m>b</m> is an upper bound of <m>S</m>)
+          </p>
+        </li>
+        <li>
+            <p>
+              If <m>c\geq x</m> for all <m>x\in S</m>, then <m>c\geq b</m>.
+              (Any upper bound of <m>S</m> is at least as big as <m>b</m>.)
+            </p>
+        </li>
+      </ol>
+</p>
+      <p>
+        In this case, we also say that
+        <m>b</m> <em>is the supremum</em> of <m>S</m> and we write
+        <me>
+          b=\sup\left(S\right)
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Notice that the definition really says that <m>b</m> is the smallest upper bound of <m>S</m>.
+    Also notice that the second condition can be replaced by its contrapositive so we can say that <m>b=\sup S</m> if and only if
+
+    <ol label="(a)">
+      <li>
+        <title>(i)</title>
+        <p>
+          <m>b\,\geq\,x\text{ for all } x\,\in S</m>
+        </p>
+      </li>
+
+      <li>
+        <title>(ii)</title>
+        <p>
+          If <m>c\,\lt \,b</m> then there exists
+          <m>x\,\in S</m> such that <m>c\,\lt \,x</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    The second condition says that if a number <m>c</m> is less than <m>b</m>,
+    then it can't be an upper bound,
+    so that <m>b</m> really is the smallest upper bound.
+  </p>
+
+  <p>
+    Also notice that the supremum of the set may or may not be in the set itself.
+    This is illustrated by the examples above as in both cases,
+    <m>1=\sup(0,1)</m> and <m>1=\sup [0,1]</m>.
+    Obviously, a set which is not bounded above such as
+    <m>\mathbb{N}=\{1,\,2,\,3,\,\ldots\}</m> cannot have a supremum.
+    However, for non-empty sets which are bounded above, we have the following.
+  </p>
+
+  <theorem xml:id="thm_LUB"><title>The Least Upper Bound Property (<term>LUBP</term>)</title>
+  <idx><h>Least Upper Bound Property (LUBP)</h></idx> 
+    <statement>
+      <p>
+        Let <m>S</m> be a non-empty subset of
+        <m>\mathbb{R}</m> which is bounded above.
+        Then <m>S</m> has a supremum.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+<title>Sketch of Proof</title>
+    <p>
+      Since <m>S\neq\emptyset</m>, then there exists <m>s\in S</m>.
+      Since <m>S</m> is bounded above then it has an upper bound,
+      say <m>b</m>.
+      We will set ourselves up to use the Nested Interval Property.
+      With this in mind,
+      let <m>x_1=s</m> and <m>y_1=b</m> and notice that <m>\exists</m> <m>x\in S</m> such that <m>x\geq x_1</m> (namely,
+      <m>x_1</m> itself) and <m>\forall\,x\in S</m>, <m>y_1\geq x</m>.
+      You probably guessed what's coming next:
+      let <m>m_1</m>be the midpoint of <m>[\,x_1,y_1]</m>.
+      Notice that either <m>m_1\geq x,\,\forall\,x\in S</m> or <m>\exists</m> <m>x\in S</m> such that <m>x\geq m_1</m>.
+      In the former case, we relabel,
+      letting <m>x_2=x_1</m> and <m>y_2=m_1</m>.
+      In the latter case, we let <m>x_2=m_1</m> and <m>y_2=y_1</m>.
+      In either case, we end up with <m>x_1\leq x_2\leq y_2\leq y_1</m>,
+      <m>y_2-x_2=\frac{1}{2}\left(y_1-x_1\right)</m>,
+      and <m>\exists</m> <m>x\in S</m> such that
+      <m>x\geq x_2</m> and <m>\forall\,x\in S</m>, <m>y_2\geq x</m>.
+      If we continue this process, we end up with two sequences,
+      <m>\left(x_n\right)</m>and <m>\left(y_n\right)</m>,
+      satisfying the following conditions:
+
+      <ol>
+        <li>
+<p>
+<m>x_1\leq x_2\leq x_3\leq\ldots</m>
+</p>
+        </li>
+        <li>
+          <p>
+            <m>y_1\geq y_2\geq y_3\geq\ldots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\forall</m> <m>n</m>, <m>x_n\leq y_n</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\lim_{n\rightarrow\infty}\left(y_n-x_n\right)=\lim_{n\rightarrow\infty} \frac{1}{2^{n-1}}\left(y_1-x_1\right)=0</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\forall</m> <m>n,\exists</m> <m>x\in S</m> such that
+            <m>x\geq x_n</m> and <m>\forall\,x\in S</m>, <m>y_n\geq x</m>,
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      By properties 1-5 and the NIP there exists <m>c</m> such that <m>x_n\leq c\leq y_n,\,\forall\,n</m>.
+      We will leave it to you to use property 5 to show that <m>c=\sup S</m>.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Nested Interval Property (NIP)</h><h>implies the LUBP</h></idx>
+        Complete the above ideas to provide a formal proof of <xref ref="thm_LUB">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Notice that we really used the fact that <m>S</m> was non-empty and bounded above in the proof of <xref ref="thm_LUB">Theorem</xref>.
+    This makes sense,
+    since a set which is not bounded above cannot possibly have a least upper bound.
+    In fact, any real number is an upper bound of the empty set so that the empty set would not have a least upper bound.
+  </p>
+
+  <p>
+    The following corollary to <xref ref="thm_LUB">Theorem</xref> can be very useful.
+  </p>
+
+  <corollary xml:id="cor_IncBoundedConverge">
+    <statement>
+      <p>
+        Let <m>(x_n)</m> be a bounded,
+        increasing sequence of real numbers.
+        That is, <m>x_1\leq x_2\leq x_3\leq\cdots</m>.
+        Then <m>(x_n)</m> converges to some real number <m>c</m>.
+      </p>
+    </statement>
+  </corollary>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>sequences</h><h>bounded and non-decreasing</h></idx>
+        Prove <xref ref="cor_IncBoundedConverge">Corollary</xref>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Let <m>c=\sup\{x_n|\,n=1,2,3,\ldots\}</m>.
+        To show that <m>\limit{n}{\infty}{x_n}=c</m>,
+        let <m>\epsilon>0.</m>Note that 
+        <m>c-\epsilon</m> is not an upper bound.
+        You take it from here!
+      </p>
+    </hint>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>
+        <m>\sqrt{2+\sqrt{2+\sqrt{2+\sqrt{...}}}}</m></h><h>value of</h></idx> Consider the following curious expression <me>\sqrt{2+\sqrt{2+\sqrt{2+\sqrt{...}}}}</me>.
+        We will use <xref ref="cor_IncBoundedConverge">Corollary</xref>
+        to show that this actually converges to some real number.
+        After we know it converges we can actually compute what it is.
+        Of course to do so, we need to define things a bit more precisely.
+        With this in mind consider the following sequence <m>\left(x_n\right)</m> defined as follows:
+        <me>
+          x_1=\sqrt{2}
+        </me>
+        <me>
+          x_{n+1}=\sqrt{2+x_n}
+        </me>.
+        <ol label="(a)">
+          <li>
+            <p>
+              Use induction to show that
+              <m>x_n\lt 2</m> for <m>n=1,\,2,\,3,\,\ldots</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use the result from part (a) to show that
+              <m>x_n\lt x_{n+1}</m> for <m>n=1,\,2,\,3,\,\ldots</m> .
+            </p>
+          </li>
+
+          <li>
+            <p>
+              From <xref ref="cor_IncBoundedConverge">Corollary</xref>,
+              we have that <m>\left(x_n\right)</m> must converge to some number <m>c</m>.
+              Use the fact that <m>\left(x_{n+1}\right)</m> must converge to <m>c</m> as well to compute what <m>c</m> must be.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We now have all the tools we need to tackle the Extreme Value Theorem.
+  </p>
+
+  <theorem xml:id="thm_EVT">
+    <statement>
+      <p>
+        <alert>Extreme Value Theorem (<term>EVT</term>)</alert>
+      </p>
+      <p>
+        <idx><h>Extreme Value Theorem (EVT)</h></idx> 
+        Suppose <m>f</m> is continuous on <m>[\,a,b]</m>.
+        Then there exists <m>c,d\in[\,a,b]</m> such that <m>f(d)\leq f(x)\leq f(c)</m>,
+        for all <m>x\in[\,a,b]</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+<title>Sketch of Proof</title>
+    <p>
+      We will first show that <m>f</m> attains its maximum.
+      To this end,
+      recall that <xref ref="thm_CompactBounded">Theorem</xref>
+      tells us that <m>f[\,a,b]=\{f(x)|\,x\in[\,a,b]\}</m> is a bounded set.
+      By the LUBP, <m>f[\,a,b]</m> must have a least upper bound which we will label <m>s</m>,
+      so that <m>s=\sup f[\,a,b]</m>.
+      This says that <m>s\geq f(x)</m>,for all <m>x\in[\,a,b]</m>.
+      All we need to do now is find a <m>c\in[\,a,b]</m> with <m>f(c)=s</m>.
+      With this in mind, notice that since <m>s=\sup f[\,a,b]</m>,
+      then for any positive integer <m>n</m>,
+      <m>s-\frac{1}{n}</m> is not an upper bound of <m>f[\,a,b]</m>.
+      Thus there exists <m>x_n\in[\,a,b]</m> with<m>\,s-\frac{1}{n}\lt f(x_n)\leq s</m>.
+      Now, by the Bolzano-Weierstrass Theorem,
+      <m>\left(x_n\right)</m> has a convergent subsequence<m>\,\left(x_{n_k}\right)</m> converging to some <m>c\in[\,a,b]</m>.
+      Using the continuity of <m>f</m> at <m>c</m>,
+      you should be able to show that <m>f(c)=s</m>.
+      To find the minimum of <m>f</m>,
+      find the maximum of <m>-f</m>.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Extreme Value Theorem (EVT)</h></idx>
+        Formalize the above ideas into a proof of <xref ref="thm_EVT">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Notice that we used the NIP to prove both the Bolzano-Weierstrass Theorem and the LUBP. This is really unavoidable,
+    as it turns out that all of those statements are equivalent in the sense that any one of them can be taken as the completeness axiom for the real number system and the others proved as theorems.
+    This is not uncommon in mathematics,
+    as people tend to gravitate toward ideas that suit the particular problem they are working on.
+    In this case,
+    people realized at some point that they needed some sort of completeness property for the real number system to prove various theorems.
+    Each individual's formulation of completeness fit in with his understanding of the problem at hand.
+    Only in hindsight do we see that they were really talking about the same concept:
+    the completeness of the real number system.
+    In point of fact,
+    most modern textbooks use the LUBP as the axiom of completeness and prove all other formulations as theorems.
+    We will finish this section by showing that either the Bolzano-Weierstrass Theorem or the LUBP can be used to prove the NIP. This says that they are all equivalent and that any one of them could be taken as the completeness axiom.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Bolzano-Weierstrass Theorem (BWT)</h><h>implies the NIP</h></idx>
+        Use the Bolzano-Weierstrass Theorem to prove the NIP. That is,
+        assume that the Bolzano-Weierstrass Theorem holds and suppose we have two sequences of real numbers,
+        <m>\left(x_n\right)</m> and <m>\left(y_n\right)</m>, satisfying:
+        <ol>
+          <li>
+            <p>
+              <m>x_1\le x_2 \le x_3 \le \ldots</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>y_1\ge y_2 \ge y_3 \ge \ldots</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\forall\ n,\ x_n\le y_n</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle\lim_{n\rightarrow\infty}\left(y_n-x_n\right) = 0</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Prove that there is a real number <m>c</m> such that <m>x_n\le c\le y_n</m>,
+        for all <m>n</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Since the Bolzano-Weierstrass Theorem and the Nested Interval Property are equivalent,
+    it follows that the Bolzano-Weierstrass Theorem will not work for the rational number system.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>sequences</h><h>find a bounded sequence of rational numbers such that no subsequence converges to a rational number</h></idx>
+    Find a bounded sequence of rational numbers such that no subsequence of it converges to a rational number.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Least Upper Bound Property (LUBP)</h><h>implies the Nested Interval Property (NIP)</h></idx>
+        Use the Least Upper Bound Property to prove the Nested Interval Property.
+        That is, assume that every non-empty subset of the real numbers which is bounded above has a least upper bound;
+        and suppose that we have two sequences of real numbers
+        <m>\left(x_n\right)</m> and <m>\left(y_n\right)</m>, satisfying:
+        <ol>
+          <li>
+            <p>
+              <m>x_1\le x_2 \le x_3 \le \ldots</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>y_1\ge y_2 \ge y_3 \ge \ldots</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\forall\ n, x_n\le y_n</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle\lim_{n\rightarrow\infty}\left(y_n-x_n\right) = 0</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        Prove that there exists a real number <m>c</m> such that <m>x_n\le c\le y_n</m>,
+        for all n.
+        (Again, the <m>c</m> will,
+        of necessity, be unique, but don't worry about that.)
+      </p>
+    </statement>
+      <hint> 
+        <p>
+          <xref ref="cor_IncBoundedConverge">Corollary</xref> might work well here.
+        </p>
+      </hint>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Least Upper Bound Property (LUBP)</h><h>doesn't hold in <m>\QQ</m></h></idx>
+        Since the LUBP is equivalent to the NIP it does not hold for the rational number system.
+        Demonstrate this by finding a non-empty set of rational numbers which is bounded above,
+        but whose supremum is an irrational number.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We have the machinery in place to clean up a matter that was introduced in <xref ref="NumbersRealRational">Chapter</xref>.
+    If you recall
+    (or look back)
+    we introduced the Archimedean Property of the real number system.
+    This property says that given any two positive real numbers <m>a, b</m>,
+    there exists a positive integer <m>n</m> with <m>na>b</m>.
+    As we mentioned in <xref ref="NumbersRealRational">Chapter</xref>,
+    this was taken to be intuitively obvious.
+    The analogy we used there was to emptying an ocean <m>b</m> with a teaspoon <m>a</m> provided we are willing to use it enough times <m>n</m>.
+    The completeness of the real number system allows us to prove it as a formal theorem.
+  </p>
+
+  <theorem xml:id="thm_ArchmedeanProperty">
+    <idx><h>Archimedean Property</h></idx>
+    <statement>
+      <p>
+        <alert>Archimedean Property of <m>\RR</m></alert>
+      </p>
+      <p>
+        Given any positive real numbers <m>a</m> and <m>b</m>, there exists a positive integer <m>n</m>, such that <m>na>b</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <idx><h>Least Upper Bound Property (LUBP)</h><h>implies the Archimedean Property</h></idx>
+    <idx><h>Archimedean Property</h><h>and LUBP</h></idx>
+    <statement>
+      <p>
+        Prove <xref ref="thm_ArchmedeanProperty">Theorem</xref>. 
+      </p>
+    </statement>
+    <hint> 
+      <p>
+        Assume that there are positive real numbers <m>a</m> and <m>b</m>, such that <m>na\le b</m> <m>\forall n\in \NN</m>.
+        Then <m>\NN</m> would be bounded above by <m>b/a</m>.
+        Let <m>s=\sup(\NN)</m> and consider <m>s-1</m>.
+      </p>
+    </hint>
+  </problem>
+
+  <p>
+    Given what we've been doing,
+    one might ask if the Archimedean Property is equivalent to the LUBP
+    (and thus could be taken as an axiom).
+    The answer lies in the following problem.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Archimedean Property</h><h>and <m>\QQ</m></h></idx>
+            <!-- <idx><h>Archimedean Property in <m>\QQ</m></h></idx> -->
+        Does <m>\QQ</m> satisfy the Archimedean Property and what does this have to do with the question of taking the Archimedean Property as an axiom of completeness?
+      </p>
+    </statement>
+  </problem>
+</section>
+
+
+
+
+<section xml:id="IVTandEVT-AddProb">
+  <title>Additional Problems</title>
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Greatest Lower Bound Property (GLBP)</h><h>definition of</h></idx>
+        Mimic the definitions of an upper bound of a set and the least upper bound (supremum) of a set to give definitions for a lower bound of a set and the greatest lower bound (infimum) of a set.
+      </p>
+      <p>
+            <alert>Note</alert>: The infimum of a set <m>S</m> is denoted by <m>\inf(S)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Least Upper Bound Property (LUBP)</h><h>identifying suprema and infima</h></idx>
+        Find the least upper bound (supremum) and greatest lower bound (infimum) of the following sets of real numbers, if they exist. (If one does not exist then say so.)
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>S=\{\frac{1}{n}\,|\,n=1,2,3,\ldots\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>T=\{r\,|\,r</m> is rational and <m>r^2\lt 2\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(-\infty,0)\cup(1,\infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>R=\{\frac{(-1)^n}{n}\,|\,n=1,2,3,\ldots\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(2,3\pi]\cap\QQ</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The empty set <m>\emptyset</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Least Upper Bound Property (LUBP)</h></idx>
+            <idx><h><m>b</m> is an upper bound of <m>S\subseteq \RR</m> if and only if <m>-b</m> is a lower bound of <m>-S</m></h></idx>
+        Let <m>S\subseteq\RR</m> and let <m>T=\{-x|\,x\in S\}</m>.
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Prove that <m>b</m> is an upper bound of <m>S</m> if and only if <m>-b</m> is a lower bound of <m>T</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Prove that <m>b=\sup S</m> if and only if <m>-b=\inf T</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+
+
+</chapter>
+

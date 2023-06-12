@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:23-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Numbers, Real (\RR) and Rational (\QQ)</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="AskingQuestions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="AskingQuestions.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="NumbersRealRational-AddProbs.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="AskingQuestions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="AskingQuestions.html" title="Up">Up</a><a class="next-button button toolbar-item" href="NumbersRealRational-AddProbs.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link active">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="chapter" id="NumbersRealRational"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span>
+</h2>
+<section class="introduction" id="introduction-1"><p id="p-89">The set of real numbers (denoted, <span class="process-math">\(\RR\)</span>) is badly named. The real numbers are no more or less real — in the non-mathematical sense that they exist — than any other set of numbers, just like the set of rational numbers (<span class="process-math">\(\QQ\)</span>), the set of integers (<span class="process-math">\(\ZZ\)</span>), or the set of natural numbers (<span class="process-math">\(\NN\)</span>). The name “real numbers” is (almost) an historical anomaly not unlike the name “Pythagorean Theorem” which was actually known and understood long before Pythagoras lived.</p>
+<p id="p-90">When calculus was being invented in the <span class="process-math">\(17\)</span>th century, numbers were thoroughly understood, or so it was believed.</p>
+<aside class="aside aside-like" id="aside-7"><p id="p-91">Some would say “re-invented.” See <a href="" class="xref" data-knowl="./knowl/russo96__forgot_revol.html" title="Bibliographic Entry 13">[13]</a>, or <a href="" class="xref" data-knowl="./knowl/netz07__archim_codex.html" title="Bibliographic Entry 9">[9]</a>.  </p></aside><p id="p-92">They were, after all, just numbers. Combine them. We call that addition. If you add them repeatedly we call it multiplication. Subtraction and division were similarly understood.</p>
+<p id="p-93">It was (and still is) useful to visualize these things in a more concrete way. If we take a stick of length 2 and another of length 3 and lay them end-to-end we get a length of 5. This is addition. If we lay them end-to-end but at right angles then our two sticks are the length and width of a rectangle whose area is 6. This is multiplication.</p>
+<p id="p-94">Of course measuring lengths with whole numbers has limitations, but these are not hard to fix. If we have a length (stick) of length 1 and another of length 2, then we can find another whose length when compared to 1 is the same (has the same proportion) as <span class="process-math">\(1\)</span> is to <span class="process-math">\(2\text{.}\)</span> That number of course, is <span class="process-math">\(1/2\text{.}\)</span></p>
+<figure class="figure figure-like" id="Fractions"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/Fractions.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.0.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-95">Notice how fraction notation reflects the operation of comparing 1 to 2.  This comparison is usually referred to as the <em class="emphasis">ratio</em> of <span class="process-math">\(1\)</span> to <span class="process-math">\(2\)</span> so numbers of this sort are called <em class="emphasis">rational numbers.</em> The set of rational numbers is denoted <span class="process-math">\(\QQ\)</span> for quotients.  In grade school they were introduced to you as fractions.  Once fractions are understood, this visualization using line segments (sticks) leads quite naturally to their representation with the rational number line.</p>
+<figure class="figure figure-like" id="RationalNumberLine"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/RationalNumberLine.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.0.2<span class="period">.</span></span><span class="space"> </span>The Rational Number Line</figcaption></figure><p id="p-96">This seems to work as a visualization because the rational numbers and the points on a line seem to share certain properties.  Chief among these is that between any two points on the rational line there is another point, just as between any two rational numbers there is another rational number.</p>
+<article class="problem example-like" id="problem-7"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-7"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.0.3</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-7"><article class="problem example-like"><p id="p-97"> Let <span class="process-math">\(a, b, c, d\in\NN\)</span> and find a rational number between <span class="process-math">\(a/b\)</span> and <span class="process-math">\(c/d\text{.}\)</span></p></article></div>
+<p id="p-98">This is all very clean and satisfying until we examine it just a bit closer. Then it becomes quite mysterious. Consider again the rational numbers <span class="process-math">\(a/b\)</span> and <span class="process-math">\(c/d\text{.}\)</span> If we think of these as lengths we can ask, "Is there a third length, say <span class="process-math">\(\alpha\text{,}\)</span> such that we can divide <span class="process-math">\(a/b\)</span> into <span class="process-math">\(M\)</span> pieces, each of length <span class="process-math">\(\alpha\)</span> <em class="emphasis">and also</em> divide <span class="process-math">\(c/d\)</span> into <span class="process-math">\(N\)</span> pieces each of length <span class="process-math">\(\alpha?\)</span>" A few minutes thought should convince you that this is the same as the problem of finding a common denominator so <span class="process-math">\(\alpha=\frac{1}{bd}\)</span> will work nicely. (Confirm this yourself.)</p>
+<p id="p-99">You may be wondering what we're making all of this fuss about. <em class="emphasis">Obviously</em> this is <em class="emphasis">always</em> true. In fact the previous paragraph gives an outline of a very nice little proof of this. Here are the theorem and its proof presented formally.</p>
+<article class="theorem theorem-like" id="thm_CommonDenominatorsExist"><h2 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.0.4</span><span class="period">.</span>
+</h2>
+<p id="p-100"> Suppose <span class="process-math">\(a, b, c, d \in\NN\)</span> be integers. There is a number <span class="process-math">\(\alpha\in\QQ\)</span> such that <span class="process-math">\(M\alpha=a/b\)</span> and <span class="process-math">\(N\alpha=c/d\)</span> where <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> are also integers.</p></article><article class="hiddenproof" id="proof-1"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-101">To prove this theorem we will display <span class="process-math">\(\alpha\text{,}\)</span> <span class="process-math">\(M\)</span> and <span class="process-math">\(N\text{.}\)</span> It is your responsibility to confirm that these actually work. Here they are: <span class="process-math">\(\alpha=1/bd\text{,}\)</span> <span class="process-math">\(M=ad\text{,}\)</span> and <span class="process-math">\(N=cb\text{.}\)</span></p></article></div>
+<article class="problem example-like" id="problem-8"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-8"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.0.5</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-8"><article class="problem example-like"><p id="p-102"> Confirm that <span class="process-math">\(\alpha, M, \text{ and } N\)</span> as given in the proof of <a href="" class="xref" data-knowl="./knowl/thm_CommonDenominatorsExist.html" title="Theorem 3.0.4">Theorem 3.0.4</a> satisfy the requirements of the theorem.</p></article></div>
+<p id="p-103"><a href="" class="xref" data-knowl="./knowl/thm_CommonDenominatorsExist.html" title="Theorem 3.0.4">Theorem 3.0.4</a> suggests the following very deep and important question: Are there lengths which can <em class="emphasis">not</em> be expressed as the ratio of two integer lengths? The answer, of course, is yes. Otherwise we wouldn't have asked the question. Notice that for such numbers our proof of <a href="" class="xref" data-knowl="./knowl/thm_CommonDenominatorsExist.html" title="Theorem 3.0.4">Theorem 3.0.4</a> is not valid (why not?).</p>
+<p id="p-104">One of the best known examples of such a number is the circumference of a circle with diameter 1. This is the number usually denoted by <span class="process-math">\(\pi\text{.}\)</span> But circles are extremely complex objects — they only seem simple because they are so familiar. Arising as it does from a circle, you would expect the number <span class="process-math">\(\pi\)</span> to be very complex as well and this is true. In fact <span class="process-math">\(\pi\)</span> is an exceptionally weird number for a variety of reasons. Let's start with something a little easier to think about.</p>
+<p id="p-105">Squares are simple. Two sets of parallel lines at right angles, all of the same length. What could be simpler? If we construct a square with sides having length 1 then its diagonal has length <span class="process-math">\(\sqrt{2}\text{.}\)</span></p>
+<figure class="figure figure-like" id="Sqrt2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/Sqrt2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.0.6<span class="period">.</span></span><span class="space"> </span>A construction of <span class="process-math">\(\sqrt{2}\)</span></figcaption></figure><p id="p-106"> This is a number which cannot be expressed as the <em class="emphasis">ratio</em> of two integers.  That is, it is <em class="emphasis">irrational.</em> This has been known since ancient times, but it is still quite disconcerting when first encountered.  It seems so counter-intuitive that the intellect rebels.  “This can't be right,” it says. “That's just crazy!”</p>
+<p id="p-107">Nevertheless it is true and we can prove it is true as follows.</p>
+<p id="p-108">What happens if we suppose that the square root of two <em class="emphasis">can</em> be expressed as a ratio of integers? We will show that this leads irrevocably to a conclusion that is manifestly not true.</p>
+<p id="p-109">Suppose <span class="process-math">\(\sqrt{2}=a/b\)</span> where <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are integers. Suppose further that the fraction <span class="process-math">\(a/b\)</span> is in lowest terms. <em class="emphasis">This assumption is crucial because if <span class="process-math">\(a/b\)</span> is in lowest terms we know that at most only one of them is even.</em></p>
+<p id="p-110">So</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
+\begin{align*}
+\frac{a}{b} \amp = \sqrt{2}.\\
+\end{align*}
+<p class="intertext">Squaring both sides gives:</p>
+\begin{align*}
+a^2 \amp = 2b^2.\\
+\end{align*}
+<p class="intertext">Therefore <span class="process-math">\(a^2\)</span> is even. But if <span class="process-math">\(a^2\)</span> is even then <span class="process-math">\(a\)</span> must be even also (why?). If <span class="process-math">\(a\)</span> is even then <span class="process-math">\(a=2k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> Therefore</p>
+\begin{align*}
+4k^2\amp =2b^2\textit{ or}\\
+2k^2\amp = b^2\text{.}
+\end{align*}
+</div>
+<p id="p-111">Therefore <span class="process-math">\(b^2\)</span> is also even and so <span class="process-math">\(b\)</span> must be even too. But this is impossible. We've just concluded that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both even and this conclusion follows directly from our initial assumption that at most one of them could be even.</p>
+<p id="p-112">This is nonsense. Where is our error? It is not in any single step of our reasoning. That was all solid. Check it again to be sure.</p>
+<p id="p-113">Therefore our error must be in the initial assumption that <span class="process-math">\(\sqrt{2}\)</span> could be expressed as a fraction. That assumption must therefore be false. In other words, <span class="process-math">\(\sqrt{2}\)</span> cannot be so expressed.</p>
+<article class="problem example-like" id="problem-9"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-9"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.0.7</span><span class="period">.</span><span class="space"> </span><span class="title">Irrational Numbers.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-9"><article class="problem example-like"><div class="introduction" id="introduction-2"><p id="p-114">Show that each of the following numbers is irrational:</p></div>
+<article class="task exercise-like" id="task-1"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<p id="p-115"><span class="process-math">\(\sqrt{3}\)</span></p></article><article class="task exercise-like" id="task-2"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<p id="p-116"><span class="process-math">\(\sqrt{5}\)</span></p></article><article class="task exercise-like" id="task-3"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<p id="p-117"><span class="process-math">\(\sqrt[3]{2}\)</span></p></article><article class="task exercise-like" id="task-4"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<p id="p-118"><span class="process-math">\(i\)</span> <span class="process-math">\((=\sqrt{-1})\)</span></p></article><article class="task exercise-like" id="task-5"><h3 class="heading"><span class="codenumber">(e)</span></h3>
+<p id="p-119">The square root of every positive integer which is not the square of an integer.</p></article></article></div>
+<p id="p-120"> The fact that <span class="process-math">\(\sqrt{2}\)</span> is not rational is cute and interesting, but unless, like the Pythagoreans of ancient Greece, you have a strongly held religious conviction that all numbers are rational, it does not seem terribly important. On the other hand, the very existence of <span class="process-math">\(\sqrt{2}\)</span> raises some interesting questions. For example what can the symbol <span class="process-math">\(4^{\sqrt{2}}\)</span> possibly mean? If the exponent were a rational number, say <span class="process-math">\(m/n\text{,}\)</span> then clearly <span class="process-math">\(4^{m/n}=\sqrt[n]{4^m}\text{.}\)</span> But since <span class="process-math">\(\sqrt{2}\neq m/n\)</span> for <em class="emphasis">any</em> integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> how do we interpret <span class="process-math">\(4^{\sqrt{2}}?\)</span> Does it have any meaning at all? The more you think about this, the more puzzling the existence of irrational numbers becomes. Suppose for example we reconsider the construction of a line segment of length <span class="process-math">\(\sqrt{2}\text{.}\)</span> It is clear that the construction works and that we really can build such a line segment. It exists.</p>
+<p id="p-121">Repeat the construction but this time let's put the base side on the rational line.</p>
+<figure class="figure figure-like" id="Sqrt2OnRatLine"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/Sqrt2OnRatLine.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.0.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-122">We know that the diagonal of this square is <span class="process-math">\(\sqrt{2}\)</span> as indicated. And we know that <span class="process-math">\(\sqrt{2}\)</span> is not a rational number.</p>
+<p id="p-123">Now leave the diagonal pinned at <span class="process-math">\((0,0)\)</span> but allow it to rotate down so that it coincides with the <span class="process-math">\(x-\)</span>axis.</p>
+<figure class="figure figure-like" id="Sqrt2Irrational"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/Sqrt2Irrational.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.0.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-124">The end of our diagonal will trace out an arc of the circle with radius <span class="process-math">\(\sqrt{2}\text{.}\)</span> When the diagonal coincides with the <span class="process-math">\(x-\)</span>axis, its endpoint will obviously be the point <span class="process-math">\((\sqrt{2}, 0)\)</span> as shown.</p>
+<p id="p-125">But wait! We're using the <em class="emphasis">rational</em> number line for our <span class="process-math">\(x-\)</span>axis. That means the only points on the <span class="process-math">\(x-\)</span>axis are those that correspond to rational numbers (fractions). But we know that <span class="process-math">\(\sqrt{2}\)</span> is not rational! Conclusion: There is no point <span class="process-math">\((\sqrt{2},0)\text{.}\)</span> It simply doesn't exist.</p>
+<p id="p-126">Put differently, there is a hole in the rational number line right where <span class="process-math">\(\sqrt{2}\)</span> should be.</p>
+<figure class="figure figure-like" id="RationalLineWithHoles"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/RationalLineWithHoles.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.0.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure><p id="p-127">This is weird!</p>
+<p id="p-128">Recall that between any two rational numbers there is always another. This fact is what led us to represent the rational numbers with a line in the first place.</p>
+<p id="p-129">But it's even worse than that. It's straightforward to show that <span class="process-math">\(\sqrt{3}\text{,}\)</span> <span class="process-math">\(\sqrt{5}\text{,}\)</span> etc. are all irrational too. So are <span class="process-math">\(\pi\)</span> and <span class="process-math">\(e\text{,}\)</span> though they aren't as easy to show. It seems that the rational line has a bunch of holes in it. Infinitely many.</p>
+<p id="p-130">And yet, the following theorem is true</p>
+<article class="theorem theorem-like" id="thm_IrrationalBetweenIrrationals"><h2 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.0.11</span><span class="period">.</span>
+</h2>
+<ol id="p-131" class="lower-alpha">
+<li id="li-24"><p id="p-132">Between any two distinct real numbers there is a rational number.</p></li>
+<li id="li-25"><p id="p-133">Between any two distinct real numbers there is an irrational number.</p></li>
+</ol></article><p id="p-134">Both parts of this theorem rely on a judicious use of what is now called the Archimedean Property of the Real Number System, which can be formally stated as follows.</p>
+<article class="principle theorem-like" id="principle-1"><h2 class="heading">
+<span class="type">Principle</span><span class="space"> </span><span class="codenumber">3.0.12</span><span class="period">.</span><span class="space"> </span><span class="title">The Archimedean Property.</span>
+</h2>
+<p id="p-135"> Given any two positive real numbers, <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> there is a positive integer, <span class="process-math">\(n\)</span> such that <span class="process-math">\(na&gt;b\text{.}\)</span></p></article><p id="p-136">Physically this says that we can empty an ocean <span class="process-math">\(b\)</span> with a teaspoon <span class="process-math">\(a\text{,}\)</span> provided we are willing to use the teaspoon a large number of times <span class="process-math">\(n\text{.}\)</span></p>
+<p id="p-137">This is such an intuitively straightforward concept that it is easy to accept it without proof. Until the invention of calculus, and even for some time after that, it was simply assumed. However as the foundational problems posed by the concepts of calculus were understood and solved we were eventually led to a deeper understanding of the complexities of the real number system. The Archimedean Property is no longer taken as an unproved axiom, but rather it is now understood to be a consequence of other axioms. We will show this later, but for now we will accept it as obviously true just as Archimedes did.</p>
+<p id="p-138">With the invention of calculus, mathematicians of the seventeenth century began to use objects which didn't satisfy the Archimedean Property (in fact, so did Archimedes). As we shall see in the next chapter, when Leibniz wrote the first paper on his version of the calculus, he followed this practice by explicitly laying out rules for manipulating infinitely small quantities (infinitesimals). These were taken to be actual numbers which are not zero and yet smaller than any real number. The notation he used was <span class="process-math">\(\dx{ x}\)</span> (an infinitely small displacement in the <span class="process-math">\(x\)</span> direction), and <span class="process-math">\(\dx{ y}\)</span> (an infinitely small displacement in the <span class="process-math">\(y\)</span> direction). These symbols should look familiar to you. They are the same <span class="process-math">\(\dx{ y}\)</span> and <span class="process-math">\(\dx{ x}\)</span> used to form the derivative symbol <span class="process-math">\(\dfdx{y}{x}\)</span> that you learned about in calculus.</p>
+<p id="p-139">Mathematicians of the seventeenth and eighteenth centuries made amazing scientific and mathematical progress exploiting these infinitesimals, even though they were foundationally suspect. No matter how many times you add the infinitesimal <span class="process-math">\(\dx{ x}\)</span> to itself the result will not be bigger than, say <span class="process-math">\(10^{-1000}\text{,}\)</span> which is very bizarre.</p>
+<p id="p-140">When foundational issues came to the forefront, infinitesimals fell somewhat out of favor. You probably didn't use them very much in calculus. Most of the time you probably used the prime notation, <span class="process-math">\(f^\prime(x)\)</span> introduced by Lagrange  in the eighteenth century. Some of the themes in this book are: Why differentials fell out of favor, what were they replaced with and how the modern notations you learned in calculus evolved over time.</p>
+<p id="p-141">To conclude this aside on the Archimedean Property, the idea of infinitesimals was revisited in the twentieth century by the logician Abraham Robinson in <a href="" class="xref" data-knowl="./knowl/robinson74__non_stand_analy.html" title="Bibliographic Entry 12">[12]</a>. Robinson was able to put the idea of infinitesimals on a solid logical foundation. But in the 18th century, the existence of infinitesimal numbers was shaky to say the very least. However this did not prevent mathematicians from successfully exploiting these infinitely small quantities.</p>
+<p id="p-142">We will come back to this saga in later chapters, but for now we return to <a href="" class="xref" data-knowl="./knowl/thm_IrrationalBetweenIrrationals.html" title="Theorem 3.0.11">Theorem 3.0.11</a>.</p>
+<article class="hiddenproof" id="proof-2"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h2 class="heading"><span class="title">Sketch of Proof.</span></h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-143">We will outline the proof of part (a) of <a href="" class="xref" data-knowl="./knowl/thm_IrrationalBetweenIrrationals.html" title="Theorem 3.0.11">Theorem 3.0.11</a> and indicate how it can be used to prove part b.</p>
+<p id="p-144">Let <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> be real numbers with <span class="process-math">\(\alpha &gt; \beta\text{.}\)</span> There are two cases.</p>
+<ul class="disc">
+<li id="li-26">
+<span class="heading"><span class="title">Case 1:.</span></span><p id="p-145"><span class="process-math">\(\alpha-\beta &gt; 1\text{.}\)</span> In this case there is at least one integer between <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\text{.}\)</span> Since integers are rational we are done.</p>
+</li>
+<li id="li-27">
+<span class="heading"><span class="title">Case 2:.</span></span><p id="p-146"><span class="process-math">\(\alpha-\beta \le 1\text{.}\)</span>  In this case, by the Archimedean Property there is a positive integer, say <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n(\alpha-\beta) = n\alpha-n\beta
+&gt; 1\text{.}\)</span>  Now there will be an integer between <span class="process-math">\(n\alpha\)</span> and <span class="process-math">\(n\beta\text{.}\)</span>  You should now be able to find a rational number between <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\text{.}\)</span></p>
+</li>
+</ul></article></div>
+<p id="p-147">For part b, divide <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> by any positive irrational number and apply part a. There are a couple of details to keep in mind. These are considered in the following problem.</p>
+<article class="problem example-like" id="problem-10"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-10"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">3.0.13</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-10"><article class="problem example-like"><article class="task exercise-like" id="task-6"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<p id="p-148">Prove that the product of a nonzero rational number and an irrational number is irrational.</p></article><article class="task exercise-like" id="task-7"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<p id="p-149">Use the result of part (a) to prove <a href="" class="xref" data-knowl="./knowl/thm_IrrationalBetweenIrrationals.html" title="Theorem 3.0.11">Theorem 3.0.11</a>.</p></article></article></div>
+<p id="p-150">As a practical matter, the existence of irrational numbers isn't really very important. In light of <a href="" class="xref" data-knowl="./knowl/thm_IrrationalBetweenIrrationals.html" title="Theorem 3.0.11">Theorem 3.0.11</a>, any irrational number can be approximated arbitrarily closely by a rational number. So if we're designing a bridge and <span class="process-math">\(\sqrt{2}\)</span> is needed we just use <span class="process-math">\(1.414\)</span> instead. The error introduced is less than <span class="process-math">\(0.001 =1/1000\)</span> so it probably doesn't matter.</p>
+<p id="p-151">But from a theoretical point of view this is devastating. When calculus was invented, the rational numbers were suddenly not up to the task of justifying the concepts and operations we needed to work with.</p>
+<p id="p-152">Newton explicitly founded his version of calculus on the assumption that we can think of variable quantities as being generated by a continuous motion. If our number system has holes in it such continuous motion is impossible because we have no way to jump over the gaps. So Newton simply postulated that there were no holes. He filled in the hole where <span class="process-math">\(\sqrt{2}\)</span> should be. He simply said, yes there is a number there called <span class="process-math">\(\sqrt{2}\)</span> and he did the same with all of the other holes.</p>
+<p id="p-153">To be sure there is no record of Newton explicitly saying, “Here's how I'm going to fill in the holes in the rational number line.” Along with everyone else at the time, he simply assumed there were no holes and moved on. It took about <span class="process-math">\(200\)</span> years of puzzling and arguing over the contradictions, anomalies and paradoxes to work out the consequences of that apparently simple assumption. The task may not yet be fully accomplished, but by the 20th century the properties of the real number system (<span class="process-math">\(\RR\)</span>) as an extension of the rational number system (<span class="process-math">\(\QQ\)</span>) were well understood. Here are both systems visualized as lines:</p>
+<figure class="figure figure-like" id="RandQ"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/RandQ.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.0.14<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(\RR\)</span> and <span class="process-math">\(\QQ\)</span></figcaption></figure><p id="p-154">Impressive, no?</p>
+<p id="p-155">The reason they look alike, except for the labels <span class="process-math">\(\RR\)</span> and <span class="process-math">\(\QQ\)</span> of course, is that our ability to draw sketches of the objects we're studying utterly fails when we try to sketch <span class="process-math">\(\RR\text{,}\)</span> as different from <span class="process-math">\(\QQ\text{.}\)</span> All of the holes in <span class="process-math">\(\QQ\)</span> really are there, but the non-holes are packed together so closely that we can't separate them in a drawing. This inability to sketch the objects we study will be a frequent source of frustration.</p>
+<p id="p-156">Of course, this will not stop us from drawing sketches. When we do, our imaginations will save us because it <em class="emphasis">is</em> possible to <em class="emphasis">imagine</em> <span class="process-math">\(\QQ\)</span> as distinct from <span class="process-math">\(\RR\text{.}\)</span> But put away the idea that a sketch is an accurate representation of anything. At best our sketches will only be aids to the imagination.</p>
+<p id="p-157">So, at this point we will simply assume the existence of the real numbers. We will assume also that they have all of the properties that we are used to. This is perfectly acceptable as long as we make our assumptions explicit. However we need to be aware that, so far, the existence and properties of the real numbers is an <em class="emphasis">assumption</em> that has not been logically derived. Any time we make an assumption we need to be prepared to either abandon it completely if we find that it leads to nonsensical results, or to re-examine the assumption in the light of these results to see if we can find another assumption that subsumes the first and explains the (apparently) nonsensical results.</p></section><nav class="summary-links"><ul><li><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></li></ul></nav></section></div></main>
+</div>
+</body>
+</html>

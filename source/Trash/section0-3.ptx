@@ -1,0 +1,255 @@
+
+
+<section>
+  <title>Lesson Three</title>
+  <p>
+    In the hustle and bustle of a typical college semester,
+    with a lot of demands on your time and very little time to think,
+    it becomes very easy to see each problem you solve as a small,
+    isolated victory and then move on to the next challenge.
+    This is understandable.
+    Each problem you solve <em>is</em>
+    a small victory and you've every right to be proud of it.
+    But it is not isolated and it is a mistake to think that it is.
+  </p>
+
+  <p>
+    In his book <em>How to Solve It</em> the mathematician and teacher George Polya gave four steps for problem solving.
+    The steps may be paraphrased as
+
+    <ol>
+      <li>
+        <p>
+          Understand the problem.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Formulate a plan.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Execute the plan.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Reflect on what you've done.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    This process is iterative.
+    That is, once a plan is formulated and executed we often find that our plan was not up to the task.
+    So we have to ask what went wrong,
+    form a new plan and try again.
+    This is the fourth step: Reflect on what you've done.
+  </p>
+
+  <p>
+    Almost everyone remembers this fourth step when their plan <em>doesn't</em> work.
+    After all, you've got to try again so you have to ask what went wrong.
+    But it is all too easy to neglect that crucial fourth step when the plan succeeds.
+    In that case,
+    flush with success we usually move on to the next problem and start over from scratch.
+  </p>
+
+  <p>
+    This is a mistake.
+    Having solved a problem is no reason to stop thinking about it.
+  </p>
+
+  <p>
+    That fourth step is at least as important when we have succeeded as when we have failed.
+    Each time you solve a problem stop and ask yourself a few questions:
+
+    <ul>
+      <li>
+        <p>
+          Are there any easy consequences that follow from the result?
+        </p>
+      </li>
+
+      <li>
+        <p>
+          How does it fit into the broader scheme of other problems you have solved?
+        </p>
+      </li>
+
+      <li>
+        <p>
+          How might it be used in the future?
+        </p>
+      </li>
+    </ul>
+  </p>
+
+  <figure>
+    <caption>George Polya</caption>
+    <image width="28%" source="images/Polya.png" />
+  </figure>
+
+  <p>
+    Also, notice the structure of the problem.
+    Some assumptions had to be made.
+    What were they?
+    Were they all necessary?
+    That is, did your solution use everything that was assumed?
+    If not, you may have something considerably more general than it at first appears.
+    What is that more general statement?
+    Even if you used all of the assumptions,
+    was that really necessary?
+    Can you solve a similar problem with weaker assumptions?
+  </p>
+
+  <p>
+    Take a moment to pack all of these questions
+    (and their answers)
+    away in your mind so that when you see something similar in the future you will be reminded of it.
+    <em>Don't</em> solve any problem and then forget it and move on.
+    The nature of mathematics is cumulative.
+    Remember, you are not here to accumulate grade points.
+    You are here to learn and understand the concepts and methods of mathematics,
+    to gain <q>mathematical maturity.</q>
+    Part of that maturation process is the accumulation of a body of facts (theorems),
+    and techniques that can be used to prove new theorems
+    (solve new problems).
+  </p>
+
+  <p>
+    This text has been written with the maturation process in mind.
+    You will frequently find that the problems you solve today can be used to good effect in the ones you attempt tomorrow,
+    but only if you remember them.
+    So take a moment after you've solved each problem to think about how it fits into the patterns you already know.
+    This is important enough to bear repeating: <em>A problem,
+    once solved, becomes a tool for solving subsequent problems!</em>
+  </p>
+
+  <p>
+    The purpose of the following sequence of problems is to help you become accustomed to this notion
+    (if you aren't already).
+    It is a progression of results about prime numbers.
+    As you probably recall,
+    a prime number is any integer greater than <m>1</m> whose only factors are itself and <m>1</m>.
+    For example, <m>2</m>, <m>3</m>, <m>5</m>, <m>7</m>,
+    <m>11</m> are prime, while <m>4</m>,
+    <m>6</m>, <m>9</m> are not.
+    A major result about prime numbers is the following:
+  </p>
+
+  <theorem xml:id="thm_FTA">
+    <statement>
+      <p>  
+        <alert> The Fundamental Theorem of Arithmetic</alert>
+      </p>
+      <p>
+        Any integer greater than <m>1</m> is either prime or it is a product of prime numbers. 
+        Furthermore,
+        this prime decomposition is unique up to the order of the factors.
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    We will not prove this,
+    but we will use it as a starting point to examine the following problems.
+    As you do these problems,
+    notice how subsequent problems make use of the previous results.
+  </p>
+
+  <p>
+    Notice that the notation <m>p\,|a</m> simply means that the integer <m>p</m> divides the integer <m>a</m> with no remainder.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Fermat's Little Theorem</h><h>first problem leading to</h></idx>
+        <idx><h>if a prime divides a product of two numbers then it divides one of the factors</h></idx>
+        Let <m>p</m> be a prime number and <m>a, b</m> positive integers such that <m>p\, | (a\cdot b)</m>.
+        Show that <m>p\,|a</m> or <m>p\,|b</m>. 
+      </p>
+    </statement>
+          <hint> If <m>p\,|a</m> then we are done.
+          If not then notice that <m>p</m> is a prime factor of <m>a\cdot b</m>.
+          What does the Fundamental Theorem of Arithmetic say about the prime factors of
+          <m>a\cdot b</m> compared to the prime factors of <m>a</m> and <m>b?</m>
+          </hint>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Fermat's Little Theorem</h><h>second problem leading to</h></idx>
+        <idx><h>if a prime divides an arbitrary product then it divides one of the factors</h></idx>
+        Let <m>p</m> be a prime number and let <m>a_1, a_2, \ldots, a_n</m> be positive integers such that <m>p\,|\left(a_1\cdot a_2\cdot a_3\cdot\ldots\cdot a_n\right)</m>.
+        Show that <m>p\,|a_k</m> for some
+        <m>k\in\{1, 2, 3, \ldots,
+        n\}</m>. 
+      </p>
+    </statement>
+          <hint> 
+            Use induction on <m>n</m> and the result of the previous problem.
+          </hint>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Fermat's Little Theorem</h><h>third problem leading to</h></idx>
+        <idx><h>if <m>p</m> is prime then <m>p</m> divides <m>p \choose{}k</m></h></idx>
+        Let <m>p</m> be a prime number and let <m>k</m> be an integer with <m>1\le k\le p-1</m>.
+        Prove that <m>p\left|{p \choose{}k}\right.</m>,
+        where <m>{p \choose{}k}</m> is the binomial coefficient
+        <m>\frac{p!}{k!(p-k)!}</m>. 
+      </p>
+    </statement>
+          <hint> 
+            We know <m>p\,|p\,!</m>,
+            so <m>p\,|{p \choose{}k}k!(p-k)!</m>.
+            How does the previous result apply?
+          </hint>
+  </problem>
+
+  <p>
+    We now have all the machinery in place to prove one of the really cool theorems from number theory.
+  </p>
+
+  <theorem xml:id="thm_FermatsLittleTheorem">
+    <statement>
+      <p>
+        <alert>Fermat's Little Theorem</alert>
+      </p>
+      <p>
+        <idx><h>Fermat's Little Theorem</h></idx>
+        Let <m>p</m> be any prime number.
+        Then <m>p\,|(n^p-n)</m> for all positive integers <m>n</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Fermat's Little Theorem</h></idx>
+        Prove Fermat's Little Theorem. 
+      </p>
+    </statement>
+          <hint>
+            Use induction on <m>n</m>.
+            To get from <m>n</m> to <m>n+1</m>,
+            use the binomial theorem on <m>(n+1)^p</m>.
+          </hint>
+  </problem>
+
+  <p>
+    Fermat's Little Theorem is the foundational basis for a number of results in number theory and encryption.
+  </p>
+
+</section>
+

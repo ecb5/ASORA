@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:36-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Uniform Convergence: Integrals and Derivatives</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="PowerSeriesRedux-UnifConv.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="PowerSeriesRedux.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="PowerSeriesRedux-RadiusOfConv.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="PowerSeriesRedux-UnifConv.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="PowerSeriesRedux.html" title="Up">Up</a><a class="next-button button toolbar-item" href="PowerSeriesRedux-RadiusOfConv.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="active">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="PowerSeriesRedux-UnifConv-IntsAndDerivs"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span>
+</h2>
+<section class="introduction" id="introduction-26"><p id="p-1143">We saw in the previous section that if <span class="process-math">\(\left(f_n\right)\)</span> is a sequence of continuous functions which converges uniformly to <span class="process-math">\(f\)</span> on an interval, then <span class="process-math">\(f\)</span> must be continuous on the interval as well. This was not necessarily true if the convergence was only pointwise, as we saw a sequence of continuous functions defined on <span class="process-math">\((-\infty,\infty)\)</span> converging pointwise to a Fourier series that was not continuous on the real line. Uniform convergence guarantees some other nice properties as well.</p>
+<article class="theorem theorem-like" id="th_UniformIntegralConvergence"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.2.1</span><span class="period">.</span>
+</h3>
+<p id="p-1144"> Suppose <span class="process-math">\(f_n\)</span> and <span class="process-math">\(f\)</span> are integrable and <span class="process-math">\(f_n\unif f\)</span> on <span class="process-math">\([a,b]\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\int_{x=a}^b f_n(x)\dx{ x}=\int_{x=a}^bf(x)\dx{ x}. {}
+\end{equation*}
+</div></article><article class="problem example-like" id="problem-166"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-166"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-166"><article class="problem example-like"><p id="p-1145"> Prove <a href="" class="xref" data-knowl="./knowl/th_UniformIntegralConvergence.html" title="Theorem 11.2.1">Theorem 11.2.1</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-37" id="hint-37"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-37"><div class="hint solution-like"><p id="p-1146">For <span class="process-math">\(\eps&gt;0\text{,}\)</span> we need to make <span class="process-math">\(|f_n(x)-f(x)|\lt \frac{\eps}{b-a}\text{,}\)</span> for all <span class="process-math">\(x\in[a,b]\text{.}\)</span></p></div></div>
+</div></article></div>
+<p id="p-1147">Notice that this theorem is not true if the convergence is only pointwise, as illustrated by the following.</p>
+<article class="problem example-like" id="problem-167"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-167"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.3</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-167"><article class="problem example-like"><p id="p-1148"> Consider the sequence of functions <span class="process-math">\(\left(f_n\right)\)</span> given by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f_n(x)= \begin{cases}n\amp \text{ if } x\in\left(0,\frac{1}{n}\right)\\ 0\amp \text{ otherwise } \end{cases} \text{.}
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="li-99"><p id="p-1149">Show that <span class="process-math">\(f_n\ptwise 0\)</span> on <span class="process-math">\([0,1]\text{,}\)</span> but <span class="process-math">\(\limit{n}{\infty}{\int_{x=0}^1f_n(x)\dx{ x}\neq\int_{x=0}^10\dx{ x}.}\)</span></p></li>
+<li id="li-100"><p id="p-1150">Can the convergence be uniform? Explain.</p></li>
+</ol></article></div>
+<p id="p-1151">Applying this result to power series we have the following.</p>
+<aside class="aside aside-like" id="aside-16"><p id="p-1152">Notice that we must explicitly assume uniform convergence. This is because we have not <em class="emphasis">yet</em> proved that power series actually do converge uniformly.</p></aside><article class="corollary theorem-like" id="cor_IntConvUni"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">11.2.4</span><span class="period">.</span>
+</h3>
+<p id="p-1153">If <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges uniformly to <span class="process-math">\(f\)</span> on an interval containing <span class="process-math">\(0\)</span> and <span class="process-math">\(x\)</span> then <span class="process-math">\(\int_{t=0}^xf(t)\dx{ t}=\sum_{n=0}^\infty\left(\frac{a_n}{n+1}x^{n+1}\right)\text{.}\)</span></p></article><article class="problem example-like" id="problem-168"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-168"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.5</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-168"><article class="problem example-like"><p id="p-1154"> Prove <a href="" class="xref" data-knowl="./knowl/cor_IntConvUni.html" title="Corollary 11.2.4">Corollary 11.2.4</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-38" id="hint-38"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-38"><div class="hint solution-like">
+<p id="p-1155">Remember that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\displaystyle \sum_{n=0}^\infty f_n(x) = \lim_{N\rightarrow\infty}\sum_{n=0}^N f_n(x). 
+\end{equation*}
+</div>
+</div></div>
+</div></article></div>
+<p id="p-1156">Surprisingly, the issue of term-by-term differentiation depends not on the uniform convergence of <span class="process-math">\(\left(f_n\right)\text{,}\)</span> but on the uniform convergence of <span class="process-math">\(\left(f^\prime_n\right)\text{.}\)</span> More precisely, we have the following result.</p>
+<article class="theorem theorem-like" id="thm_UniformDerivativeConvergence"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.2.6</span><span class="period">.</span>
+</h3>
+<p id="p-1157">Suppose for every <span class="process-math">\(n\in\NN\)</span> <span class="process-math">\(f_n\)</span> is differentiable, <span class="process-math">\(f_n^\prime\)</span> is continuous, <span class="process-math">\(f_n\ptwise f\text{,}\)</span> and <span class="process-math">\(f_n^\prime\unif g\)</span> on an interval, <span class="process-math">\(I\text{.}\)</span>  Then <span class="process-math">\(f\)</span> is differentiable and <span class="process-math">\(f^\prime = g\)</span> on <span class="process-math">\(I\text{.}\)</span></p></article><article class="problem example-like" id="problem-169"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-169"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.7</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-169"><article class="problem example-like"><p id="p-1158">Prove <a href="" class="xref" data-knowl="./knowl/thm_UniformDerivativeConvergence.html" title="Theorem 11.2.6">Theorem 11.2.6</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-39" id="hint-39"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-39"><div class="hint solution-like">
+<p id="p-1159">Let <span class="process-math">\(a\)</span> be an arbitrary fixed point in <span class="process-math">\(I\)</span> and let <span class="process-math">\(x\in
+I\text{.}\)</span>  By the Fundamental Theorem of Calculus, we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int_{t=a}^x f^\prime_n(t)\dx{ t}=f_n(x)-f_n(a)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Take the limit of both sides and differentiate with respect to <span class="process-math">\(x\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<p id="p-1160">As before, applying this to power series gives the following result.</p>
+<article class="corollary theorem-like" id="cor_UniformConvergenceDerivative"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">11.2.8</span><span class="period">.</span>
+</h3>
+<p id="p-1161">If <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges pointwise to <span class="process-math">\(f\)</span> on an interval containing <span class="process-math">\(0\)</span> and <span class="process-math">\(x\)</span> and <span class="process-math">\(\sum_{n=1}^\infty a_nnx^{n-1}\)</span> converges uniformly on an interval containing <span class="process-math">\(0\)</span> and <span class="process-math">\(x\text{,}\)</span> then <span class="process-math">\(f^\prime(x)=\sum_{n=1}^\infty a_nnx^{n-1}\text{.}\)</span></p></article><article class="problem example-like" id="problem-170"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-170"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.9</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-170"><article class="problem example-like"><p id="p-1162"> Prove <a href="" class="xref" data-knowl="./knowl/cor_UniformConvergenceDerivative.html" title="Corollary 11.2.8">Corollary 11.2.8</a>.</p></article></div>
+<p id="p-1163">The above results say that a power series can be differentiated and integrated term-by-term as long as the convergence is uniform. Fortunately it is, in general, true that when a power series converges the convergence of it and its integrated and differentiated series is also uniform (almost).</p>
+<p id="p-1164">However we do not yet have all of the tools necessary to see this. To build these tools requires that we return briefly to our study, begun in <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a>, of the convergence of sequences.</p></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span>
+</h3>
+<p id="p-1165">Knowing that a sequence or a series converges and knowing what it converges to are typically two different matters. For example, we know that <span class="process-math">\(\sum_{n=0}^\infty\frac{1}{n!}\)</span>and <span class="process-math">\(\sum_{n=0}^\infty\frac{1}{n!\,n!}\)</span> both converge. The first converges to <span class="process-math">\(e\text{,}\)</span> which has meaning in other contexts. We don't know what the second one converges to, other than to say it converges to <span class="process-math">\(\sum_{n=0}^\infty\frac{1}{n!\,n!}\text{.}\)</span> In fact, that question might not have much meaning without some other context in which <span class="process-math">\(\sum_{n=0}^\infty\frac{1}{n!\,n!}\)</span> arises naturally. Be that as it may, we need to look at the convergence of a series (or a sequence for that matter) without necessarily knowing what it might converge to. We make the following definition.</p>
+<article class="definition definition-like" id="def_CauchySequence"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">11.2.10</span><span class="period">.</span>
+</h4>
+<p id="p-1166"> Let <span class="process-math">\(\left(s_n\right)\)</span> be a sequence of real numbers. We say that <span class="process-math">\(\left(s_n\right)\)</span>is a <dfn class="terminology">Cauchy sequence</dfn> if for any <span class="process-math">\(\eps&gt;0\text{,}\)</span> there exists a real number <span class="process-math">\(N\)</span> such that if <span class="process-math">\(m,n&gt;N\text{,}\)</span> then <span class="process-math">\(|s_m-s_n|\lt \eps\text{.}\)</span></p></article><p id="p-1167">Notice that this definition says that the terms in a Cauchy sequence get arbitrarily close to each other and that there is no reference to getting close to any particular fixed real number. Furthermore, you have already seen lots of examples of Cauchy sequences as illustrated by the following result.</p>
+<article class="theorem theorem-like" id="thm_Converge-_Cauchy"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.2.11</span><span class="period">.</span>
+</h4>
+<p id="p-1168"> Suppose <span class="process-math">\(\left(s_n\right)\)</span> is a sequence of real numbers which converges to <span class="process-math">\(s\text{.}\)</span> Then <span class="process-math">\(\left(s_n\right)\)</span> is a Cauchy sequence.</p></article><p id="p-1169">Intuitively, this result makes sense. If the terms in a sequence are getting arbitrarily close to <span class="process-math">\(s\text{,}\)</span> then they should be getting arbitrarily close to each other. This is the basis of the proof.</p>
+<aside class="aside aside-like" id="aside-17"><p id="p-1170">But the converse isn't nearly as clear. In fact, it isn't true in the rational numbers.</p></aside><article class="problem example-like" id="problem-171"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-171"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.12</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-171"><article class="problem example-like"><p id="p-1171">Prove <a href="" class="xref" data-knowl="./knowl/thm_Converge-_Cauchy.html" title="Theorem 11.2.11">Theorem 11.2.11</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-40" id="hint-40"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-40"><div class="hint solution-like"><p id="p-1172"><span class="process-math">\(|s_m-s_n|=|s_m-s+s-s_n|\leq|s_m-s\mathopen|+|s-s_n|\text{.}\)</span></p></div></div>
+</div></article></div>
+<p id="p-1173">So any convergent sequence is automatically Cauchy. For the real number system, the converse is also true and, in fact, is equivalent to any of our completeness axioms: the NIP, the Bolzano-Weierstrass Theorem, or the LUB Property. Thus, this could have been taken as our completeness axiom and we could have used it to prove the others. One of the most convenient ways to prove this converse is to use the Bolzano-Weierstrass Theorem. To do that, we must first show that a Cauchy sequence must be bounded. This result is reminiscent of the fact that a convergent sequence is bounded (<a href="" class="xref" data-knowl="./knowl/lemma_BoundedConvergent.html" title="Lemma 7.2.7">Lemma 7.2.7</a> of <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a>) and the proof is very similar.</p>
+<article class="lemma theorem-like" id="lemma_Cauchy-_Bounded"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">11.2.13</span><span class="period">.</span>
+</h4>
+<p id="p-1174">Suppose <span class="process-math">\(\left(s_n\right)\)</span> <span class="process-math">\(\)</span>is a Cauchy sequence. Then there exists <span class="process-math">\(B&gt;0\)</span> such that <span class="process-math">\(|s_n|\leq B\)</span> for all <span class="process-math">\(n\text{.}\)</span></p></article><article class="problem example-like" id="problem-172"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-172"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.14</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-172"><article class="problem example-like"><p id="p-1175">Prove <a href="" class="xref" data-knowl="./knowl/lemma_Cauchy-_Bounded.html" title="Lemma 11.2.13">Lemma 11.2.13</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-41" id="hint-41"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-41"><div class="hint solution-like"><p id="p-1176">This is similar to <a href="" class="xref" data-knowl="./knowl/prob_BoundedConvergent.html" title="Problem 7.2.8">problem 7.2.8</a> of <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a>. There exists <span class="process-math">\(N\)</span> such that if <span class="process-math">\(m,n&gt;N\)</span>then <span class="process-math">\(|s_n-s_m|\lt 1.\text{,}\)</span> Choose a fixed <span class="process-math">\(m&gt;N\)</span> and let <span class="process-math">\(B=\max\left(\abs{s_1}, \abs{s_2}, \ldots, \abs{s_{\lceil N\rceil}}, \abs{s_m}+1\right)\text{.}\)</span></p></div></div>
+</div></article></div>
+<article class="theorem theorem-like" id="thm_Cauchy-_Converge"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.2.15</span><span class="period">.</span>
+</h4>
+<p id="p-1177"><em class="alert">Cauchy sequences converge</em></p>
+<p id="p-1178"> Suppose <span class="process-math">\(\left(s_n\right)\)</span> is a Cauchy sequence of real numbers. There exists a real number <span class="process-math">\(s\)</span> such that <span class="process-math">\(\lim_{n\rightarrow\infty}s_n=s\text{.}\)</span></p></article><article class="hiddenproof" id="proof-28"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-28"><h4 class="heading"><span class="title">Sketch of Proof.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof"><p id="p-1179">We know that <span class="process-math">\(\left(s_n\right)\)</span> <span class="process-math">\(\)</span>is bounded, so by the Bolzano-Weierstrass Theorem, it has a convergent subsequence <span class="process-math">\(\left(s_{n_k}\right)\)</span> converging to some real number <span class="process-math">\(s\text{.}\)</span> We have <span class="process-math">\(|s_n-s|=|s_n-s_{n_k}+s_{n_k}-s|\leq|s_n-s_{n_k}\mathopen|+|s_{n_k}-s|\text{.}\)</span> If we choose <span class="process-math">\(n\)</span> and <span class="process-math">\(n_k\)</span> large enough, we should be able to make each term arbitrarily small.</p></article></div>
+<article class="problem example-like" id="prob_Cauchy_sequences_Cauchy_implies_convergence"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_Cauchy_sequences_Cauchy_implies_convergence"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.16</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_Cauchy_sequences_Cauchy_implies_convergence"><article class="problem example-like"><p id="p-1180"> Provide a formal proof of <a href="" class="xref" data-knowl="./knowl/thm_Cauchy-_Converge.html" title="Theorem 11.2.15">Theorem 11.2.15</a>.</p></article></div>
+<p id="p-1181">From <a href="" class="xref" data-knowl="./knowl/thm_Converge-_Cauchy.html" title="Theorem 11.2.11">Theorem 11.2.11</a> we see that every Cauchy sequence converges in <span class="process-math">\(\RR\text{.}\)</span> Moreover the proof of this fact depends on the Bolzano-Weierstrass Theorem which, as we have seen, is equivalent to our completeness axiom, the Nested Interval Property. What this means is that if there is a Cauchy sequence which does not converge then the NIP is not true. A natural question to ask is if every Cauchy sequence converges does the NIP follow? That is, is the convergence of Cauchy sequences also equivalent to our completeness axiom? The following theorem shows that the answer is yes.</p>
+<article class="theorem theorem-like" id="thm_ConvCauchyEquivNIP"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.2.17</span><span class="period">.</span>
+</h4>
+<p id="p-1182"> Suppose every Cauchy sequence converges. Then the Nested Interval Property is true.</p></article><article class="problem example-like" id="prob_Cauchy_sequences_Cauchy_implies_NIP"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_Cauchy_sequences_Cauchy_implies_NIP"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.18</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_Cauchy_sequences_Cauchy_implies_NIP"><article class="problem example-like"><p id="p-1183">Prove <a href="" class="xref" data-knowl="./knowl/thm_ConvCauchyEquivNIP.html" title="Theorem 11.2.17">Theorem 11.2.17</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-42" id="hint-42"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-42"><div class="hint solution-like"><p id="p-1184">If we start with two sequences <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\text{,}\)</span> satisfying all of the conditions of the NIP, you should be able to show that these are both Cauchy sequences.</p></div></div>
+</div></article></div>
+<p id="p-1185"><a href="" class="xref" data-knowl="./knowl/prob_Cauchy_sequences_Cauchy_implies_convergence.html" title="Problem 11.2.16">Problems 11.2.16</a> and <a href="" class="xref" data-knowl="./knowl/prob_Cauchy_sequences_Cauchy_implies_NIP.html" title="Problem 11.2.18">Problem 11.2.18</a> tell us that the following are equivalent: the Nested Interval Property, the Bolzano-Weierstrass Theorem, the Least Upper Bound Property, and the convergence of Cauchy sequences. Thus any one of these could have been taken as the completeness axiom of the real number system and then used to prove the each of the others as a theorem according to the following dependency graph:</p>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/CompletenessAxioms.png" class="contained"></div>
+<p id="p-1186">Since we can get from any node on the graph to any other, simply by following the implications (indicated with arrows), any one of these statements is logically equivalent to each of the others.</p>
+<article class="problem example-like" id="problem-175"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-175"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.19</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-175"><article class="problem example-like"><p id="p-1187"> Since the convergence of Cauchy sequences can be taken as the completeness axiom for the real number system, it does not hold for the rational number system. Give an example of a Cauchy sequence of rational numbers which does not converge to a rational number.</p></article></div>
+<p id="p-1188">If we apply the above ideas to series we obtain the following important result, which will provide the basis for our investigation of power series.</p>
+<article class="theorem theorem-like" id="thm_CauchyCriterion"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.2.20</span><span class="period">.</span><span class="space"> </span><span class="title">Cauchy Criterion.</span>
+</h4>
+<p id="p-1189">The series <span class="process-math">\(\sum_{k=0}^\infty a_k\)</span> converges if and only if <span class="process-math">\(\forall \eps&gt;0\text{,}\)</span> <span class="process-math">\(\exists N\)</span> such that if <span class="process-math">\(m&gt;n&gt;N\)</span> then <span class="process-math">\(|\sum_{k=n+1}^ma_k|\lt \eps\text{.}\)</span></p></article><article class="problem example-like" id="problem-176"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-176"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.21</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-176"><article class="problem example-like"><p id="p-1190"> Prove the Cauchy criterion.</p></article></div>
+<p id="p-1191">At this point several of the tests for convergence that you probably learned in calculus are easily proved.  For example:</p>
+<article class="problem example-like" id="prob_NthTermTest"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_NthTermTest"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.22</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_NthTermTest"><article class="problem example-like"><p id="p-1192"><em class="alert">The <span class="process-math">\(n\)</span>th Term Test</em></p>
+<p id="p-1193"> Show that if <span class="process-math">\(\sum_{n=1}^\infty a_n\)</span> converges then <span class="process-math">\(\limit{n}{\infty}{a_n}=0\text{.}\)</span></p></article></div>
+<article class="problem example-like" id="problem-178"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-178"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.23</span><span class="period">.</span><span class="space"> </span><span class="title">The Strong Cauchy Criterion.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-178"><article class="problem example-like"><p id="p-1194"> Show that <span class="process-math">\(\displaystyle\sum_{k=1}^\infty a_k\)</span> converges if and only if <span class="process-math">\(\limit{n}{\infty}{\sum_{k=n+1}^\infty a_k}=0\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-43" id="hint-43"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-43"><div class="hint solution-like"><p id="p-1195">The hardest part of this problem is recognizing that it is really about the limit of a sequence as in <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a>.</p></div></div>
+</div></article></div>
+<p id="p-1196">You may also recall the Comparison Test from studying series in calculus: suppose <span class="process-math">\(0\leq a_n\leq b_n\text{,}\)</span> if <span class="process-math">\(\sum b_n\)</span> converges then <span class="process-math">\(\sum a_n\)</span> converges. This result follows from the fact that the partial sums of <span class="process-math">\(\sum a_n\)</span> form an increasing sequence which is bounded above by <span class="process-math">\(\sum b_n\text{.}\)</span> (See <a href="" class="xref" data-knowl="./knowl/cor_IncBoundedConverge.html" title="Corollary 10.4.5">Corollary 10.4.5</a> of <a href="IVTandEVT.html" class="internal" title="Chapter 10: Intermediate and Extreme Values">Chapter 10</a>.) The Cauchy Criterion allows us to extend this to the case where the terms <span class="process-math">\(a_n\)</span> could be negative as well. This can be seen in the following theorem.</p>
+<article class="theorem theorem-like" id="thm_ComparisonTest"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.2.24</span><span class="period">.</span>
+</h4>
+<p id="p-1197"><em class="alert">Comparison Test</em></p>
+<p id="p-1198"> Suppose <span class="process-math">\(|a_n|\leq b_n\)</span> for all <span class="process-math">\(n\text{.}\)</span> If <span class="process-math">\(\sum b_n\)</span> converges then <span class="process-math">\(\sum a_n\)</span> also converges.</p></article><article class="problem example-like" id="problem-179"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-179"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.25</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-179"><article class="problem example-like"><p id="p-1199">Prove <a href="" class="xref" data-knowl="./knowl/thm_ComparisonTest.html" title="Theorem 11.2.24">Theorem 11.2.24</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-44" id="hint-44"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-44"><div class="hint solution-like"><p id="p-1200">Use the Cauchy criterion with the fact that <span class="process-math">\(\abs{\sum_{k=n+1}^ma_k}\leq\sum_{k=n+1}^m\abs{a_k}\text{.}\)</span></p></div></div>
+</div></article></div>
+<p id="p-1201">The following definition is of marked importance in the study of series.</p>
+<article class="definition definition-like" id="AbsoluteConvergence"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">11.2.26</span><span class="period">.</span>
+</h4>
+<p id="p-1202"><em class="alert">Absolute Convergence</em></p>
+<p id="p-1203"> Given a series <span class="process-math">\(\sum a_n\text{,}\)</span> the series <span class="process-math">\(\sum|a_n|\)</span> is called the {absolute series} of <span class="process-math">\(\sum\boldsymbol{a}_{\boldsymbol{n}}\)</span> and if <span class="process-math">\(\sum|a_n|\)</span>converges then we say that <span class="process-math">\(\sum\boldsymbol{a}_{\boldsymbol{n}}\)</span> converges absolutely.</p></article><p id="p-1204">The significance of this definition comes from the following result.</p>
+<article class="corollary theorem-like" id="cor_AbsConv-_Conv"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">11.2.27</span><span class="period">.</span>
+</h4>
+<p id="p-1205">If <span class="process-math">\(\sum a_n\)</span> converges absolutely, then <span class="process-math">\(\sum a_n\)</span> converges.</p></article><article class="problem example-like" id="problem-180"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-180"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.28</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-180"><article class="problem example-like"><p id="p-1206"> Show that <a href="" class="xref" data-knowl="./knowl/cor_AbsConv-_Conv.html" title="Corollary 11.2.27">Corollary 11.2.27</a> is a direct consequence of <a href="" class="xref" data-knowl="./knowl/thm_ComparisonTest.html" title="Theorem 11.2.24">Theorem 11.2.24</a>.</p></article></div>
+<article class="problem example-like" id="problem-181"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-181"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.29</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-181"><article class="problem example-like"><p id="p-1207"> If <span class="process-math">\(\sum_{n=0}^\infty|a_n|=s\text{,}\)</span> then does it follow that <span class="process-math">\(s=|\sum_{n=0}^\infty a_n|\text{?}\)</span> Justify your answer. What can be said?</p></article></div>
+<p id="p-1208">The converse of <a href="" class="xref" data-knowl="./knowl/cor_AbsConv-_Conv.html" title="Corollary 11.2.27">Corollary 11.2.27</a> is not true as evidenced by the series <span class="process-math">\(\sum_{n=0}^\infty\frac{(-1)^n}{n+1}\text{.}\)</span> As we noted in <a href="PowerSeriesQuestions.html" class="internal" title="Chapter 5: Questions Concerning Power Series">Chapter 5</a>, this series converges to ln <span class="process-math">\(2\text{.}\)</span> However, its absolute series is the Harmonic  Series which diverges. Any such series which converges, but not absolutely, is said to <em class="alert">converge conditionally</em>. Recall also that in <a href="PowerSeriesQuestions.html" class="internal" title="Chapter 5: Questions Concerning Power Series">Chapter 5</a>, we showed that we could rearrange the terms of the series <span class="process-math">\(\sum_{n=0}^\infty\frac{(-1)^n}{n+1}\)</span> to make it converge to any number we wished. We noted further that all rearrangements of the series <span class="process-math">\(\sum_{n=0}^\infty\frac{(-1)^n}{\left(n+1\right)^2}\)</span> converged to the same value. The difference between the two series is that the latter converges absolutely whereas the former does not. Specifically, we have the following result.</p>
+<article class="theorem theorem-like" id="thm_RearrageAbsConv"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.2.30</span><span class="period">.</span>
+</h4>
+<p id="p-1209"> Suppose <span class="process-math">\(\sum a_n\)</span> converges absolutely and let <span class="process-math">\(s=\sum_{n=0}^\infty a_n\text{.}\)</span> Then any rearrangement of <span class="process-math">\(\sum a_n\)</span> must converge to <span class="process-math">\(s\text{.}\)</span></p></article><article class="hiddenproof" id="proof-29"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-29"><h4 class="heading"><span class="title">Sketch of Proof.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-29"><article class="hiddenproof"><p id="p-1210">We will first show that this result is true in the case where <span class="process-math">\(a_n\geq 0\text{.}\)</span> If <span class="process-math">\(\sum b_n\)</span> represents a rearrangement of <span class="process-math">\(\sum a_n\text{,}\)</span> then notice that the sequence of partial sums <span class="process-math">\(\left(\sum_{k=0}^nb_k\right)_{n=0}^\infty\)</span>is an increasing sequence which is bounded by <span class="process-math">\(s\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/cor_IncBoundedConverge.html" title="Corollary 10.4.5">Corollary 10.4.5</a> of <a href="IVTandEVT.html" class="internal" title="Chapter 10: Intermediate and Extreme Values">Chapter 10</a>, this sequence must converge to some number <span class="process-math">\(t\)</span> and <span class="process-math">\(t\leq s\text{.}\)</span> Furthermore <span class="process-math">\(\sum a_n\)</span> is also a rearrangement of <span class="process-math">\(\sum b_n\text{.}\)</span> Thus the result holds for this special case. (Why?) For the general case, notice that <span class="process-math">\(a_n=\frac{|a_n\mathopen|+a_n}{2}-\frac{|a_n\mathopen|-a_n}{2}\)</span> and that <span class="process-math">\(\sum\frac{|a_n\mathopen|+a_n}{2}\)</span> and <span class="process-math">\(\sum\frac{|a_n\mathopen|-a_n}{2}\)</span> are both convergent series with nonnegative terms. By the special case <span class="process-math">\(\sum\frac{|b_n\mathopen|+b_n}{2}=\)</span> <span class="process-math">\(\sum\frac{|a_n\mathopen|+a_n}{2}\)</span> and <span class="process-math">\(\sum\frac{|b_n\mathopen|-b_n}{2}=\)</span> <span class="process-math">\(\sum\frac{|a_n\mathopen|-a_n}{2}\text{.}\)</span></p></article></div>
+<article class="problem example-like" id="problem-182"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-182"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.2.31</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-182"><article class="problem example-like"><p id="p-1211"> Fill in the details and provide a formal proof of <a href="" class="xref" data-knowl="./knowl/thm_RearrageAbsConv.html" title="Theorem 11.2.30">Theorem 11.2.30</a>.</p></article></div></section></section></div></main>
+</div>
+</body>
+</html>

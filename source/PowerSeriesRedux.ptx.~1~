@@ -1,0 +1,10 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chpt_PowerSeriesRedux">
+  <title>Back to Power Series</title>
+  <xi:include  href="section8-1.ptx" />
+  <xi:include  href="section8-2.ptx" />
+  <xi:include  href="section8-3.ptx" />
+  <xi:include  href="section8-4.ptx" />
+</chapter>
+

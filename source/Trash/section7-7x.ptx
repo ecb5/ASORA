@@ -1,0 +1,88 @@
+
+
+<section>
+  <title>Additional Problems</title>
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Least Upper Bound Property (LUBP)</h><h>definition of the Greatest Lower Bound (GLB)</h></idx>
+        Mimic the definitions of an upper bound of a set and the least upper bound (supremum) of a set to give definitions for a lower bound of a set and the greatest lower bound (infimum) of a set.
+      </p>
+      <p>
+            <alert>Note</alert>: The infimum of a set <m>S</m> is denoted by <m>\inf(S)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Least Upper Bound Property (LUBP)</h><h>identifying suprema and infima</h></idx>
+        Find the least upper bound (supremum) and greatest lower bound (infimum) of the following sets of real numbers, if they exist. (If one does not exist then say so.)
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>S=\{\frac{1}{n}\,|\,n=1,2,3,\ldots\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>T=\{r\,|\,r</m> is rational and <m>r^2\lt 2\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(-\infty,0)\cup(1,\infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>R=\{\frac{(-1)^n}{n}\,|\,n=1,2,3,\ldots\}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(2,3\pi]\cap\QQ</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The empty set <m>\emptyset</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Least Upper Bound Property (LUBP)</h></idx>
+            <idx><h><m>b</m> is an upper bound of <m>S\subseteq \RR</m> if and only if <m>-b</m> is a lower bound of <m>-S</m></h></idx>
+        Let <m>S\subseteq\RR</m> and let <m>T=\{-x|\,x\in S\}</m>.
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Prove that <m>b</m> is an upper bound of <m>S</m> if and only if <m>-b</m> is a lower bound of <m>T</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Prove that <m>b=\sup S</m> if and only if <m>-b=\inf T</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

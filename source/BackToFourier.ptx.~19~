@@ -1,0 +1,1394 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="BackToFourier">
+  <title>Back to the Real Numbers</title>
+  <introduction>
+    <p>
+      As we have seen, when they converge,
+      power series are very well behaved and Fourier (trigonometric) series are not necessarily.
+      The fact that trigonometric series were so interesting made them a lightning rod for mathematical study in the late nineteenth century.
+    </p>
+
+    <p>
+      For example, consider the question of uniqueness.
+      We saw in <xref ref="TaylorSeries">Chapter</xref>
+      that if a function could be represented by a power series,
+      then that series must be the Taylor series.
+      More precisely, if
+      <me>
+        f(x)=\sum_{n=0}^\infty a_n(x-a)^n, \text{  then  }  a_n=\frac{f^{(n)}(a)}{n!}
+      </me>.
+    </p>
+
+    <p>
+      But what can be said about the uniqueness of a trigonometric series?
+      If we can represent a function <m>f</m> as a general trigonometric series
+      <me>
+        f(x)=\sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x)
+      </me>,
+      then must this be the Fourier series with the coefficients as determined by Fourier?
+          <idx><h>Fourier, Jean Baptiste Joseph</h></idx>
+    </p>
+
+    <p>
+      For example,
+      if <m>\sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x)</m> converges to <m>f</m> uniformly on the interval <m>(0,1)</m>,
+      then because of the uniform convergence, Fourier's term-by-term integration which we saw in <xref ref="Interregnum">Part</xref>
+      is perfectly legitimate and the coefficients are,
+      of necessity, the coefficients he computed.
+      However we have seen that the convergence of a Fourier series need not be uniform.
+      This does not mean that we cannot integrate term-by-term,
+      but it does say that we can't be sure that term-by-term integration of a Fourier series will yield the integral of the associated function.
+    </p>
+
+    <p>
+          <idx><h>Lebesgue, Henri</h></idx> 
+          <idx><h>Cantor, Georg</h></idx> 
+          This led to a generalization of the integral by Henri
+          Lebesgue in 1905.  Lebesgue's profound work settled the
+          issue of whether or not a bounded pointwise converging
+          trigonometric series is the Fourier series of a function,
+          but we will not go in this direction.  We will instead focus
+          on work that Georg Cantor (1845-1918) did in the years just prior.
+          Cantor's work was also profound and had far reaching
+          implications in modern mathematics.  It also leads to some
+          very weird conclusions.
+    </p>
+<aside><p> 'Weird' does not mean false.  It
+          simply means that some of Cantor's results can be hard to
+          accept, even after you have seen the proof and verified its
+          validity.</p>
+      </aside> 
+
+
+    <p>
+      To begin, let's suppress the underlying function and suppose we have
+      <me>
+        \sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x) = \sum_{n=0}^\infty(a^\prime_n\cos n\pi x\,+b^\prime_n\sin n\pi x)
+      </me>.
+    </p>
+
+    <p>
+      We ask: If these two series are equal must it be true that <m>a_n=a^\prime_n</m> and
+      <m>b_n=b^\prime_n?</m> We can reformulate this uniqueness question as follows: Suppose
+      <me>
+        \sum_{n=0}^\infty\left((a_n-a^\prime_n)\cos n\pi x\,+(b_n-b^\prime_n)\sin n\pi x\right) = 0
+      </me>.
+    </p>
+
+    <p>
+      If we let <m>c_n = a_n-a^\prime_n</m> and <m>d_n = b_n-b^\prime_n</m>,
+      then the question becomes: If <m>\sum_{n=0}^\infty\left(c_n\cos n\pi x\,+d_n\sin n\pi x\right) = 0</m>,
+      then will <m>c_n=d_n=0?</m> It certainly seems reasonable to suppose so,
+      but at this point we have enough experience with infinite sums to know that we need to be <em>very</em>
+      careful about relying on the intuition we have honed on finite sums.
+    </p>
+
+    <p>
+      <idx>
+          <h>Cantor, Georg</h>
+           <h>and the modern view of mathematics</h>
+      </idx>
+      The answer to this seemingly basic question leads to some very
+      profound results.  In particular, answering this question led
+      the mathematician  Cantor  to study the makeup
+      of the real number system.  This in turn opened the door to the
+      modern view of mathematics of the twentieth century.  In
+      particular, Cantor proved the following result in 1871<nbsp
+      />(<xref ref="jahnke03__histor_analy"/>, p. 305).
+    </p>
+
+    <theorem xml:id="thm_Cantor-uniqueness-of-trig-series">
+      <statement>
+        <p>
+          <alert>Cantor</alert>
+        </p>
+        <p>
+          <idx>
+              <h>Cantor, Georg</h>
+          </idx> 
+           <idx>
+              <h>Cantor, Georg</h>
+               <h>uniqueness of Fourier series</h>
+                <h>first theorem on</h>
+           </idx> 
+           <idx>
+             <h>Fourier Series</h>
+             <h>Cantor's first theorem on uniqueness</h>
+           </idx>
+         If the trigonometric series
+          <me>
+            \sum_{n=0}^\infty\left(c_n\cos n\pi  x\,+d_n\sin n\pi x\right) = 0
+          </me>,
+        </p>
+
+        <p>
+          <q>with the exception of certain values of <m>x</m>,</q>
+          then all of its coefficients vanish.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      In his attempts to nail down precisely which <q>certain values</q>
+      could be exceptional, Cantor was led to examine the nature of subsets of real numbers and ultimately to give a precise definition of the concept of infinite sets and to define an arithmetic of
+      <q>infinite numbers.</q>
+    </p>
+<aside><title>
+Transfinite Numbers
+</title>
+<p> Actually,
+      he called them <em>transfinite numbers</em> because,
+      by definition, numbers are finite.</p>
+</aside>
+
+
+    <p>
+      As a first step toward identifying those
+      <q>certain values,</q> Cantor 
+      proved the following theorem,
+      which we will state but not prove.
+    </p>
+
+    <theorem xml:id="thm_Cantor_1870">
+      <statement>
+        <p>
+          <alert>Cantor, (1870)</alert>
+        </p>
+        <p>
+          <idx>
+              <h>Cantor, Georg</h>
+               <h> uniqueness of Fourier series</h>
+                <h>second theorem</h></idx>
+           <idx>
+             <h>Fourier Series</h>
+             <h>Cantor's second theorem on uniqueness</h>
+           </idx>
+   If the trigonometric series
+          <me>
+            \sum_{n=0}^\infty\left(c_n\cos n\pi  x\,+d_n\sin n\pi x\right) = 0
+          </me>,
+          for all <m>x\in\RR</m> then all of its coefficients vanish.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      He then extended this to the following:
+    </p>
+
+    <theorem xml:id="thm_Cantor-1871-b">
+      <statement>
+        <p>
+          <alert>Cantor, (1871)</alert>
+        </p>
+        <p>
+          <idx>
+            <h>Cantor, Georg</h>
+             <h>uniqueness of Fourier series</h>
+              <h>third theorem on</h>
+          </idx> 
+           <idx>
+             <h>Fourier Series</h>
+             <h>Cantor's third theorem on uniqueness</h>
+           </idx>
+          If the trigonometric series
+          <me>
+            \sum_{n=0}^\infty\left(c_n\cos n\pi  x\,+d_n\sin n\pi x\right) = 0
+          </me>,
+          for all but finitely many <m>x\in\RR</m> then all of its coefficients vanish.
+        </p>
+      </statement>
+    </theorem>
+
+    <figure>
+      <caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Cantor/" visual="mathshistory.st-andrews.ac.uk/Biographies/Cantor/">Georg Cantor</url> </caption>
+       <idx><h>Cantor, Georg</h><h>portrait of</h></idx>
+      <image width="35%" source="images/Cantor.png" />
+    </figure>
+
+    <p>
+      Observe that this is not a trivial generalization.
+      Although the exceptional points are constrained to be finite in number,
+      this number could still be extraordinarily large.
+      That is, even if the series given above differed from zero on
+      <m>10^{10^{100000}}</m> distinct points in the interval
+      <m>(0, 10^{-10^{100000}})</m> the coefficients still vanish.
+      This remains true even if at each of these
+      <m>10^{10^{100000}}</m> points the series converges to <m>10^{10^{100000}}</m>.
+      This is truly remarkable when you think of it this way.
+    </p>
+
+    <p>
+      At this point Cantor became more interested in these exceptional points than in the Fourier series problem that he'd started with.
+      The next task he set for himself was to see just how general the set of exceptional points could be.
+      Following Cantor's lead we make the following definitions.
+    </p>
+
+    <definition xml:id="def_accumulation-point">
+      <statement>
+        <p>
+              <idx><h>limit</h><h>accumulation points</h></idx>
+              <idx><h>sets</h><h>accumulation points</h></idx>
+          Let <m>S\subseteq \RR</m> and let <m>a</m> be a real number.
+          We say that <m>a</m> is a <term>limit point</term>
+          (or an <term>accumulation point</term>)
+          of <m>S</m> if there is a sequence <m>(a_n)</m> with
+          <m>a_n\in S-\left\{a\right\}</m> which converges to <m>a</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>limit</h><h>accumulation point</h></idx>
+              <idx><h>sets</h><h>accumulation points</h></idx>
+          Let <m>S\subseteq\RR</m> and let <m>a</m> be a real number.
+          Prove that <m>a</m> is a limit point of <m>S</m> if and only if for every <m>\eps>0</m> the intersection
+          <me>
+            (a-\eps, a+\eps) \cap S-\left\{a\right\} \neq \emptyset.{}
+          </me>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The following definition gets to the heart of the matter.
+    </p>
+
+    <definition xml:id="def_derived-set">
+      <statement>
+        <p>
+              <idx><h>sets</h><h>derived sets</h></idx>
+          Let <m>S\subseteq\RR</m>.
+          The set of all limit points of <m>S</m> is called the
+          <term>derived set</term> of <m>S</m>.
+          The derived set is denoted <m>S^{\prime}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Don't confuse the derived set of a set with the derivative of a function.
+      They are completely different objects despite the similarity of both the language and notation.
+      The only thing that they have in common is that they were somehow
+      <q>derived</q> from something else.
+    </p>
+
+    <problem>
+      <idx><h>derived sets</h></idx>
+      <statement>
+        <p>
+          Determine the derived set, <m>S^\prime</m>, of each of the following sets.
+          <ol label="(a)">
+            <li>
+              <p>
+                <m>S=\left\{\frac11, \frac12, \frac13, \ldots\right\}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>S=\left\{0,\frac11, \frac12, \frac13, \ldots\right\}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>S=(0,1]</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>S=\left[\left.0,1/2\right)\right.\cup\left.\left(1/2,1\right.\right]</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>S=\QQ</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>S=\RR-\QQ</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>S=\ZZ</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Any finite set <m>S</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>derived sets</h></idx>
+          Let <m>S\subseteq\RR</m>.
+
+          <ol label="(a)">
+            <li>
+              <p>
+                Prove that <m>\left(S^{\,\prime}\right)^{\,\prime}\subseteq S^{\,\prime}</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Give an example where these two sets are equal.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Give an example where these two sets are not equal.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The notion of the derived set forms the foundation of Cantor's exceptional set of values.
+      Specifically,
+      let <m>S</m> again be a set of real numbers and consider the following sequence of sets:
+      <me>
+        S^{\,\prime}\supseteq \left(S^\prime\right)^\prime\supseteq \left(\left(S^\prime\right)^\prime\right)^\prime\supseteq \cdots
+      </me>.
+    </p>
+
+    <p>
+      Cantor
+          <idx><h>Cantor, Georg</h></idx>
+      showed that if, at some point,
+      one of these derived sets is empty,
+      then the uniqueness property still holds.
+      Specifically, we have:
+    </p>
+
+    <theorem xml:id="thm_Cantor-1871">
+      <statement>
+        <p>
+          <alert>Cantor, (1871)</alert>
+        </p>
+        <p>
+          <idx>
+              <h>Cantor, Georg</h>
+               <h>fourth theorem on the uniqueness of Fourier series</h>
+          </idx>
+          Let <m>S</m> be a subset of the real numbers with the
+          property that one of its derived sets is empty.  Then if the
+          trigonometric series <m>\sum_{n=0}^\infty\left(c_n\cos n\pi
+          x\,+d_n\sin n\pi x\right)</m> is zero for all
+          <m>x\in\RR-S</m>, then all of the coefficients of the series
+          vanish.
+        </p>
+      </statement>
+    </theorem>
+  </introduction>
+
+
+
+<section  xml:id="BackToFourier-InfiniteSets">
+  <title>Infinite Sets</title>
+  <p>
+    The following theorem follows directly from our previous work with the NIP and will be very handy later.
+    It basically says that a sequence of nested closed intervals will still have a non-empty intersection even if their lengths do not converge to zero as in the NIP.
+  </p>
+
+  <theorem xml:id="thm_WeakNIP">
+    <statement>
+      <p>
+            <idx><h>Nested Interval Property (NIP)</h><h>weak form</h></idx>
+        Let <m>\left(\left[a_n, b_n\right]\right)_{n=1}^\infty</m> be a sequence of nested intervals such that <m>\limit{n}{\infty}{\abs{b_n-a_n}}>0</m>.
+        Then there is at least one <m>c\in\RR</m> such that
+        <m>c\in\left[a_n, b_n\right]</m> for all <m>n\in\NN</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      By <xref ref="cor_IncBoundedConverge">Corollary</xref>
+      of <xref ref="IVTandEVT">Chapter</xref>,
+      we know that a bounded increasing sequence such as <m>(a_n)</m> converges,
+      say to <m>c</m>.
+      Since <m>a_n\leq a_m\leq b_n</m> for <m>m>n</m> and <m>\limit{m}{\infty}{a_m}=c</m>,
+      then for any fixed <m>n</m>, <m>a_n\leq c\leq b_n</m>.
+      This says <m>c\in\left[a_n, b_n\right]</m> for all <m>n\in\NN</m>.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Nested Interval Property (NIP)</h><h>weak form</h></idx> 
+        Suppose <m>\limit{n}{\infty}{\abs{b_n-a_n}}>0</m>.  Show that
+        there are at least two points, <m>c</m> and <m>d</m>, such
+        that <m>c\in[a_n, b_n]</m> and <m>d\in[a_n, b_n]</m> for all
+        <m>n\in\NN</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Our next theorem says that in a certain, very technical sense
+    there are more real numbers than there are counting numbers <xref
+    ref="franks10__cantor_other_proof_rr_uncoun" />. This probably
+    does not seem terribly significant.  After all, there are real
+    numbers which are not counting numbers.  What will make this so
+    startling is that the same cannot be said about all sets which
+    strictly contain the counting numbers.  We will get into the
+    details of this after the theorem is proved.
+  </p>
+
+  <theorem xml:id="thm_NoSeriesContainsAllReals">
+    <statement>
+      <p>
+        <alert>Cantor, (1874)</alert>
+      </p>
+      <p>
+        <idx>
+            <h>Cantor, Georg</h>
+             <h>first proof that <m>\RR</m> is uncountable</h>
+        </idx> 
+        <idx>
+            <h><m>\RR</m></h>
+             <h> is uncountable</h>
+              <h>Cantor's first proof</h>
+        </idx> 
+        Let <m>S=\left(s_n\right)_{n=1}^\infty</m> be a sequence of
+        real numbers.  There is a real number <m>c</m>, which is not
+        in  <m>S</m>.
+      </p>
+<aside> <p>To streamline things, we are abusing notation here as
+        we are letting <m>S</m> denote both the sequence (which is
+        ordered) and the underlying (unordered) set of entries in the
+        sequence.</p>  </aside>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      For the sake of obtaining a contradiction assume that the sequence <m>S</m> contains every real number;
+      that is, <m>S=\RR</m>.
+      As usual we will build a sequence of nested intervals <m>\left(\left[x_i, y_i\right]\right)_{i=1}^\infty</m>.
+    </p>
+
+    <p>
+      Let <m>x_1</m> be the smaller of the first two distinct elements of <m>S</m>,
+      let <m>y_1</m> be the larger and take
+      <m>\left[x_1,y_1\right]</m> to be the first interval.
+    </p>
+
+    <p>
+      Next we assume that <m>\left[x_{n-1}, y_{n-1}\right]</m> has been constructed and build <m>\left[x_n, y_n\right]</m> as follows.
+      Observe that there are infinitely many elements of <m>S</m> in <m>\left(x_{n-1}, y_{n-1}\right)</m> since <m>S=\RR</m>.
+      Let <m>s_m</m> and <m>s_k</m> be the <em>first</em>
+      two distinct elements of <m>S</m> such that
+      <me>
+        s_m, s_k \in \left(x_{n-1}, y_{n-1}\right) 
+      </me>.
+    </p>
+
+    <p>
+      Take <m>x_n</m> to be the smaller and <m>y_n</m> to be the larger of <m>s_m</m> and <m>s_k</m>.
+      Then <m>\left[x_n, y_n\right]</m> is the <m>n</m>th interval.
+    </p>
+
+    <p>
+      From the way we constructed them it is clear that
+      <me>
+        \left[x_1, y_1\right] \supseteq \left[x_2, y_2\right] \supseteq \left[x_3, y_3\right] \supseteq \ldots
+      </me>.
+    </p>
+
+    <p>
+      Therefore by <xref ref="thm_WeakNIP">Theorem</xref>
+      there is a real number, say <m>c</m>, such that
+      <me>
+        c\in\left[x_n, y_n\right] \text{ for all }  n\in\NN
+      </me>.
+    </p>
+
+    <p>
+      In fact, since <m>x_1\lt x_2\lt x_3\ldots\lt y_3\lt y_2\lt y_1</m> it is clear that
+      <men xml:id="eq_NIP-interval">
+        x_n\lt c\lt y_n, \ \forall n
+      </men>.
+    </p>
+
+    <p>
+      We will show that <m>c</m> is the number we seek.
+      That the inequalities in <xref ref="eq_NIP-interval">formula</xref>
+      are strict will play a crucial role.
+    </p>
+
+    <p>
+      To see that <m>c\not\in S</m> we suppose that <m>c\in S</m> and derive a contradiction.
+    </p>
+
+    <p>
+      So, suppose that <m>c=s_p</m> for some <m>p\in\NN</m>.
+      Then only <m>\left\{s_1, s_2,\ldots,
+      s_{p-1}\right\}</m> appear before <m>s_p</m> in the sequence <m>S</m>.
+      Since each <m>x_n</m> is taken from <m>S</m> it follows that only finitely many elements of the sequence <m>(x_n)</m> appear before <m>s_p=c</m> in the sequence as well.
+    </p>
+
+    <p>
+      Let <m>x_l</m> be the <em>last</em>
+      element of <m>(x_n)</m> which appears before <m>c=s_p</m> in the sequence and consider <m>x_{l+1}</m>.
+      The way it was constructed,
+      <m>x_{l+1}</m> was one of the first two distinct terms in the sequence <m>S</m> strictly between <m>x_l</m> and <m>y_l</m>,
+      the other being <m>y_{l+1}</m>.
+      Since <m>x_{l+1}</m> does not appear before <m>c=s_p</m> in the sequence and <m>x_l\lt c\lt y_l</m>,
+      it follows that either <m>c=x_{l+1}</m> or <m>c=y_{l+1}</m>.
+      However, this gives us a contradiction as we know from <xref ref="eq_NIP-interval">formula</xref>
+      that <m>x_{l+1}\lt c\lt y_{l+1}</m>.
+    </p>
+
+    <p>
+      Thus <m>c</m> is not an element of <m>S</m>.
+    </p>
+  </proof>
+
+  <p>
+    So how does this theorem show that there are <q>more</q>
+    real numbers than counting numbers?
+    Before we address that question we need to be very careful about the meaning of the word 'more' when we're talking about infinite sets.
+  </p>
+
+  <p>
+    First let's consider two finite sets,
+    say <m>A=\left\{\alpha,\beta,\gamma,\delta\right\}</m> and <m>B=\left\{a,b,c,d,e\right\}</m>.
+    How do we know that <m>B</m> is the bigger set? (It obviously is.) Clearly we can just count the number of elements in both <m>A</m> and <m>B</m>.
+    Since <m>\abs{A}=4</m> and
+    <m>\abs{B}=5</m> and <m>4\lt 5</m> <m>B</m> is clearly bigger.
+    But we're looking for a way to determine the relative size of two sets without counting them because we have no way of counting the number of elements of an infinite set.
+    Indeed, it isn't even clear what the phrase
+    <q>the number of elements</q> might <em>mean</em>
+    when applied to the elements of an infinite set.
+  </p>
+
+  <p>
+    When we count the number of elements in a finite set what we're really doing is matching up the elements of the set with a set of consecutive positive integers,
+    starting at <m>1</m>.
+    Thus since
+    <md>
+      <mrow>1\amp \leftrightarrow\alpha</mrow>
+      <mrow>2\amp \leftrightarrow\beta</mrow>
+      <mrow>3\amp \leftrightarrow\gamma</mrow>
+      <mrow>4\amp \leftrightarrow\delta</mrow>
+    </md>
+    we see that <m>\abs{A}=4</m>.
+    Moreover, the order of the match-up is unimportant.
+    Thus since
+    <md>
+      <mrow>2\amp \leftrightarrow e</mrow>
+      <mrow>3\amp \leftrightarrow a</mrow>
+      <mrow>5\amp \leftrightarrow b</mrow>
+      <mrow>4\amp \leftrightarrow d</mrow>
+      <mrow>1\amp \leftrightarrow c</mrow>
+    </md>
+    it is clear that the elements of <m>B</m> and the set
+    <m>\left\{1,2,3,4,5\right\}</m> can be matched up as well.
+    And it doesn't matter what order either set is in.
+    They both have <m>5</m> elements.
+  </p>
+
+  <p>
+    Such a match-up is called a one-to-one correspondence.
+    In general, if two sets can be put in one-to-one correspondence then they are the same <q>size.</q>
+    Of course the word <q>size</q>
+    has lots of connotations that will begin to get in the way when we talk about infinite sets,
+    so instead we will say that the two sets have the same
+    <em>cardinality.</em> Speaking loosely,
+    this just means that they are the same size.
+  </p>
+
+  <p>
+    More precisely,
+    if a given set <m>S</m> can be put in one-to-one correspondence with a finite set of consecutive integers,
+    say <m>\left\{1,2,3,\ldots, N\right\}</m>,
+    then we say that the cardinality of the set is <m>N</m>.
+    But this just means that both sets have the same cardinality.
+    It is this notion of one-to-one correspondence,
+    along with the next two definitions,
+    which will allow us to compare the sizes (cardinalities) of infinite sets.
+  </p>
+
+  <definition xml:id="def_CountableSets">
+    <statement>
+      <p>
+            <idx><h>cardinality</h><h>countable sets</h></idx>
+            <idx><h>countable sets</h><h>defintion of</h></idx>
+        Any set which can be put into one-to-one correspondence with
+        <m>\NN=\left\{1,2,3,\ldots\right\}</m> is called a <term>countably infinite</term> set.
+        Any set which is either finite or countably infinite is said to be <term>countable</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Since <m>\NN</m> is an infinite set,
+    we have no symbol to designate its cardinality so we have to invent one.
+    The symbol used by Cantor 
+        <idx><h>Cantor, Georg</h></idx>
+    and adopted by mathematicians ever since is <m>\aleph_0</m>.
+Thus the cardinality of any countably infinite set is <m>\aleph_0</m>.
+  </p>
+<aside>
+<p>
+    <m>\aleph{}</m> is the first letter of the Hebrew alphabet and is pronounced "aleph."
+    <m>\aleph_0</m> is pronounced "aleph null."</p>
+    </aside> 
+
+  <p>
+    We have already given the following definition informally.
+    We include it formally here for later reference.
+  </p>
+
+  <definition xml:id="def_EqualCardinality">
+    <statement>
+      <p>
+            <idx><h>cardinality</h><h>equal cardinality</h></idx>
+            If two sets can be put into one-to-one correspondence then they are said to have the <alert>same cardinality</alert>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    With these two definitions in place we can see that <xref ref="thm_NoSeriesContainsAllReals">Theorem</xref>
+    is nothing less than the statement that the real numbers are not countably infinite.
+    Since it is certainly not finite,
+    then we say that the set of real numbers is uncountable and therefore <q>bigger</q>
+    than the natural numbers!
+  </p>
+
+  <p>
+    To see this let us suppose first that each real number appears in the sequence <m>(s_n)_{n=1}^\infty</m> exactly once.
+    In that case the indexing of our sequence is really just a one-to-one correspondence between the elements of the sequence and <m>\NN:</m>
+    <md>
+      <mrow>1\amp \leftrightarrow s_1</mrow>
+      <mrow>2\amp \leftrightarrow s_2</mrow>
+      <mrow>3\amp \leftrightarrow s_3</mrow>
+      <mrow>4\amp \leftrightarrow s_4</mrow>
+      <mrow>\amp \ \ \ \vdots</mrow>
+    </md>
+  </p>
+
+  <p>
+    If some real numbers are repeated in our sequence then all of the real numbers are a subset of our sequence and will therefore also be countable
+    (see <xref ref="prob_countable_sets_unions_of">Problem</xref>, part a).
+  </p>
+
+  <p>
+    In either case, every sequence is countable.
+    But our theorem says that <em>no</em>
+    sequence in <m>\RR</m> includes all of <m>\RR</m>.
+    Therefore <m>\RR</m> is uncountable.
+  </p>
+
+  <p>
+    Most of the sets you have encountered so far in your life have been countable.
+  </p>
+
+  <problem>
+            <idx><h>countable sets</h><h>countable sets drill, 5 parts</h></idx>
+<introduction>
+      <p>
+        Show that each of the following sets is countable.
+      </p>
+</introduction>
+<task>
+<statement>
+            <p>
+              <m>\left\{2,3,4,5,\ldots\right\}=\left\{n\right\}_{n=2}^\infty</m>
+            </p>
+</statement>
+</task>
+<task>
+<statement>
+            <p>
+              <m>\left\{0,1,2,3,\ldots\right\}=\left\{n\right\}_{n=0}^\infty</m>
+            </p>
+</statement>
+</task>
+<task>
+<statement>
+            <p>
+              <m>\left\{1,4,9,16,\ldots,n^2,\ldots\right\}=\left\{n^2\right\}_{n=1}^\infty</m>
+            </p>
+</statement>
+</task>
+<task>
+<statement>
+            <p>
+              The set of prime numbers
+            </p>
+</statement>
+</task>
+<task>
+<statement>
+            <p>
+              <m>\ZZ</m>
+            </p>
+    </statement>
+</task>
+</problem>
+
+  <p>
+    In fact, if we start with a countable set it is rather difficult
+    to use it to build anything but another countable set.
+  </p>
+
+  <problem xml:id="prob_countable_sets_unions_of">
+    <idx><h>countable sets</h><h>unions and intersections of</h></idx>
+    <introduction>
+      <p>
+        Let <m>\left\{A_1, A_2, A_3, \ldots \right\}</m> be a collection of countable sets.
+        Show that each of the following sets is also countable:
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Any subset of <m>A_1</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>A_1\cup A_2</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>A_1\cup A_2 \cup A_3</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\displaystyle\bigcup_{i=1}^nA_i</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>\displaystyle\bigcup_{i=1}^\infty A_i</m>
+        </p>
+      </statement>
+    </task>
+  </problem>
+
+  <p>
+    It seems that no matter what we do the only example of an
+    uncountably infinite set is <m>\RR</m>.  But wait!  Remember the
+    rational numbers?  They were similar to the real numbers in many
+    ways.  Perhaps they are uncountably infinite too?
+  </p>
+
+  <p>
+    Alas, no.
+    The rational numbers turn out to be countable too.
+  </p>
+
+  <theorem xml:id="thm_QisCountable">
+    <statement>
+      <p>
+            <idx><h><m>\QQ</m></h><h> is countable</h></idx>
+        Show that <m>\QQ</m> is countable.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+<title>Sketch of Proof</title>
+    <p>
+      First explain how you know that all of the non-negative rational numbers are in this list:
+      <me>
+        \frac{0}{1},\frac{0}{2},\frac{1}{1},\frac{0}{3}, \frac{1}{2},\frac{2}{1},\frac{0}{4},\frac{1}{3}, \frac{2}{2}, \frac{3}{1}, \cdots
+      </me>.
+    </p>
+
+    <p>
+      However there is clearly some duplication.
+      To handle this,
+      apply part (a) of <xref ref="prob_countable_sets_unions_of">Problem</xref>.
+      Does this complete the proof or is there more to do?
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h><m>\QQ</m></h><h><m>\QQ</m> is countable</h></idx>
+        Prove <xref ref="thm_QisCountable">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The following corollary says that the cardinality of the real numbers is <em>much</em>
+    larger than the cardinality of the rational numbers,
+    despite the fact that both are infinite.
+  </p>
+
+  <p>
+    That is, as a subset of the reals,
+    the rationals can be contained in a sequence of intervals,
+    the sum of whose lengths can be arbitrarily small.
+    In a sense this says that a countably infinite set is so small
+    (on the transfinite scale)
+    that it is <q>almost</q> finite.
+  </p>
+
+  <p>
+        <idx><h>measure zero</h></idx>
+    Usually we express this idea with the statement,
+    <q><m>\QQ</m> is a set of <em>measure zero
+    </em> in <m>\RR</m></q>. The term <q>measure</q>
+    has a precise meaning which we will not pursue.
+    The following corollary contains the essence of the idea.
+  </p>
+
+  <corollary xml:id="cor_Q-MeasureZero">
+    <statement>
+      <p>
+        Let <m>\eps>0</m> be given.
+        There is a collection of intervals in <m>\RR</m>,
+        <m>I_n=[a_n,b_n]</m> such that
+        <me>
+          \QQ \subset \bigcup_{n=1}^\infty I_n
+        </me>
+        and
+        <me>
+          \sum_{n=1}^\infty(b_n-a_n)\lt \eps
+        </me>.
+      </p>
+    </statement>
+  </corollary>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h><m>\QQ</m></h><h>has measure zero in <m>\RR</m></h></idx>
+            <idx><h>measure zero</h><h><m>\QQ</m> has measure zero in <m>\RR</m></h></idx>
+        Prove <xref ref="cor_Q-MeasureZero">Corollary</xref>. 
+      </p>
+    </statement>
+      <hint>
+        <p>
+          If we had only finitely many rationals to deal with this would be easy.
+          Let <m>\left\{r_1, r_2, \ldots,
+            r_k\right\}</m> be these rational numbers and take
+          <m>a_n=r_n-\frac{\eps}{2(k+1)}</m> and <m>b_n=r_n+\frac{\eps}{2(k+1)}</m>.
+          Then for all <m>n=1,\ldots, k</m> <m>r_n\in[a_n,b_n]</m> and
+          <me>
+            \sum_{n=1}^kb_n-a_n = \sum_{n=1}^k \frac{\eps}{k+1}=\frac{k\eps}{k+1}\lt\eps
+          </me>.
+        </p>
+      <p>
+        The difficulty is,
+        how do we move from the finite to the infinite case?]
+      </p>
+      </hint>
+  </problem>
+
+  <p>
+    Notice how this idea hearkens back to the discussion of Leibniz's<idx><h>Leibniz, Gottfried Wilhelm</h></idx> approach to the Product Rule (<xref ref="eq_LeibnizProductRule">equation</xref>).
+    He simply tossed aside the expression
+    <m>\dx{ x}\dx{ y}</m> because it was <em>infinitely small</em> compared to either <m>x\dx{ y}</m> or <m>y\dx{ x}</m>.
+    Although this isn't quite the same thing we are discussing here it is similar and it is clear that Leibniz's insight and intuition were extremely acute.
+    They were moving him in the right direction, at least.
+  </p>
+
+  <p>
+    All of our efforts to build an uncountable set from a countable one have come to nothing.
+    In fact many sets that at first <q>feel</q>
+    like they should be uncountable are in fact countable. This makes the uncountability of <m>\RR</m> all the more remarkable.
+  </p>
+<aside>
+<p>    
+The failure is in the methods we've used so far.  It is possible to
+build an uncountable set using just two symbols if we're clever
+enough, but this would take us too far away from our main topic.</p>
+    </aside> 
+
+  <p>
+    However if we <em>start</em> with an uncountable set it is relatively easy to build others from it.
+  </p>
+
+  <problem>
+    <idx><h>sets</h><h>intervals are uncountable</h></idx>
+    <task>
+      <statement>
+        <p>
+          Let <m>(a,b)</m> and <m>(c,d)</m> be two open intervals of
+          real numbers.  Show that these two sets have the same
+          cardinality by constructing a one-to-one onto function
+          between them.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          A linear function should do the trick.
+        </p>
+      </hint>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that any open interval of real numbers has the same cardinality as <m>\RR</m>. 
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Consider the interval <m>(-\pi/2,\pi/2)</m>.
+        </p>
+      </hint>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that <m>(0,1]</m> and <m>(0,1)</m> have the same cardinality. 
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Note that <m>\left\{1,1/2,1/3,\ldots\right\}</m> and
+          <m>\left\{1/2, 1/3, \ldots\right\}</m> have the same cardinality.
+        </p>
+      </hint>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Show that <m>[0,1]</m> and <m>(0,1)</m> have the same cardinality.
+        </p>
+      </statement>
+    </task>
+  </problem>
+</section>
+
+
+
+
+
+<section  xml:id="BackToFourier-CantorsTheorem">
+  <title>Cantor's Theorem and Its Consequences</title>
+
+  <figure>
+    <caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Dedekind/" visual="mathshistory.st-andrews.ac.uk/Biographies/Dedekind/">Richard Dedekind</url></caption>
+    <idx><h>Dedekind, Richard</h><h>portrait of</h></idx>
+    <image width="35%" source="images/Dedekind.png" />
+  </figure>
+
+  <p>
+    Once Cantor showed that there were two types of infinity
+    (countable and uncountable), the following question was natural,
+    <q>Do all uncountable sets have the same cardinality?</q>
+  </p>
+
+  <p>
+    Just like not all <q>non-dogs</q>
+    are cats, there is, offhand,
+    no reason to believe that all uncountable sets should be the same size.
+    However constructing uncountable sets of different sizes is not as easy as it sounds.
+  </p>
+
+  <p>
+    <idx>
+        <h>Dedekind, Richard</h>
+    </idx>
+    <idx>
+        <h>Cantor, Georg</h>
+         <h>unit interval and unit square have equal cardinalty</h>
+    </idx>
+    For example, what about the line segment represented by the
+    interval <m>[0,1]</m> and the square represented by the set
+    <m>[0,1]\times[0,1]=\left\{(x,y)|0\leq x,y\leq 1\right\}</m>.
+    Certainly the two dimensional square must be a larger infinite set
+    than the one dimensional line segment.  Remarkably, Cantor showed
+    that these two sets were the same cardinality.  In his 1877
+    correspondence of this result to his friend and fellow
+    mathematician, Richard Dedekind, even Cantor remarked, <q>I see
+    it, but I don't believe it!</q>
+  </p>
+
+  <p>
+    The following gives the original idea of Cantor's proof.
+    Cantor devised the following function <m>f:[0,1]\times[0,1]\rightarrow [0,1]</m>.
+    First, we represent the coordinates of any point
+    <m>(x,y)\in [0,1]\times[0,1]</m> by their decimal representations
+    <m>x=0.a_1 a_2 a_3\ldots</m> and <m>y=0.b_1 b_2 b_3\ldots</m>.
+    Even terminating decimals can be written this way as we could write <m>0.5=0.5000\ldots</m>.
+    We can then define <m>f(x,y)</m> by
+    <me>
+      f((0.a_1 a_2 a_3\ldots ,0.b_1 b_2 b_3\ldots))=0.a_1 b_1 a_2 b_2 a_3 b_3\ldots
+    </me>.
+  </p>
+
+  <p>
+    This relatively simple idea has some technical difficulties in it related to the following result.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>series</h><h>Geometric series</h><h><m>(0.\bar{9})</m> converges to <m>1</m></h></idx>
+        Consider the sequence <m>(0.9,0.99,0.999,\ldots)</m>.
+        Determine that this sequence converges and,
+        in fact, it converges to <m>1</m>.
+        This suggests that <m>0.999\ldots=1</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Similarly, we have <m>0.04999\ldots=0.05000\ldots</m>, etc.
+    To make the decimal representation of a real number in <m>[0,1]</m> unique,
+    we must make a consistent choice of writing a terminating decimal as one that ends in an infinite string of zeros or an infinite string of nines [with the one exception
+    <m>0=0.000\ldots</m> ]. No matter which choice we make,
+    we could never make this function onto.
+    For example,
+    <m>109/1100=0.09909090\ldots</m> would have as its pre-image
+    <m>(0.0999\ldots,0.9000\ldots)</m> which would be a mix of the two conventions.
+  </p>
+
+  <p>
+    Cantor was able to overcome this technicality to demonstrate a one
+    to one correspondence, but instead we will note that in either
+    convention, the function is one-to-one, so this says that the set
+    <m>[0,1]\times[0,1]</m> is the same cardinality as some
+    (uncountable) subset of <m>\RR</m>.  The fact that this has the
+    same cardinality as <m>\RR</m> is something we will come back to.
+    But first we'll try construct an uncountable set which does not
+    have the same cardinality as <m>\RR</m>.  To address this issue,
+    Cantor proved the following in 1891.
+  </p>
+
+  <theorem xml:id="thm_CantorsTheorem">
+    <statement>
+      <p>
+        <alert>Cantor's Theorem</alert>
+      </p>
+      <p>
+        <idx>
+            <h>Cantor, Georg</h>
+             <h>Cantor's Theorem</h>
+        </idx>
+        Let <m>S</m> be any set.  Then there is no one-to-one
+        correspondence between <m>S</m> and <m>P(S)</m>, the set of
+        all subsets of <m>S</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Since <m>S</m> can be put into one-to-one correspondence with a subset of <m>P(S)</m> (<m>a\rightarrow \left\{a\right\}</m>),
+    then this says that <m>P(S)</m> is at least as large as S. In the finite case
+    <m>\abs{P(S)}</m> is strictly greater than <m>\abs{S}</m> as the following problem shows.
+    It also demonstrates why <m>P(S)</m> is called the power set of <m>S</m>.
+  </p>
+
+  <problem xml:id="prob_PowerSet">
+    <idx><h>sets</h><h>power set</h></idx>
+    <idx><h>sets</h><h>cardinality of a power set</h></idx>
+    <idx><h>cardinality</h><h>of a power set</h></idx>
+    <statement>
+      <p>
+        Prove: If <m>\abs{S}=n</m>, then <m>\abs{ P(S)}=2^n</m>. 
+      </p>
+    </statement>
+            <hint>
+              <p>
+                Let <m>S=\left\{a_1,a_2,\ldots,a_n\right\}</m>.
+                Consider the following correspondence between the elements of <m>P(S)</m> and the set <m>T</m> of all <m>n</m>-tuples of yes (Y) or no (N):
+                <md>
+                  <mrow>\{ \}  \amp \leftrightarrow \{N,N,N,\ldots,N\}</mrow>
+                  <mrow>\{a_1\}\amp \leftrightarrow \{Y,N,N,\ldots ,N\}</mrow>
+                  <mrow>\{a_2\}\amp \leftrightarrow \{N,Y,N,\ldots,N\}</mrow>
+                  <mrow>\amp \vdots</mrow>
+                  <mrow>S\amp \leftrightarrow \{Y,Y,Y,\ldots,Y\}</mrow>
+                </md>
+              </p>
+              <p>
+                How many elements are in <m>T?</m>
+              </p>
+            </hint>
+  </problem>
+
+  <problem>
+    <idx><h>Cantor, Georg</h><h>Cantor's Theorem</h></idx>
+    <statement>
+      <p>
+        Prove <xref ref="thm_CantorsTheorem">Cantor's Theorem</xref>.
+      </p>
+    </statement>
+    <hint> 
+      <p>
+        Assume for contradiction, that there is a one-to-one
+        correspondence <m>f:S\rightarrow P(S)</m>.
+        Consider <m>A=\left\{x\in S|x\not\in f(x)\right\}</m>.
+        Since <m>f</m> is onto, then there is <m>a\in A</m> such
+        that <m>A=f(a)</m>.  Is <m>a\in A</m> or is <m>a\not\in
+        A?</m>
+      </p>
+    </hint>
+  </problem>
+
+  <p>
+    Actually it turns out that <m>\RR</m> and <m>P(\NN)</m> have the same cardinality.
+    This can be seen in a roundabout way using some of the above ideas from <xref ref="prob_PowerSet">Problem</xref>.
+    Specifically,
+    let <m>T</m> be the set of all sequences of zeros or ones
+    (you can use <m>Y</m>s or <m>N</m>s, if you prefer).
+    Then it is straightforward to see that <m>T</m> and <m>P(\NN)</m> have the same cardinality.
+  </p>
+
+  <p>
+    If we consider <m>(0,1]</m>, which has the same cardinality as <m>\RR</m>,
+    then we can see that this has the same cardinality as <m>T</m> as well.
+    Specifically, if we think of the numbers in binary,
+    then every real number in <m>[0,1]</m> can be written as
+    <m>\sum_{j=1}^\infty \frac{a_j}{2^j} =0.a_1a_2a_3\ldots</m> where <m>a_j\in\left\{0,1\right\}</m>.
+    We have to account for the fact that binary representations such as <m>0.0111\ldots</m> and
+    <m>0.1000\ldots</m> represent the same real number
+    (say that no representations will end in an infinite string of zeros),
+    then we can see that <m>[0,1]</m> has the same cardinality as <m>T-U</m>,
+    where <m>U</m> is the set of all sequences ending in an infinite string of zeros.
+    It turns out that <m>U</m> itself is a countable set.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>countable sets</h><h>countable union of finite sets</h></idx>
+        Let <m>U_n=\{(a_1,a_2,a_3,\ldots)\ |\ a_j\in \{0,1\} \text{ and } a_{n+1}=a_{n+2}=\cdots=0\}</m>.
+        Show that for each <m>n</m>,
+        <m>U_n</m> is finite and use this to conclude that <m>U</m> is countably infinite.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The following two problems show that deleting a countable set from an uncountable set does not change its cardinality.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>sets</h><h>countably infinite subsets</h></idx>
+        Let <m>S</m> be an infinite set.
+        Prove that <m>S</m> contains a countably infinite subset.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <idx><h>countable sets</h><h>deleting a countable subset</h></idx>
+    <statement>
+      <p>
+        Suppose <m>X</m> is an uncountable set and <m>Y\subset X</m>
+        is countably infinite.  Prove that <m>X</m> and <m>X-Y</m>
+        have the same cardinality.
+      </p>
+    </statement>
+<!--     <hint> -->
+<!--       <p> -->
+<!--         Let <m>Y=Y_0</m>. -->
+<!--         If <m>X-Y_0</m> is an infinite set, -->
+<!--         then by the previous problem it contains a countably infinite set <m>Y_1</m>. -->
+<!--         Likewise if <m>X-(Y_0\cup Y_1)</m> is infinite it also contains an infinite set <m>Y_2</m>. -->
+<!--         Again, if <m>X-(Y_0\cup Y_1\cup Y_2)</m> is an infinite set then it contains an infinite set <m>Y_3</m>, etc. -->
+<!--         For <m>n=1, 2, 3,\ldots </m>, -->
+<!--         let <m>f_n:Y_{n-1}\rightarrow Y_n</m> be a one-to-one correspondence and define <m>f:X\rightarrow X-Y</m> by -->
+<!--         <me> -->
+<!-- f(x) = -->
+<!--           \begin{cases} -->
+<!--           f_n(x), \amp \text{ if }  x\in Y_n, n=0,1,2,\ldots\\  -->
+<!--           x, \amp \text{ if }  x\in X-(\cup_{n=0}^\infty Y_n ) \end{cases}  -->
+<!--           </me>. -->
+<!--       </p> -->
+<!--     <p> -->
+<!--       Show that <m>f</m> is one-to-one and onto. -->
+<!--     </p> -->
+<!--     </hint> -->
+  </problem>
+
+  <p>
+    The above problems say that <m>R</m>, <m>T-U</m>,
+    <m>T</m>, and <m>P(N)</m> all have the same cardinality.
+  </p>
+
+  <p>
+    As was indicated before, Cantor's 
+        <idx><h>Cantor, Georg</h></idx>
+    work on infinite sets had a profound impact on mathematics in the beginning of the twentieth century.
+    For example, in examining the proof of Cantor's Theorem,
+    the eminent logician Bertrand Russell devised his famous paradox in 1901.
+    Before this time,
+    a set was naively thought of as just a collection of objects.
+    Through the work of Cantor and others,
+    sets were becoming a central object of study in mathematics as many mathematical concepts were being reformulated in terms of sets.
+    The idea was that set theory was to be a unifying theme of mathematics.
+    This paradox set the mathematical world on its ear.
+  </p>
+
+  <p>
+    <term>Russell's Paradox:</term> 
+        <idx><h>Russell's Paradox</h></idx>
+    Consider the set of all sets which are not elements of themselves.
+    We call this set <m>D</m> and ask,
+    <q>Is <m>D\in D?</m></q> Symbolically, this set is
+    <me>
+      D=\{S\ |\ S\not \in S\}
+    </me>.
+  </p>
+
+  <p>
+    If <m>D\in D</m>, then by definition, <m>D\not\in D</m>.
+    If <m>D\not\in D</m>, then by definition, <m>D\in D</m>.
+  </p>
+
+  <p>
+    If you look back at the proof of Cantor's Theorem, this was
+    basically the idea that gave us the contradiction.  To have such a
+    contradiction occurring at the most basic level of mathematics was
+    scandalous.  It forced a number of mathematicians and logicians to
+    carefully devise the axioms by which sets could be constructed.
+    To be honest, most mathematicians still approach set theory from a
+    naive point of view as the sets we typically deal with fall under
+    the category of what we would call <q>normal sets.</q> In fact,
+    such an approach is officially called Naive Set Theory (as opposed
+    to Axiomatic Set Theory).  However, attempts to put set theory and
+    logic on solid footing led to the modern study of symbolic logic
+    and ultimately the design of computer (machine) logic.
+  </p>
+
+  <p>
+    Another place where Cantor's work had a profound influence in
+    modern logic comes from something we alluded to before.  We showed
+    before that the unit square <m>[0,1]\times [0,1]</m> had the same
+    cardinality as an uncountable subset of <m>\RR</m>.  In fact,
+    Cantor <idx><h>Cantor, Georg</h></idx> showed that the unit square
+    had the same cardinality as <m>\RR</m> itself and was moved to
+    advance the following in 1878.
+  </p>
+
+  <conjecture>
+    <title>The Continuum Hypothesis</title>
+    <idx><h>Continuum Hypothesis</h><h>original</h></idx> 
+    <statement>
+      <p>
+        Every uncountable subset of <m>\RR</m> has the same cardinality as <m>\RR</m>.
+      </p>
+    </statement>
+  </conjecture>
+
+  <p>
+    Cantor was unable to prove or disprove this conjecture (along with
+    every other mathematician).  In fact, proving or disproving the
+    Continuum Hypothesis, was one of Hilbert's famous 23 problems
+    presented as a challenge to mathematicians at the International
+    Congress of Mathematicians in 1900.
+  </p>
+
+  <p>
+    Since <m>\RR</m> has the same cardinality as <m>P(\NN)</m>,
+    then the Continuum Hypothesis was generalized to the:
+  </p>
+
+  <conjecture>
+    <title>The Generalized Continuum Hypothesis</title>
+    <idx><h>Continuum Hypothesis</h><h>generalized</h></idx>
+    <statement>
+      <p>
+        Given an infinite set <m>S</m>,
+        there is no infinite set which has a cardinality strictly between that of <m>S</m> and its power set <m>P(S)</m>.
+      </p>
+    </statement>
+  </conjecture>
+<aside> <title>
+The Zermelo-Fraenkel Axioms
+</title>
+<p>
+ One of the formal
+    axiomatic approaches to set theory established by Ernst Zermelo in
+    1908 and revised by Abraham Fraenkel in 1921.
+</p>  
+</aside>
+  <p>
+    Efforts to prove or disprove this were in vain and with good
+    reason.  In 1940, the logician Kurt G&#xf6;del showed that the
+    Continuum Hypothesis could not be disproved from the
+    Zermelo-Fraenkel Axioms of set theory.  In 1963,
+    Paul Cohen showed that the Continuum Hypothesis could not be
+    proved using the Zermelo-Fraenkel Axioms.  In other words, the
+    Zermelo-Fraenkel Axioms do not contain enough information to
+    decide the truth of the hypothesis.
+  </p>
+
+  <p>
+    We are willing to bet that at this point your head might be swimming a bit with uncertainty.
+    If so, then know that these are the same feelings that the mathematical community experienced in the mid twentieth century.
+    In the past,
+    mathematics was seen as a model of logical certainty.
+    It is disconcerting to find that there are statements that are <q>undecidable.</q>
+    In fact, G&#xf6;del proved in 1931 that a consistent finite axiom system that contained the axioms of arithmetic would always contain undecidable statements which could neither be proved true nor false with those axioms.
+    Mathematical knowledge would always be incomplete.
+  </p>
+
+  <figure>
+    <caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Godel/"  visual="mathshistory.st-andrews.ac.uk/Biographies/Godel/">Kurt G&#xf6;del</url></caption>
+    <idx><h>G&#xf6;del, Kurt</h><h>portrait of</h></idx>
+    <image width="35%" source="images/Godel.png" />
+  </figure>
+
+  <p>
+    So by trying to put the foundations of calculus on solid ground,
+    we have come to a point where we can never obtain mathematical certainty.
+    Does this mean that we should throw up our hands and concede defeat?
+    Should we be paralyzed with fear of trying anything?
+    Certainly not!
+    As we mentioned before,
+    most mathematicians do well by taking a pragmatic approach:
+    using their mathematics to solve problems that they encounter.
+    In fact, it is typically the problems that motivate the mathematics.
+    It is true that mathematicians take chances that don't always pan out,
+    but they still take these chances, often with success.
+    Even when the successes lead to more questions, as they typically do,
+    tackling those questions usually leads to a deeper understanding.
+    At the very least,
+    our incomplete understanding means we will always have more questions to answer,
+    more problems to solve.
+  </p>
+
+  <p>
+    What else could a mathematician ask for?
+  </p>
+</section>
+
+
+</chapter>
+

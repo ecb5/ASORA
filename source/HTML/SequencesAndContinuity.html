@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:32-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sequences and Continuity</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Continuity-AnalyticDef.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Continuity.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Continuity-DefLimit.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Continuity-AnalyticDef.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Continuity.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Continuity-DefLimit.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="active">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="SequencesAndContinuity"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span>
+</h2>
+<p id="p-797">There is an alternative way to prove that the function</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+D(x)=\left\{ \begin{matrix}x\text{,} \amp \text{ if } x\text{ is rational } \\ 0\text{,} \amp \text{ if } x\text{ is irrational } \end{matrix} \right.
+\end{equation*}
+</div>
+<p class="continuation">is not continuous at <span class="process-math">\(a\neq 0\text{.}\)</span>  We will examine this by looking at the relationship between our definitions of convergence and continuity.  The two ideas are actually quite closely connected, as illustrated by the following very useful theorem.</p>
+<article class="theorem theorem-like" id="thm_LimDefOfContinuity"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.2.1</span><span class="period">.</span>
+</h3>
+<p id="p-798"> The function <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\)</span> if and only if <span class="process-math">\(f\)</span> satisfies the following property:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\forall\text{ sequences } \left(x_n\right)\text{, if } \,\,\lim_{n\rightarrow\infty}x_n=a \text{ then} \lim_{n\rightarrow\infty}f(x_n)=f(a).{}
+\end{equation*}
+</div></article><p id="p-799"><a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> says that in order for <span class="process-math">\(f\)</span> to be continuous, it is necessary and sufficient that any sequence <span class="process-math">\(\left(x_n\right)\)</span> converging to <span class="process-math">\(a\)</span> must force the sequence <span class="process-math">\(\left(f(x_n)\right)\)</span> to converge to <span class="process-math">\(f(a)\text{.}\)</span>  A picture of this situation is below though, as always, the formal proof will not rely on the diagram.</p>
+<div class="image-box" style="width: 37%; margin-left: 31.5%; margin-right: 31.5%;"><img src="images/Ch5fig6.png" class="contained"></div>
+<p id="p-800">This theorem is especially useful for showing that a function <span class="process-math">\(f,\)</span> is not continuous at a point <span class="process-math">\(a\text{;}\)</span> all we need to do is exhibit a sequence <span class="process-math">\(\left(x_n\right)\)</span> converging to <span class="process-math">\(a\)</span> such that the sequence <span class="process-math">\(\lim_{n\rightarrow\infty}f(x_n)\)</span> does <em class="emphasis">not</em> converge to <span class="process-math">\(f(a)\text{.}\)</span>  Let's demonstrate this idea before we tackle the proof of <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a>.</p>
+<article class="example example-like" id="example_HeavisideNotContinuous"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example_HeavisideNotContinuous"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.2.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example_HeavisideNotContinuous"><article class="example example-like"><p id="p-801">Use <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> to prove that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_LimDefOfContinuity.html">
+\begin{equation*}
+f(x)= \begin{cases}\frac{|x|}{x}\text{,} \amp \text{ if } x\neq 0\\ 0\text{,} \amp \text{ if } x=0 \end{cases}
+\end{equation*}
+</div>
+<p class="continuation">is not continuous at <span class="process-math">\(0\text{.}\)</span></p></article></div>
+<article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><p id="p-802">First notice that <span class="process-math">\(f\)</span> can be written as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)= \begin{cases}1\amp \text{ if } x&gt;0\\ -1\amp \text{ if } x\lt 0\\ 0\amp \text{ if } x=0 \end{cases} \text{.}
+\end{equation*}
+</div>
+<p id="p-803">To show that <span class="process-math">\(f\)</span> is not continuous at <span class="process-math">\(0\text{,}\)</span> all we need to do is create a single sequence <span class="process-math">\(\left(x_n\right)\)</span>which converges to <span class="process-math">\(0\text{,}\)</span> but for which the sequence <span class="process-math">\(\left(f\left(x_n\right)\right)\)</span> does not converge to <span class="process-math">\(f(0)=0\text{.}\)</span>  For a function like this one, just about any sequence will do, but let's use <span class="process-math">\(\left(\frac{1}{n}\right)\text{,}\)</span> just because it is an old familiar friend.</p>
+<p id="p-804">We have <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\frac{1}{n}=0\text{,}\)</span> but <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}f\left(\frac{1}{n}\right)=\lim_{n\rightarrow
+\infty}1=1\neq 0=f(0)\text{.}\)</span>  Thus by <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a>, <span class="process-math">\(f\)</span> is not continuous at <span class="process-math">\(0\text{.}\)</span></p></article></div>
+<article class="problem example-like" id="problem-110"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-110"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.3</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-110"><article class="problem example-like"><p id="p-805"> Use <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> to show that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_LimDefOfContinuity.html">
+\begin{equation*}
+f(x)= \begin{cases}
+\frac{\abs{x}}{x},\amp \text{ if } x\neq 0\\
+a, \amp \text{ if } x=0 \end{cases}  
+\end{equation*}
+</div>
+<p class="continuation">is not continuous at <span class="process-math">\(0\text{,}\)</span> no matter what value <span class="process-math">\(a\)</span> is.</p></article></div>
+<article class="problem example-like" id="problem-111"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-111"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-111"><article class="problem example-like"><p id="p-806">Use <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> to show that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_LimDefOfContinuity.html">
+\begin{equation*}
+D(x)= \begin{cases}
+x, \amp \text{ if } x\text{ is rational } \\
+0, \amp \text{ if } x\text{ is irrational } \end{cases}  
+\end{equation*}
+</div>
+<p class="continuation">is not continuous at <span class="process-math">\(a\neq 0\text{.}\)</span></p></article></div>
+<article class="problem example-like" id="problem-112"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-112"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.5</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-112"><article class="problem example-like"><p id="p-807">The function <span class="process-math">\(T(x)=\sin\left(\frac{1}{x}\right)\)</span> is often called the topologist's sine curve.  Whereas <span class="process-math">\(\sin
+x\)</span> has roots at <span class="process-math">\(n\pi\text{,}\)</span> <span class="process-math">\(n\in\ZZ\)</span> and oscillates infinitely often as <span class="process-math">\(x\rightarrow\pm\infty\text{,}\)</span> <span class="process-math">\(T\)</span> has roots at <span class="process-math">\(\frac{1}{n\pi},\,n\in\ZZ,\,n\neq
+0\text{,}\)</span> and oscillates infinitely often as <span class="process-math">\(x\)</span> approaches zero.  A rendition of the graph follows.</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/Ch5fig7.png" class="contained"></div>
+<p id="p-808">Notice that <span class="process-math">\(T\)</span> is not even defined at <span class="process-math">\(x=0\text{.}\)</span> We can extend <span class="process-math">\(T\)</span> to be defined at 0 by simply choosing a value for <span class="process-math">\(T(0):\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+T(x)= \begin{cases}
+\sin\left(\frac{1}{x}\right),\amp \text{ if } x\neq 0\\ 
+b,\amp \text{ if } x=0 \end{cases} \text{.}
+\end{equation*}
+</div>
+<p id="p-809">Use <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> to show that <span class="process-math">\(T\)</span> is not continuous at <span class="process-math">\(0\text{,}\)</span> no matter what value is chosen for <span class="process-math">\(b\text{.}\)</span></p></article></div>
+<article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h3 class="heading"><span class="title">Sketch of the Proof of Theorem 9.2.1.</span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><p id="p-810">We've seen how we can use <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a>, now we need to prove <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a>.  The forward direction is fairly straightforward.  So we assume that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\)</span> and start with a sequence <span class="process-math">\(\left(x_n\right)\)</span> which converges to <span class="process-math">\(a\text{.}\)</span> What is left to show is that <span class="process-math">\(\lim_{n\rightarrow\infty}f(x_n)=f(a)\text{.}\)</span>  If you write down the definitions of <span class="process-math">\(f\)</span> being continuous at <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=a\text{,}\)</span> and <span class="process-math">\(\lim_{n\rightarrow\infty}f(x_n)=f(a)\text{,}\)</span> you should be able to get from what you are assuming to what you want to conclude.</p>
+<p id="p-811">To prove the converse, it is convenient to prove its contrapositive.  That is, we want to prove that if <span class="process-math">\(f\)</span> is not continuous at <span class="process-math">\(a\)</span> then we can construct a sequence <span class="process-math">\(\left(x_n\right)\)</span> that converges to <span class="process-math">\(a\)</span> but <span class="process-math">\(\left(f(x_n)\right)\)</span>does not converge to <span class="process-math">\(f(a)\text{.}\)</span> First we need to recognize what it means for <span class="process-math">\(f\)</span> to not be continuous at <span class="process-math">\(a\text{.}\)</span>  This says that somewhere there exists an <span class="process-math">\(\eps&gt;0\text{,}\)</span> such that no choice of <span class="process-math">\(\delta&gt;0\)</span> will work for this.  That is, for any such <span class="process-math">\(\delta\text{,}\)</span> there will exist <span class="process-math">\(x\text{,}\)</span> such that <span class="process-math">\(|\,x-a|\lt \delta\text{,}\)</span> but <span class="process-math">\(|f(x)-f(a)|\geq\eps\text{.}\)</span> With this in mind, if <span class="process-math">\(\delta=1\text{,}\)</span> then there will exist an <span class="process-math">\(x_1\)</span> such that <span class="process-math">\(|\,x_1-a|\lt 1\text{,}\)</span> but <span class="process-math">\(|f(x_1)-f(a)|\geq\eps\text{.}\)</span>  Similarly, if <span class="process-math">\(\delta=\frac{1}{2}\text{,}\)</span> then there will exist an <span class="process-math">\(x_2\)</span> such that <span class="process-math">\(|\,x_2-a|\lt \frac{1}{2}\text{,}\)</span> but <span class="process-math">\(|\,f(x_2)-f(a)|\geq\eps\text{.}\)</span>  If we continue in this fashion, we will create a sequence <span class="process-math">\(\left(x_n\right)\)</span> such that <span class="process-math">\(|\,x_n-a|\lt \frac{1}{n}\text{,}\)</span> but <span class="process-math">\(|f(x_n)-f(a)|\geq\eps\text{.}\)</span>  This should do the trick.</p></article></div>
+<article class="problem example-like" id="problem-113"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-113"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.6</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-113"><article class="problem example-like"><p id="p-812"> Turn the ideas of the previous two paragraphs into a formal proof of <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a>.</p></article></div>
+<p id="p-813"><a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> is a very useful result. It is a bridge between the ideas of convergence and continuity so it allows us to bring all of the theory we developed in <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a> to bear on continuity questions. For example consider the following.</p>
+<article class="theorem theorem-like" id="thm_ContSumProd"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.2.7</span><span class="period">.</span>
+</h3>
+<p id="p-814"> Suppose <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are both continuous at <span class="process-math">\(a\text{.}\)</span> Then <span class="process-math">\(f+g\)</span> and <span class="process-math">\(f\cdot g\)</span> are continuous at <span class="process-math">\(a\text{.}\)</span></p></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><p id="p-815">We could use the definition of continuity to prove <a href="" class="xref" data-knowl="./knowl/thm_ContSumProd.html" title="Theorem 9.2.7">Theorem 9.2.7</a>, but <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> makes our job much easier.  For example, to show that <span class="process-math">\(f+g\)</span> is continuous, consider any sequence <span class="process-math">\(\left(x_n\right)\)</span> which converges to <span class="process-math">\(a\text{.}\)</span>  Since <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\text{,}\)</span> then by <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a>, <span class="process-math">\(\lim_{n\rightarrow\infty}f(x_n)=f(a)\text{.}\)</span>  Likewise, since <span class="process-math">\(g\)</span> is continuous at <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(\lim_{n\rightarrow\infty}g(x_n)=g(a)\text{.}\)</span></p>
+<p id="p-816">By <a href="" class="xref" data-knowl="./knowl/thm_SumOfSequences.html" title="Theorem 7.2.4">Theorem 7.2.4</a> of <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a>,<span class="process-math">\(\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SumOfSequences.html ./knowl/Convergence.html ./knowl/thm_LimDefOfContinuity.html" id="md-44">
+\begin{alignat*}{1}
+\lim_{n\rightarrow\infty}(f+g)(x_n)\amp=\lim_{n\rightarrow\infty} \left(f(x_n)+g(x_n)\right)\\
+\amp =\lim_{n\rightarrow\infty}f(x_n)+\,\lim_{n \rightarrow\infty}g(x_n)\\
+\amp =f(a)+g(a)\\
+\amp =(f+g)(a)\text{.}
+\end{alignat*}
+</div>
+<p class="continuation">Thus by <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a>, <span class="process-math">\(f+g\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span>  The proof that <span class="process-math">\(f\cdot g\)</span> is continuous at <span class="process-math">\(a\)</span> is similar.</p></article></div>
+<article class="problem example-like" id="problem-114"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-114"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.8</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-114"><article class="problem example-like"><p id="p-817">Use <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> to show that if <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous at <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(f\cdot g\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span></p></article></div>
+<p id="p-818">By employing <a href="" class="xref" data-knowl="./knowl/thm_ContSumProd.html" title="Theorem 9.2.7">Theorem 9.2.7</a> a finite number of times, we can see that a finite sum of continuous functions is continuous. That is, if <span class="process-math">\(f_1,\,f_2,\,\ldots,\,f_n\)</span> are all continuous at <span class="process-math">\(a\)</span> then <span class="process-math">\(\sum_{j=1}^nf_j\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span> But what about an infinite sum? Specifically, suppose <span class="process-math">\(f_1,\,f_2,f_3,\ldots\)</span> are all continuous at <span class="process-math">\(a\text{.}\)</span> Consider the following argument.</p>
+<p id="p-819">Let <span class="process-math">\(\eps&gt;0\text{.}\)</span> Since <span class="process-math">\(f_j\)</span> is continuous at <span class="process-math">\(a\text{,}\)</span> then there exists <span class="process-math">\(\delta_j&gt;0\)</span> such that if <span class="process-math">\(|\,x-a|\lt \delta_j\text{,}\)</span> then <span class="process-math">\(|f_j(x)-f_j(a)|\lt \frac{\eps}{2^j}\text{.}\)</span> Let <span class="process-math">\(\delta=\)</span>min<span class="process-math">\(\left(\delta_1,\,\delta_2,\,\ldots\right)\text{.}\)</span> If <span class="process-math">\(|\,x-a|\lt \delta\text{,}\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left|\sum_{j=1}^\infty f_j(x)-\sum_{j=1}^\infty f_j(a)\right|=\left|\sum_{j=1}^\infty\left(f_j(x)-f_j(a)\right)\right|
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\leq\,\sum_{j=1}^\infty|f_j(x)-f_j(a)|\lt \sum_{j=1}^\infty\frac{ \eps}{2^j}=\eps\text{.}
+\end{equation*}
+</div>
+<p id="p-820">Thus by definition, <span class="process-math">\(\sum_{j=1}^\infty f_j\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span></p>
+<p id="p-821">This argument seems to say that an infinite sum of continuous functions must be continuous (provided it converges). However we know that the Fourier series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{4}{\pi}\sum_{k=0}^\infty\frac{\left(-1\right)^k}{\left(2k+1\right)}\cos\left(\left(2k+1\right)\pi x\right)
+\end{equation*}
+</div>
+<p class="continuation">is a counterexample to this, as it is an infinite sum of continuous functions which does not converge to a continuous function. Something fundamental seems to have gone wrong here. Can you tell what it is?</p>
+<p id="p-822">This is a question we will spend considerable time addressing in <a href="PowerSeriesRedux.html" class="internal" title="Chapter 11: Back to Power Series">Chapter 11</a> (in particular, see <a href="" class="xref" data-knowl="./knowl/prob_Cauchy_s_incorrect_proof.html" title="Problem 11.1.1">problem 11.1.1</a>) so if you don't see the difficulty, don't worry; you will. In the meantime keep this problem tucked away in your consciousness. It is, as we said, fundamental.</p>
+<p id="p-823"><a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> will also handle quotients of continuous functions. There is however a small detail that needs to be addressed first. Obviously, when we consider the continuity of <span class="process-math">\(f/g\)</span> at <span class="process-math">\(a\text{,}\)</span><span class="process-math">\(\)</span>we need to assume that <span class="process-math">\(g(a)\neq 0\text{.}\)</span> However, <span class="process-math">\(g\)</span> may be zero at other values. How do we know that when we choose our sequence <span class="process-math">\(\left(x_n\right)\)</span> converging to <span class="process-math">\(a\)</span> that <span class="process-math">\(g(x_n)\)</span> is not zero? This would mess up our idea of using the corresponding theorem for sequences (<a href="" class="xref" data-knowl="./knowl/thm_LimitOfQuotient.html" title="Theorem 7.2.12">Theorem 7.2.12</a> from <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a>). This can be handled with the following lemma.</p>
+<article class="lemma theorem-like" id="lem_BoundedAwayFromZero"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.2.9</span><span class="period">.</span>
+</h3>
+<p id="p-824">If <span class="process-math">\(g\)</span> is continuous at <span class="process-math">\(a\)</span> and <span class="process-math">\(g(a)\neq 0\text{,}\)</span> then there exists <span class="process-math">\(\delta&gt;0\)</span> such that <span class="process-math">\(g(x)\neq 0\)</span> for all <span class="process-math">\(x\in(a-\delta,a+\delta)\text{.}\)</span></p></article><article class="problem example-like" id="problem-115"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-115"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.10</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-115"><article class="problem example-like"><p id="p-825">Prove <a href="" class="xref" data-knowl="./knowl/lem_BoundedAwayFromZero.html" title="Lemma 9.2.9">Lemma 9.2.9</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-25" id="hint-25"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-25"><div class="hint solution-like">
+<p id="p-826">Consider the case where <span class="process-math">\(g(a)&gt;0\text{.}\)</span> Use the definition with <span class="process-math">\(\eps=\frac{g(a)}{2}\text{.}\)</span> The picture is below; make it formal.</p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/Ch5fig8.png" class="contained"></div>
+<p id="p-827">For the case <span class="process-math">\(g(a)\lt 0\text{,}\)</span> consider the function <span class="process-math">\(-g\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<p id="p-828">A consequence of this lemma is that if we start with a sequence <span class="process-math">\(\left(x_n\right)\)</span> converging to <span class="process-math">\(a\text{,}\)</span> then for <span class="process-math">\(n\)</span> sufficiently large, <span class="process-math">\(g(x_n)\neq 0\text{.}\)</span></p>
+<article class="problem example-like" id="problem-116"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-116"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.11</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-116"><article class="problem example-like"><p id="p-829">Use <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a>, to prove that if <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous at <span class="process-math">\(a\)</span> and <span class="process-math">\(g(a)\neq 0\text{,}\)</span> then <span class="process-math">\(f/g\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span></p></article></div>
+<article class="theorem theorem-like" id="thm_ContComp"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.2.12</span><span class="period">.</span>
+</h3>
+<p id="p-830">Suppose <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\)</span> and <span class="process-math">\(g\)</span> is continuous at <span class="process-math">\(f(a)\text{.}\)</span>  Then <span class="process-math">\(g\circ f\)</span> is continuous at <span class="process-math">\(a.\)</span> (Note that <span class="process-math">\((g\circ f)(x)=g(f(x))\text{.}\)</span>)</p></article><article class="problem example-like" id="problem-117"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-117"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.13</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-117"><article class="problem example-like"><div class="introduction" id="introduction-19"><p id="p-831">Prove <a href="" class="xref" data-knowl="./knowl/thm_ContComp.html" title="Theorem 9.2.12">Theorem 9.2.12</a></p></div>
+<article class="task exercise-like" id="task-106"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-832">Using the definition of continuity.</p></article><article class="task exercise-like" id="task-107"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-833">Using <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a>.</p></article></article></div>
+<p id="p-834">The above theorems allow us to build continuous functions from other continuous functions.  For example, knowing that <span class="process-math">\(f(x)=x\)</span> and <span class="process-math">\(g(x)=c\)</span> are continuous, we can conclude that any polynomial,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
+\end{equation*}
+</div>
+<p class="continuation">is continuous as well. We also know that functions such as <span class="process-math">\(f(x)=\sin\left(e^x\right)\)</span> are continuous without having to rely on the definition.</p>
+<article class="problem example-like" id="problem-118"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-118"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.14</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-118"><article class="problem example-like"><div class="introduction" id="introduction-20"><p id="p-835">Show that each of the following is a continuous function at every point in its domain.</p></div>
+<article class="task exercise-like" id="task-108"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-836">Any polynomial.</p></article><article class="task exercise-like" id="task-109"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-837">Any rational function. (A rational function is defined to be a ratio of polynomials.)</p></article><article class="task exercise-like" id="task-110"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-838"><span class="process-math">\(\cos x\text{.}\)</span></p></article><article class="task exercise-like" id="task-111"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<p id="p-839">The other trig functions: <span class="process-math">\(\tan(x)\text{,}\)</span> <span class="process-math">\(\cot(x)\text{,}\)</span> <span class="process-math">\(\sec(x)\text{,}\)</span> and <span class="process-math">\(\csc(x)\text{.}\)</span></p></article></article></div>
+<article class="problem example-like" id="problem-119"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-119"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.15</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-119"><article class="problem example-like"><p id="p-840">What allows us to conclude that <span class="process-math">\(f(x)=\sin\left(e^x\right)\)</span> is continuous at any point <span class="process-math">\(a\)</span> without referring back to the definition of continuity?</p></article></div>
+<p id="p-841"><a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> can also be used to study the convergence of sequences.  For example, since <span class="process-math">\(f(x)=e^x\)</span> is continuous at any point and <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{n+1}{n}=1\text{,}\)</span> then <span class="process-math">\(\lim_{n\rightarrow\infty}e^{\left(\frac{n+1}{n}\right)}=e\text{.}\)</span> This also illustrates a certain way of thinking about continuous functions.  They are the ones where we can “commute” the function and a limit of a sequence.  Specifically, if <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\)</span> and <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=a\text{,}\)</span> then <span class="process-math">\(\lim_{n\rightarrow\infty}f(x_n)=f(a)=f\left(\lim_{n\rightarrow\infty}x_n\right)\text{.}\)</span></p>
+<article class="problem example-like" id="problem-120"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-120"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.2.16</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-120"><article class="problem example-like"><div class="introduction" id="introduction-21"><p id="p-842">Compute the following limits. Be sure to point out how continuity is involved.</p></div>
+<article class="task exercise-like" id="task-112"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-843"><span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\sin\left(\frac{n\pi}{2n+1}\right)\)</span></p></article><article class="task exercise-like" id="task-113"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-844"><span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\sqrt{\frac{n}{n^2+1}}\)</span></p></article><article class="task exercise-like" id="task-114"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-845"><span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}e^{\left(\text{ sin } \left(1/n\right)\right)}\)</span></p></article></article></div>
+<p id="p-846">Having this rigorous formulation of continuity is necessary for proving the Extreme Value Theorem and the Mean Value Theorem. However there is one more piece of the puzzle to address before we can prove these theorems.</p>
+<p id="p-847">We will do this in the next chapter, but before we go on it is time to define a fundamental concept that was probably one of the first you learned in calculus: limits.</p></section></div></main>
+</div>
+</body>
+</html>

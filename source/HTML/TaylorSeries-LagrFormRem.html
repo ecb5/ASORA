@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:30-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lagrange's Form of the Remainder</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="TaylorSeries-IntFormRem.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="TaylorSeries.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="TaylorSeries-CauchyFormRem.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="TaylorSeries-IntFormRem.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="TaylorSeries.html" title="Up">Up</a><a class="next-button button toolbar-item" href="TaylorSeries-CauchyFormRem.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="active">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="TaylorSeries-LagrFormRem"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.2</span> <span class="title">Lagrange's Form of the Remainder</span>
+</h2>
+<p id="p-668">Joseph-Louis Lagrange  provided an alternate form for the remainder in Taylor series in his 1797 work <span class="booktitle">Théorie des functions analytiques.</span> Lagrange's form of the remainder is as follows.</p>
+<article class="theorem theorem-like" id="thm_LagrangeRemainder"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="period">.</span>
+</h3>
+<p id="p-669"><dfn class="terminology">Lagrange's Form of the Remainder</dfn></p>
+<p id="p-670"> Suppose <span class="process-math">\(f\)</span> is a function such that <span class="process-math">\(f^{(n+1)}(t)\)</span> is continuous on an interval containing <span class="process-math">\(a\)</span> and <span class="process-math">\(x\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)-\left(\sum_{j=0}^n\frac{f^{(j)}(a)}{j!}(x-a)^j\right)=\frac{f^{\, (n+1)}(c)}{(n+1)!}(x-a)^{n+1}
+\end{equation*}
+</div>
+<p class="continuation">where <span class="process-math">\(c\)</span> is some number between <span class="process-math">\(a\)</span> and <span class="process-math">\(x\text{.}\)</span></p></article><article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><p id="p-671">Note first that the result is true when <span class="process-math">\(x=a\)</span> as both sides reduce to 0 (in that case <span class="process-math">\(c=x=a\text{.}\)</span>) We will prove the case where <span class="process-math">\(a\lt x\text{;}\)</span> the case <span class="process-math">\(x\lt a\)</span> will be an exercise.</p>
+<p id="p-672">First, we already have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)-\left(\sum_{j=0}^n\frac{f^{(j)}(a)}{j!}(x-a)^j\right)=\frac{1}{n!} \int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}
+\end{equation*}
+</div>
+<p class="continuation">so it suffices to show that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}=\,\frac{f^{\,(n+1)}(c)}{n+1}(x-a)^{n+1}
+\end{equation*}
+</div>
+<p class="continuation">for some <span class="process-math">\(c\)</span> with <span class="process-math">\(c\in[\,a,x]\text{.}\)</span> To this end, let</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+M=\max_{a\le t\le x}\left(f^{(n+1)}(t)\right)
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+m=\min_{a\le t\le x}\left(f^{(n+1)}(t)\right)\text{.}
+\end{equation*}
+</div>
+<p id="p-673">Note that for all <span class="process-math">\(t\in[\,a,x]\text{,}\)</span> we have <span class="process-math">\(m\leq f^{(n+1)}(t)\leq M\text{.}\)</span> Since <span class="process-math">\(x-t\geq 0\text{,}\)</span> this gives us</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_LagRem1">
+\begin{equation}
+m\left(x-t\right)^n\leq f^{(n+1)}(t)(x-t)^n\leq M(x-t)^n\tag{8.2.1}
+\end{equation}
+</div>
+<p class="continuation">and so</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_LagRem2">
+\begin{equation}
+\int_{t=a}^xm\left(x-t\right)^n\dx{ t}\leq\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}\leq \int_{t=a}^xM(x-t)^n\dx{ t}\text{.}\tag{8.2.2}
+\end{equation}
+</div>
+<p id="p-674">Computing the outside integrals, we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+m\int_{t=a}^x\left(x-t\right)^n\dx{ t}\leq\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}\leq M\int_{t=a}^x(x-t)^n\dx{ t}
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_LagRem3">
+\begin{equation}
+m\frac{(x-a)^{n+1}}{n+1}\leq\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}\leq M\frac{(x-a)^{n+1}}{n+1}\tag{8.2.3}
+\end{equation}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+m\leq\frac{\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}}{\left(\frac{(x-a)^{n+1}}{n+1} \right)}\leq M\text{.}
+\end{equation*}
+</div>
+<p id="p-675">Since</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}}{\left(\frac{(x-a)^{n+1}}{n+1} \right)}
+\end{equation*}
+</div>
+<p class="continuation">is a value that lies between the maximum and minimum of <span class="process-math">\(f^{(n+1)}\)</span> on <span class="process-math">\([\,a,x]\text{,}\)</span> then by the Intermediate Value Theorem, there must exist a number <span class="process-math">\(c\in[\,a,x]\)</span> with</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f^{(n+1)}(c)=\frac{\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}}{\left( \frac{(x-a)^{n+1}}{n+1}\right)}\text{.}
+\end{equation*}
+</div>
+<p id="p-676">This gives us</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}=\,\frac{f^{\,(n+1)}(c)}{n+1}(x-a)^{n+1}\text{.}
+\end{equation*}
+</div>
+<p id="p-677">And the result follows.</p></article></div>
+<article class="problem example-like" id="problem-93"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-93"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-93"><article class="problem example-like"><p id="p-678"> Prove <a href="" class="xref" data-knowl="./knowl/thm_LagrangeRemainder.html" title="Theorem 8.2.1">Theorem 8.2.1</a> for the case where <span class="process-math">\(x\lt a\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-21" id="hint-21"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-21"><div class="hint solution-like">
+<p id="p-679">Note that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}=(-1)^{n+1}\int_{t=x}^af^{(n+1)}(t)(t-x)^n\dx{ t}\text{.}
+\end{equation*}
+</div>
+<p id="p-680">Use the same argument on this integral.  It will work out in the end.  Really!  You just need to keep track of <em class="emphasis">all</em> of the negatives.</p>
+</div></div>
+</div></article></div>
+<p id="p-681">This is <em class="emphasis">not</em> Lagrange's proof.  He did not use the integral form of the remainder.  However, this is similar to Lagrange's proof in that he also used the Intermediate Value Theorem (IVT)  and Extreme Value Theorem (EVT)  much as we did.  In Lagrange's day, these were taken to be obviously true for a continuous function and we have followed Lagrange's  lead by assuming the IVT and the EVT. However, in mathematics we need to keep our assumptions few and simple.  The IVT and the EVT do not satisfy this need in the sense that both can be proved from simpler ideas.  We will return to this in <a href="IVTandEVT.html" class="internal" title="Chapter 10: Intermediate and Extreme Values">Chapter 10</a>.</p>
+<p id="p-682">Also, a word of caution about this: Lagrange's form of the remainder is <span class="process-math">\(\frac{f^{\,(n+1)}(c)}{(n+1)!}\)</span> <span class="process-math">\((x-a)^{n+1}\text{,}\)</span> where <span class="process-math">\(c\)</span> is some number between <span class="process-math">\(a\)</span> and <span class="process-math">\(x\text{.}\)</span>  The proof does not indicate what this <span class="process-math">\(c\)</span> might be and, in fact, this <span class="process-math">\(c\)</span> changes as <span class="process-math">\(n\)</span> changes. All we know is that this <span class="process-math">\(c\)</span> lies between <span class="process-math">\(a\)</span> and <span class="process-math">\(x\text{.}\)</span>  To illustrate this issue and its potential dangers, consider the following problem where we have a chance to compute the value of <span class="process-math">\(c\)</span> for the function <span class="process-math">\(f(x)=\frac{1}{1+x}\text{.}\)</span></p>
+<article class="problem example-like" id="problem-94"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-94"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-94"><article class="problem example-like"><div class="introduction" id="introduction-17">
+<p id="p-683">This problem investigates the Taylor series representation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{1+x}=1-x+x^2-x^3+\cdots\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-84"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-684">Use the fact that <span class="process-math">\(\frac{1-(-x)^{n+1}}{1+x}=1-x+x^2-x^3+\cdots+(-x)^n\)</span> to compute the remainder <span class="process-math">\(\frac{1}{1+x}-\left(1-x+x^2-x^3+\cdots+(-x)^n\right)\text{.}\)</span> Specifically, compute this remainder when <span class="process-math">\(x=1\)</span> and conclude that the Taylor series does not converge to <span class="process-math">\(\frac{1}{1+x}\)</span> when <span class="process-math">\(x=1\text{.}\)</span></p></article><article class="task exercise-like" id="task-85"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-685">Compare the remainder in part a with the Lagrange form of the remainder to determine what <span class="process-math">\(c\)</span> is when <span class="process-math">\(x=1\text{.}\)</span></p></article><article class="task exercise-like" id="task-86"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-686">Consider the following argument: If <span class="process-math">\(f(x)=\frac{1}{1+x}\text{,}\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob_sequences3.html ./knowl/Convergence.html">
+\begin{equation*}
+f^{(n+1)}(c)=\frac{(-1)^{n+1}(n+1)!}{(1+c)^{n+2}}
+\end{equation*}
+</div>
+<p class="continuation">so the Lagrange form of the remainder when <span class="process-math">\(x=1\)</span> is given by</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob_sequences3.html ./knowl/Convergence.html">
+\begin{equation*}
+\frac{(-1)^{n+1}(n+1)!}{(n+1)!(1+c)^{n+2}}=\frac{(-1)^{n+1}}{(1+c)^{n+2}}
+\end{equation*}
+</div>
+<p class="continuation">where <span class="process-math">\(c\in[\,0,1]\text{.}\)</span>  It can be seen in part b that <span class="process-math">\(c\neq 0\text{.}\)</span>  Thus <span class="process-math">\(1+c&gt;1\)</span> and so by <a href="" class="xref" data-knowl="./knowl/prob_sequences3.html" title="Problem 7.1.7">Problem 7.1.7</a> of <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a>, the Lagrange remainder converges to <span class="process-math">\(0\)</span> as <span class="process-math">\(n\rightarrow\infty\text{.}\)</span>  This argument would suggest that the Taylor series converges to <span class="process-math">\(\frac{1}{1+x}\)</span> for <span class="process-math">\(x=1\text{.}\)</span>  However, we know from part (a) that this is incorrect.  What is wrong with the argument?</p></article></article></div>
+<p id="p-687">Even though there are potential dangers in misusing the Lagrange form of the remainder, it is a useful form.  For example, armed with the Lagrange form of the remainder, we can prove the following theorem.</p>
+<article class="theorem theorem-like" id="thm_BinomialSeriesConverges"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.2.4</span><span class="period">.</span>
+</h3>
+<p id="p-688">The binomial series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1+\frac{1}{2}x+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)}{2!}x^2+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)\left(\frac{1}{2}-2\right)}{3!}x^3+\cdots
+\end{equation*}
+</div>
+<p class="continuation">converges to <span class="process-math">\(\sqrt{1+x}\)</span> for <span class="process-math">\(x\in[0,1]\text{.}\)</span></p></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><p id="p-689">First note that the binomial series is, in fact, the Taylor series for the function <span class="process-math">\(f(x)=\sqrt{1+x}\)</span> expanded about <span class="process-math">\(a=0\text{.}\)</span> If we let <span class="process-math">\(x\)</span> be a fixed number with <span class="process-math">\(0\leq x\leq 1\text{,}\)</span> then it suffices to show that the Lagrange form of the remainder converges to <span class="process-math">\(0\text{.}\)</span> With this in mind, notice that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f^{(n+1)}(t)=\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-n\right)\left(1+t\right)^{\frac{1}{2}-(n+1)}
+\end{equation*}
+</div>
+<p class="continuation">and so the Lagrange form of the remainder is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}= \frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots \left(\frac{1}{2}-n\right)}{(n+1)!}\frac{x^{n+1}}{(1+c)^{n+\frac{1}{2}}}
+\end{equation*}
+</div>
+<p class="continuation">where <span class="process-math">\(c\)</span> is some number between <span class="process-math">\(0\)</span> and <span class="process-math">\(x\text{.}\)</span> Since <span class="process-math">\(0\leq x\leq 1\)</span> and <span class="process-math">\(1+c\geq 1\text{,}\)</span> then we have <span class="process-math">\(\frac{1}{1+c}\leq 1\text{,}\)</span> and so</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-42">
+\begin{align*}
+0\amp \leq \left|\frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-n\right)}{(n+1)!}\frac{x^{n+1}}{(1+c)^{n+\frac{1}{2}}}\right|\\
+\amp =\frac{\left(\frac{1}{2}\right)\left(1-\frac{1}{2}\right)\cdots\left(n-\frac{1}{2}\right)}{(n+1)!}\frac{x^{n+1}}{(1+c)^{n+\frac{1}{2}}}\\
+\amp =\frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)\left(\frac{3}{2}\right)\left(\frac{5}{2}\right)\cdots\left(\frac{2n-1}{2}\right)}{(n+1)!}\left(x^{n+1}\right)\frac{1}{(1+c)^{n+\frac{1}{2}}}\\
+\amp \leq\frac{1\cdot 1\cdot 3\cdot5\cdot\,\cdots\,\cdot\left(2n-1\right)}{2^{^{n+1}}(n+1)!}\\
+\amp =\frac{1\cdot 3\cdot 5\cdot\,\cdots\,\cdot\left(2n-1\right)\cdot 1}{2\cdot4\cdot 6\cdot\,\cdots\,\cdot 2n\cdot\left(2n+2\right)}\\
+\amp =\frac{1}{2}\cdot\frac{3}{4}\cdot\frac{5}{6}\cdot\cdots\,\cdot\frac{2n-1}{2n}\cdot\frac{1}{2n+2}\\
+\amp \leq\frac{1}{2n+2}\text{.}
+\end{align*}
+</div>
+<p id="p-690">Since <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{1}{2n+2}=0=\,\lim_{n\rightarrow\infty}0\text{,}\)</span> then by the Squeeze Theorem,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\abs{\frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}}=0, \text{ so } \lim_{n\rightarrow\infty}\left(\frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}\right)=0\text{.}
+\end{equation*}
+</div>
+<p id="p-691">Thus the Taylor series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1+\frac{1}{2}x+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)}{2!}x^2+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)\left(\frac{1}{2}-2\right)}{3!}x^3+\cdots
+\end{equation*}
+</div>
+<p class="continuation">converges to <span class="process-math">\(\sqrt{1+x}\)</span> for <span class="process-math">\(0\leq x\leq 1\text{.}\)</span></p></article></div>
+<p id="p-692">Unfortunately, this proof will not work for <span class="process-math">\(-1\lt x\lt 0\text{.}\)</span> In this case, the fact that <span class="process-math">\(x\leq c\leq 0\)</span> makes<span class="process-math">\(\,1+c\leq 1\text{.}\)</span> Thus <span class="process-math">\(\frac{1}{1+c}\geq 1\)</span> and so the inequality</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)\left(\frac{3}{2}\right)\left(\frac{5}{2}\right)\cdots\left(\frac{2n-1}{2}\right)}{(n+1)!}\frac{|x|^{n+1}}{(1+c)^{n+\frac{1}{2}}}\leq\frac{1\cdot 1\cdot 3\cdot 5\cdot\,\cdots\,\cdot\left(2n-1\right)}{2^{^{n+1}}(n+1)!}
+\end{equation*}
+</div>
+<p class="continuation">may not hold.</p>
+<article class="problem example-like" id="prob_Taylor_Series-Binomial_Series_and"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_Taylor_Series-Binomial_Series_and"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.2.5</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_Taylor_Series-Binomial_Series_and"><article class="problem example-like"><p id="p-693"> Show that if <span class="process-math">\(-\frac{1}{2}\leq x\leq c\leq 0\text{,}\)</span> then <span class="process-math">\(|\frac{x}{1+c}|\leq 1\)</span> and modify the above proof to show that the binomial series converges to <span class="process-math">\(\sqrt{1+x}\)</span> for <span class="process-math">\(x\in\left[-\frac{1}{2},0\right]\text{.}\)</span></p></article></div>
+<p id="p-694">To take care of the case where <span class="process-math">\(-1\lt x\lt -\frac{1}{2}\text{,}\)</span> we will use yet another form of the remainder for Taylor series. However before we tackle that, we will use the Lagrange form of the remainder to address something mentioned in <a href="PowerSeriesQuestions.html" class="internal" title="Chapter 5: Questions Concerning Power Series">Chapter 5</a>. Recall that we noticed that the series representation</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/PowerSeriesQuestions.html">
+\begin{equation*}
+\frac{1}{1+x}=1-x+x^2-x^3+\cdots
+\end{equation*}
+</div>
+<p class="continuation">did not work when <span class="process-math">\(x=1\text{,}\)</span> however we noticed that the series obtained by integrating term by term did seem to converge to the antiderivative of <span class="process-math">\(\frac{1}{1+x}\text{.}\)</span> Specifically, we have the Taylor series</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/PowerSeriesQuestions.html">
+\begin{equation*}
+\ln\left(1+x\right)=x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots\text{.}
+\end{equation*}
+</div>
+<p id="p-695">Substituting <span class="process-math">\(x=1\)</span> into this provided the convergent series <span class="process-math">\(1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots\text{.}\)</span> We made the claim that this, in fact, converges to <span class="process-math">\(\ln 2\text{,}\)</span> but that this was not obvious. The Lagrange form of the remainder gives us the machinery to prove this.</p>
+<article class="problem example-like" id="problem-96"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-96"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.2.6</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-96"><article class="problem example-like"><article class="task exercise-like" id="task-87"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-696">Compute the Lagrange form of the remainder for the Maclaurin series for <span class="process-math">\(\ln\left(1+x\right)\text{.}\)</span></p></article><article class="task exercise-like" id="task-88"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-697">Show that when <span class="process-math">\(x=1\text{,}\)</span> the Lagrange form of the remainder converges to <span class="process-math">\(0\)</span> and so the equation <span class="process-math">\(\ln 2=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots\)</span> is actually correct.</p></article></article></div></section></div></main>
+</div>
+</body>
+</html>

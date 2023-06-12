@@ -1,0 +1,55 @@
+
+
+<section>
+  <title>Additional Problems</title>
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h>a constant function is continuous</h></idx>
+        Use the definition of continuity to prove that the constant function <m>g(x)=c</m> is continuous at any point <m>a</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h><m>\ln
+            x</m> is continuous everywhere</h></idx>
+        <ol label="a">
+          <li>
+            <p>
+              Use the definition of continuity to prove that <m>\ln x</m> is continuous at <m>1</m>. 
+              <hint>
+                You may want to use the fact
+                <m>\abs{\ln x}\lt \eps\,\Leftrightarrow-\eps\lt \ln x\lt \eps</m> to find a <m>\delta</m>.
+              </hint>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use part (a) to prove that <m>\ln x</m> is continuous at any positive real number <m>a</m>. 
+              <hint>
+                <m>\ln(x)=\ln(x/a)+\ln(a)</m>.
+                This is a combination of functions which are continuous at <m>a</m>.
+                Be sure to explain how you know that
+                <m>\ln(x/a)</m> is continuous at <m>a</m>.
+              </hint>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>formal definition of discontinuity</h></idx>
+        Write a formal definition of the statement <m>f</m> is not continuous at <m>a</m>, and use it to prove that the function <m>f(x)= \begin{cases}x\amp \text{ if } x\neq 1\\ 0\amp \text{ if } x=1 \end{cases}</m> is not continuous at <m>a=1</m>.
+      </p>
+    </statement>
+  </problem>
+</section>
+

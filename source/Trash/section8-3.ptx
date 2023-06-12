@@ -1,0 +1,293 @@
+
+
+<section>
+  <title>Radius of Convergence of a Power Series</title>
+  <p>
+    We've developed enough machinery to look at the convergence of power series.
+    The fundamental result is the following theorem due to Abel.
+  </p>
+
+  <theorem xml:id="thm_RadiusOfConvergence">
+    <statement>
+      <p>
+            <idx><h>series</h><h>radius of convergence</h></idx>
+            <idx><h>converge inside radius of convergence</h></idx>
+        Suppose <m>\sum_{n=0}^\infty a_nc^n</m> converges for some nonzero real number <m>c</m>.
+        Then <m>\sum_{n=0}^\infty a_nx^n</m> converges absolutely for all <m>x</m> such that <m>|x|\lt |c|</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    To prove <xref ref="thm_RadiusOfConvergence">Theorem</xref>
+    first note that by <xref ref="prob_NthTermTest">Problem</xref>,
+    <m>\limit{n}{\infty}{a_nc^n}=0</m>.
+    Thus <m>\left(a_nc^n\right)</m> is a bounded sequence.
+    Let <m>B</m> be a bound: <m>\abs{ac^n}\le B</m>.
+    Then
+    <me>
+      \abs{a_nx^n}=\abs{a_nc^n\cdot\left(\frac{x}{c}\right)^n}\leq B\abs{\frac{x}{c}}^n
+    </me>.
+  </p>
+
+  <p>
+    We can now use the comparison test.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>power series</h><h>the radius of convergence</h></idx>
+            <idx><h>convergence</h><h>the radius of convergence of a power series</h></idx>
+        Prove <xref ref="thm_RadiusOfConvergence">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <corollary xml:id="cor_RadiusOfDivergence">
+    <statement>
+      <p>
+      Suppose
+        <m>\sum_{n=0}^\infty a_nc^n</m> diverges for some real number <m>c</m>.
+        Then <m>\sum_{n=0}^\infty a_nx^n</m> diverges for all <m>x</m> such that <m>|x|>|c|</m>.
+      </p>
+    </statement>
+  </corollary>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>power series</h><h>the radius of convergence</h></idx>
+            <idx><h>power series</h><h>a power series diverges outside it's radius of convergence</h></idx>
+        Prove <xref ref="cor_RadiusOfDivergence">Corollary</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    As a result of <xref ref="thm_RadiusOfConvergence">Theorem</xref>
+    and <xref ref="cor_RadiusOfDivergence">Corollary</xref>,
+    we have the following:
+    either <m>\sum_{n=0}^\infty a_nx^n</m> converges absolutely for all <m>x</m> or there exists some nonnegative real number <m>r</m> such that
+    <m>\sum_{n=0}^\infty a_nx^n</m> converges absolutely when
+    <m>|x|\lt r</m> and diverges when <m>|x|>r</m>.
+    In the latter case, we call <m>r</m> the
+    <em>radius of convergence</em>
+    of the power series <m>\sum_{n=0}^{\infty}a_{n} x^{n}</m>.
+    In the former case,
+    we say that the radius of convergence of <m>\sum_{n=0}^\infty a_nx^n</m> is <m>\infty</m>.
+    Though we can say that <m>\sum_{n=0}^\infty a_nx^n</m> converges absolutely when <m>|x|\lt r</m>,
+    we cannot say that the convergence is uniform.
+    However, we can come close.
+    We can show that the convergence is uniform for <m>|x|\leq b\lt r</m>.
+    To see this we will use the following result
+  </p>
+
+  <theorem xml:id="thm_WeierstrassM">
+    <statement>
+      <p>
+        <alert>The Weierstrass-<m>M</m> Test</alert>
+      </p>
+      <p>
+        <idx><h>Weierstrass-<m>M</m> Test</h></idx> <idx><h>Weierstrass-<m>M</m> Test</h></idx> Let
+        <m>\left(f_n\right)_{n=1}^\infty</m> be a sequence of functions defined on <m>S\subseteq\RR</m> and suppose that
+        <m>\left(M_n\right)_{n=1}^\infty</m> is a sequence of nonnegative real numbers such that
+        <me>
+          \abs{f_n(x)}\leq M_n,\,\, \forall x\in S,\,\, n=1, 2, 3, \ldots
+        </me>.
+      </p>
+
+      <p>
+        If <m>\sum_{n=1}^\infty M_n</m> converges then
+        <m>\sum_{n=1}^\infty f_n(x)</m> converges uniformly on <m>S</m> to some function (which we will denote by <m>f(x)</m>).
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+<title>Sketch of Proof</title>
+    <p>
+      Since the crucial feature of the theorem is the function <m>f(x)</m> that our series converges to,
+      our plan of attack is to first define <m>f(x)</m> and then show that our series,
+      <m>\sum_{n=1}^\infty f_n(x)</m>,
+      converges to it uniformly.
+    </p>
+
+    <p>
+      First observe that for any <m>x\in S</m>,
+      <m>\sum_{n=1}^\infty f_n(x)</m> converges by the Comparison Test
+      (in fact it converges absolutely)
+      to some number we will denote by <m>f(x)</m>.
+      This actually defines the function <m>f(x)</m> for all <m>x\in S</m>.
+      It follows that <m>\sum_{n=1}^\infty f_n(x)</m> converges pointwise to <m>f(x)</m>.
+    </p>
+
+    <p>
+      Next, let <m>\eps>0</m> be given.
+      Notice that since <m>\sum_{n=1}^\infty M_n</m> converges,
+      say to <m>M</m>,
+      then there is a real number, <m>N</m>,
+      such that if <m>n>N</m>, then
+      <me>
+        \sum_{k=n+1}^\infty M_k = \abs{\sum_{k=n+1}^\infty M_k} = \abs{M-\sum_{k=1}^n M_k}\lt \eps
+      </me>.
+    </p>
+
+    <p>
+      You should be able to use this to show that if <m>n>N</m>, then
+      <me>
+        \abs{f(x) - \sum_{k=1}^n f_k(x)}\lt  \eps, \, \, \forall x\in S
+      </me>.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Weierstrass-<m>M</m> Test</h></idx>
+            <idx><h>Weierstrass-<m>M</m> Test</h></idx>
+        Use the ideas above to provide a formal proof of <xref ref="thm_WeierstrassM">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>     
+    <statement> 
+      <p>
+        <idx><h>uniform convergence</h><h>Fourier Series and</h></idx>
+        <idx><h>Fourier Series</h><h>uniform convergence and</h></idx>
+        
+        <ol label="(a)">
+          <li>
+            <p>
+              Referring back to <xref ref="PDE_sol">equation</xref>,
+              show that the Fourier series
+              <me>
+                \sum_{k=0}^\infty\frac{(-1)^k}{(2k+1)^2}\sin\left((2k+1)\pi x\right)
+              </me>
+              converges uniformly on <m>\RR</m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              Does its differentiated series converge uniformly on <m>\RR?</m> Explain.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Weierstrass-<m>M</m> Test</h></idx>
+            <idx><h>Weierstrass-<m>M</m> Test</h><h>drill problems</h></idx>
+        Observe that for all <m>x \in [-1,1]</m> <m>\abs{x}\le 1</m>.
+        Identify which of the following series converges pointwise and which converges uniformly on the interval <m>[-1,1]</m>.
+        In every case identify the limit function.
+        <m>\displaystyle \text{ (a) } \ \sum_{n=1}^\infty\left(x^n-x^{n-1}\right) \ \ \ \ \ \text{ (b) } \ \sum_{n=1}^\infty\frac{\left(x^n-x^{n-1}\right)}{n} \ \ \ \ \ \text{ (c) } \ \sum_{n=1}^\infty\frac{\left(x^n-x^{n-1}\right)}{n^2}</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Using the Weierstrass-<m>M</m> test,
+    we can prove the following result.
+  </p>
+
+  <theorem xml:id="thm_PowerSeriesConvergeUniformly">
+    <statement>
+      <p>
+            <idx><h>power series</h><h>converge uniformly on their interval of convergence</h></idx>
+        Suppose <m>\sum_{n=0}^\infty a_nx^n</m> has radius of convergence <m>r</m> (where <m>r</m> could be <m>\infty</m> as well).
+        Let <m>b</m> be any nonnegative real number with <m>b\lt r</m>.
+        Then <m>\sum_{n=0}^\infty a_nx^n</m> converges uniformly on <m>[-b,b]</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>uniform convergence</h><h>positive power series and</h></idx>
+        Prove <xref ref="thm_PowerSeriesConvergeUniformly">Theorem</xref>. 
+<hint> We know that <m>\sum_{n=0}^\infty|a_nb^n|</m> converges.
+        This should be all set for the Weierstrass-<m>M</m> test.
+</hint>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    To finish the story on differentiating and integrating power series,
+    all we need to do is show that the power series, its integrated series,
+    and its differentiated series all have the same radius of convergence.
+    You might not realize it,
+    but we already know that the integrated series has a radius of convergence at least as big as the radius of convergence of the original series.
+    Specifically,
+    suppose <m>f(x)=\sum_{n=0}^\infty a_nx^n</m>has a radius of convergence <m>r</m> and let <m>|x|\lt r</m>.
+    We know that <m>\,\sum_{n=0}^\infty a_nx^n</m> converges uniformly on an interval containing <m>0</m>and <m>x</m>,
+    and so by <xref ref="cor_UniformConvergenceDerivative">Corollary</xref>,
+    <m>\int_{t=0}^xf(t)\d t=\sum_{n=0}^\infty\left(\frac{a_n}{n+1}x^{n+1}\right)</m>.
+    In other words,
+    the integrated series converges for any <m>x</m> with<m>\,|x|\lt r</m>.
+    This says that the radius of convergence of the integated series must be at least <m>r</m>.
+  </p>
+
+  <p>
+    To show that the radii of convergence are the same,
+    all we need to show is that the radius of convergence of the differentiated series is at least as big as <m>r</m> as well.
+    Indeed, since the differentiated series of the integrated series is the original,
+    then this would say that the original series and the integrated series have the same radii of convergence.
+    Putting the differentiated series into the role of the original series,
+    the original series is now the integrated series and so these would have the same radii of convergence as well.
+    With this in mind, we want to show that if <m>|x|\lt r</m>,
+    then <m>\sum_{n=0}^\infty a_nnx^{n-1}</m> converges.
+    The strategy is to mimic what we did in <xref ref="thm_RadiusOfConvergence">Theorem</xref>,
+    where we essentially compared our series with a converging geometric series.
+    Only this time we need to start with the differentiated geometric series.
+  </p>
+
+  <problem xml:id="prob_PwrSeriesDiffConv">
+    <statement>
+      <p>
+            <idx><h>uniform convergence</h><h>integration and</h></idx>
+            <idx><h>power series</h><h>term by term integral of</h></idx>
+            <idx><h>power series</h><h>term by term integration of </h></idx>
+        Show that <m>\sum_{n=1}^\infty nx^{n-1}</m> converges for <m>|x|\lt 1</m>. 
+            <hint> 
+              We know
+              that <m>\sum_{k=0}^nx^k=\frac{x^{n+1}-1}{x-1}</m>.
+              Differentiate both sides and take the limit as <m>n</m>
+              approaches infinity.
+            </hint>
+      </p>
+    </statement>
+  </problem>
+
+  <theorem xml:id="thm_SeriesConv-_DerivConv">
+    <statement>
+      <p>
+            <idx><h>power series</h><h>term by term derivative of</h></idx>
+        Suppose <m>\sum_{n=0}^\infty a_nx^n</m> has a radius of convergence <m>r</m> and let <m>|x|\lt r</m>.
+        Then <m>\sum_{n=1}^\infty a_nnx^{n-1}</m> converges.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>power series</h><h>term by term derivative of</h></idx>
+        Prove <xref ref="thm_SeriesConv-_DerivConv">Theorem</xref>. 
+            <hint>
+              Let <m>b</m> be a number with <m>|x|\lt b\lt r</m> and consider <m>\left|a_nnx^{n-1}|=|a_nb^n\cdot\frac{1}{b}\cdot n\left(\frac{x}{b}\right)^{n-1}\right|</m>.
+              You should be able to use the Comparison Test and <xref ref="prob_PwrSeriesDiffConv">Problem</xref>.
+</hint>
+      </p>
+    </statement>
+  </problem>
+</section>
+

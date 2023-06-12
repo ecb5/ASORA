@@ -1,0 +1,760 @@
+
+ASORA.ptx,76
+<?xml version=1,0
+\newcommand{ewcommand31,823
+  <book xml:id=id64,1792
+
+BackToFourier.ptx,1296
+<chapter xmlns:xi=xi1,0
+        f(x)=\sum_{n=0}^\infty a_n(x-a)^n,n17,707
+        f(x)=\sum_{n=0}^\infty a_n(x-a)^n, \text{  then  }  a_n=17,707
+          <idx><h>Fourier,Fourier28,1158
+      For example,32,1234
+      then because of the uniform convergence,34,1382
+      is perfectly legitimate and the coefficients are,35,1516
+      of necessity,36,1572
+      This does not mean that we cannot integrate term-by-term,term38,1711
+          <idx><h>Lebesgue,Lebesgue43,1939
+          <idx><h>Cantor,Cantor44,1984
+          trigonometric series is the Fourier series of a function,48,2222
+          accept,55,2697
+      To begin,61,2818
+        \sum_{um_63,2904
+      We ask: If these two series are equal must it be true that <m>a_n=a_n68,3061
+      <q>certain values,138,5758
+      proved the following theorem,139,5795
+    <theorem xml:id=id143,5882
+    <definition xml:id=id253,9580
+          Determine the derived set,276,10351
+          <ol label=278,10437
+                <m>S=S282,10543
+                <m>S=S289,10734
+                <m>S=S296,10927
+                <m>S=S303,11075
+                <m>S=S310,11284
+                <m>S=S317,11430
+                <m>S=S324,11580
+          <ol label=345,11994
+      that is, <m>S=S492,17206
+
+Bibliography.ptx,21
+  <biblio type=3,43
+
+CalcIn17th18thCentury.ptx,8410
+<chapter xmlns:xi=xi1,0
+        \dfdx{fdx60,2811
+      For example,66,3075
+      <m>\dfdx{y}{x}</m> as an actual quotient of infinitesimals,67,3154
+          <idx><h>Newton,Newton69,3302
+          <idx><h>Leibniz,Leibniz74,3451
+        <mrow>\d(\text{ constant } )\amp mp76,3545
+        <mrow>\d\left(\frac{v}{y}\right)\amp mp79,3699
+        <intertext>and,and80,3775
+        <mrow>\d(x^a)\amp mp81,3840
+      <q>. . . the demonstration of all this will be easy to one who is experienced in such matters . . ..</q> As an example,87,3966
+      <men xml:id=id177,7975
+      <men xml:id=id184,8258
+      Subtracting the right side of <xref ref=190,8479
+                  \d \left(x^{-n}\right)ight262,11690
+      <image width=288,12601
+        <mrow>\d T\amp mp307,13264
+        <mrow>\d T\amp = \left(\frac{1}{v_a}\frac{1}{2}\left(eft307,13264
+      <image width=317,13885
+          <idx><h>Bernoulli,Bernoulli327,14248
+          <idx><h>Brachistochrone problem,328,14294
+      In 330,14382
+      In 1696, Bernoulli posed,330,14382
+      In 1696, Bernoulli posed, and solved,330,14382
+      the Brachistochrone problem;331,14426
+      that is,332,14461
+      As a student of Leibniz,460,20431
+        <mrow>a\d s \amp mp462,20545
+        <mrow>\frac{\d v}{\d t}\d s \amp mp464,20681
+        <mrow>\frac{\d s}{\d t}\d v \amp mp466,20988
+        <intertext>Since <m>\frac{\d s}{\d t}</m> is the rate of change of position with respect to time it is,467,21045
+        <intertext>Since <m>\frac{\d s}{\d t}</m> is the rate of change of position with respect to time it is, in fact,467,21045
+        <mrow>v\d v \amp mp468,21212
+        <mrow>\int{}v\d v \amp mp470,21508
+        <mrow>\frac{v^2}{2} \amp mp471,21560
+        <mrow>\frac{a}{g}\amp mp484,22020
+        <mrow>a \amp mp485,22071
+        <intertext>Moreover,Moreover486,22115
+        <mrow>\dfdx{v}{t} \amp mp487,22226
+        <intertext>Now observe that by the Chain Rule <m>\dfdx{fdx488,22280
+        <intertext>Now observe that by the Chain Rule <m>\dfdx{v}{t} = \dfdx{v}{s}\dfdx{s}{t}</m>. The physical interpretation of this formula is that velocity will depend on <m>s</m>, how far down the wire the bead has moved,488,22280
+        <mrow>\dfdx{v}{s}\dfdx{s}{t} \amp mp489,22602
+        <mrow>\dfdx{s}{t}\dfdx{v}{s} \amp mp491,22700
+        <intertext>and since <m>\dfdx{fdx492,22764
+        <mrow>v\dfdx{v}{s} \amp mp493,22836
+        <mrow>\int{}v\dfdx{v}{s}d s \amp mp495,22976
+        <mrow>\int{}vd v \amp mp496,23048
+        <mrow>\frac{v^2}{2} \amp mp498,23151
+      <m>\dfdx{y}{u}\dfdx{fdx507,23647
+        <mrow number="no">\frac{\sin\alpha}{v} \amp mp524,24358
+        <mrow number=526,24512
+        <mrow number="no">\frac{\frac{d x}{d s}}{\sqrt{2gy}} \amp mp526,24512
+        <mrow number="no">\frac{d x}{\sqrt{2gy(ds)^2}} \amp mp527,24589
+        <mrow xml:id="eq_Brachistochrone">\frac{d x}{\sqrt{2gy\left[(d x)^2+(d y)^2\right]}} \amp mp528,24660
+          Show that the equations <m>x=\frac{t-\sin t}{4gc^2},\,y=540,24983
+          Show that the equations <m>x=\frac{t-\sin t}{4gc^2},\,y=\frac{1-\cos t}{4gc^2}</m> satisfy equation <xref ref=540,24983
+<section xml:id=id554,25574
+    Unfortunately,562,26022
+    For example,564,26097
+          \sum_{um_587,27099
+          \sum_{n=0}^\infty a_n(x-a)^n=n587,27099
+    Before we continue,600,27503
+    After all,602,27714
+    the <idx><h>series</h><h>Geometric series</h><h>naive derivation</h></idx> geometric series <m>\sum_{n=0}^\infty x^n=n615,28199
+    If we substitute <m>x=x630,28642
+    If we substitute <m>x=\frac{1}{10}</m> into the above,630,28642
+      1+\frac{1}{10}+\left(\frac{1}{10}\right)^2+\left(\frac{1}{10}\right)^3+ \cdots=dots633,28724
+    This agrees with the fact that <m>.333\ldots=dots638,28872
+    and so <m>.111\ldots=dots639,28938
+    and <m>1.111\ldots=dots640,28980
+    Substituting <m>x=x645,29100
+          y=\sum_{n=0}^\infty a_nx^n=n679,30541
+          a_n=700,31016
+          y=707,31211
+          y=\sum_{n=0}^\infty\frac{a_0}{n!}x^n=n707,31211
+        we get <m>1=a_0(1+0+\frac{1}{2!}0^2+\cdots)dots713,31382
+          E(x)=\sum_{n=0}^\infty\frac{1}{n!}x^n=n718,31624
+      <mrow>\amp mp745,32359
+      <mrow>\amp mp746,32547
+      <mrow>\amp mp748,32909
+      <mrow>\amp mp751,33348
+      <mrow number=756,33760
+      <mrow number=757,33882
+      <mrow number=758,34013
+      <mrow number=759,34170
+      <mrow xml:id=id760,34320
+            <idx><h><m>e^x</m></h><h><m>E(-x)x786,34974
+  <definition xml:id=id820,35864
+    However the series <m>\sum_{um_850,37061
+    In fact,851,37249
+    In fact, defining the exponential function via this series answers the question we raised in  <xref ref=851,37249
+    (in <m>\ZZ</m>)863,37832
+    <m>4^{\sqrt{2}}</m> which is consistent with,870,38167
+    For example,881,38722
+      <mrow>\int_{nt_883,38756
+      <mrow>\int_{x=0}^b\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}d x \amp mp883,38756
+      <mrow>\int_{x=0}^b\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}d x \amp  =\frac{1}{\sqrt{2\pi}}\int_{nt_883,38756
+      <mrow>\int_{x=0}^b\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}d x \amp  =\frac{1}{\sqrt{2\pi}}\int_{x=0}^b\left(eft883,38756
+      <mrow>\amp =\frac{1}{\sqrt{2\pi}}\,\sum_{um_884,38945
+      <mrow>\amp mp885,39076
+      <mrow>\amp =\frac{1}{\sqrt{2\pi}}\,\sum_{um_885,39076
+                a_{n+2}=\frac{-1}{\left(eft903,39764
+              Since <m>y=y914,40154
+                \sin x=x-\frac{1}{3!}\,x^3+\frac{1}{5!}x^5-\frac{1}{7!}x^7+\cdots=dots922,40621
+        <ol label=937,41079
+                \sin x=x-\frac{1}{3!}\,x^3+\frac{1}{5!}x^5-\frac{1}{7!}x^7+\cdots=dots942,41183
+                \cos x=946,41409
+                \cos x=1-\frac{1}{2!}\,x^2+\frac{1}{4!}x^4-\frac{1}{6!}x^6+\cdots=dots946,41409
+        Use the geometric series,968,42334
+          \arctan x=970,42524
+          \arctan x=x-\frac{1}{3}x^3+\frac{1}{5}x^5-\cdots=dots970,42524
+        Use the series above to obtain the series <m>\frac{rac975,42667
+        <idx><h>Newton,Newton997,43558
+      \left(a+b\right)^N=N1009,44183
+      <mrow>\binom{N}{n}\amp mp1013,44273
+      <mrow>\amp mp1014,44341
+      <mrow>\amp mp1015,44437
+    Unfortunately,1020,44532
+    Just as this sum becomes is less cumbersome when written as <m>\sum_{um_1032,45014
+      N\left(eft1034,45154
+    consistent with the convention <m>\sum_{j=0}^{-1}s_j=s_j1053,45869
+      \left(1+x\right)^N=1+\sum_{n=1}^N\left(eft1069,46316
+      \left(1+x\right)^N=1+\sum_{n=1}^N\left(\frac{\prod_{j=0}^{n-1}\left(N-j\right)}{n!}\right)x^n = \sum_{n=0}^N\left(eft1069,46316
+    In this case,1085,46932
+    <m>\prod_{rod_1086,46950
+    (the one where <m>n=n1087,47062
+      \left(1+x\right)^N=1+\sum_{n=1}^\infty\left(eft1090,47171
+      \left(1+x\right)^N=1+\sum_{n=1}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(N-j\right)}{n!}\text{ } \right)x^n= \sum_{n=0}^\infty\left(eft1090,47171
+      \left(1+x\right)^{\frac{1}{2}}=1+\sum_{n=1}^\infty\left(eft1097,47678
+      \left(1+x\right)^{\frac{1}{2}}=1+\sum_{n=1}^\infty\left(\frac{ \prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}\right)x^n=\sum_{n=0}^\infty\left(eft1097,47678
+      \left(1+x\right)^{\frac{1}{2}}=1+\frac{1}{2}x+\frac{rac1101,47949
+      \left(1+x\right)^{\frac{1}{2}}=1+\frac{1}{2}x+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)}{2!}x^2+\frac{rac1101,47949
+            <idx><h>Binomial Series,1117,48604
+          <mrow>\left(1+x\right)^{\frac{1}{2}}\amp mp1123,48752
+          <mrow>\amp mp1124,48888
+    Convinced that he had the correct series,1155,49832
+    Convinced that he had the correct series, Newton used it to find a series representation of <m>\int_{nt_1155,49832
+          <mrow>\frac{\pi}{4}\amp mp1164,50262
+          <mrow>\amp mp1165,50334
+          <mrow>\amp =\sum_{n=0}^\infty\left(eft1165,50334
+          <mrow>\amp mp1166,50500
+    Again,1177,50805
+    Again, Newton had a series which could be verified 1177,50805
+                \int_{x=0}^{1/2}\sqrt{x-x^2}\d x=1191,51169
+                \pi=i1195,51409
+              With this in mind,1207,51953
+      <mrow>\left(1+x\right)^\alpha \amp  =\sum_{n=0}^\infty\left(eft1221,52531
+      <mrow>\amp =1+\alpha x+\frac{\alpha\left(\alpha-1\right)}{2!}x^2+\frac{rac1222,52673
+
+Continuity.ptx,8260
+<chapter xmlns:xi=xi1,0
+    The real world will be what it is regardless of what we believe it to be,57,2253
+    We will simply postulate that no such jerkiness exists;61,2443
+    However we <em>are</em> constrained to live with the logical consequences of our assumptions,66,2552
+      \frac{4}{\pi}\sum_{um_88,3639
+    <image width=109,4573
+    then <m>f</m> is continuous everywhere,148,5867
+    Such a function is somewhat <q>fractal</q> in nature,150,5946
+            <idx><h>Weierstrass,Weierstrass157,6150
+            <idx><h>Weierstrass, Karl</h><h>continuous,continuous157,6150
+        <ol label=160,6361
+    The language Bolzano uses is very similar to the language Leibniz <idx><h>Leibniz,Leibniz222,9044
+    <m>\abs{x-a}</m> is smaller than any real number we could name,230,9633
+    Possibly very small real numbers to be sure,235,9871
+        <idx><h>Bolzano,Bolzano242,10042
+        <idx><h>Cauchy,Cauchy244,10127
+  <definition xml:id=id251,10520
+    In the definition of <m>\lim_{n\rightarrow\infty}s_n=s_n314,13592
+    More precisely,318,13843
+    In our definition of continuity,323,13994
+    only this time,325,14114
+    As <m>\eps</m> becomes smaller,332,14409
+    That we can always find a positive distance <m>\delta</m> to work is what we mean when we say that we can make <m>f(x)</m> as close to <m>f(a)</m> as we wish,334,14502
+        <ol label=458,18865
+        is continuous at <m>a=a501,20876
+        Use the definition of continuity to show that <m>f(x)= \sqrt{x}</m> is continuous at <m>a=a510,21067
+        <m>f(x)=\sqrt{x}</m> is continuous at <m>a=a532,22008
+      We work backwards from what we want,545,22425
+      This seems to suggest that we should make <m>\delta=elta553,22727
+      Thus by definition,569,23177
+    <caption>Paul Halmos<idx><h>Halmos,Halmos574,23283
+    <image width=575,23366
+        <ol label=623,25157
+    In the above problems,677,26735
+    Consider,680,26982
+      f(x)= \begin{cases}x\,\sin\left(\frac{1}{x}\right),\amp \text{ if } x\neq 0\\ 0\text{,} \amp \text{ if } x=682,27069
+    Near zero,687,27222
+    <image width=688,27279
+    However our completely analytic definition of continuity shows that this function is,694,27550
+    However our completely analytic definition of continuity shows that this function is, in fact,694,27550
+          f(x)= \begin{cases}x\,\sin\left(\frac{1}{x}\right),\amp \text{ if } x\neq 0\\ 0\text{,} \amp \text{ if } x=704,27868
+    To the naked eye,719,28323
+    the graph of this function looks like the lines <m>y=y720,28345
+            <idx><h>continuity</h><h>of <m>                D(x)= \begin{cases}x,x741,29234
+            <idx><h>continuity</h><h>of <m>                D(x)= \begin{cases}x,\amp \text{ if } x\text{ext741,29234
+        <ol label=744,29427
+                D(x)= \begin{cases}x,x749,29575
+                D(x)= \begin{cases}x,\amp \text{ if } x\text{ext749,29575
+    The two ideas are actually quite closely connected,786,30980
+  <theorem xml:id=id790,31101
+          \forall\text{ sequences } \left(eft796,31356
+          \forall\text{ sequences } \left(x_n\right)\text{, if } \,\,\lim_{n\rightarrow\infty}x_n=x_n796,31356
+    <xref ref=803,31571
+  <example xml:id=id823,32530
+          f(x)= \begin{cases}\frac{|x|}{x}\text{,} \amp \text{ if } x\neq 0\\ 0\text{,} \amp \text{ if } x=828,32697
+          f(x)= \begin{cases}1\amp \text{ if } x>0\\ -1\amp \text{ if } x\lt 0\\ 0\amp \text{ if } x=837,32971
+        We have <m>\displaystyle\lim_{n\rightarrow\infty}\frac{rac854,33623
+          f(x)= \begin{cases}\frac{rac869,34210
+          f(x)= \begin{cases}\frac{\abs{x}}{x},\amp \text{ if } x\neq 0\\ a,869,34210
+          f(x)= \begin{cases}\frac{\abs{x}}{x},\amp \text{ if } x\neq 0\\ a,                   \amp \text{ if } x=869,34210
+            <idx><h>continuity</h><h>of <m>                D(x)= \begin{cases}x,x880,34513
+            <idx><h>continuity</h><h>of <m>                D(x)= \begin{cases}x,\amp \text{ if } x\text{ext880,34513
+        Use <xref ref=882,34705
+        <m>T</m> has roots at <m>\frac{rac898,35433
+        <m>T</m> has roots at <m>\frac{1}{n\pi},\,n\in\ZZ,Z898,35433
+        <image width=901,35617
+          T(x)= \begin{cases}\sin\left(\frac{1}{x}\right),\amp \text{ if } x\neq 0\\ b,908,35868
+          T(x)= \begin{cases}\sin\left(\frac{1}{x}\right),\amp \text{ if } x\neq 0\\ b,\amp \text{ if } x=908,35868
+        Use <xref ref=913,36026
+      <m>\lim_{n\rightarrow\infty}x_n=x_n933,36906
+      If we continue in this fashion,956,38138
+    Specifically,1024,41254
+    suppose <m>f_1,f_11025,41272
+    suppose <m>f_1,\,f_2,1025,41272
+    suppose <m>f_1,\,f_2,f_3,1025,41272
+    Let <m>\delta=elta1034,41600
+      \left|\sum_{j=1}^\infty f_j(x)-\sum_{um_1037,41722
+      \left|\sum_{j=1}^\infty f_j(x)-\sum_{j=1}^\infty f_j(1037,41722
+      \left|\sum_{j=1}^\infty f_j(x)-\sum_{j=1}^\infty f_j(a)\right|=\left|\sum_{j=1}^\infty\left(eft1037,41722
+      \leq\,\sum_{j=1}^\infty|f_j(x)-f_j(a)|\lt \sum_{um_1040,41867
+      \frac{4}{\pi}\sum_{um_1054,42255
+    It is,1068,42955
+    It is, as we said,1068,42955
+    <xref ref=1072,43005
+              The picture is below;1105,44449
+              <image width=1106,44501
+    if <m>f</m> is continuous at <m>a</m> and <m>\lim_{n\rightarrow\infty}x_n=x_n1230,48335
+        <ol label=1241,48720
+        <image width=1329,52138
+    Before we delve into this,1357,53263
+    notice that it is very similar to the definition of the continuity of <m>f(x)</m> at <m>x=x1358,53294
+    In fact we can readily see that <m>f \text{ is continuous at } x=1359,53395
+    Again,1379,54074
+    we will not even consider what happens when <m>x=x1380,54132
+    To put that more mathematically,1398,54892
+    the limit parameter <m>n</m> was taken from the set of positive integers,1399,54929
+    Again,1406,55236
+    Again, to be more mathematical in our language we would say that the limit parameter <m>x</m> is taken from the <m>\ldots</m> Well,1406,55236
+    actually,1407,55372
+    From <xref ref=1409,55590
+          With this in mind,1440,56857
+          \abs{\frac{x^2-1}{x-1}-2}=\abs{(x+1)-2}=\abs{x-1}\lt \delta=elta1460,57412
+        <ol label=1490,58321
+                  <mrow>\abs{\frac{x^3-1}{x-1}-3} \amp mp1496,58474
+                  <mrow>\amp mp1498,58616
+                  <mrow>\amp mp1499,58681
+                  <mrow>\abs{\frac{\sqrt{x}-1}{x-1}-\frac12}\amp mp1511,59028
+                  <mrow>\amp mp1512,59137
+                  <mrow>\amp mp1513,59239
+    to show that <m>\limit{imit1526,59563
+      f \text{ is continuous at } x=1536,60049
+          \forall \text{ sequences }  (x_n)1558,60869
+          \forall \text{ sequences }  (x_n), x_n\ne a,1558,60869
+          \forall \text{ sequences }  (x_n), x_n\ne a, \text{ if } \limit{imit1558,60869
+    Armed with this,1565,61073
+  <theorem xml:id=id1569,61172
+          \text{ area } (\Delta OAC)\lt \text{ext1678,64571
+          That is, <m>f^\prime(x)</m> exists if and only if <m>\forall \text{ sequences }  (h_n)1757,67405
+          Since <m>\limit{imit1762,67674
+  <theorem xml:id=id1771,67897
+      <m>a_n a_n1821,69559
+      The proof consists of showing that <m>f^\prime(rime1822,69648
+      <m>\frac{1}{n_0}\lt b-c</m> and take <m>\left(h_n\right)=\left(\frac{1}{n}\right)_{_1834,70027
+      Then <m>f\left(c+\frac1n\right)-f(f1835,70135
+        \frac{f\left(c+h_n\right)-f(c)}{h_n}\leq eq1837,70230
+        \frac{f\left(c+h_n\right)-f(c)}{h_n}\leq 0, \ \ \forall n=1837,70230
+    However,1887,71690
+    In fact,1895,72139
+        <idx><h>Newton,Newton1896,72189
+  <theorem xml:id=id1903,72509
+              Use part 2116,79333
+        Write a formal definition of the statement <m>f</m> is not continuous at <m>a</m>, and use it to prove that the function <m>f(x)= \begin{cases}x\amp \text{ if } x\neq 1\\ 0\amp \text{ if } x=2134,79936
+        Write a formal definition of the statement <m>f</m> is not continuous at <m>a</m>, and use it to prove that the function <m>f(x)= \begin{cases}x\amp \text{ if } x\neq 1\\ 0\amp \text{ if } x=1 \end{cases}</m> is not continuous at <m>a=a2134,79936
+
+ConverSeqSer.ptx,5066
+<chapter xmlns:xi=xi3,2
+    For example,12,419
+    substituting <m>x=x13,436
+      1+1+1+\cdots=\frac{1}{0} \text{ and }  1-1+1-1+\cdots=dots15,519
+    On the other hand,18,639
+    <m>1+\frac{1}{2}+\left(\frac{1}{2}\right)^2+\left(\frac{1}{2}\right)^3+\cdots=dots20,731
+    <!-- <sidebyside width=42,1694
+    But when speaking mathematically we need to be more careful,85,4156
+    more explicit,86,4221
+    For example,93,4473
+    you would probably want to say that the sequence <m>\left(1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\,\ldots\right)=\left( \frac{1}{n}\right)_{_94,4490
+    <m>\frac{1}{n}</m> as close to zero as we wish,100,4809
+    For example,103,4955
+  <definition xml:id=id111,5455
+        and write <m>\lim_{n\rightarrow\infty}s_n=s_n118,5793
+          that is,132,6223
+          Without the absolute value in the definition,145,6867
+          such outrageous statements as <m>\lim_{n\rightarrow\infty}-n=n147,6966
+      Hence by definition,196,8609
+      Hence by definition, <m>\lim_{n\rightarrow\infty}\frac{rac196,8609
+          \lim_{n\rightarrow\infty}\frac{rac230,9611
+      <m>\abs{bs243,9890
+      Hence by definition,244,9951
+      <m>\lim_{n\rightarrow\infty}\frac{rac245,9978
+    Again this scrapwork is not part of the formal proof,257,10287
+            <m>\displaystyle\lim_{n\rightarrow\infty}\frac{rac273,10905
+          Also,300,11680
+        Let <m>N=N316,12566
+        Hence by definition,326,12932
+  <problem xml:id=id352,13629
+        <idx><h>limit</h><h><m>\lim_{n\rightarrow\infty}b^n=n355,13692
+              Use part (a) to prove <m>\lim_{n\rightarrow\infty}b^n=n367,14072
+          \left(1+(-1)^n\right)_{n=0}^\infty=nfty384,14486
+        then <m>n=n409,15643
+  <problem xml:id=id418,15987
+        Negate the definition of <m>\lim_{n\rightarrow\infty}s_n=s_n422,16129
+  <problem xml:id=id427,16320
+    Now that we have a handle on how to rigorously prove that a sequence converges to zero,437,16641
+    Basically,439,16827
+  <definition xml:id=id445,17063
+        <m>\lim_{n\rightarrow\infty}s_n=s_n452,17512
+          \lim_{n\rightarrow\infty}s_n=s_n468,17878
+          This in turn,537,19657
+          seems to suggest that <m>N=N538,19681
+        Let <m>N=N543,19814
+    After all, we did already prove that <m>\lim_{n\rightarrow\infty}\frac{rac594,21965
+        Let <m>\left(c\right)_{n=1}^\infty=nfty667,24422
+        Show that <m>\lim_{n\rightarrow\infty}c=c668,24508
+  <problem xml:id=id707,25392
+        If <m>\displaystyle\lim_{n\rightarrow\infty}a_n=a_n740,26240
+        If <m>\displaystyle\lim_{n\rightarrow\infty}a_n=a</m> and <m>\displaystyle\lim_{n\rightarrow\infty}b_n=b_n740,26240
+    Fortunately,775,27973
+    <m>\limit{imit776,28028
+    Also since <m>\limit{imit780,28351
+    Since we want both of these to occur,782,28503
+    it makes sense to let <m>N=N783,28545
+        If <m>\displaystyle\lim_{n\rightarrow\infty}a_n=a_n803,28997
+        If <m>\displaystyle\lim_{n\rightarrow\infty}a_n=a</m> and <m>\displaystyle\lim_{n\rightarrow\infty}b_n=b_n803,28997
+      At first glance,841,31016
+      According to the definition of <m>\lim_{n\rightarrow\infty}b_n=b_n846,31259
+      <m>\frac{\eps}{2|a_n|}</m> is not fixed as it has the variable <m>n</m> in it;851,31557
+      To handle this impasse,853,31745
+    <lemma xml:id=id856,31808
+          If <m>\lim_{n\rightarrow\infty}a_n=a_n862,31967
+              Let <m>B=B877,32625
+              Also,879,32849
+                Actually,880,32975
+      <mrow>\left|a_n\cdot b_n-a\cdot b\right|\amp mp891,33269
+        <m>\displaystyle\lim_{n\rightarrow\infty}a_n=a_n920,34174
+        then <m>\displaystyle\lim_{n\rightarrow\infty}c\cdot a_n=921,34260
+        Suppose <m>\displaystyle\lim_{n\rightarrow\infty}a_n=a_n946,34962
+        Suppose <m>\displaystyle\lim_{n\rightarrow\infty}a_n=a</m> and <m>\displaystyle\lim_{n\rightarrow\infty}b_n=b_n946,34962
+      To prove this,958,35360
+      The general case will follow from this and <xref ref=960,35509
+      We are faced with the same dilemma as before;962,35689
+      Thus,971,36030
+      <m>\lim_{n\rightarrow\infty}b_n=b_n972,36063
+        Prove <xref ref=987,36697
+  <theorem xml:id=id1018,37683
+        Suppose <m>\lim_{n\rightarrow\infty}r_n=r_n1028,38071
+        Then <m>\left(s_n\right)</m> must converge and <m>\lim_{n\rightarrow\infty}s_n=s_n1029,38155
+      Since <m>\displaystyle\lim_{im_1068,39495
+      then by the Squeeze Theorem,1069,39594
+    How <em>not</em> to prove <xref ref=1081,39931
+      0=\lim_{n\rightarrow\infty}0 \leq \lim_{n\rightarrow\infty}\frac{n+1}{n^2}\leq\lim_{n\rightarrow\infty}\frac{rac1088,40114
+    <m>\lim_{n\rightarrow\infty}\frac{n+1}{n^2}</m> exists,1098,40393
+    If we knew that the limit existed to begin with,1100,40482
+    The Squeeze Theorem proves that the limit does in fact exist,1101,40560
+    However,1107,40849
+    However,1108,41009
+    However, before we go into that,1108,41009
+<section xml:id=id1116,41117
+
+Epilogue.ptx,2751
+<chapter xmlns:xi=xi1,0
+      These authors begin their tome with the question,40,1093
+      <q>What is a number?</q> This is an unusually silly question,41,1149
+      What about this quantity <m>\aleph_0?</m> If this counts the positive integers,51,1448
+      If not,53,1559
+      If so,54,1605
+      If we unwind our notation and language,101,3425
+      If we unwind our notation and language, your statement is simply,101,3425
+      You said earlier that we all know what numbers are,281,10388
+      There is no zero,518,18402
+      To be sure, they will not have lost any of their charm; They will be the same delightful mix of the mundane and the bizarre,850,28936
+      A reasonable question then,856,29279
+      A reasonable question then, is,856,29279
+      <q>Why bother?</q> If the process is overwhelmingly,857,29317
+      <q>Why bother?</q> If the process is overwhelmingly, tediously detailed857,29317
+      Such a dark area may hide anything;873,30076
+      But really,889,30807
+      But really, most calculuations were889,30807
+      <m>x=x1209,42453
+      <m>x=\sum_{i=1}^\infty\frac{d_i}{10^i}</m> and <m>y=y1209,42453
+        x+y=y1211,42570
+        x+y= \sum_{i=1}^\infty\frac{e_i}{10^i} \text{ext1211,42570
+                <m>(x+y)+z=z1548,55382
+      usually called common sense; no technical philosophic,1650,59708
+      mathematical,1651,59772
+      in<nbsp /><xref ref=1652,59843
+      Notice that care must be taken not to actually refer to irrational numbers in the properties as the purpose is to construct them from rational numbers,1773,64317
+            We need to know what a set is,1784,64751
+            we need to know what a rational number is,1785,64794
+    <theorem xml:id=id1938,69997
+          <mrow>x_\alpha\left(eft1995,71843
+        Therefore <m>x_\alpha\left(eft2002,72099
+          y=2005,72279
+          y=x_\alpha\left(\frac{y}{x_\alpha+x_\beta}\right)+x_\beta\left(eft2005,72279
+      numbers as well as distinct from zero,2072,74265
+      call negative numbers,2073,74328
+      <q>minus</q>). In this,2076,74510
+      considered as the same number 2077,74576
+      Indeed,2117,76059
+      Notice that the case where <m>\alpha</m> and <m>\beta</m> are both positive was already handled by <xref ref=2195,78590
+      This is handled with the definition below,2228,80182
+    <definition xml:id=id2238,80628
+      To show that,2286,82715
+      To show that, in fact,2286,82715
+      To show that, in fact, <m>\beta+(\alpha-\beta)eta2286,82715
+              <idx><h>Dedekind,Dedekind2325,84170
+          Prove that <m>\beta+(\alpha-\beta)eta2327,84343
+      <m>{\cal F}_2</m> are both linearly ordered fields,2369,86305
+      <m>x,x2370,86363
+
+Instructor.ptx,300
+<chapter xmlns:xi=xi3,2
+    This is a perfectly legitimate story of Real Analysis and,24,1197
+    logically,25,1260
+    Indeed,26,1300
+    However,27,1405
+    However, it is our contention that your students will appreciate the subject more,27,1405
+    and hopefully retain it better,28,1492
+
+Interegnum.ptx,3341
+<chapter xmlns:xi=xi1,0
+      <mrow>u(u41,2066
+    that is,49,2404
+    Assuming that <m>u</m> has this form,50,2492
+    we get <m>\frac{\partial^2u}{\partial x^2}=X^{\prime\prime}T</m> and <m>\frac{rac51,2534
+      \rho^2X^{\prime\prime}T=T55,2813
+    Since the left-hand side involves no <m>t</m>'s and the right-hand side involves no <m>x</m>'s,s60,2944
+      X^{\prime\prime}=k X\text{ and } T^\prime=rime63,3113
+        Show that <m>T=Ce^{\rho^2kt}</m> satisfies the equation <m>T^\prime=rime72,3403
+    Using the result from <xref ref=83,3819
+          \int_{x=0}^1\sin\left(eft154,6534
+          \int_{x=0}^1\sin\left(n\pi x\right)\sin\left(m\pi x\right)\d x= \left\{\begin{matrix}0\amp \text{ if } n\neq m\\ \frac{1}{2}\amp \text{ if } n=154,6534
+    Armed with the result from <xref ref=161,6776
+      <mrow>\int_{x=0}^1f(f169,7292
+      <mrow>\int_{x=0}^1f(x)\sin\left(n\pi x\right)\d x \amp =\int_{x=0}^1\left(eft169,7292
+      <mrow>\amp =\sum_{j=1}^\infty A_j\int_{nt_170,7467
+      <mrow>\amp =\sum_{j=1}^\infty A_j\int_{x=0}^1\sin\left(eft170,7467
+    This leads to the formula <m>A_n=A_n176,7645
+    This leads to the formula <m>A_n=2\int_{x=0}^1f(f176,7645
+    The above series <m>f(x)=\sum_{n=1}^\infty A_n\sin\left(n\pi x\right)</m> with <m>A_n=A_n180,7745
+    The above series <m>f(x)=\sum_{n=1}^\infty A_n\sin\left(n\pi x\right)</m> with <m>A_n=2\int_{x=0}^1f(f180,7745
+        <image width=190,8162
+          \int_{nt_206,8550
+          \int_{x=0}^1f(f206,8550
+          f(x)=\sum_{n=1}^\infty\frac{4}{\left(n\pi\right)^2}\sin\left(eft210,8763
+          f(x)=\sum_{n=1}^\infty\frac{4}{\left(n\pi\right)^2}\sin\left(\frac{n\pi}{2} \right)\sin\left(n\pi x\right)=\frac{4}{\pi^2}\sum_{um_210,8763
+      S_N(x)=\frac{4}{\pi^2}\sum_{um_220,9165
+    That is,225,9316
+    <men xml:id=id266,10560
+      f(x)=\frac{4}{\pi^2}\sum_{um_267,10587
+    Recall,273,10804
+    Recall, that when we represented a function as a power series,273,10804
+    To start,279,11032
+    <m>x=x291,11370
+    <image width=292,11423
+      \frac{4}{\pi}\sum_{um_298,11570
+    Again, if we let <m>C_N(x)=\frac{4}{\pi}\sum_{um_303,11715
+    <m>\frac{4}{\pi}\sum_{um_318,12398
+    <sidebyside widths=322,12564
+    Notice also,331,12923
+    that every partial sum of this series is continuous,332,12940
+    This agrees with what you learned in calculus,334,13066
+    the 335,13117
+      \frac{4}{\pi}\sum_{um_351,13889
+    Using the old adage that the derivative of a sum is the sum of the derivatives,357,14201
+      4\sum_{um_360,14361
+    If we sum the first forty terms of this series,365,14471
+    we get <image width=366,14523
+  <problem xml:id=id374,14753
+          4\sum_{um_381,15006
+    <xref ref=388,15277
+      \frac{4}{\pi}\sum_{um_391,15385
+          \int_{x=0}^1\cos\left(eft435,17598
+          \int_{x=0}^1\cos\left(n\pi x\right)\cos\left(m\pi x\right)\d x=\left\{ \begin{matrix}0\amp \text{ if } n\neq m\\ \frac{1}{2}\amp \text{ if } n=435,17598
+  <problem xml:id=id441,17831
+          B_m=451,18206
+          B_m=2\int_{x=0}^1f(f451,18206
+        Apply the result of <xref ref=461,18484
+          \frac{-4}{\pi^2}\sum_{um_463,18665
+        Let <m>C(x,N)=\frac{-4}{\pi^2}\sum_{um_468,18804
+                \frac{-4}{\pi^2}\sum_{um_484,19402
+
+IVTEVT.ptx,3352
+<chapter xmlns:xi=xi1,0
+    However,30,1340
+    As we saw in <xref ref=32,1443
+    According to the IVT,44,1955
+    That is, <m>\bigcap_{n=1}^\infty[nfty190,7080
+        then <m>\lim_{n\rightarrow\infty}x_n=x_n208,7890
+        then <m>\lim_{n\rightarrow\infty}x_n=c</m> and <m>\lim_{n\rightarrow\infty}y_n=y_n208,7890
+    In fact,242,8960
+    In fact, throughout this proof,242,8960
+    (square roots)ch th244,9077
+      There are many possibilities,258,9596
+      but how about <m>x_1=x_1259,9632
+        y_2-x_2=x_2296,11247
+      Now we play the same game,301,11326
+      If <m>m_2^2\leq a</m>, we relabel <m>x_3=x_3305,11541
+        y_3-x_3=x_3313,11907
+      Continuing in this manner,318,12020
+      Continuing in this manner, we will produce two sequences,318,12020
+    <m>\forall</m> <m>n,n387,14514
+    In applying the NIP to prove the IVT and EVT,388,14567
+    Before we tackle the IVT and EVT,393,14774
+    Recall that the Harmonic Series,395,14966
+    <m>1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots</m>, grows without bound,396,15003
+    that is,397,15081
+    that is, <m>\sum_{um_397,15081
+    that is, <m>\sum_{n=1}^\infty\frac{rac397,15081
+    You might want to say that obviously it should,423,16687
+    we will use it to show that this limit,428,16995
+    we will use it to show that this limit, in fact,428,16995
+            <idx><h>Euler,Euler435,17148
+        <ol label=442,17475
+              <image width=451,17780
+              Let <m>y_n=y_n465,18180
+      <m>f(f560,21530
+    Indeed, we would have <m>\lim_{n\rightarrow\infty}x_n=x_n647,25029
+        Let <m>\left(n_k\right)_{k=1}^\infty</m> be a strictly increasing sequence of positive integers;674,26259
+        that is,675,26364
+        that is, <m>n_1\lt n_2\lt n_3\lt \cdots</m> . If <m>\left(eft675,26364
+        that is, <m>n_1\lt n_2\lt n_3\lt \cdots</m> . If <m>\left(x_n\right)_{n=1}^\infty</m>is a sequence,675,26364
+        then <m>\left(eft676,26472
+        then <m>\left(x_{n_k}\right)_{k=1}^\infty=nfty676,26472
+    The idea is that a subsequence of a sequence is a part of the sequence,682,26676
+    However,684,26798
+    We can choose any term in our sequence to be part of the subsequence,685,26844
+    but once we choose that term,686,26918
+    For example,688,27052
+    In fact,692,27267
+    In fact, the thing about a subsequence is that it is all in the subscripts;692,27267
+        <ol label=704,27639
+              <m>\left(x_2,\,x_4,\,x_6,\,\ldots\right)=\left(x_{2k}\right)_{_707,27695
+              <m>\left(x_1,\,x_4,\,x_9,\,\ldots\right)=\left(x_{k^2}\right)_{_713,27852
+        <ol label=732,28229
+    The subscripts in the examples we have seen so far have a discernable pattern,756,28688
+    For example,758,28806
+        Suppose <m>\lim_{n\rightarrow\infty}x_n=x_n769,29139
+        Prove that <m>\lim_{k\rightarrow\infty}x_{x_770,29194
+        <idx><h>Bolzano,Bolzano781,29531
+    and,782,29575
+    and, later,782,29575
+        <idx><h>Weierstrass,Weierstrass783,29613
+    Basically,785,29682
+  <theorem xml:id=id788,29795
+        <m>\lim_{k\rightarrow\infty}x_{x_799,30235
+      \left((-1)^{2k}\right)ight814,30548
+    as <m>\left((-1)^{2k+1}\right)ight818,30689
+    <m>\left(n\right)</m> represent these possibilities as the first has,822,30972
+
+NumbersRealRational.ptx,2275
+<chapter xmlns:xi=xi1,0
+    <theorem xml:id=id94,4349
+          Confirm that <m>\alpha, M, \text{ and } N</m> as given in the proof of <xref ref=118,5114
+      <image width=156,6819
+      integers.  That is,162,7029
+      known since ancient times,163,7096
+        <mrow>\frac{a}{b} \amp mp188,7977
+        <mrow>a^2 \amp mp190,8085
+        <mrow>2k^2\amp mp193,8372
+      In other words,215,9082
+              <idx><h>irrational numbers drill,223,9300
+          <ol label=226,9432
+      The fact that <m>\sqrt{2}</m> is not rational is cute and interesting,263,10190
+      but unless,264,10267
+      but unless, like the Pythagoreans of ancient Greece,264,10267
+      you have a strongly held religious conviction that all numbers are rational,265,10326
+      On the other hand,267,10452
+      If the exponent were a rational number,270,10629
+      The more you think about this,275,10914
+      <image width=286,11364
+      <image width=297,11752
+      When the diagonal coincides with the <m>x-</m>axis,axis301,11929
+      Put differently,317,12461
+      <image width=328,12803
+      And yet,342,13225
+    <theorem xml:id=id345,13280
+      Mathematicians of the seventeenth and eighteenth centuries made amazing scientific and mathematical progress exploiting these infinitesimals,425,16680
+      No matter how many times you add the infinitesimal <m>\d x</m> to itself the result will not be bigger than,427,16880
+      When foundational issues came to the forefront,432,17065
+      Most of the time you probably used the prime notation,435,17226
+          <idx><h>Lagrange,Lagrange437,17335
+      Some of the themes in this book are: Why differentials fell out of favor,439,17419
+      To conclude this aside on the Archimedean Property,444,17624
+      the idea of infinitesimals was revisited in the twentieth century by the logician Abraham Robinson in<nbsp /><xref ref=445,17682
+      He simply said,545,21720
+      To be sure there is no record of Newton explicitly saying,550,21866
+      Along with everyone else at the time,552,22015
+      It took about <m>200</m> years of puzzling and arguing over the contradictions,554,22117
+      The task may not yet be fully accomplished,556,22300
+      <image width=561,22581
+
+PowerSeriesQuestions.ptx,1587
+<chapter xmlns:xi=xi1,0
+        then <m>a_n=a_n30,1343
+    A few comments about <xref ref=37,1545
+    At this point we have every reason to expect that it does,43,1922
+    however expectation is not proof so we note that this is an assumption,44,1985
+    Similarly,46,2091
+    As before,47,2226
+        Prove <xref ref=55,2429
+      \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n=n72,2908
+    <caption>Brook Taylor<idx><h>Taylor,Taylor77,3100
+    <image width=78,3185
+        in his 1779 work <foreign>Th&#xe9;orie des Fonctions Analytiques</foreign>. In that work,103,4274
+    His idea was that by representing every function as a power series,104,4515
+    That is,112,4933
+    <q>great big polynomial,113,4991
+    It was a very simple,115,5071
+    Since <m>e^x x116,5143
+    <caption>Joseph-Louis Lagrange<idx><h>Lagrange,Lagrange137,5844
+    <image width=138,5947
+    <m>g_2=g_2152,6468
+      g_n=154,6524
+    <foreign><q>fonction d&#xe9;xe9160,6617
+    <foreign><q>fonction d&#xe9;riv&#xe9;xe9160,6617
+    All in all,165,6745
+        <idx><h>Cauchy,Cauchy168,7033
+    <men xml:id=id170,7103
+      f(x) = \begin{cases} e^{-\frac{1}{x^2}}\amp  x\ne0\\ 0 \amp x=171,7141
+    This function is actually infinitely differentiable everywhere but its Maclaurin series176,7249
+      <mrow>f^{(0)}(x) \amp mp191,7859
+      <mrow>f^{(1)}(x) \amp mp192,7907
+      <mrow>f^{(2)}(x) \amp mp193,7963
+    To streamline things a bit we take <m>y=y199,8186
+      f^{(2)}(x)202,8301
+            <idx><h>Cauchy,Cauchy209,8417
+        <ol label=211,8509
+
+PowerSeriesRedux.ptx,743
+<chapter xmlns:xi=xi1,0
+      <mrow>\amp mp18,1095
+    <image width=24,1285
+        Suppose <m>f_1, f_2, f_3, f_4 \ldots</m> are all continuous at <m>a</m> and that <m>\sum_{n=1}^\infty f_n=76,3923
+        Let <m>\delta=elta81,4267
+          <mrow>\abs{f(x)-f(a)} \amp mp84,4390
+          <mrow>\amp mp85,4498
+          <mrow>\amp \le \sum_{um_86,4580
+          <mrow>\amp \le \sum_{um_87,4651
+          <mrow>\amp \le \eps\sum_{um_88,4718
+          <mrow>\amp mp89,4786
+    we have <m>f_n\ptwise f\text{ on } S\Leftrightarrow \forall\,x\in S,117,5748
+  <definition xml:id=id125,6071
+    In pointwise convergence,146,6891
+    the sequence <m>\left(f_n(x)\right)=\left(x^n\right)_{n=0}^\infty</m> of <xref ref=175,8236
+
+TaylorSeries.ptx,1695
+<chapter xmlns:xi=xi1,0
+      \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n=n11,495
+      \left(\sum_{j=0}^n\frac{f^{(j)}(a)}{j!}(x-a)^j\right)_{_19,833
+      \left(\sum_{j=0}^n\frac{f^{(j)}(a)}{j!}(x-a)^j\right)_{n=0}^\infty nfty19,833
+    As intimidating as this may look,23,1243
+      \lim_{n\rightarrow\infty}\Biggl[iggl31,1799
+    Fortunately,60,2982
+    Recall the result from <xref ref=66,3124
+      <mrow>\amp +\frac{1}{n!}\int_{nt_70,3402
+      f(x)-\left(\sum_{j=0}^n\frac{f^{(j)}(a)}{j!}(x-a)^j\right)=\frac{1}{n!}\int_{nt_77,3548
+    The expression <m>\frac{1}{n!}\int_{nt_82,3686
+  <theorem xml:id=id89,4279
+    In order to prove this,109,4920
+  <lemma xml:id=id112,5000
+          \left|\int_{nt_117,5173
+          \left|\int_{t=a}^bf(bf117,5173
+             <h><m>f^{(n)}\lt B,140,5702
+        Prove <xref ref=142,5807
+                <mrow>\left|\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d t\right|\amp mp152,6399
+                <mrow>\left|\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d t\right|\amp =\left|(-1)^{n+1}\int_{nt_152,6399
+                <mrow>\amp mp153,6541
+  <problem xml:id=id160,6708
+              <m>\displaystyle\cos x=176,7150
+              <m>\displaystyle e^x=x183,7331
+    Part c of <xref ref=192,7497
+    We can,219,8716
+    As we saw in <xref ref=244,9723
+      <mrow>f^\prime(rime253,10165
+      <mrow>f^{\prime\prime\prime}(t)\amp =\frac{1}{2}\left(eft255,10337
+      <mrow>f^{(n+1)}(t)\amp mp257,10504
+      <mrow>f^{(n+1)}(t)\amp =\frac{1}{2}\left(eft257,10504
+      \sqrt{1+x}=1+\frac{1}{2}x+\frac{rac274,11266
+      \sqrt{1+x}=1+\frac{1}{2}x+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)}{2!}x^2+\frac{rac274,11266
+
+ThreeLessons.ptx,686
+<chapter xmlns:xi=xi1,0
+    Leibniz<idx><h>Leibniz,Leibniz81,1846
+    </fn> A principal goal of this course of study is to rectify this,91,2232
+      <mrow xml:id="eq_QForm2">x^2+\frac{b}{a}x\amp mp114,2858
+      <intertext>Now let <m>x=x115,2931
+      <mrow xml:id=id116,2999
+      <mrow>y\amp mp117,3078
+      <mrow xml:id=id118,3135
+    Probably the step from <xref ref=124,3279
+    That is, let <m>x=y-\frac{b}{2a}</m> in <xref ref=145,3898
+          x^2+\frac{b}{a}x +\frac{rac253,8171
+          <mrow xml:id=id370,13283
+        Equations <xref ref=375,13437
+          <mrow>r_2\amp mp380,13671
+<section xml:id=id389,13802
+  <theorem xml:id=id617,21391

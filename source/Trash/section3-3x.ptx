@@ -1,0 +1,41 @@
+
+
+<section>
+  <title>Additional Problems</title>
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Taylor's Formula</h><h>drill problems </h></idx>
+        Use Taylor's formula to find the Taylor series of the given function expanded about the given point <m>a</m>.
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>f(x)=\ln\left(1+x\right)</m>, <m>a=0</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x)=e^x</m>, <m>a=-1</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x)=x^3+x^2+x+1</m>, <m>a=0</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x)=x^3+x^2+x+1</m>, <m>a=1</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+</section>
+

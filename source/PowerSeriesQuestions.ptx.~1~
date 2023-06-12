@@ -1,0 +1,9 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chpt_PowerSeriesQuestions">
+  <title>Questions Concerning Power Series</title>
+  <xi:include  href="section3-1.ptx" />
+  <xi:include  href="section3-2.ptx" />
+  <xi:include  href="section3-3x.ptx" />
+</chapter>
+

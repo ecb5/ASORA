@@ -1,0 +1,846 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="PowerSeriesQuestions">
+  <title>Questions Concerning Power Series</title>
+
+
+<section  xml:id="PowerSeriesQuestions-TaylorsFormula">
+  <title>Taylor's Formula</title>
+  <p>
+    As we saw in the previous chapter,
+    representing functions as power series was a fruitful strategy for mathematicans in the eighteenth century
+    (as it still is).
+    Differentiating and integrating power series term by term was relatively easy,
+    <em>seemed</em> to work, and led to many applications.
+    Furthermore,
+    power series representations for all of the elementary functions could be obtained if one was clever enough.
+  </p>
+
+  <p>
+    However, cleverness is an unreliable tool.
+    Is there some systematic way to find a power series for a given function?
+    To be sure, there were nagging questions: If we can find a power series,
+    how do we know that the series we've created represents the function we started with?
+    Even worse, is it possible for a function to have more than one power series representation centered at a given value <m>a?</m> This uniqueness issue is addressed by the following theorem.
+  </p>
+
+  <theorem xml:id="TaylorSeriesThm">
+    <statement>
+      <p>
+        <idx><h>Taylor's Formula</h></idx>
+        If <m>f(x)=\sum_{n=0}^\infty a_n(x-a)^n</m>,
+        then <m>a_n=\frac{f^{(n)}(a)}{n!}</m>,
+        where <m>f^{(n)}(a)</m> represents the <m>n^{th}</m> derivative of <m>f</m> evaluated at <m>a</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    A few comments about <xref ref="TaylorSeriesThm">Theorem</xref> are in order.
+    Notice that we did <em>not</em>
+    start with a function and derive its series representation.
+    Instead we <em>defined</em> <m>f(x)</m> to be the series we wrote down.
+    This assumes that the expression <m>\sum_{n=0}^\infty a_n(x-a)^n</m> actually has meaning
+    (that it converges).
+    At this point we have every reason to expect that it does,
+    however expectation is not proof so we note that this is an assumption,
+    not an established truth.
+    Similarly, the idea that we can differentiate an infinite polynomial term-by-term as we would a finite polynomial is also assumed.
+    As before, we follow in the footsteps of our 18th century forebears in making these assumptions.
+    For now.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Taylor's Formula</h></idx>
+        Prove <xref ref="TaylorSeriesThm">Theorem</xref>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        <m>f(a)=a_0+a_1(a-a)+a_2(a-a)^2+\cdots=a_0</m>.
+        Differentiate to obtain the other terms.
+      </p>
+    </hint>
+  </problem>
+
+  <p>
+    From <xref ref="TaylorSeriesThm">Theorem</xref>
+    we see that if we do start with the function <m>f(x)</m> then no matter how we obtain its power series,
+    the result will always be the same.
+    The series
+    <me>
+      \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n=f(a)+f^\prime(a)(x-a)+\frac{f^{\prime\prime}(a)}{2!}(x-a)^2+\frac{f^{\prime\prime\prime}(a)}{3!}(x-a)^3+\cdots
+    </me>
+  </p>
+
+  <figure>
+    <caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/">Brook Taylor</url></caption>
+    <idx><h>Taylor, Brook</h><h>portrait of</h></idx>
+    <image width="35%" source="images/Taylor.png" />
+  </figure>
+
+  <p>
+    is called the <em><alert>Taylor series</alert> for <m>f</m> expanded about
+    (centered at)
+    <m>a</m></em>.
+    Although this systematic <q>machine</q>
+    for obtaining power series for a function seems to have been known to a number of mathematicians in the early 1700's, Brook Taylor 
+        <idx><h>Taylor, Brook</h></idx>
+        was the first to publish this result in his <foreign>Methodus Incrementorum</foreign> (1715).
+    The special case when <m>a=0</m> was included by Colin Maclaurin
+        <idx><h>Maclaurin, Colin</h></idx>
+    in his <em>Treatise of Fluxions</em> (1742).
+    Thus when <m>a=0</m>,
+    the series <m>\sum_{n=0}^\infty\frac{f^{(n)}(0)}{n!}x^n</m> is often called the
+    <em> Maclaurin Series for <m>f</m></em>.
+  </p>
+
+  <p>
+    The <q>prime notation</q> for the derivative was not used by Taylor, 
+        <idx><h>Taylor, Brook</h></idx>
+    Maclaurin or their contemporaries.
+    It was introduced by Joseph Louis Lagrange
+        <idx><h>Lagrange, Joseph-Louis</h></idx>
+        in his 1779 work <foreign>Th&#xe9;orie des Fonctions Analytiques</foreign>. In that work, Lagrange sought to get rid of Leibniz's infinitesimals<idx><h>Leibniz, Gottfried Wilhelm</h></idx> and base calculus on the power series idea.
+    His idea was that by representing every function as a power series,
+    calculus could be done <q>algebraically</q>
+    by manipulating power series and examining various aspects of the series representation instead of appealing to the <q>controversial</q>
+    notion of infinitesimals.
+    He implicitly assumed that every continuous function could be replaced with its power series representation.
+  </p>
+
+  <p>
+    That is, he wanted to think of the Taylor series as a
+    <q>great big polynomial,</q>
+    because polynomials are easy to work with.
+    It was a very simple, yet exceedingly clever and far-reaching idea.
+    Since <m>e^x = 1 +x +x^2/2 +\ldots</m>, for example,
+    why not just define the exponential to be the series and work with the series.
+    After all, the series is just a very long polynomial.
+  </p>
+
+  <p>
+    This idea did not come out of nowhere.
+    Leonhard Euler 
+        <idx><h>Euler, Leonhard</h></idx>
+    had put exactly that idea to work to solve many problems throughout the 18th century.
+    Some of his solutions are still quite breath-taking when you first see them<nbsp /><xref ref="sandifer07__early_mathem_leonar_euler" />.
+  </p>
+
+  <p>
+    Taking his cue from the Taylor series
+    <me>
+      f(x) = \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n
+    </me>
+  </p>
+
+  <figure>
+    <caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/">Joseph-Louis Lagrange</url></caption>
+    <idx><h>Lagrange, Joseph-Louis</h><h>portrait of</h></idx>
+    <image width="35%" source="images/Lagrange.png" />
+  </figure>
+
+  <p>
+    Lagrange observed that the coefficient of <m>(x-a)^n</m> provides the derivative of <m>f</m> at <m>a</m>
+    (divided by <m>n!</m>).
+    Modifying the formula above to suit his purpose, Lagrange supposed that every differentiable function could be represented as
+    <me>
+      f(x) = \sum_{n=0}^\infty g_n(a)(x-a)^n
+    </me>.
+  </p>
+
+  <p>
+    If we regard the parameter <m>a</m> as a variable then <m>g_1</m> is the derivative of <m>f</m>,
+    <m>g_2=2f^{\prime\prime}</m> and generally
+    <me>
+      g_n=n!f^{(n)}
+    </me>.
+  </p>
+
+  <p>
+    Lagrange dubbed his function <m>g_1</m> the
+    <foreign><q>fonction d&#xe9;riv&#xe9;e</q></foreign>
+    from which we get the modern name <q>derivative.</q>
+  </p>
+
+  <p>
+    All in all, this was a very clever and insightful idea whose only real flaw is that its fundamental assumption is not true.
+    It turns out that not every differentiable function can be represented as a Taylor series.
+    This was demonstrated very dramatically by Augustin Cauchy's
+        <idx><h>Cauchy, Augustin</h></idx>
+    famous counter-example
+    <men xml:id="eq_CauchyCounterEx">
+      f(x) = \begin{cases} e^{-\frac{1}{x^2}}\amp  x\ne0\\ 0 \amp x=0 \end{cases}
+    </men>.
+  </p>
+
+  <p>
+    This function is actually infinitely differentiable everywhere but its Maclaurin series
+    (that is, a Taylor series with <m>a=0</m>)
+    does not converge to <m>f</m> because all of its derivatives at the origin are equal to zero:
+    <m>f^{(n)}(0) = 0, \forall n\in\NN</m>.
+  </p>
+
+  <p>
+    Computing these derivatives using the definition you learned in calculus is not conceptually difficult but the formulas involved do become complicated rather quickly.
+    Some care must be taken to avoid error.
+  </p>
+
+  <p>
+    To begin with,
+    let's compute a few derivatives when <m>x \neq 0</m>.
+    <md>
+      <mrow>f^{(0)}(x) \amp = e^{x^{-2}}</mrow>
+      <mrow>f^{(1)}(x) \amp = 2x^{-3}e^{-x^{-2}}</mrow>
+      <mrow>f^{(2)}(x) \amp = \left(4x^{-6}-6x^{-4}\right)e^{-x^{-2}}</mrow>
+    </md>.
+  </p>
+
+  <p>
+    As you can see the calculations are already getting a little complicated and we've only taken the second derivative.
+    To streamline things a bit we take <m>y= x^{-1}</m>,
+    and define <m>p_2(x) = 4x^6-6x^4</m> so that
+    <me>
+      f^{(2)}(x) = p_2(x^{-1})e^{-x^{-2}} = p_2(y)e^{-y^2}
+      </me>.
+  </p>
+
+  <problem><title>Cauchy's Counterexample, Part 1</title>
+    <idx><h>Cauchy, Augustin</h><h>Cauchy's counterexample</h><h> part 1</h></idx>
+    <task>
+      <statement>
+        <p>
+          Adopting the notation <m>y=x^{-1}</m> and <m>f^{(n)}(x) =p_n(y)e^{-y^2}</m>,
+          find <m>p_{n+1}(y)</m> in terms of
+          <m>p_{n}(y)</m>. 
+          [Note: Don't forget that you are differentiating with respect to <m>x</m>, not <m>y</m>.]
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use induction on <m>n</m> to show that <m>p_n(y)</m> is a polynomial for all <m>n\in\NN</m>.
+        </p>
+      </statement>
+    </task>
+  </problem>
+
+  <p>
+    Unfortunately everything we've done so far only gives us the derivatives we need when <m>x</m> is <em>not</em> zero,
+    and we need the derivatives when <m>x</m> <em>is</em> zero.
+    To find these we need to get back to very basic ideas.
+  </p>
+
+  <p>
+    Let's assume for the moment that we know that <m>f^{(n)}(0)=0</m> and recall that
+    <md>
+      <mrow>f^{(n+1)}(0) \amp = \limit{x}{0}{\frac{f^{(n)}(x)-f^{(n)}(0)}{x-0}}</mrow>
+      <mrow>f^{(n+1)}(0) \amp = \limit{x}{0}{x^{-1}p_n(x^{-1})e^{-x^{-2}}}</mrow>
+      <mrow>f^{(n+1)}(0) \amp = \limit{y}{\pm\infty}{\frac{yp_n(y)}{e^{y^2}}}</mrow>
+    </md>.
+  </p>
+
+  <p>
+    We can close the deal with the following problem.
+  </p>
+
+  <problem><title>Cauchy's Counterexample, Part 2</title>
+    <idx><h>Cauchy, Augustin</h><h>Cauchy's counterexample</h><h>part 2</h></idx>
+<task>
+<statement>
+        <p>
+          Let <m>m</m> be a nonnegative integer.
+          Show that <m>\limit{y}{\pm\infty}{\frac{y^m}{e^{y^2}}}=0</m>. 
+        </p>
+</statement>
+        <hint>
+          <p>
+            Induction and a dash of L'H&#xf4;pital's rule should do the trick.
+          </p>
+        </hint>
+</task>
+<task>
+<statement>
+        <p>
+          Prove that
+          <m>\limit{y}{\pm\infty}{\frac{q(y)}{e^{y^2}}}=0</m> for any
+          polynomial <m>q</m>.
+        </p>
+</statement>
+</task>
+<task>
+<statement>
+        <p>
+          Let <m>f(x)</m> be as in <xref ref="eq_CauchyCounterEx">equation</xref>
+          and show that for every nonnegative integer <m>n</m>, <m>f^{(n)}(0)=0</m>.
+        </p>
+</statement>
+</task>
+  </problem>
+
+  <p>
+    This example showed that while it was fruitful to exploit Taylor
+    series representations of various functions, basing the
+    foundations of calculus on power series was not a sound idea.
+  </p>
+
+  <p>
+    While Lagrange's
+        <idx><h>Lagrange, Joseph-Louis</h></idx>
+    approach wasn't totally successful,
+    it was a major step away from infinitesimals and toward the modern approach.
+    We still use aspects of it today.
+    For instance we still use his prime notation (<m>f^\prime</m>) to denote the derivative.
+  </p>
+
+  <p>
+    Turning Lagrange's idea on its head it is clear that if we know how to compute derivatives,
+    we can use this machine to obtain a power series when we are not <q>clever enough</q>
+    to obtain the series in other
+    (typically shorter)
+    ways.
+    For example,
+    consider Newton's binomial series when <m>\alpha=\frac{1}{2}</m>.
+    Originally, we obtained this series by extending the binomial theorem to non-integer exponents.
+    Taylor's formula provides a more systematic way to obtain this series:
+    <md>
+      <mrow>f(x)\amp =(1+x)^{\frac{1}{2}};\amp f(0)\amp =1</mrow>
+      <mrow>f^\prime(x)\amp =\frac{1}{2}(1+x)^{\frac{1}{2}-1};\amp  f^\prime(0)\amp =\frac{1}{2}</mrow>
+      <mrow>f^{\prime\prime}(x)\amp =\frac{1}{2}\left(\frac{1}{2}-1\right)(1+x)^{\frac{1}{2}-2}\amp f^{\prime\prime}(0)\amp =\frac{1}{2}\left(\frac{1}{2}-1\right)</mrow>
+    </md>
+    and in general since
+    <md>
+      <mrow>f^{(n)}(x)\amp =\frac{1}{2}\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-(n-1)\right)(1+x)^{\frac{1}{2}-n}</mrow>
+      <intertext>we have</intertext>
+      <mrow>f^{(n)}(0)\amp =\frac{1}{2}\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-(n-1)\right)</mrow>
+    </md>.
+  </p>
+
+  <p>
+    Using Taylor's formula we obtain the series
+    <me>
+      \sum_{n=0}^\infty\frac{f^{(n)}(0)}{n!}x^n = 1+\sum_{n=1}^\infty\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)\cdots\left( \frac{1}{2}-(n-1)\right)}{n!}x^n= 1+\sum_{n=1}^\infty\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}x^n
+    </me>
+    which agrees with <xref ref="eq_BinomialSeries">equation</xref> in the previous chapter.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Taylor's Formula</h><h>use to obtain the general binomial series</h></idx>
+        Use Taylor's formula to obtain the general binomial series
+        <me>
+          (1+x)^\alpha=1+\sum_{n=1}^\infty\frac{\prod_{j=0}^{n-1}\left(\alpha-j\right)}{n!}x^n.{}
+        </me>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h><m>e^x</m></h><h>Taylor's series for</h></idx>
+        <idx><h>series</h><h>Taylor's series</h><h>expansion of <m>e^x, \sin x</m>, and <m>\cos x</m></h></idx>
+        <idx><h><m>\sin x</m></h><h>Taylor's series for</h></idx>
+        <idx><h><m>\cos x</m></h><h>Taylor's series for</h></idx>
+Use Taylor's formula to obtain the Taylor series for the functions <m>e^x</m>,
+        sin <m>x</m>, and cos <m>x</m> expanded about <m>a</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    As you can see, Taylor's <q>machine</q>
+    will produce the power series for a function
+    (if it has one),
+    but is tedious to perform.
+    We will find, generally,
+    that this tediousness can be an obstacle to understanding.
+    In many cases it will be better to be clever if we can.
+    This is usually shorter.
+    However, it is comforting to have Taylor's formula available as a last resort.
+  </p>
+
+  <p>
+    The existence of a Taylor series is addressed
+    (to some degree)
+    by the following.
+  </p>
+
+  <theorem xml:id="TaylorsTheorem">
+    <statement>
+      <p>
+            <idx><h>Taylor's Theorem</h></idx>
+        If <m>f^\prime,\,f^{\prime\prime},\,\ldots,\,f^{(n+1)}</m> are all continuous on an interval containing <m>a</m> and <m>x</m>, then
+        <md>
+          <mrow>f(x)=f(a)+\frac{f^{\prime}(a)}{1!}(x-a)+\frac{f^{\prime \prime}(a)}{2!}(x-a)^2\amp +\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n</mrow>
+          <mrow>\amp + \frac{1}{n!}\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{t}</mrow>
+        </md>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Before we address the proof, notice that the <m>n</m>-th degree polynomial
+    <me>
+      f(a)+\frac{f^{\,\prime}(a)}{1!}(x-a)+\frac{f^{\,\prime\prime}(a)}{2!}(x-a)^2+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n
+    </me>
+    resembles the Taylor series and, in fact,
+    is called the <em> <m>n</m>-th degree Taylor polynomial of
+    <m>f</m> about <m>a</m>.</em>
+    <xref ref="TaylorsTheorem">Theorem</xref>
+    says that a function can be written as the sum of this polynomial and a specific integral which we will analyze in the next chapter.
+    We will get the proof started and leave the formal induction proof as an exercise.
+  </p>
+
+  <p>
+    Notice that the case when <m>n=0</m> is really a restatement of the Fundamental Theorem of Calculus.
+    Specifically, the FTC says
+    <m>\int_{t=a}^xf^\prime(t)\dx{ t}=f(x)-f(a)</m> which we can rewrite as
+    <me>
+      f(x)=f(a)+\frac{1}{0!}\int_{t=a}^xf^\prime(t)(x-t)^0\dx{ t}
+    </me>
+    to provide the anchor step for our induction.
+  </p>
+
+  <p>
+    To derive the case where <m>n=1</m>,
+    we use integration by parts.
+    If we let
+    <md>
+      <mrow>u\amp =f^\prime(t)\amp  d v\amp =(x-t)^0d t</mrow>
+      <mrow>d u\amp =f^{\prime\prime}(t)d t\amp  v\amp =-\frac{1}{1}(x-t)^1</mrow>
+    </md>
+    we obtain
+    <md>
+      <mrow>f(x)\amp =f(a)+\frac{1}{0!}\left(-\frac{1}{1}f^\prime(t)(x-t)^1|_{t=a}^{^x}+\frac{1}{1} \int_{t=a}^xf^{\prime\prime}(t)(x-t)^1\dx{ t}\right)</mrow>
+      <mrow>\amp =f(a)+\frac{1}{0!}\left(-\frac{1}{1}f^\prime(x)(x-x)^1+ \frac{1}{1}f^\prime(a)(x-a)^1+\frac{1}{1}\int_{t=a}^xf^{\prime\prime}(t)(x-t)^1\dx{ t}\right)</mrow>
+      <mrow>\amp =f(a)+\frac{1}{1!}f^\prime(a)\left(x-a\right)^1 + \frac{1}{1!}\int_{t=a}^xf^{\prime\prime}(t)(x-t)^1\dx{ t}</mrow>
+    </md>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Taylor's Theorem</h></idx>
+        Provide a formal induction proof for <xref ref="TaylorsTheorem">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+</section>
+
+
+
+<section  xml:id="PowerSeriesQuestions-SeriesAnomalies">
+  <title>Series Anomalies</title>
+  <p>
+    Up to this point,
+    we have been somewhat frivolous in our approach to series.
+    This approach mirrors eighteenth century mathematicians who ingeniously exploited calculus and series to provide mathematical and physical results which were virtually unobtainable before.
+    Mathematicans were eager to push these techniques as far as they could to obtain their results and they often showed good intuition regarding what was mathematically acceptable and what was not.
+    However, as the envelope was pushed,
+    questions about the validity of the methods surfaced.
+  </p>
+
+  <p>
+    As an illustration consider the series expansion
+    <me>
+      \frac{1}{1+x}=1-x+x^2-x^3+\cdots
+    </me>.
+  </p>
+
+  <p>
+    If we substitute <m>x=1</m> into this equation, we obtain
+    <me>
+      \frac{1}{2}=1-1+1-1+\cdots
+    </me>.
+  </p>
+
+  <p>
+    If we group the terms as follows <m>(1-1)+(1-1)+\cdots</m>,
+    the series would equal <m>0</m>.
+    A regrouping of <m>1+(-1+1)+(-1+1)+\cdots</m> provides an answer of <m>1</m>.
+    This violation of the associative law of addition did not escape the mathematicians of the 1700's.
+    In his 1760 paper <em>On Divergent Series</em> Euler
+        <idx><h>Euler, Leonhard</h></idx>
+    said:
+  </p>
+
+<blockquote>
+  <p>
+    Notable enough, however are the controversies over the series
+    <m>1-1+1-1+etc</m>, <idx><h>Leibniz, Gottfried Wilhelm</h></idx> whose sum was given by
+    Leibniz as <m>\frac{1}{2}</m>, although others disagree .<nbsp />.<nbsp />.
+    Understanding of this question is to be sought in the word <q>sum;</q>
+    this idea, if thus conceived - namely, the sum of a series is said
+    to be that quantity to which it is brought closer as more terms of a
+    series are taken - has relevance only for the convergent series, and
+    we should in general give up this idea of sum for divergent series.
+    On the other hand, as series in analysis arise from the expansion of
+    fractions or irrational quantities or even of transcendentals, it
+    will, in turn, be permissible in calculation to substitute in place
+    of such series that quantity out of whose development it is
+    produced.
+  </p>
+</blockquote>
+
+  <p>
+    Even with this formal approach to series,
+    an interesting question arises.
+    The series for the antiderivative of <m>\frac{1}{1+x}</m> <em>does</em>
+    converge for <m>x=1</m> while this one does not.
+    Specifically,
+    taking the antiderivative of the above series, we obtain
+    <me>
+      \ln(1+x)=x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots
+    </me>.
+  </p>
+
+  <p>
+    If we substitute <m>x=1</m> into this series,
+    we obtain <m>\ln 2=1-\frac{1}{2}+\frac{1}{3}-\cdots</m>.
+    It is not hard to see that such an alternating series converges.
+    The following picture shows why.
+    In this diagram,
+    <m>S_n</m> denotes the partial sum <m>1-\frac{1}{2}+\frac{1}{3}-\cdots+\frac{(-1)^{n+1}}{n}</m>.
+  </p>
+
+    <image width="90%" source="images/AltHarmonic.png" />
+
+  <p>
+    From the diagram we can see
+    <m>S_2\leq S_4\leq S_6\leq\cdots\leq\cdots\leq S_5\leq S_3\leq S_1</m> and <m>S_{2k+1}-S_{2k}=\frac{1}{2k+1}</m>.
+    It seems that the sequence of partial sums will converge to whatever is in the <q>middle.</q>
+    Our diagram indicates that it is ln <m>2</m> in the middle but actually this is not obvious.
+    Nonetheless it is interesting that one series converges for <m>x=1</m> but the other does not.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>series</h><h>Taylor's series</h><h>used to approximate <m>\ln 2</m></h></idx>
+        Use the fact that
+        <me>
+          1-\frac{1}{2}+\frac{1}{3}-\cdots+\frac{(-1)^{2k+1}}{2k}\leq\ln 2\leq 1-\frac{1}{2}+\frac{1}{3}-\cdots+\frac{(-1)^{2k+2}}{2k+1}
+        </me>
+        to determine how many terms of the series
+        <m>\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n}</m> should be added together to approximate <m>\ln 2</m> to within <m>.0001</m> without actually computing what <m>\ln 2</m> is.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    There is an even more perplexing situation brought about by these examples.
+    An infinite sum such as <m>1-1+1-1+\cdots</m> appears to not satisfy the associative law for addition.
+    While a convergent series such as
+    <m>1-\frac{1}{2}+\frac{1}{3}-\cdots</m> does satisfy the associative law,
+    it does not satisfy the commutative law.
+    In fact, it does not satisfy it rather spectacularly.
+  </p>
+
+  <p>
+    A generalization of the following result was stated and proved by Bernhard Riemann 
+        <idx><h>Riemann, Bernhard</h></idx>
+    in 1854.
+  </p>
+
+  <theorem xml:id="thm_rearrangements">
+    <idx><h>series</h><h>Alternating Harmonic Series</h><h>rearrangements of</h></idx>
+    <statement>
+      <p>
+        Let <m>a</m> be any real number.
+        There exists a rearrangement of the series
+        <m>1-\frac{1}{2}+\frac{1}{3}-\cdots</m> which converges to <m>a</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    This theorem shows that a series is most decidedly
+    <em>not</em> a great big sum.
+    It follows that a power series is
+    <em>not</em> a great big polynomial.
+  </p>
+
+  <p>
+    To set the stage, consider the <em>harmonic series</em>
+        <idx><h>series</h><h>Harmonic Series</h></idx>
+    <me>
+      \sum_{n=1}^\infty\frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\cdots
+    </me>.
+  </p>
+
+  <p>
+    Even though the individual terms in this series converge to <m>0</m>,
+    the series still diverges
+    (to infinity)
+    as evidenced by the inequality
+    <md>
+      <mrow>\left(1+\frac{1}{2}\right)\amp +\left(\frac{1}{3}+\frac{1}{4}\right)+\left(\frac{1}{5}+\frac{1}{6}+ \frac{1}{7}+\frac{1}{8}\right)+\left(\frac{1}{9}+\cdots+\frac{1}{16}\right)+\cdots</mrow>
+      <mrow>\amp >\frac{1}{2}+\left(\frac{1}{4}+\frac{1}{4}\right)+\left(\frac{1}{8}+ \frac{1}{8}+\frac{1}{8}+\frac{1}{8}\right)+\left(\frac{1}{16}+\cdots+\frac{1}{16}\right)+\cdots</mrow>
+      <mrow>\amp =\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\cdots</mrow>
+      <mrow>\amp =   \infty</mrow>
+    </md>.
+  </p>
+
+  <p>
+    Armed with this fact,
+    we can see why <xref ref="thm_rearrangements">Theorem</xref> is true.
+    First note that
+    <me>
+      -\frac{1}{2}-\frac{1}{4}-\frac{1}{6}-\cdots=-\frac{1}{2}(1+\frac{1}{2}+ \frac{1}{3}+\cdots)=-\infty
+    </me>
+    and
+    <me>
+      1+\frac{1}{3}+\frac{1}{5}+\cdots\geq\frac{1}{2}+\frac{1}{4}+\frac{1}{6}+\ldots= \infty
+    </me>.
+  </p>
+
+  <p>
+    This says that if we add enough terms of
+    <m>-\frac{1}{2}-\frac{1}{4}-\frac{1}{6}-\cdots</m> we can make such a sum as small as we wish and if we add enough terms of
+    <m>1+\frac{1}{3}+\frac{1}{5}+\cdots</m> we can make such a sum as large as we wish.
+    This provides us with the general outline of the proof.
+    The trick is to add just enough positive terms until the sum is just greater than <m>a</m>.
+    Then we start to add on negative terms until the sum is just less than <m>a</m>.
+    Picking up where we left off with the positive terms,
+    we add on just enough positive terms until we are just above <m>a</m> again.
+    We then add on negative terms until we are below <m>a</m>.
+    In essence, we are bouncing back and forth around <m>a</m>.
+    If we do this carefully,
+    then we can get this rearrangement to converge to <m>a</m>.
+    The notation in the proof below gets a bit hairy,
+    but keep this general idea in mind as you read through it.
+  </p>
+
+  <p>
+    Let <m>O_1</m> be the first odd integer such that <m>1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}>a</m>.
+    Now choose <m>E_1</m> to be the first even integer such that
+    <me>
+      -\frac{1}{2}-\frac{1}{4}-\frac{1}{6}-\cdots-\frac{1}{E_1} \lt a-\left(1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}\right)
+    </me>.
+  </p>
+
+  <p>
+    Thus
+    <me>
+      1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4} - \frac{1}{6}-\cdots-\frac{1}{E_1}\lt a
+    </me>.
+  </p>
+
+  <p>
+    Notice that we still have <m>\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots=\infty</m>.
+    With this in mind, choose <m>O_2</m> to be the first odd integer with
+    <me>
+      \frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots\frac{1}{O_2}>a-\left(1+\frac{1}{3}+ \frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}-\frac{1}{6}-\cdots- \frac{1}{E_1}\right)
+    </me>.
+  </p>
+
+  <p>
+    Thus we have
+    <me>
+      a\lt 1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}-\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}
+    </me>.
+  </p>
+
+  <p>
+    Furthermore, since
+    <me>
+      1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}-\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2-2}\lt a
+    </me>
+    we have
+    <md>
+      <mrow>\amp \left|1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}-\cdots\right.</mrow>
+      <mrow>\amp \left.-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}-a\right|\lt \frac{1}{O_2}</mrow>
+    </md>.
+  </p>
+
+  <p>
+    In a similar fashion choose <m>E_2</m> to be the first even integer such that
+    <md>
+      <mrow>1+\frac{1}{3}+\frac{1}{5}+\cdots\amp +\frac{1}{O_1}-\frac{1}{2}- \frac{1}{4}-\frac{1}{6}-\amp \cdots</mrow>
+      <mrow>\amp -\frac{1}{E_1}+ \frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots</mrow>
+      <mrow>\amp +\frac{1}{O_2}-\frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots</mrow>
+      <mrow>\amp -\frac{1}{E_2}\lt a</mrow>
+    </md>.
+  </p>
+
+  <p>
+    Since
+    <md>
+      <mrow>1+\frac{1}{3}+\frac{1}{5}\amp +\cdots+\frac{1}{O_1}-\frac{1}{2}- \frac{1}{4}-\frac{1}{6}-\cdots-\frac{1}{E_1}</mrow>
+      <mrow>\amp +\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+\frac{1}{O_2}- \frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots-\frac{1}{E_2-2}>a</mrow>
+    </md>
+    then
+    <md>
+      <mrow>\left|1+\frac{1}{3}\right.+\frac{1}{5}\amp +\cdots+\frac{1}{O_1}-\frac{1}{2}- \frac{1}{4}-\frac{1}{6}-\cdots-\frac{1}{E_1}</mrow>
+      <mrow>\amp +\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+\frac{1}{O_2}- \frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots-\left.\frac{1}{E_2}-a\right|</mrow>
+      <mrow>\amp \lt \frac{1}{E_2}</mrow>
+    </md>.
+  </p>
+
+  <p>
+    Again choose <m>O_3</m> to be the first odd integer such that
+    <md>
+      <mrow>a\lt 1+\frac{1}{3}\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}-\cdots</mrow>
+      <mrow>\amp -\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}+ \cdots</mrow>
+      <mrow>\amp -\frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots-\frac{1}{E_2}+\frac{1}{O_2+2}+ \frac{1}{O_2+4}+\cdots+\frac{1}{O_3}</mrow>
+    </md>
+    and notice that
+    <md>
+      <mrow>\left|1+\frac{1}{3}\right.\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}</mrow>
+      <mrow>\amp -\frac{1}{6}-\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}+\cdots</mrow>
+      <mrow>\amp -\frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots-\frac{1}{E_2}+\frac{1}{O_2+2}+ \frac{1}{O_2+4}+\cdots+\left.\frac{1}{O_3}-a\right|</mrow>
+      <mrow>\amp \lt \frac{1}{O_3}</mrow>
+    </md>.
+  </p>
+
+  <p>
+    Continue defining <m>O_k</m>and <m>E_k</m> in this fashion.
+    Since <m>\lim_{k\rightarrow\infty}\frac{1}{O_k}=\,\lim_{k\rightarrow\infty} \frac{1}{E_k}=0</m>,
+    it is evident that the partial sums
+    <md>
+      <mrow>1+\frac{1}{3}\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}</mrow>
+      <mrow>\amp -\frac{1}{6}-\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots</mrow>
+      <mrow>\amp + \frac{1}{O_2}+\cdots -\frac{1}{E_{k-2}+2}-\frac{1}{E_{k-2}+4}-\cdots</mrow>
+      <mrow>\amp -\frac{1}{E_{k-1}}+  \frac{1}{O_{k-1}+2}+\frac{1}{O_{k-1}+4}+\cdots+\frac{1}{O_k}</mrow>
+    </md>
+    and
+    <md>
+      <mrow>1+\frac{1}{3}\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}</mrow>
+      <mrow>\amp -\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}+\cdots</mrow>
+      <mrow>\amp -\frac{1}{E_{k-2}+2}-\frac{1}{E_{k-2}+4}-\cdots-\frac{1}{E_{k-1}}</mrow>
+    </md>
+    must converge to <m>a</m>.
+    Furthermore,
+    it is evident that every partial sum of the rearrangement
+    <md>
+      <mrow>1+\frac{1}{3}\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}</mrow>
+      <mrow>\amp -\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}+\cdots</mrow>
+    </md>
+    is trapped between two such extreme partial sums.
+    This forces the entire rearranged series to converge to <m>a</m>.
+  </p>
+
+  <p>
+    The next two problems are similar to the above,
+    but notationally are easier since we don't need to worry about converging to an actual number.
+    We only need to make the rearrangement grow
+    (or shrink in the case of <xref ref="prob_RearrangeDivToNegInf">problem</xref>)
+    without bound.
+  </p>
+
+  <problem>
+        <idx><h>series</h><h>Alternating Harmonic Series</h><h>rearrangements of</h></idx>
+    <statement>
+      <p>
+        Show that there is a rearrangement of
+        <m>1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots</m> which
+        diverges to <m>\infty</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="prob_RearrangeDivToNegInf">
+    <idx><h>series</h><h>Alternating Harmonic Series</h><h>rearrangements of</h></idx>
+    <statement>
+      <p>
+        Show that there is a rearrangement of
+        <m>1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots</m> which
+        diverges to <m>-\infty</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    It is fun to know that we can rearrange some series to make them add up to anything you like but there is a more fundamental idea at play here.
+    That the negative terms of the alternating Harmonic Series
+    <em>diverge</em> to negative infinity and the positive terms <em>diverge</em>
+    to positive infinity make the <em>convergence</em>
+    of the alternating series very special.
+  </p>
+
+  <p>
+    Consider, first we add <m>1</m>. This is one of the positive terms so our sum is starting to increase without bound.
+    Next we add <m>-1/2</m> which is one of the negative terms so our sum has turned around and is now starting to decrease without bound.
+    Then another positive term is added:
+    increasing without bound.
+    Then another negative term: decreasing.
+    And so on.
+    The convergence of the alternating Harmonic Series is the result of a delicate balance between a tendency to run off to positive infinity and back to negative infinity.
+    When viewed in this light it is not really too surprising that rearranging the terms can destroy this delicate balance.
+  </p>
+
+  <p>
+    Naturally, the alternating Harmonic Series is not the only such series.
+    Any such series is said to converge <q>conditionally</q>
+    <mdash /> the condition being the specific arrangement of the terms.
+  </p>
+
+  <p>
+    To stir the pot a bit more, some series do satisfy the commutative property.
+    More specifically, one can show that any rearrangement of the series
+    <m>1-\frac{1}{2^2}+\frac{1}{3^2}-\cdots</m> must converge to the same value as the original series (which happens to be <m>\int_{x=0}^1\frac{\text{ ln } (1+x)}{x}dx\approx.8224670334</m>).
+    Why does one series behave so nicely whereas the other does not?
+  </p>
+
+  <p>
+    Issues such as these and, more generally, the validity of using
+    the infinitely small and infinitely large certainly existed in the
+    1700's, but they were overshadowed by the utility of the calculus.
+    Indeed, foundational questions raised by the above examples, while
+    certainly interesting and of importance, did not significantly
+    deter the exploitation of calculus in studying physical phenomena.
+    However, the envelope eventually was pushed to the point that not
+    even the most practically oriented mathematician could avoid the
+    foundational issues.
+  </p>
+</section>
+
+<section  xml:id="PowerSeriesQuestions-AddProb">
+  <title>Additional Problems</title>
+  <problem>
+    <idx><h>Taylor's Formula</h><h>drill problems </h></idx>
+    <introduction>
+      <p>
+        Use Taylor's formula to find the Taylor series of the
+        given function expanded about the given point <m>a</m>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          <m>f(x)=\ln\left(1+x\right)</m>, <m>a=0</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>f(x)=e^x</m>, <m>a=-1</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>f(x)=x^3+x^2+x+1</m>, <m>a=0</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          <m>f(x)=x^3+x^2+x+1</m>, <m>a=1</m>
+        </p>
+      </statement>
+    </task>
+  </problem>
+
+</section>
+
+
+
+</chapter>
+

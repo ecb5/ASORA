@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <book xml:id="ASORA">
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="PowerSeriesRedux">
+      <section xml:id="PowerSeriesRedux-UnifConv-IntsAndDerivs">
+        <subsection>
+          <problem xml:id="prob_Cauchy_sequences_Cauchy_implies_NIP">
+            <hint>
+              <p>
+                <m></m>,
+              </p>
+            </hint>
+          </problem>
+          <theorem xml:id="thm_CauchyCriterion">
+          <statement>
+            <p> 
+              <m>\forall</m>, <m>\epsilon>0</m>, <m>\exists</m>, <m>N</m>, such 
+              <m>\forall</m>. <m>\epsilon>0</m>. <m>\exists</m>. <m>N</m>. such
+              <m>\forall</m>; <m>\epsilon>0</m>; <m>\exists</m>; <m>N</m>; such
+              <m>\forall</m>: <m>\epsilon>0</m>: <m>\exists</m>: <m>N</m>: such 
+            </p>
+          </statement>
+          </theorem>
+        </subsection>
+      </section>
+    </chapter>
+  </book>
+  
+</pretext>
+

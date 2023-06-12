@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:37-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Radius of Convergence of a Power Series</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="PowerSeriesRedux.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="PowerSeriesRedux-AbelsThm.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="PowerSeriesRedux.html" title="Up">Up</a><a class="next-button button toolbar-item" href="PowerSeriesRedux-AbelsThm.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="active">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="PowerSeriesRedux-RadiusOfConv"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span>
+</h2>
+<p id="p-1212">We've developed enough machinery to look at the convergence of power series. The fundamental result is the following theorem due to Abel.</p>
+<article class="theorem theorem-like" id="thm_RadiusOfConvergence"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.3.1</span><span class="period">.</span>
+</h3>
+<p id="p-1213"> Suppose <span class="process-math">\(\sum_{n=0}^\infty a_nc^n\)</span> converges for some nonzero real number <span class="process-math">\(c\text{.}\)</span> Then <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges absolutely for all <span class="process-math">\(x\)</span> such that <span class="process-math">\(|x|\lt |c|\text{.}\)</span></p></article><p id="p-1214">To prove <a href="" class="xref" data-knowl="./knowl/thm_RadiusOfConvergence.html" title="Theorem 11.3.1">Theorem 11.3.1</a> first note that by <a href="" class="xref" data-knowl="./knowl/prob_NthTermTest.html" title="Problem 11.2.22">Problem 11.2.22</a>, <span class="process-math">\(\limit{n}{\infty}{a_nc^n}=0\text{.}\)</span> Thus <span class="process-math">\(\left(a_nc^n\right)\)</span> is a bounded sequence. Let <span class="process-math">\(B\)</span> be a bound: <span class="process-math">\(\abs{a_nc^n}\le B\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_RadiusOfConvergence.html ./knowl/prob_NthTermTest.html">
+\begin{equation*}
+\abs{a_nx^n}=\abs{a_nc^n\cdot\left(\frac{x}{c}\right)^n}\leq B\abs{\frac{x}{c}}^n\text{.}
+\end{equation*}
+</div>
+<p id="p-1215">We can now use the comparison test.</p>
+<article class="problem example-like" id="problem-183"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-183"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.3.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-183"><article class="problem example-like"><p id="p-1216"> Prove <a href="" class="xref" data-knowl="./knowl/thm_RadiusOfConvergence.html" title="Theorem 11.3.1">Theorem 11.3.1</a>.</p></article></div>
+<article class="corollary theorem-like" id="cor_RadiusOfDivergence"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">11.3.3</span><span class="period">.</span>
+</h3>
+<p id="p-1217">Suppose <span class="process-math">\(\sum_{n=0}^\infty a_nc^n\)</span> diverges for some real number <span class="process-math">\(c\text{.}\)</span> Then <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> diverges for all <span class="process-math">\(x\)</span> such that <span class="process-math">\(|x|&gt;|c|\text{.}\)</span></p></article><article class="problem example-like" id="problem-184"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-184"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.3.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-184"><article class="problem example-like"><p id="p-1218"> Prove <a href="" class="xref" data-knowl="./knowl/cor_RadiusOfDivergence.html" title="Corollary 11.3.3">Corollary 11.3.3</a>.</p></article></div>
+<p id="p-1219">As a result of <a href="" class="xref" data-knowl="./knowl/thm_RadiusOfConvergence.html" title="Theorem 11.3.1">Theorem 11.3.1</a> and <a href="" class="xref" data-knowl="./knowl/cor_RadiusOfDivergence.html" title="Corollary 11.3.3">Corollary 11.3.3</a>, we have the following: either <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges absolutely for all <span class="process-math">\(x\)</span> or there exists some nonnegative real number <span class="process-math">\(r\)</span> such that <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges absolutely when <span class="process-math">\(|x|\lt r\)</span> and diverges when <span class="process-math">\(|x|&gt;r\text{.}\)</span> In the latter case, we call <span class="process-math">\(r\)</span> the <em class="emphasis">radius of convergence</em> of the power series <span class="process-math">\(\sum_{n=0}^{\infty}a_{n} x^{n}\text{.}\)</span> In the former case, we say that the radius of convergence of <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> is <span class="process-math">\(\infty\text{.}\)</span> Though we can say that <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges absolutely when <span class="process-math">\(|x|\lt r\text{,}\)</span> we cannot say that the convergence is uniform. However, we can come close. We can show that the convergence is uniform for <span class="process-math">\(|x|\leq b\lt r\text{.}\)</span> To see this we will use the following result</p>
+<article class="theorem theorem-like" id="thm_WeierstrassM"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.3.5</span><span class="period">.</span>
+</h3>
+<p id="p-1220"><em class="alert">The Weierstrass-<span class="process-math">\(M\)</span> Test</em></p>
+<p id="p-1221"> Let <span class="process-math">\(\left(f_n\right)_{n=1}^\infty\)</span> be a sequence of functions defined on <span class="process-math">\(S\subseteq\RR\)</span> and suppose that <span class="process-math">\(\left(M_n\right)_{n=1}^\infty\)</span> is a sequence of nonnegative real numbers such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\abs{f_n(x)}\leq M_n,\,\, \forall x\in S,\,\, n=1, 2, 3, \ldots\text{.}
+\end{equation*}
+</div>
+<p id="p-1222">If <span class="process-math">\(\sum_{n=1}^\infty M_n\)</span> converges then <span class="process-math">\(\sum_{n=1}^\infty f_n(x)\)</span> converges uniformly on <span class="process-math">\(S\)</span> to some function (which we will denote by <span class="process-math">\(f(x)\)</span>).</p></article><article class="hiddenproof" id="proof-30"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-30"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><p id="p-1223">Since the crucial feature of the theorem is the function <span class="process-math">\(f(x)\)</span> that our series converges to, our plan of attack is to first define <span class="process-math">\(f(x)\)</span> and then show that our series, <span class="process-math">\(\sum_{n=1}^\infty f_n(x)\text{,}\)</span> converges to it uniformly.</p>
+<p id="p-1224">First observe that for any <span class="process-math">\(x\in S\text{,}\)</span> <span class="process-math">\(\sum_{n=1}^\infty f_n(x)\)</span> converges by the Comparison Test (in fact it converges absolutely) to some number we will denote by <span class="process-math">\(f(x)\text{.}\)</span> This actually defines the function <span class="process-math">\(f(x)\)</span> for all <span class="process-math">\(x\in S\text{.}\)</span> It follows that <span class="process-math">\(\sum_{n=1}^\infty f_n(x)\)</span> converges pointwise to <span class="process-math">\(f(x)\text{.}\)</span></p>
+<p id="p-1225">Next, let <span class="process-math">\(\eps&gt;0\)</span> be given. Notice that since <span class="process-math">\(\sum_{n=1}^\infty M_n\)</span> converges, say to <span class="process-math">\(M\text{,}\)</span> then there is a real number, <span class="process-math">\(N\text{,}\)</span> such that if <span class="process-math">\(n&gt;N\text{,}\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{k=n+1}^\infty M_k = \abs{\sum_{k=n+1}^\infty M_k} = \abs{M-\sum_{k=1}^n M_k}\lt \eps\text{.}
+\end{equation*}
+</div>
+<p id="p-1226">You should be able to use this to show that if <span class="process-math">\(n&gt;N\text{,}\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\abs{f(x) - \sum_{k=1}^n f_k(x)}\lt  \eps, \, \, \forall x\in S\text{.}
+\end{equation*}
+</div></article></div>
+<article class="problem example-like" id="problem-185"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-185"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.3.6</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-185"><article class="problem example-like"><p id="p-1227"> Use the ideas above to provide a formal proof of <a href="" class="xref" data-knowl="./knowl/thm_WeierstrassM.html" title="Theorem 11.3.5">Theorem 11.3.5</a>.</p></article></div>
+<article class="problem example-like" id="problem-186"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-186"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.3.7</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-186"><article class="problem example-like"><article class="task exercise-like" id="task-133"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-1228">Referring back to <a href="" class="xref" data-knowl="./knowl/PDE_sol.html" title="Equation 6.1.1">equation (6.1.1)</a>, show that the Fourier series</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/PDE_sol.html">
+\begin{equation*}
+\sum_{k=0}^\infty\frac{(-1)^k}{(2k+1)^2}\sin\left((2k+1)\pi x\right)
+\end{equation*}
+</div>
+<p class="continuation">converges uniformly on <span class="process-math">\(\RR\text{.}\)</span></p></article><article class="task exercise-like" id="task-134"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-1229">Does its differentiated series converge uniformly on <span class="process-math">\(\RR?\)</span> Explain.</p></article></article></div>
+<article class="problem example-like" id="problem-187"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-187"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.3.8</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-187"><article class="problem example-like"><div class="introduction" id="introduction-27"><p id="p-1230">Observe that for all <span class="process-math">\(x \in [-1,1]\)</span> <span class="process-math">\(\abs{x}\le 1\text{.}\)</span> Identify which of the following series converges pointwise and which converges uniformly on the interval <span class="process-math">\([-1,1]\text{.}\)</span> In every case identify the limit function.</p></div>
+<article class="task exercise-like" id="task-135"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-1231"><span class="process-math">\(\displaystyle \sum_{n=1}^\infty\left(x^n-x^{n-1}\right)\)</span></p></article><article class="task exercise-like" id="task-136"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-1232"><span class="process-math">\(\displaystyle \sum_{n=1}^\infty\frac{\left(x^n-x^{n-1}\right)}{n}\)</span></p></article><article class="task exercise-like" id="task-137"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-1233"><span class="process-math">\(\sum_{n=1}^\infty\frac{\left(x^n-x^{n-1}\right)}{n^2}\)</span></p></article></article></div>
+<p id="p-1234">Using the Weierstrass-<span class="process-math">\(M\)</span> test, we can prove the following result.</p>
+<article class="theorem theorem-like" id="thm_PowerSeriesConvergeUniformly"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.3.9</span><span class="period">.</span>
+</h3>
+<p id="p-1235"> Suppose <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> has radius of convergence <span class="process-math">\(r\)</span> (where <span class="process-math">\(r\)</span> could be <span class="process-math">\(\infty\)</span> as well). Let <span class="process-math">\(b\)</span> be any nonnegative real number with <span class="process-math">\(b\lt r\text{.}\)</span> Then <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges uniformly on <span class="process-math">\([-b,b]\text{.}\)</span></p></article><article class="problem example-like" id="problem-188"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-188"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.3.10</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-188"><article class="problem example-like"><p id="p-1236">Prove <a href="" class="xref" data-knowl="./knowl/thm_PowerSeriesConvergeUniformly.html" title="Theorem 11.3.9">Theorem 11.3.9</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-45" id="hint-45"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-45"><div class="hint solution-like"><p id="p-1237">We know that <span class="process-math">\(\sum_{n=0}^\infty|a_nb^n|\)</span> converges. This should be all set for the Weierstrass-<span class="process-math">\(M\)</span> test.</p></div></div>
+</div></article></div>
+<p id="p-1238">To finish the story on differentiating and integrating power series, all we need to do is show that the power series, its integrated series, and its differentiated series all have the same radius of convergence. You might not realize it, but we already know that the integrated series has a radius of convergence at least as big as the radius of convergence of the original series. Specifically, suppose <span class="process-math">\(f(x)=\sum_{n=0}^\infty a_nx^n\)</span>has a radius of convergence <span class="process-math">\(r\)</span> and let <span class="process-math">\(|x|\lt r\text{.}\)</span> We know that <span class="process-math">\(\,\sum_{n=0}^\infty a_nx^n\)</span> converges uniformly on an interval containing <span class="process-math">\(0\)</span>and <span class="process-math">\(x\text{,}\)</span> and so by <a href="" class="xref" data-knowl="./knowl/cor_IntConvUni.html" title="Corollary 11.2.4">Corollary 11.2.4</a>, <span class="process-math">\(\int_{t=0}^xf(t)\dx{ t}=\sum_{n=0}^\infty\left(\frac{a_n}{n+1}x^{n+1}\right)\text{.}\)</span> In other words, the integrated series converges for any <span class="process-math">\(x\)</span> with<span class="process-math">\(\,|x|\lt r\text{.}\)</span> This says that the radius of convergence of the integated series must be at least <span class="process-math">\(r\text{.}\)</span></p>
+<p id="p-1239">To show that the radii of convergence are the same, all we need to show is that the radius of convergence of the differentiated series is at least as big as <span class="process-math">\(r\)</span> as well. Indeed, since the differentiated series of the integrated series is the original, then this would say that the original series and the integrated series have the same radii of convergence. Putting the differentiated series into the role of the original series, the original series is now the integrated series and so these would have the same radii of convergence as well. With this in mind, we want to show that if <span class="process-math">\(|x|\lt r\text{,}\)</span> then <span class="process-math">\(\sum_{n=0}^\infty a_nnx^{n-1}\)</span> converges. The strategy is to mimic what we did in <a href="" class="xref" data-knowl="./knowl/thm_RadiusOfConvergence.html" title="Theorem 11.3.1">Theorem 11.3.1</a>, where we essentially compared our series with a converging geometric series. Only this time we need to start with the differentiated geometric series.</p>
+<article class="problem example-like" id="prob_PwrSeriesDiffConv"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_PwrSeriesDiffConv"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.3.11</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_PwrSeriesDiffConv"><article class="problem example-like"><p id="p-1240">Show that <span class="process-math">\(\sum_{n=1}^\infty nx^{n-1}\)</span> converges for <span class="process-math">\(|x|\lt 1\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-46" id="hint-46"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-46"><div class="hint solution-like"><p id="p-1241">We know that <span class="process-math">\(\sum_{k=0}^nx^k=\frac{x^{n+1}-1}{x-1}\text{.}\)</span> Differentiate both sides and take the limit as <span class="process-math">\(n\)</span> approaches infinity.</p></div></div>
+</div></article></div>
+<article class="theorem theorem-like" id="thm_SeriesConv-_DerivConv"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.3.12</span><span class="period">.</span>
+</h3>
+<p id="p-1242"> Suppose <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> has a radius of convergence <span class="process-math">\(r\)</span> and let <span class="process-math">\(|x|\lt r\text{.}\)</span> Then <span class="process-math">\(\sum_{n=1}^\infty a_nnx^{n-1}\)</span> converges.</p></article><article class="problem example-like" id="problem-190"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-190"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.3.13</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-190"><article class="problem example-like"><p id="p-1243">Prove <a href="" class="xref" data-knowl="./knowl/thm_SeriesConv-_DerivConv.html" title="Theorem 11.3.12">Theorem 11.3.12</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-47" id="hint-47"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-47"><div class="hint solution-like"><p id="p-1244">Let <span class="process-math">\(b\)</span> be a number with <span class="process-math">\(\abs{x}\lt b\lt r\)</span> and consider <span class="process-math">\(\abs{a_nnx^{n-1}} =\abs{a_nb^n\cdot\frac{1}{b}\cdot
+n\left(\frac{x}{b}\right)^{n-1}}\text{.}\)</span>  You should be able to use the Comparison Test and <a href="" class="xref" data-knowl="./knowl/prob_PwrSeriesDiffConv.html" title="Problem 11.3.11">Problem 11.3.11</a>.</p></div></div>
+</div></article></div></section></div></main>
+</div>
+</body>
+</html>

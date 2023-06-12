@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:24-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Power Series as Infinite Polynomials</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="CalcIn17th18thCentury-NewtLeibStart.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="CalcIn17th18thCentury.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="CalcIn17th18thCentury-AddProb.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="CalcIn17th18thCentury-NewtLeibStart.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="CalcIn17th18thCentury.html" title="Up">Up</a><a class="next-button button toolbar-item" href="CalcIn17th18thCentury-AddProb.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="active">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="ExponentAdditionProperty"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span>
+</h2>
+<p id="p-225"> Applied to polynomials, the rules of differential and integral calculus are straightforward.  Indeed, differentiating and integrating polynomials represent some of the easiest tasks in a calculus course.  For example, computing <span class="process-math">\(\int(7-x+x^2)\dx{ x}\)</span> is relatively easy compared to computing <span class="process-math">\(\int\sqrt[3]{1+x^3}\dx{ x}\text{.}\)</span>  Unfortunately, not all functions can be expressed as a polynomial.  For example, <span class="process-math">\(f(x)=\sin x\)</span> cannot be since a polynomial has only finitely many roots and the sine function has infinitely many roots, namely <span class="process-math">\(\{n\pi|\,n\in\ZZ\}\text{.}\)</span>  A standard technique in the 18th century was to write such functions as an “infinite polynomial,” what we typically refer to as a power series.  Unfortunately an “infinite polynomial” is a much more subtle object than a mere polynomial, which by definition is finite. For now we will not concern ourselves with these subtleties.  We will follow the example of our forebears and manipulate all “polynomial-like” objects (finite or infinite) as if they are polynomials.</p>
+<article class="definition definition-like" id="def_PowerSeries"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
+</h3>
+<p id="p-226"> A <dfn class="terminology">power series centered at <span class="process-math">\(\boldsymbol{a}\)</span></dfn> is a series of the form</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=0}^\infty a_n(x-a)^n=a_0+a_1(x-a)+a_2(x-a)^2+\cdots\text{.}
+\end{equation*}
+</div>
+<p id="p-227">Often we will focus on the behavior of power series <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\text{,}\)</span> centered around <span class="process-math">\(0\text{,}\)</span> as the series centered around other values of <span class="process-math">\(a\)</span> are obtained by shifting a series centered at <span class="process-math">\(0\text{.}\)</span></p></article><p id="p-228">Before we continue, we will make the following notational comment. The most advantageous way to represent a series is using summation notation since there can be no doubt about the pattern to the terms. After all, this notation contains a formula for the general term. This being said, there are instances where writing this formula is not practical. In these cases, it is acceptable to write the sum by supplying the first few terms and using ellipses (the three dots). If this is done, then enough terms must be included to make the pattern clear to the reader.</p>
+<p id="p-229">Returning to our definition of a power series, consider, for example, the  geometric series <span class="process-math">\(\sum_{n=0}^\infty x^n=1+x+x^2+\cdots\text{.}\)</span> If we multiply this series by <span class="process-math">\((1-x)\text{,}\)</span> we obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(1-x)(1+x+x^2+\cdots)=(1+x+x^2+\cdots)-(x+x^2+x^3+\cdots)=1\text{.}
+\end{equation*}
+</div>
+<p id="p-230">This leads us to the power series representation</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{1-x}=1+x+x^2+\cdots=\sum_{n=0}^\infty x^n\text{.}
+\end{equation*}
+</div>
+<p id="p-231">If we substitute <span class="process-math">\(x=\frac{1}{10}\)</span> into the above, we obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1+\frac{1}{10}+\left(\frac{1}{10}\right)^2+\left(\frac{1}{10}\right)^3+ \cdots=\frac{1}{1-\frac{1}{10}}=\frac{10}{9}\text{.}
+\end{equation*}
+</div>
+<p id="p-232">This agrees with the fact that <span class="process-math">\(.333\ldots=\frac{1}{3}\text{,}\)</span> and so <span class="process-math">\(.111\ldots=\frac{1}{9}\text{,}\)</span> and <span class="process-math">\(1.111\ldots=\frac{10}{9}\text{.}\)</span></p>
+<p id="p-233">There are limitations to these formal manipulations however. Substituting <span class="process-math">\(x=1\)</span> or <span class="process-math">\(x=2\)</span> yields the questionable results</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{0}=1+1+1+\cdots\,\text{  and  }  \,\frac{1}{-1}=1+2+2^2+\cdots\text{.}
+\end{equation*}
+</div>
+<p id="p-234">We are missing something important here, though it may not be clear exactly what. A series representation of a function works <em class="emphasis">sometimes,</em> but there are some problems. For now, we will continue to follow the example of our 18th century predecessors and ignore them. That is, for the rest of this section we will focus on the formal manipulations to obtain and use power series representations of various functions. Keep in mind that this is all highly suspect until we can resolve problems like those just given.</p>
+<p id="p-235">Power series became an important tool in analysis in the 1700's.  By representing various functions as power series they could be dealt with as if they were (infinite) polynomials.  The following is an example.</p>
+<article class="example example-like" id="example-1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-1"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-1"><article class="example example-like"><p id="p-236">Solve the following Initial Value problem: Find <span class="process-math">\(y(x)\)</span> given that <span class="process-math">\(\frac{\dx{ y}}{\dx{ x}}=y,\,y(0)=1\text{.}\)</span></p>
+<aside class="aside aside-like" id="aside-10"><p id="p-237">A few seconds of thought should convince you that the solution of this problem is <span class="process-math">\(y(x) = e^x\text{.}\)</span>  We will ignore this for now in favor of emphasising the technique.</p></aside><p id="p-238">Assuming the solution can be expressed as a power series we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y=\sum_{n=0}^\infty a_nx^n=a_0+a_1x+a_2x^2+\cdots\text{.}
+\end{equation*}
+</div>
+<p id="p-239">Differentiating gives us</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\dx{ y}}{\dx{ x}}=a_1+2a_2x+3a_3x^2+4a_4x^3+\ldots\text{.}
+\end{equation*}
+</div>
+<p id="p-240">Since <span class="process-math">\(\frac{\dx{ y}}{\dx{ x}}=y\)</span> we see that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_1=a_0\,,\,2a_2=a_1\,,\,3a_3=a_2\,,\,\ldots,\,na_n=a_{n-1}\,,\ldots\text{.}
+\end{equation*}
+</div>
+<p id="p-241">This leads to the relationship</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n=\frac{1}{n}a_{n-1}=\frac{1}{n(n-1)}a_{n-2}=\cdots=\frac{1}{n!}a_0\text{.}
+\end{equation*}
+</div>
+<p id="p-242">Thus the series solution of the differential equation is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y=\sum_{n=0}^\infty\frac{a_0}{n!}x^n=a_0\sum_{n=0}^\infty\frac{1}{n!}x^n\text{.}
+\end{equation*}
+</div>
+<p id="p-243">Using the initial condition <span class="process-math">\(y(0)=1\text{,}\)</span> we get <span class="process-math">\(1=a_0(1+0+\frac{1}{2!}0^2+\cdots)=a_0\text{.}\)</span> Thus the solution to the initial problem is <span class="process-math">\(y=\sum_{n=0}^\infty\frac{1}{n!}x^n\text{.}\)</span> Let's call this function <span class="process-math">\(E(x)\text{.}\)</span> Then by definition</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+E(x)=\sum_{n=0}^\infty\frac{1}{n!}x^n=1+\frac{x^1}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+\,\ldots\text{.}
+\end{equation*}
+</div></article></div>
+<p id="p-244">Let's examine some properties of this function. The first property is clear from the definition.</p>
+<p id="p-245"> <dfn class="terminology">Property 1</dfn>. <span class="process-math">\(E(0)=1\)</span></p>
+<p id="p-246"> <dfn class="terminology">Property 2</dfn>. <span class="process-math">\(E(x+y)=E(x)E(y)\text{.}\)</span></p>
+<p id="p-247">To see this we multiply the two series together, so we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
+\begin{align*}
+E(x)E(y) \amp =\left(\sum_{n=0}^\infty\frac{1}{n!}x^n\right)\left(\sum_{n=0}^\infty\frac{1}{n!}y^n\right)\\
+\amp =\left(\frac{x^0}{0!}+\frac{x^1}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+\,\ldots\right)\left(\frac{y^0}{0!}+\frac{y^1}{1!}+\frac{y^2}{2!}+\frac{y^3}{3!}+\,\ldots\right)\\
+\amp =\frac{x^0}{0!}\frac{y^0}{0!}+\frac{x^0}{0!}\frac{y^1}{1!}+\frac{x^1}{1!}\frac{y^0}{0!}+\frac{x^0}{0!}\frac{y^2}{2!}+\frac{x^1}{1!}\frac{y^1}{1!}+\frac{x^2}{2!}\frac{y^0}{0!}\\
+\amp \ \ \ \ \ \  +\frac{x^0}{0!}\frac{y^3}{3!}+\frac{x^1}{1!}\frac{y^2}{2!}+\frac{x^2}{2!}\frac{y^1}{1!}+\frac{x^3}{3!}\frac{y^0}{0!}+\,\ldots\\
+\amp =\frac{x^0}{0!}\frac{y^0}{0!}+\left(\frac{x^0}{0!}\frac{y^1}{1!}+ \frac{x^1}{1!}\frac{y^0}{0!}\right)\\
+\amp \ \ \ \ \ \  +\left(\frac{x^0}{0!}\frac{y^2}{2!}+\frac{x^1}{1!}\frac{y^1}{1!}+\frac{x^2}{2!}\frac{y^0}{0!}\right)\\
+\amp \ \ \ \ \ \ +\left(\frac{x^0}{0!}\frac{y^3}{3!}+\frac{x^1}{1!}\frac{y^2}{2!}+\frac{x^2}{2!}\frac{y^1}{1!}+\frac{x^3}{3!}\frac{y^0}{0!}\right)+\,\ldots\\
+\amp =\frac{1}{0!}+\frac{1}{1!}\left(\frac{1!}{0!1!}x^0y^1+\frac{1!}{1!0!}x^1y^0\right)\\
+\amp \ \ \ \ \ \ +\frac{1}{2!}\left(\frac{2!}{0!2!}x^0y^2+\frac{2!}{1!1!}x^1y^1+\frac{2!}{2!0!}x^2y^0\right)\\
+\amp \ \ \ \ \ \ +\frac{1}{3!}\left(\frac{3!}{0!3!}x^0y^3+\frac{3!}{1!2!}x^1y^2+\frac{3!}{2!1!}x^2y^1+\frac{3!}{3!0!}x^3y^0\right)+\ldots
+\end{align*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="" id="mdn-4">
+\begin{align}
+E(x)E(y) \amp =\frac{1}{0!}+\frac{1}{1!}\left(\binom{1}{0}x^0y^1+\binom{1}{1}x^1y^0\right)\notag\\
+\amp \ \ \ \ \ \ +\frac{1}{2!}\left(\binom{2}{0}x^0y^2+\binom{2}{1}x^1y^1+\binom{2}{2}x^2y^0\right)\notag\\
+\amp \ \ \ \ \ \ +\frac{1}{3!}\left(\binom{3}{0}x^0y^3+\binom{3}{1}x^1y^2+\binom{3}{2}x^2y^1+\binom{3}{3}x^3y^0\right)+\ldots\notag\\
+\amp =\frac{1}{0!}+\frac{1}{1!}\left(x+y\right)^1+\frac{1}{2!}\left(x+y\right)^2+\frac{1}{3!}\left(x+y\right)^3+\ldots\notag\\
+\amp =E(x+y)\text{.}\tag{4.2.1}
+\end{align}
+</div>
+<p id="p-248"> <dfn class="terminology">Property 3</dfn>. If <span class="process-math">\(m\)</span> is a positive integer then <span class="process-math">\(E(mx)=\left(E(x\right))^m\text{.}\)</span> In particular, <span class="process-math">\(E(m)=\left(E(1)\right)^m\text{.}\)</span></p>
+<article class="problem example-like" id="problem-17"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-17"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-17"><article class="problem example-like"><p id="p-249"> Prove Property 3.</p></article></div>
+<p id="p-250"><dfn class="terminology">Property 4</dfn>. <span class="process-math">\(E(-x)=\frac{1}{E(x)}=\left(E(x)\right)^{-1}\text{.}\)</span></p>
+<article class="problem example-like" id="problem-18"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-18"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-18"><article class="problem example-like"><p id="p-251"> Prove Property 4.</p></article></div>
+<p id="p-252"><dfn class="terminology">Property 5</dfn>. If <span class="process-math">\(n\)</span> is an integer with <span class="process-math">\(n\neq 0\text{,}\)</span> then <span class="process-math">\(E(\frac{1}{n})=\sqrt[n]{E(1)}=\left(E(1)\right)^{1/n}\text{.}\)</span></p>
+<article class="problem example-like" id="problem-19"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-19"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-19"><article class="problem example-like"><p id="p-253"> Prove Property 5.</p></article></div>
+<p id="p-254"><dfn class="terminology">Property 6</dfn>. If <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are integers with <span class="process-math">\(n\neq 0\text{,}\)</span> then <span class="process-math">\(E\left(\frac{m}{n}\right)=\left(E(1)\right)^{m/n}\text{.}\)</span></p>
+<article class="problem example-like" id="problem-20"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-20"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-20"><article class="problem example-like"><p id="p-255"> Prove Property 6.</p></article></div>
+<article class="definition definition-like" id="def_e"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span>
+</h3>
+<p id="p-256"> Let <span class="process-math">\(E(1)\)</span> be denoted by the number <span class="process-math">\(e\text{.}\)</span> Using the series <span class="process-math">\(e=E(1)=\sum_{n=0}^\infty\frac{1}{n!}\text{,}\)</span> we can approximate <span class="process-math">\(e\)</span> to any degree of accuracy. In particular <span class="process-math">\(e\approx 2.71828\text{.}\)</span></p></article><p id="p-257">In light of Property 6, we see that for any rational number <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(E(r)=e^r\text{.}\)</span> Not only does this give us the series representation <span class="process-math">\(e^r=\sum_{n=0}^\infty\frac{1}{n!}r^n\)</span> for any rational number <span class="process-math">\(r\text{,}\)</span> but it gives us a way to define <span class="process-math">\(e^x\)</span> for irrational values of <span class="process-math">\(x\)</span> as well. That is, we can define</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+e^x=E(x)=\sum_{n=0}^\infty\frac{1}{n!}x^n
+\end{equation*}
+</div>
+<p class="continuation">for any real number <span class="process-math">\(x\text{.}\)</span></p>
+<p id="p-258">As an illustration, we now have <span class="process-math">\(e^{\sqrt{2}}=\sum_{n=0}^\infty\frac{1}{n!}\left(\sqrt{2}\right)^n\text{.}\)</span> The expression <span class="process-math">\(e^{\sqrt{2}}\)</span> is meaningless if we try to interpret it as one irrational number raised to another. What does it mean to raise anything to the <span class="process-math">\(\sqrt{2}\)</span> power? However the series <span class="process-math">\(\sum_{n=0}^\infty\frac{1}{n!}\left(\sqrt{2}\right)^n\)</span> does seem to have meaning and it can be used to extend the exponential function to irrational exponents. In fact, defining the exponential function via this series answers the question we raised in  <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a>: What does <span class="process-math">\(4^{\sqrt{2}}\)</span> mean?</p>
+<p id="p-259">It means <span class="process-math">\(\displaystyle 4^{\sqrt{2}} = e^{\sqrt{2}\log 4} = \sum_{n=0}^\infty\frac{(\sqrt{2}\log 4)^n}{n!}\text{.}\)</span></p>
+<p id="p-260">This may seem to be the long way around just to define something as simple as exponentiation. But this is a fundamentally misguided attitude. Exponentiation only <em class="emphasis">seems</em> simple because we've always thought of it as repeated multiplication (in <span class="process-math">\(\ZZ\)</span>) or root-taking (in <span class="process-math">\(\QQ\)</span>). When we expand the operation to the real numbers this simply can't be the way we interpret something like <span class="process-math">\(4^{\sqrt{2}}\text{.}\)</span> How do you take the product of <span class="process-math">\(\sqrt{2}\)</span> copies of <span class="process-math">\(4?\)</span> The concept is meaningless. What we need is an interpretation of <span class="process-math">\(4^{\sqrt{2}}\)</span> which is consistent with, say <span class="process-math">\(4^{3/2} = \left(\sqrt{4}\right)^3=8\text{.}\)</span> This is exactly what the series representation of <span class="process-math">\(e^x\)</span> provides.</p>
+<p id="p-261">We also have a means of computing integrals as series. For example, the famous “bell shaped” curve given by the function <span class="process-math">\(f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}\)</span> is of vital importance in statistics and must be integrated to calculate probabilities. The power series we developed gives us a method of integrating this function. For example, we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
+\begin{align*}
+\int_{x=0}^b\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}d x \amp  =\frac{1}{\sqrt{2\pi}}\int_{x=0}^b\left(\sum_{n=0}^\infty\frac{1}{n!}\left(\frac{-x^2}{2}\right)^n\right)d x\\
+\amp =\frac{1}{\sqrt{2\pi}}\,\sum_{n=0}^\infty\left(\frac{\left(-1\right)^n}{n!2^n}\int_{x=0}^bx^{2n}d x\right)\\
+\amp =\frac{1}{\sqrt{2\pi}}\,\sum_{n=0}^\infty\left(\frac{\left(-1\right)^nb^{2n+1}}{n!2^n\left(2n+1\right)}\right)\text{.}
+\end{align*}
+</div>
+<p id="p-262">This series can be used to approximate the integral to any degree of accuracy. The ability to provide such calculations made power series of paramount importance in the 1700's.</p>
+<article class="problem example-like" id="problem-21"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-21"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.8</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-21"><article class="problem example-like"><article class="task exercise-like" id="task-14"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-263">Show that if <span class="process-math">\(y=\sum_{n=0}^\infty a_nx^n\)</span> satisfies the differential equation <span class="process-math">\(\frac{\dx^2y}{\dx{ x}^2}=-y\text{,}\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_{n+2}=\frac{-1}{\left(n+2\right)\left(n+1\right)}\,a_n
+\end{equation*}
+</div>
+<p class="continuation">and conclude that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y=a_0+a_1x-\frac{1}{2!}\,a_0x^2-\frac{1}{3!}\,a_1x^3+\frac{1}{4!}\,a_0x^4+\frac{1}{5!}\,a_1x^5-\frac{1}{6!}\,a_0x^6-\frac{1}{7!}\,a_1x^7+\cdots\text{.}
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-15"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-264">Since <span class="process-math">\(y=\sin x\)</span> satisfies <span class="process-math">\(\frac{\dx^2y}{\dx{
+x}^2}=-y\text{,}\)</span> we see that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sin x=a_0+a_1x-\frac{1}{2!}\,a_0x^2-\frac{1}{3!}\,a_1x^3+\frac{1}{4!}\,a_0x^4+\frac{1}{5!}\,a_1x^5-\frac{1}{6!}\,a_0x^6-\frac{1}{7!}\,a_1x^7+\cdots
+\end{equation*}
+</div>
+<p class="continuation">for some constants <span class="process-math">\(a_0\)</span> and <span class="process-math">\(a_1\text{.}\)</span>  Show that in this case <span class="process-math">\(a_0=0\)</span> and <span class="process-math">\(a_1=1\)</span> and obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sin x=x-\frac{1}{3!}\,x^3+\frac{1}{5!}x^5-\frac{1}{7!}x^7+\cdots=\sum_{n=0}^\infty\frac{\left(-1\right)^n}{\left(2n+1\right)!}x^{2n+1}\text{.}
+\end{equation*}
+</div></article></article></div>
+<article class="problem example-like" id="problem-22"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-22"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.9</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-22"><article class="problem example-like"><article class="task exercise-like" id="task-16"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-265">Use the series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sin x=x-\frac{1}{3!}\,x^3+\frac{1}{5!}x^5-\frac{1}{7!}x^7+\cdots=\sum_{n=0}^\infty\frac{\left(-1\right)^n}{\left(2n+1\right)!}x^{2n+1}
+\end{equation*}
+</div>
+<p class="continuation">to obtain the series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\cos x=1-\frac{1}{2!}\,x^2+\frac{1}{4!}x^4-\frac{1}{6!}x^6+\cdots=\sum_{n=0}^\infty\frac{\left(-1\right)^n}{\left(2n\right)!}x^{2n}\text{.}
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-17"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-266">Let <span class="process-math">\(s(x,N)=\sum_{n=0}^N\frac{\left(-1\right)^n}{\left(2n+1\right)!}x^{2n+1}\)</span> and <span class="process-math">\(c(x,N)=\sum_{n=0}^N\frac{\left(-1\right)^n}{\left(2n\right)!}x^{2n}\)</span> and use a computer algebra system to plot these for<span class="process-math">\(\,-4\pi\leq x\leq 4\pi,\,\,N=1,2,5,\,10,\,15\text{.}\)</span> Describe what is happening to the series as N becomes larger.</p></article></article></div>
+<article class="problem example-like" id="prob_alternating_harmonic_series"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_alternating_harmonic_series"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.10</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_alternating_harmonic_series"><article class="problem example-like"><p id="p-267">Use the geometric series, <span class="process-math">\(\frac{1}{1-x}=1+x+x^2+x^3+\cdots=\sum_{n=0}^\infty x^n\text{,}\)</span> to obtain a series for <span class="process-math">\(\frac{1}{1+x^2}\)</span> and use this to obtain the series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\arctan x=x-\frac{1}{3}x^3+\frac{1}{5}x^5-\cdots=\sum_{n=0}^\infty(-1)^n \frac{1}{2n+1}x^{2n+1}\text{.}
+\end{equation*}
+</div>
+<p id="p-268">Use the series above to obtain the series <span class="process-math">\(\frac{\pi}{4}=\sum_{n=0}^\infty(-1)^n\frac{1}{2n+1}\text{.}\)</span></p></article></div>
+<p id="p-269">The series for arctangent was known by James Gregory (1638-1675) and it is sometimes referred to as “Gregory's series.” Leibniz independently discovered <span class="process-math">\(\frac{\pi}{4}=1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\cdots\)</span> by examining the area of a circle.  Though it gives us a means for approximating <span class="process-math">\(\pi\)</span> to any desired accuracy, the series converges too slowly to be of any practical use.  For example, if we compute the sum of the first <span class="process-math">\(1000\)</span> terms we get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+4\left(\sum_{n=0}^{1000}(-1)^n\frac{1}{2n+1}\right)\approx 3.142591654
+\end{equation*}
+</div>
+<p class="continuation">which only approximates <span class="process-math">\(\pi\)</span> to two decimal places.</p>
+<p id="p-270">Newton  knew of these results and the general scheme of using series to compute areas under curves. These results motivated Newton to provide a series approximation for <span class="process-math">\(\pi\)</span> as well, which, hopefully, would converge faster. We will use modern terminology to streamline Newton's ideas. First notice that <span class="process-math">\(\frac{\pi}{4}=\int_{x=0}^1\sqrt{1-x^2}\dx{ x}\)</span> as this integral gives the area of one quarter of the unit circle. The trick now is to find series that represents <span class="process-math">\(\sqrt{1-x^2}\text{.}\)</span></p>
+<p id="p-271">To this end we start with the binomial theorem</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left(a+b\right)^N=\sum_{n=0}^N\binom{N}{n}a^{N-n}b^n\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
+\begin{align*}
+\binom{N}{n}\amp =\frac{N!}{n!\left(N-n\right)!}\\
+\amp =\frac{N\left(N-1\right)\left(N-2\right)\cdots\left(N-n+1\,\right)}{n!}\\
+\amp =\frac{\prod_{j=0}^{n-1}\left(N-j\right)}{n!}\text{.}
+\end{align*}
+</div>
+<p id="p-272">Unfortunately, we now have a small problem with our notation which will be a source of confusion later if we don't fix it. So we will pause to address this matter. We will come back to the binomial expansion afterward.</p>
+<p id="p-273">This last expression is becoming awkward in much the same way that an expression like</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1+\frac{1}{2}+\left(\frac{1}{2}\right)^2+\left(\frac{1}{2}\right)^3+\ldots+\left(\frac{1}{2}\right)^k
+\end{equation*}
+</div>
+<p class="continuation">is awkward. Just as this sum is less cumbersome when written as <span class="process-math">\(\sum_{n=0}^k\left(\frac{1}{2}\right)^n\)</span> the <em class="emphasis">product</em></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+N\left(N-1\right)\left(N-2\right)\cdots\left(N-n+1\,\right)
+\end{equation*}
+</div>
+<p class="continuation">is less cumbersom when we write it as <span class="process-math">\(\prod_{j=0}^{n-1}\left(N-j\right)\text{.}\)</span></p>
+<p id="p-274">A capital pi (<span class="process-math">\(\Pi\)</span>) is used to denote a product in the same way that a capital sigma (<span class="process-math">\(\Sigma\)</span>) is used to denote a sum. The most familiar example would be writing</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+n!=\prod_{j=1}^{n}j\text{.}
+\end{equation*}
+</div>
+<p id="p-275">Just as it is convenient to define <span class="process-math">\(0!=1\text{,}\)</span> we will find it convenient to define <span class="process-math">\(\prod_{j=1}^{0}=1\text{.}\)</span>  Similarly, the fact that <span class="process-math">\(\binom{N}{0}=1\)</span> leads to the convention <span class="process-math">\(\prod_{j=0}^{-1}\left(N-j\right)=1\text{.}\)</span>  Strange as this may look, it is convenient and <em class="emphasis">is</em> consistent with the convention <span class="process-math">\(\sum_{j=0}^{-1}s_j=0\text{.}\)</span></p>
+<p id="p-276">Returning to the binomial expansion and recalling our convention</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\prod_{j=0}^{-1}\left(N-j\right)=1\text{,}
+\end{equation*}
+</div>
+<p class="continuation">we can write,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left(1+x\right)^N=1+\sum_{n=1}^N\left(\frac{\prod_{j=0}^{n-1}\left(N-j\right)}{n!}\right)x^n = \sum_{n=0}^N\left(\frac{\prod_{j=0}^{n-1}\left(N-j\right)}{n!}\right)x^n\text{.}
+\end{equation*}
+</div>
+<p id="p-277">These two representations probably look the same at first. Take a moment and be sure you see where they differ.</p>
+<p id="p-278">There is an advantage to using this convention (especially when programing a product into a computer), but this is not a deep mathematical insight. It is just a notational convenience and we don't want you to fret over it, so we will use both formulations (at least initially).</p>
+<p id="p-279">Notice that we can extend the above definition of <span class="process-math">\(\binom{N}{n}\)</span> to values <span class="process-math">\(n&gt;N\text{.}\)</span> In this case, <span class="process-math">\(\prod_{j=0}^{n-1}\left(N-j\right)\)</span> will equal 0 as one of the factors in the product will be <span class="process-math">\(0\)</span> (the one where <span class="process-math">\(n=N\)</span>). This gives us that <span class="process-math">\(\binom{N}{n}=0\)</span> when <span class="process-math">\(n&gt;N\)</span> and so</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left(1+x\right)^N=1+\sum_{n=1}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(N-j\right)}{n!}\text{ } \right)x^n= \sum_{n=0}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(N-j\right)}{n!}\text{ } \right)x^n
+\end{equation*}
+</div>
+<p class="continuation">holds true for any nonnegative integer <span class="process-math">\(N\text{.}\)</span> Essentially Newton asked if it could be possible that the above equation could hold values of <span class="process-math">\(N\)</span> which are not nonnegative integers. For example, if the equation held true for <span class="process-math">\(N=\frac{1}{2}\)</span> , we would obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left(1+x\right)^{\frac{1}{2}}=1+\sum_{n=1}^\infty\left(\frac{ \prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}\right)x^n=\sum_{n=0}^\infty\left(\frac{ \prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}\right)x^n
+\end{equation*}
+</div>
+<p class="continuation">or</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_BinomialSeries">
+\begin{equation}
+\left(1+x\right)^{\frac{1}{2}}=1+\frac{1}{2}x+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)}{2!}x^2+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)\left(\frac{1}{2}-2\right)}{3!}x^3+\cdots\text{.}\tag{4.2.2}
+\end{equation}
+</div>
+<p id="p-280">Notice that since <span class="process-math">\(1/2\)</span> is not an integer the series no longer terminates. Although Newton did not prove that this series was correct (nor did we), he tested it by multiplying the series by itself. When he saw that by squaring the series he started to obtain <span class="process-math">\(1+x+0\,x^2+0\,x^3+\cdots\text{,}\)</span> he was convinced that the series was exactly equal to <span class="process-math">\(\sqrt{1+x}\text{.}\)</span></p>
+<article class="problem example-like" id="problem-24"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-24"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.11</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-24"><article class="problem example-like"><p id="p-281"></p>
+<p id="p-282">Consider the series representation</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-11">
+\begin{align*}
+\left(1+x\right)^{\frac{1}{2}}\amp =1+\sum_{n=1}^\infty\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}x^n\\
+\amp  =\sum_{n=0}^\infty\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}x^n\text{.}
+\end{align*}
+</div>
+<p id="p-283">Multiply this series by itself and compute the coefficients for <span class="process-math">\(x^0,\,x^1,\,x^2,\,x^3,\,x^4\)</span> in the resulting series.</p></article></div>
+<article class="problem example-like" id="prob_SqrtSeriesProb"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_SqrtSeriesProb"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.12</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_SqrtSeriesProb"><article class="problem example-like"><p id="p-284"> Let</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+S(x,M)=\sum_{n=0}^M\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j \right)}{n!}x^n\text{.}
+\end{equation*}
+</div>
+<p id="p-285">Use a computer algebra system to plot <span class="process-math">\(S(x,M)\)</span> for <span class="process-math">\(M=5,\,10,\,15,\,95,\,100\)</span> and compare these to the graph for <span class="process-math">\(\sqrt{1+x}\text{.}\)</span> What seems to be happening? For what values of <span class="process-math">\(x\)</span> does the series appear to converge to <span class="process-math">\(\sqrt{1+x}?\)</span></p></article></div>
+<p id="p-286">Convinced that he had the correct series, Newton used it to find a series representation of <span class="process-math">\(\int_{x=0}^1\sqrt{1-x^2} \dx{ x}\text{.}\)</span></p>
+<article class="problem example-like" id="problem-26"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-26"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.13</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-26"><article class="problem example-like"><p id="p-287"> Use the series <span class="process-math">\(\displaystyle \left(1+x\right)^{\frac{1}{2}}=\sum_{n=0}^\infty\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}x^n\)</span> to obtain the series</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-12">
+\begin{align*}
+\frac{\pi}{4}\amp =\int_{x=0}^1\sqrt{1-x^2} \dx{ x}\\
+\amp =\sum_{n=0}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}\text{ } \right)\left(\frac{\left(-1\right)^n}{2n+1}\right)\\
+\amp =1-\frac{1}{6}-\frac{1}{40}-\frac{1}{112}-\frac{5}{1152}-\cdots\text{.}
+\end{align*}
+</div>
+<p id="p-288">Use a computer algebra system to sum the first 100 terms of this series and compare the answer to <span class="process-math">\(\frac{\pi}{4}\text{.}\)</span></p></article></div>
+<p id="p-289">Again, Newton had a series which could be verified (somewhat) computationally. This convinced him even further that he had the correct series.</p>
+<article class="problem example-like" id="problem-27"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-27"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.14</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-27"><article class="problem example-like"><ol id="p-290" class="lower-alpha">
+<li id="li-28">
+<p id="p-291">Show that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int_{x=0}^{1/2}\sqrt{x-x^2}\dx{ x}=\sum_{n=0}^\infty\frac{(-1)^n\,\,\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{\sqrt{2\,}n!\left(2n+3\right)2^n}
+\end{equation*}
+</div>
+<p class="continuation">and use this to show that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\pi=16\left(\sum_{n=0}^\infty\frac{(-1)^n\,\,\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{\sqrt{2\,}n!\left(2n+3\right)2^n}\right)\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="li-29">
+<p id="p-292">We now have two series for calculating <span class="process-math">\(\pi:\)</span>  the one from part (a) and the one derived earlier, namely</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\pi=4\left(\sum_{n=0}^\infty\frac{(-1)^n\,\,}{2n+1}\right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We will explore which one converges to <span class="process-math">\(\pi\)</span> faster. With this in mind, define <span class="process-math">\(S1(N)=16\left(\sum_{n=0}^N\frac{(-1)^n\,\,\prod_{j=0}^{n-1}\left( \frac{1}{2}-j\right)}{\sqrt{2\,}n!\left(2n+3\right)2^n}\right)\)</span> and <span class="process-math">\(S2(N)=4\left(\sum_{n=0}^N\frac{(-1)^n\,\,}{2n+1}\right)\text{.}\)</span> Use a computer algebra system to compute <span class="process-math">\(S1(N)\)</span>and <span class="process-math">\(S2(N)\)</span> for <span class="process-math">\(N=5,10,15,20\text{.}\)</span> Which one appears to converge to <span class="process-math">\(\pi\)</span> faster?</p>
+</li>
+</ol></article></div>
+<p id="p-293">In general the series representation</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-13">
+\begin{align*}
+\left(1+x\right)^\alpha \amp  =\sum_{n=0}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(\alpha-j\right)}{n!}\text{ } \right)x^n\\
+\amp =1+\alpha x+\frac{\alpha\left(\alpha-1\right)}{2!}x^2+\frac{\alpha\left(\alpha-1\right)\left(\alpha-2\right)}{3!}x^3+\cdots
+\end{align*}
+</div>
+<p class="continuation">is called the <dfn class="terminology">binomial series</dfn> (or Newton's binomial series). This series is correct when <span class="process-math">\(\alpha\)</span> is a non-negative integer (after all, that is how we got the series). We can also see that it is correct when <span class="process-math">\(\alpha=-1\)</span> as we obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-14">
+\begin{align*}
+\left(1+x\right)^{-1}\amp =\sum_{n=0}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(-1-j\right)}{n!}\text{ } \right)x^n\\
+\amp =1+(-1)x+\frac{-1\left(-1-1\right)}{2!}x^2+\frac{-1\left(-1-1\right)\left(-1-2\right)}{3!}x^3+\cdots\\
+\amp =1-x+x^2-x^3+\cdots
+\end{align*}
+</div>
+<p class="continuation">which can be obtained from the geometric series <span class="process-math">\(\frac{1}{1-x}=1+x+x^2+\cdots\)</span> .</p>
+<p id="p-294">In fact, the binomial series is the correct series representation for all values of the exponent <span class="process-math">\(\alpha\)</span> (though we haven't proved this yet).</p>
+<article class="problem example-like" id="problem-28"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-28"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.15</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-28"><article class="problem example-like"><div class="introduction" id="introduction-4"><p id="p-295">Let <span class="process-math">\(k\)</span> be a positive integer. Find the power series, centered at zero, for <span class="process-math">\(f(x) = \left(1-x\right)^{-k}\)</span> by</p></div>
+<article class="task exercise-like" id="task-18"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-296">Differentiating the  geometric series <span class="process-math">\(\left(k-1\right)\)</span> times.</p></article><article class="task exercise-like" id="task-19"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-297">Applying the binomial series.</p></article><article class="task exercise-like" id="task-20"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-298">Compare these two results.</p></article></article></div>
+<figure class="figure figure-like" id="figure-23"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/Euler.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.16<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Euler/" target="_blank">Leonhard Euler</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 1 </sup></a></figcaption></figure><p id="p-299">Leonhard Euler was a master at exploiting power series. In 1735, the 28 year-old Euler won acclaim for what is now called the Basel problem: to find a closed form for <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2}\text{.}\)</span> Other mathematicans knew that the series converged, but Euler was the first to find its exact value. The following problem essentially provides Euler's solution.</p>
+<article class="problem example-like" id="problem-29"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-29"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.17</span><span class="period">.</span><span class="space"> </span><span class="title">The Basel Problem.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-29"><article class="problem example-like"><article class="task exercise-like" id="task-21"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-300">Show that the power series for <span class="process-math">\(\frac{\sin x}{x}\)</span> is given by <span class="process-math">\(1-\frac{1}{3!}x^2+\frac{1}{5!}x^4-\cdots\)</span></p></article><article class="task exercise-like" id="task-22"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-301">Use (a) to infer that the roots of <span class="process-math">\(1-\frac{1}{3!}x^2+\frac{1}{5!}x^4-\cdots\)</span> are given by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x=\pm\pi,\,\pm 2\pi,\,\pm 3\pi,\,\ldots
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-23"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-302">Suppose <span class="process-math">\(p(x)=a_0+a_1x+\cdots+a_nx^n\)</span> is a polynomial with roots <span class="process-math">\(r_1,\,r_2,\,\ldots,r_n\text{.}\)</span> Show that if <span class="process-math">\(a_0\neq\)</span> <span class="process-math">\(0\text{,}\)</span> then all the roots are non-zero and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p(x)=a_0\left(1-\frac{x}{r_1}\right)\left(1-\frac{x}{r_2}\right)\cdots\left(1-\frac{x}{r_n}\right)\text{.}
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-24"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<p id="p-303">Assuming that the result in part (c) holds for an infinite polynomial (power series), deduce that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-15">
+\begin{align*}
+1-\frac{1}{3!}x^2+\frac{1}{5!}x^4-\cdots\amp =\left(1-\left(\frac{x}{\pi}\right)^2\right)\left(1-\left(\frac{x}{2\pi}\right)^2\right)\left(1-\left(\frac{x}{3\pi}\right)^2\right)\cdots
+\end{align*}
+</div></article><article class="task exercise-like" id="task-25"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<p id="p-304">Expand this product to deduce</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}.{}
+\end{equation*}
+</div></article></article></div>
+<article class="problem example-like" id="problem-30"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-30"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Euler's Formula.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-30"><article class="problem example-like"><article class="task exercise-like" id="task-26"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-305">Use  the power series expansion of <span class="process-math">\(e^x\text{,}\)</span> <span class="process-math">\(\sin x,\)</span> and <span class="process-math">\(\cos x\)</span> to derive <dfn class="terminology">Euler's Formula</dfn>:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+e^{i\theta} = cos\theta+i\sin\theta.
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-27"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-306">Use Euler's formula to derive the Addition/Subtraction formulas from Trigonometry:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sin(\alpha\pm\beta) = \sin\alpha\cos\beta\pm\sin\beta\cos\alpha
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\cos(\alpha\pm\beta) = \cos\alpha\cos\beta\mp\sin\alpha\sin\beta
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-28"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-307">Use Euler's formula to show that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sin 2\theta = 2\cos\theta\sin\theta
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\cos 2\theta =\cos^2\theta-\sin^2\theta
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-29"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<p id="p-308">Use Euler's formula to show that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sin 3\theta = 3\cos^2\theta\sin\theta-\sin^3\theta
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\cos 3\theta=\cos^3\theta-\cos\theta\sin^2\theta
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-30"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<p id="p-309">Find a formula <span class="process-math">\(\sin(n\theta)\)</span> and <span class="process-math">\(\cos(n\theta)\)</span> for any positive integer <span class="process-math">\(n\text{.}\)</span></p></article></article></div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Euler/</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

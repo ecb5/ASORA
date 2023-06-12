@@ -1,0 +1,107 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Instructor">
+  <title>To the Instructor</title>
+  <p>
+    The irony of this section is that it exists to tell you that this book was not written for you;
+    it was written for your students.
+    After all, we don't need to teach you about Real Analysis.
+    You already understand the subject.
+    The purpose of this text is to help your students make sense of the formal definitions,
+    theorems,
+    and proofs that they will encounter in your course.
+    We do this by immersing the student in the story of how what is usually called Calculus evolved into modern Real Analysis.
+    Our hope and intention is that this will help the student to appreciate why their intuitive understanding of topics encountered in calculus needs to be replaced by the formalism of Real Analysis.
+  </p>
+
+  <p>
+    The traditional approach to this topic
+    (what we might call the <q>logical</q> story of Real Analysis),
+    starts with a rigorous development of the real number system and uses this to provide rigorous definitions of limits,
+    continuity,
+    derivatives and integrals, and convergence of series;
+    typically in that order.
+    This is a perfectly legitimate story of Real Analysis and,
+    logically, it makes the most sense.
+    Indeed, this is a view of the subject that every mathematician-in-training should eventually attain.
+    However, it is our contention that your students will appreciate the subject more,
+    and hopefully retain it better,
+    if they see how the subject developed from the intuitive notions of Leibniz, Newton and others in the seventeenth and eighteenth centuries to the more modern approach developed in the nineteenth and twentieth centuries.
+    After all, they are coming at it from a viewpoint very similar to that of the mathematicians of the seventeenth and eighteenth centuries.
+    Our goal is to bring them into the nineteenth and early twentieth centuries,
+    mathematically speaking.
+  </p>
+
+  <p>
+    We hasten to add that this is not a history of analysis book.
+    It is an introductory textbook on Real Analysis which uses the historical context of the subject to frame the concepts and to show why mathematicians felt the need to develop rigorous,
+    non-intuitive definitions to replace their intuitive notions.
+  </p>
+
+  <p>
+    You will notice that most of the problems are embedded in the chapters,
+    rather than lumped together at the end of each chapter.
+    This is done to provide a context for the problems which,
+    for the most part, are presented on an as-needed basis.
+  </p>
+
+  <p>
+    Thus the proofs of nearly all of the theorems appear as problems in the text.
+    Of course, it would be very unfair to ask most students at this level to prove, say,
+    the Bolzano-Weierstrass Theorem without some sort of guidance.
+    So in each case we provide an outline of the proof and the subsequent problem will be to use the outline to develop a formal proof.
+    Proof outlines will become less detailed as the students progress.
+    We have found that this approach helps students develop their proof writing skills.
+  </p>
+
+  <p>
+    We state in the text,
+    and we encourage you to emphasize to your students,
+    that often they will use the results of problems as tools in subsequent problems.
+    Trained mathematicians do this naturally,
+    but it is our experience that this is still somewhat foreign to students who are used to simply
+    <q>getting the problem done and forgetting about it.</q> For quick reference,
+    the page numbers of problems are listed in the table of contents.
+  </p>
+
+  <p>
+    The problems range from the fairly straightforward to the more challenging.
+    Some of them require the use of a computer algebra system
+    (for example, to plot partial sums of a power series).
+    These tend to occur earlier in the book where we encourage the students to use technology to explore the wonders of series.
+    A number of these problems can be done on a sufficiently advanced graphing calculator or even on Wolfram Alpha,
+    so you should assure your students that they do not need to be super programmers to do this.
+    Of course, this is up to you.
+  </p>
+
+  <p>
+    A testing strategy we have used successfully is to assign more time consuming problems as collected homework and to assign other problems as possible test questions.
+    Students could then be given some subset of these (verbatim) as an in-class test.
+    Not only does this make test creation more straightforward,
+    but it allows the opportunity to ask questions that could not reasonably be asked otherwise in a timed setting.
+    Our experience is that this does not make the tests <q>too easy,</q>
+    and there are worse things than having students study by working together on possible test questions beforehand.
+    If you are shocked by the idea of giving students all of the possible test questions ahead of time,
+    think of how much (re)learning you did studying the list of possible questions you <em>knew</em>
+    would be asked on a qualifying exam.
+  </p>
+
+  <p>
+    In the end, use this book as you see fit.
+    We believe your students will find it readable, as it is intended to be,
+    and we are confident that it will help them to make sense out of the rigorous,
+    non-intuitive definitions and theorems of Real Analysis and help them to develop their proof-writing skills.
+  </p>
+
+  <p>
+    If you have suggestions for improvement,
+    comments or criticisms of our text please contact us at the email addresses below.
+    We appreciate any feedback you can give us on this.
+  </p>
+
+  <p>
+    Thank you.
+    <me>
+      \begin{array}{lcl} \text{ Robert R. Rogers } \amp \amp  \text{ Eugene C. Boman } \\ \text{ robert.rogers@fredonia.edu }  \amp \amp  \text{ ecb5@psu.edu } \end{array}
+    </me>
+  </p>
+</chapter>
+

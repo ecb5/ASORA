@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:39-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Cantor's Theorem and Its Consequences</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="BackToFourier-InfiniteSets.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="BackToFourier.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Epilogues.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="BackToFourier-InfiniteSets.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="BackToFourier.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Epilogues.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="active">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="BackToFourier-CantorsTheorem"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">12.2</span> <span class="title">Cantor's Theorem and Its Consequences</span>
+</h2>
+<figure class="figure figure-like" id="figure-38"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/Dedekind.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.2.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Dedekind/" target="_blank">Richard Dedekind</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-19" id="fn-19"><sup> 1 </sup></a></figcaption></figure><p id="p-1384">Once Cantor showed that there were two types of infinity (countable and uncountable), the following question was natural, “Do all uncountable sets have the same cardinality?”</p>
+<p id="p-1385">Just like not all “non-dogs” are cats, there is, offhand, no reason to believe that all uncountable sets should be the same size. However constructing uncountable sets of different sizes is not as easy as it sounds.</p>
+<p id="p-1386"> For example, what about the line segment represented by the interval <span class="process-math">\([0,1]\)</span> and the square represented by the set <span class="process-math">\([0,1]\times[0,1]=\left\{(x,y)|0\leq x,y\leq 1\right\}\text{.}\)</span> Certainly the two dimensional square must be a larger infinite set than the one dimensional line segment.  Remarkably, Cantor showed that these two sets were the same cardinality.  In his 1877 correspondence of this result to his friend and fellow mathematician, Richard Dedekind, even Cantor remarked, “I see it, but I don't believe it!”</p>
+<p id="p-1387">The following gives the original idea of Cantor's proof. Cantor devised the following function <span class="process-math">\(f:[0,1]\times[0,1]\rightarrow [0,1]\text{.}\)</span> First, we represent the coordinates of any point <span class="process-math">\((x,y)\in [0,1]\times[0,1]\)</span> by their decimal representations <span class="process-math">\(x=0.a_1 a_2 a_3\ldots\)</span> and <span class="process-math">\(y=0.b_1 b_2 b_3\ldots\text{.}\)</span> Even terminating decimals can be written this way as we could write <span class="process-math">\(0.5=0.5000\ldots\text{.}\)</span> We can then define <span class="process-math">\(f(x,y)\)</span> by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f((0.a_1 a_2 a_3\ldots ,0.b_1 b_2 b_3\ldots))=0.a_1 b_1 a_2 b_2 a_3 b_3\ldots\text{.}
+\end{equation*}
+</div>
+<p id="p-1388">This relatively simple idea has some technical difficulties in it related to the following result.</p>
+<article class="problem example-like" id="problem-205"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-205"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.2.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-205"><article class="problem example-like"><p id="p-1389"> Consider the sequence <span class="process-math">\((0.9,0.99,0.999,\ldots)\text{.}\)</span> Determine that this sequence converges and, in fact, it converges to <span class="process-math">\(1\text{.}\)</span> This suggests that <span class="process-math">\(0.999\ldots=1\text{.}\)</span></p></article></div>
+<p id="p-1390">Similarly, we have <span class="process-math">\(0.04999\ldots=0.05000\ldots\text{,}\)</span> etc. To make the decimal representation of a real number in <span class="process-math">\([0,1]\)</span> unique, we must make a consistent choice of writing a terminating decimal as one that ends in an infinite string of zeros or an infinite string of nines [with the one exception <span class="process-math">\(0=0.000\ldots\)</span> ]. No matter which choice we make, we could never make this function onto. For example, <span class="process-math">\(109/1100=0.09909090\ldots\)</span> would have as its pre-image <span class="process-math">\((0.0999\ldots,0.9000\ldots)\)</span> which would be a mix of the two conventions.</p>
+<p id="p-1391">Cantor was able to overcome this technicality to demonstrate a one to one correspondence, but instead we will note that in either convention, the function is one-to-one, so this says that the set <span class="process-math">\([0,1]\times[0,1]\)</span> is the same cardinality as some (uncountable) subset of <span class="process-math">\(\RR\text{.}\)</span>  The fact that this has the same cardinality as <span class="process-math">\(\RR\)</span> is something we will come back to. But first we'll try construct an uncountable set which does not have the same cardinality as <span class="process-math">\(\RR\text{.}\)</span>  To address this issue, Cantor proved the following in 1891.</p>
+<article class="theorem theorem-like" id="thm_CantorsTheorem"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.2.3</span><span class="period">.</span>
+</h3>
+<p id="p-1392"><em class="alert">Cantor's Theorem</em></p>
+<p id="p-1393"> Let <span class="process-math">\(S\)</span> be any set.  Then there is no one-to-one correspondence between <span class="process-math">\(S\)</span> and <span class="process-math">\(P(S)\text{,}\)</span> the set of all subsets of <span class="process-math">\(S\text{.}\)</span></p></article><p id="p-1394">Since <span class="process-math">\(S\)</span> can be put into one-to-one correspondence with a subset of <span class="process-math">\(P(S)\)</span> (<span class="process-math">\(a\rightarrow \left\{a\right\}\)</span>), then this says that <span class="process-math">\(P(S)\)</span> is at least as large as S. In the finite case <span class="process-math">\(\abs{P(S)}\)</span> is strictly greater than <span class="process-math">\(\abs{S}\)</span> as the following problem shows. It also demonstrates why <span class="process-math">\(P(S)\)</span> is called the power set of <span class="process-math">\(S\text{.}\)</span></p>
+<article class="problem example-like" id="prob_PowerSet"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_PowerSet"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.2.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_PowerSet"><article class="problem example-like"><p id="p-1395">Prove: If <span class="process-math">\(\abs{S}=n\text{,}\)</span> then <span class="process-math">\(\abs{ P(S)}=2^n\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-56" id="hint-56"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-56"><div class="hint solution-like">
+<p id="p-1396">Let <span class="process-math">\(S=\left\{a_1,a_2,\ldots,a_n\right\}\text{.}\)</span> Consider the following correspondence between the elements of <span class="process-math">\(P(S)\)</span> and the set <span class="process-math">\(T\)</span> of all <span class="process-math">\(n\)</span>-tuples of yes (Y) or no (N):</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-54">
+\begin{align*}
+\{ \}  \amp \leftrightarrow \{N,N,N,\ldots,N\}\\
+\{a_1\}\amp \leftrightarrow \{Y,N,N,\ldots ,N\}\\
+\{a_2\}\amp \leftrightarrow \{N,Y,N,\ldots,N\}\\
+\amp \vdots\\
+S\amp \leftrightarrow \{Y,Y,Y,\ldots,Y\}
+\end{align*}
+</div>
+<p id="p-1397">How many elements are in <span class="process-math">\(T?\)</span></p>
+</div></div>
+</div></article></div>
+<article class="problem example-like" id="problem-207"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-207"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.2.5</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-207"><article class="problem example-like"><p id="p-1398">Prove <a href="" class="xref" data-knowl="./knowl/thm_CantorsTheorem.html" title="Theorem 12.2.3">Cantor's Theorem 12.2.3</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-57" id="hint-57"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-57"><div class="hint solution-like"><p id="p-1399">Assume for contradiction, that there is a one-to-one correspondence <span class="process-math">\(f:S\rightarrow P(S)\text{.}\)</span> Consider <span class="process-math">\(A=\left\{x\in S|x\not\in f(x)\right\}\text{.}\)</span> Since <span class="process-math">\(f\)</span> is onto, then there is <span class="process-math">\(a\in A\)</span> such that <span class="process-math">\(A=f(a)\text{.}\)</span>  Is <span class="process-math">\(a\in A\)</span> or is <span class="process-math">\(a\not\in
+A?\)</span></p></div></div>
+</div></article></div>
+<p id="p-1400">Actually it turns out that <span class="process-math">\(\RR\)</span> and <span class="process-math">\(P(\NN)\)</span> have the same cardinality. This can be seen in a roundabout way using some of the above ideas from <a href="" class="xref" data-knowl="./knowl/prob_PowerSet.html" title="Problem 12.2.4">Problem 12.2.4</a>. Specifically, let <span class="process-math">\(T\)</span> be the set of all sequences of zeros or ones (you can use <span class="process-math">\(Y\)</span>s or <span class="process-math">\(N\)</span>s, if you prefer). Then it is straightforward to see that <span class="process-math">\(T\)</span> and <span class="process-math">\(P(\NN)\)</span> have the same cardinality.</p>
+<p id="p-1401">If we consider <span class="process-math">\((0,1]\text{,}\)</span> which has the same cardinality as <span class="process-math">\(\RR\text{,}\)</span> then we can see that this has the same cardinality as <span class="process-math">\(T\)</span> as well. Specifically, if we think of the numbers in binary, then every real number in <span class="process-math">\([0,1]\)</span> can be written as <span class="process-math">\(\sum_{j=1}^\infty \frac{a_j}{2^j} =0.a_1a_2a_3\ldots\)</span> where <span class="process-math">\(a_j\in\left\{0,1\right\}\text{.}\)</span> We have to account for the fact that binary representations such as <span class="process-math">\(0.0111\ldots\)</span> and <span class="process-math">\(0.1000\ldots\)</span> represent the same real number (say that no representations will end in an infinite string of zeros), then we can see that <span class="process-math">\([0,1]\)</span> has the same cardinality as <span class="process-math">\(T-U\text{,}\)</span> where <span class="process-math">\(U\)</span> is the set of all sequences ending in an infinite string of zeros. It turns out that <span class="process-math">\(U\)</span> itself is a countable set.</p>
+<article class="problem example-like" id="problem-208"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-208"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.2.6</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-208"><article class="problem example-like"><p id="p-1402"> Let <span class="process-math">\(U_n=\{(a_1,a_2,a_3,\ldots)\ |\ a_j\in \{0,1\} \text{ and } a_{n+1}=a_{n+2}=\cdots=0\}\text{.}\)</span> Show that for each <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(U_n\)</span> is finite and use this to conclude that <span class="process-math">\(U\)</span> is countably infinite.</p></article></div>
+<p id="p-1403">The following two problems show that deleting a countable set from an uncountable set does not change its cardinality.</p>
+<article class="problem example-like" id="problem-209"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-209"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.2.7</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-209"><article class="problem example-like"><p id="p-1404"> Let <span class="process-math">\(S\)</span> be an infinite set. Prove that <span class="process-math">\(S\)</span> contains a countably infinite subset.</p></article></div>
+<article class="problem example-like" id="problem-210"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-210"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.2.8</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-210"><article class="problem example-like"><p id="p-1405">Suppose <span class="process-math">\(X\)</span> is an uncountable set and <span class="process-math">\(Y\subset X\)</span> is countably infinite.  Prove that <span class="process-math">\(X\)</span> and <span class="process-math">\(X-Y\)</span> have the same cardinality.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-58" id="hint-58"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-58"><div class="hint solution-like">
+<p id="p-1406">Let <span class="process-math">\(Y=Y_0\text{.}\)</span> If <span class="process-math">\(X-Y_0\)</span> is an infinite set, then by the previous problem it contains a countably infinite set <span class="process-math">\(Y_1\text{.}\)</span> Likewise if <span class="process-math">\(X-(Y_0\cup Y_1)\)</span> is infinite it also contains an infinite set <span class="process-math">\(Y_2\text{.}\)</span> Again, if <span class="process-math">\(X-(Y_0\cup Y_1\cup Y_2)\)</span> is an infinite set then it contains an infinite set <span class="process-math">\(Y_3\text{,}\)</span> etc. For <span class="process-math">\(n=1, 2, 3,\ldots \text{,}\)</span> let <span class="process-math">\(f_n:Y_{n-1}\rightarrow Y_n\)</span> be a one-to-one correspondence and define <span class="process-math">\(f:X\rightarrow X-Y\)</span> by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{cases}f(x)=f_n(x), \amp \text{ if }  x\in Y_n, n=0,1,2,\ldots\\ f(x)=x, \amp \text{ if }  x\in X-(\cup_{n=0}^\infty Y_n ) \end{cases} \text{.}
+\end{equation*}
+</div>
+<p id="p-1407">Show that <span class="process-math">\(f\)</span> is one-to-one and onto.</p>
+</div></div>
+</div></article></div>
+<p id="p-1408">The above problems say that <span class="process-math">\(R\text{,}\)</span> <span class="process-math">\(T-U\text{,}\)</span> <span class="process-math">\(T\text{,}\)</span> and <span class="process-math">\(P(N)\)</span> all have the same cardinality.</p>
+<p id="p-1409">As was indicated before, Cantor's  work on infinite sets had a profound impact on mathematics in the beginning of the twentieth century. For example, in examining the proof of Cantor's Theorem, the eminent logician Bertrand Russell devised his famous paradox in 1901. Before this time, a set was naively thought of as just a collection of objects. Through the work of Cantor and others, sets were becoming a central object of study in mathematics as many mathematical concepts were being reformulated in terms of sets. The idea was that set theory was to be a unifying theme of mathematics. This paradox set the mathematical world on its ear.</p>
+<p id="p-1410">{Russell's Paradox}  Consider the set of all sets which are not elements of themselves. We call this set <span class="process-math">\(D\)</span> and ask, “Is <span class="process-math">\(D\in D?\)</span>” Symbolically, this set is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+D=\{S\ |\ S\not \in S\}\text{.}
+\end{equation*}
+</div>
+<p id="p-1411">If <span class="process-math">\(D\in D\text{,}\)</span> then by definition, <span class="process-math">\(D\not\in D\text{.}\)</span> If <span class="process-math">\(D\not\in D\text{,}\)</span> then by definition, <span class="process-math">\(D\in D\text{.}\)</span></p>
+<p id="p-1412">If you look back at the proof of Cantor's Theorem, this was basically the idea that gave us the contradiction.  To have such a contradiction occurring at the most basic level of mathematics was scandalous.  It forced a number of mathematicians and logicians to carefully devise the axioms by which sets could be constructed. To be honest, most mathematicians still approach set theory from a naive point of view as the sets we typically deal with fall under the category of what we would call “normal sets.” In fact, such an approach is officially called Naive Set Theory (as opposed to Axiomatic Set Theory).  However, attempts to put set theory and logic on solid footing led to the modern study of symbolic logic and ultimately the design of computer (machine) logic.</p>
+<p id="p-1413">Another place where Cantor's work had a profound influence in modern logic comes from something we alluded to before.  We showed before that the unit square <span class="process-math">\([0,1]\times [0,1]\)</span> had the same cardinality as an uncountable subset of <span class="process-math">\(\RR\text{.}\)</span>  In fact, Cantor  showed that the unit square had the same cardinality as <span class="process-math">\(\RR\)</span> itself and was moved to advance the following in 1878.</p>
+<article class="conjecture theorem-like" id="conjecture-2"><h3 class="heading">
+<span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">12.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">The Continuum Hypothesis.</span>
+</h3>
+<p id="p-1414">Every uncountable subset of <span class="process-math">\(\RR\)</span> has the same cardinality as <span class="process-math">\(\RR\text{.}\)</span></p></article><p id="p-1415">Cantor was unable to prove or disprove this conjecture (along with every other mathematician). In fact, proving or disproving this conjecture, which was dubbed the Continuum Hypothesis, was one of Hilbert's famous 23 problems presented as a challenge to mathematicians at the International Congress of Mathematicians in 1900.</p>
+<p id="p-1416">Since <span class="process-math">\(\RR\)</span> has the same cardinality as <span class="process-math">\(P(\NN)\text{,}\)</span> then the Continuum Hypothesis was generalized to the:</p>
+<article class="conjecture theorem-like" id="conjecture-3"><h3 class="heading">
+<span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">12.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">The Generalized Continuum Hypothesis.</span>
+</h3>
+<p id="p-1417">Given an infinite set <span class="process-math">\(S\text{,}\)</span> there is no infinite set which has a cardinality strictly between that of <span class="process-math">\(S\)</span> and its power set <span class="process-math">\(P(S)\text{.}\)</span></p></article><aside class="aside aside-like" id="aside-22"><h3 class="heading"><span class="title">The Zermelo-Fraenkel Axioms.</span></h3>
+<p id="p-1418">One of the formal axiomatic approaches to set theory established by Ernst Zermelo in 1908 and revised by Abraham Fraenkel in 1921.</p></aside><p id="p-1419">Efforts to prove or disprove this were in vain and with good reason.  In 1940, the logician Kurt Gödel showed that the Continuum Hypothesis could not be disproved from the Zermelo-Fraenkel Axioms of set theory.  In 1963, Paul Cohen showed that the Continuum Hypothesis could not be proved using the Zermelo-Fraenkel Axioms.  In other words, the Zermelo-Fraenkel Axioms do not contain enough information to decide the truth of the hypothesis.</p>
+<p id="p-1420">We are willing to bet that at this point your head might be swimming a bit with uncertainty. If so, then know that these are the same feelings that the mathematical community experienced in the mid twentieth century. In the past, mathematics was seen as a model of logical certainty. It is disconcerting to find that there are statements that are “undecidable.” In fact, Gödel proved in 1931 that a consistent finite axiom system that contained the axioms of arithmetic would always contain undecidable statements which could neither be proved true nor false with those axioms. Mathematical knowledge would always be incomplete.</p>
+<figure class="figure figure-like" id="figure-39"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/Godel.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.2.11<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Godel/" target="_blank">Kurt Gödel</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-20" id="fn-20"><sup> 2 </sup></a></figcaption></figure><p id="p-1421">So by trying to put the foundations of calculus on solid ground, we have come to a point where we can never obtain mathematical certainty. Does this mean that we should throw up our hands and concede defeat? Should we be paralyzed with fear of trying anything? Certainly not! As we mentioned before, most mathematicians do well by taking a pragmatic approach: using their mathematics to solve problems that they encounter. In fact, it is typically the problems that motivate the mathematics. It is true that mathematicians take chances that don't always pan out, but they still take these chances, often with success. Even when the successes lead to more questions, as they typically do, tackling those questions usually leads to a deeper understanding. At the very least, our incomplete understanding means we will always have more questions to answer, more problems to solve.</p>
+<p id="p-1422">What else could a mathematician ask for?</p></section><div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Dedekind/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Godel/</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

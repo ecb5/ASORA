@@ -1,0 +1,252 @@
+
+
+<section>
+  <title>Uniform Convergence</title>
+  <p>
+    We have developed precise analytic definitions of the convergence of a sequence and continuity of a function and we have used these to prove the EVT and IVT for a continuous function.
+    We will now draw our attention back to the question that originally motivated these definitions,
+    <q>Why are Taylor series well behaved,
+    but Fourier series are not necessarily?</q> More precisely,
+    we mentioned that whenever a power series converges then whatever it converged to was continuous.
+    Moreover, if we differentiate or integrate these series term by term then the resulting series will converge to the derivative or integral of the original series.
+    This was not always the case for Fourier series.
+    For example consider the function
+    <md>
+      <mrow>f(x) \amp = \frac{4}{\pi}\left(\sum_{k=0}^\infty\frac{(-1)^k}{2k+1}\cos\left((2k+1)\pi x\right)\right)</mrow>
+      <mrow>\amp = \frac{4}{\pi}\left(\cos(\pi x)-\frac13\cos(3\pi x)+\frac15 (5\pi x)-\ldots\right)</mrow>
+    </md>.
+  </p>
+
+  <p>
+    We have seen that the graph of <m>f</m> is given by 
+    <image width="85%" source="images/Ch7fig1.png" />
+  </p>
+
+  <p>
+    If we consider the following sequence of functions
+    <md>
+      <mrow>f_1(x)=\amp \frac{4}{\pi}\cos\left(2\pi x\right)</mrow>
+      <mrow>f_2(x)=\amp \frac{4}{\pi}\left(\cos \left(\pi x\right)-\frac{1}{3}\cos\left( 3\pi x\right)\right)</mrow>
+      <mrow>f_3(x)=\amp \frac{4}{\pi}\left(\cos\left(\pi x\right)-\frac{1}{3}\cos\left(3\pi x\right)+\frac{1}{5}\cos\left(5\pi x\right)\right)</mrow>
+      <mrow>\amp \vdots</mrow>
+    </md>
+    we see the sequence of continuous functions
+    <m>\left(f_n\right)</m> converges to the non-continuous function <m>f</m> for each real number <m>x</m>.
+    This didn't happen with Taylor series.
+    The partial sums for a Taylor series were polynomials and hence continuous but what they converged to was continuous as well.
+  </p>
+
+  <p>
+    The difficulty is quite delicate and it took mathematicians a while to determine the problem.
+    There are two very subtly different ways that a sequence of functions can converge:
+    pointwise or uniformly.
+    This 
+        <idx><h>Abel, Niels Henrik</h></idx>
+    distinction was touched upon by Niels Henrik Abel (1802-1829) in 1826 while studying the domain of convergence of a power series.
+    However, the necessary formal definitions were not made explicit until Weierstrass 
+        <idx><h>Weierstrass, Karl</h></idx> did it in his 1841
+        paper <foreign>Zur Theorie der Potenzreihen</foreign> <em>(On
+        the Theory of Power Series)</em>. This was published in his
+        collected works in 1894.
+  </p>
+
+  <p>
+    It will be instructive to take a look at an argument that doesn't quite work before looking at the formal definitions we will need.
+    In 1821 Augustin Cauchy 
+        <idx><h>Cauchy, Augustin</h></idx>
+    <q>proved</q> that the infinite sum of continuous functions is continuous.
+    Of course, it is obvious
+    (to us)
+    that this is not true because we've seen several counterexamples.
+    But Cauchy, who was a first rate mathematician was so sure of the correctness of his argument that he included it in his textbook on analysis,
+    <foreign>Cours d'analyse</foreign> (1821).
+  </p>
+
+  <problem xml:id="prob_Cauchy_s_incorrect_proof">
+    <statement>
+      <p>
+            <idx><h>Cauchy, Augustin</h><h>Cauchy's flawed proof that the limit of continuous functions is continuous</h></idx>
+            <idx><h>continuity</h><h>Cauchy's flawed proof that the limit of continuous functions is continuous</h></idx>
+        Find the flaw in the following <q>proof</q> that <m>f</m> is also continuous at <m>a</m>.
+      </p>
+
+      <p>
+        Suppose <m>f_1, f_2, f_3, f_4 \ldots</m> are all continuous at <m>a</m> and that <m>\sum_{n=1}^\infty f_n=f</m>.
+        Let <m>\eps>0</m>.
+        Since <m>f_n</m> is continuous at <m>a</m>,
+        we can choose <m>\delta_n>0</m> such that if <m>\abs{x-a}\lt \delta_n</m>,
+        then <m>\abs{f_n(x)-f_n(a)}\lt \frac{\eps}{2^n}</m>.
+        Let <m>\delta=\inf(\delta_1,\delta_2,\delta_3,\ldots)</m>.
+        If <m>\abs{x-a}\lt \delta</m> then
+        <md>
+          <mrow>\abs{f(x)-f(a)} \amp =  \abs{\sum_{n=1}^\infty f_n(x)  -  \sum_{n=1}^\infty f_n(a) }</mrow>
+          <mrow>\amp = \abs{\sum_{n=1}^\infty \left(f_n(x)-f_n(a)\right) }</mrow>
+          <mrow>\amp \le \sum_{n=1}^\infty \abs{f_n(x)-f_n(a) }</mrow>
+          <mrow>\amp \le \sum_{n=1}^\infty \frac{\eps}{2^n}</mrow>
+          <mrow>\amp \le \eps\sum_{n=1}^\infty \frac{1}{2^n}</mrow>
+          <mrow>\amp =   \eps</mrow>
+        </md>.
+      </p>
+
+      <p>
+        Thus <m>f</m> is continuous at <m>a</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <definition xml:id="def_PointwiseConvergence">
+    <statement>
+      <p>
+            <idx><h>convergence</h><h>of a series</h><h>pointwise</h></idx>
+        Let <m>S</m> be a subset of the real number system and let <m>\left(f_n\right)=\left(f_1,f_2,f_3,\,\ldots\right)</m> be a sequence of functions defined on <m>S</m>.
+        Let <m>f</m> be a function defined on <m>S</m> as well.
+        We say that  <m>\left(f_n\right)</m> <alert>converges to
+              <m>f</m> pointwise on <m>S</m></alert>
+            provided that for all <m>x\in S</m>,
+        the sequence of real numbers
+        <m>\left(f_n(x)\right)</m> converges to the number <m>f(x)</m>.
+        In this case we write<m>\,f_n\ptwise f</m> on <m>S</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Symbolically,
+    we have <m>f_n\ptwise f\text{ on } S\Leftrightarrow \forall\,x\in S,\forall\ \eps>0,\,\exists\ N</m> such that <m>\left(n>N \Rightarrow|f_n(x)-f(x)|\lt \eps\right)</m>.
+  </p>
+
+  <p>
+    This is the type of convergence we have been observing to this point.
+    By contrast we have the following new definition.
+  </p>
+
+  <definition xml:id="def_UniformConvergence">
+    <statement>
+      <p>
+            <idx><h>uniform convergence</h></idx>
+        Let <m>S</m> be a subset of the real number system and let <m>\left(f_n\right)=\left(f_1,f_2,f_3,\,\ldots\right)</m> be a sequence of functions defined on <m>S</m>.
+        Let <m>f</m> be a function defined on <m>S</m> as well.
+        We say that <m>\left(f_n\right)</m> <alert>converges to
+              <m>f</m> uniformly on <m>S</m></alert>
+        provided <m>\forall\ \eps>0,\,\exists\ N</m> such
+        that <m>n>N\Rightarrow|f_n(x)-f(x)|\lt \eps\text{ , } \forall\
+        x\in S</m>.
+      </p>
+
+      <p>
+        In this case we write <m>f_n\unif f</m> on <m>S</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    The difference between these two definitions is subtle.
+    In pointwise convergence,
+    we are given a fixed <m>x\in S</m> and an <m>\eps>0</m>.
+    Then the task is to find an <m>N</m> that works for that particular <m>x</m> and <m>\eps</m>.
+    In uniform convergence,
+    one is given <m>\eps>0</m> and must find a single <m>N</m> that works for that particular <m>\eps</m> but also simultaneously (uniformly) for all <m>x\in S</m>.
+    Clearly uniform convergence implies pointwise convergence as an <m>N</m> which works uniformly for all <m>x</m>,
+    works for each individual <m>x</m> also.
+    However the reverse is not true.
+    This will become evident, but first consider the following example.
+  </p>
+
+  <problem xml:id="prob_uniform_convergence">
+    <statement>
+      <p>
+            <idx><h>uniform convergence</h></idx>
+            <idx><h><m>x^n</m></h><h> converges uniformly on <m>(0,b)</m>, <m>b\lt 1</m></h></idx>
+        Let <m>0\lt b\lt 1</m> and consider the sequence of functions <m>\left(f_n\right)</m> defined on <m>[0,b]</m> by <m>f_n(x)=x^n</m>.
+        Use the definition to show that
+        <m>f_n\unif 0</m> on <m>[0,b]</m>. 
+        <hint>
+          <m>|x^n-0|=x^n\leq b^n</m>.
+        </hint>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Uniform convergence is not only dependent on the sequence of functions but also on the set <m>S</m>.
+    For example,
+    the sequence <m>\left(f_n(x)\right)=\left(x^n\right)_{n=0}^\infty</m> of <xref ref="prob_uniform_convergence">Problem</xref>
+    does not converge uniformly on <m>[0,1]</m>.
+    We could use the negation of the definition to prove this,
+    but instead, it will be a consequence of the following theorem.
+  </p>
+
+  <theorem xml:id="thm_UnifConv-_Continuity">
+    <statement>
+      <p>
+            <idx><h>uniform convergence</h><h>continuous functions and</h></idx>
+            <idx><h>continuous functions</h><h>uniform convergence and</h></idx>
+            <idx><h>continuous functions</h><h>uniform limit of continuous functions is continuous</h></idx>
+        Consider a sequence of functions <m>\left(f_n\right)</m> which are all continuous on an interval <m>I</m>.
+        Suppose <m>f_n\unif f</m> on <m>I</m>.
+        Then <m>f</m> must be continuous on <m>I</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+<title>Sketch of Proof</title>
+    <p>
+      Let <m>a\in I</m> and let <m>\eps>0</m>.
+      The idea is to use uniform convergence to replace <m>f</m> with one of the known continuous functions <m>f_n</m>.
+      Specifically, by uncancelling, we can write
+      <md>
+        <mrow>\left|f(x)-f(a)\right|\amp =\left|f(x)-f_n(x)+f_n(x)-f_n(a)+f_n(a)-f(a)\right|</mrow>
+        <mrow>\amp \leq \left|f(x)-f_n(x)\right|+\left|f_n(x)-f_n(a)\right|+\left|f_n(a)-f(a)\right|</mrow>
+      </md>
+    </p>
+
+    <p>
+      If we choose <m>n</m> large enough,
+      then we can make the first and last terms as small as we wish,
+      noting that the uniform convergence makes the first term uniformly small for all <m>x</m>.
+      Once we have a specific <m>n</m>,
+      then we can use the continuity of <m>f_n</m> to find a
+      <m>\delta>0</m> such that the middle term is small whenever <m>x</m> is within <m>\delta</m> of <m>a</m>.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>uniform convergence</h><h>continuous functions and</h></idx>
+            <idx><h>uniform convergence implies continuity of limit function</h></idx>
+        Provide a formal proof of <xref ref="thm_UnifConv-_Continuity">Theorem</xref> based on the above ideas.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h><m>x^n</m></h><h> converges pointwise on <m>[0,1]</m></h></idx>
+            <idx><h>pointwise convergence</h></idx>
+            <idx><h><m>x^n</m> converges pointwise on <m>[0,1]</m></h></idx>
+        Consider the sequence of functions <m>\left(f_n\right)</m> defined on <m>[0,1]</m> by <m>f_n(x)=x^n</m>.
+        Show that the sequence converges to the function
+        <me>
+          f(x)= \begin{cases}0\amp \text{ if  } x\in[0,1)\\ 1\amp \text{ if } x=1 \end{cases}
+        </me>
+        pointwise on <m>\,[0,1]</m>, but not uniformly on <m>[0,1]</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Notice that for the Fourier series at the beginning of this chapter,
+    <me>
+      f(x)=\frac{4}{\pi}\left(\cos\left(\frac{\pi}{2}x\right)-\frac{1}{3}\cos\left( 3\pi x\right)+\frac{1}{5}\cos\left(5\pi x\right)-\frac{1}{7}\cos\left(7\pi x\right)+\cdots\right)
+    </me>
+    the convergence cannot be uniform on <m>(-\infty,\infty)</m>,
+    as the function <m>f</m> is not continuous.
+    This never happens with a power series,
+    since they converge to continuous functions whenever they converge.
+    We will also see that uniform convergence is what allows us to integrate and differentiate a power series term by term.
+  </p>
+</section>
+

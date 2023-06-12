@@ -1,0 +1,53 @@
+
+
+<section>
+  <title>Additional Problems</title>
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Integral, Lagrange, Cauchy forms of remainder for various functions</h></idx>
+            <idx><h>Integral, Lagrange, Cauchy remainders drill, 6 parts</h></idx>
+        Find the Integral form, Lagrange form, and Cauchy form of the remainder for Taylor series for the following functions expanded about the given values of <m>\,a</m>.
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>f(x)=e^x</m>, <m>a=0</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x)=\sqrt{x}</m>, <m>a=1</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x)=(1+x)^\alpha</m>, <m>a=0</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x)=\frac{1}{x}</m>, <m>a=3</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x)=\ln x,\ a=2</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x)=\cos x, a=\frac{\pi}{2}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

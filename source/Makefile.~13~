@@ -1,0 +1,23 @@
+all: jing html pdf
+
+jing: *.ptx
+	java -classpath jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar ~/jing-trang/build/jing.jar /home/ecb5/PreText/mathbook/schema/pretext.rng ASORA.ptx
+
+
+ASORA.tex: *.ptx
+	pretext build latex
+
+ASORA.pdf: *.ptx
+	pretext build pdf
+
+ASORA.html: *.ptx
+	pdf build html
+
+html: ASORA.html Makefile
+
+
+clean: 
+	rm 
+
+dum.html: 
+	xsltproc --xinclude /home/ecb5/PreText/mathbook/xsl/pretext-html.xsl dum.ptx

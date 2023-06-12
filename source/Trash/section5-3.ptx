@@ -1,0 +1,159 @@
+
+
+<section>
+  <title>Cauchy's Form of the Remainder</title>
+  <p>
+    In his 1823 work,
+    <foreign>R&#xe9;sum&#xe9;e des le&#xe7;ons donn&#xe9;es &#xe1; l'ecole royale polytechnique sur le calcul infint&#xe9;simal,</foreign> Augustin Cauchy
+        <idx><h>Cauchy, Augustin</h></idx>
+    provided another form of the remainder for Taylor series.
+  </p>
+
+  <theorem xml:id="thm_CauchyRemainder">
+    <statement>
+      <p>
+        <term>Cauchy's Form of the Remainder</term>
+      </p>
+      <p>
+        <idx><h>sequences</h><h>Cauchy sequences</h><h>Cauchy's remainder</h></idx> 
+        Suppose <m>f</m> is a function such that
+        <m>f^{(n+1)}(t)</m> is continuous on an interval containing <m>a</m> and <m>x</m>.
+        Then
+        <me>
+          f(x)-\left(\sum_{j=0}^n\frac{f^{(j)}(a)}{j!}(x-a)^j\right)=\frac{f^{\, (n+1)}(c)}{n!}(x-c)^n(x-a)
+        </me>
+        where <m>c</m> is some number between <m>a</m> and <m>x</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Cauchy, Augustin</h><h>Cauchy Remainder</h></idx>
+        Prove <xref ref="thm_CauchyRemainder">Theorem</xref>
+        using an argument similar to the one used in the proof of <xref ref="thm_LagrangeRemainder">Theorem</xref>.
+        Don't forget there are two cases to consider.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Using Cauchy's form of the remainder,
+    we can prove that the binomial series
+    <me>
+      1+\frac{1}{2}x+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)}{2!}x^2+\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)\left(\frac{1}{2}-2\right)}{3!}x^3+\cdots
+    </me>
+    converges to <m>\sqrt{1+x}</m> for
+    <m>x\in(-1,0).</m>
+    
+    <fn>
+    Strictly speaking we only need to show this for <m>x\in(-1,-1/2).
+    </m>In <xref ref="prob_Taylor_Series-Binomial_Series_and">problem</xref> 
+    we covered<m>x\in (-1/2,0).</m>
+    </fn> 
+
+    With this in mind,
+    let <m>x</m> be a fixed number with
+    <m>-1\lt x\lt 0</m> and consider that the binomial series is the Maclaurin series for the function <m>f(x)=(1+x)^{\frac{1}{2}}</m>.
+    As we saw before,
+    <me>
+      f^{(n+1)}(t)=\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-n\right)\left(1+t\right)^{\frac{1}{2}-(n+1)}
+    </me>,
+    so the Cauchy form of the remainder is given by
+    <me>
+      0\le\abs{\frac{f^{(n+1)}(c)}{n!}(x-c)^n(x-0)}= \abs{\frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-n\right)}{n!}\frac{(x-c)^n}{(1+c)^{n+\frac{1}{2}}}\cdot x}
+    </me>
+    where <m>c</m> is some number with <m>x\leq c\leq 0</m>.
+    Thus we have
+    <md>
+      <mrow>0\amp \leq\left|\frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-n\right)}{n!}\frac{(x-c)^nx}{(1+c)^{n+\frac{1}{2}}}\right|</mrow>
+      <mrow>\amp =\frac{\left(\frac{1}{2}\right)\left(1-\frac{1}{2}\right)\cdots\left(n-\frac{1}{2}\right)}{n!}\frac{|x-c|^n|x|}{(1+c)^{n+\frac{1}{2}}}</mrow>
+      <mrow>\amp =\frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)\left(\frac{3}{2}\right)\left(\frac{5}{2}\right)\cdots\left(\frac{2n-1}{2}\right)}{n!}\frac{(c-x)^n}{(1+c)^n}\frac{|\,x|}{\sqrt{1+c}}</mrow>
+      <mrow>\amp =\frac{1\cdot 1\cdot 3\cdot 5\cdot\,\cdots\,\cdot\left(2n-1\right)}{2^{^{n+1}}n!}\left(\frac{c-x}{1+c}\right)^n\frac{|\,x|}{\sqrt{1+c}}</mrow>
+      <mrow>\amp =\frac{1\cdot 1\cdot 3\cdot 5\cdot\,\cdots\,\cdot\left(2n-1\right)}{2\cdot 2\cdot 4\cdot 6\cdot\,\cdots\,\cdot 2n}\left(\frac{c-x}{1+c}\right)^n\frac{|\,x|}{\sqrt{1+c}}</mrow>
+      <mrow>\amp =\frac{1}{2}\cdot\frac{1}{2}\cdot\frac{3}{4}\cdot\frac{5}{6}\cdot\cdots\,\cdot\frac{2n-1}{2n}\cdot\left(\frac{c-x}{1+c}\right)^n\frac{|\,x|}{\sqrt{1+c}}</mrow>
+      <mrow>\amp \leq\left(\frac{c-x}{1+c}\right)^n\frac{|\,x|}{\sqrt{1+c}}</mrow>
+    </md>.
+  </p>
+
+  <p>
+    Notice that if <m>-1\lt x\leq c</m>,<m></m> then <m>0\lt 1+x\leq 1+c</m>.
+    Thus <m>0\lt \frac{1}{1+c}\leq\frac{1}{1+x}</m> and <m>\frac{1}{\sqrt{1+c}}\leq\frac{1}{\sqrt{1+x}}</m>.
+    Thus we have
+    <me>
+      0\leq\left|\frac{\left(\frac{1}{2}\right)\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-n\right)}{n!}\frac{(x-c)^nx}{(1+c)^{n+\frac{1}{2}}}\right|\leq\left(\frac{c-x}{1+c}\right)^n\frac{|\,x|}{\sqrt{1+x}}
+    </me>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Binomial Series, the</h><h><m>g(c)=\frac{c-x}{1+c}</m> is increasing</h></idx>
+            <idx><h><m>g(c)=\frac{c-x}{1+c}</m> is increasing on <m>[x,0]</m></h></idx>
+        Suppose <m>-1\lt x\leq c\leq 0</m> and consider the function <m>g(c)=\frac{c-x}{1+c}</m>.
+        Show that on <m>[x,0]</m>,
+        <m>g</m> is increasing and use this to conclude that for <m>-1\lt x\leq c\leq 0</m>,
+        <me>
+          \frac{c-x}{1+c}\leq|x|
+        </me>.
+      </p>
+
+      <p>
+        Use this fact to finish the proof that the binomial series converges to
+        <m>\sqrt{1+x}</m> for <m>-1\lt x\lt 0</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The proofs of both the Lagrange form and the Cauchy form of the remainder for Taylor series made use of two crucial facts about continuous functions.
+    First, we assumed the Extreme Value Theorem: Any continuous function on a closed
+  </p>
+
+  <figure>
+    <caption>Augustin Cauchy<idx><h>Cauchy, Augustin</h><h>portrait of</h></idx></caption>
+    <image width="28%" source="images/Cauchy.png" />
+  </figure>
+
+  <p>
+    bounded interval assumes its maximum and minimum somewhere on the interval.
+    Second, we assumed that any continuous function satisfied the Intermediate Value Theorem: If a continuous function takes on two different values,
+    then it must take on any value between those two values.
+  </p>
+
+  <p>
+    Mathematicians in the late 1700's and early 1800's typically considered these facts to be intuitively obvious.
+    This was natural since our understanding of continuity at that time was, solely,
+    intuitive.
+    Intuition is a useful tool, but as we have seen before it is also unreliable.
+    For example consider the following function.
+    <me>
+      f(x)= \begin{cases}x\,\sin\left(\frac{1}{x}\right),\amp \text{ if } x\neq 0\\ 0\text{,} \amp \text{ if } x=0 \end{cases} 
+    </me>.
+  </p>
+
+  <p>
+    Is this function continuous at 0?
+    Near zero its graph looks like this:
+<p>    <image width="100%" source="images/Ch5fig4.png" /> </p>
+but this graph must be taken with a grain of salt as
+    <m>\sin \left(\frac{1}{x}\right)</m> oscillates infinitely often as <m>x</m> nears zero.
+  </p>
+
+  <p>
+    No matter what your guess may be,
+    it is clear that it is hard to analyze such a function armed with only an intuitive notion of continuity.
+    We will revisit this example in the next chapter.
+  </p>
+
+  <p>
+    As with convergence, continuity is more subtle than it first appears.
+  </p>
+
+  <p>
+    We put convergence on solid ground by providing a completely analytic definition in the previous chapter.
+    What we need to do in the next chapter is provide a completely rigorous definition for continuity.
+  </p>
+</section>
+
