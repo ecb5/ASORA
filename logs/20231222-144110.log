@@ -1,0 +1,13 @@
+INFO    : PreTeXt project found in `/home/ecb5/Dropbox/Books/ASORA`.
+WARNING : Project's CLI version could not be detected from `requirements.txt`.
+WARNING : Try `pretext init --refresh` to produce a compatible file.
+INFO    : Since no target was supplied, we will use "html".
+
+INFO    : Staging latest build located in `/home/ecb5/Dropbox/Books/ASORA/output/html` at `/home/ecb5/Dropbox/Books/ASORA/output/stage`.
+INFO    : 
+INFO    : Deployment is now staged at `/home/ecb5/Dropbox/Books/ASORA/output/stage`.
+INFO    : Preparing to deploy from active `main` git branch.
+INFO    : 
+INFO    : Changes to project source since last commit detected.
+INFO    : Add/committing these changes to local Git repository.
+INFO    : 

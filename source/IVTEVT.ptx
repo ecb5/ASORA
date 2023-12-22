@@ -531,10 +531,10 @@
     <task>
       <statement>
         <p>
-          Suppose we have a supercomputer which can add 10
-          trillion terms of the Harmonic Series per second.
-          Approximately how many earth lifetimes would it take for
-          this computer to sum the Harmonic Series until it
+          Suppose we have a supercomputer which can add 10 trillion
+          terms of the Harmonic Series per second.  Approximately how
+          many Earth Ages (the current age of the Earth) would it take
+          for this computer to sum the Harmonic Series until it
           surpasses 100?
         </p>
       </statement>

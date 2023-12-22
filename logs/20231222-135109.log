@@ -1,0 +1,60 @@
+INFO    : PreTeXt project found in `/home/ecb5/Dropbox/Books/ASORA`.
+WARNING : Project's CLI version could not be detected from `requirements.txt`.
+WARNING : Try `pretext init --refresh` to produce a compatible file.
+INFO    : Checking for update for required playwright chromium browser.
+INFO    : using playwright package to create previews for interactives from /home/ecb5/Dropbox/Books/ASORA/source/ASORA.ptx for placement in /home/ecb5/Dropbox/Books/ASORA/generated-assets/preview
+INFO    : XSL conversion of /home/ecb5/Dropbox/Books/ASORA/source/ASORA.ptx by /home/ecb5/.ptx/xsl/extract-interactive.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    : successful application of /home/ecb5/.ptx/xsl/extract-interactive.xsl
+INFO    : discovering source file's directory name: /home/ecb5/Dropbox/Books/ASORA/source
+INFO    : verifying and expanding input directory: /home/ecb5/Dropbox/Books/ASORA/source/../generated-assets
+INFO    : input directory expanded to absolute path: /home/ecb5/Dropbox/Books/ASORA/generated-assets
+INFO    : verifying and expanding input directory: /home/ecb5/Dropbox/Books/ASORA/source/../assets
+INFO    : input directory expanded to absolute path: /home/ecb5/Dropbox/Books/ASORA/assets
+INFO    : Opening subprocess http.server with port=8888
+INFO    : automatic screenshot of interactive with identifier "Interegnum-2-24-1" on page http://localhost:8888/Interegnum-2-24-1.html to file Interegnum-2-24-1-preview.png
+INFO    : Closing http.server subprocess
+WARNING : Unable to generate some interactive previews: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator("xpath=//iframe[@id='Interegnum-2-24-1'][1]")
+============================================================
+INFO    : manufacturing QR codes from /home/ecb5/Dropbox/Books/ASORA/source/ASORA.ptx for placement in /home/ecb5/Dropbox/Books/ASORA/generated-assets/qrcode
+INFO    : XSL conversion of /home/ecb5/Dropbox/Books/ASORA/source/ASORA.ptx by /home/ecb5/.ptx/xsl/extract-qrcode.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    : successful application of /home/ecb5/.ptx/xsl/extract-qrcode.xsl
+INFO    : creating URL with content "interactive-1.html" as /home/ecb5/Dropbox/Books/ASORA/generated-assets/qrcode/Interegnum-2-24-1.png...
+INFO    : creating URL with content "interactive-2.html" as /home/ecb5/Dropbox/Books/ASORA/generated-assets/qrcode/Interegnum-2-32-1.png...
+INFO    : creating URL with content "interactive-3.html" as /home/ecb5/Dropbox/Books/ASORA/generated-assets/qrcode/Interegnum-2-37-1-1.png...
+INFO    : QR code creation complete
+INFO    : Removing temporary directory /tmp/tmp__sm11oe
+INFO    : Removing temporary directory /tmp/tmp1syik1k_
+INFO    : Preparing to build into /home/ecb5/Dropbox/Books/ASORA/output/pdf.
+INFO    : discovering source file's directory name: /home/ecb5/Dropbox/Books/ASORA/source
+INFO    : verifying and expanding input directory: /home/ecb5/Dropbox/Books/ASORA/source/../generated-assets
+INFO    : input directory expanded to absolute path: /home/ecb5/Dropbox/Books/ASORA/generated-assets
+INFO    : verifying and expanding input directory: /home/ecb5/Dropbox/Books/ASORA/source/../assets
+INFO    : input directory expanded to absolute path: /home/ecb5/Dropbox/Books/ASORA/assets
+INFO    : converting /home/ecb5/Dropbox/Books/ASORA/source/ASORA.ptx to LaTeX as /tmp/tmpnmi4dyig/ASORA.tex
+INFO    : XSL conversion of /home/ecb5/Dropbox/Books/ASORA/source/ASORA.ptx by /home/ecb5/.ptx/xsl/pretext-latex.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    :     * PTX:WARNING: There are apparent XML elements in locations that should be text only (1 times).
+INFO    :     * PTX:WARNING: There is an apparent XML element (<alert>) inside an <pre> element, which should only contain text.  Using an escaped "less than" ('&lt;') might be the solution, or using a CDATA section.
+INFO    :     *              located within: "FrontColophon" (xml:id)
+INFO    :     * PTX:DEPRECATE: (2022-04-25) a "@label" attribute (on a "ul" or "ol" element) has been deprecated and should be replaced by the functionally equivalent "@marker".  We will attempt to honor your request (12 times)
+INFO    :     *              located within: "ThreeLessons_lesson-two" (xml:id), " Lesson Two" (title)
+INFO    :     *              located within: "thm_IrrationalBetweenIrrationals" (xml:id)
+INFO    :     *              located within: "ExponentAdditionProperty" (xml:id), "Power Series as Infinite Polynomials" (title)
+INFO    :     *              located within: "thm_CalcLimits" (xml:id)
+INFO    :     *              located within: "def_LeastUpperBound" (xml:id), "Least Upper Bound Property (LUBP)" (title)
+INFO    :     *              located within: "IVTandEVT-SupremumAndEVT" (xml:id), "The Supremum and the Extreme Value Theorem" (title)
+INFO    :     *              located within: "IVTandEVT-SupremumAndEVT" (xml:id), "The Supremum and the Extreme Value Theorem" (title)
+INFO    :     *              located within: "IVTandEVT-AddProb" (xml:id), "Additional Problems" (title)
+INFO    :     *              located within: "IVTandEVT-AddProb" (xml:id), "Additional Problems" (title)
+INFO    :     *              located within: "PowerSeriesRedux-UnifConv-IntsAndDerivs" (xml:id), "Uniform Convergence: Integrals and Derivatives" (title)
+INFO    :     *              located within: "BackToFourier" (xml:id), "Back to the Real Numbers" (title)
+INFO    :     *              located within: "BackToFourier" (xml:id), "Back to the Real Numbers" (title)
+INFO    :     * --------------
+INFO    : successful application of /home/ecb5/.ptx/xsl/pretext-latex.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+

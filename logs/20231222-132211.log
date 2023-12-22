@@ -1,0 +1,32 @@
+INFO    : PreTeXt project found in `/home/ecb5/Dropbox/Books/ASORA`.
+WARNING : Project's CLI version could not be detected from `requirements.txt`.
+WARNING : Try `pretext init --refresh` to produce a compatible file.
+INFO    : Preparing to build into /home/ecb5/Dropbox/Books/ASORA/output/html.
+INFO    : discovering source file's directory name: /home/ecb5/Dropbox/Books/ASORA/source
+INFO    : verifying and expanding input directory: /home/ecb5/Dropbox/Books/ASORA/source/../generated-assets
+INFO    : input directory expanded to absolute path: /home/ecb5/Dropbox/Books/ASORA/generated-assets
+INFO    : verifying and expanding input directory: /home/ecb5/Dropbox/Books/ASORA/source/../assets
+INFO    : input directory expanded to absolute path: /home/ecb5/Dropbox/Books/ASORA/assets
+INFO    : Runestone Services (via PreTeXt repository): version 7.1.2
+INFO    : Runestone Services (using newer, via online CDN query): version 7.2.8
+INFO    : converting /home/ecb5/Dropbox/Books/ASORA/source/ASORA.ptx to HTML in /tmp/tmph17qjup7
+INFO    : XSL conversion of /home/ecb5/Dropbox/Books/ASORA/source/ASORA.ptx by /home/ecb5/.ptx/xsl/pretext-html.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    :     * PTX:DEPRECATE: (2022-04-25) a "@label" attribute (on a "ul" or "ol" element) has been deprecated and should be replaced by the functionally equivalent "@marker".  We will attempt to honor your request (12 times)
+INFO    :     *              located within: "ThreeLessons_lesson-two" (xml:id), " Lesson Two" (title)
+INFO    :     *              located within: "thm_IrrationalBetweenIrrationals" (xml:id)
+INFO    :     *              located within: "ExponentAdditionProperty" (xml:id), "Power Series as Infinite Polynomials" (title)
+INFO    :     *              located within: "thm_CalcLimits" (xml:id)
+INFO    :     *              located within: "def_LeastUpperBound" (xml:id), "Least Upper Bound Property (LUBP)" (title)
+INFO    :     *              located within: "IVTandEVT-SupremumAndEVT" (xml:id), "The Supremum and the Extreme Value Theorem" (title)
+INFO    :     *              located within: "IVTandEVT-SupremumAndEVT" (xml:id), "The Supremum and the Extreme Value Theorem" (title)
+INFO    :     *              located within: "IVTandEVT-AddProb" (xml:id), "Additional Problems" (title)
+INFO    :     *              located within: "IVTandEVT-AddProb" (xml:id), "Additional Problems" (title)
+INFO    :     *              located within: "PowerSeriesRedux-UnifConv-IntsAndDerivs" (xml:id), "Uniform Convergence: Integrals and Derivatives" (title)
+INFO    :     *              located within: "BackToFourier" (xml:id), "Back to the Real Numbers" (title)
+INFO    :     *              located within: "BackToFourier" (xml:id), "Back to the Real Numbers" (title)
+INFO    :     * --------------
+INFO    : successful application of /home/ecb5/.ptx/xsl/pretext-html.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+

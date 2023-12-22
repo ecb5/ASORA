@@ -1,0 +1,160 @@
+\message{ !name(SolutionManual.tex)}\documentclass[oneside]{book}
+
+\usepackage{wrapfig}
+\usepackage{ifpdf}
+ \ifpdf
+  \usepackage{hyperref}
+\fi
+
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{makeidx}
+
+\def\halmos{\mbox{\raggedright\rule{0.1in}{0.1in}}}
+\newcommand{\xqedhere}[2]{%
+  \rlap{\hbox to#1{\hfil\llap{\ensuremath{#2}}}}}
+
+\newcommand{\xqed}[1]{%
+  \leavevmode\unskip\penalty9999 \hbox{}\nobreak\hfill
+  \quad\hbox{\ensuremath{#1}}}
+
+\def\IndexTheorem#1{\index{Theorems!Theorem~\ref{#1}}}
+\def\IndexDefinition#1{\index{Definitions!Definition~\ref{#1}}}
+\def\IndexCorollary#1{\index{Corollaries!Corollary~\ref{#1}}}
+\def\IndexLemma#1{\index{Lemmas!Lemma~\ref{#1}}}
+
+
+\def\abs#1{\left|#1\right|}
+\def\divides#1#2{#1\kern.1em\left|#2\right.{}}
+\def\notdivide#1#2{#1\kern-.2em\not|\,#2}
+
+\newenvironment{ProofOutline}{\noindent{}{\bf Sketch of Proof:}}{\hfill{}QED?\\}
+\newenvironment{hint}{\noindent{}\hfill\\{\rm\bf Hint: }}{}
+\newenvironment{scrapwork}{\noindent{}\hfill\\{\bf{} SCRAPWORK}:
+}{\bf\hfill\\ END OF SCRAPWORK} 
+%\renewenvironment{proof}{\noindent{}{\bf Proof:\,}}{\hfill \halmos{}\\[2mm]}
+\renewenvironment{proof}{\leftline{{\bf Proof:\,}}}{\hfill \halmos{}\\[2mm]}
+
+%% Set up margin notes
+\setlength{\marginparwidth}{1.2in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+%
+
+
+
+\newenvironment{solution}[1]{{\color{red}{}\ \\\noindent{}\sc
+    \underline{Solution:}\\}#1}{\hfill{}\\\color{red}{\sc \underline{End of Solution}}}%$\clubsuit$}
+   
+
+
+%% Odds and Ends
+\def\imp{\ \Rightarrow\ }
+\def\d#1{\thinspace{\rm d}#1}
+\def\dfdx#1#2{\frac{\text{d}{#1}}{\text{d}{#2}}} 
+\def\abs#1{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+
+\def\LabelProblem#1#2{\label{#1}\addcontentsline{toc}{subsection}{\hskip1cm Problem~\ref{#1}}}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+
+
+\newtheorem{problem}{Problem}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{example}{Example}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+
+
+\pagestyle{headings}{}
+ \makeindex{}
+\begin{document}
+
+\message{ !name(SolutionManual.tex) !offset(1803) }
+\begin{problem}
+\LabelProblem{prob:rearrangement of alternating Harmonic series-diverges to infinity}{}
+  Show that there is a rearrangement of
+  $1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots$ which diverges to
+  $\infty$.\xqed{\lozenge}{}
+  \begin{solution}{}
+    Our proof will be by induction.
+\vskip5mm{}
+    \noindent{}{\bf \underline{Base case $(n=1):$}} Choose $O_1\in\NN$ such that
+    $\exists$ $ k_1$ such that $$\sum_{i=1}^{k_1}\frac{1}{2i-1}> 2.$$
+
+    Then $\left(\sum_{i=1}^{k_1}\frac{1}{2i-1}\right)-\frac12>1.$
+\vskip5mm{}
+    \noindent{}\underline{\bf{}Induction Assumption:} Assume that
+    $k_1, k_2, \cdots, k_n$ has been constructed such
+    that
+    \begin{equation}
+      \label{eq:1}
+      \begin{split}
+        \left[\left(\sum_{i=1}^{k_1}\frac{1}{2i-1}\right)-\frac12\right]
+        &+ \left[\left(\sum_{i=k_1+1}^{k_2}\frac{1}{2i-1}\right) -
+          \frac14\right] + \cdots \\
+        &\quad\quad+ \left[\sum_{i=k_{n-1}+1}^{k_n}\frac{1}{2i-1} -\frac{1}{2n}\right] >
+        n.
+      \end{split}
+      \end{equation}
+      Observe that the summation in inequality~(\ref{eq:1}) is a
+      rearrangement of all of the terms of the Alternating Harmonic
+      Series up through $-\frac{1}{2n}.$
+      
+      Since $\sum_{i=1}^{\infty}\frac{1}{2i-1} = \infty$ we
+    can find an integer $k+1$ such that
+    $$\sum_{i=k_{n-1}+1}^{k_n}\frac{1}{2i-1} > 2.$$ And since
+      $\frac{1}{2i-1} <1$ $\forall\  n\in\NN$ we see that
+      $\left(\sum_{i=k_{n-1}+1}^{k_n}\frac{1}{2i-1}\right) -\frac{1}{2(k+1)}> 1.$
+      Therefore 
+    \begin{equation*}
+      \begin{split}
+        \left[\left(\sum_{i=1}^{k_1}\frac{1}{2i-1}\right)-\frac12\right]
+        &+ \left[\left(\sum_{i=k_1+1}^{k_2}\frac{1}{2i-1}\right) -
+          \frac14\right] \\
+        &\quad+ \cdots\\
+        &\quad\quad+ \left[\sum_{i=k_{n-1}+1}^{k_n}\frac{1}{2i-1} -\frac{1}{2n}\right]\\
+        &\quad\quad\quad+\left[\sum_{i=k_n+1}^{k_{n+1}}\frac{1}{2i-1}
+          -\frac{1}{2(n+1)}\right]>n+1.
+      \end{split}
+    \end{equation*}
+
+      Observe that the summation in inequality~(\ref{eq:1}) is a
+      rearrangement of all of the terms of the Alternating Harmonic
+      Series up through $-\frac{1}{2(n+1)}.$
+      Therefore, taking $k_0=0$ we see that  the rearrangement
+      $$
+      \sum_{n=k_0}^\infty \left(     \sum_{i=k_n+1}^{k_{n+1}}\frac{1}{2i-1} -\frac{1}{2n}\right)
+      $$
+      diverges to infinity.
+\end{solution}
+\newpage{}
+\end{problem}
+
+\message{ !name(SolutionManual.tex) !offset(6565) }
+
+\end{document}
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% eval:(load-file (concat dropbox-location "/lisp/start-assessment.el"))
+%%% problem-header: "\\begin{problem}"
+%%% problem-tail: "\\end{problem}"
+%%% End: 

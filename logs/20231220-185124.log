@@ -1,0 +1,10 @@
+INFO    : PreTeXt project found in `/home/ecb5/Dropbox/Books/ASORA`.
+WARNING : Project's CLI version could not be detected from `requirements.txt`.
+WARNING : Try `pretext init --refresh` to produce a compatible file.
+INFO    : Now preparing local server to preview your project directory `/home/ecb5/Dropbox/Books/ASORA`.
+INFO    :   (Reminder: use `pretext deploy` to deploy your built project to a public
+INFO    :   GitHub Pages site that can be shared with readers who cannot access your
+INFO    :   personal computer.)
+INFO    : 
+INFO    : Server will soon be available at http://localhost:8128
+INFO    : Opening browser for target `pdf` at http://localhost:8128/output/pdf in 3 seconds

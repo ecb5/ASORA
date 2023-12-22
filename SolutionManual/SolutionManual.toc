@@ -1,0 +1,237 @@
+\contentsline {part}{I\hspace {1em}In Which We Raise a Number of Questions}{7}{part.1}%
+\contentsline {chapter}{Prologue: Three Lessons Before We Begin}{8}{chapter*.2}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Quadratic Formula-Tartaglia's Method}}{8}{problem.1}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Quadratic Formula-Lagrange's Method}}{11}{problem.2}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:PrimeDivideTwoProduct}}{13}{problem.3}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:PrimeDivideMultiProduct}}{14}{problem.4}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:NeedsALabel}}{15}{problem.5}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:FermatsLittleTheorem}}{16}{problem.6}%
+\contentsline {chapter}{\numberline {1}Numbers, Real ($\mathbb {R}$) and Rational ($\mathbb {Q}$)}{17}{chapter.1}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:rationals between rationals}}{17}{problem.7}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:common denominators}}{18}{problem.8}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:irrational numbers}}{19}{problem.9}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ProductRationalIrrational}}{21}{problem.10}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sums and products of rational and irrational numbers}}{23}{problem.11}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:creating irrationals from rationals}}{24}{problem.12}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:creating rationals from irrationals}}{25}{problem.13}%
+\contentsline {chapter}{\numberline {2}Calculus in the 17th and 18th Centuries}{26}{chapter.2}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Leibniz product rule}}{26}{problem.14}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:power rule with fractional exponents}}{29}{problem.15}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Brachistrochrone solution}}{30}{problem.16}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ExpProp3}}{31}{problem.17}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ExpProp4}}{32}{problem.18}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ExpProp5}}{33}{problem.19}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ExpProp6}}{34}{problem.20}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:trig functions as solutions of IVP}}{35}{problem.21}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:NaiveTaylorSeries}}{37}{problem.22}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:AtanViaGeoSeriesProb}}{41}{problem.23}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:squaring the binomial series}}{43}{problem.24}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:SqrtSeriesProb}}{45}{problem.25}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:first series expansion of pi}}{47}{problem.26}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:second series expansion of pi}}{48}{problem.27}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:general binomial series}}{49}{problem.28}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Basel problem}}{51}{problem.29}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:alternating harmonic series}}{53}{problem.30}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:power series drills}}{54}{problem.31}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Maclaurin series of a^x}}{56}{problem.32}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:power series of sin(x) at an arbitrary point}}{57}{problem.33}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Maclaurin series}}{58}{problem.34}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:integration via series}}{59}{problem.35}%
+\contentsline {chapter}{\numberline {3}Questions Concerning Power Series}{60}{chapter.3}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Taylor series1}}{60}{problem.36}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy's counterexample1}}{61}{problem.37}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy's counterexample2}}{62}{problem.38}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Taylor's formula-binomial series via}}{63}{problem.39}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Taylor's formula-series expansions of elementary functions using}}{64}{problem.40}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Taylor's Theorem-proof}}{65}{problem.41}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Taylor Series-log(2)}}{66}{problem.42}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:rearrangement of alternating Harmonic series-diverges to infinity}}{67}{problem.43}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:RearrangeDivToNegInf}}{69}{problem.44}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Taylor Series2}}{70}{problem.45}%
+\contentsline {part}{II\hspace {1em}Interregnum}{71}{part.2}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:HarmonicMotion}}{72}{problem.46}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Heat Equation-solving for X(x)}}{73}{problem.47}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Heat Equation!sum of fundamental solutions}}{74}{problem.48}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:SinOrthogonality}}{75}{problem.49}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Fourier Series-Sine series}}{76}{problem.50}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:FourierDiverge}}{78}{problem.51}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Fourier Series-orthogonality}}{79}{problem.52}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:fouriercoef}}{80}{problem.53}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Fourier Series-cosine series}}{81}{problem.54}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Fourier Series-differentiation}}{82}{problem.55}%
+\contentsline {part}{III\hspace {1em}In Which We Find (Some) Answers}{86}{part.3}%
+\contentsline {chapter}{\numberline {4}Convergence of Sequences and Series}{87}{chapter.4}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:absolute value}}{87}{problem.56}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences1}}{89}{problem.57}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences2}}{90}{problem.58}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences3}}{91}{problem.59}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences-not converge to zero}}{93}{problem.60}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences4}}{94}{problem.61}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences5}}{95}{problem.62}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences!not converge to s}}{96}{problem.63}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ConstantSequence}}{97}{problem.64}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ReverseTriangleInequality}}{98}{problem.65}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:SumOfSequences}}{100}{problem.66}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:BoundedConvergent}}{101}{problem.67}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences-termwise product}}{102}{problem.68}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences-constant times}}{103}{problem.69}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences-termwise quotient}}{104}{problem.70}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences-identifying theorems used in a complex problem}}{105}{problem.71}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences-Squeeze Theorem}}{106}{problem.72}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences-integers diverge to infinity}}{107}{problem.73}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:diverge to infinity implies diverge}}{108}{problem.74}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:div to infty sum}}{109}{problem.75}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:diverge to pos or neg infty combinations}}{110}{problem.76}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:diverge but not to infinity}}{111}{problem.77}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences-divergence to infinity}}{112}{problem.78}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:GeometricSequenceDivergence}}{113}{problem.79}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences!termwise absolute value}}{114}{problem.80}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences-uniqueness of limit}}{115}{problem.81}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:bounded-sequence-over-n-converges}}{116}{problem.82}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:series-geometric}}{117}{problem.83}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences-ratio of}}{118}{problem.84}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences-diffenences of}}{119}{problem.85}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sequences-bounded}}{120}{problem.86}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:RatioTest}}{121}{problem.87}%
+\contentsline {chapter}{\numberline {5}Convergence of the Taylor Series: A ``Tayl'' of Three Remainders}{123}{chapter.5}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Triangle Inequality for Integrals}}{123}{problem.88}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Taylor Series-prove}}{124}{problem.89}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Taylor Series-using}}{126}{problem.90}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ExponentAddition}}{127}{problem.91}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Lagrange Remainder-for x<a}}{128}{problem.92}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Taylor Series-geometric series and}}{130}{problem.93}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Taylor Series-Binomial Series and}}{132}{problem.94}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Lagrange Remainder-for ln(2)}}{133}{problem.95}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy Remainder}}{134}{problem.96}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Binomial Series of g(c)=frac{c-x}{1+c} is increasing}}{135}{problem.97}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Integral, Lagrange, Cauchy forms of remainder}}{136}{problem.98}%
+\contentsline {chapter}{\numberline {6}Continuity: What It Isn't and What It Is}{137}{chapter.6}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!Weierstrass's function}}{137}{problem.99}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!lines}}{138}{problem.100}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!smaller delta, bigger eps}}{139}{problem.101}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:extended sqrt is continuous at zero}}{140}{problem.102}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:sqrt{x} is continuous at zero}}{141}{problem.103}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!at any positive real number}}{142}{problem.104}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!sin( x)}}{143}{problem.105}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!e^x}}{145}{problem.106}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!topologist's sine function at zero}}{146}{problem.107}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!Dirichelet's function at zero}}{147}{problem.108}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!Heaviside's function}}{148}{problem.109}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!Dirichelet's function not at zero}}{149}{problem.110}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!Topologist's Sine function at zero}}{150}{problem.111}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!limit definition}}{151}{problem.112}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!preserved by multiplication}}{152}{problem.113}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!continuous functions bounded away from zero}}{153}{problem.114}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!preserved by division}}{154}{problem.115}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!preserved by composition}}{155}{problem.116}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!examples of continuous functions}}{156}{problem.117}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!sin(e^x)}}{157}{problem.118}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!limits via}}{158}{problem.119}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!of limit{x}{a}{frac{x^2-a^2}{x-a}}}}{159}{problem.120}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!verifying limits via}}{160}{problem.121}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!limit laws from calculus via}}{162}{problem.122}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!Squeeze Theorem via}}{163}{problem.123}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!sin(x/x) at zero}}{164}{problem.124}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prb:DiffImpCont}}{165}{problem.125}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:FermatsTheoremMaxima}}{167}{problem.126}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:FermatsTheoremMinima}}{168}{problem.127}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:MVT}}{169}{problem.128}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:PosDerivIncFunc1}}{170}{problem.129}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:PosDerivIncFunc2}}{171}{problem.130}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:PosDerivIncFunc3}}{172}{problem.131}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!constant functions}}{173}{problem.132}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!ln(x)}}{174}{problem.133}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:continuity!formal definition of discontinuity}}{175}{problem.134}%
+\contentsline {chapter}{\numberline {7}Intermediate and Extreme Values}{176}{chapter.7}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:NIP-LowerLessThanUpper}}{176}{problem.135}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:LUBP implies irrational numbers}}{177}{problem.136}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:NIP endpoint sequences converge}}{178}{problem.137}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:square roots exist}}{179}{problem.138}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:existence of Euler's constant}}{180}{problem.139}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:gamma!approximating}}{182}{problem.140}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:gamma!slow convergence to}}{183}{problem.141}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:IVT!half of proof}}{184}{problem.142}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:IVT!other half of proof}}{185}{problem.143}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:IVT!odd degree polynomial must have a root}}{186}{problem.144}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:convergence of subsequences}}{187}{problem.145}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Bolzano-Weierstrass!proof}}{188}{problem.146}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Bolzano-Weierstrass!implies compact sets bounded}}{189}{problem.147}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Bolzano-Weierstrass!implies LUB}}{190}{problem.148}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:prove corollary cor:IncBoundedConverge}}{191}{problem.149}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:nested square roots}}{192}{problem.150}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:EVT}}{194}{problem.151}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:BW!implies NIP}}{195}{problem.152}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:subsequence!of rationals doesn't converge to an irrational}}{196}{problem.153}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:LUBP implies NIP}}{197}{problem.154}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:LUBP doesn't hold in Q}}{198}{problem.155}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ArchimedeanProperty}}{199}{problem.156}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ArchimedeanPropertyNotEquivalentToNIP}}{200}{problem.157}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:LUB-defining infimum (GLB)}}{201}{problem.158}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:LUB-identifying suprema and infima}}{202}{problem.159}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:LUB-infimum and}}{203}{problem.160}%
+\contentsline {chapter}{\numberline {8}Back to Power Series}{204}{chapter.8}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy's incorrect proof}}{204}{problem.161}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:uniform convergence}}{205}{problem.162}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:uniform convergence!implies continuity of limit function}}{206}{problem.163}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:xn converges pointwise}}{207}{problem.164}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:UniformConvergenceAndIntegration}}{208}{problem.165}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:pointwise vs. uniform convergence}}{209}{problem.166}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:uniform convergence!integrating power series}}{210}{problem.167}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:uniform convergence!differentiation and}}{211}{problem.168}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:uniform convergence!differentiating power series}}{212}{problem.169}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy sequences!convergence implies Cauchy}}{213}{problem.170}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy sequences!Cauchy implies bounded}}{214}{problem.171}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy sequences!Cauchy implies convergence}}{215}{problem.172}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy sequences!Cauchy implies NIP}}{216}{problem.173}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy sequences!don't converge in Q}}{217}{problem.174}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy sequences!Cauchy criterion}}{218}{problem.175}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:NthTermTest}}{219}{problem.176}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:StrongCauchyCriterion}}{220}{problem.177}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy sequences!Comparison Test}}{222}{problem.178}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy sequences!Absolute Convergence}}{223}{problem.179}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy sequences!Absolute Convergence does not imply convergence}}{224}{problem.180}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy sequences!rearrangements of Absolutely Convergent series}}{225}{problem.181}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy sequences!Radius of Convergence}}{227}{problem.182}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Cauchy sequences!a series diverges outside its Radius of Convergence}}{228}{problem.183}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:WeierstrassM}}{229}{problem.184}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:FourierUniformConv}}{230}{problem.185}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Weierstrass M-test!identifying pointwise vs. uniform convergence}}{231}{problem.186}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Weierstrass M-test!and power series}}{232}{problem.187}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:uniform convergence!integration and power series}}{233}{problem.188}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:uniform convergence!differentiation and power series}}{234}{problem.189}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:M test on boundary}}{235}{problem.190}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Abel's Partial Summation}}{236}{problem.191}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Abel's Lemma}}{237}{problem.192}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:Abel's Theorem}}{238}{problem.193}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:uniform convergence!and power series}}{239}{problem.194}%
+\contentsline {chapter}{\numberline {9}Back to the Real Numbers}{240}{chapter.9}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:accumulation-point}}{240}{problem.195}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:derived-set}}{241}{problem.196}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:derived-s-subset-of-s}}{242}{problem.197}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:NIP-TwoPoints}}{243}{problem.198}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:countable sets!examples of}}{244}{problem.199}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:countable sets!unions of}}{245}{problem.200}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:countable sets!Q}}{247}{problem.201}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:QMeasureZero}}{248}{problem.202}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:uncountable sets!open intervals in R}}{249}{problem.203}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:NineBar}}{250}{problem.204}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:PowerSet}}{251}{problem.205}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:CantorsTheorem}}{252}{problem.206}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:CountablyInfinite}}{253}{problem.207}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:InfiniteContainsCountablyInfinite}}{254}{problem.208}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:InfiniteDeleteCountablyInfinite}}{255}{problem.209}%
+\contentsline {chapter}{Epilogue}{256}{chapter*.3}%
+\contentsline {section}{{\bf {}Epilogue:} On the Nature of Numbers}{256}{section*.4}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {ZeroNotEqualToOne}}{256}{problem.210}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:RationalField}}{257}{problem.211}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ComplexField}}{258}{problem.212}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:LinearlyOrderedFields}}{259}{problem.213}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:InfiniteDecimalAddition}}{260}{problem.214}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:EquivalentCauchySequences}}{261}{problem.215}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:CauchyAdditionWellDefined}}{262}{problem.216}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:OneInCauchy}}{263}{problem.217}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ConfirmFieldAxiomsCauchy}}{264}{problem.218}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {DedekindOrdering}}{265}{problem.219}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:MultPreserveCut}}{266}{problem.220}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:ProveTechnical}}{267}{problem.221}%
+\contentsline {subsection}{\hskip 1cm Problem\nobreakspace {}\ref {prob:CutSubtraction}}{268}{problem.222}%

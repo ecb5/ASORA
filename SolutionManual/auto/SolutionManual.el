@@ -1,0 +1,153 @@
+(TeX-add-style-hook
+ "SolutionManual"
+ (lambda ()
+   (TeX-add-to-alist 'LaTeX-provided-class-options
+                     '(("book" "oneside")))
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "href")
+   (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
+   (TeX-run-style-hooks
+    "latex2e"
+    "book"
+    "bk10"
+    "wrapfig"
+    "ifpdf"
+    "hyperref"
+    "amsmath"
+    "amssymb"
+    "amsthm"
+    "graphicx"
+    "color"
+    "makeidx")
+   (TeX-add-symbols
+    '("xqed" 1)
+    '("xqedhere" 2)
+    "eps"
+    "unif"
+    "ptwise"
+    "CC"
+    "DD"
+    "RR"
+    "QQ"
+    "NN"
+    "ZZ"
+    "halmos"
+    "IndexTheorem"
+    "IndexDefinition"
+    "IndexCorollary"
+    "IndexLemma"
+    "divides"
+    "notdivide"
+    "oldmarginpar"
+    "imp"
+    "d"
+    "dfdx"
+    "abs"
+    "limit"
+    "LabelProblem")
+   (LaTeX-add-labels
+    "#1"
+    "sec:two-lessons-before"
+    "eq:GenCubic"
+    "eq:LagrangeQuadratic1"
+    "eq:LagrangeQuadratic2"
+    "eq:LagrangeQuadratic3"
+    "eq:LagrangeQuadratic4"
+    "cha:numb-real-rati"
+    "thm:CommonDenominatorsExist"
+    "thm:IrrationalBetweenIrrationals"
+    "chpt:17thCentury"
+    "sec:leibn-calc-rules"
+    "eq:Brachistochrone"
+    "chpt:PowerSeriesQuestions"
+    "TaylorSeriesThm"
+    "TaylorsTheorem"
+    "eq:1"
+    "eq:p50-1"
+    "eq:p50-2"
+    "chpt:Convergence"
+    "prob:SeriesConverge"
+    "lem:triangle"
+    "thm:SumOfSequences"
+    "lemma:BoundedConvergent"
+    "thm:LimitOfProduct"
+    "cor:1"
+    "thm:LimitOfQuotient"
+    "thm:SqueezeTheorem"
+    "chapt:taylor-series"
+    "lemma:TriangleForIntegral"
+    "thm:TaylorSeries"
+    "thm:LagrangeRemainder"
+    "thm:CauchyRemainder"
+    "chpt:Continuity"
+    "thm:LimDefOfContinuity"
+    "lem:BoundedAwayFromZero"
+    "thm:ContComp"
+    "thm:CalcLimits"
+    "thm:SqueezeTheoremFunctions"
+    "thm:DiffImpCont"
+    "chpt:IVTEVT"
+    "thm:ConvergeToC"
+    "thm:SqrtsExist"
+    "IntermediateValueTheorem"
+    "BolzanoWeierstrass"
+    "thm:CompactBounded"
+    "thm:LUB"
+    "cor:IncBoundedConverge"
+    "thm:EVT"
+    "thm:ArchmedeanProperty"
+    "chpt:PowerSeriesRedux"
+    "thm:UnifConv->Continuity"
+    "th:UniformIntegralConvergence"
+    "cor:IntConvUni"
+    "thm:UniformDerivativeConvergence"
+    "cor:UniformConvergenceDerivative"
+    "thm:Converge->Cauchy"
+    "lemma:Cauchy->Bounded"
+    "thm:Cauchy->Converge"
+    "thm:ConvCauchyEquivNIP"
+    "thm:CauchyCriterion"
+    "thm:ComparisonTest"
+    "cor:AbsConv->Conv"
+    "thm:RearrageAbsConv"
+    "thm:RadiusOfConvergence"
+    "cor:RadiusOfDivergence"
+    "thm:WeierstrassM"
+    "thm:PowerSeriesConvergeUniformly"
+    "prob:PwrSeriesDiffConv"
+    "thm:SeriesConv->DerivConv"
+    "lemma:AbelsPartialSummationFormula"
+    "lemma:AbelsLemma"
+    "chpt:BackToFourier"
+    "thm:QisCountable"
+    "thm:CantorsTheorem"
+    "chap:epilogue"
+    "sec:nature-numb-dial"
+    "sec:real-numbers"
+    "thm:OrderingCuts"
+    "lem:Technical")
+   (LaTeX-add-environments
+    '("solution" 1)
+    "ProofOutline"
+    "hint"
+    "scrapwork")
+   (LaTeX-add-index-entries
+    "Theorems!Theorem~\\ref{#1}"
+    "Definitions!Definition~\\ref{#1}"
+    "Corollaries!Corollary~\\ref{#1}"
+    "Lemmas!Lemma~\\ref{#1}"
+    "geometric series!differentiating")
+   (LaTeX-add-amsthm-newtheorems
+    "problem"
+    "definition"
+    "theorem"
+    "example"
+    "corollary"
+    "lemma"))
+ :latex)
+

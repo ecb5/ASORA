@@ -5,16 +5,20 @@ jing: *.ptx
 
 
 tex: *.ptx Makefile
-	pretext build latex
+	/home/ecb5/.local/bin/pretext build latex
 
 pdf: *.ptx Makefile
-	pretext build pdf
+	/home/ecb5/.local/bin/pretext build pdf
 
 html: *.ptx Makefile
-	pretext build html
+	/home/ecb5/.local/bin/pretext build html
 
 webview: 
-	pretext view html
+	/home/ecb5/.local/bin/pretext view html
 
 pdfview:
-	pretext view pdf
+	/home/ecb5/.local/bin/pretext view pdf
+
+deploy:
+	/home/ecb5/.local/bin/pretext deploy -u
+
