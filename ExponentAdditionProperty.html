@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Power Series as Infinite Polynomials</title>
@@ -15,172 +15,99 @@
 <meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
 <meta property="book:author" content="Robert Rogers">
 <meta property="book:author" content="Eugene C. Boman">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/colors_red_blue.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
 <p class="byline">Robert Rogers, Eugene C. Boman</p>
 </div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-8-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
-</h2>
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
 <div id="searchempty" class="searchempty"><span>No results.</span></div>
 <ol id="searchresults" class="searchresults"></ol>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
-<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden avatar">
-<li data-val="You!" tabindex="-1">
-<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
-<li data-val="😺" tabindex="-1">
-<span id="the😺" class="avatarcheck"></span>😺</li>
-<li data-val="👤" tabindex="-1">
-<span id="the👤" class="avatarcheck"></span>👤</li>
-<li data-val="👽" tabindex="-1">
-<span id="the👽" class="avatarcheck"></span>👽</li>
-<li data-val="🐶" tabindex="-1">
-<span id="the🐶" class="avatarcheck"></span>🐶</li>
-<li data-val="🐼" tabindex="-1">
-<span id="the🐼" class="avatarcheck"></span>🐼</li>
-<li data-val="🌈" tabindex="-1">
-<span id="the🌈" class="avatarcheck"></span>🌈</li>
-</ol>
-</li>
-<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fontfamily">
-<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
-<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
-<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-</ol>
-</li>
-<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fonts">
-<li>Size</li>
-<li><span id="thesize">12</span></li>
-<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
-<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
-<li>Width</li>
-<li><span id="thewdth">100</span></li>
-<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
-<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
-<li>Weight</li>
-<li><span id="thewght">400</span></li>
-<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
-<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
-<li>Letter spacing</li>
-<li>
-<span id="thelspace">0</span><span class="byunits">/200</span>
-</li>
-<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
-<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
-<li>Word spacing</li>
-<li>
-<span id="thewspace">0</span><span class="byunits">/50</span>
-</li>
-<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
-<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
-<li>Line Spacing</li>
-<li>
-<span id="theheight">135</span><span class="byunits">/100</span>
-</li>
-<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
-<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
-</ol>
-</li>
-<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden atmosphere">
-<li data-val="default" tabindex="-1">
-<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
-<li data-val="pastel" tabindex="-1">
-<span id="thepastel" class="atmospherecheck"></span>pastel</li>
-<li data-val="darktwilight" tabindex="-1">
-<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
-<li data-val="dark" tabindex="-1">
-<span id="thedark" class="atmospherecheck"></span>dark</li>
-<li data-val="darkmidnight" tabindex="-1">
-<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
-</ol>
-</li>
-<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden ruler">
-<li data-val="none" tabindex="-1">
-<span id="thenone" class="rulercheck">✔️</span>none</li>
-<li data-val="underline" tabindex="-1">
-<span id="theunderline" class="rulercheck"></span>underline</li>
-<li data-val="lunderline" tabindex="-1">
-<span id="thelunderline" class="rulercheck"></span>L-underline</li>
-<li data-val="greybar" tabindex="-1">
-<span id="thegreybar" class="rulercheck"></span>grey bar</li>
-<li data-val="lightbox" tabindex="-1">
-<span id="thelightbox" class="rulercheck"></span>light box</li>
-<li data-val="sunrise" tabindex="-1">
-<span id="thesunrise" class="rulercheck"></span>sunrise</li>
-<li data-val="sunriseunderline" tabindex="-1">
-<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
-<li class="moveQ">Motion by:</li>
-<li data-val="mouse" tabindex="-1">
-<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
-<li data-val="arrow" tabindex="-1">
-<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
-<li data-val="eye" tabindex="-1">
-<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
-</ol>
-</li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="CalcIn17th18thCentury-NewtLeibStart.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="CalcIn17th18thCentury.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="CalcIn17th18thCentury-AddProb.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="CalcIn17th18thCentury-NewtLeibStart.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="CalcIn17th18thCentury.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="CalcIn17th18thCentury-AddProb.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
 \newcommand{\dx}[1]{\,{\rm d}#1}
 
 
@@ -203,167 +130,166 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
-<li>
-<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="ASORA-2.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="ASORA-2-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
-<li>
-<div class="toc-item"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
-<li><div class="toc-item"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
-<li><div class="toc-item"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
 </ul>
 </li>
-<li class="active"><div class="toc-item"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
-<ul class="structural"><li>
-<div class="toc-item"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="Interegnum-2.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
 </li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
-<li><div class="toc-item"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
-<li><div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Convergence-5.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
-<li><div class="toc-item"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
-<li>
-<div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#subsection-4" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
-<li><div class="toc-item"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="Epilogues-NatureNumbers.html#subsection-5" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-NatureNumbers.html#Epilogues-NatureNumbers-3" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
-<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="ASORA-8.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="ASORA-8-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="ASORA-8-2.html" class="internal"><span class="title">Index</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content">
-<section class="section" id="ExponentAdditionProperty"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="ExponentAdditionProperty"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.2</span><span class="space"> </span><span class="title">Power Series as Infinite Polynomials</span>
 </h2>
-<div class="para" id="p-225"> Applied to polynomials, the rules of differential and integral calculus are straightforward.  Indeed, differentiating and integrating polynomials represent some of the easiest tasks in a calculus course.  For example, computing <span class="process-math">\(\int(7-x+x^2)\dx{ x}\)</span> is relatively easy compared to computing <span class="process-math">\(\int\sqrt[3]{1+x^3}\dx{ x}\text{.}\)</span>  Unfortunately, not all functions can be expressed as a polynomial.  For example, <span class="process-math">\(f(x)=\sin x\)</span> cannot be since a polynomial has only finitely many roots and the sine function has infinitely many roots, namely <span class="process-math">\(\{n\pi|\,n\in\ZZ\}\text{.}\)</span>  A standard technique in the 18th century was to write such functions as an “infinite polynomial,” what we typically refer to as a power series.  Unfortunately an “infinite polynomial” is a much more subtle object than a mere polynomial, which by definition is finite. For now we will not concern ourselves with these subtleties.  We will follow the example of our forebears and manipulate all “polynomial-like” objects (finite or infinite) as if they are polynomials.</div>
+<div class="para" id="ExponentAdditionProperty-2"> Applied to polynomials, the rules of differential and integral calculus are straightforward.  Indeed, differentiating and integrating polynomials represent some of the easiest tasks in a calculus course.  For example, computing <span class="process-math">\(\int(7-x+x^2)\dx{ x}\)</span> is relatively easy compared to computing <span class="process-math">\(\int\sqrt[3]{1+x^3}\dx{ x}\text{.}\)</span>  Unfortunately, not all functions can be expressed as a polynomial.  For example, <span class="process-math">\(f(x)=\sin x\)</span> cannot be since a polynomial has only finitely many roots and the sine function has infinitely many roots, namely <span class="process-math">\(\{n\pi|\,n\in\ZZ\}\text{.}\)</span>  A standard technique in the 18th century was to write such functions as an “infinite polynomial,” what we typically refer to as a power series.  Unfortunately an “infinite polynomial” is a much more subtle object than a mere polynomial, which by definition is finite. For now we will not concern ourselves with these subtleties.  We will follow the example of our forebears and manipulate all “polynomial-like” objects (finite or infinite) as if they are polynomials.</div>
 <article class="definition definition-like" id="def_PowerSeries"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-226">
+<div class="para logical" id="def_PowerSeries-1-1">
 <div class="para"> A <dfn class="terminology">power series centered at <span class="process-math">\(\boldsymbol{a}\)</span></dfn> is a series of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=0}^\infty a_n(x-a)^n=a_0+a_1(x-a)+a_2(x-a)^2+\cdots\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-227">Often we will focus on the behavior of power series <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\text{,}\)</span> centered around <span class="process-math">\(0\text{,}\)</span> as the series centered around other values of <span class="process-math">\(a\)</span> are obtained by shifting a series centered at <span class="process-math">\(0\text{.}\)</span>
-</div></article><div class="para" id="p-228">Before we continue, we will make the following notational comment. The most advantageous way to represent a series is using summation notation since there can be no doubt about the pattern to the terms. After all, this notation contains a formula for the general term. This being said, there are instances where writing this formula is not practical. In these cases, it is acceptable to write the sum by supplying the first few terms and using ellipses (the three dots). If this is done, then enough terms must be included to make the pattern clear to the reader.</div>
-<div class="para logical" id="p-229">
+</div> <div class="para" id="def_PowerSeries-1-2">Often we will focus on the behavior of power series <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\text{,}\)</span> centered around <span class="process-math">\(0\text{,}\)</span> as the series centered around other values of <span class="process-math">\(a\)</span> are obtained by shifting a series centered at <span class="process-math">\(0\text{.}\)</span>
+</div></article><div class="para" id="ExponentAdditionProperty-4">Before we continue, we will make the following notational comment. The most advantageous way to represent a series is using summation notation since there can be no doubt about the pattern to the terms. After all, this notation contains a formula for the general term. This being said, there are instances where writing this formula is not practical. In these cases, it is acceptable to write the sum by supplying the first few terms and using ellipses (the three dots). If this is done, then enough terms must be included to make the pattern clear to the reader.</div>
+<div class="para logical" id="ExponentAdditionProperty-5">
 <div class="para">Returning to our definition of a power series, consider, for example, the  geometric series <span class="process-math">\(\sum_{n=0}^\infty x^n=1+x+x^2+\cdots\text{.}\)</span> If we multiply this series by <span class="process-math">\((1-x)\text{,}\)</span> we obtain</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -371,7 +297,7 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div>
-<div class="para logical" id="p-230">
+<div class="para logical" id="ExponentAdditionProperty-6">
 <div class="para">This leads us to the power series representation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -379,7 +305,7 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div>
-<div class="para logical" id="p-231">
+<div class="para logical" id="ExponentAdditionProperty-7">
 <div class="para">If we substitute <span class="process-math">\(x=\frac{1}{10}\)</span> into the above, we obtain</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -387,9 +313,9 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-232">This agrees with the fact that <span class="process-math">\(.333\ldots=\frac{1}{3}\text{,}\)</span> and so <span class="process-math">\(.111\ldots=\frac{1}{9}\text{,}\)</span> and <span class="process-math">\(1.111\ldots=\frac{10}{9}\text{.}\)</span>
+<div class="para" id="ExponentAdditionProperty-8">This agrees with the fact that <span class="process-math">\(.333\ldots=\frac{1}{3}\text{,}\)</span> and so <span class="process-math">\(.111\ldots=\frac{1}{9}\text{,}\)</span> and <span class="process-math">\(1.111\ldots=\frac{10}{9}\text{.}\)</span>
 </div>
-<div class="para logical" id="p-233">
+<div class="para logical" id="ExponentAdditionProperty-9">
 <div class="para">There are limitations to these formal manipulations however. Substituting <span class="process-math">\(x=1\)</span> or <span class="process-math">\(x=2\)</span> yields the questionable results</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -397,64 +323,64 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-234">We are missing something important here, though it may not be clear exactly what. A series representation of a function works <em class="emphasis">sometimes,</em> but there are some problems. For now, we will continue to follow the example of our 18th century predecessors and ignore them. That is, for the rest of this section we will focus on the formal manipulations to obtain and use power series representations of various functions. Keep in mind that this is all highly suspect until we can resolve problems like those just given.</div>
-<div class="para" id="p-235">Power series became an important tool in analysis in the 1700’s.  By representing various functions as power series they could be dealt with as if they were (infinite) polynomials.  The following is an example.</div>
-<article class="example example-like" id="example-1"><h3 class="heading">
+<div class="para" id="ExponentAdditionProperty-10">We are missing something important here, though it may not be clear exactly what. A series representation of a function works <em class="emphasis">sometimes,</em> but there are some problems. For now, we will continue to follow the example of our 18th century predecessors and ignore them. That is, for the rest of this section we will focus on the formal manipulations to obtain and use power series representations of various functions. Keep in mind that this is all highly suspect until we can resolve problems like those just given.</div>
+<div class="para" id="ExponentAdditionProperty-11">Power series became an important tool in analysis in the 1700’s.  By representing various functions as power series they could be dealt with as if they were (infinite) polynomials.  The following is an example.</div>
+<article class="example example-like" id="ExponentAdditionProperty-12"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-236">Solve the following Initial Value problem: Find <span class="process-math">\(y(x)\)</span> given that <span class="process-math">\(\frac{\dx{ y}}{\dx{ x}}=y,\,y(0)=1\text{.}\)</span>
-</div> <aside class="aside aside-like" id="aside-10"><div class="para" id="p-237">A few seconds of thought should convince you that the solution of this problem is <span class="process-math">\(y(x) = e^x\text{.}\)</span>  We will ignore this for now in favor of emphasising the technique.</div></aside> <div class="para logical" id="p-238">
+<div class="para" id="ExponentAdditionProperty-12-2-1">Solve the following Initial Value problem: Find <span class="process-math">\(y(x)\)</span> given that <span class="process-math">\(\frac{\dx{ y}}{\dx{ x}}=y,\,y(0)=1\text{.}\)</span>
+</div> <aside class="aside aside-like" id="ExponentAdditionProperty-12-2-2"><div class="para" id="ExponentAdditionProperty-12-2-2-1">A few seconds of thought should convince you that the solution of this problem is <span class="process-math">\(y(x) = e^x\text{.}\)</span>  We will ignore this for now in favor of emphasising the technique.</div></aside> <div class="para logical" id="ExponentAdditionProperty-12-2-3">
 <div class="para">Assuming the solution can be expressed as a power series we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
 y=\sum_{n=0}^\infty a_nx^n=a_0+a_1x+a_2x^2+\cdots\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-239">
+</div> <div class="para logical" id="ExponentAdditionProperty-12-2-4">
 <div class="para">Differentiating gives us</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{\dx{ y}}{\dx{ x}}=a_1+2a_2x+3a_3x^2+4a_4x^3+\ldots\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-240">
+</div> <div class="para logical" id="ExponentAdditionProperty-12-2-5">
 <div class="para">Since <span class="process-math">\(\frac{\dx{ y}}{\dx{ x}}=y\)</span> we see that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a_1=a_0\,,\,2a_2=a_1\,,\,3a_3=a_2\,,\,\ldots,\,na_n=a_{n-1}\,,\ldots\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-241">
+</div> <div class="para logical" id="ExponentAdditionProperty-12-2-6">
 <div class="para">This leads to the relationship</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a_n=\frac{1}{n}a_{n-1}=\frac{1}{n(n-1)}a_{n-2}=\cdots=\frac{1}{n!}a_0\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-242">
+</div> <div class="para logical" id="ExponentAdditionProperty-12-2-7">
 <div class="para">Thus the series solution of the differential equation is</div>
 <div class="displaymath process-math">
 \begin{equation*}
 y=\sum_{n=0}^\infty\frac{a_0}{n!}x^n=a_0\sum_{n=0}^\infty\frac{1}{n!}x^n\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-243">
+</div> <div class="para logical" id="ExponentAdditionProperty-12-2-8">
 <div class="para">Using the initial condition <span class="process-math">\(y(0)=1\text{,}\)</span> we get <span class="process-math">\(1=a_0(1+0+\frac{1}{2!}0^2+\cdots)=a_0\text{.}\)</span> Thus the solution to the initial problem is <span class="process-math">\(y=\sum_{n=0}^\infty\frac{1}{n!}x^n\text{.}\)</span> Let’s call this function <span class="process-math">\(E(x)\text{.}\)</span> Then by definition</div>
 <div class="displaymath process-math">
 \begin{equation*}
 E(x)=\sum_{n=0}^\infty\frac{1}{n!}x^n=1+\frac{x^1}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+\,\ldots\text{.}
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-244">Let’s examine some properties of this function. The first property is clear from the definition.</div>
-<div class="para" id="p-245">
+</div></article><div class="para" id="ExponentAdditionProperty-13">Let’s examine some properties of this function. The first property is clear from the definition.</div>
+<div class="para" id="ExponentAdditionProperty-14">
 <dfn class="terminology">Property 1</dfn>. <span class="process-math">\(E(0)=1\)</span>
 </div>
-<div class="para" id="p-246">
+<div class="para" id="ExponentAdditionProperty-15">
 <dfn class="terminology">Property 2</dfn>. <span class="process-math">\(E(x+y)=E(x)E(y)\text{.}\)</span>
 </div>
-<div class="para logical" id="p-247">
+<div class="para logical" id="ExponentAdditionProperty-16">
 <div class="para">To see this we multiply the two series together, so we have</div>
-<div class="displaymath process-math" id="md-8">
+<div class="displaymath process-math" id="ExponentAdditionProperty-16-1">
 \begin{align*}
 E(x)E(y) \amp =\left(\sum_{n=0}^\infty\frac{1}{n!}x^n\right)\left(\sum_{n=0}^\infty\frac{1}{n!}y^n\right)\\
 \amp =\left(\frac{x^0}{0!}+\frac{x^1}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+\,\ldots\right)\left(\frac{y^0}{0!}+\frac{y^1}{1!}+\frac{y^2}{2!}+\frac{y^3}{3!}+\,\ldots\right)\\
@@ -468,7 +394,7 @@ E(x)E(y) \amp =\left(\sum_{n=0}^\infty\frac{1}{n!}x^n\right)\left(\sum_{n=0}^\in
 \amp \ \ \ \ \ \ +\frac{1}{3!}\left(\frac{3!}{0!3!}x^0y^3+\frac{3!}{1!2!}x^1y^2+\frac{3!}{2!1!}x^2y^1+\frac{3!}{3!0!}x^3y^0\right)+\ldots
 \end{align*}
 </div>
-<div class="displaymath process-math" id="mdn-4">
+<div class="displaymath process-math" id="ExponentAdditionProperty-16-2">
 \begin{align}
 E(x)E(y) \amp =\frac{1}{0!}+\frac{1}{1!}\left(\binom{1}{0}x^0y^1+\binom{1}{1}x^1y^0\right)\notag\\
 \amp \ \ \ \ \ \ +\frac{1}{2!}\left(\binom{2}{0}x^0y^2+\binom{2}{1}x^1y^1+\binom{2}{2}x^2y^0\right)\notag\\
@@ -478,35 +404,35 @@ E(x)E(y) \amp =\frac{1}{0!}+\frac{1}{1!}\left(\binom{1}{0}x^0y^1+\binom{1}{1}x^1
 \end{align}
 </div>
 </div>
-<div class="para" id="p-248">
+<div class="para" id="ExponentAdditionProperty-17">
 <dfn class="terminology">Property 3</dfn>. If <span class="process-math">\(m\)</span> is a positive integer then <span class="process-math">\(E(mx)=\left(E(x\right))^m\text{.}\)</span> In particular, <span class="process-math">\(E(m)=\left(E(1)\right)^m\text{.}\)</span>
 </div>
-<article class="problem example-like" id="problem-17"><h3 class="heading">
+<article class="problem example-like" id="ExponentAdditionProperty-18"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-249">Prove Property 3.</div></article><div class="para" id="p-250">
+<div class="para" id="ExponentAdditionProperty-18-1-1">Prove Property 3.</div></article><div class="para" id="ExponentAdditionProperty-19">
 <dfn class="terminology">Property 4</dfn>. <span class="process-math">\(E(-x)=\frac{1}{E(x)}=\left(E(x)\right)^{-1}\text{.}\)</span>
 </div>
-<article class="problem example-like" id="problem-18"><h3 class="heading">
+<article class="problem example-like" id="ExponentAdditionProperty-20"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-251">Prove Property 4.</div></article><div class="para" id="p-252">
+<div class="para" id="ExponentAdditionProperty-20-1-1">Prove Property 4.</div></article><div class="para" id="ExponentAdditionProperty-21">
 <dfn class="terminology">Property 5</dfn>. If <span class="process-math">\(n\)</span> is an integer with <span class="process-math">\(n\neq 0\text{,}\)</span> then <span class="process-math">\(E(\frac{1}{n})=\sqrt[n]{E(1)}=\left(E(1)\right)^{1/n}\text{.}\)</span>
 </div>
-<article class="problem example-like" id="problem-19"><h3 class="heading">
+<article class="problem example-like" id="ExponentAdditionProperty-22"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-253">Prove Property 5.</div></article><div class="para" id="p-254">
+<div class="para" id="ExponentAdditionProperty-22-1-1">Prove Property 5.</div></article><div class="para" id="ExponentAdditionProperty-23">
 <dfn class="terminology">Property 6</dfn>. If <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are integers with <span class="process-math">\(n\neq 0\text{,}\)</span> then <span class="process-math">\(E\left(\frac{m}{n}\right)=\left(E(1)\right)^{m/n}\text{.}\)</span>
 </div>
-<article class="problem example-like" id="problem-20"><h3 class="heading">
+<article class="problem example-like" id="ExponentAdditionProperty-24"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-255">Prove Property 6.</div></article><article class="definition definition-like" id="def_e"><h3 class="heading">
+<div class="para" id="ExponentAdditionProperty-24-1-1">Prove Property 6.</div></article><article class="definition definition-like" id="def_e"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.2.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-256"> Let <span class="process-math">\(E(1)\)</span> be denoted by the number <span class="process-math">\(e\text{.}\)</span> Using the series <span class="process-math">\(e=E(1)=\sum_{n=0}^\infty\frac{1}{n!}\text{,}\)</span> we can approximate <span class="process-math">\(e\)</span> to any degree of accuracy. In particular <span class="process-math">\(e\approx 2.71828\text{.}\)</span>
-</div></article><div class="para logical" id="p-257">
+<div class="para" id="def_e-1-1"> Let <span class="process-math">\(E(1)\)</span> be denoted by the number <span class="process-math">\(e\text{.}\)</span> Using the series <span class="process-math">\(e=E(1)=\sum_{n=0}^\infty\frac{1}{n!}\text{,}\)</span> we can approximate <span class="process-math">\(e\)</span> to any degree of accuracy. In particular <span class="process-math">\(e\approx 2.71828\text{.}\)</span>
+</div></article><div class="para logical" id="ExponentAdditionProperty-26">
 <div class="para">In light of Property 6, we see that for any rational number <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(E(r)=e^r\text{.}\)</span> Not only does this give us the series representation <span class="process-math">\(e^r=\sum_{n=0}^\infty\frac{1}{n!}r^n\)</span> for any rational number <span class="process-math">\(r\text{,}\)</span> but it gives us a way to define <span class="process-math">\(e^x\)</span> for irrational values of <span class="process-math">\(x\)</span> as well. That is, we can define</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -516,13 +442,13 @@ e^x=E(x)=\sum_{n=0}^\infty\frac{1}{n!}x^n
 <div class="para">for any real number <span class="process-math">\(x\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="p-258">As an illustration, we now have <span class="process-math">\(e^{\sqrt{2}}=\sum_{n=0}^\infty\frac{1}{n!}\left(\sqrt{2}\right)^n\text{.}\)</span> The expression <span class="process-math">\(e^{\sqrt{2}}\)</span> is meaningless if we try to interpret it as one irrational number raised to another. What does it mean to raise anything to the <span class="process-math">\(\sqrt{2}\)</span> power? However the series <span class="process-math">\(\sum_{n=0}^\infty\frac{1}{n!}\left(\sqrt{2}\right)^n\)</span> does seem to have meaning and it can be used to extend the exponential function to irrational exponents. In fact, defining the exponential function via this series answers the question we raised in  <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a>: What does <span class="process-math">\(4^{\sqrt{2}}\)</span> mean?</div>
-<div class="para" id="p-259">It means <span class="process-math">\(\displaystyle 4^{\sqrt{2}} = e^{\sqrt{2}\log 4} = \sum_{n=0}^\infty\frac{(\sqrt{2}\log 4)^n}{n!}\text{.}\)</span>
+<div class="para" id="ExponentAdditionProperty-27">As an illustration, we now have <span class="process-math">\(e^{\sqrt{2}}=\sum_{n=0}^\infty\frac{1}{n!}\left(\sqrt{2}\right)^n\text{.}\)</span> The expression <span class="process-math">\(e^{\sqrt{2}}\)</span> is meaningless if we try to interpret it as one irrational number raised to another. What does it mean to raise anything to the <span class="process-math">\(\sqrt{2}\)</span> power? However the series <span class="process-math">\(\sum_{n=0}^\infty\frac{1}{n!}\left(\sqrt{2}\right)^n\)</span> does seem to have meaning and it can be used to extend the exponential function to irrational exponents. In fact, defining the exponential function via this series answers the question we raised in  <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a>: What does <span class="process-math">\(4^{\sqrt{2}}\)</span> mean?</div>
+<div class="para" id="ExponentAdditionProperty-28">It means <span class="process-math">\(\displaystyle 4^{\sqrt{2}} = e^{\sqrt{2}\log 4} = \sum_{n=0}^\infty\frac{(\sqrt{2}\log 4)^n}{n!}\text{.}\)</span>
 </div>
-<div class="para" id="p-260">This may seem to be the long way around just to define something as simple as exponentiation. But this is a fundamentally misguided attitude. Exponentiation only <em class="emphasis">seems</em> simple because we’ve always thought of it as repeated multiplication (in <span class="process-math">\(\ZZ\)</span>) or root-taking (in <span class="process-math">\(\QQ\)</span>). When we expand the operation to the real numbers this simply can’t be the way we interpret something like <span class="process-math">\(4^{\sqrt{2}}\text{.}\)</span> How do you take the product of <span class="process-math">\(\sqrt{2}\)</span> copies of <span class="process-math">\(4?\)</span> The concept is meaningless. What we need is an interpretation of <span class="process-math">\(4^{\sqrt{2}}\)</span> which is consistent with, say <span class="process-math">\(4^{3/2} = \left(\sqrt{4}\right)^3=8\text{.}\)</span> This is exactly what the series representation of <span class="process-math">\(e^x\)</span> provides.</div>
-<div class="para logical" id="p-261">
+<div class="para" id="ExponentAdditionProperty-29">This may seem to be the long way around just to define something as simple as exponentiation. But this is a fundamentally misguided attitude. Exponentiation only <em class="emphasis">seems</em> simple because we’ve always thought of it as repeated multiplication (in <span class="process-math">\(\ZZ\)</span>) or root-taking (in <span class="process-math">\(\QQ\)</span>). When we expand the operation to the real numbers this simply can’t be the way we interpret something like <span class="process-math">\(4^{\sqrt{2}}\text{.}\)</span> How do you take the product of <span class="process-math">\(\sqrt{2}\)</span> copies of <span class="process-math">\(4?\)</span> The concept is meaningless. What we need is an interpretation of <span class="process-math">\(4^{\sqrt{2}}\)</span> which is consistent with, say <span class="process-math">\(4^{3/2} = \left(\sqrt{4}\right)^3=8\text{.}\)</span> This is exactly what the series representation of <span class="process-math">\(e^x\)</span> provides.</div>
+<div class="para logical" id="ExponentAdditionProperty-30">
 <div class="para">We also have a means of computing integrals as series. For example, the famous “bell shaped” curve given by the function <span class="process-math">\(f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}\)</span> is of vital importance in statistics and must be integrated to calculate probabilities. The power series we developed gives us a method of integrating this function. For example, we have</div>
-<div class="displaymath process-math" id="md-9">
+<div class="displaymath process-math" id="ExponentAdditionProperty-30-3">
 \begin{align*}
 \int_{x=0}^b\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}d x \amp  =\frac{1}{\sqrt{2\pi}}\int_{x=0}^b\left(\sum_{n=0}^\infty\frac{1}{n!}\left(\frac{-x^2}{2}\right)^n\right)d x\\
 \amp =\frac{1}{\sqrt{2\pi}}\,\sum_{n=0}^\infty\left(\frac{\left(-1\right)^n}{n!2^n}\int_{x=0}^bx^{2n}d x\right)\\
@@ -530,12 +456,12 @@ e^x=E(x)=\sum_{n=0}^\infty\frac{1}{n!}x^n
 \end{align*}
 </div>
 </div>
-<div class="para" id="p-262">This series can be used to approximate the integral to any degree of accuracy. The ability to provide such calculations made power series of paramount importance in the 1700’s.</div>
-<article class="problem example-like" id="problem-21"><h3 class="heading">
+<div class="para" id="ExponentAdditionProperty-31">This series can be used to approximate the integral to any degree of accuracy. The ability to provide such calculations made power series of paramount importance in the 1700’s.</div>
+<article class="problem example-like" id="ExponentAdditionProperty-32"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.8</span><span class="period">.</span>
 </h3>
-<article class="task exercise-like" id="task-14"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="p-263">
+<article class="task exercise-like" id="ExponentAdditionProperty-32-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="ExponentAdditionProperty-32-2-1-1">
 <div class="para">Show that if <span class="process-math">\(y=\sum_{n=0}^\infty a_nx^n\)</span> satisfies the differential equation <span class="process-math">\(\frac{\dx^2y}{\dx{ x}^2}=-y\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -548,8 +474,8 @@ a_{n+2}=\frac{-1}{\left(n+2\right)\left(n+1\right)}\,a_n
 y=a_0+a_1x-\frac{1}{2!}\,a_0x^2-\frac{1}{3!}\,a_1x^3+\frac{1}{4!}\,a_0x^4+\frac{1}{5!}\,a_1x^5-\frac{1}{6!}\,a_0x^6-\frac{1}{7!}\,a_1x^7+\cdots\text{.}
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="task-15"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para logical" id="p-264">
+</div></article><article class="task exercise-like" id="ExponentAdditionProperty-32-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="ExponentAdditionProperty-32-3-1-1">
 <div class="para">Since <span class="process-math">\(y=\sin x\)</span> satisfies <span class="process-math">\(\frac{\dx^2y}{\dx{
 x}^2}=-y\text{,}\)</span> we see that</div>
 <div class="displaymath process-math">
@@ -563,11 +489,11 @@ x}^2}=-y\text{,}\)</span> we see that</div>
 \sin x=x-\frac{1}{3!}\,x^3+\frac{1}{5!}x^5-\frac{1}{7!}x^7+\cdots=\sum_{n=0}^\infty\frac{\left(-1\right)^n}{\left(2n+1\right)!}x^{2n+1}\text{.}
 \end{equation*}
 </div>
-</div></article></article><article class="problem example-like" id="problem-22"><h3 class="heading">
+</div></article></article><article class="problem example-like" id="ExponentAdditionProperty-33"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.9</span><span class="period">.</span>
 </h3>
-<article class="task exercise-like" id="task-16"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="p-265">
+<article class="task exercise-like" id="ExponentAdditionProperty-33-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="ExponentAdditionProperty-33-3-1-1">
 <div class="para">Use the series</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -580,19 +506,19 @@ x}^2}=-y\text{,}\)</span> we see that</div>
 \cos x=1-\frac{1}{2!}\,x^2+\frac{1}{4!}x^4-\frac{1}{6!}x^6+\cdots=\sum_{n=0}^\infty\frac{\left(-1\right)^n}{\left(2n\right)!}x^{2n}\text{.}
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="task-17"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-266">Let <span class="process-math">\(s(x,N)=\sum_{n=0}^N\frac{\left(-1\right)^n}{\left(2n+1\right)!}x^{2n+1}\)</span> and <span class="process-math">\(c(x,N)=\sum_{n=0}^N\frac{\left(-1\right)^n}{\left(2n\right)!}x^{2n}\)</span> and use a computer algebra system to plot these for<span class="process-math">\(\,-4\pi\leq x\leq 4\pi,\,\,N=1,2,5,\,10,\,15\text{.}\)</span> Describe what is happening to the series as N becomes larger.</div></article></article><article class="problem example-like" id="prob_alternating_harmonic_series"><h3 class="heading">
+</div></article><article class="task exercise-like" id="ExponentAdditionProperty-33-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="ExponentAdditionProperty-33-4-1-1">Let <span class="process-math">\(s(x,N)=\sum_{n=0}^N\frac{\left(-1\right)^n}{\left(2n+1\right)!}x^{2n+1}\)</span> and <span class="process-math">\(c(x,N)=\sum_{n=0}^N\frac{\left(-1\right)^n}{\left(2n\right)!}x^{2n}\)</span> and use a computer algebra system to plot these for<span class="process-math">\(\,-4\pi\leq x\leq 4\pi,\,\,N=1,2,5,\,10,\,15\text{.}\)</span> Describe what is happening to the series as N becomes larger.</div></article></article><article class="problem example-like" id="prob_alternating_harmonic_series"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.10</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-267">
+<div class="para logical" id="prob_alternating_harmonic_series-3-1">
 <div class="para">Use the geometric series, <span class="process-math">\(\frac{1}{1-x}=1+x+x^2+x^3+\cdots=\sum_{n=0}^\infty x^n\text{,}\)</span> to obtain a series for <span class="process-math">\(\frac{1}{1+x^2}\)</span> and use this to obtain the series</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \arctan x=x-\frac{1}{3}x^3+\frac{1}{5}x^5-\cdots=\sum_{n=0}^\infty(-1)^n \frac{1}{2n+1}x^{2n+1}\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-268">Use the series above to obtain the series <span class="process-math">\(\frac{\pi}{4}=\sum_{n=0}^\infty(-1)^n\frac{1}{2n+1}\text{.}\)</span>
-</div></article><div class="para logical" id="p-269">
+</div> <div class="para" id="prob_alternating_harmonic_series-3-2">Use the series above to obtain the series <span class="process-math">\(\frac{\pi}{4}=\sum_{n=0}^\infty(-1)^n\frac{1}{2n+1}\text{.}\)</span>
+</div></article><div class="para logical" id="ExponentAdditionProperty-35">
 <div class="para">The series for arctangent was known by James Gregory (1638-1675) and it is sometimes referred to as “Gregory’s series.” Leibniz independently discovered <span class="process-math">\(\frac{\pi}{4}=1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}+\cdots\)</span> by examining the area of a circle.  Though it gives us a means for approximating <span class="process-math">\(\pi\)</span> to any desired accuracy, the series converges too slowly to be of any practical use.  For example, if we compute the sum of the first <span class="process-math">\(1000\)</span> terms we get</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -601,9 +527,9 @@ x}^2}=-y\text{,}\)</span> we see that</div>
 </div>
 <div class="para">which only approximates <span class="process-math">\(\pi\)</span> to two decimal places.</div>
 </div>
-<div class="para" id="p-270">Newton  knew of these results and the general scheme of using series to compute areas under curves. These results motivated Newton to provide a series approximation for <span class="process-math">\(\pi\)</span> as well, which, hopefully, would converge faster. We will use modern terminology to streamline Newton’s ideas. First notice that <span class="process-math">\(\frac{\pi}{4}=\int_{x=0}^1\sqrt{1-x^2}\dx{ x}\)</span> as this integral gives the area of one quarter of the unit circle. The trick now is to find series that represents <span class="process-math">\(\sqrt{1-x^2}\text{.}\)</span>
+<div class="para" id="ExponentAdditionProperty-36">Newton  knew of these results and the general scheme of using series to compute areas under curves. These results motivated Newton to provide a series approximation for <span class="process-math">\(\pi\)</span> as well, which, hopefully, would converge faster. We will use modern terminology to streamline Newton’s ideas. First notice that <span class="process-math">\(\frac{\pi}{4}=\int_{x=0}^1\sqrt{1-x^2}\dx{ x}\)</span> as this integral gives the area of one quarter of the unit circle. The trick now is to find series that represents <span class="process-math">\(\sqrt{1-x^2}\text{.}\)</span>
 </div>
-<div class="para logical" id="p-271">
+<div class="para logical" id="ExponentAdditionProperty-37">
 <div class="para">To this end we start with the binomial theorem</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -611,7 +537,7 @@ x}^2}=-y\text{,}\)</span> we see that</div>
 \end{equation*}
 </div>
 <div class="para">where</div>
-<div class="displaymath process-math" id="md-10">
+<div class="displaymath process-math" id="ExponentAdditionProperty-37-2">
 \begin{align*}
 \binom{N}{n}\amp =\frac{N!}{n!\left(N-n\right)!}\\
 \amp =\frac{N\left(N-1\right)\left(N-2\right)\cdots\left(N-n+1\,\right)}{n!}\\
@@ -619,8 +545,8 @@ x}^2}=-y\text{,}\)</span> we see that</div>
 \end{align*}
 </div>
 </div>
-<div class="para" id="p-272">Unfortunately, we now have a small problem with our notation which will be a source of confusion later if we don’t fix it. So we will pause to address this matter. We will come back to the binomial expansion afterward.</div>
-<div class="para logical" id="p-273">
+<div class="para" id="ExponentAdditionProperty-38">Unfortunately, we now have a small problem with our notation which will be a source of confusion later if we don’t fix it. So we will pause to address this matter. We will come back to the binomial expansion afterward.</div>
+<div class="para logical" id="ExponentAdditionProperty-39">
 <div class="para">This last expression is becoming awkward in much the same way that an expression like</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -637,7 +563,7 @@ N\left(N-1\right)\left(N-2\right)\cdots\left(N-n+1\,\right)
 <div class="para">is less cumbersom when we write it as <span class="process-math">\(\prod_{j=0}^{n-1}\left(N-j\right)\text{.}\)</span>
 </div>
 </div>
-<div class="para logical" id="p-274">
+<div class="para logical" id="ExponentAdditionProperty-40">
 <div class="para">A capital pi (<span class="process-math">\(\Pi\)</span>) is used to denote a product in the same way that a capital sigma (<span class="process-math">\(\Sigma\)</span>) is used to denote a sum. The most familiar example would be writing</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -645,9 +571,9 @@ n!=\prod_{j=1}^{n}j\text{.}
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-275">Just as it is convenient to define <span class="process-math">\(0!=1\text{,}\)</span> we will find it convenient to define <span class="process-math">\(\prod_{j=1}^{0}=1\text{.}\)</span>  Similarly, the fact that <span class="process-math">\(\binom{N}{0}=1\)</span> leads to the convention <span class="process-math">\(\prod_{j=0}^{-1}\left(N-j\right)=1\text{.}\)</span>  Strange as this may look, it is convenient and <em class="emphasis">is</em> consistent with the convention <span class="process-math">\(\sum_{j=0}^{-1}s_j=0\text{.}\)</span>
+<div class="para" id="ExponentAdditionProperty-41">Just as it is convenient to define <span class="process-math">\(0!=1\text{,}\)</span> we will find it convenient to define <span class="process-math">\(\prod_{j=1}^{0}=1\text{.}\)</span>  Similarly, the fact that <span class="process-math">\(\binom{N}{0}=1\)</span> leads to the convention <span class="process-math">\(\prod_{j=0}^{-1}\left(N-j\right)=1\text{.}\)</span>  Strange as this may look, it is convenient and <em class="emphasis">is</em> consistent with the convention <span class="process-math">\(\sum_{j=0}^{-1}s_j=0\text{.}\)</span>
 </div>
-<div class="para logical" id="p-276">
+<div class="para logical" id="ExponentAdditionProperty-42">
 <div class="para">Returning to the binomial expansion and recalling our convention</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -661,9 +587,9 @@ n!=\prod_{j=1}^{n}j\text{.}
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-277">These two representations probably look the same at first. Take a moment and be sure you see where they differ.</div>
-<div class="para" id="p-278">There is an advantage to using this convention (especially when programing a product into a computer), but this is not a deep mathematical insight. It is just a notational convenience and we don’t want you to fret over it, so we will use both formulations (at least initially).</div>
-<div class="para logical" id="p-279">
+<div class="para" id="ExponentAdditionProperty-43">These two representations probably look the same at first. Take a moment and be sure you see where they differ.</div>
+<div class="para" id="ExponentAdditionProperty-44">There is an advantage to using this convention (especially when programing a product into a computer), but this is not a deep mathematical insight. It is just a notational convenience and we don’t want you to fret over it, so we will use both formulations (at least initially).</div>
+<div class="para logical" id="ExponentAdditionProperty-45">
 <div class="para">Notice that we can extend the above definition of <span class="process-math">\(\binom{N}{n}\)</span> to values <span class="process-math">\(n&gt;N\text{.}\)</span> In this case, <span class="process-math">\(\prod_{j=0}^{n-1}\left(N-j\right)\)</span> will equal 0 as one of the factors in the product will be <span class="process-math">\(0\)</span> (the one where <span class="process-math">\(n=N\)</span>). This gives us that <span class="process-math">\(\binom{N}{n}=0\)</span> when <span class="process-math">\(n&gt;N\)</span> and so</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -683,51 +609,51 @@ n!=\prod_{j=1}^{n}j\text{.}
 \end{equation}
 </div>
 </div>
-<div class="para" id="p-280">Notice that since <span class="process-math">\(1/2\)</span> is not an integer the series no longer terminates. Although Newton did not prove that this series was correct (nor did we), he tested it by multiplying the series by itself. When he saw that by squaring the series he started to obtain <span class="process-math">\(1+x+0\,x^2+0\,x^3+\cdots\text{,}\)</span> he was convinced that the series was exactly equal to <span class="process-math">\(\sqrt{1+x}\text{.}\)</span>
+<div class="para" id="ExponentAdditionProperty-46">Notice that since <span class="process-math">\(1/2\)</span> is not an integer the series no longer terminates. Although Newton did not prove that this series was correct (nor did we), he tested it by multiplying the series by itself. When he saw that by squaring the series he started to obtain <span class="process-math">\(1+x+0\,x^2+0\,x^3+\cdots\text{,}\)</span> he was convinced that the series was exactly equal to <span class="process-math">\(\sqrt{1+x}\text{.}\)</span>
 </div>
-<article class="problem example-like" id="problem-24"><h3 class="heading">
+<article class="problem example-like" id="ExponentAdditionProperty-47"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.11</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-281"></div> <div class="para logical" id="p-282">
+<div class="para" id="ExponentAdditionProperty-47-1-1"></div> <div class="para logical" id="ExponentAdditionProperty-47-1-2">
 <div class="para">Consider the series representation</div>
-<div class="displaymath process-math" id="md-11">
+<div class="displaymath process-math" id="ExponentAdditionProperty-47-1-2-1">
 \begin{align*}
 \left(1+x\right)^{\frac{1}{2}}\amp =1+\sum_{n=1}^\infty\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}x^n\\
 \amp  =\sum_{n=0}^\infty\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}x^n\text{.}
 \end{align*}
 </div>
-</div> <div class="para" id="p-283">Multiply this series by itself and compute the coefficients for <span class="process-math">\(x^0,\,x^1,\,x^2,\,x^3,\,x^4\)</span> in the resulting series.</div></article><article class="problem example-like" id="prob_SqrtSeriesProb"><h3 class="heading">
+</div> <div class="para" id="ExponentAdditionProperty-47-1-3">Multiply this series by itself and compute the coefficients for <span class="process-math">\(x^0,\,x^1,\,x^2,\,x^3,\,x^4\)</span> in the resulting series.</div></article><article class="problem example-like" id="prob_SqrtSeriesProb"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.12</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-284">
+<div class="para logical" id="prob_SqrtSeriesProb-1-1">
 <div class="para"> Let</div>
 <div class="displaymath process-math">
 \begin{equation*}
 S(x,M)=\sum_{n=0}^M\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j \right)}{n!}x^n\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-285">Use a computer algebra system to plot <span class="process-math">\(S(x,M)\)</span> for <span class="process-math">\(M=5,\,10,\,15,\,95,\,100\)</span> and compare these to the graph for <span class="process-math">\(\sqrt{1+x}\text{.}\)</span> What seems to be happening? For what values of <span class="process-math">\(x\)</span> does the series appear to converge to <span class="process-math">\(\sqrt{1+x}?\)</span>
-</div></article><div class="para" id="p-286">Convinced that he had the correct series, Newton used it to find a series representation of <span class="process-math">\(\int_{x=0}^1\sqrt{1-x^2} \dx{ x}\text{.}\)</span>
+</div> <div class="para" id="prob_SqrtSeriesProb-1-2">Use a computer algebra system to plot <span class="process-math">\(S(x,M)\)</span> for <span class="process-math">\(M=5,\,10,\,15,\,95,\,100\)</span> and compare these to the graph for <span class="process-math">\(\sqrt{1+x}\text{.}\)</span> What seems to be happening? For what values of <span class="process-math">\(x\)</span> does the series appear to converge to <span class="process-math">\(\sqrt{1+x}?\)</span>
+</div></article><div class="para" id="ExponentAdditionProperty-49">Convinced that he had the correct series, Newton used it to find a series representation of <span class="process-math">\(\int_{x=0}^1\sqrt{1-x^2} \dx{ x}\text{.}\)</span>
 </div>
-<article class="problem example-like" id="problem-26"><h3 class="heading">
+<article class="problem example-like" id="ExponentAdditionProperty-50"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.13</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-287">
+<div class="para logical" id="ExponentAdditionProperty-50-1-1">
 <div class="para"> Use the series <span class="process-math">\(\displaystyle \left(1+x\right)^{\frac{1}{2}}=\sum_{n=0}^\infty\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}x^n\)</span> to obtain the series</div>
-<div class="displaymath process-math" id="md-12">
+<div class="displaymath process-math" id="ExponentAdditionProperty-50-1-1-3">
 \begin{align*}
 \frac{\pi}{4}\amp =\int_{x=0}^1\sqrt{1-x^2} \dx{ x}\\
 \amp =\sum_{n=0}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}\text{ } \right)\left(\frac{\left(-1\right)^n}{2n+1}\right)\\
 \amp =1-\frac{1}{6}-\frac{1}{40}-\frac{1}{112}-\frac{5}{1152}-\cdots\text{.}
 \end{align*}
 </div>
-</div> <div class="para" id="p-288">Use a computer algebra system to sum the first 100 terms of this series and compare the answer to <span class="process-math">\(\frac{\pi}{4}\text{.}\)</span>
-</div></article><div class="para" id="p-289">Again, Newton had a series which could be verified (somewhat) computationally. This convinced him even further that he had the correct series.</div>
-<article class="problem example-like" id="problem-27"><h3 class="heading">
+</div> <div class="para" id="ExponentAdditionProperty-50-1-2">Use a computer algebra system to sum the first 100 terms of this series and compare the answer to <span class="process-math">\(\frac{\pi}{4}\text{.}\)</span>
+</div></article><div class="para" id="ExponentAdditionProperty-51">Again, Newton had a series which could be verified (somewhat) computationally. This convinced him even further that he had the correct series.</div>
+<article class="problem example-like" id="ExponentAdditionProperty-52"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.14</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-290"><ol class="lower-alpha">
-<li id="li-28"><div class="para logical" id="p-291">
+<div class="para logical" id="ExponentAdditionProperty-52-1-1"><ol class="lower-alpha">
+<li id="ExponentAdditionProperty-52-1-1-2-1"><div class="para logical" id="ExponentAdditionProperty-52-1-1-2-1-1">
 <div class="para">Show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -741,7 +667,7 @@ S(x,M)=\sum_{n=0}^M\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j \right)}{n!}x^n\te
 \end{equation*}
 </div>
 </div></li>
-<li id="li-29"><div class="para logical" id="p-292">
+<li id="ExponentAdditionProperty-52-1-1-2-2"><div class="para logical" id="ExponentAdditionProperty-52-1-1-2-2-1">
 <div class="para">We now have two series for calculating <span class="process-math">\(\pi:\)</span>  the one from part (a) and the one derived earlier, namely</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -750,16 +676,16 @@ S(x,M)=\sum_{n=0}^M\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j \right)}{n!}x^n\te
 </div>
 <div class="para">We will explore which one converges to <span class="process-math">\(\pi\)</span> faster. With this in mind, define <span class="process-math">\(S1(N)=16\left(\sum_{n=0}^N\frac{(-1)^n\,\,\prod_{j=0}^{n-1}\left( \frac{1}{2}-j\right)}{\sqrt{2\,}n!\left(2n+3\right)2^n}\right)\)</span> and <span class="process-math">\(S2(N)=4\left(\sum_{n=0}^N\frac{(-1)^n\,\,}{2n+1}\right)\text{.}\)</span> Use a computer algebra system to compute <span class="process-math">\(S1(N)\)</span>and <span class="process-math">\(S2(N)\)</span> for <span class="process-math">\(N=5,10,15,20\text{.}\)</span> Which one appears to converge to <span class="process-math">\(\pi\)</span> faster?</div>
 </div></li>
-</ol></div></article><div class="para logical" id="p-293">
+</ol></div></article><div class="para logical" id="ExponentAdditionProperty-53">
 <div class="para">In general the series representation</div>
-<div class="displaymath process-math" id="md-13">
+<div class="displaymath process-math" id="ExponentAdditionProperty-53-1">
 \begin{align*}
 \left(1+x\right)^\alpha \amp  =\sum_{n=0}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(\alpha-j\right)}{n!}\text{ } \right)x^n\\
 \amp =1+\alpha x+\frac{\alpha\left(\alpha-1\right)}{2!}x^2+\frac{\alpha\left(\alpha-1\right)\left(\alpha-2\right)}{3!}x^3+\cdots
 \end{align*}
 </div>
 <div class="para">is called the <dfn class="terminology">binomial series</dfn> (or Newton’s binomial series). This series is correct when <span class="process-math">\(\alpha\)</span> is a non-negative integer (after all, that is how we got the series). We can also see that it is correct when <span class="process-math">\(\alpha=-1\)</span> as we obtain</div>
-<div class="displaymath process-math" id="md-14">
+<div class="displaymath process-math" id="ExponentAdditionProperty-53-5">
 \begin{align*}
 \left(1+x\right)^{-1}\amp =\sum_{n=0}^\infty\left(\frac{\prod_{j=0}^{n-1}\left(-1-j\right)}{n!}\text{ } \right)x^n\\
 \amp =1+(-1)x+\frac{-1\left(-1-1\right)}{2!}x^2+\frac{-1\left(-1-1\right)\left(-1-2\right)}{3!}x^3+\cdots\\
@@ -768,66 +694,66 @@ S(x,M)=\sum_{n=0}^M\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j \right)}{n!}x^n\te
 </div>
 <div class="para">which can be obtained from the geometric series <span class="process-math">\(\frac{1}{1-x}=1+x+x^2+\cdots\)</span> .</div>
 </div>
-<div class="para" id="p-294">In fact, the binomial series is the correct series representation for all values of the exponent <span class="process-math">\(\alpha\)</span> (though we haven’t proved this yet).</div>
-<article class="problem example-like" id="problem-28"><h3 class="heading">
+<div class="para" id="ExponentAdditionProperty-54">In fact, the binomial series is the correct series representation for all values of the exponent <span class="process-math">\(\alpha\)</span> (though we haven’t proved this yet).</div>
+<article class="problem example-like" id="ExponentAdditionProperty-55"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.15</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-4"><div class="para" id="p-295">Let <span class="process-math">\(k\)</span> be a positive integer. Find the power series, centered at zero, for <span class="process-math">\(f(x) = \left(1-x\right)^{-k}\)</span> by</div></div>
-<article class="task exercise-like" id="task-18"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-296">Differentiating the  geometric series <span class="process-math">\(\left(k-1\right)\)</span> times.</div></article><article class="task exercise-like" id="task-19"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-297">Applying the binomial series.</div></article><article class="task exercise-like" id="task-20"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-298">Compare these two results.</div></article></article><figure class="figure figure-like" id="figure-23"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Euler.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.16<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Euler/" target="_blank">Leonhard Euler</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-10" id="fn-10"><sup> 10 </sup></a></figcaption></figure><div class="para" id="p-299">Leonhard Euler was a master at exploiting power series. In 1735, the 28 year-old Euler won acclaim for what is now called the Basel problem: to find a closed form for <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2}\text{.}\)</span> Other mathematicans knew that the series converged, but Euler was the first to find its exact value. The following problem essentially provides Euler’s solution.</div>
-<article class="problem example-like" id="problem-29"><h3 class="heading">
+<div class="introduction" id="ExponentAdditionProperty-55-3"><div class="para" id="ExponentAdditionProperty-55-3-1">Let <span class="process-math">\(k\)</span> be a positive integer. Find the power series, centered at zero, for <span class="process-math">\(f(x) = \left(1-x\right)^{-k}\)</span> by</div></div>
+<article class="task exercise-like" id="ExponentAdditionProperty-55-4"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ExponentAdditionProperty-55-4-1-1">Differentiating the  geometric series <span class="process-math">\(\left(k-1\right)\)</span> times.</div></article><article class="task exercise-like" id="ExponentAdditionProperty-55-5"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="ExponentAdditionProperty-55-5-1-1">Applying the binomial series.</div></article><article class="task exercise-like" id="ExponentAdditionProperty-55-6"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="ExponentAdditionProperty-55-6-1-1">Compare these two results.</div></article></article><figure class="figure figure-like" id="ExponentAdditionProperty-56"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Euler.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.16<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Euler/" target="_blank">Leonhard Euler</a><a class="xref" id="ExponentAdditionProperty-56-1-2" href="" data-knowl="./knowl/fn/ExponentAdditionProperty-56-1-2.html" title="Footnote 10"><sup> 10 </sup></a></figcaption></figure><div class="para" id="ExponentAdditionProperty-57">Leonhard Euler was a master at exploiting power series. In 1735, the 28 year-old Euler won acclaim for what is now called the Basel problem: to find a closed form for <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n^2}\text{.}\)</span> Other mathematicans knew that the series converged, but Euler was the first to find its exact value. The following problem essentially provides Euler’s solution.</div>
+<article class="problem example-like" id="ExponentAdditionProperty-58"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.17</span><span class="period">.</span><span class="space"> </span><span class="title">The Basel Problem.</span>
 </h3>
-<article class="task exercise-like" id="task-21"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-300">Show that the power series for <span class="process-math">\(\frac{\sin x}{x}\)</span> is given by <span class="process-math">\(1-\frac{1}{3!}x^2+\frac{1}{5!}x^4-\cdots\)</span>
-</div></article><article class="task exercise-like" id="task-22"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para logical" id="p-301">
+<article class="task exercise-like" id="ExponentAdditionProperty-58-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="ExponentAdditionProperty-58-3-1-1">Show that the power series for <span class="process-math">\(\frac{\sin x}{x}\)</span> is given by <span class="process-math">\(1-\frac{1}{3!}x^2+\frac{1}{5!}x^4-\cdots\)</span>
+</div></article><article class="task exercise-like" id="ExponentAdditionProperty-58-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="ExponentAdditionProperty-58-4-1-1">
 <div class="para">Use (a) to infer that the roots of <span class="process-math">\(1-\frac{1}{3!}x^2+\frac{1}{5!}x^4-\cdots\)</span> are given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 x=\pm\pi,\,\pm 2\pi,\,\pm 3\pi,\,\ldots
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="task-23"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para logical" id="p-302">
+</div></article><article class="task exercise-like" id="ExponentAdditionProperty-58-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical" id="ExponentAdditionProperty-58-5-1-1">
 <div class="para">Suppose <span class="process-math">\(p(x)=a_0+a_1x+\cdots+a_nx^n\)</span> is a polynomial with roots <span class="process-math">\(r_1,\,r_2,\,\ldots,r_n\text{.}\)</span> Show that if <span class="process-math">\(a_0\neq\)</span> <span class="process-math">\(0\text{,}\)</span> then all the roots are non-zero and</div>
 <div class="displaymath process-math">
 \begin{equation*}
 p(x)=a_0\left(1-\frac{x}{r_1}\right)\left(1-\frac{x}{r_2}\right)\cdots\left(1-\frac{x}{r_n}\right)\text{.}
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="task-24"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para logical" id="p-303">
+</div></article><article class="task exercise-like" id="ExponentAdditionProperty-58-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para logical" id="ExponentAdditionProperty-58-6-1-1">
 <div class="para">Assuming that the result in part (c) holds for an infinite polynomial (power series), deduce that</div>
-<div class="displaymath process-math" id="md-15">
+<div class="displaymath process-math" id="ExponentAdditionProperty-58-6-1-1-1">
 \begin{align*}
 1-\frac{1}{3!}x^2+\frac{1}{5!}x^4-\cdots\amp =\left(1-\left(\frac{x}{\pi}\right)^2\right)\left(1-\left(\frac{x}{2\pi}\right)^2\right)\left(1-\left(\frac{x}{3\pi}\right)^2\right)\cdots
 \end{align*}
 </div>
-</div></article><article class="task exercise-like" id="task-25"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para logical" id="p-304">
+</div></article><article class="task exercise-like" id="ExponentAdditionProperty-58-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para logical" id="ExponentAdditionProperty-58-7-1-1">
 <div class="para">Expand this product to deduce</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}.{}
 \end{equation*}
 </div>
-</div></article></article><article class="problem example-like" id="problem-30"><h3 class="heading">
+</div></article></article><article class="problem example-like" id="ExponentAdditionProperty-59"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">4.2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Euler’s Formula.</span>
 </h3>
-<article class="task exercise-like" id="task-26"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="p-305">
+<article class="task exercise-like" id="ExponentAdditionProperty-59-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="ExponentAdditionProperty-59-3-1-1">
 <div class="para">Use  the power series expansion of <span class="process-math">\(e^x\text{,}\)</span> <span class="process-math">\(\sin x,\)</span> and <span class="process-math">\(\cos x\)</span> to derive <dfn class="terminology">Euler’s Formula</dfn>:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 e^{i\theta} = cos\theta+i\sin\theta.
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="task-27"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para logical" id="p-306">
+</div></article><article class="task exercise-like" id="ExponentAdditionProperty-59-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="ExponentAdditionProperty-59-4-1-1">
 <div class="para">Use Euler’s formula to derive the Addition/Subtraction formulas from Trigonometry:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -839,8 +765,8 @@ e^{i\theta} = cos\theta+i\sin\theta.
 \cos(\alpha\pm\beta) = \cos\alpha\cos\beta\mp\sin\alpha\sin\beta
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="task-28"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para logical" id="p-307">
+</div></article><article class="task exercise-like" id="ExponentAdditionProperty-59-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical" id="ExponentAdditionProperty-59-5-1-1">
 <div class="para">Use Euler’s formula to show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -852,8 +778,8 @@ e^{i\theta} = cos\theta+i\sin\theta.
 \cos 2\theta =\cos^2\theta-\sin^2\theta
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="task-29"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para logical" id="p-308">
+</div></article><article class="task exercise-like" id="ExponentAdditionProperty-59-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para logical" id="ExponentAdditionProperty-59-6-1-1">
 <div class="para">Use Euler’s formula to show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -865,12 +791,11 @@ e^{i\theta} = cos\theta+i\sin\theta.
 \cos 3\theta=\cos^3\theta-\cos\theta\sin^2\theta
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="task-30"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-309">Find a formula <span class="process-math">\(\sin(n\theta)\)</span> and <span class="process-math">\(\cos(n\theta)\)</span> for any positive integer <span class="process-math">\(n\text{.}\)</span>
-</div></article></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-10"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Euler/</code></div></div>
-</div>
+</div></article><article class="task exercise-like" id="ExponentAdditionProperty-59-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="ExponentAdditionProperty-59-7-1-1">Find a formula <span class="process-math">\(\sin(n\theta)\)</span> and <span class="process-math">\(\cos(n\theta)\)</span> for any positive integer <span class="process-math">\(n\text{.}\)</span>
+</div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="CalcIn17th18thCentury-NewtLeibStart.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="CalcIn17th18thCentury-AddProb.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="CalcIn17th18thCentury-NewtLeibStart.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="CalcIn17th18thCentury-AddProb.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Taylor’s Formula</title>
@@ -15,172 +15,99 @@
 <meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
 <meta property="book:author" content="Robert Rogers">
 <meta property="book:author" content="Eugene C. Boman">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/colors_red_blue.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
 <p class="byline">Robert Rogers, Eugene C. Boman</p>
 </div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-8-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
-</h2>
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
 <div id="searchempty" class="searchempty"><span>No results.</span></div>
 <ol id="searchresults" class="searchresults"></ol>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
-<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden avatar">
-<li data-val="You!" tabindex="-1">
-<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
-<li data-val="😺" tabindex="-1">
-<span id="the😺" class="avatarcheck"></span>😺</li>
-<li data-val="👤" tabindex="-1">
-<span id="the👤" class="avatarcheck"></span>👤</li>
-<li data-val="👽" tabindex="-1">
-<span id="the👽" class="avatarcheck"></span>👽</li>
-<li data-val="🐶" tabindex="-1">
-<span id="the🐶" class="avatarcheck"></span>🐶</li>
-<li data-val="🐼" tabindex="-1">
-<span id="the🐼" class="avatarcheck"></span>🐼</li>
-<li data-val="🌈" tabindex="-1">
-<span id="the🌈" class="avatarcheck"></span>🌈</li>
-</ol>
-</li>
-<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fontfamily">
-<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
-<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
-<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-</ol>
-</li>
-<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fonts">
-<li>Size</li>
-<li><span id="thesize">12</span></li>
-<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
-<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
-<li>Width</li>
-<li><span id="thewdth">100</span></li>
-<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
-<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
-<li>Weight</li>
-<li><span id="thewght">400</span></li>
-<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
-<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
-<li>Letter spacing</li>
-<li>
-<span id="thelspace">0</span><span class="byunits">/200</span>
-</li>
-<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
-<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
-<li>Word spacing</li>
-<li>
-<span id="thewspace">0</span><span class="byunits">/50</span>
-</li>
-<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
-<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
-<li>Line Spacing</li>
-<li>
-<span id="theheight">135</span><span class="byunits">/100</span>
-</li>
-<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
-<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
-</ol>
-</li>
-<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden atmosphere">
-<li data-val="default" tabindex="-1">
-<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
-<li data-val="pastel" tabindex="-1">
-<span id="thepastel" class="atmospherecheck"></span>pastel</li>
-<li data-val="darktwilight" tabindex="-1">
-<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
-<li data-val="dark" tabindex="-1">
-<span id="thedark" class="atmospherecheck"></span>dark</li>
-<li data-val="darkmidnight" tabindex="-1">
-<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
-</ol>
-</li>
-<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden ruler">
-<li data-val="none" tabindex="-1">
-<span id="thenone" class="rulercheck">✔️</span>none</li>
-<li data-val="underline" tabindex="-1">
-<span id="theunderline" class="rulercheck"></span>underline</li>
-<li data-val="lunderline" tabindex="-1">
-<span id="thelunderline" class="rulercheck"></span>L-underline</li>
-<li data-val="greybar" tabindex="-1">
-<span id="thegreybar" class="rulercheck"></span>grey bar</li>
-<li data-val="lightbox" tabindex="-1">
-<span id="thelightbox" class="rulercheck"></span>light box</li>
-<li data-val="sunrise" tabindex="-1">
-<span id="thesunrise" class="rulercheck"></span>sunrise</li>
-<li data-val="sunriseunderline" tabindex="-1">
-<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
-<li class="moveQ">Motion by:</li>
-<li data-val="mouse" tabindex="-1">
-<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
-<li data-val="arrow" tabindex="-1">
-<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
-<li data-val="eye" tabindex="-1">
-<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
-</ol>
-</li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="PowerSeriesQuestions.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="PowerSeriesQuestions.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="PowerSeriesQuestions-SeriesAnomalies.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="PowerSeriesQuestions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="PowerSeriesQuestions.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="PowerSeriesQuestions-SeriesAnomalies.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
 \newcommand{\dx}[1]{\,{\rm d}#1}
 
 
@@ -203,181 +130,178 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
-<li>
-<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="ASORA-2.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="ASORA-2-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
-<li>
-<div class="toc-item"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
-<li><div class="toc-item"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
-<li><div class="toc-item"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
-<ul class="structural">
-<li class="active"><div class="toc-item"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
-<ul class="structural"><li>
-<div class="toc-item"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="Interegnum-2.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
 </li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
-<li><div class="toc-item"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
-<li><div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Convergence-5.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
-<li><div class="toc-item"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
-<li>
-<div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#subsection-4" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
-<li><div class="toc-item"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="Epilogues-NatureNumbers.html#subsection-5" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-NatureNumbers.html#Epilogues-NatureNumbers-3" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
-<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="ASORA-8.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="ASORA-8-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="ASORA-8-2.html" class="internal"><span class="title">Index</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content">
-<section class="section" id="PowerSeriesQuestions-TaylorsFormula"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="PowerSeriesQuestions-TaylorsFormula"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">5.1</span><span class="space"> </span><span class="title">Taylor’s Formula</span>
 </h2>
-<div class="para" id="p-330">As we saw in the previous chapter, representing functions as power series was a fruitful strategy for mathematicans in the eighteenth century (as it still is). Differentiating and integrating power series term by term was relatively easy, <em class="emphasis">seemed</em> to work, and led to many applications. Furthermore, power series representations for all of the elementary functions could be obtained if one was clever enough.</div>
-<div class="para" id="p-331">However, cleverness is an unreliable tool. Is there some systematic way to find a power series for a given function? To be sure, there were nagging questions: If we can find a power series, how do we know that the series we’ve created represents the function we started with? Even worse, is it possible for a function to have more than one power series representation centered at a given value <span class="process-math">\(a?\)</span> This uniqueness issue is addressed by the following theorem.</div>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-2">As we saw in the previous chapter, representing functions as power series was a fruitful strategy for mathematicans in the eighteenth century (as it still is). Differentiating and integrating power series term by term was relatively easy, <em class="emphasis">seemed</em> to work, and led to many applications. Furthermore, power series representations for all of the elementary functions could be obtained if one was clever enough.</div>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-3">However, cleverness is an unreliable tool. Is there some systematic way to find a power series for a given function? To be sure, there were nagging questions: If we can find a power series, how do we know that the series we’ve created represents the function we started with? Even worse, is it possible for a function to have more than one power series representation centered at a given value <span class="process-math">\(a?\)</span> This uniqueness issue is addressed by the following theorem.</div>
 <article class="theorem theorem-like" id="TaylorSeriesThm"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-332"> If <span class="process-math">\(f(x)=\sum_{n=0}^\infty a_n(x-a)^n\text{,}\)</span> then <span class="process-math">\(a_n=\frac{f^{(n)}(a)}{n!}\text{,}\)</span> where <span class="process-math">\(f^{(n)}(a)\)</span> represents the <span class="process-math">\(n^{th}\)</span> derivative of <span class="process-math">\(f\)</span> evaluated at <span class="process-math">\(a\text{.}\)</span>
-</div></article><div class="para" id="p-333">A few comments about <a href="" class="xref" data-knowl="./knowl/TaylorSeriesThm.html" title="Theorem 5.1.1">Theorem 5.1.1</a> are in order. Notice that we did <em class="emphasis">not</em> start with a function and derive its series representation. Instead we <em class="emphasis">defined</em> <span class="process-math">\(f(x)\)</span> to be the series we wrote down. This assumes that the expression <span class="process-math">\(\sum_{n=0}^\infty a_n(x-a)^n\)</span> actually has meaning (that it converges). At this point we have every reason to expect that it does, however expectation is not proof so we note that this is an assumption, not an established truth. Similarly, the idea that we can differentiate an infinite polynomial term-by-term as we would a finite polynomial is also assumed. As before, we follow in the footsteps of our 18th century forebears in making these assumptions. For now.</div>
-<article class="problem example-like" id="problem-37"><h3 class="heading">
+<div class="para" id="TaylorSeriesThm-1-1"> If <span class="process-math">\(f(x)=\sum_{n=0}^\infty a_n(x-a)^n\text{,}\)</span> then <span class="process-math">\(a_n=\frac{f^{(n)}(a)}{n!}\text{,}\)</span> where <span class="process-math">\(f^{(n)}(a)\)</span> represents the <span class="process-math">\(n^{th}\)</span> derivative of <span class="process-math">\(f\)</span> evaluated at <span class="process-math">\(a\text{.}\)</span>
+</div></article><div class="para" id="PowerSeriesQuestions-TaylorsFormula-5">A few comments about <a href="" class="xref" data-knowl="./knowl/xref/TaylorSeriesThm.html" title="Theorem 5.1.1">Theorem 5.1.1</a> are in order. Notice that we did <em class="emphasis">not</em> start with a function and derive its series representation. Instead we <em class="emphasis">defined</em> <span class="process-math">\(f(x)\)</span> to be the series we wrote down. This assumes that the expression <span class="process-math">\(\sum_{n=0}^\infty a_n(x-a)^n\)</span> actually has meaning (that it converges). At this point we have every reason to expect that it does, however expectation is not proof so we note that this is an assumption, not an established truth. Similarly, the idea that we can differentiate an infinite polynomial term-by-term as we would a finite polynomial is also assumed. As before, we follow in the footsteps of our 18th century forebears in making these assumptions. For now.</div>
+<article class="problem example-like" id="PowerSeriesQuestions-TaylorsFormula-6"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-334"> Prove <a href="" class="xref" data-knowl="./knowl/TaylorSeriesThm.html" title="Theorem 5.1.1">Theorem 5.1.1</a>.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-8" id="hint-8"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-8"><div class="hint solution-like"><div class="para" id="p-335">
-<span class="process-math">\(f(a)=a_0+a_1(a-a)+a_2(a-a)^2+\cdots=a_0\text{.}\)</span> Differentiate to obtain the other terms.</div></div></div>
-</div></article><div class="para logical" id="p-336">
-<div class="para">From <a href="" class="xref" data-knowl="./knowl/TaylorSeriesThm.html" title="Theorem 5.1.1">Theorem 5.1.1</a> we see that if we do start with the function <span class="process-math">\(f(x)\)</span> then no matter how we obtain its power series, the result will always be the same. The series</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/TaylorSeriesThm.html">
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-6-1-1"> Prove <a href="" class="xref" data-knowl="./knowl/xref/TaylorSeriesThm.html" title="Theorem 5.1.1">Theorem 5.1.1</a>.</div>
+<div class="solutions"><details id="PowerSeriesQuestions-TaylorsFormula-6-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="PowerSeriesQuestions-TaylorsFormula-6-2-1">
+<span class="process-math">\(f(a)=a_0+a_1(a-a)+a_2(a-a)^2+\cdots=a_0\text{.}\)</span> Differentiate to obtain the other terms.</div></div></details></div></article><div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-7">
+<div class="para">From <a href="" class="xref" data-knowl="./knowl/xref/TaylorSeriesThm.html" title="Theorem 5.1.1">Theorem 5.1.1</a> we see that if we do start with the function <span class="process-math">\(f(x)\)</span> then no matter how we obtain its power series, the result will always be the same. The series</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/TaylorSeriesThm.html">
 \begin{equation*}
 \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n=f(a)+f^\prime(a)(x-a)+\frac{f^{\prime\prime}(a)}{2!}(x-a)^2+\frac{f^{\prime\prime\prime}(a)}{3!}(x-a)^3+\cdots
 \end{equation*}
 </div>
 </div>
-<figure class="figure figure-like" id="figure-24"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Taylor.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.3<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" target="_blank">Brook Taylor</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 11 </sup></a></figcaption></figure><div class="para" id="p-337">is called the <em class="emphasis"><em class="alert">Taylor series</em> for <span class="process-math">\(f\)</span> expanded about (centered at) <span class="process-math">\(a\)</span></em>.  Although this systematic “machine” for obtaining power series for a function seems to have been known to a number of mathematicians in the early 1700’s, Brook Taylor was the first to publish this result in his <i class="foreign">Methodus Incrementorum</i> (1715). The special case when <span class="process-math">\(a=0\)</span> was included by Colin Maclaurin in his <em class="emphasis">Treatise of Fluxions</em> (1742).  Thus when <span class="process-math">\(a=0\text{,}\)</span> the series <span class="process-math">\(\sum_{n=0}^\infty\frac{f^{(n)}(0)}{n!}x^n\)</span> is often called the <em class="emphasis">Maclaurin Series for <span class="process-math">\(f\)</span></em>.</div>
-<div class="para" id="p-338">The “prime notation” for the derivative was not used by Taylor, Maclaurin or their contemporaries. It was introduced by Joseph Louis Lagrange in his 1779 work <i class="foreign">Théorie des Fonctions Analytiques</i>. In that work, Lagrange sought to get rid of Leibniz’s infinitesimals and base calculus on the power series idea. His idea was that by representing every function as a power series, calculus could be done “algebraically” by manipulating power series and examining various aspects of the series representation instead of appealing to the “controversial” notion of infinitesimals. He implicitly assumed that every continuous function could be replaced with its power series representation.</div>
-<div class="para" id="p-339">That is, he wanted to think of the Taylor series as a “great big polynomial,” because polynomials are easy to work with. It was a very simple, yet exceedingly clever and far-reaching idea. Since <span class="process-math">\(e^x = 1 +x +x^2/2 +\ldots\text{,}\)</span> for example, why not just define the exponential to be the series and work with the series. After all, the series is just a very long polynomial.</div>
-<div class="para" id="p-340">This idea did not come out of nowhere.  Leonhard Euler had put exactly that idea to work to solve many problems throughout the 18th century.  Some of his solutions are still quite breath-taking when you first see them <a href="" class="xref" data-knowl="./knowl/sandifer07__early_mathem_leonar_euler.html" title="Bibliographic Entry 14">[14]</a>.</div>
-<div class="para logical" id="p-341">
+<figure class="figure figure-like" id="PowerSeriesQuestions-TaylorsFormula-8"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Taylor.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.3<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Taylor/" target="_blank">Brook Taylor</a><a class="xref" id="PowerSeriesQuestions-TaylorsFormula-8-1-2" href="" data-knowl="./knowl/fn/PowerSeriesQuestions-TaylorsFormula-8-1-2.html" title="Footnote 11"><sup> 11 </sup></a></figcaption></figure><div class="para" id="PowerSeriesQuestions-TaylorsFormula-9">is called the <em class="emphasis"><em class="alert">Taylor series</em> for <span class="process-math">\(f\)</span> expanded about (centered at) <span class="process-math">\(a\)</span></em>.  Although this systematic “machine” for obtaining power series for a function seems to have been known to a number of mathematicians in the early 1700’s, Brook Taylor was the first to publish this result in his <i class="foreign">Methodus Incrementorum</i> (1715). The special case when <span class="process-math">\(a=0\)</span> was included by Colin Maclaurin in his <em class="emphasis">Treatise of Fluxions</em> (1742).  Thus when <span class="process-math">\(a=0\text{,}\)</span> the series <span class="process-math">\(\sum_{n=0}^\infty\frac{f^{(n)}(0)}{n!}x^n\)</span> is often called the <em class="emphasis">Maclaurin Series for <span class="process-math">\(f\)</span></em>.</div>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-10">The “prime notation” for the derivative was not used by Taylor, Maclaurin or their contemporaries. It was introduced by Joseph Louis Lagrange in his 1779 work <i class="foreign">Théorie des Fonctions Analytiques</i>. In that work, Lagrange sought to get rid of Leibniz’s infinitesimals and base calculus on the power series idea. His idea was that by representing every function as a power series, calculus could be done “algebraically” by manipulating power series and examining various aspects of the series representation instead of appealing to the “controversial” notion of infinitesimals. He implicitly assumed that every continuous function could be replaced with its power series representation.</div>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-11">That is, he wanted to think of the Taylor series as a “great big polynomial,” because polynomials are easy to work with. It was a very simple, yet exceedingly clever and far-reaching idea. Since <span class="process-math">\(e^x = 1 +x +x^2/2 +\ldots\text{,}\)</span> for example, why not just define the exponential to be the series and work with the series. After all, the series is just a very long polynomial.</div>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-12">This idea did not come out of nowhere.  Leonhard Euler had put exactly that idea to work to solve many problems throughout the 18th century.  Some of his solutions are still quite breath-taking when you first see them <a href="" class="xref" data-knowl="./knowl/xref/sandifer07__early_mathem_leonar_euler.html" title="Bibliographic Entry 14">[14]</a>.</div>
+<div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-13">
 <div class="para">Taking his cue from the Taylor series</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -385,8 +309,8 @@ f(x) = \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n
 \end{equation*}
 </div>
 </div>
-<figure class="figure figure-like" id="figure-25"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Lagrange.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.4<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/" target="_blank">Joseph-Louis Lagrange</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 12 </sup></a></figcaption></figure><div class="para logical" id="p-342">
+<figure class="figure figure-like" id="PowerSeriesQuestions-TaylorsFormula-14"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Lagrange.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.4<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/" target="_blank">Joseph-Louis Lagrange</a><a class="xref" id="PowerSeriesQuestions-TaylorsFormula-14-1-2" href="" data-knowl="./knowl/fn/PowerSeriesQuestions-TaylorsFormula-14-1-2.html" title="Footnote 12"><sup> 12 </sup></a></figcaption></figure><div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-15">
 <div class="para">Lagrange observed that the coefficient of <span class="process-math">\((x-a)^n\)</span> provides the derivative of <span class="process-math">\(f\)</span> at <span class="process-math">\(a\)</span> (divided by <span class="process-math">\(n!\)</span>). Modifying the formula above to suit his purpose, Lagrange supposed that every differentiable function could be represented as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -394,7 +318,7 @@ f(x) = \sum_{n=0}^\infty g_n(a)(x-a)^n\text{.}
 \end{equation*}
 </div>
 </div>
-<div class="para logical" id="p-343">
+<div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-16">
 <div class="para">If we regard the parameter <span class="process-math">\(a\)</span> as a variable then <span class="process-math">\(g_1\)</span> is the derivative of <span class="process-math">\(f\text{,}\)</span> <span class="process-math">\(g_2=2f^{\prime\prime}\)</span> and generally</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -402,8 +326,8 @@ g_n=n!f^{(n)}\text{.}
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-344">Lagrange dubbed his function <span class="process-math">\(g_1\)</span> the <i class="foreign">“fonction dérivée”</i> from which we get the modern name “derivative.”</div>
-<div class="para logical" id="p-345">
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-17">Lagrange dubbed his function <span class="process-math">\(g_1\)</span> the <i class="foreign">“fonction dérivée”</i> from which we get the modern name “derivative.”</div>
+<div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-18">
 <div class="para">All in all, this was a very clever and insightful idea whose only real flaw is that its fundamental assumption is not true. It turns out that not every differentiable function can be represented as a Taylor series. This was demonstrated very dramatically by Augustin Cauchy’s famous counter-example</div>
 <div class="displaymath process-math" id="eq_CauchyCounterEx">
 \begin{equation}
@@ -411,13 +335,13 @@ f(x) = \begin{cases} e^{-\frac{1}{x^2}}\amp  x\ne0\\ 0 \amp x=0 \end{cases}\text
 \end{equation}
 </div>
 </div>
-<div class="para" id="p-346">This function is actually infinitely differentiable everywhere but its Maclaurin series (that is, a Taylor series with <span class="process-math">\(a=0\)</span>) does not converge to <span class="process-math">\(f\)</span> because all of its derivatives at the origin are equal to zero: <span class="process-math">\(f^{(n)}(0) = 0, \forall n\in\NN\text{.}\)</span>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-19">This function is actually infinitely differentiable everywhere but its Maclaurin series (that is, a Taylor series with <span class="process-math">\(a=0\)</span>) does not converge to <span class="process-math">\(f\)</span> because all of its derivatives at the origin are equal to zero: <span class="process-math">\(f^{(n)}(0) = 0, \forall n\in\NN\text{.}\)</span>
 </div>
-<div class="para" id="p-347">Computing these derivatives using the definition you learned in calculus is not conceptually difficult but the formulas involved do become complicated rather quickly. Some care must be taken to avoid error.</div>
-<div class="para logical" id="p-348">
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-20">Computing these derivatives using the definition you learned in calculus is not conceptually difficult but the formulas involved do become complicated rather quickly. Some care must be taken to avoid error.</div>
+<div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-21">
 <div class="para">To begin with, let’s compute a few derivatives when <span class="process-math">\(x \neq 0\text{.}\)</span>
 </div>
-<div class="displaymath process-math" id="md-17">
+<div class="displaymath process-math" id="PowerSeriesQuestions-TaylorsFormula-21-2">
 \begin{align*}
 f^{(0)}(x) \amp = e^{x^{-2}}\\
 f^{(1)}(x) \amp = 2x^{-3}e^{-x^{-2}}\\
@@ -425,7 +349,7 @@ f^{(2)}(x) \amp = \left(4x^{-6}-6x^{-4}\right)e^{-x^{-2}}\text{.}
 \end{align*}
 </div>
 </div>
-<div class="para logical" id="p-349">
+<div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-22">
 <div class="para">As you can see the calculations are already getting a little complicated and we’ve only taken the second derivative. To streamline things a bit we take <span class="process-math">\(y= x^{-1}\text{,}\)</span> and define <span class="process-math">\(p_2(x) = 4x^6-6x^4\)</span> so that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -433,16 +357,16 @@ f^{(2)}(x) = p_2(x^{-1})e^{-x^{-2}} = p_2(y)e^{-y^2}\text{.}
 \end{equation*}
 </div>
 </div>
-<article class="problem example-like" id="problem-38"><h3 class="heading">
+<article class="problem example-like" id="PowerSeriesQuestions-TaylorsFormula-23"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Cauchy’s Counterexample, Part 1.</span>
 </h3>
-<article class="task exercise-like" id="task-42"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-350">Adopting the notation <span class="process-math">\(y=x^{-1}\)</span> and <span class="process-math">\(f^{(n)}(x) =p_n(y)e^{-y^2}\text{,}\)</span> find <span class="process-math">\(p_{n+1}(y)\)</span> in terms of <span class="process-math">\(p_{n}(y)\text{.}\)</span> [Note: Don’t forget that you are differentiating with respect to <span class="process-math">\(x\text{,}\)</span> not <span class="process-math">\(y\text{.}\)</span>]</div></article><article class="task exercise-like" id="task-43"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-351">Use induction on <span class="process-math">\(n\)</span> to show that <span class="process-math">\(p_n(y)\)</span> is a polynomial for all <span class="process-math">\(n\in\NN\text{.}\)</span>
-</div></article></article><div class="para" id="p-352">Unfortunately everything we’ve done so far only gives us the derivatives we need when <span class="process-math">\(x\)</span> is <em class="emphasis">not</em> zero, and we need the derivatives when <span class="process-math">\(x\)</span> <em class="emphasis">is</em> zero. To find these we need to get back to very basic ideas.</div>
-<div class="para logical" id="p-353">
+<article class="task exercise-like" id="PowerSeriesQuestions-TaylorsFormula-23-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-23-3-1-1">Adopting the notation <span class="process-math">\(y=x^{-1}\)</span> and <span class="process-math">\(f^{(n)}(x) =p_n(y)e^{-y^2}\text{,}\)</span> find <span class="process-math">\(p_{n+1}(y)\)</span> in terms of <span class="process-math">\(p_{n}(y)\text{.}\)</span> [Note: Don’t forget that you are differentiating with respect to <span class="process-math">\(x\text{,}\)</span> not <span class="process-math">\(y\text{.}\)</span>]</div></article><article class="task exercise-like" id="PowerSeriesQuestions-TaylorsFormula-23-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-23-4-1-1">Use induction on <span class="process-math">\(n\)</span> to show that <span class="process-math">\(p_n(y)\)</span> is a polynomial for all <span class="process-math">\(n\in\NN\text{.}\)</span>
+</div></article></article><div class="para" id="PowerSeriesQuestions-TaylorsFormula-24">Unfortunately everything we’ve done so far only gives us the derivatives we need when <span class="process-math">\(x\)</span> is <em class="emphasis">not</em> zero, and we need the derivatives when <span class="process-math">\(x\)</span> <em class="emphasis">is</em> zero. To find these we need to get back to very basic ideas.</div>
+<div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-25">
 <div class="para">Let’s assume for the moment that we know that <span class="process-math">\(f^{(n)}(0)=0\)</span> and recall that</div>
-<div class="displaymath process-math" id="md-18">
+<div class="displaymath process-math" id="PowerSeriesQuestions-TaylorsFormula-25-2">
 \begin{align*}
 f^{(n+1)}(0) \amp = \limit{x}{0}{\frac{f^{(n)}(x)-f^{(n)}(0)}{x-0}}\\
 f^{(n+1)}(0) \amp = \limit{x}{0}{x^{-1}p_n(x^{-1})e^{-x^{-2}}}\\
@@ -450,24 +374,22 @@ f^{(n+1)}(0) \amp = \limit{y}{\pm\infty}{\frac{yp_n(y)}{e^{y^2}}}\text{.}
 \end{align*}
 </div>
 </div>
-<div class="para" id="p-354">We can close the deal with the following problem.</div>
-<article class="problem example-like" id="problem-39"><h3 class="heading">
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-26">We can close the deal with the following problem.</div>
+<article class="problem example-like" id="PowerSeriesQuestions-TaylorsFormula-27"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Cauchy’s Counterexample, Part 2.</span>
 </h3>
-<article class="task exercise-like" id="task-44"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-355">Let <span class="process-math">\(m\)</span> be a nonnegative integer. Show that <span class="process-math">\(\limit{y}{\pm\infty}{\frac{y^m}{e^{y^2}}}=0\text{.}\)</span>
+<article class="task exercise-like" id="PowerSeriesQuestions-TaylorsFormula-27-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-27-3-1-1">Let <span class="process-math">\(m\)</span> be a nonnegative integer. Show that <span class="process-math">\(\limit{y}{\pm\infty}{\frac{y^m}{e^{y^2}}}=0\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-9" id="hint-9"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-9"><div class="hint solution-like"><div class="para" id="p-356">Induction and a dash of L’Hôpital’s rule should do the trick.</div></div></div>
-</div></article><article class="task exercise-like" id="task-45"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-357">Prove that <span class="process-math">\(\limit{y}{\pm\infty}{\frac{q(y)}{e^{y^2}}}=0\)</span> for any polynomial <span class="process-math">\(q\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-46"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-358">Let <span class="process-math">\(f(x)\)</span> be as in <a href="" class="xref" data-knowl="./knowl/eq_CauchyCounterEx.html" title="Equation 8">equation (8)</a> and show that for every nonnegative integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(f^{(n)}(0)=0\text{.}\)</span>
-</div></article></article><div class="para" id="p-359">This example showed that while it was fruitful to exploit Taylor series representations of various functions, basing the foundations of calculus on power series was not a sound idea.</div>
-<div class="para" id="p-360">While Lagrange’s approach wasn’t totally successful, it was a major step away from infinitesimals and toward the modern approach.  We still use aspects of it today.  For instance we still use his prime notation (<span class="process-math">\(f^\prime\)</span>) to denote the derivative.</div>
-<div class="para logical" id="p-361">
+<div class="solutions"><details id="PowerSeriesQuestions-TaylorsFormula-27-3-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="PowerSeriesQuestions-TaylorsFormula-27-3-2-1">Induction and a dash of L’Hôpital’s rule should do the trick.</div></div></details></div></article><article class="task exercise-like" id="PowerSeriesQuestions-TaylorsFormula-27-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-27-4-1-1">Prove that <span class="process-math">\(\limit{y}{\pm\infty}{\frac{q(y)}{e^{y^2}}}=0\)</span> for any polynomial <span class="process-math">\(q\text{.}\)</span>
+</div></article><article class="task exercise-like" id="PowerSeriesQuestions-TaylorsFormula-27-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-27-5-1-1">Let <span class="process-math">\(f(x)\)</span> be as in <a href="" class="xref" data-knowl="./knowl/xref/eq_CauchyCounterEx.html" title="Equation 8">equation (8)</a> and show that for every nonnegative integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(f^{(n)}(0)=0\text{.}\)</span>
+</div></article></article><div class="para" id="PowerSeriesQuestions-TaylorsFormula-28">This example showed that while it was fruitful to exploit Taylor series representations of various functions, basing the foundations of calculus on power series was not a sound idea.</div>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-29">While Lagrange’s approach wasn’t totally successful, it was a major step away from infinitesimals and toward the modern approach.  We still use aspects of it today.  For instance we still use his prime notation (<span class="process-math">\(f^\prime\)</span>) to denote the derivative.</div>
+<div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-30">
 <div class="para">Turning Lagrange’s idea on its head it is clear that if we know how to compute derivatives, we can use this machine to obtain a power series when we are not “clever enough” to obtain the series in other (typically shorter) ways. For example, consider Newton’s binomial series when <span class="process-math">\(\alpha=\frac{1}{2}\text{.}\)</span> Originally, we obtained this series by extending the binomial theorem to non-integer exponents. Taylor’s formula provides a more systematic way to obtain this series:</div>
-<div class="displaymath process-math" id="md-19">
+<div class="displaymath process-math" id="PowerSeriesQuestions-TaylorsFormula-30-3">
 \begin{align*}
 f(x)\amp =(1+x)^{\frac{1}{2}};\amp f(0)\amp =1\\
 f^\prime(x)\amp =\frac{1}{2}(1+x)^{\frac{1}{2}-1};\amp  f^\prime(0)\amp =\frac{1}{2}\\
@@ -475,7 +397,7 @@ f^{\prime\prime}(x)\amp =\frac{1}{2}\left(\frac{1}{2}-1\right)(1+x)^{\frac{1}{2}
 \end{align*}
 </div>
 <div class="para">and in general since</div>
-<div class="displaymath process-math" id="md-20">
+<div class="displaymath process-math" id="PowerSeriesQuestions-TaylorsFormula-30-4">
 \begin{align*}
 f^{(n)}(x)\amp =\frac{1}{2}\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-(n-1)\right)(1+x)^{\frac{1}{2}-n}\\
 \end{align*}
@@ -485,52 +407,52 @@ f^{(n)}(0)\amp =\frac{1}{2}\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-(n-
 \end{align*}
 </div>
 </div>
-<div class="para logical" id="p-362">
+<div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-31">
 <div class="para">Using Taylor’s formula we obtain the series</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_BinomialSeries.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_BinomialSeries.html">
 \begin{equation*}
 \sum_{n=0}^\infty\frac{f^{(n)}(0)}{n!}x^n = 1+\sum_{n=1}^\infty\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)\cdots\left( \frac{1}{2}-(n-1)\right)}{n!}x^n= 1+\sum_{n=1}^\infty\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}x^n
 \end{equation*}
 </div>
-<div class="para">which agrees with <a href="" class="xref" data-knowl="./knowl/eq_BinomialSeries.html" title="Equation 7">equation (7)</a> in the previous chapter.</div>
+<div class="para">which agrees with <a href="" class="xref" data-knowl="./knowl/xref/eq_BinomialSeries.html" title="Equation 7">equation (7)</a> in the previous chapter.</div>
 </div>
-<article class="problem example-like" id="problem-40"><h3 class="heading">
+<article class="problem example-like" id="PowerSeriesQuestions-TaylorsFormula-32"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.1.7</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-363">
+<div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-32-1-1">
 <div class="para"> Use Taylor’s formula to obtain the general binomial series</div>
 <div class="displaymath process-math">
 \begin{equation*}
 (1+x)^\alpha=1+\sum_{n=1}^\infty\frac{\prod_{j=0}^{n-1}\left(\alpha-j\right)}{n!}x^n.{}
 \end{equation*}
 </div>
-</div></article><article class="problem example-like" id="problem-41"><h3 class="heading">
+</div></article><article class="problem example-like" id="PowerSeriesQuestions-TaylorsFormula-33"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.1.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-364"> Use Taylor’s formula to obtain the Taylor series for the functions <span class="process-math">\(e^x\text{,}\)</span> sin <span class="process-math">\(x\text{,}\)</span> and cos <span class="process-math">\(x\)</span> expanded about <span class="process-math">\(a\text{.}\)</span>
-</div></article><div class="para" id="p-365">As you can see, Taylor’s “machine” will produce the power series for a function (if it has one), but is tedious to perform. We will find, generally, that this tediousness can be an obstacle to understanding. In many cases it will be better to be clever if we can. This is usually shorter. However, it is comforting to have Taylor’s formula available as a last resort.</div>
-<div class="para" id="p-366">The existence of a Taylor series is addressed (to some degree) by the following.</div>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-33-1-1"> Use Taylor’s formula to obtain the Taylor series for the functions <span class="process-math">\(e^x\text{,}\)</span> sin <span class="process-math">\(x\text{,}\)</span> and cos <span class="process-math">\(x\)</span> expanded about <span class="process-math">\(a\text{.}\)</span>
+</div></article><div class="para" id="PowerSeriesQuestions-TaylorsFormula-34">As you can see, Taylor’s “machine” will produce the power series for a function (if it has one), but is tedious to perform. We will find, generally, that this tediousness can be an obstacle to understanding. In many cases it will be better to be clever if we can. This is usually shorter. However, it is comforting to have Taylor’s formula available as a last resort.</div>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-35">The existence of a Taylor series is addressed (to some degree) by the following.</div>
 <article class="theorem theorem-like" id="TaylorsTheorem"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.1.9</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-367">
+<div class="para logical" id="TaylorsTheorem-1-1">
 <div class="para"> If <span class="process-math">\(f^\prime,\,f^{\prime\prime},\,\ldots,\,f^{(n+1)}\)</span> are all continuous on an interval containing <span class="process-math">\(a\)</span> and <span class="process-math">\(x\text{,}\)</span> then</div>
-<div class="displaymath process-math" id="md-21">
+<div class="displaymath process-math" id="TaylorsTheorem-1-1-5">
 \begin{align*}
 f(x)=f(a)+\frac{f^{\prime}(a)}{1!}(x-a)+\frac{f^{\prime \prime}(a)}{2!}(x-a)^2\amp +\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n\\
 \amp + \frac{1}{n!}\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{t}\text{.}
 \end{align*}
 </div>
-</div></article><div class="para logical" id="p-368">
+</div></article><div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-37">
 <div class="para">Before we address the proof, notice that the <span class="process-math">\(n\)</span>-th degree polynomial</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/TaylorsTheorem.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/TaylorsTheorem.html">
 \begin{equation*}
 f(a)+\frac{f^{\,\prime}(a)}{1!}(x-a)+\frac{f^{\,\prime\prime}(a)}{2!}(x-a)^2+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n
 \end{equation*}
 </div>
-<div class="para">resembles the Taylor series and, in fact, is called the <em class="emphasis"><span class="process-math">\(n\)</span>-th degree Taylor polynomial of <span class="process-math">\(f\)</span> about <span class="process-math">\(a\text{.}\)</span></em> <a href="" class="xref" data-knowl="./knowl/TaylorsTheorem.html" title="Theorem 5.1.9">Theorem 5.1.9</a> says that a function can be written as the sum of this polynomial and a specific integral which we will analyze in the next chapter. We will get the proof started and leave the formal induction proof as an exercise.</div>
+<div class="para">resembles the Taylor series and, in fact, is called the <em class="emphasis"><span class="process-math">\(n\)</span>-th degree Taylor polynomial of <span class="process-math">\(f\)</span> about <span class="process-math">\(a\text{.}\)</span></em> <a href="" class="xref" data-knowl="./knowl/xref/TaylorsTheorem.html" title="Theorem 5.1.9">Theorem 5.1.9</a> says that a function can be written as the sum of this polynomial and a specific integral which we will analyze in the next chapter. We will get the proof started and leave the formal induction proof as an exercise.</div>
 </div>
-<div class="para logical" id="p-369">
+<div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-38">
 <div class="para">Notice that the case when <span class="process-math">\(n=0\)</span> is really a restatement of the Fundamental Theorem of Calculus. Specifically, the FTC says <span class="process-math">\(\int_{t=a}^xf^\prime(t)\dx{ t}=f(x)-f(a)\)</span> which we can rewrite as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -539,16 +461,16 @@ f(x)=f(a)+\frac{1}{0!}\int_{t=a}^xf^\prime(t)(x-t)^0\dx{ t}
 </div>
 <div class="para">to provide the anchor step for our induction.</div>
 </div>
-<div class="para logical" id="p-370">
+<div class="para logical" id="PowerSeriesQuestions-TaylorsFormula-39">
 <div class="para">To derive the case where <span class="process-math">\(n=1\text{,}\)</span> we use integration by parts. If we let</div>
-<div class="displaymath process-math" id="md-22">
+<div class="displaymath process-math" id="PowerSeriesQuestions-TaylorsFormula-39-2">
 \begin{align*}
 u\amp =f^\prime(t)\amp  d v\amp =(x-t)^0d t\\
 d u\amp =f^{\prime\prime}(t)d t\amp  v\amp =-\frac{1}{1}(x-t)^1
 \end{align*}
 </div>
 <div class="para">we obtain</div>
-<div class="displaymath process-math" id="md-23">
+<div class="displaymath process-math" id="PowerSeriesQuestions-TaylorsFormula-39-3">
 \begin{align*}
 f(x)\amp =f(a)+\frac{1}{0!}\left(-\frac{1}{1}f^\prime(t)(x-t)^1|_{t=a}^{^x}+\frac{1}{1} \int_{t=a}^xf^{\prime\prime}(t)(x-t)^1\dx{ t}\right)\\
 \amp =f(a)+\frac{1}{0!}\left(-\frac{1}{1}f^\prime(x)(x-x)^1+ \frac{1}{1}f^\prime(a)(x-a)^1+\frac{1}{1}\int_{t=a}^xf^{\prime\prime}(t)(x-t)^1\dx{ t}\right)\\
@@ -556,14 +478,12 @@ f(x)\amp =f(a)+\frac{1}{0!}\left(-\frac{1}{1}f^\prime(t)(x-t)^1|_{t=a}^{^x}+\fra
 \end{align*}
 </div>
 </div>
-<article class="problem example-like" id="problem-42"><h3 class="heading">
+<article class="problem example-like" id="PowerSeriesQuestions-TaylorsFormula-40"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.1.10</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-371"> Provide a formal induction proof for <a href="" class="xref" data-knowl="./knowl/TaylorsTheorem.html" title="Theorem 5.1.9">Theorem 5.1.9</a>.</div></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Taylor/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Lagrange/</code></div></div>
-</div>
+<div class="para" id="PowerSeriesQuestions-TaylorsFormula-40-1-1"> Provide a formal induction proof for <a href="" class="xref" data-knowl="./knowl/xref/TaylorsTheorem.html" title="Theorem 5.1.9">Theorem 5.1.9</a>.</div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="PowerSeriesQuestions.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="PowerSeriesQuestions-SeriesAnomalies.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="PowerSeriesQuestions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="PowerSeriesQuestions-SeriesAnomalies.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

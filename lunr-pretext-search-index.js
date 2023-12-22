@@ -7,12 +7,12 @@ var ptx_lunr_docs = [
   "type": "Colophon",
   "number": "",
   "title": "Colophon",
-  "body": " 2.0  copyright  "
+  "body": " 2.0.1   ISBN: 978-1-956862-03-4 Published by Milne Open Textbooks, Milne Library State University of New York at Geneseo, Geneseo, NY 14454  copyright  "
 },
 {
-  "id": "acknowledgement-1",
+  "id": "ASORA-2-3",
   "level": "1",
-  "url": "acknowledgement-1.html",
+  "url": "ASORA-2-3.html",
   "type": "Acknowledgements",
   "number": "",
   "title": "Acknowledgements",
@@ -46,36 +46,36 @@ var ptx_lunr_docs = [
   "body": " Lesson Two  Read and understand the following development of the Quadratic Formula.  Suppose . If   Were you able to follow the argument? Probably the step from equation to equation presented no difficulties. But what about the next step? Do you see where equation came from? If so, good for you. Most students, in fact most mathematicians, cannot make that step in their heads. But are you sure? Is there, perhaps, some small detail you've overlooked?  Check to see.  That is, let in equation and see if you can get equation . Do it on that handy pad of paper we told you to get out earlier. Do it now. We'll wait.  If you still haven't gotten out a pad of paper, give up now. You're going to fail this course. Seriously. Do you think we would spend so much time on this, that we would repeat it so many times, if it weren't important. GET OUT A PAD OF PAPER NOW! Last chance. You've been warned.   Done? Good.  Perhaps you haven't been able to fill in the details on your own. That's ok. Many people can't. If not then get help: from a classmate, a friend, your instructor, whomever. Unfortunately most people won't get help in this situation. Instead they will perceive this as failure, hide it and berate themselves or the problem as stupid. In short they will let their personal insecurities and demons overwhelm them. Don't do this. Get help. You are neither dumb nor incapable. There are a thousand reasons that on any given day you might not be able to solve this problem. But don't let a bad day interfere with the education you are here for. Get someone to help you over this hump. Later you will be able to help your helper in the same way. Really.  At this point we assume that you've successfully negotiated the transition from equation to equation .  See? It really wasn't that bad after all. Just a lot of elementary algebra. Now that you've done it (or seen it done), it is easy to see that there really wasn't much there.  But this is the point! We left those computations out precisely because we knew that they were routine and that you could fill in the details. Moreover, filling in the details yourself gives you a little better insight into the computations. If we'd filled them in for you we would have robbed you of that insight. And we would have made this book longer than it needs to be. We don't want to do either of those things. If we fill in all of the details of every computation for you, you won't learn to have confidence in your ability to do them yourself. And this book will easily double in length.  So the lesson here is this: Keep that pad of paper handy whenever you are reading this (or any other) mathematics text. You will need it. Routine computations will often be skipped. But calling them routine and skipping them does not mean that they are unimportant. If they were truly unimportant we would leave them out entirely.  Moreover routine does not mean obvious. Every step we took in the development of the Quadratic Formula was routine. But even routine computations need to be understood and the best way to understand them is to do them. This is the way to learn mathematics; it is the only way that really works. Don't deprive yourself of your mathematics education by skipping the most important parts.   If you didn't fill in those details you're being stupid (or at least unduly stubborn). There is a good reason for putting these three lessons first. Stop wasting your time and intellect! Go do it now.   As you saw when you filled in the details of our development of the Quadratic Formula the substitution was crucial because it turned into where depends only on , , and . In the sixteenth century a similar technique was used by Ludovico Ferrari (1522-1565) to reduce the general cubic equation into the so-called depressed cubic  where , and depend only on , , , and .  The general depressed cubic had previously been solved by Tartaglia (the Stutterer, 1500-1557) so converting the general cubic into a depressed cubic provided a path for Ferrari to compute the Cubic Formula  like the Quadratic Formula but better.  It is not entirely clear why eliminating the quadratic term should be depressing, but there it is.    Tartaglia , The Stutterer    Ferrari also knew how to compute the general solution of the depressed quartic so when he and his teacher Girolomo Cardano (1501-1576) figured out how to depress a general quartic they had a complete solution of the general quartic as well.  Girolomo Cardano  Cardano, Girolomo   Alas, their methods broke down entirely when they tried to solve the general quintic equation. Unfortunately the rest of this story belongs in a course on Abstract Algebra, not Real Analysis. But the lesson in this story applies to all of mathematics: Every problem solved is a new theorem which then becomes a tool for later use. Depressing a cubic would have been utterly useless had not Tartaglia had a solution of the depressed cubic in hand. The technique they used, with slight modifications, then allowed for a solution of the general quartic as well.  Keep this in mind as you proceed through this course and your mathematical education. Every problem you solve is really a theorem, a potential tool that you can use later. We have chosen the problems in this text deliberately with this in mind. Don't just solve the problems and move on. Just because you have solved a problem does not mean you should stop thinking about it. Keep thinking about the problems you've solved. Internalize them. Make the ideas your own so that when you need them later you will have them at hand to use.    Quadratic Formula first proof      Find so that the substitution depresses equation , the general cubic equation. Then find and in terms of , , , and .    Find so that the substitution depresses the general quartic equation. Make sure you demonstrate how you obtained that value or why it works (if you guessed it).    Find so that the substitution depresses a polynomial of degree . Ditto on showing that this value works or showing how you obtained it.        Another Derivation of the Quadratic Formula    Quadratic Formula second proof Here is yet another way to solve a quadratic equation. Read the development below with pencil and paper handy. Confirm all of the computations that are not completely transparent to you. Then use your notes to present the solution with all steps filled in.   Be sure you are clear on the purpose of this problem before you begin. This is not about solving the Quadratic Equation. You already know how to do that. Our purpose here is to give you practice filling in the skipped details of mathematical exposition. We've chosen this particular problem because it should be a comfortable setting for you, but this particular solution is probably outside of your previous experience.   Suppose that and are solutions of . Without loss of generality suppose that . Suppose further that . Then .  Therefore .  Equations and can be solved simultaneously to yield .    "
 },
 {
-  "id": "figure-1",
+  "id": "ThreeLessons_lesson-two-19",
   "level": "2",
-  "url": "ThreeLessons_lesson-two.html#figure-1",
+  "url": "ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-19",
   "type": "Figure",
   "number": "2.2.0.1",
   "title": "",
   "body": " Tartaglia , The Stutterer   "
 },
 {
-  "id": "figure-2",
+  "id": "ThreeLessons_lesson-two-20-2",
   "level": "2",
-  "url": "ThreeLessons_lesson-two.html#figure-2",
+  "url": "ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-20-2",
   "type": "Figure",
   "number": "2.2.0.2",
   "title": "",
   "body": " Girolomo Cardano  Cardano, Girolomo   "
 },
 {
-  "id": "problem-1",
+  "id": "ThreeLessons_lesson-two-22",
   "level": "2",
-  "url": "ThreeLessons_lesson-two.html#problem-1",
+  "url": "ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-22",
   "type": "Problem",
   "number": "2.2.0.3",
   "title": "",
   "body": "  Quadratic Formula first proof      Find so that the substitution depresses equation , the general cubic equation. Then find and in terms of , , , and .    Find so that the substitution depresses the general quartic equation. Make sure you demonstrate how you obtained that value or why it works (if you guessed it).    Find so that the substitution depresses a polynomial of degree . Ditto on showing that this value works or showing how you obtained it.      "
 },
 {
-  "id": "problem-2",
+  "id": "ThreeLessons_lesson-two-23",
   "level": "2",
-  "url": "ThreeLessons_lesson-two.html#problem-2",
+  "url": "ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-23",
   "type": "Problem",
   "number": "2.2.0.4",
   "title": "Another Derivation of the Quadratic Formula.",
@@ -91,9 +91,9 @@ var ptx_lunr_docs = [
   "body": " Lesson Three  In the hustle and bustle of a typical college semester, with a lot of demands on your time and very little time to think, it becomes very easy to see each problem you solve as a small, isolated victory and then move on to the next challenge. This is understandable. Each problem you solve is a small victory and you've every right to be proud of it. But it is not isolated and it is a mistake to think that it is.   George Polya    In his book How to Solve It the mathematician and teacher George Polya gave four steps for problem solving. The steps may be paraphrased as   Understand the problem.    Formulate a plan.    Execute the plan.    Reflect on what you've done.     This process is iterative. That is, once a plan is formulated and executed we often find that our plan was not up to the task. So we have to ask what went wrong, form a new plan and try again. This is the fourth step: Reflect on what you've done.  Almost everyone remembers this fourth step when their plan doesn't work. After all, you've got to try again so you have to ask what went wrong. But it is all too easy to neglect that crucial fourth step when the plan succeeds. In that case, flush with success we usually move on to the next problem and start over from scratch.  This is a mistake. Having solved a problem is no reason to stop thinking about it.  That fourth step is at least as important when we have succeeded as when we have failed. Each time you solve a problem stop and ask yourself a few questions:   Are there any easy consequences that follow from the result?    How does it fit into the broader scheme of other problems you have solved?    How might it be used in the future?     Also, notice the structure of the problem. Some assumptions had to be made. What were they? Were they all necessary? That is, did your solution use everything that was assumed? If not, you may have something considerably more general than it at first appears. What is that more general statement? Even if you used all of the assumptions, was that really necessary? Can you solve a similar problem with weaker assumptions?  Take a moment to pack all of these questions (and their answers) away in your mind so that when you see something similar in the future you will be reminded of it. Don't solve any problem and then forget it and move on. The nature of mathematics is cumulative. Remember, you are not here to accumulate grade points. You are here to learn and understand the concepts and methods of mathematics, to gain mathematical maturity. Part of that maturation process is the accumulation of a body of facts (theorems), and techniques that can be used to prove new theorems (solve new problems).  This text has been written with the maturation process in mind. You will frequently find that the problems you solve today can be used to good effect in the ones you attempt tomorrow, but only if you remember them. So take a moment after you've solved each problem to think about how it fits into the patterns you already know. This is important enough to bear repeating: A problem, once solved, becomes a tool for solving subsequent problems!   The purpose of the following sequence of problems is to help you become accustomed to this notion (if you aren't already). It is a progression of results about prime numbers. As you probably recall, a prime number is any integer greater than whose only factors are itself and . For example, , , , , are prime, while , , are not. A major result about prime numbers is the following:     The Fundamental Theorem of Arithmetic   Any integer greater than is either prime or it is a product of prime numbers. Furthermore, this prime decomposition is unique up to the order of the factors.    We will not prove this, but we will use it as a starting point to examine the following problems. As you do these problems, notice how subsequent problems make use of the previous results.  Notice that the notation simply means that the integer divides the integer with no remainder.  Fermat's Little Theorem, step 1    Fermat's Little Theorem problems leading to if a prime divides a product of two numbers then it divides one of the factors Let be a prime number and positive integers such that . Show that or .    If then we are done. If not then notice that is a prime factor of . What does the Fundamental Theorem of Arithmetic say about the prime factors of compared to the prime factors of and     Fermat's Little Theorem, step 2    Fermat's Little Theorem problems leading to if a prime divides an arbitrary product then it divides one of the factors Let be a prime number and let be positive integers such that . Show that for some .    Use induction on and the result of the previous problem.    Fermat's Little Theorem, step 3    Fermat's Little Theorem problems leading to if is prime then divides Let be a prime number and let be an integer with . Prove that , where is the binomial coefficient .    We know , so . How does the previous result apply?    We now have all the machinery in place to prove one of the really cool theorems from number theory.     Fermat's Little Theorem    Fermat's Little Theorem Let be any prime number. Then for all positive integers .    Fermat's Little Theorem    Fermat's Little Theorem Prove Fermat's Little Theorem.    Use induction on . To get from to , use the binomial theorem on .    Fermat's Little Theorem is the foundational basis for a number of results in number theory and encryption.  "
 },
 {
-  "id": "figure-3",
+  "id": "ThreeLessons_lesson-three-3",
   "level": "2",
-  "url": "ThreeLessons_lesson-three.html#figure-3",
+  "url": "ThreeLessons_lesson-three.html#ThreeLessons_lesson-three-3",
   "type": "Figure",
   "number": "2.3.0.5",
   "title": "",
@@ -109,27 +109,27 @@ var ptx_lunr_docs = [
   "body": "   The Fundamental Theorem of Arithmetic   Any integer greater than is either prime or it is a product of prime numbers. Furthermore, this prime decomposition is unique up to the order of the factors.   "
 },
 {
-  "id": "problem-3",
+  "id": "ThreeLessons_lesson-three-16",
   "level": "2",
-  "url": "ThreeLessons_lesson-three.html#problem-3",
+  "url": "ThreeLessons_lesson-three.html#ThreeLessons_lesson-three-16",
   "type": "Problem",
   "number": "2.3.0.7",
   "title": "Fermat’s Little Theorem, step 1.",
   "body": "Fermat's Little Theorem, step 1    Fermat's Little Theorem problems leading to if a prime divides a product of two numbers then it divides one of the factors Let be a prime number and positive integers such that . Show that or .    If then we are done. If not then notice that is a prime factor of . What does the Fundamental Theorem of Arithmetic say about the prime factors of compared to the prime factors of and    "
 },
 {
-  "id": "problem-4",
+  "id": "ThreeLessons_lesson-three-17",
   "level": "2",
-  "url": "ThreeLessons_lesson-three.html#problem-4",
+  "url": "ThreeLessons_lesson-three.html#ThreeLessons_lesson-three-17",
   "type": "Problem",
   "number": "2.3.0.8",
   "title": "Fermat’s Little Theorem, step 2.",
   "body": "Fermat's Little Theorem, step 2    Fermat's Little Theorem problems leading to if a prime divides an arbitrary product then it divides one of the factors Let be a prime number and let be positive integers such that . Show that for some .    Use induction on and the result of the previous problem.   "
 },
 {
-  "id": "problem-5",
+  "id": "ThreeLessons_lesson-three-18",
   "level": "2",
-  "url": "ThreeLessons_lesson-three.html#problem-5",
+  "url": "ThreeLessons_lesson-three.html#ThreeLessons_lesson-three-18",
   "type": "Problem",
   "number": "2.3.0.9",
   "title": "Fermat’s Little Theorem, step 3.",
@@ -145,9 +145,9 @@ var ptx_lunr_docs = [
   "body": "   Fermat's Little Theorem    Fermat's Little Theorem Let be any prime number. Then for all positive integers .   "
 },
 {
-  "id": "problem-6",
+  "id": "ThreeLessons_lesson-three-21",
   "level": "2",
-  "url": "ThreeLessons_lesson-three.html#problem-6",
+  "url": "ThreeLessons_lesson-three.html#ThreeLessons_lesson-three-21",
   "type": "Problem",
   "number": "2.3.0.11",
   "title": "Fermat’s Little Theorem.",
@@ -163,27 +163,27 @@ var ptx_lunr_docs = [
   "body": " Additional Problems      sums and products of rational and irrational numbers   Determine if each of the following is always rational or always irrational. Justify your answers.    The sum of two rational numbers.    The sum of two irrational numbers.    The sum of a rational and an irrational number.         creating irrationals from rationals  irrational numbers  is it possible to have two rational numbers, and , such that is irrational  Is it possible to have two rational numbers, and , such that is irrational? If so, display an example of such and . If not, prove that it is not possible.     creating rationals from irrationals  irrational numbers  is it possible to have two irrational numbers, and , such that is rational   Decide if it is possible to have two irrational numbers, and , such that is rational. Prove it in either case.    "
 },
 {
-  "id": "problem-11",
+  "id": "NumbersRealRational-AddProbs-2",
   "level": "2",
-  "url": "NumbersRealRational-AddProbs.html#problem-11",
+  "url": "NumbersRealRational-AddProbs.html#NumbersRealRational-AddProbs-2",
   "type": "Problem",
   "number": "3.1.1",
   "title": "",
   "body": " sums and products of rational and irrational numbers   Determine if each of the following is always rational or always irrational. Justify your answers.    The sum of two rational numbers.    The sum of two irrational numbers.    The sum of a rational and an irrational number.   "
 },
 {
-  "id": "problem-12",
+  "id": "NumbersRealRational-AddProbs-3",
   "level": "2",
-  "url": "NumbersRealRational-AddProbs.html#problem-12",
+  "url": "NumbersRealRational-AddProbs.html#NumbersRealRational-AddProbs-3",
   "type": "Problem",
   "number": "3.1.2",
   "title": "",
   "body": "   creating irrationals from rationals  irrational numbers  is it possible to have two rational numbers, and , such that is irrational  Is it possible to have two rational numbers, and , such that is irrational? If so, display an example of such and . If not, prove that it is not possible.   "
 },
 {
-  "id": "problem-13",
+  "id": "NumbersRealRational-AddProbs-4",
   "level": "2",
-  "url": "NumbersRealRational-AddProbs.html#problem-13",
+  "url": "NumbersRealRational-AddProbs.html#NumbersRealRational-AddProbs-4",
   "type": "Problem",
   "number": "3.1.3",
   "title": "",
@@ -199,9 +199,9 @@ var ptx_lunr_docs = [
   "body": " Newton and Leibniz Get Started   Leibniz's Calculus Rules   Gottfried Wilhelm Leibniz  Leibniz, Gottfried Wilhelm portrait of    The rules for calculus were first laid out in Gottfried Wilhelm Leibniz's 1684 paper Leibniz, Gottfried Wilhelm first calculus publication  Nova methodus pro maximis et minimis, itemque tangentibus, quae nec fractas nec irrationales, quantitates moratur, et singulare pro illi calculi genus (A New Method for Maxima and Minima as Well as Tangents, Which is Impeded Neither by Fractional Nor by Irrational Quantities, and a Remarkable Type of Calculus for This). Leibniz started with subtraction. That is, if and are very close together then their difference, , is very small. He expanded this idea to say that if and are infinitely close together (but still distinct) then their difference, , is infinitesimally small (but not zero).    Calculus Differentialis   This translates, loosely, as the calculus of differences.   This idea is logically very suspect and Leibniz knew it. But he also knew that when he used his calculus differentialis he was getting correct answers to some very hard problems. So he persevered.  Leibniz called both and  differentials (Latin for difference) because he thought of them as, essentially, the same thing. Over time it has become customary to refer to the infinitesimal as a differential, reserving difference for the finite case, . This is why calculus is often called differential calculus.   In his paper Leibniz gave rules for dealing with these infinitely small differentials. Specifically, given a variable quantity , represented an infinitesimal change in . Differentials are related via the slope of the tangent line to a curve. That is, if , then and are related by .  Leibniz then divided by giving   The elegant and expressive notation Leibniz invented was so useful that it has been retained through the years despite some profound changes in the underlying concepts. For example, Leibniz and his contemporaries would have viewed the symbol as an actual quotient of infinitesimals, whereas today we define it via the limit concept first suggested by Newton. Newton, Isaac   As a result the rules governing these differentials are very modern in appearance: Leibniz, Gottfried Wilhelm differentiation rules  .  Leibniz states these rules without proof: . . . the demonstration of all this will be easy to one who is experienced in such matters . . .. As an example, mathematicians in Leibniz's day would be expected to understand intuitively that if is a constant, then . Likewise, is really an extension of .    Leibniz's Approach to the Product Rule   Leibniz, Gottfried Wilhelm The explanation of the product rule using differentials is a bit more involved, but Leibniz expected that mathematicans would be fluent enough to derive it. The product can be thought of as the area of the following rectangle         With this in mind, can be thought of as the change in area when is changed by and is changed by . This can be seen as the L shaped region in the following drawing.         By dividing the L shaped region into 3 rectangles we obtain .  Even though and are infinitely small, Leibniz reasoned that is even more infinitely small (quadratically infinitely small?) compared to and and can thus be ignored leaving .  You should feel some discomfort at the idea of simply tossing the product aside because it is comparatively small. This means you have been well trained, and have thoroughly internalized Newton's Newton, Isaac dictum : The smallest errors may not, in mathematical matters, be scorned. It is logically untenable to toss aside an expression just because it is small. Even less so should we be willing to ignore an expression on the grounds that it is infinitely smaller than another quantity which is itself infinitely small.   Newton and Leibniz both knew this as well as we do. But they also knew that their methods worked . They gave verifiably correct answers to problems which had, heretofore, been completely intractable. It is the mark of their genius that both men persevered in spite of the very evident difficulties their methods entailed.    Newton's Approach to the Product Rule  In the Principia, Newton proved the Product Rule as follows: Let and be flowing quantites and consider the rectangle, , whose sides are and . is also a flowing quantity and we wish to find its fluxion (derivative) at any time.  Newton's Method of Fluxions  Newton's approach to calculus his Method of Fluxions  depended fundamentally on motion. That is, he viewed his variables (fluents) as changing (flowing or fluxing) in time. The rate of change of a fluent he called a fluxion. As a foundation both Leibniz's and Newton's approaches have fallen out of favor, although both are still universally used as a conceptual approach, a way of thinking, about the ideas of calculus.   First increment and by and respectively. Then the corresponding increment of is .  Now decrement and by the same amounts: .  Subtracting the right side of equation from the right side of equation gives which is the total change of over the intervals and and also recognizably the Product Rule.     Isaac Newton  Newton, Isaac portrait of    This argument is no better than Leibniz's as it relies heavily on the number to make it work. If we take any other increments in and whose total lengths are and it will simply not work. Try it and see.  In Newton's defense, he wasn't really trying to justify his mathematical methods in the Principia. His attention there was on physics, not math, so he was really just trying to give a convincing demonstration of his methods. You may decide for yourself how convincing his demonstration is.   Lagrange, Joseph-Louis Notice that there is no mention of limits of difference quotients or derivatives. In fact, the term derivative was not coined until 1797, by Lagrange. In a sense, these topics were not necessary at the time, as Leibniz and Newton both assumed that the curves they dealt with had tangent lines and, in fact, Leibniz explicitly used the tangent line to relate two differential quantities. This was consistent with the thinking of the time and for the duration of this chapter we will also assume that all quantities are differentiable. As we will see later this assumption leads to difficulties.  Both Newton and Leibniz were satisfied that their calculus provided answers that agreed with what was known at the time. For example and  , results that were essentially derived by others in different ways.   Leibniz, Gottfried Wilhelm Leibniz's product rule  Leibniz's product rule   Use Leibniz's product rule to show that if is a positive integer then     Use Leibniz's product rule to derive the quotient rule .    Use the quotient rule to show that if is a positive integer, then        differentiation power rule with fractional exponents Let and be integers with . Show that     Leibniz also provided applications of his calculus to prove its worth. As an example he derived Snell's Law of Refraction from his calculus rules as follows.  Given that light travels through air at a speed of and travels through water at a speed of the problem is to find the fastest path from point to point .         According to Fermat's Principle of Least Time, this fastest path is the one that light will travel.  Using the fact that and the labeling in the picture below we can obtain a formula for the time it takes for light to travel from to .            Using the rules of Leibniz's calculus, we obtain .  Using the fact that at the minimum value for , , we have that the fastest path from to must satisfy . Inserting the following angles         we get that the path that light travels must satisfy which is Snell's Law.   Bernoulli, Johann   Brachistochrone problem, the To compare 18th century and modern techniques we will consider Johann Bernoulli's solution of the Brachistochrone problem. In 1696, Bernoulli posed, and solved, the Brachistochrone problem; that is, to find the shape of a frictionless wire joining points A and B so that the time it takes for a bead to slide down under the force of gravity is as small as possible.         Bernoulli posed this path of fastest descent problem to challenge the mathematicians of Europe and used his solution to demonstrate the power of Leibniz's calculus as well as his own ingenuity. Bernoulli, Johann Bernoulli's challenge    I, Johann Bernoulli, address the most brilliant mathematicians in the world. Nothing is more attractive to intelligent people than an honest, challenging problem, whose possible solution will bestow fame and remain as a lasting monument. Following the example set by Pascal, Fermat, etc., I hope to gain the gratitude of the whole scientific community by placing before the finest mathematicians of our time a problem which will test their methods and the strength of their intellect. If someone communicates to me the solution of the proposed problem, I shall publicly declare him worthy of praise.     Johann Bernoulli  Bernoulli, Johann portrait of    In addition to Johann's, solutions were obtained from Newton, Newton, Isaac Leibniz, Johann's brother Jacob Bernoulli, Bernoulli Jacob and the Marquis de l'Hopital . At the time there was an ongoing and very vitriolic controversy raging over whether Newton or Leibniz had been the first to invent calculus. An advocate of the methods of Leibniz, Bernoulli did not believe Newton would be able to solve the problem using his methods. Bernoulli attempted to embarrass Newton by sending him the problem. However Newton did solve it.  At this point in his life Newton had all but quit science and mathematics and was fully focused on his administrative duties as Master of the Mint. In part due to rampant counterfeiting, England's money had become severely devalued and the nation was on the verge of economic collapse. The solution was to recall all of the existing coins, melt them down, and strike new ones. As Master of the Mint this job fell to Newton . As you might imagine this was a rather Herculean task. Nevertheless, according to his niece:   When the problem in 1696 was sent by Bernoulli Sir I.N. was in the midst of the hurry of the great recoinage and did not come home till four from the Tower very much tired, but did not sleep till he had solved it, which was by four in the morning.   He is later reported to have complained, I do not love . . . to be . . . teezed by forreigners about Mathematical things  .   Bernoulli, Johann \"Tanquam ex ungue leonem\" Newton submitted his solution anonymously, presumably to avoid more controversy. Nevertheless the methods used were so distinctively Newton's that Bernoulli is said to have exclaimed Tanquam ex ungue leonem .     Tanquam ex ungue leonem    I know the lion by his claw.     Brachistochrone problem, the Bernoulli's solution Bernoulli's ingenious solution starts, interestingly enough, with Snell's Law of Refraction. He begins by considering the stratified medium in the following figure, where an object travels with velocities in the various layers.         By repeatedly applying Snell's Law he concluded that the fastest path must satisfy .  In other words, the ratio of the sine of the angle that the curve makes with the vertical and the speed remains constant along this fastest path.  If we think of a continuously changing medium as stratified into infinitesimal layers and extend Snell's law to an object whose speed is constantly changing,         then along the fastest path, the ratio of the sine of the angle that the curve's tangent makes with the vertical, , and the speed, , must remain constant. .  If we include axes and let denote the position of the bead at a particular time then we have the following picture.         In the above figure, denotes the length that the bead has traveled down to point (that is, the arc length of the curve from the origin to that point) and denotes the tangential component of the acceleration due to gravity . Since the bead travels only under the influence of gravity then .  To get a sense of how physical problems were approached using Leibniz's calculus we will use the above equation to show that .  By similar triangles we have . As a student of Leibniz, Bernoulli would have regarded as a fraction so or .  You are undoubtedly uncomfortable with the cavalier manipulation of infinitesimal quantities you've just witnessed, so we'll pause for a moment now to compare a modern development of equation to Bernoulli's. As before we begin with the equation: as before.  In effect, in the modern formulation we have traded the simplicity and elegance of differentials for a comparatively cumbersome repeated use of the Chain Rule. No doubt you noticed when taking Calculus that in the differential notation of Leibniz, Leibniz, Gottfried Wilhelm the Chain Rule looks like canceling an expression in the top and bottom of a fraction: . This is because for 18th century mathematicians, this is exactly what it was.  To put it another way, 18th century mathematicians wouldn't have recognized a need for what we call the Chain Rule because this operation was a triviality for them. Just reduce the fraction. This begs the question: Why did we abandon such a clear, simple interpretation of our symbols in favor of the, comparatively, more cumbersome modern interpretation? This is one of the questions we will try to answer in this course.  Returning to the Brachistochrone problem we observe that .  Bernoulli was then able to solve this differential equation.     Brachistochrone problem, the Show that the equations satisfy equation . Bernoulli recognized this solution to be an inverted cycloid, the curve traced by a fixed point on a circle as the circle rolls along a horizontal surface.    This illustrates the state of calculus in the late 1600's and early 1700's; the foundations of the subject were a bit shaky but there was no denying its power.   "
 },
 {
-  "id": "figure-11",
+  "id": "sec_leibn-calc-rules-2",
   "level": "2",
-  "url": "CalcIn17th18thCentury-NewtLeibStart.html#figure-11",
+  "url": "CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules-2",
   "type": "Figure",
   "number": "4.1.1",
   "title": "",
@@ -235,18 +235,18 @@ var ptx_lunr_docs = [
   "body": "   Isaac Newton  Newton, Isaac portrait of   "
 },
 {
-  "id": "problem-14",
+  "id": "NewtonsApproach-12",
   "level": "2",
-  "url": "CalcIn17th18thCentury-NewtLeibStart.html#problem-14",
+  "url": "CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach-12",
   "type": "Problem",
   "number": "4.1.5",
   "title": "",
   "body": " Leibniz, Gottfried Wilhelm Leibniz's product rule  Leibniz's product rule   Use Leibniz's product rule to show that if is a positive integer then     Use Leibniz's product rule to derive the quotient rule .    Use the quotient rule to show that if is a positive integer, then    "
 },
 {
-  "id": "problem-15",
+  "id": "NewtonsApproach-13",
   "level": "2",
-  "url": "CalcIn17th18thCentury-NewtLeibStart.html#problem-15",
+  "url": "CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach-13",
   "type": "Problem",
   "number": "4.1.6",
   "title": "",
@@ -289,9 +289,9 @@ var ptx_lunr_docs = [
   "body": "      "
 },
 {
-  "id": "figure-19",
+  "id": "NewtonsApproach-29",
   "level": "2",
-  "url": "CalcIn17th18thCentury-NewtLeibStart.html#figure-19",
+  "url": "CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach-29",
   "type": "Figure",
   "number": "4.1.11",
   "title": "",
@@ -325,9 +325,9 @@ var ptx_lunr_docs = [
   "body": "      "
 },
 {
-  "id": "problem-16",
+  "id": "NewtonsApproach-53",
   "level": "2",
-  "url": "CalcIn17th18thCentury-NewtLeibStart.html#problem-16",
+  "url": "CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach-53",
   "type": "Problem",
   "number": "4.1.15",
   "title": "",
@@ -352,99 +352,99 @@ var ptx_lunr_docs = [
   "body": "   power series definition of A power series centered at is a series of the form .  Often we will focus on the behavior of power series , centered around , as the series centered around other values of are obtained by shifting a series centered at .   "
 },
 {
-  "id": "example-1",
+  "id": "ExponentAdditionProperty-12",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#example-1",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-12",
   "type": "Example",
   "number": "4.2.2",
   "title": "",
   "body": " as the solution of an Initial Value Problem   Solve the following Initial Value problem: Find given that .   A few seconds of thought should convince you that the solution of this problem is . We will ignore this for now in favor of emphasising the technique.   Assuming the solution can be expressed as a power series we have .  Differentiating gives us .  Since we see that .  This leads to the relationship .  Thus the series solution of the differential equation is .  Using the initial condition , we get . Thus the solution to the initial problem is . Let's call this function . Then by definition .   "
 },
 {
-  "id": "p-245",
+  "id": "ExponentAdditionProperty-14",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#p-245",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-14",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Property 1 "
 },
 {
-  "id": "p-246",
+  "id": "ExponentAdditionProperty-15",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#p-246",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-15",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Property 2 "
 },
 {
-  "id": "p-248",
+  "id": "ExponentAdditionProperty-17",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#p-248",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-17",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Property 3 "
 },
 {
-  "id": "problem-17",
+  "id": "ExponentAdditionProperty-18",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#problem-17",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-18",
   "type": "Problem",
   "number": "4.2.3",
   "title": "",
   "body": "  Prove Property 3.   "
 },
 {
-  "id": "p-250",
+  "id": "ExponentAdditionProperty-19",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#p-250",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-19",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Property 4 "
 },
 {
-  "id": "problem-18",
+  "id": "ExponentAdditionProperty-20",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#problem-18",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-20",
   "type": "Problem",
   "number": "4.2.4",
   "title": "",
   "body": "  Prove Property 4.   "
 },
 {
-  "id": "p-252",
+  "id": "ExponentAdditionProperty-21",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#p-252",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-21",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Property 5 "
 },
 {
-  "id": "problem-19",
+  "id": "ExponentAdditionProperty-22",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#problem-19",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-22",
   "type": "Problem",
   "number": "4.2.5",
   "title": "",
   "body": "  Prove Property 5.   "
 },
 {
-  "id": "p-254",
+  "id": "ExponentAdditionProperty-23",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#p-254",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-23",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Property 6 "
 },
 {
-  "id": "problem-20",
+  "id": "ExponentAdditionProperty-24",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#problem-20",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-24",
   "type": "Problem",
   "number": "4.2.6",
   "title": "",
@@ -460,18 +460,18 @@ var ptx_lunr_docs = [
   "body": "   definition of Let be denoted by the number . Using the series , we can approximate to any degree of accuracy. In particular .   "
 },
 {
-  "id": "problem-21",
+  "id": "ExponentAdditionProperty-32",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#problem-21",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-32",
   "type": "Problem",
   "number": "4.2.8",
   "title": "",
   "body": " series solutions of   Show that if satisfies the differential equation , then and conclude that .    Since satisfies , we see that for some constants and . Show that in this case and and obtain .   "
 },
 {
-  "id": "problem-22",
+  "id": "ExponentAdditionProperty-33",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#problem-22",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-33",
   "type": "Problem",
   "number": "4.2.9",
   "title": "",
@@ -487,9 +487,9 @@ var ptx_lunr_docs = [
   "body": " series Geometric series used to derive arctangent series  series   Use the geometric series, , to obtain a series for and use this to obtain the series .  Use the series above to obtain the series .   "
 },
 {
-  "id": "problem-24",
+  "id": "ExponentAdditionProperty-47",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#problem-24",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-47",
   "type": "Problem",
   "number": "4.2.11",
   "title": "",
@@ -505,63 +505,63 @@ var ptx_lunr_docs = [
   "body": "   series graph the square root series Let .  Use a computer algebra system to plot for and compare these to the graph for . What seems to be happening? For what values of does the series appear to converge to    "
 },
 {
-  "id": "problem-26",
+  "id": "ExponentAdditionProperty-50",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#problem-26",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-50",
   "type": "Problem",
   "number": "4.2.13",
   "title": "",
   "body": "   first series expansion Use the series to obtain the series .  Use a computer algebra system to sum the first 100 terms of this series and compare the answer to .   "
 },
 {
-  "id": "problem-27",
+  "id": "ExponentAdditionProperty-52",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#problem-27",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-52",
   "type": "Problem",
   "number": "4.2.14",
   "title": "",
   "body": "   second series expansion    Show that and use this to show that .    We now have two series for calculating the one from part (a) and the one derived earlier, namely . We will explore which one converges to faster. With this in mind, define and . Use a computer algebra system to compute and for . Which one appears to converge to faster?      "
 },
 {
-  "id": "p-293",
+  "id": "ExponentAdditionProperty-53",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#p-293",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-53",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "binomial series "
 },
 {
-  "id": "problem-28",
+  "id": "ExponentAdditionProperty-55",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#problem-28",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-55",
   "type": "Problem",
   "number": "4.2.15",
   "title": "",
   "body": " Binomial Series, the  Binomial Series, the as a power series centered at zero   Let be a positive integer. Find the power series, centered at zero, for by    Differentiating the series Geometric series differentiating geometric series times.    Applying the binomial series.    Compare these two results.   "
 },
 {
-  "id": "figure-23",
+  "id": "ExponentAdditionProperty-56",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#figure-23",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-56",
   "type": "Figure",
   "number": "4.2.16",
   "title": "",
   "body": " Leonhard Euler  Euler, Leonhard portrait of   "
 },
 {
-  "id": "problem-29",
+  "id": "ExponentAdditionProperty-58",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#problem-29",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-58",
   "type": "Problem",
   "number": "4.2.17",
   "title": "The Basel Problem.",
   "body": "The Basel Problem  Euler, Leonhard Basel Problem, the   Show that the power series for is given by     Use (a) to infer that the roots of are given by     Suppose is a polynomial with roots . Show that if  , then all the roots are non-zero and .    Assuming that the result in part (c) holds for an infinite polynomial (power series), deduce that     Expand this product to deduce    "
 },
 {
-  "id": "problem-30",
+  "id": "ExponentAdditionProperty-59",
   "level": "2",
-  "url": "ExponentAdditionProperty.html#problem-30",
+  "url": "ExponentAdditionProperty.html#ExponentAdditionProperty-59",
   "type": "Problem",
   "number": "4.2.18",
   "title": "Euler’s Formula.",
@@ -577,54 +577,54 @@ var ptx_lunr_docs = [
   "body": " Additional Problems     series Geometric series alternating  series Geometric series derivation of the series representation of from Use the geometric series to obtain the series        power series drills  Without using Taylor's Theorem, represent the following functions as power series expanded about 0 (i.e., in the form ).                               power series for expanded about 0 Let be a positive real number. Find a power series for expanded about 0.            power series of , expanded about  as a power series Represent the function sin as a power series expanded about (i.e., in the form ).     .       Maclaurin series drills  Without using Taylor's Theorem, represent the following functions as a power series expanded about for the given value of (i.e., in the form ).     ,      ,      ,      ,        series term by term integration of Evaluate the following integrals as series.                   "
 },
 {
-  "id": "problem-31",
+  "id": "CalcIn17th18thCentury-AddProb-2",
   "level": "2",
-  "url": "CalcIn17th18thCentury-AddProb.html#problem-31",
+  "url": "CalcIn17th18thCentury-AddProb.html#CalcIn17th18thCentury-AddProb-2",
   "type": "Problem",
   "number": "4.3.1",
   "title": "",
   "body": "   series Geometric series alternating  series Geometric series derivation of the series representation of from Use the geometric series to obtain the series    "
 },
 {
-  "id": "problem-32",
+  "id": "CalcIn17th18thCentury-AddProb-3",
   "level": "2",
-  "url": "CalcIn17th18thCentury-AddProb.html#problem-32",
+  "url": "CalcIn17th18thCentury-AddProb.html#CalcIn17th18thCentury-AddProb-3",
   "type": "Problem",
   "number": "4.3.2",
   "title": "",
   "body": "   power series drills  Without using Taylor's Theorem, represent the following functions as power series expanded about 0 (i.e., in the form ).                           "
 },
 {
-  "id": "problem-33",
+  "id": "CalcIn17th18thCentury-AddProb-4",
   "level": "2",
-  "url": "CalcIn17th18thCentury-AddProb.html#problem-33",
+  "url": "CalcIn17th18thCentury-AddProb.html#CalcIn17th18thCentury-AddProb-4",
   "type": "Problem",
   "number": "4.3.3",
   "title": "",
   "body": "   power series for expanded about 0 Let be a positive real number. Find a power series for expanded about 0.        "
 },
 {
-  "id": "problem-34",
+  "id": "CalcIn17th18thCentury-AddProb-5",
   "level": "2",
-  "url": "CalcIn17th18thCentury-AddProb.html#problem-34",
+  "url": "CalcIn17th18thCentury-AddProb.html#CalcIn17th18thCentury-AddProb-5",
   "type": "Problem",
   "number": "4.3.4",
   "title": "",
   "body": "   power series of , expanded about  as a power series Represent the function sin as a power series expanded about (i.e., in the form ).     .   "
 },
 {
-  "id": "problem-35",
+  "id": "CalcIn17th18thCentury-AddProb-6",
   "level": "2",
-  "url": "CalcIn17th18thCentury-AddProb.html#problem-35",
+  "url": "CalcIn17th18thCentury-AddProb.html#CalcIn17th18thCentury-AddProb-6",
   "type": "Problem",
   "number": "4.3.5",
   "title": "",
   "body": "   Maclaurin series drills  Without using Taylor's Theorem, represent the following functions as a power series expanded about for the given value of (i.e., in the form ).     ,      ,      ,      ,    "
 },
 {
-  "id": "problem-36",
+  "id": "CalcIn17th18thCentury-AddProb-7",
   "level": "2",
-  "url": "CalcIn17th18thCentury-AddProb.html#problem-36",
+  "url": "CalcIn17th18thCentury-AddProb.html#CalcIn17th18thCentury-AddProb-7",
   "type": "Problem",
   "number": "4.3.6",
   "title": "",
@@ -649,63 +649,63 @@ var ptx_lunr_docs = [
   "body": "   Taylor's Formula If , then , where represents the derivative of evaluated at .   "
 },
 {
-  "id": "problem-37",
+  "id": "PowerSeriesQuestions-TaylorsFormula-6",
   "level": "2",
-  "url": "PowerSeriesQuestions-TaylorsFormula.html#problem-37",
+  "url": "PowerSeriesQuestions-TaylorsFormula.html#PowerSeriesQuestions-TaylorsFormula-6",
   "type": "Problem",
   "number": "5.1.2",
   "title": "",
   "body": "   Taylor's Formula Prove Theorem .     . Differentiate to obtain the other terms.   "
 },
 {
-  "id": "figure-24",
+  "id": "PowerSeriesQuestions-TaylorsFormula-8",
   "level": "2",
-  "url": "PowerSeriesQuestions-TaylorsFormula.html#figure-24",
+  "url": "PowerSeriesQuestions-TaylorsFormula.html#PowerSeriesQuestions-TaylorsFormula-8",
   "type": "Figure",
   "number": "5.1.3",
   "title": "",
   "body": " Brook Taylor  Taylor, Brook portrait of   "
 },
 {
-  "id": "figure-25",
+  "id": "PowerSeriesQuestions-TaylorsFormula-14",
   "level": "2",
-  "url": "PowerSeriesQuestions-TaylorsFormula.html#figure-25",
+  "url": "PowerSeriesQuestions-TaylorsFormula.html#PowerSeriesQuestions-TaylorsFormula-14",
   "type": "Figure",
   "number": "5.1.4",
   "title": "",
   "body": " Joseph-Louis Lagrange  Lagrange, Joseph-Louis portrait of   "
 },
 {
-  "id": "problem-38",
+  "id": "PowerSeriesQuestions-TaylorsFormula-23",
   "level": "2",
-  "url": "PowerSeriesQuestions-TaylorsFormula.html#problem-38",
+  "url": "PowerSeriesQuestions-TaylorsFormula.html#PowerSeriesQuestions-TaylorsFormula-23",
   "type": "Problem",
   "number": "5.1.5",
   "title": "Cauchy’s Counterexample, Part 1.",
   "body": "Cauchy's Counterexample, Part 1  Cauchy, Augustin Cauchy's counterexample part 1   Adopting the notation and , find in terms of . [Note: Don't forget that you are differentiating with respect to , not .]    Use induction on to show that is a polynomial for all .   "
 },
 {
-  "id": "problem-39",
+  "id": "PowerSeriesQuestions-TaylorsFormula-27",
   "level": "2",
-  "url": "PowerSeriesQuestions-TaylorsFormula.html#problem-39",
+  "url": "PowerSeriesQuestions-TaylorsFormula.html#PowerSeriesQuestions-TaylorsFormula-27",
   "type": "Problem",
   "number": "5.1.6",
   "title": "Cauchy’s Counterexample, Part 2.",
   "body": "Cauchy's Counterexample, Part 2  Cauchy, Augustin Cauchy's counterexample part 2   Let be a nonnegative integer. Show that .   Induction and a dash of L'Hôpital's rule should do the trick.    Prove that for any polynomial .    Let be as in equation and show that for every nonnegative integer , .   "
 },
 {
-  "id": "problem-40",
+  "id": "PowerSeriesQuestions-TaylorsFormula-32",
   "level": "2",
-  "url": "PowerSeriesQuestions-TaylorsFormula.html#problem-40",
+  "url": "PowerSeriesQuestions-TaylorsFormula.html#PowerSeriesQuestions-TaylorsFormula-32",
   "type": "Problem",
   "number": "5.1.7",
   "title": "",
   "body": "   Taylor's Formula use to obtain the general binomial series Use Taylor's formula to obtain the general binomial series    "
 },
 {
-  "id": "problem-41",
+  "id": "PowerSeriesQuestions-TaylorsFormula-33",
   "level": "2",
-  "url": "PowerSeriesQuestions-TaylorsFormula.html#problem-41",
+  "url": "PowerSeriesQuestions-TaylorsFormula.html#PowerSeriesQuestions-TaylorsFormula-33",
   "type": "Problem",
   "number": "5.1.8",
   "title": "",
@@ -721,9 +721,9 @@ var ptx_lunr_docs = [
   "body": "   Taylor's Theorem If are all continuous on an interval containing and , then .   "
 },
 {
-  "id": "problem-42",
+  "id": "PowerSeriesQuestions-TaylorsFormula-40",
   "level": "2",
-  "url": "PowerSeriesQuestions-TaylorsFormula.html#problem-42",
+  "url": "PowerSeriesQuestions-TaylorsFormula.html#PowerSeriesQuestions-TaylorsFormula-40",
   "type": "Problem",
   "number": "5.1.10",
   "title": "",
@@ -739,9 +739,9 @@ var ptx_lunr_docs = [
   "body": " Series Anomalies  Up to this point, we have been somewhat frivolous in our approach to series. This approach mirrors eighteenth century mathematicians who ingeniously exploited calculus and series to provide mathematical and physical results which were virtually unobtainable before. Mathematicans were eager to push these techniques as far as they could to obtain their results and they often showed good intuition regarding what was mathematically acceptable and what was not. However, as the envelope was pushed, questions about the validity of the methods surfaced.  As an illustration consider the series expansion .  If we substitute into this equation, we obtain .  If we group the terms as follows , the series would equal . A regrouping of provides an answer of . This violation of the associative law of addition did not escape the mathematicians of the 1700's. In his 1760 paper On Divergent Series Euler said:   Notable enough, however are the controversies over the series , Leibniz, Gottfried Wilhelm whose sum was given by Leibniz as , although others disagree . . . Understanding of this question is to be sought in the word sum; this idea, if thus conceived - namely, the sum of a series is said to be that quantity to which it is brought closer as more terms of a series are taken - has relevance only for the convergent series, and we should in general give up this idea of sum for divergent series. On the other hand, as series in analysis arise from the expansion of fractions or irrational quantities or even of transcendentals, it will, in turn, be permissible in calculation to substitute in place of such series that quantity out of whose development it is produced.   Even with this formal approach to series, an interesting question arises. The series for the antiderivative of  does converge for while this one does not. Specifically, taking the antiderivative of the above series, we obtain .  If we substitute into this series, we obtain . It is not hard to see that such an alternating series converges. The following picture shows why. In this diagram, denotes the partial sum .   From the diagram we can see and . It seems that the sequence of partial sums will converge to whatever is in the middle. Our diagram indicates that it is ln in the middle but actually this is not obvious. Nonetheless it is interesting that one series converges for but the other does not.     series Taylor's series used to approximate Use the fact that to determine how many terms of the series should be added together to approximate to within without actually computing what is.    There is an even more perplexing situation brought about by these examples. An infinite sum such as appears to not satisfy the associative law for addition. While a convergent series such as does satisfy the associative law, it does not satisfy the commutative law. In fact, it does not satisfy it rather spectacularly.  A generalization of the following result was stated and proved by Bernhard Riemann Riemann, Bernhard in 1854.   series Alternating Harmonic Series rearrangements of   Let be any real number. There exists a rearrangement of the series which converges to .    This theorem shows that a series is most decidedly not a great big sum. It follows that a power series is not a great big polynomial.  To set the stage, consider the harmonic series  series Harmonic Series  .  Even though the individual terms in this series converge to , the series still diverges (to infinity) as evidenced by the inequality .  Armed with this fact, we can see why Theorem is true. First note that and .  This says that if we add enough terms of we can make such a sum as small as we wish and if we add enough terms of we can make such a sum as large as we wish. This provides us with the general outline of the proof. The trick is to add just enough positive terms until the sum is just greater than . Then we start to add on negative terms until the sum is just less than . Picking up where we left off with the positive terms, we add on just enough positive terms until we are just above again. We then add on negative terms until we are below . In essence, we are bouncing back and forth around . If we do this carefully, then we can get this rearrangement to converge to . The notation in the proof below gets a bit hairy, but keep this general idea in mind as you read through it.  Let be the first odd integer such that . Now choose to be the first even integer such that .  Thus .  Notice that we still have . With this in mind, choose to be the first odd integer with .  Thus we have .  Furthermore, since we have .  In a similar fashion choose to be the first even integer such that .  Since then .  Again choose to be the first odd integer such that and notice that .  Continue defining and in this fashion. Since , it is evident that the partial sums and must converge to . Furthermore, it is evident that every partial sum of the rearrangement is trapped between two such extreme partial sums. This forces the entire rearranged series to converge to .  The next two problems are similar to the above, but notationally are easier since we don't need to worry about converging to an actual number. We only need to make the rearrangement grow (or shrink in the case of problem ) without bound.   series Alternating Harmonic Series rearrangements of   Show that there is a rearrangement of which diverges to .     series Alternating Harmonic Series rearrangements of   Show that there is a rearrangement of which diverges to .    It is fun to know that we can rearrange some series to make them add up to anything you like but there is a more fundamental idea at play here. That the negative terms of the alternating Harmonic Series diverge to negative infinity and the positive terms diverge to positive infinity make the convergence of the alternating series very special.  Consider, first we add . This is one of the positive terms so our sum is starting to increase without bound. Next we add which is one of the negative terms so our sum has turned around and is now starting to decrease without bound. Then another positive term is added: increasing without bound. Then another negative term: decreasing. And so on. The convergence of the alternating Harmonic Series is the result of a delicate balance between a tendency to run off to positive infinity and back to negative infinity. When viewed in this light it is not really too surprising that rearranging the terms can destroy this delicate balance.  Naturally, the alternating Harmonic Series is not the only such series. Any such series is said to converge conditionally  the condition being the specific arrangement of the terms.  To stir the pot a bit more, some series do satisfy the commutative property. More specifically, one can show that any rearrangement of the series must converge to the same value as the original series (which happens to be ). Why does one series behave so nicely whereas the other does not?  Issues such as these and, more generally, the validity of using the infinitely small and infinitely large certainly existed in the 1700's, but they were overshadowed by the utility of the calculus. Indeed, foundational questions raised by the above examples, while certainly interesting and of importance, did not significantly deter the exploitation of calculus in studying physical phenomena. However, the envelope eventually was pushed to the point that not even the most practically oriented mathematician could avoid the foundational issues.  "
 },
 {
-  "id": "problem-43",
+  "id": "PowerSeriesQuestions-SeriesAnomalies-11",
   "level": "2",
-  "url": "PowerSeriesQuestions-SeriesAnomalies.html#problem-43",
+  "url": "PowerSeriesQuestions-SeriesAnomalies.html#PowerSeriesQuestions-SeriesAnomalies-11",
   "type": "Problem",
   "number": "5.2.1",
   "title": "",
@@ -757,9 +757,9 @@ var ptx_lunr_docs = [
   "body": " series Alternating Harmonic Series rearrangements of   Let be any real number. There exists a rearrangement of the series which converges to .   "
 },
 {
-  "id": "problem-44",
+  "id": "PowerSeriesQuestions-SeriesAnomalies-30",
   "level": "2",
-  "url": "PowerSeriesQuestions-SeriesAnomalies.html#problem-44",
+  "url": "PowerSeriesQuestions-SeriesAnomalies.html#PowerSeriesQuestions-SeriesAnomalies-30",
   "type": "Problem",
   "number": "5.2.3",
   "title": "",
@@ -784,27 +784,27 @@ var ptx_lunr_docs = [
   "body": " Additional Problems   Taylor's Formula drill problems   Use Taylor's formula to find the Taylor series of the given function expanded about the given point .     ,      ,      ,      ,     "
 },
 {
-  "id": "problem-46",
+  "id": "PowerSeriesQuestions-AddProb-2",
   "level": "2",
-  "url": "PowerSeriesQuestions-AddProb.html#problem-46",
+  "url": "PowerSeriesQuestions-AddProb.html#PowerSeriesQuestions-AddProb-2",
   "type": "Problem",
   "number": "5.3.1",
   "title": "",
   "body": " Taylor's Formula drill problems   Use Taylor's formula to find the Taylor series of the given function expanded about the given point .     ,      ,      ,      ,    "
 },
 {
-  "id": "section-11",
+  "id": "Interegnum-2",
   "level": "1",
-  "url": "section-11.html",
+  "url": "Interegnum-2.html",
   "type": "Section",
   "number": "6.1",
   "title": "Joseph Fourier and His Series",
   "body": "Joseph Fourier and His Series  Applying mathematics to physical problems such as heat flow in a solid body drew much attention in the latter part of the 1700's and the early part of the 1800's. One of the people to attack the heat flow problem was   Jean Baptiste Joseph Fourier  Fourier, Jean Baptiste Joseph portrait of     Fourier, Jean Baptiste Joseph Jean Baptiste Joseph Fourier. Fourier submitted a manuscript on the subject, Sur la propagation de la chaleur ( On the Propagation of Heat ), to the Institut National des Sciences et des Arts in 1807. These ideas were subsequently published in La theorie analytique de la chaleur ( The Analytic Theory of Heat (1822) ).  To examine Fourier's ideas, consider the example of a thin wire of length one, which is perfectly insulated and whose endpoints are held at a fixed temperature of zero. Given an initial temperature distribution in the wire, the problem is to monitor the temperature of the wire at any point and at any time . Specifically, if we let denote the temperature of the wire at point at time , then it can be shown that must satisfy the one-dimensional heat equation , where is a positive constant known as the thermal diffusivity. If the initial temperature distribution is given by the function , then the we are seeking must satisfy all of the following  .  To solve this, Fourier employed what is now referred to as Fourier's method of separation of variables. Specifically, Fourier looked for solutions of the form ; that is, solutions where the -part can be separated from the -part. Assuming that has this form, we get and . Substituting these into the differential equation , we obtain .  Since the left-hand side involves no 's and the right-hand side involves no 's, both sides must equal a constant . Thus we have .     Heat Equation, the  Heat Equation, the parameter must be less than zero Show that satisfies the equation , where , and are arbitrary constants. Use the physics of the problem to show that if is not constantly zero, then .    Consider .    Using the result from problem that , we will let .     Heat Equation, the  Heat Equation, the solving for Show that satisfies the equation , where and are arbitrary constants. Use the boundary conditions , to show that and . Conclude that if is not constantly zero, then , where is any integer.       Heat Equation, the fundamental solutions of   Show that if and satisfy the equations and then satisfy these as well, where and are arbitrary constants.     Fourier, Jean Baptiste Joseph Putting all of these results together, Fourier surmised that the general solution to could be expressed as the series .  All that is left is to have satisfy the initial condition , . That is, we need to find coefficients , such that .  The idea of representing a function as a series of sine waves was proposed by Daniel Bernoulli in 1753 while examining the problem of modeling a vibrating string. Unfortunately for Bernoulli, he didn't know how to compute the coefficients in such a series representation. What distinguished Fourier was that he developed a technique to compute these coefficients. The key is the result of the following problem.     orthogonality of  orthogonality of Let and be positive integers. Show     Armed with the result from Problem , Fourier, Jean Baptiste Joseph Fourier could compute the coefficients in the series representation in the following manner. Since we are trying to find for a particular (albeit general) , we will temporarily change the index in the summation from to . With this in mind, consider   This leads to the formula .  The above series with is called the Fourier (sine) series of .    Let's apply this to the following function, , whose graph of this function is seen below.        Fourier Series sine series of an odd function Let be a positive integer. Show that if then and show that the Fourier sine series of is given by     To check if this series really does, in fact, represent on , let be the partial sum of the series and use the graphing tool below to view the graph of for several values of .  That is, denotes the partial sum of the series. We will graph for .                                       As you can see, it appears that as we add more terms to the partial sum, , it looks more and more like the original function . This would lead us to believe that the series converges to the function and that . is a valid representation of as a Fourier series.  Recall, that when we represented a function as a power series, we freely differentiated and integrated the series term by term as though it was a polynomial. Let's do the same with this Fourier series.  To start, notice that the derivative of is given by .  This derivative does not exist at and its graph is given by   If we differentiate the Fourier series term-by-term, we obtain .  Again, if we let be the partial sum of this Fourier cosine series and plot for , we obtain               In fact, if we were to graph the series cos , we would obtain     Notice that this agrees with the graph of , except that didn't exist at , and this series takes on the value at . Notice also, that every partial sum of this series is continuous, since it is a finite combination of continuous cosine functions. This agrees with what you learned in calculus, the (finite) sum of continuous functions is always continuous. In the 1700's, this was also assumed to be true for infinite series, because every time a power series converged to a function, that function happened to be continuous. This never failed for power series, so this example was a bit disconcerting as it is an example of the sum of infinitely many continuous functions which is, in this case, discontinuous. Was it possible that there was some power series which converged to a function which was not continuous? Even if there wasn't, what was the difference between power series and this Fourier series?  Even more disconcerting is what happens if we try differentiating the series term-by-term. Given the above graph of this series, the derivative of it should be constantly 0, except at , where the derivative wouldn't exist. Using the old adage that the derivative of a sum is the sum of the derivatives, we differentiate this series term-by-term to obtain the series .  If we sum the first forty terms of this series, we get       We knew that there might be a problem at but this is crazy! The series seems to not be converging to zero at all!     Fourier Series  Fourier Series divergent Fourier series example Show that when  .     Problem shows that when we differentiate the series term by term, this differentiated series doesn't converge to anything at , let alone converge to zero. In this case, the old calculus rule that the derivative of a sum is the sum of the derivatives does not apply for this infinite sum, though it did apply before. As if the continuity issue wasn't bad enough before, this was even worse. Power series were routinely differentiated and integrated term-by-term. This was part of their appeal. They were treated like infinite polynomials. Either there is some power series lurking that refuses to behave nicely, or there is some property that power series have that not all Fourier series have.  Could it be that everything we did in Chapter was bogus?  Fortunately, the answer to that question is no. Power series are generally much more well-behaved than Fourier series. Whenever a power series converges, the function it converges to will be continuous. As long as one stays inside the interval of convergence, power series can be differentiated and integrated term-by-term. Power series have something going for them that your average Fourier series does not. (We need to develop the machinery to know what that something is.) None of this is any more obvious to us than it was to mathematicians at the beginning of the nineteenth century. What they did know was that relying on intuition was perilous and rigorous formulations were needed to either justify or dismiss these intuitions. In some sense, the nineteenth century was the morning after the mathematical party that went on throughout the eighteenth century.     orthogonality of  orthogonality of Let and be positive integers. Show .       Fourier Series computing the coefficients Use the result of Problem to show that if on , then        Fourier Series cosine series the Fourier cosine series of Apply the result of Problem to show that the Fourier cosine series of on is given by .  Let and plot for  . How does this compare to the function on ? What if you plot it for      Fourier Series term by term differentiation of   Differentiate the series term by term and plot various partial sums for that series on . How does this compare to the derivative of on that interval?    Differentiate the series you obtained in part a and plot various partial sums of that on . How does this compare to the second derivative of on that interval?    "
 },
 {
-  "id": "figure-26",
+  "id": "Interegnum-2-3",
   "level": "2",
-  "url": "section-11.html#figure-26",
+  "url": "Interegnum-2.html#Interegnum-2-3",
   "type": "Figure",
   "number": "6.1.1",
   "title": "",
@@ -813,25 +813,25 @@ var ptx_lunr_docs = [
 {
   "id": "prob_HarmonicMotion",
   "level": "2",
-  "url": "section-11.html#prob_HarmonicMotion",
+  "url": "Interegnum-2.html#prob_HarmonicMotion",
   "type": "Problem",
   "number": "6.1.2",
   "title": "",
   "body": "   Heat Equation, the  Heat Equation, the parameter must be less than zero Show that satisfies the equation , where , and are arbitrary constants. Use the physics of the problem to show that if is not constantly zero, then .    Consider .   "
 },
 {
-  "id": "problem-48",
+  "id": "Interegnum-2-10",
   "level": "2",
-  "url": "section-11.html#problem-48",
+  "url": "Interegnum-2.html#Interegnum-2-10",
   "type": "Problem",
   "number": "6.1.3",
   "title": "",
   "body": "   Heat Equation, the  Heat Equation, the solving for Show that satisfies the equation , where and are arbitrary constants. Use the boundary conditions , to show that and . Conclude that if is not constantly zero, then , where is any integer.   "
 },
 {
-  "id": "problem-49",
+  "id": "Interegnum-2-11",
   "level": "2",
-  "url": "section-11.html#problem-49",
+  "url": "Interegnum-2.html#Interegnum-2-11",
   "type": "Problem",
   "number": "6.1.4",
   "title": "",
@@ -840,52 +840,52 @@ var ptx_lunr_docs = [
 {
   "id": "prob_SinOrthogonality",
   "level": "2",
-  "url": "section-11.html#prob_SinOrthogonality",
+  "url": "Interegnum-2.html#prob_SinOrthogonality",
   "type": "Problem",
   "number": "6.1.5",
   "title": "",
   "body": "   orthogonality of  orthogonality of Let and be positive integers. Show    "
 },
 {
-  "id": "example-2",
+  "id": "Interegnum-2-19",
   "level": "2",
-  "url": "section-11.html#example-2",
+  "url": "Interegnum-2.html#Interegnum-2-19",
   "type": "Example",
   "number": "6.1.6",
   "title": "",
   "body": "  Let's apply this to the following function, , whose graph of this function is seen below.    "
 },
 {
-  "id": "problem-51",
+  "id": "Interegnum-2-20",
   "level": "2",
-  "url": "section-11.html#problem-51",
+  "url": "Interegnum-2.html#Interegnum-2-20",
   "type": "Problem",
   "number": "6.1.7",
   "title": "",
   "body": "   Fourier Series sine series of an odd function Let be a positive integer. Show that if then and show that the Fourier sine series of is given by    "
 },
 {
-  "id": "figure-27",
+  "id": "Interegnum-2-24",
   "level": "2",
-  "url": "section-11.html#figure-27",
+  "url": "Interegnum-2.html#Interegnum-2-24",
   "type": "Figure",
   "number": "6.1.8",
   "title": "",
   "body": "      "
 },
 {
-  "id": "figure-28",
+  "id": "Interegnum-2-32",
   "level": "2",
-  "url": "section-11.html#figure-28",
+  "url": "Interegnum-2.html#Interegnum-2-32",
   "type": "Figure",
   "number": "6.1.9",
   "title": "",
   "body": "   "
 },
 {
-  "id": "figure-29",
+  "id": "Interegnum-2-37-1",
   "level": "2",
-  "url": "section-11.html#figure-29",
+  "url": "Interegnum-2.html#Interegnum-2-37-1",
   "type": "Figure",
   "number": "6.1.10",
   "title": "",
@@ -894,7 +894,7 @@ var ptx_lunr_docs = [
 {
   "id": "prob_FourierDiverge",
   "level": "2",
-  "url": "section-11.html#prob_FourierDiverge",
+  "url": "Interegnum-2.html#prob_FourierDiverge",
   "type": "Problem",
   "number": "6.1.11",
   "title": "",
@@ -903,7 +903,7 @@ var ptx_lunr_docs = [
 {
   "id": "prob_Fourier_Series-orthogonality",
   "level": "2",
-  "url": "section-11.html#prob_Fourier_Series-orthogonality",
+  "url": "Interegnum-2.html#prob_Fourier_Series-orthogonality",
   "type": "Problem",
   "number": "6.1.12",
   "title": "",
@@ -912,25 +912,25 @@ var ptx_lunr_docs = [
 {
   "id": "prob_fouriercoef",
   "level": "2",
-  "url": "section-11.html#prob_fouriercoef",
+  "url": "Interegnum-2.html#prob_fouriercoef",
   "type": "Problem",
   "number": "6.1.13",
   "title": "",
   "body": "   Fourier Series computing the coefficients Use the result of Problem to show that if on , then    "
 },
 {
-  "id": "problem-55",
+  "id": "Interegnum-2-45",
   "level": "2",
-  "url": "section-11.html#problem-55",
+  "url": "Interegnum-2.html#Interegnum-2-45",
   "type": "Problem",
   "number": "6.1.14",
   "title": "",
   "body": "   Fourier Series cosine series the Fourier cosine series of Apply the result of Problem to show that the Fourier cosine series of on is given by .  Let and plot for  . How does this compare to the function on ? What if you plot it for    "
 },
 {
-  "id": "problem-56",
+  "id": "Interegnum-2-46",
   "level": "2",
-  "url": "section-11.html#problem-56",
+  "url": "Interegnum-2.html#Interegnum-2-46",
   "type": "Problem",
   "number": "6.1.15",
   "title": "",
@@ -955,9 +955,9 @@ var ptx_lunr_docs = [
   "body": "   sequences convergence to zero Let be a sequence of real numbers. We say that  converges to 0 and write provided for any , there is a real number such that if , then .   "
 },
 {
-  "id": "p-464",
+  "id": "SeqRealNum-12",
   "level": "2",
-  "url": "SeqRealNum.html#p-464",
+  "url": "SeqRealNum.html#SeqRealNum-12",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -973,36 +973,36 @@ var ptx_lunr_docs = [
   "body": "   absolute value Let and be real numbers with . Prove if and only if . Notice that this can be extended to if and only if .   "
 },
 {
-  "id": "proof-3",
+  "id": "SeqRealNum-15",
   "level": "2",
-  "url": "SeqRealNum.html#proof-3",
+  "url": "SeqRealNum.html#SeqRealNum-15",
   "type": "Proof",
   "number": "7.1.1",
   "title": "",
   "body": " Let be given. Let . If , then and so . Hence by definition, .  "
 },
 {
-  "id": "example-3",
+  "id": "SeqRealNum-17",
   "level": "2",
-  "url": "SeqRealNum.html#example-3",
+  "url": "SeqRealNum.html#SeqRealNum-17",
   "type": "Example",
   "number": "7.1.3",
   "title": "",
   "body": "  Use the definition of convergence to zero to prove .   "
 },
 {
-  "id": "proof-4",
+  "id": "SeqRealNum-18",
   "level": "2",
-  "url": "SeqRealNum.html#proof-4",
+  "url": "SeqRealNum.html#SeqRealNum-18",
   "type": "Proof",
   "number": "7.1.2",
   "title": "",
   "body": " Let . Let . If , then and . Thus . Hence by definition, .  "
 },
 {
-  "id": "problem-58",
+  "id": "SeqRealNum-20",
   "level": "2",
-  "url": "SeqRealNum.html#problem-58",
+  "url": "SeqRealNum.html#SeqRealNum-20",
   "type": "Problem",
   "number": "7.1.4",
   "title": "",
@@ -1018,18 +1018,18 @@ var ptx_lunr_docs = [
   "body": "  Use the definition of convergence to zero to prove .   SCRAPWORK   Given an , we need to see how large to make in order to guarantee that . First notice that . Also, notice that if , then . So as long as , we have . We can make this less than if we make . This means we need to make and , simultaneously. These can be done if we let be the maximum of these two numbers. This sort of thing comes up regularly, so the notation was developed to mean the maximum of these two numbers. Notice that if then and . We're now ready for the formal proof.   "
 },
 {
-  "id": "proof-5",
+  "id": "SeqRealNum-23",
   "level": "2",
-  "url": "SeqRealNum.html#proof-5",
+  "url": "SeqRealNum.html#SeqRealNum-23",
   "type": "Proof",
   "number": "7.1.3",
   "title": "",
   "body": " Let . Let . If , then and . Thus we have and . Therefore .  Hence by definition, .  "
 },
 {
-  "id": "problem-59",
+  "id": "SeqRealNum-25",
   "level": "2",
-  "url": "SeqRealNum.html#problem-59",
+  "url": "SeqRealNum.html#SeqRealNum-25",
   "type": "Problem",
   "number": "7.1.6",
   "title": "",
@@ -1054,9 +1054,9 @@ var ptx_lunr_docs = [
   "body": "  Use the definition to prove that the sequence does not converge to zero.   "
 },
 {
-  "id": "proof-6",
+  "id": "SeqRealNum-30",
   "level": "2",
-  "url": "SeqRealNum.html#proof-6",
+  "url": "SeqRealNum.html#SeqRealNum-30",
   "type": "Proof",
   "number": "7.1.4",
   "title": "",
@@ -1099,27 +1099,27 @@ var ptx_lunr_docs = [
   "body": "  Prove .   SCRAPWORK   Given an , we need to get . This prompts us to do some algebra. .  This in turn, seems to suggest that should work.   "
 },
 {
-  "id": "proof-7",
+  "id": "SeqRealNum-39",
   "level": "2",
-  "url": "SeqRealNum.html#proof-7",
+  "url": "SeqRealNum.html#SeqRealNum-39",
   "type": "Proof",
   "number": "7.1.5",
   "title": "",
   "body": " Let . Let . If , then and so . Hence .  Thus by definition .  "
 },
 {
-  "id": "problem-63",
+  "id": "SeqRealNum-44",
   "level": "2",
-  "url": "SeqRealNum.html#problem-63",
+  "url": "SeqRealNum.html#SeqRealNum-44",
   "type": "Problem",
   "number": "7.1.13",
   "title": "",
   "body": "   limit if Let . Use the definition to prove .    You will probably need to separate this into two cases: and .   "
 },
 {
-  "id": "problem-64",
+  "id": "SeqRealNum-45",
   "level": "2",
-  "url": "SeqRealNum.html#problem-64",
+  "url": "SeqRealNum.html#SeqRealNum-45",
   "type": "Problem",
   "number": "7.1.14",
   "title": "",
@@ -1135,9 +1135,9 @@ var ptx_lunr_docs = [
   "body": " The Limit as a Primary Tool  As you've seen from the previous sections, the formal definition of the convergence of a sequence is meant to capture rigorously our intuitive understanding of convergence. However, the definition itself is an unwieldy tool. If only there was a way to be rigorous without having to run back to the definition each time. Fortunately, there is a way. If we can use the definition to prove some general rules about limits then we could use these rules whenever they applied and be assured that everything was still rigorous. A number of these should look familiar from calculus.     limit of a constant sequence  sequences constant sequences Let be a constant sequence. Show that .    In proving the familiar limit theorems, the following will prove to be a very useful tool.   Triangle Inequalities      Triangle Inequality:  Triangle Inequalities Triangle Inequality  Let and be real numbers. Then .    Reverse Triangle Inequality:  Triangle Inequalities Reverse Triangle Inequalitiy  Let and be real numbers. Then         Triangle Inequalities Triangle Inequality   Prove Lemma .   For the Reverse Triangle Inequality, consider .    Show .   You want to show and .       limit termwise sums of If and , then .    We will often informally state this theorem as the limit of a sum is the sum of the limits. However, to be absolutely precise, what it says is that if we already know that two sequences converge, then the sequence formed by summing the corresponding terms of those two sequences will converge and, in fact, converge to the sum of those individual limits. We'll provide the scrapwork for the proof of this and leave the formal write-up as an exercise. Note the use of the triangle inequality in the proof.       sequences termwise sums of Prove Theorem .   SCRAPWORK:   If we let , then we want so that if , then . We know that and , so we can make and as small as we wish, provided we make large enough. Let's go back to what we want, to see if we can close the gap between what we know and what we want. by the triangle inequality. To make this whole thing less than , it makes sense to make each part less than . it makes sense to make each part less than . Fortunately, we can do that as the definitions of and allow us to make and arbitrarily small. Specifically, since , there exists an such that if then . Also since , there exists an such that if then . Since we want both of these to occur, it makes sense to let max . This should be the that we seek.       limit products of If and , then .     SCRAPWORK: Given , we want so that if , then . One of the standard tricks in analysis is to uncancel. In this case we will subtract and add a convenient term. Normally these would cancel out, which is why we say that we will uncancel to put them back in. You already saw an example of this in proving the Reverse Triangle Inequality ( Problem ). In the present case, consider .  We can make this whole thing less than , provided we make each term in the sum less than . We can make if we make . But wait! What if ? We could handle this as a separate case or we can do the following slick trick. Notice that we can add one more line to the above string of inequalities: . Now we can make and not worry about dividing by zero.  Making requires a bit more finesse. At first glance, one would be tempted to try and make . Even if we ignore the fact that we could be dividing by zero (which we could handle), we have a bigger problem. According to the definition of , we can make smaller than any given fixed positive number, as long as we make large enough (larger than some which goes with a given epsilon). Unfortunately, is not fixed as it has the variable in it; there is no reason to believe that a single will work with all of these simultaneously. To handle this impasse, we need the following:   sequences convergence of convergent sequences are bounded    A Convergent Sequence Is Bounded.   If , then there exists such that for all .     sequences convergence of convergent sequences are bounded   Prove Lemma .    We know that there exists such that if , then . Let max , where represents the smallest integer greater than or equal to . Also, notice that this is not a convergence proof so it is not safe to think of as a large number.   Actually, this is a dangerous habit to fall into even in convergence proofs.     Armed with this bound , we can add on one more inequality to the above scrapwork to get   At this point, we should be able to make the last line of this less than .   END OF SCRAPWORK      sequences termwise product of Prove Theorem .      (Corollary to Theorem ) If and , then .       sequences constant multiples of  limit of a constant times a sequence Prove Corollary .    Just as Theorem says that the limit of a product is the product of the limits, we can prove the analogue for quotients.     limit quotients of Suppose and . Also suppose and . Then .       sequences termwise quotient of Prove Theorem .   SCRAPWORK   To prove this, let's look at the special case of trying to prove . The general case will follow from this and Theorem . Consider . We are faced with the same dilemma as before; we need to get bounded above. This means we need to get bounded away from zero (at least for large enough ).  This can be done as follows. Since , then . Thus, by the definition of , there exists such that if , then . Thus when , and so . This says that for , . We should be able to make this smaller than a given , provided we make large enough.    These theorems allow us to compute limits of complicated sequences and rigorously verify that these are, in fact, the correct limits without resorting to the definition of a limit.     limit identifing the theorems used in a limit Identify all of the theorems implicitly used to show that .  Notice that this presumes that all of the individual limits exist. This will become evident as the limit is decomposed.    There is one more tool that will prove to be valuable.   limit Squeeze Theorem for Sequences    Squeeze Theorem for Sequences   Let , and be sequences of real numbers with positive integers . Suppose . Then must converge and .     limit Squeeze Theorem   Prove Theorem .    This is probably a place where you would want to use instead of .    The Squeeze Theorem holds even if holds for only sufficiently large ; i.e., for larger than some fixed . This is true because when you find an that works in the original proof, this can be modified by choosing max . Also note that this theorem really says two things: converges and it converges to . This subtle point affects how one should properly use the Squeeze Theorem.    Prove .     Notice that . Since , then by the Squeeze Theorem, .   Notice that this proof is completely rigorous. Also notice that this is the proper way to use the Squeeze Theorem. Here is an example of an {improper} use of the Squeeze Theorem.  How not to prove Example . Notice that , so and .  This is incorrect in form because it presumes that exists, which we don't yet know. If we knew that the limit existed to begin with, then this would be fine. The Squeeze Theorem proves that the limit does in fact exist, but it must be so stated.  These general theorems will allow us to rigorously explore convergence of power series in the next chapter without having to appeal directly to the definition of convergence. However, you should remember that we used the definition to prove these results and there will be times when we will need to apply the definition directly. However, before we go into that, let's examine divergence a bit more closely.  "
 },
 {
-  "id": "problem-65",
+  "id": "LimitAsPrimary-3",
   "level": "2",
-  "url": "LimitAsPrimary.html#problem-65",
+  "url": "LimitAsPrimary.html#LimitAsPrimary-3",
   "type": "Problem",
   "number": "7.2.1",
   "title": "",
@@ -1171,9 +1171,9 @@ var ptx_lunr_docs = [
   "body": "   limit termwise sums of If and , then .   "
 },
 {
-  "id": "problem-67",
+  "id": "LimitAsPrimary-10",
   "level": "2",
-  "url": "LimitAsPrimary.html#problem-67",
+  "url": "LimitAsPrimary.html#LimitAsPrimary-10",
   "type": "Problem",
   "number": "7.2.5",
   "title": "",
@@ -1189,9 +1189,9 @@ var ptx_lunr_docs = [
   "body": "   limit products of If and , then .   "
 },
 {
-  "id": "p-542",
+  "id": "LimitAsPrimary-12",
   "level": "2",
-  "url": "LimitAsPrimary.html#p-542",
+  "url": "LimitAsPrimary.html#LimitAsPrimary-12",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1216,18 +1216,18 @@ var ptx_lunr_docs = [
   "body": " sequences convergence of convergent sequences are bounded   Prove Lemma .    We know that there exists such that if , then . Let max , where represents the smallest integer greater than or equal to . Also, notice that this is not a convergence proof so it is not safe to think of as a large number.   Actually, this is a dangerous habit to fall into even in convergence proofs.    "
 },
 {
-  "id": "p-552",
+  "id": "LimitAsPrimary-19",
   "level": "2",
-  "url": "LimitAsPrimary.html#p-552",
+  "url": "LimitAsPrimary.html#LimitAsPrimary-19",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "END OF SCRAPWORK "
 },
 {
-  "id": "problem-69",
+  "id": "LimitAsPrimary-20",
   "level": "2",
-  "url": "LimitAsPrimary.html#problem-69",
+  "url": "LimitAsPrimary.html#LimitAsPrimary-20",
   "type": "Problem",
   "number": "7.2.9",
   "title": "",
@@ -1243,9 +1243,9 @@ var ptx_lunr_docs = [
   "body": "  (Corollary to Theorem ) If and , then .   "
 },
 {
-  "id": "problem-70",
+  "id": "LimitAsPrimary-22",
   "level": "2",
-  "url": "LimitAsPrimary.html#problem-70",
+  "url": "LimitAsPrimary.html#LimitAsPrimary-22",
   "type": "Problem",
   "number": "7.2.11",
   "title": "",
@@ -1261,18 +1261,18 @@ var ptx_lunr_docs = [
   "body": "   limit quotients of Suppose and . Also suppose and . Then .   "
 },
 {
-  "id": "problem-71",
+  "id": "LimitAsPrimary-25",
   "level": "2",
-  "url": "LimitAsPrimary.html#problem-71",
+  "url": "LimitAsPrimary.html#LimitAsPrimary-25",
   "type": "Problem",
   "number": "7.2.13",
   "title": "",
   "body": "   sequences termwise quotient of Prove Theorem .   SCRAPWORK   To prove this, let's look at the special case of trying to prove . The general case will follow from this and Theorem . Consider . We are faced with the same dilemma as before; we need to get bounded above. This means we need to get bounded away from zero (at least for large enough ).  This can be done as follows. Since , then . Thus, by the definition of , there exists such that if , then . Thus when , and so . This says that for , . We should be able to make this smaller than a given , provided we make large enough.   "
 },
 {
-  "id": "problem-72",
+  "id": "LimitAsPrimary-27",
   "level": "2",
-  "url": "LimitAsPrimary.html#problem-72",
+  "url": "LimitAsPrimary.html#LimitAsPrimary-27",
   "type": "Problem",
   "number": "7.2.14",
   "title": "",
@@ -1288,9 +1288,9 @@ var ptx_lunr_docs = [
   "body": " limit Squeeze Theorem for Sequences    Squeeze Theorem for Sequences   Let , and be sequences of real numbers with positive integers . Suppose . Then must converge and .   "
 },
 {
-  "id": "problem-73",
+  "id": "LimitAsPrimary-30",
   "level": "2",
-  "url": "LimitAsPrimary.html#problem-73",
+  "url": "LimitAsPrimary.html#LimitAsPrimary-30",
   "type": "Problem",
   "number": "7.2.16",
   "title": "",
@@ -1306,9 +1306,9 @@ var ptx_lunr_docs = [
   "body": "  Prove .   "
 },
 {
-  "id": "proof-8",
+  "id": "LimitAsPrimary-33",
   "level": "2",
-  "url": "LimitAsPrimary.html#proof-8",
+  "url": "LimitAsPrimary.html#LimitAsPrimary-33",
   "type": "Proof",
   "number": "7.2.1",
   "title": "",
@@ -1333,9 +1333,9 @@ var ptx_lunr_docs = [
   "body": "   sequences divergence of  divergence of a sequence A sequence of real numbers diverges if it does not converge to any .   "
 },
 {
-  "id": "example-8",
+  "id": "DivergentSeq-14",
   "level": "2",
-  "url": "DivergentSeq.html#example-8",
+  "url": "DivergentSeq.html#DivergentSeq-14",
   "type": "Example",
   "number": "7.3.2",
   "title": "",
@@ -1351,99 +1351,99 @@ var ptx_lunr_docs = [
   "body": "   sequences divergence to  positive infinity divergence to A sequence, , diverges to positive infinity if for every real number , there is a real number such that .   negative infinity divergence to A sequence, , diverges to negative infinity if for every real number , there is a real number such that .   divergence to A sequence is said to diverge to infinity if it diverges to either positive or negative infinity.   "
 },
 {
-  "id": "problem-74",
+  "id": "DivergentSeq-19",
   "level": "2",
-  "url": "DivergentSeq.html#problem-74",
+  "url": "DivergentSeq.html#DivergentSeq-19",
   "type": "Problem",
   "number": "7.3.4",
   "title": "",
   "body": "   sequences the sequence of positive integers diverges to infinity Show that diverges to infinity.   "
 },
 {
-  "id": "problem-75",
+  "id": "DivergentSeq-20",
   "level": "2",
-  "url": "DivergentSeq.html#problem-75",
+  "url": "DivergentSeq.html#DivergentSeq-20",
   "type": "Problem",
   "number": "7.3.5",
   "title": "",
   "body": "   sequences divergence to  divergence divergence to infinity implies divergence Show that if diverges to infinity then diverges.   "
 },
 {
-  "id": "problem-76",
+  "id": "DivergentSeq-24",
   "level": "2",
-  "url": "DivergentSeq.html#problem-76",
+  "url": "DivergentSeq.html#DivergentSeq-24",
   "type": "Problem",
   "number": "7.3.6",
   "title": "",
   "body": " sequences termwise sums of   Suppose and .    Show that     Show that     Is it true that Explain.   "
 },
 {
-  "id": "problem-77",
+  "id": "DivergentSeq-26",
   "level": "2",
-  "url": "DivergentSeq.html#problem-77",
+  "url": "DivergentSeq.html#DivergentSeq-26",
   "type": "Problem",
   "number": "7.3.7",
   "title": "",
   "body": " sequences divergence to   Suppose and and . Prove or give a counterexample:                       "
 },
 {
-  "id": "problem-78",
+  "id": "DivergentSeq-28",
   "level": "2",
-  "url": "DivergentSeq.html#problem-78",
+  "url": "DivergentSeq.html#DivergentSeq-28",
   "type": "Problem",
   "number": "7.3.8",
   "title": "",
   "body": " sequences divergence of  sequences divergence, but not to infinity   Show that each of the following sequences diverge.                  "
 },
 {
-  "id": "problem-79",
+  "id": "DivergentSeq-29",
   "level": "2",
-  "url": "DivergentSeq.html#problem-79",
+  "url": "DivergentSeq.html#DivergentSeq-29",
   "type": "Problem",
   "number": "7.3.9",
   "title": "",
   "body": " sequences divergence, but not to infinity   Suppose that diverges but not to infinity and that is a real number. What conditions on will guarantee that:     converges?     diverges?   "
 },
 {
-  "id": "problem-80",
+  "id": "DivergentSeq-30",
   "level": "2",
-  "url": "DivergentSeq.html#problem-80",
+  "url": "DivergentSeq.html#DivergentSeq-30",
   "type": "Problem",
   "number": "7.3.10",
   "title": "",
   "body": " series Geometric Sequence divergence condition  sequences Geometric   Show that if then diverges. Will it diverge to infinity?   "
 },
 {
-  "id": "section-15",
+  "id": "Convergence-5",
   "level": "1",
-  "url": "section-15.html",
+  "url": "Convergence-5.html",
   "type": "Section",
   "number": "7.4",
   "title": "Additional Problems",
   "body": " Additional Problems   convergence of a sequence implies the convergence of the absolute sequence   Prove that if then . Prove that the converse is true when , but it is not necessarily true otherwise.     sequences limit is unique   Let and be sequences with . Suppose and .  Prove .   Assume for contradiction, that and use the definition of convergence with to produce an with .    Prove that if a sequence converges, then its limit is unique. That is, prove that if and , then .     sequences if the sequence is bounded then   Prove that if the sequence is bounded then .     series Geometric series convergence\/divergence conditions for   Prove that if , then .    Use (a) to prove that if , then .       limit of ratios of polynomials Prove , provided . [Notice that since a polynomial only has finitely many roots, then the denominator will be non-zero when is sufficiently large.]     sequences difference of  limit of the difference of sequences   Prove that if and , then .     sequences lower and upper bounds for   Prove that if and , then there exists a real number such that if then .    Prove that if and , then there exists a real number such that if then .     sequences Ratio Test for   Suppose is a sequence of positive numbers such that .    Prove that if , then .   Choose with . By the previous problem,  such that if , then . Let be fixed and show . Conclude that and let .    Let be a positive real number. Prove .    "
 },
 {
-  "id": "problem-81",
+  "id": "Convergence-5-2",
   "level": "2",
-  "url": "section-15.html#problem-81",
+  "url": "Convergence-5.html#Convergence-5-2",
   "type": "Problem",
   "number": "7.4.1",
   "title": "",
   "body": " convergence of a sequence implies the convergence of the absolute sequence   Prove that if then . Prove that the converse is true when , but it is not necessarily true otherwise.   "
 },
 {
-  "id": "problem-82",
+  "id": "Convergence-5-3",
   "level": "2",
-  "url": "section-15.html#problem-82",
+  "url": "Convergence-5.html#Convergence-5-3",
   "type": "Problem",
   "number": "7.4.2",
   "title": "",
   "body": " sequences limit is unique   Let and be sequences with . Suppose and .  Prove .   Assume for contradiction, that and use the definition of convergence with to produce an with .    Prove that if a sequence converges, then its limit is unique. That is, prove that if and , then .   "
 },
 {
-  "id": "problem-83",
+  "id": "Convergence-5-4",
   "level": "2",
-  "url": "section-15.html#problem-83",
+  "url": "Convergence-5.html#Convergence-5-4",
   "type": "Problem",
   "number": "7.4.3",
   "title": "",
@@ -1452,34 +1452,34 @@ var ptx_lunr_docs = [
 {
   "id": "prob_series-geometric",
   "level": "2",
-  "url": "section-15.html#prob_series-geometric",
+  "url": "Convergence-5.html#prob_series-geometric",
   "type": "Problem",
   "number": "7.4.4",
   "title": "",
   "body": " series Geometric series convergence\/divergence conditions for   Prove that if , then .    Use (a) to prove that if , then .   "
 },
 {
-  "id": "problem-85",
+  "id": "Convergence-5-6",
   "level": "2",
-  "url": "section-15.html#problem-85",
+  "url": "Convergence-5.html#Convergence-5-6",
   "type": "Problem",
   "number": "7.4.5",
   "title": "",
   "body": "   limit of ratios of polynomials Prove , provided . [Notice that since a polynomial only has finitely many roots, then the denominator will be non-zero when is sufficiently large.]   "
 },
 {
-  "id": "problem-86",
+  "id": "Convergence-5-7",
   "level": "2",
-  "url": "section-15.html#problem-86",
+  "url": "Convergence-5.html#Convergence-5-7",
   "type": "Problem",
   "number": "7.4.6",
   "title": "",
   "body": " sequences difference of  limit of the difference of sequences   Prove that if and , then .   "
 },
 {
-  "id": "problem-87",
+  "id": "Convergence-5-8",
   "level": "2",
-  "url": "section-15.html#problem-87",
+  "url": "Convergence-5.html#Convergence-5-8",
   "type": "Problem",
   "number": "7.4.7",
   "title": "",
@@ -1488,7 +1488,7 @@ var ptx_lunr_docs = [
 {
   "id": "prob_RatioTest",
   "level": "2",
-  "url": "section-15.html#prob_RatioTest",
+  "url": "Convergence-5.html#prob_RatioTest",
   "type": "Problem",
   "number": "7.4.8",
   "title": "",
@@ -1504,9 +1504,9 @@ var ptx_lunr_docs = [
   "body": " The Integral Form of the Remainder  Now that we have a rigorous definition of the convergence of a sequence, let's apply this to Taylor series. Recall that the Taylor series of a function expanded about the point is given by   When we say that for a particular value of , what we mean is that the sequence of partial sums converges to the number . Note that the index in the summation was changed to to allow to represent the index of the sequence of partial sums. As intimidating as this may look, bear in mind that for a fixed real number , this is still a sequence of real numbers so, that saying means that and in the previous chapter we developed some tools to examine this phenomenon. In particular, we know that is equivalent to .  We have seen an example of this already. Problem of the last chapter basically had you show that the geometric series, converges to ,for by showing that .  There is generally not a readily recognizable closed form for the partial sum for a Taylor series. The geometric series is a special case. Fortunately, for the issue at hand (convergence of a Taylor series), we don't need to analyze the series itself. What we need to show is that the difference between the function and the th partial sum converges to zero. This difference is called the remainder (of the Taylor series) . (Why?)  While it is true that the remainder is simply , this form is not easy to work with. Fortunately, a number of alternate versions of this remainder are available. We will explore these in this chapter.  Recall the result from Theorem from Chapter , .  We can use this by rewriting it as .  The expression is called the integral form of the remainder for the Taylor series of , and the Taylor series will converge to exactly when the sequence converges to zero. It turns out that this form of the remainder is often easier to handle than the original and we can use it to obtain some general results.     Taylor's series    series Taylor's series If there exists a real number such that for all nonnegative integers and for all on an interval containing and , then and so     In order to prove this, it might help to first prove the following.    If and are integrable functions and , then        Triangle Inequalities for Integrals Prove Lemma .     .        series Taylor's series  Taylor series converges  Prove Theorem .    You might want to use Problem of Chapter . Also there are two cases to consider: and (the case is trivial). You will find that this is true in general. This is why we will often indicate that is between and as in the theorem. In the case , notice that       Use Theorem to prove that for any real number                     Problem shows that the Taylor series of expanded at zero converges to for any real number . Theorem can be used in a similar fashion to show that for any real numbers and .  Recall that Chapter we showed that if we define the function by the power series then . This, of course, is just the familiar addition property of integer exponents extended to any real number. In Chapter we had to assume that defining as a series was meaningful because we did not address the convergence of the series in that chapter. Now that we know the series converges for any real number we see that the definition is in fact valid.  Assuming that we can differentiate this series term-by-term it is straightforward to show that .   We can, but that proof will have to wait for a few more chapters.   Along with Taylor's formula this can then be used to show that more elegantly than the rather cumbersome proof in equation , as the following problem shows.     Recall that if then . Use this along with the Taylor series expansion of about to show that      Theorem is a nice first step toward a rigorous theory of the convergence of Taylor series, but it is not applicable in all cases. For example, consider the function . As we saw in Chapter , Problem , this function's Maclaurin series (the binomial series for appears to be converging to the function for . While this is, in fact, true, the above proposition does not apply. If we consider the derivatives of , we obtain: .  Notice that .  Since this sequence grows without bound as , then there is no chance for us to find a number to act as a bound for all of the derviatives of on any interval containing 0 and  , and so the hypothesis of Theorem will never be satisfied. We need a more delicate argument to prove that is valid for . To accomplish this task, we will need to express the remainder of the Taylor series differently. Fortunately, there are at least two such alternate forms.  "
 },
 {
-  "id": "p-642",
+  "id": "TaylorSeries-IntFormRem-5",
   "level": "2",
-  "url": "TaylorSeries-IntFormRem.html#p-642",
+  "url": "TaylorSeries-IntFormRem.html#TaylorSeries-IntFormRem-5",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1531,18 +1531,18 @@ var ptx_lunr_docs = [
   "body": "  If and are integrable functions and , then    "
 },
 {
-  "id": "problem-89",
+  "id": "TaylorSeries-IntFormRem-13",
   "level": "2",
-  "url": "TaylorSeries-IntFormRem.html#problem-89",
+  "url": "TaylorSeries-IntFormRem.html#TaylorSeries-IntFormRem-13",
   "type": "Problem",
   "number": "8.1.3",
   "title": "",
   "body": "   Triangle Inequalities for Integrals Prove Lemma .     .   "
 },
 {
-  "id": "problem-90",
+  "id": "TaylorSeries-IntFormRem-14",
   "level": "2",
-  "url": "TaylorSeries-IntFormRem.html#problem-90",
+  "url": "TaylorSeries-IntFormRem.html#TaylorSeries-IntFormRem-14",
   "type": "Problem",
   "number": "8.1.4",
   "title": "",
@@ -1558,9 +1558,9 @@ var ptx_lunr_docs = [
   "body": "  Use Theorem to prove that for any real number                   "
 },
 {
-  "id": "problem-92",
+  "id": "TaylorSeries-IntFormRem-21",
   "level": "2",
-  "url": "TaylorSeries-IntFormRem.html#problem-92",
+  "url": "TaylorSeries-IntFormRem.html#TaylorSeries-IntFormRem-21",
   "type": "Problem",
   "number": "8.1.6",
   "title": "",
@@ -1585,27 +1585,27 @@ var ptx_lunr_docs = [
   "body": "   Lagrange's Form of the Remainder    Lagrange's form of the remainder Suppose is a function such that is continuous on an interval containing and . Then where is some number between and .   "
 },
 {
-  "id": "proof-9",
+  "id": "TaylorSeries-LagrFormRem-4",
   "level": "2",
-  "url": "TaylorSeries-LagrFormRem.html#proof-9",
+  "url": "TaylorSeries-LagrFormRem.html#TaylorSeries-LagrFormRem-4",
   "type": "Proof",
   "number": "8.2.1",
   "title": "",
   "body": " Note first that the result is true when as both sides reduce to 0 (in that case .) We will prove the case where ; the case will be an exercise.  First, we already have so it suffices to show that for some with . To this end, let and .  Note that for all , we have . Since , this gives us and so .  Computing the outside integrals, we have   .  Since is a value that lies between the maximum and minimum of on , then by the Intermediate Value Theorem, there must exist a number with .  This gives us .  And the result follows.  "
 },
 {
-  "id": "problem-93",
+  "id": "TaylorSeries-LagrFormRem-5",
   "level": "2",
-  "url": "TaylorSeries-LagrFormRem.html#problem-93",
+  "url": "TaylorSeries-LagrFormRem.html#TaylorSeries-LagrFormRem-5",
   "type": "Problem",
   "number": "8.2.2",
   "title": "",
   "body": "   Lagrange's form of the remainder Prove Theorem for the case where .    Note that .  Use the same argument on this integral. It will work out in the end. Really! You just need to keep track of all of the negatives.   "
 },
 {
-  "id": "problem-94",
+  "id": "TaylorSeries-LagrFormRem-8",
   "level": "2",
-  "url": "TaylorSeries-LagrFormRem.html#problem-94",
+  "url": "TaylorSeries-LagrFormRem.html#TaylorSeries-LagrFormRem-8",
   "type": "Problem",
   "number": "8.2.3",
   "title": "",
@@ -1621,9 +1621,9 @@ var ptx_lunr_docs = [
   "body": " series Binomial Series, the  Binomial Series, the converges on the interval   The binomial series converges to for .   "
 },
 {
-  "id": "proof-10",
+  "id": "TaylorSeries-LagrFormRem-11",
   "level": "2",
-  "url": "TaylorSeries-LagrFormRem.html#proof-10",
+  "url": "TaylorSeries-LagrFormRem.html#TaylorSeries-LagrFormRem-11",
   "type": "Proof",
   "number": "8.2.2",
   "title": "",
@@ -1639,9 +1639,9 @@ var ptx_lunr_docs = [
   "body": "   series Binomial Series, the Binomial Series is a Taylor series Show that if , then and modify the above proof to show that the binomial series converges to for .   "
 },
 {
-  "id": "problem-96",
+  "id": "TaylorSeries-LagrFormRem-16",
   "level": "2",
-  "url": "TaylorSeries-LagrFormRem.html#problem-96",
+  "url": "TaylorSeries-LagrFormRem.html#TaylorSeries-LagrFormRem-16",
   "type": "Problem",
   "number": "8.2.6",
   "title": "",
@@ -1666,36 +1666,36 @@ var ptx_lunr_docs = [
   "body": "   Cauchy's Form of the Remainder    sequences Cauchy sequences Cauchy's remainder Suppose is a function such that is continuous on an interval containing and . Then where is some number between and .   "
 },
 {
-  "id": "problem-97",
+  "id": "TaylorSeries-CauchyFormRem-4",
   "level": "2",
-  "url": "TaylorSeries-CauchyFormRem.html#problem-97",
+  "url": "TaylorSeries-CauchyFormRem.html#TaylorSeries-CauchyFormRem-4",
   "type": "Problem",
   "number": "8.3.2",
   "title": "",
   "body": "   series Taylor's series Cauchy Remainder Prove Theorem using an argument similar to the one used in the proof of Theorem . Don't forget there are two cases to consider.   "
 },
 {
-  "id": "problem-98",
+  "id": "TaylorSeries-CauchyFormRem-9",
   "level": "2",
-  "url": "TaylorSeries-CauchyFormRem.html#problem-98",
+  "url": "TaylorSeries-CauchyFormRem.html#TaylorSeries-CauchyFormRem-9",
   "type": "Problem",
   "number": "8.3.3",
   "title": "",
   "body": "   Binomial Series, the is increasing  is increasing on Suppose and consider the function . Show that on , is increasing and use this to conclude that for , .  Use this fact to finish the proof that the binomial series converges to for .   "
 },
 {
-  "id": "figure-30",
+  "id": "TaylorSeries-CauchyFormRem-11",
   "level": "2",
-  "url": "TaylorSeries-CauchyFormRem.html#figure-30",
+  "url": "TaylorSeries-CauchyFormRem.html#TaylorSeries-CauchyFormRem-11",
   "type": "Figure",
   "number": "8.3.4",
   "title": "",
   "body": " Augustin Cauchy  Cauchy, Augustin portrait of   "
 },
 {
-  "id": "figure-31",
+  "id": "TaylorSeries-CauchyFormRem-15",
   "level": "2",
-  "url": "TaylorSeries-CauchyFormRem.html#figure-31",
+  "url": "TaylorSeries-CauchyFormRem.html#TaylorSeries-CauchyFormRem-15",
   "type": "Figure",
   "number": "8.3.5",
   "title": "",
@@ -1711,9 +1711,9 @@ var ptx_lunr_docs = [
   "body": " Additional Problems   series Taylor's series drill problems   Find the Integral form, Lagrange form, and Cauchy form of the remainder for Taylor series for the following functions expanded about the given values of .     ,      ,      ,      ,               "
 },
 {
-  "id": "problem-99",
+  "id": "TaylorSeries-AddProb-2",
   "level": "2",
-  "url": "TaylorSeries-AddProb.html#problem-99",
+  "url": "TaylorSeries-AddProb.html#TaylorSeries-AddProb-2",
   "type": "Problem",
   "number": "8.4.1",
   "title": "",
@@ -1729,27 +1729,27 @@ var ptx_lunr_docs = [
   "body": " An Analytic Definition of Continuity  Before the invention of calculus, the notion of continuity was treated intuitively if it was treated at all. At first pass, it seems a very simple idea based solidly in our experience of the real world. Standing on the bank we see a river flow past us continuously, not by tiny jerks. Even when the flow might seem at first to be discontinuous, as when it drops precipitously over a cliff, a closer examination shows that it really is not. As the water approaches the cliff it speeds up. When it finally goes over it accelerates very quickly but no matter how fast it goes it moves continuously, moving from here to there by occupying every point in between. This is continuous motion. It never disappears over there and instantaneously reappears over here. That would be discontinuous motion.  Similarly, a thrown stone flies continuously (and smoothly) from release point to landing point, passing through each point in its path.  But wait.  If the stone passes through discrete points it must be doing so by teeny tiny little jerks, mustn't it? Otherwise how would it get from one point to the next? Is it possible that motion in the real world, much like motion in a movie, is really composed of tiny jerks from one point to the next but that these tiny jerks are simply too small and too fast for our senses to detect?  If so, then the real world is more like the rational number line ( ) from Chapter than the real number line ( ). In that case, motion really consists of jumping discretely over the missing points (like ) as we move from here to there. That may seem like a bizarre idea to you it does to us as well but the idea of continuous motion is equally bizarre. It's just a little harder to see why.  The real world will be what it is regardless of what we believe it to be, but fortunately in mathematics we are not constrained to live in it. So we won't even try. We will simply postulate that no such jerkiness exists; that all motion is continuous.  However we are constrained to live with the logical consequences of our assumptions, once they are made. These will lead us into some very deep waters indeed.  The intuitive treatment of continuity was maintained throughout the 1700's as it was not generally perceived that a truly rigorous definition was necessary. Consider the following definition given by Euler in 1748.   A continuous curve is one such that its nature can be expressed by a single function of If a curve is of such a nature that for its various parts . . . different functions of are required for its expression, . . . , then we call such a curve discontinuous.   However, the complexities associated with Fourier series and the types of functions that they represented caused mathematicians in the early s to rethink their notions of continuity. As we saw in Part , the graph of the function defined by the Fourier series looked like this:         This function went against Euler's notion of what a continuous function should be. Here, an infinite sum of continuous cosine curves provided a single expression which resulted in a discontinuous curve. But as we've seen this didn't happen with power series and an intuitive notion of continuity is inadequate to explain the difference. Even more perplexing is the following situation. Intuitively, one would think that a continuous curve should have a tangent line at at least one point. It may have a number of jagged points to it, but it should be smooth somewhere. An example of this would be . Its graph is given by         This function is not differentiable at the origin but it is differentiable everywhere else. One could certainly come up with examples of functions which fail to be differentiable at any number of points but, intuitively, it would be reasonable    Karl Weierstrass  Weierstrass, Karl portrait of    to expect that a continuous function should be differentiable somewhere . We might conjecture the following:    If is continuous on an interval then there is some , such that exists.    Surprisingly, in , Karl Weierstrass Weierstrass, Karl showed that the above conjecture is FALSE . He did this by displaying the counterexample: .  Weierstrass showed that if is an odd integer, , and , then is continuous everywhere, but is nowhere differentiable. Such a function is somewhat fractal in nature, and it is clear that a definition of continuity relying on intuition is inadequate to study it.   Weierstrass, Karl continuous, everywhere non-differentiable function  continuity Weierstrass's continuous, but non-differentiable function   Given , what is the smallest value of for which satisfies Weierstrass' criterion to be continuous and nowhere differentiable.    Let and use a computer algebra system to plot for and .    Plot for , where . Based upon what you see in parts b and c, why would we describe the function to be somewhat fractal in nature?    Just as it was important to define convergence with a rigorous definition without appealing to intuition or geometric representations, it is imperative that we define continuity in a rigorous fashion not relying on graphs.  The first appearance of a definition of continuity which did not rely on geometry or intuition was given in 1817 by Bernhard Bolzano Bolzano, Bernhard in a paper published in the Proceedings of the Prague Scientific Society entitled Rein analytischer Beweis des Lehrsatzes dass zwieschen je zwey Werthen, die ein entgegengesetztes Resultat gewaehren, wenigstens eine reele Wurzel der Gleichung liege (Purely Analytic Proof of the Theorem that Between Any Two Values that Yield Results of Opposite Sign There Will be at Least One Real Root of the Equation).   Bernhard Bolzano  Bolzano, Bernhard portrait of    From the title it should be clear that in this paper Bolzano is proving the Intermediate Value Theorem. To do this he needs a completely analytic definition of continuity. The substance of Bolzano's idea is that if is continuous at a point then should be close to  whenever is close enough to  . More precisely, Bolzano said that is continuous at provided can be made smaller than any given quantity provided we make sufficiently small.  The language Bolzano uses is very similar to the language Leibniz Leibniz, Gottfried Wilhelm used when he postulated the existence of infinitesimally small numbers. Leibniz said that infinitesimals are smaller than any given quantity but not zero. Bolzano says that can be made smaller than any given quantity provided we make sufficiently small. But Bolzano stops short of saying that is infinitesimally small. Given , we can choose so that is smaller than any real number we could name, say , provided we name  first , but for any given choice of , , and are both still real numbers. Possibly very small real numbers to be sure, but real numbers nonetheless. Infinitesimals have no place in Bolzano's construction.   Bolzano, Bernhard Bolzano's paper was not well known when Cauchy Cauchy, Augustin proposed a similar definition in his Cours d'analyse of 1821 so it is usually Cauchy who is credited with this definition, but even Cauchy's definition is not quite tight enough for modern standards. It was Karl Weierstrass in 1859 who finally gave the modern definition.     continuity definition of  continuity We say that a function is continuous at provided that for any , there exists a such that if then .    Notice that the definition of continuity of a function is done point-by-point. A function can certainly be continuous at some points while discontinuous at others. When we say that is continuous on an interval, then we mean that it is continuous at every point of that interval and, in theory, we would need to use the above definition to check continuity at each individual point.   Extreme Value Theorem (EVT) continuity and  continuity Extreme Value Theorem (EVT) and  Intermediate Value Theorem (IVT) continuity and  continuity Intermediate Value Theorem and Our definition fits the bill in that it does not rely on either intuition or graphs, but it is this very non-intuitiveness that makes it hard to grasp. It usually takes some time to become comfortable with this definition, let alone use it to prove theorems such as the Extreme Value Theorem and Intermediate Value Theorem. So let's go slowly to develop a feel for it.  This definition spells out a completely black and white procedure: you give me a positive number , and I must be able to find a positive number which satisfies a certain property. If I can always do that then the function is continuous at the point of interest.  This definition also makes very precise what we mean when we say that should be close to  whenever is close enough to  . For example, intuitively we know that should be continuous at . This means that we should be able to get to within, say, of provided we make close enough to . Specifically, we want . This happens exactly when . Using the fact that and , then we can see that if we get to within of , then and so will be within . of . This is very straightforward. What makes this situation more difficult is that we must be able to do this for any .  Notice the similarity between this definition and the definition of convergence of a sequence. Both definitions have the challenge of an . In the definition of , we had to get to within of by making large enough. For sequences, the challenge lies in making sufficiently small. More precisely, given we need to decide how large should be to guarantee that .  In our definition of continuity, we still need to make something small (namely ), only this time, we need to determine how close must be to to ensure this will happen instead of determining how large must be.  What makes continuous at is the arbitrary nature of (as long as it is positive). As becomes smaller, this forces to be closer to . That we can always find a positive distance to work is what we mean when we say that we can make as close to as we wish, provided we get close enough to . The sequence of pictures below illustrates that the phrase for any , there exists a such that if then can be replaced by the equivalent formulation for any , there exists a such that if then . This could also be replaced by the phrase for any , there exists a such that if then . All of these equivalent formulations convey the idea that we can get to within of , provided we make within of , and we will use whichever formulation suits our needs in a particular application.            The precision of the definition is what allows us to examine continuity without relying on pictures or vague notions such as nearness or getting closer to. We will now consider some examples to illustrate this precision.    Use the definition of continuity to show that is continuous at any point .    If we were to draw the graph of this line, then you would likely say that this is obvious. The point behind the definition is that we can back up your intuition in a rigorous manner.   Let . Let . If , then   Thus by the definition, is continuous at .      continuity is continuous everywhere Use the definition of continuity to show that if and are fixed (but unspecified) real numbers then the function is continuous at every real number .      Use the definition of continuity to show that is continuous at .     Let . Let . If , then . Thus .  Thus by the definition, is continuous at .   Notice that in these proofs, the challenge of an was first given. This is because the choice of must depend upon . Also notice that there was no explanation for our choice of . We just supplied it and showed that it worked. As long as , then this is all that is required. In point of fact, the we chose in each example was not the only choice that worked; any smaller would work as well.   continuity smaller , bigger  continuity smaller works in definition  continuity larger works in definition   Given a particular in the definition of continuity, show that if a particular satisfies the definition, then any with will also work for this .    Show that if a can be found to satisfy the conditions of the definition of continuity for a particular , then this will also work for any with .    It wasn't explicitly stated in the definition but when we say if then , we should be restricting ourselves to values which are in the domain of the function , otherwise doesn't make sense. We didn't put it in the definition because that definition was complicated enough without this technicality. Also in the above examples, the functions were defined everywhere so this was a moot point. We will continue with the convention that when we say if then , we will be restricting ourselves to values which are in the domain of the function . This will allow us to examine continuity of functions not defined for all without restating this restriction each time.     continuity is continuous at zero Use the definition of continuity to show that is continuous at .       is continuous at zero Use the definition of continuity to show that is continuous at . How is this problem different from problem ? How is it similar?    Sometimes the that will work for a particular is fairly obvious to see, especially after you've gained some experience. This is the case in the above examples (at least after looking back at the proofs). However, the task of finding a to work is usually not so obvious and requires some scrapwork. This scrapwork is vital toward producing a , but again is not part of the polished proof. This can be seen in the following example.    Use the definition of continuity to prove that is continuous at .   SCRAPWORK   As before, the scrapwork for these problems often consists of simply working backwards. Specifically, given an , we need to find a so that , whenever . We work backwards from what we want, keeping an eye on the fact that we can control the size of . .  This seems to suggest that we should make . We're now ready for the formal proof.     Let . Let . If , then , and so .  Thus by definition, is continuous at .    Paul Halmos  Halmos, Paul portrait of    Bear in mind that someone reading the formal proof will not have seen the scrapwork, so the choice of might seem rather mysterious. However, you are in no way bound to motivate this choice of and usually you should not, unless it is necessary for the formal proof. All you have to do is find this and show that it works. Furthermore, to a trained reader, your ideas will come through when you demonstrate that your choice of works.  Now reverse this last statement. As a trained reader, when you read the proof of a theorem it is your responsibility to find the scrapwork, to see how the proof works and understand it fully. As the renowned mathematical expositor Paul Halmos Halmos, Paul (1916-2006) said, Don't just read it; fight it! Ask your own questions, look for your own examples, discover your own proofs. Is the hypothesis necessary? Is the converse true? What happens in the classical special case? What about the degenerate cases? Where does the proof use the hypothesis?   This is the way to learn mathematics. It is really the only way.   is continuous at every positive real number   Use the definition of continuity to show that is continuous at any positive real number .     is continuous for   Use a unit circle to show that for , and and conclude and for  .    Use the definition of continuity to prove that is continuous at any point .    .     continuity is continuous everywhere  continuous functions is continuous everywhere   Use the definition of continuity to show that is continuous at .    Show that is continuous at any point .   Rewrite as and use what you proved in part a.    In the above problems, we used the definition of continuity to verify our intuition about the continuity of familiar functions. The advantage of this analytic definition is that it can be applied when the function is not so intuitive. Consider, for example, the function given at the end of the last chapter. .  Near zero, the graph of looks like this:   As we mentioned in the previous chapter, since sin oscillates infinitely often as nears zero this graph must be viewed with a certain amount of suspicion. However our completely analytic definition of continuity shows that this function is, in fact, continuous at 0.  The Topologist's Sine Function    Topologist's sine function is continuous at zero Use the definition of continuity to show that is continuous at .    Even more perplexing is the function defined by         To the naked eye, the graph of this function looks like the lines and . Of course, such a graph would not be the graph of a function. Actually, both of these lines have holes in them. Wherever there is a point on one line there is a hole on the other. Each of these holes is the width of a single point (that is, their width is zero!) so they are invisible to the naked eye (or even magnified under the most powerful microscope available). This idea is illustrated in the following graph   Can such a function so full of holes actually be continuous anywhere? It turns out that we can use our definition to show that this function is, in fact, continuous at and at no other point.   continuity of   Use the definition of continuity to show that the function is continuous at .    Let . Use the definition of continuity to show that is not continuous at .   You might want to break this up into two cases where is rational or irrational. Show that no choice of will work for . Note that Theorem of Chapter will probably help here.    "
 },
 {
-  "id": "figure-32",
+  "id": "Continuity-AnalyticDef-12",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#figure-32",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-12",
   "type": "Figure",
   "number": "9.1.1",
   "title": "",
   "body": "      "
 },
 {
-  "id": "figure-33",
+  "id": "Continuity-AnalyticDef-14",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#figure-33",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-14",
   "type": "Figure",
   "number": "9.1.2",
   "title": "",
   "body": "      "
 },
 {
-  "id": "figure-34",
+  "id": "Continuity-AnalyticDef-16",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#figure-34",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-16",
   "type": "Figure",
   "number": "9.1.3",
   "title": "",
@@ -1765,18 +1765,18 @@ var ptx_lunr_docs = [
   "body": "  If is continuous on an interval then there is some , such that exists.   "
 },
 {
-  "id": "problem-100",
+  "id": "Continuity-AnalyticDef-21",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#problem-100",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-21",
   "type": "Problem",
   "number": "9.1.5",
   "title": "",
   "body": " Weierstrass, Karl continuous, everywhere non-differentiable function  continuity Weierstrass's continuous, but non-differentiable function   Given , what is the smallest value of for which satisfies Weierstrass' criterion to be continuous and nowhere differentiable.    Let and use a computer algebra system to plot for and .    Plot for , where . Based upon what you see in parts b and c, why would we describe the function to be somewhat fractal in nature?   "
 },
 {
-  "id": "figure-35",
+  "id": "Continuity-AnalyticDef-24",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#figure-35",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-24",
   "type": "Figure",
   "number": "9.1.6",
   "title": "",
@@ -1792,54 +1792,54 @@ var ptx_lunr_docs = [
   "body": "   continuity definition of  continuity We say that a function is continuous at provided that for any , there exists a such that if then .   "
 },
 {
-  "id": "example-9",
+  "id": "Continuity-AnalyticDef-38",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#example-9",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-38",
   "type": "Example",
   "number": "9.1.8",
   "title": "",
   "body": "  Use the definition of continuity to show that is continuous at any point .   "
 },
 {
-  "id": "proof-11",
+  "id": "Continuity-AnalyticDef-40",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#proof-11",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-40",
   "type": "Proof",
   "number": "9.1.1",
   "title": "",
   "body": " Let . Let . If , then   Thus by the definition, is continuous at .  "
 },
 {
-  "id": "problem-101",
+  "id": "Continuity-AnalyticDef-41",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#problem-101",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-41",
   "type": "Problem",
   "number": "9.1.9",
   "title": "",
   "body": "   continuity is continuous everywhere Use the definition of continuity to show that if and are fixed (but unspecified) real numbers then the function is continuous at every real number .   "
 },
 {
-  "id": "example-10",
+  "id": "Continuity-AnalyticDef-42",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#example-10",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-42",
   "type": "Example",
   "number": "9.1.10",
   "title": "",
   "body": "  Use the definition of continuity to show that is continuous at .   "
 },
 {
-  "id": "proof-12",
+  "id": "Continuity-AnalyticDef-43",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#proof-12",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-43",
   "type": "Proof",
   "number": "9.1.2",
   "title": "",
   "body": " Let . Let . If , then . Thus .  Thus by the definition, is continuous at .  "
 },
 {
-  "id": "problem-102",
+  "id": "Continuity-AnalyticDef-45",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#problem-102",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-45",
   "type": "Problem",
   "number": "9.1.11",
   "title": "",
@@ -1855,9 +1855,9 @@ var ptx_lunr_docs = [
   "body": "   continuity is continuous at zero Use the definition of continuity to show that is continuous at .   "
 },
 {
-  "id": "problem-104",
+  "id": "Continuity-AnalyticDef-48",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#problem-104",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-48",
   "type": "Problem",
   "number": "9.1.13",
   "title": "",
@@ -1873,63 +1873,63 @@ var ptx_lunr_docs = [
   "body": "  Use the definition of continuity to prove that is continuous at .   SCRAPWORK   As before, the scrapwork for these problems often consists of simply working backwards. Specifically, given an , we need to find a so that , whenever . We work backwards from what we want, keeping an eye on the fact that we can control the size of . .  This seems to suggest that we should make . We're now ready for the formal proof.   "
 },
 {
-  "id": "proof-13",
+  "id": "Continuity-AnalyticDef-51",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#proof-13",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-51",
   "type": "Proof",
   "number": "9.1.3",
   "title": "",
   "body": " Let . Let . If , then , and so .  Thus by definition, is continuous at .  "
 },
 {
-  "id": "figure-36",
+  "id": "Continuity-AnalyticDef-52",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#figure-36",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-52",
   "type": "Figure",
   "number": "9.1.15",
   "title": "",
   "body": " Paul Halmos  Halmos, Paul portrait of   "
 },
 {
-  "id": "problem-105",
+  "id": "Continuity-AnalyticDef-56",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#problem-105",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-56",
   "type": "Problem",
   "number": "9.1.16",
   "title": "",
   "body": " is continuous at every positive real number   Use the definition of continuity to show that is continuous at any positive real number .   "
 },
 {
-  "id": "problem-106",
+  "id": "Continuity-AnalyticDef-57",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#problem-106",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-57",
   "type": "Problem",
   "number": "9.1.17",
   "title": "",
   "body": " is continuous for   Use a unit circle to show that for , and and conclude and for  .    Use the definition of continuity to prove that is continuous at any point .    .   "
 },
 {
-  "id": "problem-107",
+  "id": "Continuity-AnalyticDef-58",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#problem-107",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-58",
   "type": "Problem",
   "number": "9.1.18",
   "title": "",
   "body": " continuity is continuous everywhere  continuous functions is continuous everywhere   Use the definition of continuity to show that is continuous at .    Show that is continuous at any point .   Rewrite as and use what you proved in part a.   "
 },
 {
-  "id": "problem-108",
+  "id": "Continuity-AnalyticDef-63",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#problem-108",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-63",
   "type": "Problem",
   "number": "9.1.19",
   "title": "The Topologist’s Sine Function.",
   "body": "The Topologist's Sine Function    Topologist's sine function is continuous at zero Use the definition of continuity to show that is continuous at .   "
 },
 {
-  "id": "problem-109",
+  "id": "Continuity-AnalyticDef-68",
   "level": "2",
-  "url": "Continuity-AnalyticDef.html#problem-109",
+  "url": "Continuity-AnalyticDef.html#Continuity-AnalyticDef-68",
   "type": "Problem",
   "number": "9.1.20",
   "title": "",
@@ -1963,54 +1963,54 @@ var ptx_lunr_docs = [
   "body": "  Use Theorem to prove that is not continuous at .   "
 },
 {
-  "id": "proof-14",
+  "id": "SequencesAndContinuity-8",
   "level": "2",
-  "url": "SequencesAndContinuity.html#proof-14",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-8",
   "type": "Proof",
   "number": "9.2.1",
   "title": "",
   "body": " First notice that can be written as .  To show that is not continuous at , all we need to do is create a single sequence which converges to , but for which the sequence does not converge to . For a function like this one, just about any sequence will do, but let's use , just because it is an old familiar friend.  We have , but . Thus by Theorem , is not continuous at .  "
 },
 {
-  "id": "problem-110",
+  "id": "SequencesAndContinuity-9",
   "level": "2",
-  "url": "SequencesAndContinuity.html#problem-110",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-9",
   "type": "Problem",
   "number": "9.2.3",
   "title": "",
   "body": "   continuity Heaviside's function is not continuous at zero Use Theorem to show that is not continuous at , no matter what value is.   "
 },
 {
-  "id": "problem-111",
+  "id": "SequencesAndContinuity-10",
   "level": "2",
-  "url": "SequencesAndContinuity.html#problem-111",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-10",
   "type": "Problem",
   "number": "9.2.4",
   "title": "",
   "body": " continuity of   Use Theorem to show that is not continuous at .   "
 },
 {
-  "id": "problem-112",
+  "id": "SequencesAndContinuity-11",
   "level": "2",
-  "url": "SequencesAndContinuity.html#problem-112",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-11",
   "type": "Problem",
   "number": "9.2.5",
   "title": "",
   "body": " Topologist's sine function modified version is not continuous at zero   The function is often called the topologist's sine curve. Whereas has roots at , and oscillates infinitely often as , has roots at , and oscillates infinitely often as approaches zero. A rendition of the graph follows.   Notice that is not even defined at . We can extend to be defined at 0 by simply choosing a value for  .  Use Theorem to show that is not continuous at , no matter what value is chosen for .   "
 },
 {
-  "id": "proof-15",
+  "id": "SequencesAndContinuity-12",
   "level": "2",
-  "url": "SequencesAndContinuity.html#proof-15",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-12",
   "type": "Proof",
   "number": "9.2.2",
   "title": "Sketch of the Proof of Theorem 9.2.1.",
   "body": " Sketch of the Proof of Theorem  We've seen how we can use Theorem , now we need to prove Theorem . The forward direction is fairly straightforward. So we assume that is continuous at and start with a sequence which converges to . What is left to show is that . If you write down the definitions of being continuous at , , and , you should be able to get from what you are assuming to what you want to conclude.  To prove the converse, it is convenient to prove its contrapositive. That is, we want to prove that if is not continuous at then we can construct a sequence that converges to but does not converge to . First we need to recognize what it means for to not be continuous at . This says that somewhere there exists an , such that no choice of will work for this. That is, for any such , there will exist , such that , but . With this in mind, if , then there will exist an such that , but . Similarly, if , then there will exist an such that , but . If we continue in this fashion, we will create a sequence such that , but . This should do the trick.  "
 },
 {
-  "id": "problem-113",
+  "id": "SequencesAndContinuity-13",
   "level": "2",
-  "url": "SequencesAndContinuity.html#problem-113",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-13",
   "type": "Problem",
   "number": "9.2.6",
   "title": "",
@@ -2026,18 +2026,18 @@ var ptx_lunr_docs = [
   "body": "   continuous functions sum of continuous functions is continuous Suppose and are both continuous at . Then and are continuous at .   "
 },
 {
-  "id": "proof-16",
+  "id": "SequencesAndContinuity-16",
   "level": "2",
-  "url": "SequencesAndContinuity.html#proof-16",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-16",
   "type": "Proof",
   "number": "9.2.3",
   "title": "",
   "body": " We could use the definition of continuity to prove Theorem , but Theorem makes our job much easier. For example, to show that is continuous, consider any sequence which converges to . Since is continuous at , then by Theorem , . Likewise, since is continuous at , then .  By Theorem of Chapter ,  . Thus by Theorem , is continuous at . The proof that is continuous at is similar.  "
 },
 {
-  "id": "problem-114",
+  "id": "SequencesAndContinuity-17",
   "level": "2",
-  "url": "SequencesAndContinuity.html#problem-114",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-17",
   "type": "Problem",
   "number": "9.2.8",
   "title": "",
@@ -2053,18 +2053,18 @@ var ptx_lunr_docs = [
   "body": "  If is continuous at and , then there exists such that for all .   "
 },
 {
-  "id": "problem-115",
+  "id": "SequencesAndContinuity-25",
   "level": "2",
-  "url": "SequencesAndContinuity.html#problem-115",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-25",
   "type": "Problem",
   "number": "9.2.10",
   "title": "",
   "body": " continuous functions if is continuouse and then is bounded away from zero near a   Prove Lemma .    Consider the case where . Use the definition with . The picture is below; make it formal.   For the case , consider the function .   "
 },
 {
-  "id": "problem-116",
+  "id": "SequencesAndContinuity-27",
   "level": "2",
-  "url": "SequencesAndContinuity.html#problem-116",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-27",
   "type": "Problem",
   "number": "9.2.11",
   "title": "",
@@ -2080,36 +2080,36 @@ var ptx_lunr_docs = [
   "body": " continuous functions the composition of continuous functions is continuous   Suppose is continuous at and is continuous at . Then is continuous at (Note that .)   "
 },
 {
-  "id": "problem-117",
+  "id": "SequencesAndContinuity-29",
   "level": "2",
-  "url": "SequencesAndContinuity.html#problem-117",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-29",
   "type": "Problem",
   "number": "9.2.13",
   "title": "",
   "body": " continuous functions the composition of continuous functions is continuous   Prove Theorem     Using the definition of continuity.    Using Theorem .   "
 },
 {
-  "id": "problem-118",
+  "id": "SequencesAndContinuity-31",
   "level": "2",
-  "url": "SequencesAndContinuity.html#problem-118",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-31",
   "type": "Problem",
   "number": "9.2.14",
   "title": "",
   "body": " continuity drill problems   Show that each of the following is a continuous function at every point in its domain.    Any polynomial.    Any rational function. (A rational function is defined to be a ratio of polynomials.)     .    The other trig functions: , , , and .   "
 },
 {
-  "id": "problem-119",
+  "id": "SequencesAndContinuity-32",
   "level": "2",
-  "url": "SequencesAndContinuity.html#problem-119",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-32",
   "type": "Problem",
   "number": "9.2.15",
   "title": "",
   "body": " continuity is continuous everywhere   What allows us to conclude that is continuous at any point without referring back to the definition of continuity?   "
 },
 {
-  "id": "problem-120",
+  "id": "SequencesAndContinuity-34",
   "level": "2",
-  "url": "SequencesAndContinuity.html#problem-120",
+  "url": "SequencesAndContinuity.html#SequencesAndContinuity-34",
   "type": "Problem",
   "number": "9.2.16",
   "title": "",
@@ -2134,45 +2134,45 @@ var ptx_lunr_docs = [
   "body": "   limit We say provided that for each , there exists such that if then .   "
 },
 {
-  "id": "p-855",
+  "id": "Continuity-DefLimit-10",
   "level": "2",
-  "url": "Continuity-DefLimit.html#p-855",
+  "url": "Continuity-DefLimit.html#Continuity-DefLimit-10",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "accumulation point "
 },
 {
-  "id": "example-13",
+  "id": "Continuity-DefLimit-18",
   "level": "2",
-  "url": "Continuity-DefLimit.html#example-13",
+  "url": "Continuity-DefLimit.html#Continuity-DefLimit-18",
   "type": "Example",
   "number": "9.3.2",
   "title": "",
   "body": "  Consider the function , . You probably recognize this as the difference quotient used to compute the derivative of at , so we strongly suspect that . Just as when we were dealing with limits of sequences, we should be able to use the definition to verify this. And as before, we will start with some scrapwork.   SCRAPWORK   Let . We wish to find a such that if then . With this in mind, we perform the following calculations .  Now we have a handle on that will work in the definition and we'll give the formal proof that .   "
 },
 {
-  "id": "proof-17",
+  "id": "Continuity-DefLimit-19",
   "level": "2",
-  "url": "Continuity-DefLimit.html#proof-17",
+  "url": "Continuity-DefLimit.html#Continuity-DefLimit-19",
   "type": "Proof",
   "number": "9.3.1",
   "title": "",
   "body": " Let and let . If , then .  "
 },
 {
-  "id": "problem-121",
+  "id": "Continuity-DefLimit-21",
   "level": "2",
-  "url": "Continuity-DefLimit.html#problem-121",
+  "url": "Continuity-DefLimit.html#Continuity-DefLimit-21",
   "type": "Problem",
   "number": "9.3.3",
   "title": "",
   "body": " limit   Use the definition of a limit to verify that    "
 },
 {
-  "id": "problem-122",
+  "id": "Continuity-DefLimit-22",
   "level": "2",
-  "url": "Continuity-DefLimit.html#problem-122",
+  "url": "Continuity-DefLimit.html#Continuity-DefLimit-22",
   "type": "Problem",
   "number": "9.3.4",
   "title": "",
@@ -2197,18 +2197,18 @@ var ptx_lunr_docs = [
   "body": "   limit properties of Suppose and , then              provided and , for sufficiently close to a (but not equal to ).      "
 },
 {
-  "id": "proof-18",
+  "id": "Continuity-DefLimit-31",
   "level": "2",
-  "url": "Continuity-DefLimit.html#proof-18",
+  "url": "Continuity-DefLimit.html#Continuity-DefLimit-31",
   "type": "Proof",
   "number": "9.3.2",
   "title": "",
   "body": " Let be a sequence such that and . Since and we see that and . By Theorem of Chapter , we have . Since was an arbitrary sequence with and we have .  "
 },
 {
-  "id": "problem-123",
+  "id": "Continuity-DefLimit-32",
   "level": "2",
-  "url": "Continuity-DefLimit.html#problem-123",
+  "url": "Continuity-DefLimit.html#Continuity-DefLimit-32",
   "type": "Problem",
   "number": "9.3.7",
   "title": "",
@@ -2224,18 +2224,18 @@ var ptx_lunr_docs = [
   "body": "   Squeeze Theorem for functions    Squeeze Theorem for functions Suppose , for sufficiently close to (but not equal to ). If , then also.   "
 },
 {
-  "id": "problem-124",
+  "id": "Continuity-DefLimit-35",
   "level": "2",
-  "url": "Continuity-DefLimit.html#problem-124",
+  "url": "Continuity-DefLimit.html#Continuity-DefLimit-35",
   "type": "Problem",
   "number": "9.3.9",
   "title": "",
   "body": "   Squeeze Theorem for functions Prove Theorem .    Use Theorem , the Squeeze Theorem for sequences from Chapter .   "
 },
 {
-  "id": "problem-125",
+  "id": "Continuity-DefLimit-38",
   "level": "2",
-  "url": "Continuity-DefLimit.html#problem-125",
+  "url": "Continuity-DefLimit.html#Continuity-DefLimit-38",
   "type": "Problem",
   "number": "9.3.10",
   "title": "",
@@ -2269,9 +2269,9 @@ var ptx_lunr_docs = [
   "body": " continuity implied by differentiability  differentiation differentiability implies continuity    Differentiability Implies Continuity   If is differentiable at a point then is continuous at as well.   "
 },
 {
-  "id": "problem-126",
+  "id": "Continuity-DerivativeAfterthought-9",
   "level": "2",
-  "url": "Continuity-DerivativeAfterthought.html#problem-126",
+  "url": "Continuity-DerivativeAfterthought.html#Continuity-DerivativeAfterthought-9",
   "type": "Problem",
   "number": "9.4.3",
   "title": "",
@@ -2287,36 +2287,36 @@ var ptx_lunr_docs = [
   "body": " Fermat's Theorem  Fermat's Theorem   Suppose is differentiable in some interval containing . If for every in , then .   "
 },
 {
-  "id": "proof-19",
+  "id": "Continuity-DerivativeAfterthought-13",
   "level": "2",
-  "url": "Continuity-DerivativeAfterthought.html#proof-19",
+  "url": "Continuity-DerivativeAfterthought.html#Continuity-DerivativeAfterthought-13",
   "type": "Proof",
   "number": "9.4.1",
   "title": "",
   "body": " Since exists we know that if converges to zero then the sequence converges to . The proof consists of showing that  and that from which we conclude that . We will only show the first part. The second is left as an exercise.   Claim:  .  Let be sufficiently large that and take . Then and , so that   Therefore also.  "
 },
 {
-  "id": "problem-127",
+  "id": "Continuity-DerivativeAfterthought-14",
   "level": "2",
-  "url": "Continuity-DerivativeAfterthought.html#problem-127",
+  "url": "Continuity-DerivativeAfterthought.html#Continuity-DerivativeAfterthought-14",
   "type": "Problem",
   "number": "9.4.5",
   "title": "",
   "body": "   Fermat's Theorem if is a maximum then Show that and conclude that .   "
 },
 {
-  "id": "problem-128",
+  "id": "Continuity-DerivativeAfterthought-15",
   "level": "2",
-  "url": "Continuity-DerivativeAfterthought.html#problem-128",
+  "url": "Continuity-DerivativeAfterthought.html#Continuity-DerivativeAfterthought-15",
   "type": "Problem",
   "number": "9.4.6",
   "title": "",
   "body": "   Fermat's Theorem if is a minimum then Show that if for all in some interval then too.   "
 },
 {
-  "id": "p-918",
+  "id": "Continuity-DerivativeAfterthought-16",
   "level": "2",
-  "url": "Continuity-DerivativeAfterthought.html#p-918",
+  "url": "Continuity-DerivativeAfterthought.html#Continuity-DerivativeAfterthought-16",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2341,18 +2341,18 @@ var ptx_lunr_docs = [
   "body": " Rolle's Theorem    Rolle's Theorem   Suppose exists for every , is continuous on , and .  Then there is a real number such that .   "
 },
 {
-  "id": "proof-20",
+  "id": "Continuity-DerivativeAfterthought-21",
   "level": "2",
-  "url": "Continuity-DerivativeAfterthought.html#proof-20",
+  "url": "Continuity-DerivativeAfterthought.html#Continuity-DerivativeAfterthought-21",
   "type": "Proof",
   "number": "9.4.2",
   "title": "",
   "body": "  Any proof that relies on the Extreme Value Theorem is not complete until the EVT has been proved. We'll get to this in Chapter .   Since is continuous on we see, by the Extreme Value Theorem, Extreme Value Theorem (EVT) Rolle's Theorem, and that has both a maximum and a minimum on . Denote the maximum by and the minimum by . There are several cases:   Case 1:   . In this case is constant (why?). Therefore for every .    Case 2:   . In this case there is a real number such that is a local minimum. By Fermat's Theorem, .    Case 3:   . In this case there is a real number such that is a local maximum. By Fermat's Theorem, .    Case 4:   is neither a maximum nor a minimum. In this case there is a real number such that is a local maximum, and a real number such that is a local minimum. By Fermat's Theorem, .     "
 },
 {
-  "id": "problem-129",
+  "id": "Continuity-DerivativeAfterthought-25",
   "level": "2",
-  "url": "Continuity-DerivativeAfterthought.html#problem-129",
+  "url": "Continuity-DerivativeAfterthought.html#Continuity-DerivativeAfterthought-25",
   "type": "Problem",
   "number": "9.4.9",
   "title": "",
@@ -2368,18 +2368,18 @@ var ptx_lunr_docs = [
   "body": "  If for every in the interval then for every where we have .  That is, is increasing on .   "
 },
 {
-  "id": "proof-21",
+  "id": "Continuity-DerivativeAfterthought-28",
   "level": "2",
-  "url": "Continuity-DerivativeAfterthought.html#proof-21",
+  "url": "Continuity-DerivativeAfterthought.html#Continuity-DerivativeAfterthought-28",
   "type": "Proof",
   "number": "9.4.3",
   "title": "",
   "body": " Suppose and are as described in the corollary. Then by the Mean Value Theorem there is some number, say such that .  Since and we have , or .  "
 },
 {
-  "id": "problem-130",
+  "id": "Continuity-DerivativeAfterthought-29",
   "level": "2",
-  "url": "Continuity-DerivativeAfterthought.html#problem-130",
+  "url": "Continuity-DerivativeAfterthought.html#Continuity-DerivativeAfterthought-29",
   "type": "Problem",
   "number": "9.4.11",
   "title": "",
@@ -2395,18 +2395,18 @@ var ptx_lunr_docs = [
   "body": "  Suppose is differentiable on some interval , is continuous on , and that for some . Then there is an interval, , containing such that for every in where , .   "
 },
 {
-  "id": "problem-131",
+  "id": "Continuity-DerivativeAfterthought-31",
   "level": "2",
-  "url": "Continuity-DerivativeAfterthought.html#problem-131",
+  "url": "Continuity-DerivativeAfterthought.html#Continuity-DerivativeAfterthought-31",
   "type": "Problem",
   "number": "9.4.13",
   "title": "",
   "body": "   differentiation implies is increasing nearby Prove Corollary .   "
 },
 {
-  "id": "problem-132",
+  "id": "Continuity-DerivativeAfterthought-32",
   "level": "2",
-  "url": "Continuity-DerivativeAfterthought.html#problem-132",
+  "url": "Continuity-DerivativeAfterthought.html#Continuity-DerivativeAfterthought-32",
   "type": "Problem",
   "number": "9.4.14",
   "title": "",
@@ -2422,27 +2422,27 @@ var ptx_lunr_docs = [
   "body": " Additional Problems   continuous functions a constant function is continuous   Use the definition of continuity to prove that the constant function is continuous at any point .     continuous functions is continuous everywhere   Use the definition of continuity to prove that is continuous at .   You may want to use the fact to find a .    Use part (a) to prove that is continuous at any positive real number .    . This is a combination of functions which are continuous at . Be sure to explain how you know that is continuous at .       continuity formal definition of discontinuity Write a formal definition of the statement is not continuous at , and use it to prove that the function is not continuous at .    "
 },
 {
-  "id": "problem-133",
+  "id": "Continuity-AddProb-2",
   "level": "2",
-  "url": "Continuity-AddProb.html#problem-133",
+  "url": "Continuity-AddProb.html#Continuity-AddProb-2",
   "type": "Problem",
   "number": "9.5.1",
   "title": "",
   "body": " continuous functions a constant function is continuous   Use the definition of continuity to prove that the constant function is continuous at any point .   "
 },
 {
-  "id": "problem-134",
+  "id": "Continuity-AddProb-3",
   "level": "2",
-  "url": "Continuity-AddProb.html#problem-134",
+  "url": "Continuity-AddProb.html#Continuity-AddProb-3",
   "type": "Problem",
   "number": "9.5.2",
   "title": "",
   "body": " continuous functions is continuous everywhere   Use the definition of continuity to prove that is continuous at .   You may want to use the fact to find a .    Use part (a) to prove that is continuous at any positive real number .    . This is a combination of functions which are continuous at . Be sure to explain how you know that is continuous at .   "
 },
 {
-  "id": "problem-135",
+  "id": "Continuity-AddProb-4",
   "level": "2",
-  "url": "Continuity-AddProb.html#problem-135",
+  "url": "Continuity-AddProb.html#Continuity-AddProb-4",
   "type": "Problem",
   "number": "9.5.3",
   "title": "",
@@ -2455,12 +2455,12 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "10.1",
   "title": "Completeness of the Real Number System",
-  "body": " Completeness of the Real Number System  Recall that in deriving the Lagrange and Cauchy forms of the remainder for Taylor series, we made use of the Extreme Value Theorem ( EVT ) and Intermediate Value Theorem ( IVT ). In Chapter , we produced an analytic definition of continuity that we can use to prove these theorems. To provide the rest of the necessary tools we need to explore the make-up of the real number system. To illustrate what we mean, suppose that we only used the rational number system. We could still use our definition of continuity and could still consider continuous functions such as . Notice that is a value that lies between and .   The IVT says that somewhere between and , must take on the value . That is, there must exist some number such that . You might say, Big deal! Everyone knows works.   However, we are only working with rational numbers and  is not rational. As we saw in Chapter the rational number system has holes in it, whereas the real number system doesn't. Again, Big deal! Let's just say that the real number system contains (square) roots.   This sounds reasonable and it actually works for square roots, but consider the function . We know this is a continuous function. We also know that and . According to the IVT, there should be some number , where . The graph is below.   The situation is not as transparent as before. What would this mysterious be where the curve crosses the axis? Somehow we need to convey the idea that the real number system is a continuum. That is, it has no holes in it.  How about this? Why don't we just say that it has no holes in it? Sometimes the simple answer works best! But not in this case. How are we going to formulate a rigorous proof based on this statement? Just like with convergence and continuity, what we need is a rigorous way to convey this idea that the real number system does not have any holes, that it is complete.   We will see that there are several different, but equivalent ways to convey this notion of completeness. We will explore some of them in this chapter. For now we adopt the following as our Completeness Axiom for the real number system.  Nested Interval Property of the Real Number System ( NIP )   Suppose we have two sequences of real numbers and satisfying the following conditions:      (this says that the sequence, , is non-decreasing)     (this says that the sequence, , is non-increasing)       ,           Then there exists a unique number such that for all .    Geometrically, we have the following situation.   Notice that we have two sequences and , one increasing (really non-decreasing) and one decreasing (non-increasing). These sequences do not pass each other. In fact, the following is true:   Nested Interval Property (NIP) endpoints   Let be sequences as in the NIP. Show that for all , .    They are also coming together in the sense that . The NIP says that in this case there is a unique real number in the middle of all of this for all .   If there was no such then there would be a hole where these two sequences come together. The NIP guarantees that there is no such hole. We do not need to prove this since an axiom is, by definition, a self evident truth. We are taking it on faith that the real number system obeys this law. The next problem shows that the completeness property distinguishes the real number system from the rational number system.   Least Upper Bound Property (LUBP) implies the existence of irrational numbers   Find two sequences of rational numbers and which satisfy properties 1-4 of the NIP and such that there is no rational number satisfying the conclusion of the NIP.   Consider the decimal expansion of an irrational number.    Find two sequences of rational numbers and which satisfy properties 1-4 of the NIP and such that there is a rational number satisfying the conclusion of the NIP.    You might find the name Nested Interval Property to be somewhat curious. One way to think about this property is to consider that we have a sequence of nested closed intervals  whose lengths are shrinking to . The conclusion is that the intersection of these intervals is non-empty and, in fact, consists of a single point. That is, .  It appears that the sequences and in the NIP converge to . This is, in fact, true and can be proven rigorously. In what follows, this will prove to be a valuable piece of information.     Nested Interval Property (NIP) endpoints  limit of interval endpoints in the NIP Suppose that we have two sequences and satisfying all of the assumptions of the Nested Interval Property. If is the unique number such that for all , then and .       Nested Interval Property (NIP) endpoints Prove Theorem .    To illustrate the idea that the NIP plugs the holes in the real line, we will prove the existence of square roots of nonnegative real numbers.   square roots exist   Suppose . There exists a real number such that .    Notice that we can't just say, Let , since the idea is to show that this square root exists. In fact, throughout this proof, we cannot really use a square root symbol as we haven't yet proved that they (square roots) exist. We will give the idea behind the proof as it illustrates how the NIP is used.   Sketch of Proof  Our strategy is to construct two sequences which will narrow in on the number that we seek. With that in mind, we need to find a number such that and a number such that . (Remember that we can't say or .) There are many possibilities, but how about and You can check that these will satisfy  . Furthermore . This is the starting point.  The technique we will employ is often called a bisection technique, and is a useful way to set ourselves up for applying the NIP. Let be the midpoint of the interval . Then either we have or . In the case , we really want to take the place of since it is larger than , but still represents an underestimate for what would be the square root of . This thinking prompts the following move. If , we will relabel things by letting and . The situation looks like this on the number line.   In the other case where , we will relabel things by letting and . The situation looks like this on the number line.   In either case, we've reduced the length of the interval where the square root lies to half the size it was before. Stated in more specific terms, in either case we have the same results: and .  Now we play the same game, but instead we start with the interval . Let be the midpoint of . Then we have or . If , we relabel and . If , we relabel and . In either case, we end up with and .  Continuing in this manner, we will produce two sequences, and satisfying the following conditions:               ,          These sequences also satisfy the following property:      Properties 1-4 tell us that and satisfy all of the conditions of the NIP, so we can conclude that there must exist a real number such that for all . At this point, you should be able to use property 5. to show that as desired.      Nested Interval Property (NIP) square roots of integers, and  Nested Interval Property (NIP) implies the existence of square roots of integers Turn the above outline into a formal proof of Theorem .    The bisection method we employed in the proof of Theorem is pretty typical of how we will use the NIP, as taking midpoints ensures that we will create a sequence of nested intervals. We will employ this strategy in the proofs of the IVT and EVT. Deciding how to relabel the endpoints of our intervals will be determined by what we want to do with these two sequences of real numbers. This will typically lead to a fifth property, which will be crucial in proving that the guaranteed by the NIP does what we want it to do. Specifically, in the above example, we always wanted our candidate for to be in the interval . This judicious choice led to the extra Property 5:  . In applying the NIP to prove the IVT and EVT, we will find that properties 1-4 will stay the same. Property 5 is what will change based on the property we want to have.  Before we tackle the IVT and EVT, let's use the NIP to address an interesting question about the Harmonic Series. series Harmonic Series slow divergence of Recall that the Harmonic Series, , grows without bound, that is, . The question is how slowly does this series grow? For example, how many terms would it take before the series surpasses 100? 1000? 10000? Leonhard Euler Euler, Leonhard decided to tackle this problem in the following way. Euler decided to consider the . This limit is called Euler's constant and is denoted by . This says that for large, we have ln . If we could approximate , then we could replace the inequality with the more tractable inequality ln  and solve for in this. This should tell us roughly how many terms would need to be added in the Harmonic Series to surpass 100. Approximating with a computer is not too bad. We could make as large as we wish in ln to make closer approximations for . The real issue is, HOW DO WE KNOW THAT   ACTUALLY EXISTS?   You might want to say that obviously it should, but let us point out that as of the printing of this book (2013), it is not even known if is rational or irrational. So, in our opinion the existence of this limit is not so obvious. This is where the NIP will come into play; we will use it to show that this limit, in fact, exists. The details are in the following problem.   Euler, Leonhard Euler's constant existence of   The purpose of this problem is to show that exists.    Let . Use the following diagram to show      Let . Use a similar diagram to show that .    Let . Show that and satisfy the hypotheses of the nested interval property and use the NIP to conclude that there is a real number such that for all .    Conclude that .     Euler, Leonhard Euler's constant approximating   Use the fact that for all to approximate to three decimal places.     Euler, Leonhard Euler's constant slow convergence to   Use the fact that for large , to determine approximately how large must be to make .    Suppose we have a supercomputer which can add 10 trillion terms of the Harmonic Series per second. Approximately how many earth lifetimes would it take for this computer to sum the Harmonic Series until it surpasses 100?    "
+  "body": " Completeness of the Real Number System  Recall that in deriving the Lagrange and Cauchy forms of the remainder for Taylor series, we made use of the Extreme Value Theorem ( EVT ) and Intermediate Value Theorem ( IVT ). In Chapter , we produced an analytic definition of continuity that we can use to prove these theorems. To provide the rest of the necessary tools we need to explore the make-up of the real number system. To illustrate what we mean, suppose that we only used the rational number system. We could still use our definition of continuity and could still consider continuous functions such as . Notice that is a value that lies between and .   The IVT says that somewhere between and , must take on the value . That is, there must exist some number such that . You might say, Big deal! Everyone knows works.   However, we are only working with rational numbers and  is not rational. As we saw in Chapter the rational number system has holes in it, whereas the real number system doesn't. Again, Big deal! Let's just say that the real number system contains (square) roots.   This sounds reasonable and it actually works for square roots, but consider the function . We know this is a continuous function. We also know that and . According to the IVT, there should be some number , where . The graph is below.   The situation is not as transparent as before. What would this mysterious be where the curve crosses the axis? Somehow we need to convey the idea that the real number system is a continuum. That is, it has no holes in it.  How about this? Why don't we just say that it has no holes in it? Sometimes the simple answer works best! But not in this case. How are we going to formulate a rigorous proof based on this statement? Just like with convergence and continuity, what we need is a rigorous way to convey this idea that the real number system does not have any holes, that it is complete.   We will see that there are several different, but equivalent ways to convey this notion of completeness. We will explore some of them in this chapter. For now we adopt the following as our Completeness Axiom for the real number system.  Nested Interval Property of the Real Number System ( NIP )   Suppose we have two sequences of real numbers and satisfying the following conditions:      (this says that the sequence, , is non-decreasing)     (this says that the sequence, , is non-increasing)       ,           Then there exists a unique number such that for all .    Geometrically, we have the following situation.   Notice that we have two sequences and , one increasing (really non-decreasing) and one decreasing (non-increasing). These sequences do not pass each other. In fact, the following is true:   Nested Interval Property (NIP) endpoints   Let be sequences as in the NIP. Show that for all , .    They are also coming together in the sense that . The NIP says that in this case there is a unique real number in the middle of all of this for all .   If there was no such then there would be a hole where these two sequences come together. The NIP guarantees that there is no such hole. We do not need to prove this since an axiom is, by definition, a self evident truth. We are taking it on faith that the real number system obeys this law. The next problem shows that the completeness property distinguishes the real number system from the rational number system.   Least Upper Bound Property (LUBP) implies the existence of irrational numbers   Find two sequences of rational numbers and which satisfy properties 1-4 of the NIP and such that there is no rational number satisfying the conclusion of the NIP.   Consider the decimal expansion of an irrational number.    Find two sequences of rational numbers and which satisfy properties 1-4 of the NIP and such that there is a rational number satisfying the conclusion of the NIP.    You might find the name Nested Interval Property to be somewhat curious. One way to think about this property is to consider that we have a sequence of nested closed intervals  whose lengths are shrinking to . The conclusion is that the intersection of these intervals is non-empty and, in fact, consists of a single point. That is, .  It appears that the sequences and in the NIP converge to . This is, in fact, true and can be proven rigorously. In what follows, this will prove to be a valuable piece of information.     Nested Interval Property (NIP) endpoints  limit of interval endpoints in the NIP Suppose that we have two sequences and satisfying all of the assumptions of the Nested Interval Property. If is the unique number such that for all , then and .       Nested Interval Property (NIP) endpoints Prove Theorem .    To illustrate the idea that the NIP plugs the holes in the real line, we will prove the existence of square roots of nonnegative real numbers.   square roots exist   Suppose . There exists a real number such that .    Notice that we can't just say, Let , since the idea is to show that this square root exists. In fact, throughout this proof, we cannot really use a square root symbol as we haven't yet proved that they (square roots) exist. We will give the idea behind the proof as it illustrates how the NIP is used.   Sketch of Proof  Our strategy is to construct two sequences which will narrow in on the number that we seek. With that in mind, we need to find a number such that and a number such that . (Remember that we can't say or .) There are many possibilities, but how about and You can check that these will satisfy  . Furthermore . This is the starting point.  The technique we will employ is often called a bisection technique, and is a useful way to set ourselves up for applying the NIP. Let be the midpoint of the interval . Then either we have or . In the case , we really want to take the place of since it is larger than , but still represents an underestimate for what would be the square root of . This thinking prompts the following move. If , we will relabel things by letting and . The situation looks like this on the number line.   In the other case where , we will relabel things by letting and . The situation looks like this on the number line.   In either case, we've reduced the length of the interval where the square root lies to half the size it was before. Stated in more specific terms, in either case we have the same results: and .  Now we play the same game, but instead we start with the interval . Let be the midpoint of . Then we have or . If , we relabel and . If , we relabel and . In either case, we end up with and .  Continuing in this manner, we will produce two sequences, and satisfying the following conditions:               ,          These sequences also satisfy the following property:      Properties 1-4 tell us that and satisfy all of the conditions of the NIP, so we can conclude that there must exist a real number such that for all . At this point, you should be able to use property 5. to show that as desired.      Nested Interval Property (NIP) square roots of integers, and  Nested Interval Property (NIP) implies the existence of square roots of integers Turn the above outline into a formal proof of Theorem .    The bisection method we employed in the proof of Theorem is pretty typical of how we will use the NIP, as taking midpoints ensures that we will create a sequence of nested intervals. We will employ this strategy in the proofs of the IVT and EVT. Deciding how to relabel the endpoints of our intervals will be determined by what we want to do with these two sequences of real numbers. This will typically lead to a fifth property, which will be crucial in proving that the guaranteed by the NIP does what we want it to do. Specifically, in the above example, we always wanted our candidate for to be in the interval . This judicious choice led to the extra Property 5:  . In applying the NIP to prove the IVT and EVT, we will find that properties 1-4 will stay the same. Property 5 is what will change based on the property we want to have.  Before we tackle the IVT and EVT, let's use the NIP to address an interesting question about the Harmonic Series. series Harmonic Series slow divergence of Recall that the Harmonic Series, , grows without bound, that is, . The question is how slowly does this series grow? For example, how many terms would it take before the series surpasses 100? 1000? 10000? Leonhard Euler Euler, Leonhard decided to tackle this problem in the following way. Euler decided to consider the . This limit is called Euler's constant and is denoted by . This says that for large, we have ln . If we could approximate , then we could replace the inequality with the more tractable inequality ln  and solve for in this. This should tell us roughly how many terms would need to be added in the Harmonic Series to surpass 100. Approximating with a computer is not too bad. We could make as large as we wish in ln to make closer approximations for . The real issue is, HOW DO WE KNOW THAT   ACTUALLY EXISTS?   You might want to say that obviously it should, but let us point out that as of the printing of this book (2013), it is not even known if is rational or irrational. So, in our opinion the existence of this limit is not so obvious. This is where the NIP will come into play; we will use it to show that this limit, in fact, exists. The details are in the following problem.   Euler, Leonhard Euler's constant existence of   The purpose of this problem is to show that exists.    Let . Use the following diagram to show      Let . Use a similar diagram to show that .    Let . Show that and satisfy the hypotheses of the nested interval property and use the NIP to conclude that there is a real number such that for all .    Conclude that .     Euler, Leonhard Euler's constant approximating   Use the fact that for all to approximate to three decimal places.     Euler, Leonhard Euler's constant slow convergence to   Use the fact that for large , to determine approximately how large must be to make .    Suppose we have a supercomputer which can add 10 trillion terms of the Harmonic Series per second. Approximately how many Earth Ages (the current age of the Earth) would it take for this computer to sum the Harmonic Series until it surpasses 100?    "
 },
 {
-  "id": "p-950",
+  "id": "IVTandEVT-Completeness-2",
   "level": "2",
-  "url": "IVTandEVT-Completeness.html#p-950",
+  "url": "IVTandEVT-Completeness.html#IVTandEVT-Completeness-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2476,18 +2476,18 @@ var ptx_lunr_docs = [
   "body": "Nested Interval Property of the Real Number System ( NIP )   Suppose we have two sequences of real numbers and satisfying the following conditions:      (this says that the sequence, , is non-decreasing)     (this says that the sequence, , is non-increasing)       ,           Then there exists a unique number such that for all .   "
 },
 {
-  "id": "problem-136",
+  "id": "IVTandEVT-Completeness-15",
   "level": "2",
-  "url": "IVTandEVT-Completeness.html#problem-136",
+  "url": "IVTandEVT-Completeness.html#IVTandEVT-Completeness-15",
   "type": "Problem",
   "number": "10.1.2",
   "title": "",
   "body": " Nested Interval Property (NIP) endpoints   Let be sequences as in the NIP. Show that for all , .   "
 },
 {
-  "id": "problem-137",
+  "id": "IVTandEVT-Completeness-19",
   "level": "2",
-  "url": "IVTandEVT-Completeness.html#problem-137",
+  "url": "IVTandEVT-Completeness.html#IVTandEVT-Completeness-19",
   "type": "Problem",
   "number": "10.1.3",
   "title": "",
@@ -2503,9 +2503,9 @@ var ptx_lunr_docs = [
   "body": "   Nested Interval Property (NIP) endpoints  limit of interval endpoints in the NIP Suppose that we have two sequences and satisfying all of the assumptions of the Nested Interval Property. If is the unique number such that for all , then and .   "
 },
 {
-  "id": "problem-138",
+  "id": "IVTandEVT-Completeness-23",
   "level": "2",
-  "url": "IVTandEVT-Completeness.html#problem-138",
+  "url": "IVTandEVT-Completeness.html#IVTandEVT-Completeness-23",
   "type": "Problem",
   "number": "10.1.5",
   "title": "",
@@ -2521,49 +2521,49 @@ var ptx_lunr_docs = [
   "body": " square roots exist   Suppose . There exists a real number such that .   "
 },
 {
-  "id": "proof-22",
+  "id": "IVTandEVT-Completeness-27",
   "level": "2",
-  "url": "IVTandEVT-Completeness.html#proof-22",
+  "url": "IVTandEVT-Completeness.html#IVTandEVT-Completeness-27",
   "type": "Proof",
   "number": "10.1.1",
   "title": "Sketch of Proof.",
   "body": " Sketch of Proof  Our strategy is to construct two sequences which will narrow in on the number that we seek. With that in mind, we need to find a number such that and a number such that . (Remember that we can't say or .) There are many possibilities, but how about and You can check that these will satisfy  . Furthermore . This is the starting point.  The technique we will employ is often called a bisection technique, and is a useful way to set ourselves up for applying the NIP. Let be the midpoint of the interval . Then either we have or . In the case , we really want to take the place of since it is larger than , but still represents an underestimate for what would be the square root of . This thinking prompts the following move. If , we will relabel things by letting and . The situation looks like this on the number line.   In the other case where , we will relabel things by letting and . The situation looks like this on the number line.   In either case, we've reduced the length of the interval where the square root lies to half the size it was before. Stated in more specific terms, in either case we have the same results: and .  Now we play the same game, but instead we start with the interval . Let be the midpoint of . Then we have or . If , we relabel and . If , we relabel and . In either case, we end up with and .  Continuing in this manner, we will produce two sequences, and satisfying the following conditions:               ,          These sequences also satisfy the following property:      Properties 1-4 tell us that and satisfy all of the conditions of the NIP, so we can conclude that there must exist a real number such that for all . At this point, you should be able to use property 5. to show that as desired.  "
 },
 {
-  "id": "problem-139",
+  "id": "IVTandEVT-Completeness-28",
   "level": "2",
-  "url": "IVTandEVT-Completeness.html#problem-139",
+  "url": "IVTandEVT-Completeness.html#IVTandEVT-Completeness-28",
   "type": "Problem",
   "number": "10.1.7",
   "title": "",
   "body": "   Nested Interval Property (NIP) square roots of integers, and  Nested Interval Property (NIP) implies the existence of square roots of integers Turn the above outline into a formal proof of Theorem .   "
 },
 {
-  "id": "problem-140",
+  "id": "IVTandEVT-Completeness-32",
   "level": "2",
-  "url": "IVTandEVT-Completeness.html#problem-140",
+  "url": "IVTandEVT-Completeness.html#IVTandEVT-Completeness-32",
   "type": "Problem",
   "number": "10.1.8",
   "title": "",
   "body": " Euler, Leonhard Euler's constant existence of   The purpose of this problem is to show that exists.    Let . Use the following diagram to show      Let . Use a similar diagram to show that .    Let . Show that and satisfy the hypotheses of the nested interval property and use the NIP to conclude that there is a real number such that for all .    Conclude that .   "
 },
 {
-  "id": "problem-141",
+  "id": "IVTandEVT-Completeness-33",
   "level": "2",
-  "url": "IVTandEVT-Completeness.html#problem-141",
+  "url": "IVTandEVT-Completeness.html#IVTandEVT-Completeness-33",
   "type": "Problem",
   "number": "10.1.9",
   "title": "",
   "body": " Euler, Leonhard Euler's constant approximating   Use the fact that for all to approximate to three decimal places.   "
 },
 {
-  "id": "problem-142",
+  "id": "IVTandEVT-Completeness-34",
   "level": "2",
-  "url": "IVTandEVT-Completeness.html#problem-142",
+  "url": "IVTandEVT-Completeness.html#IVTandEVT-Completeness-34",
   "type": "Problem",
   "number": "10.1.10",
   "title": "",
-  "body": " Euler, Leonhard Euler's constant slow convergence to   Use the fact that for large , to determine approximately how large must be to make .    Suppose we have a supercomputer which can add 10 trillion terms of the Harmonic Series per second. Approximately how many earth lifetimes would it take for this computer to sum the Harmonic Series until it surpasses 100?   "
+  "body": " Euler, Leonhard Euler's constant slow convergence to   Use the fact that for large , to determine approximately how large must be to make .    Suppose we have a supercomputer which can add 10 trillion terms of the Harmonic Series per second. Approximately how many Earth Ages (the current age of the Earth) would it take for this computer to sum the Harmonic Series until it surpasses 100?   "
 },
 {
   "id": "IVTandEVT-ProofOfIVT",
@@ -2575,9 +2575,9 @@ var ptx_lunr_docs = [
   "body": " Proof of the Intermediate Value Theorem  We now have all of the tools we need to prove the Intermediate Value Theorem ( IVT ).     Intermediate Value Theorem (IVT)    Intermediate Value Theorem (IVT) Suppose is continuous on and is any real number between and . Then there exists a real number such that .     Sketch of Proof  We have two cases to consider: and .  We will look at the case . Let and , so we have and . Let be the midpoint of and notice that we have either or . If , then we relabel and . If , then we relabel and . In either case, we end up with , , , and .  Now play the same game with the interval . If we keep playing this game, we will generate two sequences and , satisfying all of the conditions of the nested interval property. These sequences will also satisfy the following extra property:  . By the NIP, there exists a such that ,  . This should be the that we seek though this is not obvious. Specifically, we need to show that . This should be where the continuity of at and the extra property on and come into play.      Intermediate Value Theorem (IVT) the case Turn the ideas of the previous paragraphs into a formal proof of the IVT for the case .       Intermediate Value Theorem (IVT) the case We can modify the proof of the case into a proof of the IVT for the case . However, there is a sneakier way to prove this case by applying the IVT to the function . Do this to prove the IVT for the case .       polynomials with odd degree must have a root  Intermediate Value Theorem (IVT) a polynomial with odd degree must have a root Use the IVT to prove that any polynomial of odd degree must have a real root.    "
 },
 {
-  "id": "p-1003",
+  "id": "IVTandEVT-ProofOfIVT-2",
   "level": "2",
-  "url": "IVTandEVT-ProofOfIVT.html#p-1003",
+  "url": "IVTandEVT-ProofOfIVT.html#IVTandEVT-ProofOfIVT-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2593,36 +2593,36 @@ var ptx_lunr_docs = [
   "body": "   Intermediate Value Theorem (IVT)    Intermediate Value Theorem (IVT) Suppose is continuous on and is any real number between and . Then there exists a real number such that .   "
 },
 {
-  "id": "proof-23",
+  "id": "IVTandEVT-ProofOfIVT-4",
   "level": "2",
-  "url": "IVTandEVT-ProofOfIVT.html#proof-23",
+  "url": "IVTandEVT-ProofOfIVT.html#IVTandEVT-ProofOfIVT-4",
   "type": "Proof",
   "number": "10.2.1",
   "title": "Sketch of Proof.",
   "body": " Sketch of Proof  We have two cases to consider: and .  We will look at the case . Let and , so we have and . Let be the midpoint of and notice that we have either or . If , then we relabel and . If , then we relabel and . In either case, we end up with , , , and .  Now play the same game with the interval . If we keep playing this game, we will generate two sequences and , satisfying all of the conditions of the nested interval property. These sequences will also satisfy the following extra property:  . By the NIP, there exists a such that ,  . This should be the that we seek though this is not obvious. Specifically, we need to show that . This should be where the continuity of at and the extra property on and come into play.  "
 },
 {
-  "id": "problem-143",
+  "id": "IVTandEVT-ProofOfIVT-5",
   "level": "2",
-  "url": "IVTandEVT-ProofOfIVT.html#problem-143",
+  "url": "IVTandEVT-ProofOfIVT.html#IVTandEVT-ProofOfIVT-5",
   "type": "Problem",
   "number": "10.2.2",
   "title": "",
   "body": "   Intermediate Value Theorem (IVT) the case Turn the ideas of the previous paragraphs into a formal proof of the IVT for the case .   "
 },
 {
-  "id": "problem-144",
+  "id": "IVTandEVT-ProofOfIVT-6",
   "level": "2",
-  "url": "IVTandEVT-ProofOfIVT.html#problem-144",
+  "url": "IVTandEVT-ProofOfIVT.html#IVTandEVT-ProofOfIVT-6",
   "type": "Problem",
   "number": "10.2.3",
   "title": "",
   "body": "   Intermediate Value Theorem (IVT) the case We can modify the proof of the case into a proof of the IVT for the case . However, there is a sneakier way to prove this case by applying the IVT to the function . Do this to prove the IVT for the case .   "
 },
 {
-  "id": "problem-145",
+  "id": "IVTandEVT-ProofOfIVT-7",
   "level": "2",
-  "url": "IVTandEVT-ProofOfIVT.html#problem-145",
+  "url": "IVTandEVT-ProofOfIVT.html#IVTandEVT-ProofOfIVT-7",
   "type": "Problem",
   "number": "10.2.4",
   "title": "",
@@ -2656,27 +2656,27 @@ var ptx_lunr_docs = [
   "body": "   sequences subsequences Let be a strictly increasing sequence of positive integers; that is, . If is a sequence, then is called a subsequence of .   "
 },
 {
-  "id": "example-14",
+  "id": "IVTandEVT-BWT-8",
   "level": "2",
-  "url": "IVTandEVT-BWT.html#example-14",
+  "url": "IVTandEVT-BWT.html#IVTandEVT-BWT-8",
   "type": "Example",
   "number": "10.3.3",
   "title": "",
   "body": " sequences subsequences   Given the sequence , the following are subsequences.               itself.   "
 },
 {
-  "id": "example-15",
+  "id": "IVTandEVT-BWT-9",
   "level": "2",
-  "url": "IVTandEVT-BWT.html#example-15",
+  "url": "IVTandEVT-BWT.html#IVTandEVT-BWT-9",
   "type": "Example",
   "number": "10.3.4",
   "title": "",
   "body": " sequences not subsequences   The following are NOT subsequences.                  "
 },
 {
-  "id": "problem-146",
+  "id": "IVTandEVT-BWT-11",
   "level": "2",
-  "url": "IVTandEVT-BWT.html#problem-146",
+  "url": "IVTandEVT-BWT.html#IVTandEVT-BWT-11",
   "type": "Problem",
   "number": "10.3.5",
   "title": "",
@@ -2692,27 +2692,27 @@ var ptx_lunr_docs = [
   "body": "   The Bolzano-Weierstrass Theorem    Bolzano-Weierstrass Theorem Let be a sequence of real numbers such that ,  . Then there exists and a subsequence , such that .   "
 },
 {
-  "id": "proof-24",
+  "id": "IVTandEVT-BWT-17",
   "level": "2",
-  "url": "IVTandEVT-BWT.html#proof-24",
+  "url": "IVTandEVT-BWT.html#IVTandEVT-BWT-17",
   "type": "Proof",
   "number": "10.3.1",
   "title": "Sketch of a Proof of the Bolzano-Weierstrass Theorem.",
   "body": " Sketch of a Proof of the Bolzano-Weierstrass Theorem  Suppose we have our sequence such that ,  . To find our for the subsequence to converge to we will use the NIP. Since we are already using as our original sequence, we will need to use different letters in setting ourselves up for the NIP. With this in mind, let and , and notice that for infinitely many . (This is, in fact true for all , but you'll see why we said it the way we did.) Let be the midpoint of and notice that either for infinitely many or for infinitely many . If for infinitely many , then we relabel and . If for infinitely many , then relabel and . In either case, we get , , and for infinitely many .  Now we consider the interval and let be the midpoint of . Since for infinitely many , then either for infinitely many or for infinitely many . If for infinitely many , then we relabel and . If for infinitely many , then we relabel and . In either case, we get , , and for infinitely many .  If we continue in this manner, we will produce two sequences and with the following properties:                        For each , for infinitely many      By properties 1-5 and the NIP, there exists a unique such that , for all . In particular, .  We have our . Now we need to construct a subsequence converging to it. Since for infinitely many , choose an integer such that . Since for infinitely many , choose an integer such that . (Notice that to make a subsequence it is crucial that , and this is why we needed to insist that for infinitely many .) Continuing in this manner, we should be able to build a subsequence that will converge to . You can supply the details in the following problem.  "
 },
 {
-  "id": "problem-147",
+  "id": "IVTandEVT-BWT-18",
   "level": "2",
-  "url": "IVTandEVT-BWT.html#problem-147",
+  "url": "IVTandEVT-BWT.html#IVTandEVT-BWT-18",
   "type": "Problem",
   "number": "10.3.7",
   "title": "",
   "body": "   Bolzano-Weierstrass Theorem (BWT) Turn the ideas of the above outline into a formal proof of the Bolzano-Weierstrass Theorem.   "
 },
 {
-  "id": "problem-148",
+  "id": "IVTandEVT-BWT-19",
   "level": "2",
-  "url": "IVTandEVT-BWT.html#problem-148",
+  "url": "IVTandEVT-BWT.html#IVTandEVT-BWT-19",
   "type": "Problem",
   "number": "10.3.8",
   "title": "",
@@ -2728,9 +2728,9 @@ var ptx_lunr_docs = [
   "body": " The Supremum and the Extreme Value Theorem   Theorem says that a continuous function on a closed, bounded interval must be bounded. Boundedness, in and of itself, does not ensure the existence of a maximum or minimum. We must also have a closed, bounded interval. To illustrate this, consider the continuous function tan defined on the (unbounded) interval .   This function is bounded between and , but it does not attain a maximum or minimum as the lines are horizontal asymptotes. Notice that if we restricted the domain to a closed, bounded interval then it would attain its extreme values on that interval (as guaranteed by the EVT ).  To find a maximum we need to find the smallest possible upper bound for the range of the function. This prompts the following definitions.     Upper Bound Let and let be a real number. We say that is an upper bound of provided for all .    For example, if , then any with would be an upper bound of . Furthermore, the fact that is not an element of the set is immaterial. Indeed, if , then any with would still be an upper bound of . Notice that, in general, if a set has an upper bound, then it has infinitely many since any number larger than that upper bound would also be an upper bound. However, there is something special about the smallest upper bound.  Least Upper Bound Property ( LUBP )  Least Upper Bound Property (LUBP)   Let and let be a real number. We say that is the least upper bound of provided      for all . ( is an upper bound of )    If for all , then . (Any upper bound of is at least as big as .)     In this case, we also say that  is the supremum of and we write .    Notice that the definition really says that is the smallest upper bound of . Also notice that the second condition can be replaced by its contrapositive so we can say that if and only if          If then there exists such that .     The second condition says that if a number is less than , then it can't be an upper bound, so that really is the smallest upper bound.  Also notice that the supremum of the set may or may not be in the set itself. This is illustrated by the examples above as in both cases, and . Obviously, a set which is not bounded above such as cannot have a supremum. However, for non-empty sets which are bounded above, we have the following.  The Least Upper Bound Property ( LUBP )  Least Upper Bound Property (LUBP)   Let be a non-empty subset of which is bounded above. Then has a supremum.     Sketch of Proof  Since , then there exists . Since is bounded above then it has an upper bound, say . We will set ourselves up to use the Nested Interval Property. With this in mind, let and and notice that  such that (namely, itself) and , . You probably guessed what's coming next: let be the midpoint of . Notice that either or  such that . In the former case, we relabel, letting and . In the latter case, we let and . In either case, we end up with , , and  such that and , . If we continue this process, we end up with two sequences, and , satisfying the following conditions:               ,             such that and , ,     By properties 1-5 and the NIP there exists such that . We will leave it to you to use property 5 to show that .      Nested Interval Property (NIP) implies the LUBP Complete the above ideas to provide a formal proof of Theorem .    Notice that we really used the fact that was non-empty and bounded above in the proof of Theorem . This makes sense, since a set which is not bounded above cannot possibly have a least upper bound. In fact, any real number is an upper bound of the empty set so that the empty set would not have a least upper bound.  The following corollary to Theorem can be very useful.    Let be a bounded, increasing sequence of real numbers. That is, . Then converges to some real number .       sequences bounded and non-decreasing Prove Corollary .    Let . To show that , let Note that is not an upper bound. You take it from here!        value of Consider the following curious expression . We will use Corollary to show that this actually converges to some real number. After we know it converges we can actually compute what it is. Of course to do so, we need to define things a bit more precisely. With this in mind consider the following sequence defined as follows:  .   Use induction to show that for .    Use the result from part (a) to show that for .    From Corollary , we have that must converge to some number . Use the fact that must converge to as well to compute what must be.       We now have all the tools we need to tackle the Extreme Value Theorem.     Extreme Value Theorem ( EVT )    Extreme Value Theorem (EVT) Suppose is continuous on . Then there exists such that , for all .     Sketch of Proof  We will first show that attains its maximum. To this end, recall that Theorem tells us that is a bounded set. By the LUBP, must have a least upper bound which we will label , so that . This says that ,for all . All we need to do now is find a with . With this in mind, notice that since , then for any positive integer , is not an upper bound of . Thus there exists with . Now, by the Bolzano-Weierstrass Theorem, has a convergent subsequence converging to some . Using the continuity of at , you should be able to show that . To find the minimum of , find the maximum of .      Extreme Value Theorem (EVT) Formalize the above ideas into a proof of Theorem .    Notice that we used the NIP to prove both the Bolzano-Weierstrass Theorem and the LUBP. This is really unavoidable, as it turns out that all of those statements are equivalent in the sense that any one of them can be taken as the completeness axiom for the real number system and the others proved as theorems. This is not uncommon in mathematics, as people tend to gravitate toward ideas that suit the particular problem they are working on. In this case, people realized at some point that they needed some sort of completeness property for the real number system to prove various theorems. Each individual's formulation of completeness fit in with his understanding of the problem at hand. Only in hindsight do we see that they were really talking about the same concept: the completeness of the real number system. In point of fact, most modern textbooks use the LUBP as the axiom of completeness and prove all other formulations as theorems. We will finish this section by showing that either the Bolzano-Weierstrass Theorem or the LUBP can be used to prove the NIP. This says that they are all equivalent and that any one of them could be taken as the completeness axiom.     Bolzano-Weierstrass Theorem (BWT) implies the NIP Use the Bolzano-Weierstrass Theorem to prove the NIP. That is, assume that the Bolzano-Weierstrass Theorem holds and suppose we have two sequences of real numbers, and , satisfying:                   .     Prove that there is a real number such that , for all .    Since the Bolzano-Weierstrass Theorem and the Nested Interval Property are equivalent, it follows that the Bolzano-Weierstrass Theorem will not work for the rational number system.     sequences find a bounded sequence of rational numbers such that no subsequence converges to a rational number Find a bounded sequence of rational numbers such that no subsequence of it converges to a rational number.       Least Upper Bound Property (LUBP) implies the Nested Interval Property (NIP) Use the Least Upper Bound Property to prove the Nested Interval Property. That is, assume that every non-empty subset of the real numbers which is bounded above has a least upper bound; and suppose that we have two sequences of real numbers and , satisfying:                   .     Prove that there exists a real number such that , for all n. (Again, the will, of necessity, be unique, but don't worry about that.)     Corollary might work well here.       Least Upper Bound Property (LUBP) doesn't hold in Since the LUBP is equivalent to the NIP it does not hold for the rational number system. Demonstrate this by finding a non-empty set of rational numbers which is bounded above, but whose supremum is an irrational number.    We have the machinery in place to clean up a matter that was introduced in Chapter . If you recall (or look back) we introduced the Archimedean Property of the real number system. This property says that given any two positive real numbers , there exists a positive integer with . As we mentioned in Chapter , this was taken to be intuitively obvious. The analogy we used there was to emptying an ocean with a teaspoon provided we are willing to use it enough times . The completeness of the real number system allows us to prove it as a formal theorem.   Archimedean Property    Archimedean Property of   Given any positive real numbers and , there exists a positive integer , such that .     Least Upper Bound Property (LUBP) implies the Archimedean Property  Archimedean Property and LUBP   Prove Theorem .    Assume that there are positive real numbers and , such that  . Then would be bounded above by . Let and consider .    Given what we've been doing, one might ask if the Archimedean Property is equivalent to the LUBP (and thus could be taken as an axiom). The answer lies in the following problem.     Archimedean Property and  Does satisfy the Archimedean Property and what does this have to do with the question of taking the Archimedean Property as an axiom of completeness?    "
 },
 {
-  "id": "p-1048",
+  "id": "IVTandEVT-SupremumAndEVT-4",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#p-1048",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-4",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -2764,18 +2764,18 @@ var ptx_lunr_docs = [
   "body": "The Least Upper Bound Property ( LUBP )  Least Upper Bound Property (LUBP)   Let be a non-empty subset of which is bounded above. Then has a supremum.   "
 },
 {
-  "id": "proof-25",
+  "id": "IVTandEVT-SupremumAndEVT-13",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#proof-25",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-13",
   "type": "Proof",
   "number": "10.4.1",
   "title": "Sketch of Proof.",
   "body": " Sketch of Proof  Since , then there exists . Since is bounded above then it has an upper bound, say . We will set ourselves up to use the Nested Interval Property. With this in mind, let and and notice that  such that (namely, itself) and , . You probably guessed what's coming next: let be the midpoint of . Notice that either or  such that . In the former case, we relabel, letting and . In the latter case, we let and . In either case, we end up with , , and  such that and , . If we continue this process, we end up with two sequences, and , satisfying the following conditions:               ,             such that and , ,     By properties 1-5 and the NIP there exists such that . We will leave it to you to use property 5 to show that .  "
 },
 {
-  "id": "problem-149",
+  "id": "IVTandEVT-SupremumAndEVT-14",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#problem-149",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-14",
   "type": "Problem",
   "number": "10.4.4",
   "title": "",
@@ -2791,18 +2791,18 @@ var ptx_lunr_docs = [
   "body": "  Let be a bounded, increasing sequence of real numbers. That is, . Then converges to some real number .   "
 },
 {
-  "id": "problem-150",
+  "id": "IVTandEVT-SupremumAndEVT-18",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#problem-150",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-18",
   "type": "Problem",
   "number": "10.4.6",
   "title": "",
   "body": "   sequences bounded and non-decreasing Prove Corollary .    Let . To show that , let Note that is not an upper bound. You take it from here!   "
 },
 {
-  "id": "problem-151",
+  "id": "IVTandEVT-SupremumAndEVT-19",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#problem-151",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-19",
   "type": "Problem",
   "number": "10.4.7",
   "title": "",
@@ -2818,54 +2818,54 @@ var ptx_lunr_docs = [
   "body": "   Extreme Value Theorem ( EVT )    Extreme Value Theorem (EVT) Suppose is continuous on . Then there exists such that , for all .   "
 },
 {
-  "id": "proof-26",
+  "id": "IVTandEVT-SupremumAndEVT-22",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#proof-26",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-22",
   "type": "Proof",
   "number": "10.4.2",
   "title": "Sketch of Proof.",
   "body": " Sketch of Proof  We will first show that attains its maximum. To this end, recall that Theorem tells us that is a bounded set. By the LUBP, must have a least upper bound which we will label , so that . This says that ,for all . All we need to do now is find a with . With this in mind, notice that since , then for any positive integer , is not an upper bound of . Thus there exists with . Now, by the Bolzano-Weierstrass Theorem, has a convergent subsequence converging to some . Using the continuity of at , you should be able to show that . To find the minimum of , find the maximum of .  "
 },
 {
-  "id": "problem-152",
+  "id": "IVTandEVT-SupremumAndEVT-23",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#problem-152",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-23",
   "type": "Problem",
   "number": "10.4.9",
   "title": "",
   "body": "   Extreme Value Theorem (EVT) Formalize the above ideas into a proof of Theorem .   "
 },
 {
-  "id": "problem-153",
+  "id": "IVTandEVT-SupremumAndEVT-25",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#problem-153",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-25",
   "type": "Problem",
   "number": "10.4.10",
   "title": "",
   "body": "   Bolzano-Weierstrass Theorem (BWT) implies the NIP Use the Bolzano-Weierstrass Theorem to prove the NIP. That is, assume that the Bolzano-Weierstrass Theorem holds and suppose we have two sequences of real numbers, and , satisfying:                   .     Prove that there is a real number such that , for all .   "
 },
 {
-  "id": "problem-154",
+  "id": "IVTandEVT-SupremumAndEVT-27",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#problem-154",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-27",
   "type": "Problem",
   "number": "10.4.11",
   "title": "",
   "body": "   sequences find a bounded sequence of rational numbers such that no subsequence converges to a rational number Find a bounded sequence of rational numbers such that no subsequence of it converges to a rational number.   "
 },
 {
-  "id": "problem-155",
+  "id": "IVTandEVT-SupremumAndEVT-28",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#problem-155",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-28",
   "type": "Problem",
   "number": "10.4.12",
   "title": "",
   "body": "   Least Upper Bound Property (LUBP) implies the Nested Interval Property (NIP) Use the Least Upper Bound Property to prove the Nested Interval Property. That is, assume that every non-empty subset of the real numbers which is bounded above has a least upper bound; and suppose that we have two sequences of real numbers and , satisfying:                   .     Prove that there exists a real number such that , for all n. (Again, the will, of necessity, be unique, but don't worry about that.)     Corollary might work well here.   "
 },
 {
-  "id": "problem-156",
+  "id": "IVTandEVT-SupremumAndEVT-29",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#problem-156",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-29",
   "type": "Problem",
   "number": "10.4.13",
   "title": "",
@@ -2881,18 +2881,18 @@ var ptx_lunr_docs = [
   "body": " Archimedean Property    Archimedean Property of   Given any positive real numbers and , there exists a positive integer , such that .   "
 },
 {
-  "id": "problem-157",
+  "id": "IVTandEVT-SupremumAndEVT-32",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#problem-157",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-32",
   "type": "Problem",
   "number": "10.4.15",
   "title": "",
   "body": " Least Upper Bound Property (LUBP) implies the Archimedean Property  Archimedean Property and LUBP   Prove Theorem .    Assume that there are positive real numbers and , such that  . Then would be bounded above by . Let and consider .   "
 },
 {
-  "id": "problem-158",
+  "id": "IVTandEVT-SupremumAndEVT-34",
   "level": "2",
-  "url": "IVTandEVT-SupremumAndEVT.html#problem-158",
+  "url": "IVTandEVT-SupremumAndEVT.html#IVTandEVT-SupremumAndEVT-34",
   "type": "Problem",
   "number": "10.4.16",
   "title": "",
@@ -2908,27 +2908,27 @@ var ptx_lunr_docs = [
   "body": " Additional Problems     Greatest Lower Bound Property (GLBP) definition of Mimic the definitions of an upper bound of a set and the least upper bound (supremum) of a set to give definitions for a lower bound of a set and the greatest lower bound (infimum) of a set.   Note : The infimum of a set is denoted by .       Least Upper Bound Property (LUBP) identifying suprema and infima Find the least upper bound (supremum) and greatest lower bound (infimum) of the following sets of real numbers, if they exist. (If one does not exist then say so.)         is rational and                    The empty set           Least Upper Bound Property (LUBP)  is an upper bound of if and only if is a lower bound of Let and let .   Prove that is an upper bound of if and only if is a lower bound of .    Prove that if and only if .       "
 },
 {
-  "id": "problem-159",
+  "id": "IVTandEVT-AddProb-2",
   "level": "2",
-  "url": "IVTandEVT-AddProb.html#problem-159",
+  "url": "IVTandEVT-AddProb.html#IVTandEVT-AddProb-2",
   "type": "Problem",
   "number": "10.5.1",
   "title": "",
   "body": "   Greatest Lower Bound Property (GLBP) definition of Mimic the definitions of an upper bound of a set and the least upper bound (supremum) of a set to give definitions for a lower bound of a set and the greatest lower bound (infimum) of a set.   Note : The infimum of a set is denoted by .   "
 },
 {
-  "id": "problem-160",
+  "id": "IVTandEVT-AddProb-3",
   "level": "2",
-  "url": "IVTandEVT-AddProb.html#problem-160",
+  "url": "IVTandEVT-AddProb.html#IVTandEVT-AddProb-3",
   "type": "Problem",
   "number": "10.5.2",
   "title": "",
   "body": "   Least Upper Bound Property (LUBP) identifying suprema and infima Find the least upper bound (supremum) and greatest lower bound (infimum) of the following sets of real numbers, if they exist. (If one does not exist then say so.)         is rational and                    The empty set       "
 },
 {
-  "id": "problem-161",
+  "id": "IVTandEVT-AddProb-4",
   "level": "2",
-  "url": "IVTandEVT-AddProb.html#problem-161",
+  "url": "IVTandEVT-AddProb.html#IVTandEVT-AddProb-4",
   "type": "Problem",
   "number": "10.5.3",
   "title": "",
@@ -2989,27 +2989,27 @@ var ptx_lunr_docs = [
   "body": "   uniform convergence continuous functions and  continuous functions uniform convergence and  continuous functions uniform limit of continuous functions is continuous Consider a sequence of functions which are all continuous on an interval . Suppose on . Then must be continuous on .   "
 },
 {
-  "id": "proof-27",
+  "id": "PowerSeriesRedux-UnifConv-17",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv.html#proof-27",
+  "url": "PowerSeriesRedux-UnifConv.html#PowerSeriesRedux-UnifConv-17",
   "type": "Proof",
   "number": "11.1.1",
   "title": "Sketch of Proof.",
   "body": " Sketch of Proof  Let and let . The idea is to use uniform convergence to replace with one of the known continuous functions . Specifically, by uncancelling, we can write   If we choose large enough, then we can make the first and last terms as small as we wish, noting that the uniform convergence makes the first term uniformly small for all . Once we have a specific then we can use the continuity of to find a such that the middle term is small whenever is within of .  "
 },
 {
-  "id": "problem-164",
+  "id": "PowerSeriesRedux-UnifConv-18",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv.html#problem-164",
+  "url": "PowerSeriesRedux-UnifConv.html#PowerSeriesRedux-UnifConv-18",
   "type": "Problem",
   "number": "11.1.6",
   "title": "",
   "body": "   uniform convergence continuous functions and Provide a formal proof of Theorem based on the above ideas.   "
 },
 {
-  "id": "problem-165",
+  "id": "PowerSeriesRedux-UnifConv-19",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv.html#problem-165",
+  "url": "PowerSeriesRedux-UnifConv.html#PowerSeriesRedux-UnifConv-19",
   "type": "Problem",
   "number": "11.1.7",
   "title": "",
@@ -3034,18 +3034,18 @@ var ptx_lunr_docs = [
   "body": "   uniform convergence integration and Suppose and are integrable and on . Then    "
 },
 {
-  "id": "problem-166",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-2-3",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-166",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-3",
   "type": "Problem",
   "number": "11.2.2",
   "title": "",
   "body": "   uniform convergence integration and Prove Theorem .    For we need to make for all .   "
 },
 {
-  "id": "problem-167",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-167",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5",
   "type": "Problem",
   "number": "11.2.3",
   "title": "",
@@ -3061,9 +3061,9 @@ var ptx_lunr_docs = [
   "body": "  If converges uniformly to on an interval containing and then .   "
 },
 {
-  "id": "problem-168",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-2-9",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-168",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-9",
   "type": "Problem",
   "number": "11.2.5",
   "title": "",
@@ -3079,9 +3079,9 @@ var ptx_lunr_docs = [
   "body": " pointwise convergence derivative and  differentiation of the pointwise limit of functions   Suppose for every  is differentiable, is continuous, and on an interval, . Then is differentiable and on .   "
 },
 {
-  "id": "problem-169",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-2-12",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-169",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-12",
   "type": "Problem",
   "number": "11.2.7",
   "title": "",
@@ -3097,9 +3097,9 @@ var ptx_lunr_docs = [
   "body": "  If converges pointwise to on an interval containing and and converges uniformly on an interval containing and then .   "
 },
 {
-  "id": "problem-170",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-2-15",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-170",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-15",
   "type": "Problem",
   "number": "11.2.9",
   "title": "",
@@ -3124,9 +3124,9 @@ var ptx_lunr_docs = [
   "body": "   sequences convergence  convergence of a sequence implies Cauchy sequence Suppose is a sequence of real numbers which converges to . Then is a Cauchy sequence.   "
 },
 {
-  "id": "problem-171",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-3-7",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-171",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-7",
   "type": "Problem",
   "number": "11.2.12",
   "title": "",
@@ -3142,9 +3142,9 @@ var ptx_lunr_docs = [
   "body": "  Suppose  is a Cauchy sequence. Then there exists such that for all .   "
 },
 {
-  "id": "problem-172",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-3-10",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-172",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-10",
   "type": "Problem",
   "number": "11.2.14",
   "title": "",
@@ -3160,9 +3160,9 @@ var ptx_lunr_docs = [
   "body": "   Cauchy sequences converge    sequences Cauchy sequences convergence of Suppose is a Cauchy sequence of real numbers. There exists a real number such that .   "
 },
 {
-  "id": "proof-28",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-3-12",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#proof-28",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-12",
   "type": "Proof",
   "number": "11.2.1.1",
   "title": "Sketch of Proof.",
@@ -3196,9 +3196,9 @@ var ptx_lunr_docs = [
   "body": " sequences Cauchy sequences convergence of is equivalent to the NIP   Prove Theorem .    If we start with two sequences and , satisfying all of the conditions of the NIP, you should be able to show that these are both Cauchy sequences.   "
 },
 {
-  "id": "problem-175",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-3-20",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-175",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-20",
   "type": "Problem",
   "number": "11.2.19",
   "title": "",
@@ -3214,9 +3214,9 @@ var ptx_lunr_docs = [
   "body": "Cauchy Criterion  series Cauchy sequences Cauchy Criterion   The series converges if and only if  ,  such that if then .   "
 },
 {
-  "id": "problem-176",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-3-23",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-176",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-23",
   "type": "Problem",
   "number": "11.2.21",
   "title": "",
@@ -3232,9 +3232,9 @@ var ptx_lunr_docs = [
   "body": "   The th Term Test    series th term test  divergence of a series th term test Show that if converges then .   "
 },
 {
-  "id": "problem-178",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-3-26",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-178",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-26",
   "type": "Problem",
   "number": "11.2.23",
   "title": "The Strong Cauchy Criterion.",
@@ -3250,9 +3250,9 @@ var ptx_lunr_docs = [
   "body": "   Comparison Test    series Comparison Test Suppose for all . If converges then also converges.   "
 },
 {
-  "id": "problem-179",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-3-29",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-179",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-29",
   "type": "Problem",
   "number": "11.2.25",
   "title": "",
@@ -3277,18 +3277,18 @@ var ptx_lunr_docs = [
   "body": "  If converges absolutely, then converges.   "
 },
 {
-  "id": "problem-180",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-3-34",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-180",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-34",
   "type": "Problem",
   "number": "11.2.28",
   "title": "",
   "body": "   convergence of a series absolute convergence implies convergence Show that Corollary is a direct consequence of Theorem .   "
 },
 {
-  "id": "problem-181",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-3-35",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-181",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-35",
   "type": "Problem",
   "number": "11.2.29",
   "title": "",
@@ -3304,18 +3304,18 @@ var ptx_lunr_docs = [
   "body": "   series rearrangements  series absolute convergence of rearrangements Suppose converges absolutely and let . Then any rearrangement of must converge to .   "
 },
 {
-  "id": "proof-29",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-3-38",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#proof-29",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-38",
   "type": "Proof",
   "number": "11.2.1.2",
   "title": "Sketch of Proof.",
   "body": " Sketch of Proof  We will first show that this result is true in the case where . If represents a rearrangement of , then notice that the sequence of partial sums is an increasing sequence which is bounded by . By Corollary of Chapter , this sequence must converge to some number and . Furthermore is also a rearrangement of . Thus the result holds for this special case. (Why?) For the general case, notice that and that and are both convergent series with nonnegative terms. By the special case  and  .  "
 },
 {
-  "id": "problem-182",
+  "id": "PowerSeriesRedux-UnifConv-IntsAndDerivs-3-39",
   "level": "2",
-  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#problem-182",
+  "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-39",
   "type": "Problem",
   "number": "11.2.31",
   "title": "",
@@ -3340,9 +3340,9 @@ var ptx_lunr_docs = [
   "body": "   power series converge inside radius of convergence Suppose converges for some nonzero real number . Then converges absolutely for all such that .   "
 },
 {
-  "id": "problem-183",
+  "id": "PowerSeriesRedux-RadiusOfConv-6",
   "level": "2",
-  "url": "PowerSeriesRedux-RadiusOfConv.html#problem-183",
+  "url": "PowerSeriesRedux-RadiusOfConv.html#PowerSeriesRedux-RadiusOfConv-6",
   "type": "Problem",
   "number": "11.3.2",
   "title": "",
@@ -3358,9 +3358,9 @@ var ptx_lunr_docs = [
   "body": "  Suppose diverges for some real number . Then diverges for all such that .   "
 },
 {
-  "id": "problem-184",
+  "id": "PowerSeriesRedux-RadiusOfConv-8",
   "level": "2",
-  "url": "PowerSeriesRedux-RadiusOfConv.html#problem-184",
+  "url": "PowerSeriesRedux-RadiusOfConv.html#PowerSeriesRedux-RadiusOfConv-8",
   "type": "Problem",
   "number": "11.3.4",
   "title": "",
@@ -3376,36 +3376,36 @@ var ptx_lunr_docs = [
   "body": "   The Weierstrass- Test    Weierstrass- Test Let be a sequence of functions defined on and suppose that is a sequence of nonnegative real numbers such that .  If converges then converges uniformly on to some function (which we will denote by ).   "
 },
 {
-  "id": "proof-30",
+  "id": "PowerSeriesRedux-RadiusOfConv-11",
   "level": "2",
-  "url": "PowerSeriesRedux-RadiusOfConv.html#proof-30",
+  "url": "PowerSeriesRedux-RadiusOfConv.html#PowerSeriesRedux-RadiusOfConv-11",
   "type": "Proof",
   "number": "11.3.1",
   "title": "Sketch of Proof.",
   "body": " Sketch of Proof  Since the crucial feature of the theorem is the function that our series converges to, our plan of attack is to first define and then show that our series, , converges to it uniformly.  First observe that for any , converges by the Comparison Test (in fact it converges absolutely) to some number we will denote by . This actually defines the function for all . It follows that converges pointwise to .  Next, let be given. Notice that since converges, say to , then there is a real number, , such that if , then .  You should be able to use this to show that if , then .  "
 },
 {
-  "id": "problem-185",
+  "id": "PowerSeriesRedux-RadiusOfConv-12",
   "level": "2",
-  "url": "PowerSeriesRedux-RadiusOfConv.html#problem-185",
+  "url": "PowerSeriesRedux-RadiusOfConv.html#PowerSeriesRedux-RadiusOfConv-12",
   "type": "Problem",
   "number": "11.3.6",
   "title": "",
   "body": "   Weierstrass- Test Use the ideas above to provide a formal proof of Theorem .   "
 },
 {
-  "id": "problem-186",
+  "id": "PowerSeriesRedux-RadiusOfConv-13",
   "level": "2",
-  "url": "PowerSeriesRedux-RadiusOfConv.html#problem-186",
+  "url": "PowerSeriesRedux-RadiusOfConv.html#PowerSeriesRedux-RadiusOfConv-13",
   "type": "Problem",
   "number": "11.3.7",
   "title": "",
   "body": " uniform convergence Fourier Series and  Fourier Series uniform convergence and   Referring back to equation , show that the Fourier series converges uniformly on .    Does its differentiated series converge uniformly on Explain.   "
 },
 {
-  "id": "problem-187",
+  "id": "PowerSeriesRedux-RadiusOfConv-14",
   "level": "2",
-  "url": "PowerSeriesRedux-RadiusOfConv.html#problem-187",
+  "url": "PowerSeriesRedux-RadiusOfConv.html#PowerSeriesRedux-RadiusOfConv-14",
   "type": "Problem",
   "number": "11.3.8",
   "title": "",
@@ -3421,9 +3421,9 @@ var ptx_lunr_docs = [
   "body": "   power series converge uniformly on their interval of convergence Suppose has radius of convergence (where could be as well). Let be any nonnegative real number with . Then converges uniformly on .   "
 },
 {
-  "id": "problem-188",
+  "id": "PowerSeriesRedux-RadiusOfConv-17",
   "level": "2",
-  "url": "PowerSeriesRedux-RadiusOfConv.html#problem-188",
+  "url": "PowerSeriesRedux-RadiusOfConv.html#PowerSeriesRedux-RadiusOfConv-17",
   "type": "Problem",
   "number": "11.3.10",
   "title": "",
@@ -3448,9 +3448,9 @@ var ptx_lunr_docs = [
   "body": "   power series term by term derivative of Suppose has a radius of convergence and let . Then converges.   "
 },
 {
-  "id": "problem-190",
+  "id": "PowerSeriesRedux-RadiusOfConv-22",
   "level": "2",
-  "url": "PowerSeriesRedux-RadiusOfConv.html#problem-190",
+  "url": "PowerSeriesRedux-RadiusOfConv.html#PowerSeriesRedux-RadiusOfConv-22",
   "type": "Problem",
   "number": "11.3.13",
   "title": "",
@@ -3466,9 +3466,9 @@ var ptx_lunr_docs = [
   "body": " Boundary Issues and Abel's Theorem  Summarizing our results, we see that any power series has a radius of convergence such that converges absolutely when and diverges when . Furthermore, the convergence is uniform on any closed interval which tells us that whatever the power series converges to must be a continuous function on . Lastly, if for , then for and for .  Thus power series are very well behaved within their interval of convergence, and our cavalier approach from Chapter is justified, EXCEPT for one issue. If you go back to Problem of Chapter , you see that we used the geometric series to obtain the series, . We substituted into this to obtain . Unfortunately, our integration was only guaranteed on a closed subinterval of the interval where the convergence was uniform and we substituted in . We danced on the boundary in other places as well, including when we said that .  The fact is that for a power series with radius of convergence , we know what happens when and when . But we've never talked about what happens when . That is because there is no systematic approach to this boundary problem. For example, consider the three series .  They are all related in that we started with the geometric series and integrated twice, thus they all have radius of convergence equal to 1. Their behavior on the boundary, i.e., when , is another story. The first series diverges when , the third series converges when . The second series converges when and diverges when .  Even with the unpredictability of a power series at the endpoints of its interval of convergence, the Weierstrass- test does give us some hope of uniform convergence.   power series Weierstrass- Test and  power series converge uniformly inside their radius of convergence   Suppose the power series has radius of convergence and the series converges absolutely. Then converges uniformly on .    For , .    Unfortunately, this result doesn't apply to the integrals we mentioned as the convergence at the endpoints is not absolute. Nonetheless, the integrations we performed in Chapter are still legitimate. This is due to the following theorem by Abel which extends uniform convergence to the endpoints of the interval of convergence even if the convergence at an endpoint is only conditional. Abel did not use the term uniform convergence, as it hadn't been defined yet, but the ideas involved are his.     Abel's Theorem    Abel, Niels Henrik Abel's Theorem Suppose the power series has radius of convergence and the series converges. Then converges uniformly on .    The proof of this is not intuitive, but involves a clever technique known as Abel's Partial Summation Formula.    Let be real numbers and let . Then .     Abel, Niels Henrik Abel's Partial Summation Formula   Prove Lemma .    For , .       Abel's Lemma   Let be real numbers with and let . Suppose for all . Then .       Abel, Niels Henrik Abel's Lemma Prove Lemma .     Abel, Niels Henrik Abel's Theorem   Prove Theorem .    Let . Since converges then by the Cauchy Criterion, there exists such that if then . Let . By Lemma , .  Thus for , ,       Suppose the power series has radius of convergence and the series converges. Then converges uniformly on .     power series uniform convergence of  uniform convergence power series and  uniform convergence of power series at the endpoints of the interval of convergence   Prove Corollary .    Consider .    "
 },
 {
-  "id": "problem-191",
+  "id": "PowerSeriesRedux-AbelsThm-7",
   "level": "2",
-  "url": "PowerSeriesRedux-AbelsThm.html#problem-191",
+  "url": "PowerSeriesRedux-AbelsThm.html#PowerSeriesRedux-AbelsThm-7",
   "type": "Problem",
   "number": "11.4.1",
   "title": "",
@@ -3493,9 +3493,9 @@ var ptx_lunr_docs = [
   "body": "  Let be real numbers and let . Then .   "
 },
 {
-  "id": "problem-192",
+  "id": "PowerSeriesRedux-AbelsThm-12",
   "level": "2",
-  "url": "PowerSeriesRedux-AbelsThm.html#problem-192",
+  "url": "PowerSeriesRedux-AbelsThm.html#PowerSeriesRedux-AbelsThm-12",
   "type": "Problem",
   "number": "11.4.4",
   "title": "",
@@ -3511,18 +3511,18 @@ var ptx_lunr_docs = [
   "body": "   Abel's Lemma   Let be real numbers with and let . Suppose for all . Then .   "
 },
 {
-  "id": "problem-193",
+  "id": "PowerSeriesRedux-AbelsThm-14",
   "level": "2",
-  "url": "PowerSeriesRedux-AbelsThm.html#problem-193",
+  "url": "PowerSeriesRedux-AbelsThm.html#PowerSeriesRedux-AbelsThm-14",
   "type": "Problem",
   "number": "11.4.6",
   "title": "",
   "body": "   Abel, Niels Henrik Abel's Lemma Prove Lemma .   "
 },
 {
-  "id": "problem-194",
+  "id": "PowerSeriesRedux-AbelsThm-15",
   "level": "2",
-  "url": "PowerSeriesRedux-AbelsThm.html#problem-194",
+  "url": "PowerSeriesRedux-AbelsThm.html#PowerSeriesRedux-AbelsThm-15",
   "type": "Problem",
   "number": "11.4.7",
   "title": "",
@@ -3538,9 +3538,9 @@ var ptx_lunr_docs = [
   "body": "  Suppose the power series has radius of convergence and the series converges. Then converges uniformly on .   "
 },
 {
-  "id": "problem-195",
+  "id": "PowerSeriesRedux-AbelsThm-17",
   "level": "2",
-  "url": "PowerSeriesRedux-AbelsThm.html#problem-195",
+  "url": "PowerSeriesRedux-AbelsThm.html#PowerSeriesRedux-AbelsThm-17",
   "type": "Problem",
   "number": "11.4.9",
   "title": "",
@@ -3565,18 +3565,18 @@ var ptx_lunr_docs = [
   "body": "   Nested Interval Property (NIP) weak form Let be a sequence of nested intervals such that . Then there is at least one such that for all .   "
 },
 {
-  "id": "proof-31",
+  "id": "BackToFourier-InfiniteSets-4",
   "level": "2",
-  "url": "BackToFourier-InfiniteSets.html#proof-31",
+  "url": "BackToFourier-InfiniteSets.html#BackToFourier-InfiniteSets-4",
   "type": "Proof",
   "number": "12.1.1",
   "title": "",
   "body": " By Corollary of Chapter , we know that a bounded increasing sequence such as converges, say to . Since for and , then for any fixed , . This says for all .  "
 },
 {
-  "id": "problem-199",
+  "id": "BackToFourier-InfiniteSets-5",
   "level": "2",
-  "url": "BackToFourier-InfiniteSets.html#problem-199",
+  "url": "BackToFourier-InfiniteSets.html#BackToFourier-InfiniteSets-5",
   "type": "Problem",
   "number": "12.1.2",
   "title": "",
@@ -3592,9 +3592,9 @@ var ptx_lunr_docs = [
   "body": "   Cantor, (1874)     Cantor, Georg  first proof that is uncountable     is uncountable  Cantor's first proof  Let be a sequence of real numbers. There is a real number , which is not in .   To streamline things, we are abusing notation here as we are letting denote both the sequence (which is ordered) and the underlying (unordered) set of entries in the sequence.    "
 },
 {
-  "id": "proof-32",
+  "id": "BackToFourier-InfiniteSets-8",
   "level": "2",
-  "url": "BackToFourier-InfiniteSets.html#proof-32",
+  "url": "BackToFourier-InfiniteSets.html#BackToFourier-InfiniteSets-8",
   "type": "Proof",
   "number": "12.1.2",
   "title": "",
@@ -3619,9 +3619,9 @@ var ptx_lunr_docs = [
   "body": "   cardinality equal cardinality If two sets can be put into one-to-one correspondence then they are said to have the same cardinality .   "
 },
 {
-  "id": "problem-200",
+  "id": "BackToFourier-InfiniteSets-24",
   "level": "2",
-  "url": "BackToFourier-InfiniteSets.html#problem-200",
+  "url": "BackToFourier-InfiniteSets.html#BackToFourier-InfiniteSets-24",
   "type": "Problem",
   "number": "12.1.6",
   "title": "",
@@ -3646,18 +3646,18 @@ var ptx_lunr_docs = [
   "body": "   is countable Show that is countable.   "
 },
 {
-  "id": "proof-33",
+  "id": "BackToFourier-InfiniteSets-30",
   "level": "2",
-  "url": "BackToFourier-InfiniteSets.html#proof-33",
+  "url": "BackToFourier-InfiniteSets.html#BackToFourier-InfiniteSets-30",
   "type": "Proof",
   "number": "12.1.3",
   "title": "Sketch of Proof.",
   "body": " Sketch of Proof  First explain how you know that all of the non-negative rational numbers are in this list: .  However there is clearly some duplication. To handle this, apply part (a) of Problem . Does this complete the proof or is there more to do?  "
 },
 {
-  "id": "problem-202",
+  "id": "BackToFourier-InfiniteSets-31",
   "level": "2",
-  "url": "BackToFourier-InfiniteSets.html#problem-202",
+  "url": "BackToFourier-InfiniteSets.html#BackToFourier-InfiniteSets-31",
   "type": "Problem",
   "number": "12.1.9",
   "title": "",
@@ -3673,18 +3673,18 @@ var ptx_lunr_docs = [
   "body": "  Let be given. There is a collection of intervals in , such that and .   "
 },
 {
-  "id": "problem-203",
+  "id": "BackToFourier-InfiniteSets-36",
   "level": "2",
-  "url": "BackToFourier-InfiniteSets.html#problem-203",
+  "url": "BackToFourier-InfiniteSets.html#BackToFourier-InfiniteSets-36",
   "type": "Problem",
   "number": "12.1.11",
   "title": "",
   "body": "   has measure zero in  measure zero has measure zero in Prove Corollary .    If we had only finitely many rationals to deal with this would be easy. Let be these rational numbers and take and . Then for all  and .  The difficulty is, how do we move from the finite to the infinite case?]   "
 },
 {
-  "id": "problem-204",
+  "id": "BackToFourier-InfiniteSets-41",
   "level": "2",
-  "url": "BackToFourier-InfiniteSets.html#problem-204",
+  "url": "BackToFourier-InfiniteSets.html#BackToFourier-InfiniteSets-41",
   "type": "Problem",
   "number": "12.1.12",
   "title": "",
@@ -3700,18 +3700,18 @@ var ptx_lunr_docs = [
   "body": " Cantor's Theorem and Its Consequences   Richard Dedekind  Dedekind, Richard portrait of    Once Cantor showed that there were two types of infinity (countable and uncountable), the following question was natural, Do all uncountable sets have the same cardinality?   Just like not all non-dogs are cats, there is, offhand, no reason to believe that all uncountable sets should be the same size. However constructing uncountable sets of different sizes is not as easy as it sounds.    Dedekind, Richard    Cantor, Georg  unit interval and unit square have equal cardinalty  For example, what about the line segment represented by the interval and the square represented by the set . Certainly the two dimensional square must be a larger infinite set than the one dimensional line segment. Remarkably, Cantor showed that these two sets were the same cardinality. In his 1877 correspondence of this result to his friend and fellow mathematician, Richard Dedekind, even Cantor remarked, I see it, but I don't believe it!   The following gives the original idea of Cantor's proof. Cantor devised the following function . First, we represent the coordinates of any point by their decimal representations and . Even terminating decimals can be written this way as we could write . We can then define by .  This relatively simple idea has some technical difficulties in it related to the following result.     series Geometric series converges to Consider the sequence . Determine that this sequence converges and, in fact, it converges to . This suggests that .    Similarly, we have , etc. To make the decimal representation of a real number in unique, we must make a consistent choice of writing a terminating decimal as one that ends in an infinite string of zeros or an infinite string of nines [with the one exception ]. No matter which choice we make, we could never make this function onto. For example, would have as its pre-image which would be a mix of the two conventions.  Cantor was able to overcome this technicality to demonstrate a one to one correspondence, but instead we will note that in either convention, the function is one-to-one, so this says that the set is the same cardinality as some (uncountable) subset of . The fact that this has the same cardinality as is something we will come back to. But first we'll try construct an uncountable set which does not have the same cardinality as . To address this issue, Cantor proved the following in 1891.     Cantor's Theorem     Cantor, Georg  Cantor's Theorem  Let be any set. Then there is no one-to-one correspondence between and , the set of all subsets of .    Since can be put into one-to-one correspondence with a subset of ( ), then this says that is at least as large as S. In the finite case is strictly greater than as the following problem shows. It also demonstrates why is called the power set of .   sets power set  sets cardinality of a power set  cardinality of a power set   Prove: If , then .    Let . Consider the following correspondence between the elements of and the set of all -tuples of yes (Y) or no (N):   How many elements are in      Cantor, Georg Cantor's Theorem   Prove Cantor's Theorem .    Assume for contradiction, that there is a one-to-one correspondence . Consider . Since is onto, then there is such that . Is or is     Actually it turns out that and have the same cardinality. This can be seen in a roundabout way using some of the above ideas from Problem . Specifically, let be the set of all sequences of zeros or ones (you can use s or s, if you prefer). Then it is straightforward to see that and have the same cardinality.  If we consider , which has the same cardinality as , then we can see that this has the same cardinality as as well. Specifically, if we think of the numbers in binary, then every real number in can be written as where . We have to account for the fact that binary representations such as and represent the same real number (say that no representations will end in an infinite string of zeros), then we can see that has the same cardinality as , where is the set of all sequences ending in an infinite string of zeros. It turns out that itself is a countable set.     countable sets countable union of finite sets Let . Show that for each , is finite and use this to conclude that is countably infinite.    The above problems say that , , , and all have the same cardinality. The following two problems show that deleting a countable set from an uncountable set does not change its cardinality.     sets countably infinite subsets Let be an infinite set. Prove that contains a countably infinite subset.     countable sets deleting a countable subset   Suppose is an uncountable set and is countably infinite.    Prove that and are both uncountable sets.    Prove that and have the same cardinality.   Let . If is an infinite set, then by the previous problem it contains a countably infinite set . Likewise if is infinite it also contains an infinite set . Again, if is an infinite set then it contains an infinite set , etc. For , let be a one-to-one correspondence and define by .  Show that is one-to-one and onto.    As we indicated before, Cantor's Cantor, Georg work on infinite sets had a profound impact on mathematics in the beginning of the twentieth century. For example, in examining the proof of Cantor's Theorem, the eminent logician Bertrand Russell devised his famous paradox in 1901. Before this time, a set was naively thought of as just a collection of objects. Through the work of Cantor and others, sets were becoming a central object of study in mathematics as many mathematical concepts were being reformulated in terms of sets. The idea was that set theory was to be a unifying theme of mathematics. This paradox set the mathematical world on its ear.   Russell's Paradox:  Russell's Paradox Consider the set of all sets which are not elements of themselves. We call this set and ask, Is Symbolically, this set is .  If , then by definition, . If , then by definition, .  If you look back at the proof of Cantor's Theorem, this was basically the idea that gave us the contradiction. To have such a contradiction occurring at the most basic level of mathematics was scandalous. It forced a number of mathematicians and logicians to carefully devise the axioms by which sets could be constructed. To be honest, most mathematicians still approach set theory from a naive point of view as the sets we typically deal with fall under the category of what we would call normal sets. In fact, such an approach is officially called Naive Set Theory (as opposed to Axiomatic Set Theory). However, attempts to put set theory and logic on solid footing led to the modern study of symbolic logic and ultimately the design of computer (machine) logic.  Another place where Cantor's work had a profound influence in modern logic comes from something we alluded to before. We showed before that the unit square had the same cardinality as an uncountable subset of . In fact, Cantor Cantor, Georg showed that the unit square had the same cardinality as itself and was moved to advance the following in 1878.   The Continuum Hypothesis  Continuum Hypothesis original   Every uncountable subset of has the same cardinality as .    Cantor was unable to prove or disprove this conjecture (along with every other mathematician). In fact, proving or disproving the Continuum Hypothesis, was one of Hilbert's famous 23 problems presented as a challenge to mathematicians at the International Congress of Mathematicians in 1900.  Since has the same cardinality as , then the Continuum Hypothesis was generalized to the:   The Generalized Continuum Hypothesis  Continuum Hypothesis generalized   Given an infinite set , there is no infinite set which has a cardinality strictly between that of and its power set .     The Zermelo-Fraenkel Axioms  One of the formal axiomatic approaches to set theory established by Ernst Zermelo in 1908 and revised by Abraham Fraenkel in 1921.   Efforts to prove or disprove this were in vain and with good reason. In 1940, the logician Kurt Gödel showed that the Continuum Hypothesis could not be disproved from the Zermelo-Fraenkel Axioms of set theory. In 1963, Paul Cohen showed that the Continuum Hypothesis could not be proved using the Zermelo-Fraenkel Axioms. In other words, the Zermelo-Fraenkel Axioms do not contain enough information to decide the truth of the hypothesis.  We are willing to bet that at this point your head might be swimming a bit with uncertainty. If so, then know that these are the same feelings that the mathematical community experienced in the mid twentieth century. In the past, mathematics was seen as a model of logical certainty. It is disconcerting to find that there are statements that are undecidable. In fact, Gödel proved in 1931 that a consistent finite axiom system that contained the axioms of arithmetic would always contain undecidable statements which could neither be proved true nor false with those axioms. Mathematical knowledge would always be incomplete.   Kurt Gödel  Gödel, Kurt portrait of    So by trying to put the foundations of calculus on solid ground, we have come to a point where we can never obtain mathematical certainty. Does this mean that we should throw up our hands and concede defeat? Should we be paralyzed with fear of trying anything? Certainly not! As we mentioned before, most mathematicians do well by taking a pragmatic approach: using their mathematics to solve problems that they encounter. In fact, it is typically the problems that motivate the mathematics. It is true that mathematicians take chances that don't always pan out, but they still take these chances, often with success. Even when the successes lead to more questions, as they typically do, tackling those questions usually leads to a deeper understanding. At the very least, our incomplete understanding means we will always have more questions to answer, more problems to solve.  What else could a mathematician ask for?  "
 },
 {
-  "id": "figure-38",
+  "id": "BackToFourier-CantorsTheorem-2",
   "level": "2",
-  "url": "BackToFourier-CantorsTheorem.html#figure-38",
+  "url": "BackToFourier-CantorsTheorem.html#BackToFourier-CantorsTheorem-2",
   "type": "Figure",
   "number": "12.2.1",
   "title": "",
   "body": " Richard Dedekind  Dedekind, Richard portrait of   "
 },
 {
-  "id": "problem-205",
+  "id": "BackToFourier-CantorsTheorem-8",
   "level": "2",
-  "url": "BackToFourier-CantorsTheorem.html#problem-205",
+  "url": "BackToFourier-CantorsTheorem.html#BackToFourier-CantorsTheorem-8",
   "type": "Problem",
   "number": "12.2.2",
   "title": "",
@@ -3736,72 +3736,72 @@ var ptx_lunr_docs = [
   "body": " sets power set  sets cardinality of a power set  cardinality of a power set   Prove: If , then .    Let . Consider the following correspondence between the elements of and the set of all -tuples of yes (Y) or no (N):   How many elements are in    "
 },
 {
-  "id": "problem-207",
+  "id": "BackToFourier-CantorsTheorem-14",
   "level": "2",
-  "url": "BackToFourier-CantorsTheorem.html#problem-207",
+  "url": "BackToFourier-CantorsTheorem.html#BackToFourier-CantorsTheorem-14",
   "type": "Problem",
   "number": "12.2.5",
   "title": "",
   "body": " Cantor, Georg Cantor's Theorem   Prove Cantor's Theorem .    Assume for contradiction, that there is a one-to-one correspondence . Consider . Since is onto, then there is such that . Is or is    "
 },
 {
-  "id": "problem-208",
+  "id": "BackToFourier-CantorsTheorem-17",
   "level": "2",
-  "url": "BackToFourier-CantorsTheorem.html#problem-208",
+  "url": "BackToFourier-CantorsTheorem.html#BackToFourier-CantorsTheorem-17",
   "type": "Problem",
   "number": "12.2.6",
   "title": "",
   "body": "   countable sets countable union of finite sets Let . Show that for each , is finite and use this to conclude that is countably infinite.   "
 },
 {
-  "id": "problem-209",
+  "id": "BackToFourier-CantorsTheorem-19",
   "level": "2",
-  "url": "BackToFourier-CantorsTheorem.html#problem-209",
+  "url": "BackToFourier-CantorsTheorem.html#BackToFourier-CantorsTheorem-19",
   "type": "Problem",
   "number": "12.2.7",
   "title": "",
   "body": "   sets countably infinite subsets Let be an infinite set. Prove that contains a countably infinite subset.   "
 },
 {
-  "id": "problem-210",
+  "id": "BackToFourier-CantorsTheorem-20",
   "level": "2",
-  "url": "BackToFourier-CantorsTheorem.html#problem-210",
+  "url": "BackToFourier-CantorsTheorem.html#BackToFourier-CantorsTheorem-20",
   "type": "Problem",
   "number": "12.2.8",
   "title": "",
   "body": " countable sets deleting a countable subset   Suppose is an uncountable set and is countably infinite.    Prove that and are both uncountable sets.    Prove that and have the same cardinality.   Let . If is an infinite set, then by the previous problem it contains a countably infinite set . Likewise if is infinite it also contains an infinite set . Again, if is an infinite set then it contains an infinite set , etc. For , let be a one-to-one correspondence and define by .  Show that is one-to-one and onto.   "
 },
 {
-  "id": "p-1413",
+  "id": "BackToFourier-CantorsTheorem-22",
   "level": "2",
-  "url": "BackToFourier-CantorsTheorem.html#p-1413",
+  "url": "BackToFourier-CantorsTheorem.html#BackToFourier-CantorsTheorem-22",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Russell's Paradox: "
 },
 {
-  "id": "conjecture-2",
+  "id": "BackToFourier-CantorsTheorem-26",
   "level": "2",
-  "url": "BackToFourier-CantorsTheorem.html#conjecture-2",
+  "url": "BackToFourier-CantorsTheorem.html#BackToFourier-CantorsTheorem-26",
   "type": "Conjecture",
   "number": "12.2.9",
   "title": "The Continuum Hypothesis.",
   "body": " The Continuum Hypothesis  Continuum Hypothesis original   Every uncountable subset of has the same cardinality as .   "
 },
 {
-  "id": "conjecture-3",
+  "id": "BackToFourier-CantorsTheorem-29",
   "level": "2",
-  "url": "BackToFourier-CantorsTheorem.html#conjecture-3",
+  "url": "BackToFourier-CantorsTheorem.html#BackToFourier-CantorsTheorem-29",
   "type": "Conjecture",
   "number": "12.2.10",
   "title": "The Generalized Continuum Hypothesis.",
   "body": " The Generalized Continuum Hypothesis  Continuum Hypothesis generalized   Given an infinite set , there is no infinite set which has a cardinality strictly between that of and its power set .   "
 },
 {
-  "id": "figure-39",
+  "id": "BackToFourier-CantorsTheorem-33",
   "level": "2",
-  "url": "BackToFourier-CantorsTheorem.html#figure-39",
+  "url": "BackToFourier-CantorsTheorem.html#BackToFourier-CantorsTheorem-33",
   "type": "Figure",
   "number": "12.2.11",
   "title": "",
@@ -3817,27 +3817,27 @@ var ptx_lunr_docs = [
   "body": " On the Nature of Numbers: A Dialogue (with Apologies to Galileo)    Interlocuters : Salviati, Sagredo, and Simplicio; Three Friends of Galileo Galilei    Setting : Three friends meet in a garden for lunch in Renassaince Italy. Prior to their meal they discuss the book How We Got From There to Here: A Story of Real Analysis. How they obtained a copy is not clear.   Salviati : My good sirs. I have read this very strange volume as I hope you have?   Sagredo : I have and I also found it very strange.   Simplicio : Very strange indeed; at once silly and mystifying.   Salviati : Silly? How so?   Simplicio : These authors begin their tome with the question, What is a number? This is an unusually silly question, don't you think? Numbers are numbers. Everyone knows what they are.   Sagredo : I thought so as well until I reached the last chapter. But now I am not so certain. What about this quantity If this counts the positive integers, isn't it a number? If not, then how can it count anything? If so, then what number is it? These questions plague me 'til I scarcely believe I know anything anymore.   Simplicio : Of course is not a number! It is simply a new name for the infinite, and infinity is not a number.   Sagredo : But isn't the cardinality of the set of natural numbers, , in just the same way that the cardinality of the set is If is a number, then why isn't    Simplicio : Ah, my friend, like our authors you are simply playing with words. You count the elements in the set you see plainly that the number of elements it contains is and then you change your language. Rather than saying that the number of elements in is you say that the cardinality is . But clearly cardinality and number of elements mean the same thing.  Similarly you use the symbol to denote the set of positive integers. With your new word and symbol you make the statement the cardinality (number of elements) of is . This statement has the same grammatical form as the statement the number of elements (cardinality) of is three. Since three is a number you conclude that is also a number.  But this is simply nonsense dressed up to sound sensible. If we unwind our notation and language, your statement is simply, The number of positive integers is infinite. This is obviously nonsense because infinity is not a number.  Even if we take infinity as an undefined term and try to define it by your statement this is still nonsense since you are using the word number to define a new number called infinity. This definition is circular. Thus it is no definition at all. It is nonsense.   Salviati : Your reasoning on this certainly seems sound.   Simplicio : Thank you.   Salviati : However, there are a couple of small points I would like to examine more closely if you will indulge me?   Simplicio : Of course. What troubles you?   Salviati : You've said that we cannot use the word number to define numbers because this would be circular reasoning. I entirely agree, but I am not sure this is what our authors are doing.  Consider the set . Do you agree that it contains three elements?   Simplicio : Obviously.   Sagredo : Ah! I see your point! That there are three elements does not depend on what those elements are. Any set with three elements has three elements regardless of the nature of the elements. Thus saying that the set contains three elements does not define the word number in a circular manner because it is irrelevant that the number 3 is one of the elements of the set. Thus to say that three is the cardinality of the set has the same meaning as saying that there are three elements in the set . In both cases the number is the name that we give to the totality of the elements of each set.   Salviati : Precisely. In exactly the same way is the symbol we use to denote the totality of the set of positive integers.  Thus is a number in the same sense that ' ' is a number, is it not?   Simplicio : I see that we can say in a meaningful way that three is the cardinality of any set with . . . well, . . . with three elements (it becomes very difficult to talk about these things) but this is simply a tautology! It is a way of saying that a set which has three elements has three elements!  This means only that we have counted them and we had to stop at three. In order to do this we must have numbers first. Which, of course, we do. As I said, everyone knows what numbers are.   Sagredo : I must confess, my friend, that I become more confused as we speak. I am no longer certain that I really know what a number is. Since you seem to have retained your certainty can you clear this up for me? Can you tell me what a number is?   Simplicio : Certainly. A number is what we have just been discussing. It is what you have when you stop counting. For example, three is the totality (to use your phrase) of the elements of the sets or because when I count the elements in either set I have to stop at three. Nothing less, nothing more. Thus three is a number.   Salviati : But this definition only confuses me! Surely you will allow that fractions are numbers? What is counted when we end with, say or    Simplicio : This is simplicity itself. is the number we get when we have divided something into equal pieces and we have counted four of these fifths. This is four-fifths. You see? Even the language we use naturally bends itself to our purpose.   Salviati : But what of one-fifth? In order to count one fifth we must first divide something into fifths. To do this we must know what one-fifth is, musn't we? We seem to be using the word number to define itself again. Have we not come full circle and gotten nowhere?   Simplicio : I confess this had not occurred to me before. But your objection is easily answered. To count one-fifth we simply divide our something into tenths. Then we count two of them. Since two-tenths is the same as one-fifth the problem is solved. Do you see?   Sagredo : I see your point but it will not suffice at all! It merely replaces the question, What is one-fifth? with, What is one-tenth? Nor will it do to say that one-tenth is merely two-twentieths. This simply shifts the question back another level.  Archimedes said, Give me a place to stand and a lever long enough and I will move the earth. But of course he never moved the earth because he had nowhere to stand. We seem to find ourselves in Archimedes' predicament: We have no place to stand.   Simplicio : I confess I don't see a way to answer this right now. However I'm sure an answer can be found if we only think hard enough. In the meantime I cannot accept that is a number. It is, as I said before, infinity and infinity is not a number! We may as well believe in fairies and leprechauns if we call infinity a number.   Sagredo : But again we've come full circle. We cannot say definitively that is or is not a number until we can state with confidence what a number is. And even if we could find solid ground on which to solve the problem of fractions, what of Or Certainly these are numbers but I see no way to count to either of them.   Simplicio : Alas! I am beset by demons! I am bewitched! I no longer believe what I know to be true!   Salviati : Perhaps things are not quite as bad as that. Let us consider further. You said earlier that we all know what numbers are, and I agree. But perhaps your statement needs to be more precisely formulated. Suppose we say instead that we all know what numbers need to be? Or that we know what we want numbers to be?  Even if we cannot say with certainly what numbers are surely we can say what we want and need for them to be. Do you agree?   Sagredo : I do.   Simplicio : And so do I.   Salviati : Then let us invent numbers anew, as if we've never seen them before, always keeping in mind those properties we need for numbers to have. If we take this as a starting point then the question we need to address is, What do we need numbers to be?    Sagredo : This is obvious! We need to be able to add them and we need to be able to multiply them together, and the result should also be a number.   Simplicio : And subtract and divide too, of course.   Sagredo : I am not so sure we actually need these. Could we not define  subtract two from three to be add negative two to three and thus dispense with subtraction and division?   Simplicio : I suppose we can but I see no advantage in doing so. Why not simply have subtraction and division as we've always known them?   Sagredo : The advantage is parsimony. Two arithmetic operations are easier to keep track of than four. I suggest we go forward with only addition and multiplication for now. If we find we need subtraction or division we can consider them later.   Simplicio : Agreed. And I now see another advantage. Obviously addition and multiplication must not depend on order. That is, if and are numbers then must be equal to and must be equal to . This is not true for subtraction, for does not equal . But if we define subtraction as you suggest then this symmetry is preserved: .   Sagredo : Excellent! Another property we will require of numbers occurs to me now. When adding or multiplying more than two numbers it should not matter where we begin. That is, if , and are numbers it should be true that and .   Simplicio : Yes! We have it! Any objects which combine in these precise ways can be called numbers.   Salviati : Certainly these properties are necessary, but I don't think they are yet sufficient to our purpose. For example, the number is unique in that it is the only number which, when multiplying another number leaves it unchanged.  For example: . Or, in general, if is a number then .   Sagredo : Yes. Indeed. It occurs to me that the number zero plays a similar role for addition: .   Salviati : It does not seem to me that addition and multiplication, as we have defined them, force or into existence so I believe we will have to postulate their existence independently.   Sagredo : Is this everything then? Is this all we require of numbers?   Simplicio : I don't think we are quite done yet. How shall we get division?   Sagredo : In the same way that we defined subtraction to be the addition of a negative number, can we not define division to be multiplication by a reciprocal? For example, divided by can be considered  multiplied by , can it not?   Salviati : I think it can. But observe that every number will need to have a corresponding negative so that we can subtract any amount. And again nothing we've discussed so far forces these negative numbers into existence so we will have to postulate their existence separately.   Simplicio : And in the same way every number will need a reciprocal so that we can divide by any amount.   Sagredo : Every number that is, except zero.   Simplicio : Yes, this is true. Strange is it not, that of them all only this one number needs no reciprocal? Shall we also postulate that zero has no reciprocal?   Salviati : I don't see why we should. Possibly is the reciprocal of zero. Or possibly not. But I see no need to concern ourselves with things we do not need.   Simplicio : Is this everything then? Have we discovered all that we need for numbers to be?   Salviati : I believe there is only one property missing. We have postulated addition and we have postulated multiplication and we have described the numbers zero and one which play similar roles for addition and multiplication respectively. But we have not described how addition and multiplication work together.  That is, we need a rule of distribution: If , and are all numbers then .  With this in place I believe we have everything we need.   Simplicio : Indeed. We can also see from this that cannot be a number since, in the first place, it cannot be added to another number and in the second, even if it could be added to a number the result is surely not also a number.   Salviati : My dear Simplicio, I fear you have missed the point entirely! Our axioms do not declare what a number is, only how it behaves with respect to addition and multiplication with other numbers. Thus it is a mistake to presume that numbers are only those objects that we have always believed them to be. In fact, it now occurs to me that addition and multiplication also needn't be seen as the operations we have always believed them to be.  For example suppose we have three objects, and suppose that we define addition and multiplication by the following tables:   I submit that our set along with these definitions satisfy all of our axioms and thus , and qualify to be called numbers.    Simplicio : This cannot be! There is no zero, no one!   Sagredo : But there is. Do you not see that plays the role of zero if you add it to any number you get that number back. Similarly plays the role of one.   Simplicio : This is astonishing! If and can be numbers then I am less sure than ever that I know what numbers are! Why, if we replace , and with Simplicio  Sagredo, and Salviati then we become numbers ourselves!   Salviati : Perhaps we will have to be content with knowing how numbers behave rather than knowing what they are.  However I confess that I have a certain affection for the numbers I grew up with. Let us call those the real numbers. Any other set of numbers, such as our above we will call a field of numbers, since they seem to provide us with new ground to explore. Or perhaps just a number field ?  As we have been discussing this I have been writing down our axioms. They are these. Numbers are any objects which satisfy all of the following properties:   AXIOMS OF NUMBERS      Axiom I: Definition of Operations  They can be combined by two operations, denoted and + .    Axiom II: Closure  If , and are numbers then is also a number. is also a number.    Axiom II: Commutativity        Axiom III: Associativity        Axiom IV: Additive Identity  There is a number, denoted , such that for any number, , .    Axiom V: Multiplicative Identity  There is a number, denoted , such that for any number, , .    Axiom VI: Additive Inverses  Given any number, , there is a number, denoted , with the property that .    Axiom VII: Multiplicative Inverse  Given any number, , there is a number, denoted , with the property that .    Axiom VIII: The Distributive Property  If , and are numbers then .                                                                  Sagredo : My friend, this is a thing of surpassing beauty! All seems clear to me now. Numbers are any group of objects which satisfy our axioms. That is, a number is anything that acts like a number.   Salviati : Yes this seems to be true.   Simplicio : But wait! We have not settled the question: Is a number or not?   Salviati : If everything we have just done is valid then  could be a number. And so could ,  if we can find a way to define addition and multiplication on the set in a manner that agrees with our axioms.   Sagredo : An arithmetic of infinities! This is a very strange idea. Can such a thing be made sensible?   Simplicio : Not, I think, before lunch. Shall we retire to our meal?    Additional Problems     Show that .    Show that if , then .     number field is a field   Consider the set of ordered pairs of integers: , and define addition and multiplication as follows:     Addition:       Multiplication:   .       If we add the convention that show that this set with these operations forms a number field.   Which number field is this?    number field is a field   Consider the set of ordered pairs of real numbers, , and define addition and multiplication as follows:     Addition:       Multiplication:   .       Show that this set with these operations forms a number field.    Which number field is this?     "
 },
 {
-  "id": "problem-211",
+  "id": "Epilogues-NatureNumbers-3-2",
   "level": "2",
-  "url": "Epilogues-NatureNumbers.html#problem-211",
+  "url": "Epilogues-NatureNumbers.html#Epilogues-NatureNumbers-3-2",
   "type": "Problem",
   "number": "13.1.1",
   "title": "",
   "body": "   Show that .    Show that if , then .   "
 },
 {
-  "id": "problem-212",
+  "id": "Epilogues-NatureNumbers-3-3",
   "level": "2",
-  "url": "Epilogues-NatureNumbers.html#problem-212",
+  "url": "Epilogues-NatureNumbers.html#Epilogues-NatureNumbers-3-3",
   "type": "Problem",
   "number": "13.1.2",
   "title": "",
   "body": " number field is a field   Consider the set of ordered pairs of integers: , and define addition and multiplication as follows:     Addition:       Multiplication:   .       If we add the convention that show that this set with these operations forms a number field.   Which number field is this?  "
 },
 {
-  "id": "problem-213",
+  "id": "Epilogues-NatureNumbers-3-4",
   "level": "2",
-  "url": "Epilogues-NatureNumbers.html#problem-213",
+  "url": "Epilogues-NatureNumbers.html#Epilogues-NatureNumbers-3-4",
   "type": "Problem",
   "number": "13.1.3",
   "title": "",
@@ -3862,27 +3862,27 @@ var ptx_lunr_docs = [
   "body": "Linear Ordering  number field linearly ordered   A number field is said to be linearly ordered if there is a relation, denoted , on the elements of the field which satisfies all of the following for all , and in the field.     For all numbers and in the field, exactly one of the following holds:                       If , then for all in the field.    If , and , then .    If and then .      "
 },
 {
-  "id": "p-1560",
+  "id": "Epilogues-BuildRealNumbers-2-19",
   "level": "2",
-  "url": "Epilogues-BuildRealNumbers.html#p-1560",
+  "url": "Epilogues-BuildRealNumbers.html#Epilogues-BuildRealNumbers-2-19",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "linearly ordered number field "
 },
 {
-  "id": "problem-214",
+  "id": "Epilogues-BuildRealNumbers-2-20",
   "level": "2",
-  "url": "Epilogues-BuildRealNumbers.html#problem-214",
+  "url": "Epilogues-BuildRealNumbers.html#Epilogues-BuildRealNumbers-2-20",
   "type": "Problem",
   "number": "13.2.2",
   "title": "",
   "body": " number field linearly ordered   Prove that the following must hold in any linearly ordered number field.      if and only if .    If and then .    For all , .     .       Show that the set of complex numbers ( ) is not a linearly ordered field.   "
 },
 {
-  "id": "problem-215",
+  "id": "DecimalExpansion-15",
   "level": "2",
-  "url": "Epilogues-BuildRealNumbers.html#problem-215",
+  "url": "Epilogues-BuildRealNumbers.html#DecimalExpansion-15",
   "type": "Problem",
   "number": "13.2.3",
   "title": "",
@@ -3943,27 +3943,27 @@ var ptx_lunr_docs = [
   "body": "   sequences Cauchy sequences zero as a Cauchy sequence Let be the set of Cauchy sequences in which are all equivalent to the sequence . Then .   "
 },
 {
-  "id": "proof-34",
+  "id": "CauchySequences-20",
   "level": "2",
-  "url": "Epilogues-BuildRealNumbers.html#proof-34",
+  "url": "Epilogues-BuildRealNumbers.html#CauchySequences-20",
   "type": "Proof",
   "number": "13.2.2.1",
   "title": "",
   "body": " From Problem it is clear that in forming we can choose any sequence in to represent and any sequence in to represent . (This is because any other choice will yield a sequence equivalent to .)  Thus we choose to represent and any element of , say , to represent . Then .  Since any other sequences taken from and respectively, will yield a sum equivalent to (see Problem ) we conclude that .  "
 },
 {
-  "id": "problem-218",
+  "id": "CauchySequences-21",
   "level": "2",
-  "url": "Epilogues-BuildRealNumbers.html#problem-218",
+  "url": "Epilogues-BuildRealNumbers.html#CauchySequences-21",
   "type": "Problem",
   "number": "13.2.10",
   "title": "",
   "body": "   as Cauchy sequences identify the multiplicative identity  the number as a Cauchy sequence Identify the set of equivalent Cauchy sequences, , such that .   "
 },
 {
-  "id": "problem-219",
+  "id": "CauchySequences-22",
   "level": "2",
-  "url": "Epilogues-BuildRealNumbers.html#problem-219",
+  "url": "Epilogues-BuildRealNumbers.html#CauchySequences-22",
   "type": "Problem",
   "number": "13.2.11",
   "title": "",
@@ -3997,9 +3997,9 @@ var ptx_lunr_docs = [
   "body": "   Dedekind, Richard Dedekind cuts ordering of Let and be cuts. Then if and only if .   "
 },
 {
-  "id": "problem-220",
+  "id": "DedekindCuts-21",
   "level": "2",
-  "url": "Epilogues-BuildRealNumbers.html#problem-220",
+  "url": "Epilogues-BuildRealNumbers.html#DedekindCuts-21",
   "type": "Problem",
   "number": "13.2.15",
   "title": "",
@@ -4033,18 +4033,18 @@ var ptx_lunr_docs = [
   "body": "   Closure with Respect to Addition    Dedekind, Richard Dedekind cuts closure of If and are cuts then is a cut.   "
 },
 {
-  "id": "proof-35",
+  "id": "DedekindCuts-31",
   "level": "2",
-  "url": "Epilogues-BuildRealNumbers.html#proof-35",
+  "url": "Epilogues-BuildRealNumbers.html#DedekindCuts-31",
   "type": "Proof",
   "number": "13.2.3.1",
   "title": "",
   "body": " We need to show that the set satisfies all three of the properties of a cut.     Property I  Let be any rational number in and let be a rational number not in . Then by Property II .  Let be any rational number in and let be a rational number not in . Then by Property II .  Thus since represents a generic element of and , it follows that .    Property II  We will show that the contrapositive of Property II is true: If and then .  First, let . Then there are and such that . Therefore , so that .  Therefore and . Therefore .    Property III  Let . We need to find , . Observe that for some and  .  Since is a cut, there is a rational number such that . Take . Then .     "
 },
 {
-  "id": "problem-221",
+  "id": "DedekindCuts-32",
   "level": "2",
-  "url": "Epilogues-BuildRealNumbers.html#problem-221",
+  "url": "Epilogues-BuildRealNumbers.html#DedekindCuts-32",
   "type": "Problem",
   "number": "13.2.19",
   "title": "",
@@ -4105,18 +4105,18 @@ var ptx_lunr_docs = [
   "body": "  Let be a cut, and be positive rational numbers not in with , and let be any rational number. Then there exist positive rational numbers and with , and , such that , and .   "
 },
 {
-  "id": "problem-222",
+  "id": "DedekindCuts-57",
   "level": "2",
-  "url": "Epilogues-BuildRealNumbers.html#problem-222",
+  "url": "Epilogues-BuildRealNumbers.html#DedekindCuts-57",
   "type": "Problem",
   "number": "13.2.26",
   "title": "",
   "body": " Dedekind, Richard Dedekind cuts technical lemma for   Prove Lemma .    Since is a cut there exists . Let . We know that . Consider the midpoint . If this is in then relabel it as and relabel as . If it is not in then relabel it as and relabel as , etc.   "
 },
 {
-  "id": "problem-223",
+  "id": "DedekindCuts-58",
   "level": "2",
-  "url": "Epilogues-BuildRealNumbers.html#problem-223",
+  "url": "Epilogues-BuildRealNumbers.html#DedekindCuts-58",
   "type": "Problem",
   "number": "13.2.27",
   "title": "",
@@ -4132,18 +4132,18 @@ var ptx_lunr_docs = [
   "body": "   any complete, linearly ordered field is isomorphic to  fields any complete, linearly ordered field is isomorphic to . Any complete, linearly ordered field is isomorphic to .   "
 },
 {
-  "id": "references-1",
+  "id": "ASORA-8-1",
   "level": "1",
-  "url": "references-1.html",
+  "url": "ASORA-8-1.html",
   "type": "References",
   "number": "",
   "title": "Bibliography",
   "body": " Bibliography  Robert E. Bradley and C. Edward Sandifer. Cauchy's Cours d'analyse : An Annotated Translation . Sources and Studies in the History of Mathematics and Physical Sciences. Springer, 2009.  William Dunham. Journey Through Genius . Penguin Books, 1990.  John Franks. Cantor's other proofs that is uncountable. Mathematics Magazine , 83(4):283--289, October 2010.  Judith Grabiner. The Origins of Cauchy's Rigorous Calculus . MIT Press, Cambridge MA, 1981.  Stephen Hawking, editor. God Created the Integers: The Mathematical Breakthroughs that Changed History . Running Press, Philadelphia, London, 2005.  H. Jahnke, editor. A History of Analysis . AMS Publications, Providence RI, 2003.  Edmund Landau. Foundations of Analysis . Chelsea Publishing Company, New York, NY, 1966. Translated by F. Steinhardt, Columbia University.  Thomas Levenson. Newton and the Counterfeiter . Houghton Mifflin Harcourt, 2009.  Reviel Netz and William Noel. The Archimedes Codex . Da Capo Press, 2007.  Isaac Newton. Sir Isaac Newton's Two Treatises of the Quadrature of Curves and Analysis by Equation of an Infinite Number of Terms, Explained . Society for the Encouragement of Learning, 1745. Translated from Latin by John Stewart, A. M. Professor of Mathematicks in the Marishal College and University of Aberdeen.  J. J. O'Connor and E. F. Robertson. The Brachistochrone Problem . http:\/\/www-gap.dcs.st-and.ac.uk\", MacTutor History of Mathematics archive   Abraham Robinson. Non-standard analysis . North-Holland Pub. Co., 1974.  Lucio Russo, translated by Silvio Levy. The Forgotten Revolution: How Science Was Born in 300 BC and Why It Had to Be Reborn . Springer, 1996.  C. Edward Sandifer. The Early Mathematics of Leonard Euler . Spectrum, 2007. ISBN 10: 0883855593, ISBN 13: 978-0883855591.  Dirk Struik, editor. Source Book in Mathematics, 1200-1800 . Harvard University Press, Cambridge, MA, 1969.  H. A. Thurston. The Number System . Blackie and Son Limited, London, Glassgow, 1956.  "
 },
 {
-  "id": "index-1",
+  "id": "ASORA-8-2",
   "level": "1",
-  "url": "index-1.html",
+  "url": "ASORA-8-2.html",
   "type": "Index",
   "number": "",
   "title": "Index",
@@ -4155,6 +4155,7 @@ var ptx_lunr_idx = lunr(function () {
   this.ref('id')
   this.field('title')
   this.field('body')
+  this.metadataWhitelist = ['position']
 
   ptx_lunr_docs.forEach(function (doc) {
     this.add(doc)

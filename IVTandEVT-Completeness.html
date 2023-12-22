@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Completeness of the Real Number System</title>
@@ -15,172 +15,99 @@
 <meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
 <meta property="book:author" content="Robert Rogers">
 <meta property="book:author" content="Eugene C. Boman">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/colors_red_blue.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
 <p class="byline">Robert Rogers, Eugene C. Boman</p>
 </div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-8-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
-</h2>
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
 <div id="searchempty" class="searchempty"><span>No results.</span></div>
 <ol id="searchresults" class="searchresults"></ol>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
-<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden avatar">
-<li data-val="You!" tabindex="-1">
-<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
-<li data-val="😺" tabindex="-1">
-<span id="the😺" class="avatarcheck"></span>😺</li>
-<li data-val="👤" tabindex="-1">
-<span id="the👤" class="avatarcheck"></span>👤</li>
-<li data-val="👽" tabindex="-1">
-<span id="the👽" class="avatarcheck"></span>👽</li>
-<li data-val="🐶" tabindex="-1">
-<span id="the🐶" class="avatarcheck"></span>🐶</li>
-<li data-val="🐼" tabindex="-1">
-<span id="the🐼" class="avatarcheck"></span>🐼</li>
-<li data-val="🌈" tabindex="-1">
-<span id="the🌈" class="avatarcheck"></span>🌈</li>
-</ol>
-</li>
-<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fontfamily">
-<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
-<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
-<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-</ol>
-</li>
-<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fonts">
-<li>Size</li>
-<li><span id="thesize">12</span></li>
-<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
-<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
-<li>Width</li>
-<li><span id="thewdth">100</span></li>
-<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
-<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
-<li>Weight</li>
-<li><span id="thewght">400</span></li>
-<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
-<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
-<li>Letter spacing</li>
-<li>
-<span id="thelspace">0</span><span class="byunits">/200</span>
-</li>
-<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
-<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
-<li>Word spacing</li>
-<li>
-<span id="thewspace">0</span><span class="byunits">/50</span>
-</li>
-<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
-<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
-<li>Line Spacing</li>
-<li>
-<span id="theheight">135</span><span class="byunits">/100</span>
-</li>
-<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
-<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
-</ol>
-</li>
-<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden atmosphere">
-<li data-val="default" tabindex="-1">
-<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
-<li data-val="pastel" tabindex="-1">
-<span id="thepastel" class="atmospherecheck"></span>pastel</li>
-<li data-val="darktwilight" tabindex="-1">
-<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
-<li data-val="dark" tabindex="-1">
-<span id="thedark" class="atmospherecheck"></span>dark</li>
-<li data-val="darkmidnight" tabindex="-1">
-<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
-</ol>
-</li>
-<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden ruler">
-<li data-val="none" tabindex="-1">
-<span id="thenone" class="rulercheck">✔️</span>none</li>
-<li data-val="underline" tabindex="-1">
-<span id="theunderline" class="rulercheck"></span>underline</li>
-<li data-val="lunderline" tabindex="-1">
-<span id="thelunderline" class="rulercheck"></span>L-underline</li>
-<li data-val="greybar" tabindex="-1">
-<span id="thegreybar" class="rulercheck"></span>grey bar</li>
-<li data-val="lightbox" tabindex="-1">
-<span id="thelightbox" class="rulercheck"></span>light box</li>
-<li data-val="sunrise" tabindex="-1">
-<span id="thesunrise" class="rulercheck"></span>sunrise</li>
-<li data-val="sunriseunderline" tabindex="-1">
-<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
-<li class="moveQ">Motion by:</li>
-<li data-val="mouse" tabindex="-1">
-<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
-<li data-val="arrow" tabindex="-1">
-<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
-<li data-val="eye" tabindex="-1">
-<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
-</ol>
-</li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="IVTandEVT.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="IVTandEVT.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="IVTandEVT-ProofOfIVT.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="IVTandEVT.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="IVTandEVT.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="IVTandEVT-ProofOfIVT.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
 \newcommand{\dx}[1]{\,{\rm d}#1}
 
 
@@ -203,213 +130,211 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
-<li>
-<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="ASORA-2.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="ASORA-2-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
-<li>
-<div class="toc-item"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
-<li><div class="toc-item"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
-<li><div class="toc-item"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
-<ul class="structural"><li>
-<div class="toc-item"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="Interegnum-2.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
 </li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
-<li><div class="toc-item"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
-<li><div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Convergence-5.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
-<li><div class="toc-item"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
-<ul class="structural">
-<li class="active"><div class="toc-item"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
-<li>
-<div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#subsection-4" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
-<li><div class="toc-item"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="Epilogues-NatureNumbers.html#subsection-5" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-NatureNumbers.html#Epilogues-NatureNumbers-3" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
-<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="ASORA-8.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="ASORA-8-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="ASORA-8-2.html" class="internal"><span class="title">Index</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="IVTandEVT-Completeness"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">10.1</span><span class="space"> </span><span class="title">Completeness of the Real Number System</span>
 </h2>
-<div class="para" id="p-950">Recall that in deriving the Lagrange and Cauchy forms of the remainder for Taylor series, we made use of the Extreme Value Theorem (<dfn class="terminology">EVT</dfn>) and Intermediate Value Theorem (<dfn class="terminology">IVT</dfn>). In <a href="Continuity.html" class="internal" title="Chapter 9: Continuity: What It Isn’t and What It Is">Chapter 9</a>, we produced an analytic definition of continuity that we can use to prove these theorems. To provide the rest of the necessary tools we need to explore the make-up of the real number system. To illustrate what we mean, suppose that we only used the rational number system. We could still use our definition of continuity and could still consider continuous functions such as <span class="process-math">\(f(x)=x^2\text{.}\)</span> Notice that <span class="process-math">\(2\)</span> is a value that lies between <span class="process-math">\(f(1)=1\)</span> and <span class="process-math">\(f(2)=4\text{.}\)</span>
+<div class="para" id="IVTandEVT-Completeness-2">Recall that in deriving the Lagrange and Cauchy forms of the remainder for Taylor series, we made use of the Extreme Value Theorem (<dfn class="terminology">EVT</dfn>) and Intermediate Value Theorem (<dfn class="terminology">IVT</dfn>). In <a href="Continuity.html" class="internal" title="Chapter 9: Continuity: What It Isn’t and What It Is">Chapter 9</a>, we produced an analytic definition of continuity that we can use to prove these theorems. To provide the rest of the necessary tools we need to explore the make-up of the real number system. To illustrate what we mean, suppose that we only used the rational number system. We could still use our definition of continuity and could still consider continuous functions such as <span class="process-math">\(f(x)=x^2\text{.}\)</span> Notice that <span class="process-math">\(2\)</span> is a value that lies between <span class="process-math">\(f(1)=1\)</span> and <span class="process-math">\(f(2)=4\text{.}\)</span>
 </div>
 <div class="image-box" style="width: 37%; margin-left: 31.5%; margin-right: 31.5%;"><img src="external/images/Ch6fig1.png" class="contained"></div>
-<div class="para" id="p-951">The IVT says that somewhere between <span class="process-math">\(1\)</span> and <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(f\)</span> must take on the value <span class="process-math">\(2\text{.}\)</span> That is, there must exist some number <span class="process-math">\(c\in[1,2]\)</span> such that <span class="process-math">\(f(c)=2\text{.}\)</span> You might say, “Big deal! Everyone knows <span class="process-math">\(c=\sqrt{2}\)</span> works.”</div>
-<div class="para" id="p-952">However, we are only working with rational numbers and <span class="process-math">\(\sqrt{2}\)</span> <span class="process-math">\(\)</span>is not rational. As we saw in <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a> the rational number system has holes in it, whereas the real number system doesn’t. Again, “Big deal! Let’s just say that the real number system contains (square) roots.”</div>
-<div class="para" id="p-953">This sounds reasonable and it actually works for square roots, but consider the function <span class="process-math">\(f(x)=x-\cos x\text{.}\)</span> We know this is a continuous function. We also know that <span class="process-math">\(f(0)=-1\)</span> and <span class="process-math">\(f(\frac{\pi}{2})=\frac{\pi}{2}\text{.}\)</span> According to the IVT, there should be some number <span class="process-math">\(c\in[\,0,\frac{\pi}{2}]\text{,}\)</span> where <span class="process-math">\(f(c)=0\text{.}\)</span> The graph is below.</div>
+<div class="para" id="IVTandEVT-Completeness-4">The IVT says that somewhere between <span class="process-math">\(1\)</span> and <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(f\)</span> must take on the value <span class="process-math">\(2\text{.}\)</span> That is, there must exist some number <span class="process-math">\(c\in[1,2]\)</span> such that <span class="process-math">\(f(c)=2\text{.}\)</span> You might say, “Big deal! Everyone knows <span class="process-math">\(c=\sqrt{2}\)</span> works.”</div>
+<div class="para" id="IVTandEVT-Completeness-5">However, we are only working with rational numbers and <span class="process-math">\(\sqrt{2}\)</span> <span class="process-math">\(\)</span>is not rational. As we saw in <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a> the rational number system has holes in it, whereas the real number system doesn’t. Again, “Big deal! Let’s just say that the real number system contains (square) roots.”</div>
+<div class="para" id="IVTandEVT-Completeness-6">This sounds reasonable and it actually works for square roots, but consider the function <span class="process-math">\(f(x)=x-\cos x\text{.}\)</span> We know this is a continuous function. We also know that <span class="process-math">\(f(0)=-1\)</span> and <span class="process-math">\(f(\frac{\pi}{2})=\frac{\pi}{2}\text{.}\)</span> According to the IVT, there should be some number <span class="process-math">\(c\in[\,0,\frac{\pi}{2}]\text{,}\)</span> where <span class="process-math">\(f(c)=0\text{.}\)</span> The graph is below.</div>
 <div class="image-box" style="width: 37%; margin-left: 31.5%; margin-right: 31.5%;"><img src="external/images/Ch6fig2.png" class="contained"></div>
-<div class="para" id="p-954">The situation is not as transparent as before. What would this mysterious <span class="process-math">\(c\)</span> be where the curve crosses the <span class="process-math">\(x\)</span> axis? Somehow we need to convey the idea that the real number system is a continuum. That is, it has no “holes” in it.</div>
-<div class="para" id="p-955">How about this? Why don’t we just say that it has no holes in it? Sometimes the simple answer works best! But not in this case. How are we going to formulate a rigorous proof based on this statement? Just like with convergence and continuity, what we need is a rigorous way to convey this idea that the real number system does not have any holes, that it is <em class="emphasis">complete.</em>
+<div class="para" id="IVTandEVT-Completeness-8">The situation is not as transparent as before. What would this mysterious <span class="process-math">\(c\)</span> be where the curve crosses the <span class="process-math">\(x\)</span> axis? Somehow we need to convey the idea that the real number system is a continuum. That is, it has no “holes” in it.</div>
+<div class="para" id="IVTandEVT-Completeness-9">How about this? Why don’t we just say that it has no holes in it? Sometimes the simple answer works best! But not in this case. How are we going to formulate a rigorous proof based on this statement? Just like with convergence and continuity, what we need is a rigorous way to convey this idea that the real number system does not have any holes, that it is <em class="emphasis">complete.</em>
 </div>
-<div class="para" id="p-956">We will see that there are several different, but equivalent ways to convey this notion of completeness. We will explore some of them in this chapter. For now we adopt the following as our <em class="emphasis">Completeness Axiom</em> for the real number system.</div>
+<div class="para" id="IVTandEVT-Completeness-10">We will see that there are several different, but equivalent ways to convey this notion of completeness. We will explore some of them in this chapter. For now we adopt the following as our <em class="emphasis">Completeness Axiom</em> for the real number system.</div>
 <article class="axiom theorem-like" id="NIP"><h3 class="heading">
 <span class="type">Axiom</span><span class="space"> </span><span class="codenumber">10.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Nested Interval Property of the Real Number System (<dfn class="terminology">NIP</dfn>).</span>
 </h3>
-<div class="para" id="p-957">Suppose we have two sequences of real numbers <span class="process-math">\(\left(x_n\right)\)</span>and <span class="process-math">\(\left(y_n\right)\)</span> satisfying the following conditions:</div> <div class="para logical" id="p-958"><ol class="decimal">
-<li id="li-57"><div class="para" id="p-959">
+<div class="para" id="NIP-2-1">Suppose we have two sequences of real numbers <span class="process-math">\(\left(x_n\right)\)</span>and <span class="process-math">\(\left(y_n\right)\)</span> satisfying the following conditions:</div> <div class="para logical" id="NIP-2-2"><ol class="decimal">
+<li id="NIP-2-2-1-1"><div class="para" id="NIP-2-2-1-1-1">
 <span class="process-math">\(x_1\leq x_2\leq x_3\leq\ldots\)</span> (this says that the sequence, <span class="process-math">\(\left(x_n\right)\text{,}\)</span> is non-decreasing)</div></li>
-<li id="li-58"><div class="para" id="p-960">
+<li id="NIP-2-2-1-2"><div class="para" id="NIP-2-2-1-2-1">
 <span class="process-math">\(y_1\geq y_2\geq y_3\geq\ldots\)</span> (this says that the sequence, <span class="process-math">\(\left(y_n\right)\text{,}\)</span> is non-increasing) </div></li>
-<li id="li-59"><div class="para" id="p-961">
+<li id="NIP-2-2-1-3"><div class="para" id="NIP-2-2-1-3-1">
 <span class="process-math">\(\forall\)</span> <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(x_n\leq y_n\)</span>
 </div></li>
-<li id="li-60"><div class="para" id="p-962"><span class="process-math">\(\displaystyle \lim_{n\rightarrow\infty}\left(y_n-x_n\right)=0\)</span></div></li>
-</ol></div> <div class="para" id="p-963">Then there exists a unique number <span class="process-math">\(c\)</span> such that <span class="process-math">\(x_n\leq
+<li id="NIP-2-2-1-4"><div class="para" id="NIP-2-2-1-4-1"><span class="process-math">\(\displaystyle \lim_{n\rightarrow\infty}\left(y_n-x_n\right)=0\)</span></div></li>
+</ol></div> <div class="para" id="NIP-2-3">Then there exists a unique number <span class="process-math">\(c\)</span> such that <span class="process-math">\(x_n\leq
 c\leq y_n\)</span> for all <span class="process-math">\(n\text{.}\)</span>
-</div></article><div class="para" id="p-964">Geometrically, we have the following situation.</div>
+</div></article><div class="para" id="IVTandEVT-Completeness-12">Geometrically, we have the following situation.</div>
 <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/Ch6fig3.png" class="contained"></div>
-<div class="para" id="p-965">Notice that we have two sequences <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\text{,}\)</span> one increasing (really non-decreasing) and one decreasing (non-increasing). These sequences do not pass each other. In fact, the following is true:</div>
-<article class="problem example-like" id="problem-136"><h3 class="heading">
+<div class="para" id="IVTandEVT-Completeness-14">Notice that we have two sequences <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\text{,}\)</span> one increasing (really non-decreasing) and one decreasing (non-increasing). These sequences do not pass each other. In fact, the following is true:</div>
+<article class="problem example-like" id="IVTandEVT-Completeness-15"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-966">Let <span class="process-math">\((x_n), (y_n)\)</span> be sequences as in the NIP. Show that for all <span class="process-math">\(n, m \in\NN\text{,}\)</span> <span class="process-math">\(x_n\le y_m\text{.}\)</span>
-</div></article><div class="para" id="p-967">They are also coming together in the sense that <span class="process-math">\(\lim_{n\rightarrow\infty}\left(y_n-x_n\right)=0\text{.}\)</span>  The NIP says that in this case there is a unique real number <span class="process-math">\(c\)</span> in the middle of all of this <span class="process-math">\(x_n\leq c\leq y_n\)</span> for all <span class="process-math">\(n\in\NN\text{.}\)</span>
+<div class="para" id="IVTandEVT-Completeness-15-2-1">Let <span class="process-math">\((x_n), (y_n)\)</span> be sequences as in the NIP. Show that for all <span class="process-math">\(n, m \in\NN\text{,}\)</span> <span class="process-math">\(x_n\le y_m\text{.}\)</span>
+</div></article><div class="para" id="IVTandEVT-Completeness-16">They are also coming together in the sense that <span class="process-math">\(\lim_{n\rightarrow\infty}\left(y_n-x_n\right)=0\text{.}\)</span>  The NIP says that in this case there is a unique real number <span class="process-math">\(c\)</span> in the middle of all of this <span class="process-math">\(x_n\leq c\leq y_n\)</span> for all <span class="process-math">\(n\in\NN\text{.}\)</span>
 </div>
 <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/Ch6fig4.png" class="contained"></div>
-<div class="para" id="p-968">If there was no such <span class="process-math">\(c\)</span> then there would be a hole where these two sequences come together.  The NIP guarantees that there is no such hole.  We do not need to prove this since an axiom is, by definition, a self evident truth.  We are taking it on faith that the real number system obeys this law.  The next problem shows that the completeness property distinguishes the real number system from the rational number system.</div>
-<article class="problem example-like" id="problem-137"><h3 class="heading">
+<div class="para" id="IVTandEVT-Completeness-18">If there was no such <span class="process-math">\(c\)</span> then there would be a hole where these two sequences come together.  The NIP guarantees that there is no such hole.  We do not need to prove this since an axiom is, by definition, a self evident truth.  We are taking it on faith that the real number system obeys this law.  The next problem shows that the completeness property distinguishes the real number system from the rational number system.</div>
+<article class="problem example-like" id="IVTandEVT-Completeness-19"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.3</span><span class="period">.</span>
 </h3>
-<article class="task exercise-like" id="task-119"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-969">Find two sequences of rational numbers <span class="process-math">\(\left(x_n\right)\)</span>and <span class="process-math">\(\left(y_n\right)\)</span> which satisfy properties 1-4 of the NIP and such that there is no rational number <span class="process-math">\(c\)</span> satisfying the conclusion of the NIP.</div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-31" id="hint-31"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-31"><div class="hint solution-like"><div class="para" id="p-970">Consider the decimal expansion of an irrational number.</div></div></div>
-</div></article><article class="task exercise-like" id="task-120"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-971">Find two sequences of rational numbers <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\)</span> which satisfy properties 1-4 of the NIP and such that there is a rational number <span class="process-math">\(c\)</span> satisfying the conclusion of the NIP.</div></article></article><div class="para" id="p-972">You might find the name “Nested Interval Property” to be somewhat curious. One way to think about this property is to consider that we have a sequence of “nested closed intervals” <span class="process-math">\([\,x_1,y_1]\supseteq[\,x_2,y_2]\supseteq[\,x_3,y_3]\supseteq\cdots\)</span> whose lengths <span class="process-math">\(\,y_n-x_n\)</span> are “shrinking to <span class="process-math">\(0\text{.}\)</span>” The conclusion is that the intersection of these intervals is non-empty and, in fact, consists of a single point. That is, <span class="process-math">\(\bigcap_{n=1}^\infty[x_n,y_n]=\{c\}\text{.}\)</span>
+<article class="task exercise-like" id="IVTandEVT-Completeness-19-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="IVTandEVT-Completeness-19-2-1-1">Find two sequences of rational numbers <span class="process-math">\(\left(x_n\right)\)</span>and <span class="process-math">\(\left(y_n\right)\)</span> which satisfy properties 1-4 of the NIP and such that there is no rational number <span class="process-math">\(c\)</span> satisfying the conclusion of the NIP.</div>
+<div class="solutions"><details id="IVTandEVT-Completeness-19-2-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="IVTandEVT-Completeness-19-2-2-1">Consider the decimal expansion of an irrational number.</div></div></details></div></article><article class="task exercise-like" id="IVTandEVT-Completeness-19-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="IVTandEVT-Completeness-19-3-1-1">Find two sequences of rational numbers <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\)</span> which satisfy properties 1-4 of the NIP and such that there is a rational number <span class="process-math">\(c\)</span> satisfying the conclusion of the NIP.</div></article></article><div class="para" id="IVTandEVT-Completeness-20">You might find the name “Nested Interval Property” to be somewhat curious. One way to think about this property is to consider that we have a sequence of “nested closed intervals” <span class="process-math">\([\,x_1,y_1]\supseteq[\,x_2,y_2]\supseteq[\,x_3,y_3]\supseteq\cdots\)</span> whose lengths <span class="process-math">\(\,y_n-x_n\)</span> are “shrinking to <span class="process-math">\(0\text{.}\)</span>” The conclusion is that the intersection of these intervals is non-empty and, in fact, consists of a single point. That is, <span class="process-math">\(\bigcap_{n=1}^\infty[x_n,y_n]=\{c\}\text{.}\)</span>
 </div>
-<div class="para" id="p-973">It appears that the sequences <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\)</span> in the NIP converge to <span class="process-math">\(c\text{.}\)</span> This is, in fact, true and can be proven rigorously. In what follows, this will prove to be a valuable piece of information.</div>
+<div class="para" id="IVTandEVT-Completeness-21">It appears that the sequences <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\)</span> in the NIP converge to <span class="process-math">\(c\text{.}\)</span> This is, in fact, true and can be proven rigorously. In what follows, this will prove to be a valuable piece of information.</div>
 <article class="theorem theorem-like" id="thm_ConvergeToC"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.1.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-974"> Suppose that we have two sequences <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\)</span> satisfying all of the assumptions of the Nested Interval Property. If <span class="process-math">\(c\)</span> is the unique number such that <span class="process-math">\(x_n\leq c\leq y_n\)</span> for all <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=c\)</span> and <span class="process-math">\(\lim_{n\rightarrow\infty}y_n=c\text{.}\)</span>
-</div></article><article class="problem example-like" id="problem-138"><h3 class="heading">
+<div class="para" id="thm_ConvergeToC-1-1"> Suppose that we have two sequences <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\)</span> satisfying all of the assumptions of the Nested Interval Property. If <span class="process-math">\(c\)</span> is the unique number such that <span class="process-math">\(x_n\leq c\leq y_n\)</span> for all <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(\lim_{n\rightarrow\infty}x_n=c\)</span> and <span class="process-math">\(\lim_{n\rightarrow\infty}y_n=c\text{.}\)</span>
+</div></article><article class="problem example-like" id="IVTandEVT-Completeness-23"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-975"> Prove <a href="" class="xref" data-knowl="./knowl/thm_ConvergeToC.html" title="Theorem 10.1.4">Theorem 10.1.4</a>.</div></article><div class="para" id="p-976">To illustrate the idea that the NIP “plugs the holes” in the real line, we will prove the existence of square roots of nonnegative real numbers.</div>
+<div class="para" id="IVTandEVT-Completeness-23-1-1"> Prove <a href="" class="xref" data-knowl="./knowl/xref/thm_ConvergeToC.html" title="Theorem 10.1.4">Theorem 10.1.4</a>.</div></article><div class="para" id="IVTandEVT-Completeness-24">To illustrate the idea that the NIP “plugs the holes” in the real line, we will prove the existence of square roots of nonnegative real numbers.</div>
 <article class="theorem theorem-like" id="thm_SqrtsExist"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.1.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-977">Suppose <span class="process-math">\(a\in\mathbb{R},\,a\geq 0\text{.}\)</span> There exists a real number <span class="process-math">\(c\geq 0\)</span> such that <span class="process-math">\(c^2=a\text{.}\)</span>
-</div></article><div class="para" id="p-978">Notice that we can’t just say, “Let <span class="process-math">\(c=\sqrt{a}\text{,}\)</span>” since the idea is to show that this square root exists. In fact, throughout this proof, we cannot really use a square root symbol as we haven’t yet proved that they (square roots) exist. We will give the idea behind the proof as it illustrates how the NIP is used.</div>
-<article class="proof" id="proof-22"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3> <div class="para" id="p-979">Our strategy is to construct two sequences which will “narrow in” on the number <span class="process-math">\(c\)</span> that we seek. With that in mind, we need to find a number <span class="process-math">\(x_1\)</span> such that <span class="process-math">\(x_1^2\leq a\)</span> and a number <span class="process-math">\(y_1\)</span> such that <span class="process-math">\(y_1^2\geq a\text{.}\)</span> (Remember that we can’t say <span class="process-math">\(\sqrt{x_1}\)</span> or<span class="process-math">\(\sqrt{y_1}\text{.}\)</span>) There are many possibilities, but how about <span class="process-math">\(x_1=0\)</span> and <span class="process-math">\(y_1=a+1?\)</span> You can check that these will satisfy <span class="process-math">\(x_1^2\leq a\leq\)</span> <span class="process-math">\(y_1^2\text{.}\)</span> Furthermore <span class="process-math">\(x_1\leq y_1\text{.}\)</span> This is the starting point.</div> <div class="para" id="p-980">The technique we will employ is often called a bisection technique, and is a useful way to set ourselves up for applying the NIP. Let <span class="process-math">\(m_1\)</span> be the midpoint of the interval <span class="process-math">\([\,x_1,y_1]\text{.}\)</span> Then either we have <span class="process-math">\(m_1^2\leq a\)</span> or <span class="process-math">\(m_1^2\geq a\text{.}\)</span> In the case <span class="process-math">\(m_1^2\leq a\text{,}\)</span> we really want <span class="process-math">\(m_1\)</span> to take the place of <span class="process-math">\(x_1\)</span> since it is larger than <span class="process-math">\(\,x_1\text{,}\)</span> but still represents an underestimate for what would be the square root of <span class="process-math">\(a\text{.}\)</span> This thinking prompts the following move. If <span class="process-math">\(m_1^2\leq a\text{,}\)</span> we will relabel things by letting <span class="process-math">\(x_2=m_1\)</span> and <span class="process-math">\(y_2=y_1\text{.}\)</span> The situation looks like this on the number line.</div> <div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="external/images/Ch6fig5.png" class="contained"></div> <div class="para" id="p-981">In the other case where <span class="process-math">\(a\leq m_1^2\text{,}\)</span> we will relabel things by letting <span class="process-math">\(x_2=x_1\)</span> and <span class="process-math">\(y_2=m_1\text{.}\)</span> The situation looks like this on the number line.</div> <div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="external/images/Ch6fig6.png" class="contained"></div> <div class="para logical" id="p-982">
+<div class="para" id="thm_SqrtsExist-2-1">Suppose <span class="process-math">\(a\in\mathbb{R},\,a\geq 0\text{.}\)</span> There exists a real number <span class="process-math">\(c\geq 0\)</span> such that <span class="process-math">\(c^2=a\text{.}\)</span>
+</div></article><div class="para" id="IVTandEVT-Completeness-26">Notice that we can’t just say, “Let <span class="process-math">\(c=\sqrt{a}\text{,}\)</span>” since the idea is to show that this square root exists. In fact, throughout this proof, we cannot really use a square root symbol as we haven’t yet proved that they (square roots) exist. We will give the idea behind the proof as it illustrates how the NIP is used.</div>
+<article class="proof" id="IVTandEVT-Completeness-27"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3> <div class="para" id="IVTandEVT-Completeness-27-2">Our strategy is to construct two sequences which will “narrow in” on the number <span class="process-math">\(c\)</span> that we seek. With that in mind, we need to find a number <span class="process-math">\(x_1\)</span> such that <span class="process-math">\(x_1^2\leq a\)</span> and a number <span class="process-math">\(y_1\)</span> such that <span class="process-math">\(y_1^2\geq a\text{.}\)</span> (Remember that we can’t say <span class="process-math">\(\sqrt{x_1}\)</span> or<span class="process-math">\(\sqrt{y_1}\text{.}\)</span>) There are many possibilities, but how about <span class="process-math">\(x_1=0\)</span> and <span class="process-math">\(y_1=a+1?\)</span> You can check that these will satisfy <span class="process-math">\(x_1^2\leq a\leq\)</span> <span class="process-math">\(y_1^2\text{.}\)</span> Furthermore <span class="process-math">\(x_1\leq y_1\text{.}\)</span> This is the starting point.</div> <div class="para" id="IVTandEVT-Completeness-27-3">The technique we will employ is often called a bisection technique, and is a useful way to set ourselves up for applying the NIP. Let <span class="process-math">\(m_1\)</span> be the midpoint of the interval <span class="process-math">\([\,x_1,y_1]\text{.}\)</span> Then either we have <span class="process-math">\(m_1^2\leq a\)</span> or <span class="process-math">\(m_1^2\geq a\text{.}\)</span> In the case <span class="process-math">\(m_1^2\leq a\text{,}\)</span> we really want <span class="process-math">\(m_1\)</span> to take the place of <span class="process-math">\(x_1\)</span> since it is larger than <span class="process-math">\(\,x_1\text{,}\)</span> but still represents an underestimate for what would be the square root of <span class="process-math">\(a\text{.}\)</span> This thinking prompts the following move. If <span class="process-math">\(m_1^2\leq a\text{,}\)</span> we will relabel things by letting <span class="process-math">\(x_2=m_1\)</span> and <span class="process-math">\(y_2=y_1\text{.}\)</span> The situation looks like this on the number line.</div> <div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="external/images/Ch6fig5.png" class="contained"></div> <div class="para" id="IVTandEVT-Completeness-27-5">In the other case where <span class="process-math">\(a\leq m_1^2\text{,}\)</span> we will relabel things by letting <span class="process-math">\(x_2=x_1\)</span> and <span class="process-math">\(y_2=m_1\text{.}\)</span> The situation looks like this on the number line.</div> <div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="external/images/Ch6fig6.png" class="contained"></div> <div class="para logical" id="IVTandEVT-Completeness-27-7">
 <div class="para">In either case, we’ve reduced the length of the interval where the square root lies to half the size it was before. Stated in more specific terms, in either case we have the same results:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -422,7 +347,7 @@ x_1\leq x_2\leq y_2\leq y_1;\ \  x_1^2\leq a\leq y_1^2;\ \  x_2^2\leq a\leq y_2^
 y_2-x_2=\frac{1}{2}\left(y_1-x_1\right)\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-983">
+</div> <div class="para logical" id="IVTandEVT-Completeness-27-8">
 <div class="para">Now we play the same game, but instead we start with the interval <span class="process-math">\([x_2,y_2]\text{.}\)</span> Let <span class="process-math">\(m_2\)</span> be the midpoint of <span class="process-math">\([x_2,y_2]\text{.}\)</span> Then we have <span class="process-math">\(m_2^2\leq a\)</span> or <span class="process-math">\(m_2^2\geq a\text{.}\)</span> If <span class="process-math">\(m_2^2\leq a\text{,}\)</span> we relabel <span class="process-math">\(x_3=m_2\)</span> and <span class="process-math">\(y_3=y_2\text{.}\)</span> If <span class="process-math">\(a\leq m_2^2\text{,}\)</span> we relabel <span class="process-math">\(x_3=x_2\)</span> and <span class="process-math">\(y_3=m_2\text{.}\)</span> In either case, we end up with</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -435,16 +360,16 @@ x_1\leq x_2\leq x_3\leq y_3\leq y_2\leq y_1;\ \   x_1^2\leq a\leq y_1^2;\ \  x_2
 y_3-x_3=\frac{1}{2}\left(y_2-x_2\right)=\frac{1}{2^2}\left(y_1-x_1\right)\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-984">
+</div> <div class="para logical" id="IVTandEVT-Completeness-27-9">
 <div class="para">Continuing in this manner, we will produce two sequences, <span class="process-math">\(\left(x_n\right)\)</span>and <span class="process-math">\(\left(y_n\right)\)</span> satisfying the following conditions:</div>
 <ol class="decimal">
-<li id="li-61"><div class="para" id="p-985"><span class="process-math">\(\displaystyle x_1\leq x_2\leq x_3\leq\ldots\)</span></div></li>
-<li id="li-62"><div class="para" id="p-986"><span class="process-math">\(\displaystyle y_1\geq y_2\geq y_3\geq\ldots\)</span></div></li>
-<li id="li-63"><div class="para" id="p-987">
+<li id="IVTandEVT-Completeness-27-9-3-1"><div class="para" id="IVTandEVT-Completeness-27-9-3-1-1"><span class="process-math">\(\displaystyle x_1\leq x_2\leq x_3\leq\ldots\)</span></div></li>
+<li id="IVTandEVT-Completeness-27-9-3-2"><div class="para" id="IVTandEVT-Completeness-27-9-3-2-1"><span class="process-math">\(\displaystyle y_1\geq y_2\geq y_3\geq\ldots\)</span></div></li>
+<li id="IVTandEVT-Completeness-27-9-3-3"><div class="para" id="IVTandEVT-Completeness-27-9-3-3-1">
 <span class="process-math">\(\forall\)</span> <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(x_n\leq y_n\)</span>
 </div></li>
-<li id="li-64"><div class="para" id="p-988"><span class="process-math">\(\displaystyle \lim_{n\rightarrow\infty}\left(y_n-x_n\right)=\,\lim_{n\rightarrow\infty}\frac{1}{2^{n-1}}\left(y_1-x_1\right)=0\)</span></div></li>
-<li id="li-65"><div class="para logical" id="p-989">
+<li id="IVTandEVT-Completeness-27-9-3-4"><div class="para" id="IVTandEVT-Completeness-27-9-3-4-1"><span class="process-math">\(\displaystyle \lim_{n\rightarrow\infty}\left(y_n-x_n\right)=\,\lim_{n\rightarrow\infty}\frac{1}{2^{n-1}}\left(y_1-x_1\right)=0\)</span></div></li>
+<li id="IVTandEVT-Completeness-27-9-3-5"><div class="para logical" id="IVTandEVT-Completeness-27-9-3-5-1">
 <div class="para">These sequences also satisfy the following property:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -453,11 +378,11 @@ y_3-x_3=\frac{1}{2}\left(y_2-x_2\right)=\frac{1}{2^2}\left(y_1-x_1\right)\text{.
 </div>
 </div></li>
 </ol>
-</div> <div class="para" id="p-990">Properties 1-4 tell us that <span class="process-math">\(\left(x_n\right)\)</span>and <span class="process-math">\(\left(y_n\right)\)</span> satisfy all of the conditions of the NIP, so we can conclude that there must exist a real number <span class="process-math">\(c\)</span> such that <span class="process-math">\(x_n\leq c\leq y_n\)</span> for all <span class="process-math">\(n\text{.}\)</span> At this point, you should be able to use property 5. to show that <span class="process-math">\(c^2=a\)</span> as desired.</div></article><article class="problem example-like" id="problem-139"><h3 class="heading">
+</div> <div class="para" id="IVTandEVT-Completeness-27-10">Properties 1-4 tell us that <span class="process-math">\(\left(x_n\right)\)</span>and <span class="process-math">\(\left(y_n\right)\)</span> satisfy all of the conditions of the NIP, so we can conclude that there must exist a real number <span class="process-math">\(c\)</span> such that <span class="process-math">\(x_n\leq c\leq y_n\)</span> for all <span class="process-math">\(n\text{.}\)</span> At this point, you should be able to use property 5. to show that <span class="process-math">\(c^2=a\)</span> as desired.</div></article><article class="problem example-like" id="IVTandEVT-Completeness-28"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-991"> Turn the above outline into a formal proof of <a href="" class="xref" data-knowl="./knowl/thm_SqrtsExist.html" title="Theorem 10.1.6">Theorem 10.1.6</a>.</div></article><div class="para" id="p-992">The bisection method we employed in the proof of <a href="" class="xref" data-knowl="./knowl/thm_SqrtsExist.html" title="Theorem 10.1.6">Theorem 10.1.6</a> is pretty typical of how we will use the NIP, as taking midpoints ensures that we will create a sequence of “nested intervals.” We will employ this strategy in the proofs of the IVT and EVT. Deciding how to relabel the endpoints of our intervals will be determined by what we want to do with these two sequences of real numbers. This will typically lead to a fifth property, which will be crucial in proving that the <span class="process-math">\(c\)</span> guaranteed by the NIP does what we want it to do. Specifically, in the above example, we always wanted our candidate for <span class="process-math">\(\sqrt{a}\)</span> to be in the interval <span class="process-math">\([\,x_n,y_n]\text{.}\)</span> This judicious choice led to the extra Property 5: <span class="process-math">\(\forall\)</span> <span class="process-math">\(n,\,x_n^2\leq a\leq y_n^2\text{.}\)</span> In applying the NIP to prove the IVT and EVT, we will find that properties 1-4 will stay the same. Property 5 is what will change based on the property we want <span class="process-math">\(c\)</span> to have.</div>
-<div class="para logical" id="p-993">
+<div class="para" id="IVTandEVT-Completeness-28-1-1"> Turn the above outline into a formal proof of <a href="" class="xref" data-knowl="./knowl/xref/thm_SqrtsExist.html" title="Theorem 10.1.6">Theorem 10.1.6</a>.</div></article><div class="para" id="IVTandEVT-Completeness-29">The bisection method we employed in the proof of <a href="" class="xref" data-knowl="./knowl/xref/thm_SqrtsExist.html" title="Theorem 10.1.6">Theorem 10.1.6</a> is pretty typical of how we will use the NIP, as taking midpoints ensures that we will create a sequence of “nested intervals.” We will employ this strategy in the proofs of the IVT and EVT. Deciding how to relabel the endpoints of our intervals will be determined by what we want to do with these two sequences of real numbers. This will typically lead to a fifth property, which will be crucial in proving that the <span class="process-math">\(c\)</span> guaranteed by the NIP does what we want it to do. Specifically, in the above example, we always wanted our candidate for <span class="process-math">\(\sqrt{a}\)</span> to be in the interval <span class="process-math">\([\,x_n,y_n]\text{.}\)</span> This judicious choice led to the extra Property 5: <span class="process-math">\(\forall\)</span> <span class="process-math">\(n,\,x_n^2\leq a\leq y_n^2\text{.}\)</span> In applying the NIP to prove the IVT and EVT, we will find that properties 1-4 will stay the same. Property 5 is what will change based on the property we want <span class="process-math">\(c\)</span> to have.</div>
+<div class="para logical" id="IVTandEVT-Completeness-30">
 <div class="para">Before we tackle the IVT and EVT, let’s use the NIP to address an interesting question about the Harmonic Series.  Recall that the Harmonic Series, <span class="process-math">\(1+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\cdots\text{,}\)</span> grows without bound, that is, <span class="process-math">\(\sum_{n=1}^\infty\frac{1}{n}=\infty\text{.}\)</span>  The question is how slowly does this series grow?  For example, how many terms would it take before the series surpasses 100? 1000? 10000?  Leonhard Euler  decided to tackle this problem in the following way.  Euler decided to consider the <span class="process-math">\(\lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+
 \frac{1}{n}\right)-\text{ ln } \left(n+1\right)\right)\text{.}\)</span>  This limit is called Euler’s constant and is denoted by <span class="process-math">\(\gamma\text{.}\)</span> This says that for <span class="process-math">\(n\)</span> large, we have <span class="process-math">\(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\approx\)</span>ln<span class="process-math">\(\left(n+1\right)+\gamma\text{.}\)</span> If we could approximate <span class="process-math">\(\gamma\text{,}\)</span> then we could replace the inequality <span class="process-math">\(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\geq
 100\)</span> with the more tractable inequality ln<span class="process-math">\(\left(n+1\right)+\gamma\)</span> <span class="process-math">\(\geq 0\)</span> and solve for <span class="process-math">\(n\)</span> in this.  This should tell us roughly how many terms would need to be added in the Harmonic Series to surpass 100. Approximating <span class="process-math">\(\gamma\)</span> with a computer is not too bad.  We could make <span class="process-math">\(n\)</span> as large as we wish in <span class="process-math">\(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\right)-\)</span>ln<span class="process-math">\(\left(1+n\right)\)</span> to make closer approximations for <span class="process-math">\(\gamma\text{.}\)</span>  The real issue is, <em class="alert">HOW DO WE KNOW THAT</em>
@@ -469,11 +394,11 @@ y_3-x_3=\frac{1}{2}\left(y_2-x_2\right)=\frac{1}{2^2}\left(y_1-x_1\right)\text{.
 </div>
 <div class="para"><em class="alert">ACTUALLY EXISTS?</em></div>
 </div>
-<div class="para" id="p-994">You might want to say that obviously it should, but let us point out that as of the printing of this book (2013), it is not even known if <span class="process-math">\(\gamma\)</span> is rational or irrational. So, in our opinion the existence of this limit is not so obvious. This is where the NIP will come into play; we will use it to show that this limit, in fact, exists. The details are in the following problem.</div>
-<article class="problem example-like" id="problem-140"><h3 class="heading">
+<div class="para" id="IVTandEVT-Completeness-31">You might want to say that obviously it should, but let us point out that as of the printing of this book (2013), it is not even known if <span class="process-math">\(\gamma\)</span> is rational or irrational. So, in our opinion the existence of this limit is not so obvious. This is where the NIP will come into play; we will use it to show that this limit, in fact, exists. The details are in the following problem.</div>
+<article class="problem example-like" id="IVTandEVT-Completeness-32"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.8</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-23"><div class="para logical" id="p-995">
+<div class="introduction" id="IVTandEVT-Completeness-32-2"><div class="para logical" id="IVTandEVT-Completeness-32-2-1">
 <div class="para">The purpose of this problem is to show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -482,30 +407,30 @@ y_3-x_3=\frac{1}{2}\left(y_2-x_2\right)=\frac{1}{2^2}\left(y_1-x_1\right)\text{.
 </div>
 <div class="para">exists.</div>
 </div></div>
-<article class="task exercise-like" id="task-121"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="p-996">
+<article class="task exercise-like" id="IVTandEVT-Completeness-32-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="IVTandEVT-Completeness-32-3-1-1">
 <div class="para">Let <span class="process-math">\(x_n=\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\right)-\ln\left(n+1 \right)\text{.}\)</span> Use the following diagram to show</div>
 <div class="displaymath process-math">
 \begin{equation*}
 x_1\leq x_2\leq x_3\leq\cdots
 \end{equation*}
 </div>
-</div> <div class="image-box" style="width: 84%; margin-left: 8%; margin-right: 8%;"><img src="external/images/Ch6fig7.png" class="contained"></div></article><article class="task exercise-like" id="task-122"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-997">Let <span class="process-math">\(z_n=\ln\left(n+1\right)-\left(\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n+1} \right)\text{.}\)</span> Use a similar diagram to show that <span class="process-math">\(z_1\leq z_2\leq z_3\leq\cdots\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-123"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-998">Let <span class="process-math">\(y_n=1-z_n\text{.}\)</span>  Show that <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\)</span> satisfy the hypotheses of the nested interval property and use the NIP to conclude that there is a real number <span class="process-math">\(\gamma\)</span> such that <span class="process-math">\(x_n\leq\gamma\leq
+</div> <div class="image-box" style="width: 84%; margin-left: 8%; margin-right: 8%;"><img src="external/images/Ch6fig7.png" class="contained"></div></article><article class="task exercise-like" id="IVTandEVT-Completeness-32-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="IVTandEVT-Completeness-32-4-1-1">Let <span class="process-math">\(z_n=\ln\left(n+1\right)-\left(\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n+1} \right)\text{.}\)</span> Use a similar diagram to show that <span class="process-math">\(z_1\leq z_2\leq z_3\leq\cdots\text{.}\)</span>
+</div></article><article class="task exercise-like" id="IVTandEVT-Completeness-32-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="IVTandEVT-Completeness-32-5-1-1">Let <span class="process-math">\(y_n=1-z_n\text{.}\)</span>  Show that <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\)</span> satisfy the hypotheses of the nested interval property and use the NIP to conclude that there is a real number <span class="process-math">\(\gamma\)</span> such that <span class="process-math">\(x_n\leq\gamma\leq
 y_n\)</span> for all <span class="process-math">\(n\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-124"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-999">Conclude that <span class="process-math">\(\lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+
+</div></article><article class="task exercise-like" id="IVTandEVT-Completeness-32-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="IVTandEVT-Completeness-32-6-1-1">Conclude that <span class="process-math">\(\lim_{n\rightarrow\infty}\left(\left(1+\frac{1}{2}+\frac{1}{3}+\cdots+
 \frac{1}{n}\right)-\ln\left(n+1\right)\right)=\gamma\text{.}\)</span>
-</div></article></article><article class="problem example-like" id="problem-141"><h3 class="heading">
+</div></article></article><article class="problem example-like" id="IVTandEVT-Completeness-33"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-1000">Use the fact that <span class="process-math">\(x_n\leq\gamma\leq y_n\)</span> for all <span class="process-math">\(n\)</span> to approximate <span class="process-math">\(\gamma\)</span> to three decimal places.</div></article><article class="problem example-like" id="problem-142"><h3 class="heading">
+<div class="para" id="IVTandEVT-Completeness-33-2-1">Use the fact that <span class="process-math">\(x_n\leq\gamma\leq y_n\)</span> for all <span class="process-math">\(n\)</span> to approximate <span class="process-math">\(\gamma\)</span> to three decimal places.</div></article><article class="problem example-like" id="IVTandEVT-Completeness-34"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.10</span><span class="period">.</span>
 </h3>
-<article class="task exercise-like" id="task-125"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="p-1001">
+<article class="task exercise-like" id="IVTandEVT-Completeness-34-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="IVTandEVT-Completeness-34-2-1-1">
 <div class="para">Use the fact that for large <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\approx
 \ln\left(n+1\right)+ \gamma\)</span> to determine approximately how large <span class="process-math">\(n\)</span> must be to make</div>
 <div class="displaymath process-math">
@@ -513,10 +438,10 @@ y_n\)</span> for all <span class="process-math">\(n\text{.}\)</span>
 1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}\geq 100\text{.}
 \end{equation*}
 </div>
-</div></article><article class="task exercise-like" id="task-126"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-1002">Suppose we have a supercomputer which can add 10 trillion terms of the Harmonic Series per second. Approximately how many earth lifetimes would it take for this computer to sum the Harmonic Series until it surpasses 100?</div></article></article></section></div>
+</div></article><article class="task exercise-like" id="IVTandEVT-Completeness-34-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="IVTandEVT-Completeness-34-3-1-1">Suppose we have a supercomputer which can add 10 trillion terms of the Harmonic Series per second.  Approximately how many Earth Ages (the current age of the Earth) would it take for this computer to sum the Harmonic Series until it surpasses 100?</div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="IVTandEVT.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="IVTandEVT-ProofOfIVT.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="IVTandEVT.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="IVTandEVT-ProofOfIVT.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>An Analytic Definition of Continuity</title>
@@ -15,172 +15,99 @@
 <meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
 <meta property="book:author" content="Robert Rogers">
 <meta property="book:author" content="Eugene C. Boman">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/colors_red_blue.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
 <p class="byline">Robert Rogers, Eugene C. Boman</p>
 </div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-8-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
-</h2>
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
 <div id="searchempty" class="searchempty"><span>No results.</span></div>
 <ol id="searchresults" class="searchresults"></ol>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
-<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden avatar">
-<li data-val="You!" tabindex="-1">
-<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
-<li data-val="😺" tabindex="-1">
-<span id="the😺" class="avatarcheck"></span>😺</li>
-<li data-val="👤" tabindex="-1">
-<span id="the👤" class="avatarcheck"></span>👤</li>
-<li data-val="👽" tabindex="-1">
-<span id="the👽" class="avatarcheck"></span>👽</li>
-<li data-val="🐶" tabindex="-1">
-<span id="the🐶" class="avatarcheck"></span>🐶</li>
-<li data-val="🐼" tabindex="-1">
-<span id="the🐼" class="avatarcheck"></span>🐼</li>
-<li data-val="🌈" tabindex="-1">
-<span id="the🌈" class="avatarcheck"></span>🌈</li>
-</ol>
-</li>
-<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fontfamily">
-<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
-<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
-<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-</ol>
-</li>
-<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fonts">
-<li>Size</li>
-<li><span id="thesize">12</span></li>
-<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
-<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
-<li>Width</li>
-<li><span id="thewdth">100</span></li>
-<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
-<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
-<li>Weight</li>
-<li><span id="thewght">400</span></li>
-<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
-<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
-<li>Letter spacing</li>
-<li>
-<span id="thelspace">0</span><span class="byunits">/200</span>
-</li>
-<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
-<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
-<li>Word spacing</li>
-<li>
-<span id="thewspace">0</span><span class="byunits">/50</span>
-</li>
-<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
-<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
-<li>Line Spacing</li>
-<li>
-<span id="theheight">135</span><span class="byunits">/100</span>
-</li>
-<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
-<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
-</ol>
-</li>
-<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden atmosphere">
-<li data-val="default" tabindex="-1">
-<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
-<li data-val="pastel" tabindex="-1">
-<span id="thepastel" class="atmospherecheck"></span>pastel</li>
-<li data-val="darktwilight" tabindex="-1">
-<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
-<li data-val="dark" tabindex="-1">
-<span id="thedark" class="atmospherecheck"></span>dark</li>
-<li data-val="darkmidnight" tabindex="-1">
-<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
-</ol>
-</li>
-<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden ruler">
-<li data-val="none" tabindex="-1">
-<span id="thenone" class="rulercheck">✔️</span>none</li>
-<li data-val="underline" tabindex="-1">
-<span id="theunderline" class="rulercheck"></span>underline</li>
-<li data-val="lunderline" tabindex="-1">
-<span id="thelunderline" class="rulercheck"></span>L-underline</li>
-<li data-val="greybar" tabindex="-1">
-<span id="thegreybar" class="rulercheck"></span>grey bar</li>
-<li data-val="lightbox" tabindex="-1">
-<span id="thelightbox" class="rulercheck"></span>light box</li>
-<li data-val="sunrise" tabindex="-1">
-<span id="thesunrise" class="rulercheck"></span>sunrise</li>
-<li data-val="sunriseunderline" tabindex="-1">
-<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
-<li class="moveQ">Motion by:</li>
-<li data-val="mouse" tabindex="-1">
-<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
-<li data-val="arrow" tabindex="-1">
-<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
-<li data-val="eye" tabindex="-1">
-<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
-</ol>
-</li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="Continuity.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="Continuity.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="SequencesAndContinuity.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Continuity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Continuity.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="SequencesAndContinuity.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
 \newcommand{\dx}[1]{\,{\rm d}#1}
 
 
@@ -203,181 +130,180 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
-<li>
-<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="ASORA-2.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="ASORA-2-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
-<li>
-<div class="toc-item"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
-<li><div class="toc-item"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
-<li><div class="toc-item"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
-<ul class="structural"><li>
-<div class="toc-item"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="Interegnum-2.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
 </li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
-<li><div class="toc-item"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
-<li><div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Convergence-5.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
-<ul class="structural">
-<li class="active"><div class="toc-item"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
-<li><div class="toc-item"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
-<li>
-<div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#subsection-4" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
-<li><div class="toc-item"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="Epilogues-NatureNumbers.html#subsection-5" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-NatureNumbers.html#Epilogues-NatureNumbers-3" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
-<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="ASORA-8.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="ASORA-8-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="ASORA-8-2.html" class="internal"><span class="title">Index</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content">
-<section class="section" id="Continuity-AnalyticDef"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="Continuity-AnalyticDef"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">9.1</span><span class="space"> </span><span class="title">An Analytic Definition of Continuity</span>
 </h2>
-<div class="para" id="p-723">Before the invention of calculus, the notion of continuity was treated intuitively if it was treated at all.  At first pass, it seems a very simple idea based solidly in our experience of the real world.  Standing on the bank we see a river flow past us continuously, not by tiny jerks.  Even when the flow might seem at first to be discontinuous, as when it drops precipitously over a cliff, a closer examination shows that it really is not. As the water approaches the cliff it speeds up.  When it finally goes over it accelerates very quickly but no matter how fast it goes it moves continuously, moving from here to there by occupying every point in between.  This is continuous motion. It never disappears over there and instantaneously reappears over here.  That would be discontinuous motion.</div>
-<div class="para" id="p-724">Similarly, a thrown stone flies continuously (and smoothly) from release point to landing point, passing through each point in its path.</div>
-<div class="para" id="p-725">But wait.</div>
-<div class="para" id="p-726">If the stone passes through discrete points it must be doing so by teeny tiny little jerks, mustn’t it?  Otherwise how would it get from one point to the next?  Is it possible that motion in the real world, much like motion in a movie, is really composed of tiny jerks from one point to the next but that these tiny jerks are simply too small and too fast for our senses to detect?</div>
-<div class="para" id="p-727">If so, then the real world is more like the rational number line (<span class="process-math">\(\QQ\)</span>) from <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a> than the real number line (<span class="process-math">\(\RR\)</span>).  In that case, motion really consists of jumping discretely over the “missing” points (like <span class="process-math">\(\sqrt{2}\)</span>) as we move from here to there. That may seem like a bizarre idea to you — it does to us as well — but the idea of continuous motion is equally bizarre.  It’s just a little harder to see why.</div>
-<div class="para" id="p-728">The real world will be what it is regardless of what we believe it to be, but fortunately in mathematics we are <em class="emphasis">not</em> constrained to live in it.  So we won’t even try.  We will simply postulate that no such jerkiness exists; that all motion is continuous.</div>
-<div class="para" id="p-729">However we <em class="emphasis">are</em> constrained to live with the logical consequences of our assumptions, once they are made.  These will lead us into some very deep waters indeed.</div>
-<div class="para" id="p-730">The intuitive treatment of continuity was maintained throughout the 1700’s as it was not generally perceived that a truly rigorous definition was necessary.  Consider the following definition given by Euler in 1748.</div>
-<blockquote class="blockquote" id="blockquote-4"><div class="para" id="p-731">A continuous curve is one such that its nature can be expressed by a single function of <span class="process-math">\(x.\)</span> If a curve is of such a nature that for its various parts . . . different functions of <span class="process-math">\(x\)</span> are required for its expression, . . . , then we call such a curve discontinuous.</div></blockquote>
-<div class="para logical" id="p-732">
+<div class="para" id="Continuity-AnalyticDef-2">Before the invention of calculus, the notion of continuity was treated intuitively if it was treated at all.  At first pass, it seems a very simple idea based solidly in our experience of the real world.  Standing on the bank we see a river flow past us continuously, not by tiny jerks.  Even when the flow might seem at first to be discontinuous, as when it drops precipitously over a cliff, a closer examination shows that it really is not. As the water approaches the cliff it speeds up.  When it finally goes over it accelerates very quickly but no matter how fast it goes it moves continuously, moving from here to there by occupying every point in between.  This is continuous motion. It never disappears over there and instantaneously reappears over here.  That would be discontinuous motion.</div>
+<div class="para" id="Continuity-AnalyticDef-3">Similarly, a thrown stone flies continuously (and smoothly) from release point to landing point, passing through each point in its path.</div>
+<div class="para" id="Continuity-AnalyticDef-4">But wait.</div>
+<div class="para" id="Continuity-AnalyticDef-5">If the stone passes through discrete points it must be doing so by teeny tiny little jerks, mustn’t it?  Otherwise how would it get from one point to the next?  Is it possible that motion in the real world, much like motion in a movie, is really composed of tiny jerks from one point to the next but that these tiny jerks are simply too small and too fast for our senses to detect?</div>
+<div class="para" id="Continuity-AnalyticDef-6">If so, then the real world is more like the rational number line (<span class="process-math">\(\QQ\)</span>) from <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a> than the real number line (<span class="process-math">\(\RR\)</span>).  In that case, motion really consists of jumping discretely over the “missing” points (like <span class="process-math">\(\sqrt{2}\)</span>) as we move from here to there. That may seem like a bizarre idea to you — it does to us as well — but the idea of continuous motion is equally bizarre.  It’s just a little harder to see why.</div>
+<div class="para" id="Continuity-AnalyticDef-7">The real world will be what it is regardless of what we believe it to be, but fortunately in mathematics we are <em class="emphasis">not</em> constrained to live in it.  So we won’t even try.  We will simply postulate that no such jerkiness exists; that all motion is continuous.</div>
+<div class="para" id="Continuity-AnalyticDef-8">However we <em class="emphasis">are</em> constrained to live with the logical consequences of our assumptions, once they are made.  These will lead us into some very deep waters indeed.</div>
+<div class="para" id="Continuity-AnalyticDef-9">The intuitive treatment of continuity was maintained throughout the 1700’s as it was not generally perceived that a truly rigorous definition was necessary.  Consider the following definition given by Euler in 1748.</div>
+<blockquote class="blockquote" id="Continuity-AnalyticDef-10"><div class="para" id="Continuity-AnalyticDef-10-1">A continuous curve is one such that its nature can be expressed by a single function of <span class="process-math">\(x.\)</span> If a curve is of such a nature that for its various parts . . . different functions of <span class="process-math">\(x\)</span> are required for its expression, . . . , then we call such a curve discontinuous.</div></blockquote>
+<div class="para logical" id="Continuity-AnalyticDef-11">
 <div class="para">However, the complexities associated with Fourier series and the types of functions that they represented caused mathematicians in the early <span class="process-math">\(1800\)</span>s to rethink their notions of continuity.  As we saw in <a href="Interregnum.html" class="internal" title="Part II: Interregnum">Part II</a>, the graph of the function defined by the Fourier series</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/Interregnum.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/Interregnum.html">
 \begin{equation*}
 \frac{4}{\pi}\sum_{k=0}^\infty\frac{\left(-1\right)^k}{\left(2k+1\right)} \cos \left(\left(2k+1\right)\pi x\right)
 \end{equation*}
 </div>
 <div class="para">looked like this:</div>
 </div>
-<figure class="figure figure-like" id="figure-32"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/Ch5fig1.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-733">This function went against Euler’s notion of what a continuous function should be.  Here, an infinite sum of continuous cosine curves provided a single expression which resulted in a “discontinuous” curve.  But as we’ve seen this didn’t happen with power series and an intuitive notion of continuity is inadequate to explain the difference.  Even more perplexing is the following situation.  Intuitively, one would think that a continuous curve should have a tangent line at at least one point.  It may have a number of jagged points to it, but it should be “smooth” somewhere.  An example of this would be <span class="process-math">\(f(x)=x^{2/3}\text{.}\)</span>  Its graph is given by</div>
-<figure class="figure figure-like" id="figure-33"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/Ch5fig2.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.1.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-734">This function is not differentiable at the origin but it is differentiable everywhere else.  One could certainly come up with examples of functions which fail to be differentiable at any number of points but, intuitively, it would be reasonable</div>
-<figure class="figure figure-like" id="figure-34"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Weierstrass.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.1.3<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Weierstrass/" target="_blank">Karl Weierstrass</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-15" id="fn-15"><sup> 15 </sup></a></figcaption></figure><div class="para" id="p-735">to expect that a continuous function should be differentiable <em class="emphasis">somewhere</em>.  We might conjecture the following:</div>
+<figure class="figure figure-like" id="Continuity-AnalyticDef-12"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/Ch5fig1.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.1.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="Continuity-AnalyticDef-13">This function went against Euler’s notion of what a continuous function should be.  Here, an infinite sum of continuous cosine curves provided a single expression which resulted in a “discontinuous” curve.  But as we’ve seen this didn’t happen with power series and an intuitive notion of continuity is inadequate to explain the difference.  Even more perplexing is the following situation.  Intuitively, one would think that a continuous curve should have a tangent line at at least one point.  It may have a number of jagged points to it, but it should be “smooth” somewhere.  An example of this would be <span class="process-math">\(f(x)=x^{2/3}\text{.}\)</span>  Its graph is given by</div>
+<figure class="figure figure-like" id="Continuity-AnalyticDef-14"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/Ch5fig2.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.1.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="Continuity-AnalyticDef-15">This function is not differentiable at the origin but it is differentiable everywhere else.  One could certainly come up with examples of functions which fail to be differentiable at any number of points but, intuitively, it would be reasonable</div>
+<figure class="figure figure-like" id="Continuity-AnalyticDef-16"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Weierstrass.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.1.3<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Weierstrass/" target="_blank">Karl Weierstrass</a><a class="xref" id="Continuity-AnalyticDef-16-2-2" href="" data-knowl="./knowl/fn/Continuity-AnalyticDef-16-2-2.html" title="Footnote 15"><sup> 15 </sup></a></figcaption></figure><div class="para" id="Continuity-AnalyticDef-17">to expect that a continuous function should be differentiable <em class="emphasis">somewhere</em>.  We might conjecture the following:</div>
 <article class="conjecture theorem-like" id="conj_ContImplyDiff"><h3 class="heading">
 <span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">9.1.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-736">If <span class="process-math">\(f\)</span> is continuous on an interval <span class="process-math">\(I\)</span> then there is some <span class="process-math">\(a\in I\text{,}\)</span> such that <span class="process-math">\(f^\prime(a)\)</span> exists.</div></article><div class="para logical" id="p-737">
+<div class="para" id="conj_ContImplyDiff-1-1">If <span class="process-math">\(f\)</span> is continuous on an interval <span class="process-math">\(I\)</span> then there is some <span class="process-math">\(a\in I\text{,}\)</span> such that <span class="process-math">\(f^\prime(a)\)</span> exists.</div></article><div class="para logical" id="Continuity-AnalyticDef-19">
 <div class="para">Surprisingly, in <span class="process-math">\(1872\text{,}\)</span> Karl Weierstrass  showed that the above conjecture is <em class="alert">FALSE</em>. He did this by displaying the counterexample:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -385,37 +311,37 @@ f(x)=\sum_{n=0}^\infty b^n\cos(a^n\pi x)\text{.}
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-738">Weierstrass showed that if <span class="process-math">\(a\)</span> is an odd integer, <span class="process-math">\(b\in(0,1)\text{,}\)</span> and <span class="process-math">\(ab&gt;1+\frac{3}{2}\pi\text{,}\)</span> then <span class="process-math">\(f\)</span> is continuous everywhere, but is nowhere differentiable.  Such a function is somewhat “fractal” in nature, and it is clear that a definition of continuity relying on intuition is inadequate to study it.</div>
-<article class="problem example-like" id="problem-100"><h3 class="heading">
+<div class="para" id="Continuity-AnalyticDef-20">Weierstrass showed that if <span class="process-math">\(a\)</span> is an odd integer, <span class="process-math">\(b\in(0,1)\text{,}\)</span> and <span class="process-math">\(ab&gt;1+\frac{3}{2}\pi\text{,}\)</span> then <span class="process-math">\(f\)</span> is continuous everywhere, but is nowhere differentiable.  Such a function is somewhat “fractal” in nature, and it is clear that a definition of continuity relying on intuition is inadequate to study it.</div>
+<article class="problem example-like" id="Continuity-AnalyticDef-21"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.1.5</span><span class="period">.</span>
 </h3>
-<article class="task exercise-like" id="task-95"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-739">Given <span class="process-math">\(f(x)=\sum_{n=0}^\infty\left(\frac{1}{2}\right)^n\cos\left(a^n\pi
-x\right)\text{,}\)</span> what is the smallest value of <span class="process-math">\(a\)</span> for which <span class="process-math">\(f\)</span> satisfies Weierstrass’ criterion to be continuous and nowhere differentiable.</div></article><article class="task exercise-like" id="task-96"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-740">Let <span class="process-math">\(f(x,N)=\sum_{n=0}^N\left(\frac{1}{2}\right)^n\cos\left(13^n\pi
+<article class="task exercise-like" id="Continuity-AnalyticDef-21-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="Continuity-AnalyticDef-21-3-1-1">Given <span class="process-math">\(f(x)=\sum_{n=0}^\infty\left(\frac{1}{2}\right)^n\cos\left(a^n\pi
+x\right)\text{,}\)</span> what is the smallest value of <span class="process-math">\(a\)</span> for which <span class="process-math">\(f\)</span> satisfies Weierstrass’ criterion to be continuous and nowhere differentiable.</div></article><article class="task exercise-like" id="Continuity-AnalyticDef-21-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="Continuity-AnalyticDef-21-4-1-1">Let <span class="process-math">\(f(x,N)=\sum_{n=0}^N\left(\frac{1}{2}\right)^n\cos\left(13^n\pi
 x\right)\)</span> and use a computer algebra system to plot <span class="process-math">\(f(x,N)\)</span> for <span class="process-math">\(N=0,1,2,3,4,10\)</span> and <span class="process-math">\(x\in[0,1]\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-97"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-741">Plot <span class="process-math">\(f(x,10)\)</span> for <span class="process-math">\(x\in[\,0,c]\text{,}\)</span> where <span class="process-math">\(c=0.1,0.01,0.001,0.0001,0.00001\text{.}\)</span>  Based upon what you see in parts b and c, why would we describe the function to be somewhat “fractal” in nature?</div></article></article><div class="para" id="p-742">Just as it was important to define convergence with a rigorous definition without appealing to intuition or geometric representations, it is imperative that we define continuity in a rigorous fashion not relying on graphs.</div>
-<div class="para" id="p-743">The first appearance of a definition of continuity which did not rely on geometry or intuition was given in 1817 by Bernhard Bolzano  in a paper published in the Proceedings of the Prague Scientific Society entitled <i class="foreign">Rein analytischer Beweis des Lehrsatzes dass zwieschen je zwey Werthen, die ein entgegengesetztes Resultat gewaehren, wenigstens eine reele Wurzel der Gleichung liege</i> (Purely Analytic Proof of the Theorem that Between Any Two Values that Yield Results of Opposite Sign There Will be at Least One Real Root of the Equation).</div>
-<figure class="figure figure-like" id="figure-35"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Bolzano.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.1.6<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Bolzano/" target="_blank">Bernhard Bolzano</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-16" id="fn-16"><sup> 16 </sup></a></figcaption></figure><div class="para" id="p-744">From the title it should be clear that in this paper Bolzano is proving the Intermediate Value Theorem.  To do this he needs a completely analytic definition of continuity.  The substance of Bolzano’s idea is that if <span class="process-math">\(f\)</span> is continuous at a point <span class="process-math">\(a\)</span> then <span class="process-math">\(f(x)\)</span> should be “close to” <span class="process-math">\(f(a)\)</span> whenever <span class="process-math">\(x\)</span> is “close enough to” <span class="process-math">\(a\text{.}\)</span>  More precisely, Bolzano said that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\)</span> provided <span class="process-math">\(\abs{f(x)-f(a)}\)</span> can be made smaller than any given quantity provided we make <span class="process-math">\(\abs{x-a}\)</span> sufficiently small.</div>
-<div class="para" id="p-745">The language Bolzano uses is very similar to the language Leibniz  used when he postulated the existence of infinitesimally small numbers. Leibniz said that infinitesimals are “smaller than any given quantity but not zero.” Bolzano says that “<span class="process-math">\(\abs{f(x)-f(a)}\)</span> can be made smaller than any given quantity provided we make <span class="process-math">\(\abs{x-a}\)</span> sufficiently small.” But Bolzano stops short of saying that <span class="process-math">\(\abs{x-a}\)</span> is <em class="emphasis">infinitesimally</em> small.  Given <span class="process-math">\(a\text{,}\)</span> we can choose <span class="process-math">\(x\)</span> so that <span class="process-math">\(\abs{x-a}\)</span> is smaller than any real number we could name, say <span class="process-math">\(b\text{,}\)</span> provided we name <span class="process-math">\(b\)</span> <em class="emphasis">first</em>, but for any given choice of <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\abs{x-a}\text{,}\)</span> and <span class="process-math">\(b\)</span> are both still real numbers.  Possibly very small real numbers to be sure, but real numbers nonetheless.  Infinitesimals have no place in Bolzano’s construction.</div>
-<div class="para" id="p-746"> Bolzano’s paper was not well known when Cauchy  proposed a similar definition in his <em class="emphasis">Cours d’analyse</em> <a href="" class="xref" data-knowl="./knowl/bradley09__cauch_cours.html" title="Bibliographic Entry 1">[1]</a> of 1821 so it is usually Cauchy who is credited with this definition, but even Cauchy’s definition is not quite tight enough for modern standards.  It was Karl Weierstrass in 1859 who finally gave the modern definition.</div>
+</div></article><article class="task exercise-like" id="Continuity-AnalyticDef-21-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="Continuity-AnalyticDef-21-5-1-1">Plot <span class="process-math">\(f(x,10)\)</span> for <span class="process-math">\(x\in[\,0,c]\text{,}\)</span> where <span class="process-math">\(c=0.1,0.01,0.001,0.0001,0.00001\text{.}\)</span>  Based upon what you see in parts b and c, why would we describe the function to be somewhat “fractal” in nature?</div></article></article><div class="para" id="Continuity-AnalyticDef-22">Just as it was important to define convergence with a rigorous definition without appealing to intuition or geometric representations, it is imperative that we define continuity in a rigorous fashion not relying on graphs.</div>
+<div class="para" id="Continuity-AnalyticDef-23">The first appearance of a definition of continuity which did not rely on geometry or intuition was given in 1817 by Bernhard Bolzano  in a paper published in the Proceedings of the Prague Scientific Society entitled <i class="foreign">Rein analytischer Beweis des Lehrsatzes dass zwieschen je zwey Werthen, die ein entgegengesetztes Resultat gewaehren, wenigstens eine reele Wurzel der Gleichung liege</i> (Purely Analytic Proof of the Theorem that Between Any Two Values that Yield Results of Opposite Sign There Will be at Least One Real Root of the Equation).</div>
+<figure class="figure figure-like" id="Continuity-AnalyticDef-24"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Bolzano.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.1.6<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Bolzano/" target="_blank">Bernhard Bolzano</a><a class="xref" id="Continuity-AnalyticDef-24-1-2" href="" data-knowl="./knowl/fn/Continuity-AnalyticDef-24-1-2.html" title="Footnote 16"><sup> 16 </sup></a></figcaption></figure><div class="para" id="Continuity-AnalyticDef-25">From the title it should be clear that in this paper Bolzano is proving the Intermediate Value Theorem.  To do this he needs a completely analytic definition of continuity.  The substance of Bolzano’s idea is that if <span class="process-math">\(f\)</span> is continuous at a point <span class="process-math">\(a\)</span> then <span class="process-math">\(f(x)\)</span> should be “close to” <span class="process-math">\(f(a)\)</span> whenever <span class="process-math">\(x\)</span> is “close enough to” <span class="process-math">\(a\text{.}\)</span>  More precisely, Bolzano said that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\)</span> provided <span class="process-math">\(\abs{f(x)-f(a)}\)</span> can be made smaller than any given quantity provided we make <span class="process-math">\(\abs{x-a}\)</span> sufficiently small.</div>
+<div class="para" id="Continuity-AnalyticDef-26">The language Bolzano uses is very similar to the language Leibniz  used when he postulated the existence of infinitesimally small numbers. Leibniz said that infinitesimals are “smaller than any given quantity but not zero.” Bolzano says that “<span class="process-math">\(\abs{f(x)-f(a)}\)</span> can be made smaller than any given quantity provided we make <span class="process-math">\(\abs{x-a}\)</span> sufficiently small.” But Bolzano stops short of saying that <span class="process-math">\(\abs{x-a}\)</span> is <em class="emphasis">infinitesimally</em> small.  Given <span class="process-math">\(a\text{,}\)</span> we can choose <span class="process-math">\(x\)</span> so that <span class="process-math">\(\abs{x-a}\)</span> is smaller than any real number we could name, say <span class="process-math">\(b\text{,}\)</span> provided we name <span class="process-math">\(b\)</span> <em class="emphasis">first</em>, but for any given choice of <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\abs{x-a}\text{,}\)</span> and <span class="process-math">\(b\)</span> are both still real numbers.  Possibly very small real numbers to be sure, but real numbers nonetheless.  Infinitesimals have no place in Bolzano’s construction.</div>
+<div class="para" id="Continuity-AnalyticDef-27"> Bolzano’s paper was not well known when Cauchy  proposed a similar definition in his <em class="emphasis">Cours d’analyse</em> <a href="" class="xref" data-knowl="./knowl/xref/bradley09__cauch_cours.html" title="Bibliographic Entry 1">[1]</a> of 1821 so it is usually Cauchy who is credited with this definition, but even Cauchy’s definition is not quite tight enough for modern standards.  It was Karl Weierstrass in 1859 who finally gave the modern definition.</div>
 <article class="definition definition-like" id="def_continuity"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.1.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-747"> We say that a function <span class="process-math">\(\boldsymbol{f}\)</span> is continuous at <span class="process-math">\(\boldsymbol{a}\)</span> provided that for any <span class="process-math">\(\eps&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(\abs{x-a}\lt
+<div class="para" id="def_continuity-1-1"> We say that a function <span class="process-math">\(\boldsymbol{f}\)</span> is continuous at <span class="process-math">\(\boldsymbol{a}\)</span> provided that for any <span class="process-math">\(\eps&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(\abs{x-a}\lt
 \delta\)</span> then <span class="process-math">\(|f(x)-f(a)|\lt \eps\text{.}\)</span>
-</div></article><div class="para" id="p-748">Notice that the definition of continuity of a function is done point-by-point.  A function can certainly be continuous at some points while discontinuous at others.  When we say that <span class="process-math">\(f\)</span> is continuous on an interval, then we mean that it is continuous at every point of that interval and, in theory, we would need to use the above definition to check continuity at each individual point.</div>
-<div class="para" id="p-749"> Our definition fits the bill in that it does not rely on either intuition or graphs, but it is this very non-intuitiveness that makes it hard to grasp.  It usually takes some time to become comfortable with this definition, let alone use it to prove theorems such as the Extreme Value Theorem and Intermediate Value Theorem.  So let’s go slowly to develop a feel for it.</div>
-<div class="para" id="p-750">This definition spells out a completely black and white procedure: you give me a positive number <span class="process-math">\(\eps\text{,}\)</span> and I must be able to find a positive number <span class="process-math">\(\delta\)</span> which satisfies a certain property.  If I can always do that then the function is continuous at the point of interest.</div>
-<div class="para" id="p-751">This definition also makes very precise what we mean when we say that <span class="process-math">\(f(x)\)</span> should be “close to” <span class="process-math">\(f(a)\)</span> whenever <span class="process-math">\(x\)</span> is “close enough to” <span class="process-math">\(a\text{.}\)</span>  For example, intuitively we know that <span class="process-math">\(f(x)=x^2\)</span> should be continuous at <span class="process-math">\(x=2\text{.}\)</span>  This means that we should be able to get <span class="process-math">\(x^2\)</span> to within, say, <span class="process-math">\(\eps=.1\)</span> of <span class="process-math">\(4\)</span> provided we make <span class="process-math">\(x\)</span> close enough to <span class="process-math">\(2\text{.}\)</span>  Specifically, we want <span class="process-math">\(3.9\lt x^2\lt 4.1\text{.}\)</span>  This happens exactly when <span class="process-math">\(\sqrt{3.9}\lt x\lt \sqrt{4.1}\text{.}\)</span>  Using the fact that <span class="process-math">\(\sqrt{3.9}\lt 1.98\)</span> and <span class="process-math">\(2.02\lt \sqrt{4.1}\text{,}\)</span> then we can see that if we get <span class="process-math">\(x\)</span> to within <span class="process-math">\(\delta=.02\)</span> of <span class="process-math">\(2\text{,}\)</span> then <span class="process-math">\(\sqrt{3.9}\lt 1.98\lt x\lt 2.02\lt
+</div></article><div class="para" id="Continuity-AnalyticDef-29">Notice that the definition of continuity of a function is done point-by-point.  A function can certainly be continuous at some points while discontinuous at others.  When we say that <span class="process-math">\(f\)</span> is continuous on an interval, then we mean that it is continuous at every point of that interval and, in theory, we would need to use the above definition to check continuity at each individual point.</div>
+<div class="para" id="Continuity-AnalyticDef-30"> Our definition fits the bill in that it does not rely on either intuition or graphs, but it is this very non-intuitiveness that makes it hard to grasp.  It usually takes some time to become comfortable with this definition, let alone use it to prove theorems such as the Extreme Value Theorem and Intermediate Value Theorem.  So let’s go slowly to develop a feel for it.</div>
+<div class="para" id="Continuity-AnalyticDef-31">This definition spells out a completely black and white procedure: you give me a positive number <span class="process-math">\(\eps\text{,}\)</span> and I must be able to find a positive number <span class="process-math">\(\delta\)</span> which satisfies a certain property.  If I can always do that then the function is continuous at the point of interest.</div>
+<div class="para" id="Continuity-AnalyticDef-32">This definition also makes very precise what we mean when we say that <span class="process-math">\(f(x)\)</span> should be “close to” <span class="process-math">\(f(a)\)</span> whenever <span class="process-math">\(x\)</span> is “close enough to” <span class="process-math">\(a\text{.}\)</span>  For example, intuitively we know that <span class="process-math">\(f(x)=x^2\)</span> should be continuous at <span class="process-math">\(x=2\text{.}\)</span>  This means that we should be able to get <span class="process-math">\(x^2\)</span> to within, say, <span class="process-math">\(\eps=.1\)</span> of <span class="process-math">\(4\)</span> provided we make <span class="process-math">\(x\)</span> close enough to <span class="process-math">\(2\text{.}\)</span>  Specifically, we want <span class="process-math">\(3.9\lt x^2\lt 4.1\text{.}\)</span>  This happens exactly when <span class="process-math">\(\sqrt{3.9}\lt x\lt \sqrt{4.1}\text{.}\)</span>  Using the fact that <span class="process-math">\(\sqrt{3.9}\lt 1.98\)</span> and <span class="process-math">\(2.02\lt \sqrt{4.1}\text{,}\)</span> then we can see that if we get <span class="process-math">\(x\)</span> to within <span class="process-math">\(\delta=.02\)</span> of <span class="process-math">\(2\text{,}\)</span> then <span class="process-math">\(\sqrt{3.9}\lt 1.98\lt x\lt 2.02\lt
 \sqrt{4.1}\)</span> and so <span class="process-math">\(x^2\)</span> will be within .<span class="process-math">\(1\)</span> of <span class="process-math">\(\,4\text{.}\)</span>  This is very straightforward.  What makes this situation more difficult is that we must be able to do this for any <span class="process-math">\(\eps&gt;0\text{.}\)</span>
 </div>
-<div class="para" id="p-752">Notice the similarity between this definition and the definition of convergence of a sequence.  Both definitions have the challenge of an <span class="process-math">\(\eps&gt;0\text{.}\)</span>  In the definition of <span class="process-math">\(\lim_{n\rightarrow\infty}s_n=s\text{,}\)</span> we had to get <span class="process-math">\(s_n\)</span> to within <span class="process-math">\(\eps\)</span> of <span class="process-math">\(s\)</span> by making <span class="process-math">\(n\)</span> large enough.  For sequences, the challenge lies in making <span class="process-math">\(\abs{s_n-s}\)</span> sufficiently small.  More precisely, given <span class="process-math">\(\eps&gt;0\)</span> we need to decide how large <span class="process-math">\(n\)</span> should be to guarantee that <span class="process-math">\(\abs{s_n-s}\lt \eps\text{.}\)</span>
+<div class="para" id="Continuity-AnalyticDef-33">Notice the similarity between this definition and the definition of convergence of a sequence.  Both definitions have the challenge of an <span class="process-math">\(\eps&gt;0\text{.}\)</span>  In the definition of <span class="process-math">\(\lim_{n\rightarrow\infty}s_n=s\text{,}\)</span> we had to get <span class="process-math">\(s_n\)</span> to within <span class="process-math">\(\eps\)</span> of <span class="process-math">\(s\)</span> by making <span class="process-math">\(n\)</span> large enough.  For sequences, the challenge lies in making <span class="process-math">\(\abs{s_n-s}\)</span> sufficiently small.  More precisely, given <span class="process-math">\(\eps&gt;0\)</span> we need to decide how large <span class="process-math">\(n\)</span> should be to guarantee that <span class="process-math">\(\abs{s_n-s}\lt \eps\text{.}\)</span>
 </div>
-<div class="para" id="p-753">In our definition of continuity, we still need to make something small (namely <span class="process-math">\(\abs{f(x)-f(a)}\lt \eps\)</span>), only this time, we need to determine how close <span class="process-math">\(x\)</span> must be to <span class="process-math">\(a\)</span> to ensure this will happen instead of determining how large <span class="process-math">\(n\)</span> must be.</div>
-<div class="para" id="p-754">What makes <span class="process-math">\(f\)</span> continuous at <span class="process-math">\(a\)</span> is the arbitrary nature of <span class="process-math">\(\eps\)</span> (as long as it is positive).  As <span class="process-math">\(\eps\)</span> becomes smaller, this forces <span class="process-math">\(f(x)\)</span> to be closer to <span class="process-math">\(f(a)\text{.}\)</span>  That we can always find a positive distance <span class="process-math">\(\delta\)</span> to work is what we mean when we say that we can make <span class="process-math">\(f(x)\)</span> as close to <span class="process-math">\(f(a)\)</span> as we wish, provided we get <span class="process-math">\(x\)</span> close enough to <span class="process-math">\(a\text{.}\)</span>  The sequence of pictures below illustrates that the phrase “for any <span class="process-math">\(\eps&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(|\,x-a|\lt \delta\)</span> then <span class="process-math">\(|f(x)-f(a)|\lt \eps\)</span>” can be replaced by the equivalent formulation “for any <span class="process-math">\(\eps&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(a-\delta\lt x\lt a+\delta\)</span> then <span class="process-math">\(f(a)-\eps\lt f(x)\lt
+<div class="para" id="Continuity-AnalyticDef-34">In our definition of continuity, we still need to make something small (namely <span class="process-math">\(\abs{f(x)-f(a)}\lt \eps\)</span>), only this time, we need to determine how close <span class="process-math">\(x\)</span> must be to <span class="process-math">\(a\)</span> to ensure this will happen instead of determining how large <span class="process-math">\(n\)</span> must be.</div>
+<div class="para" id="Continuity-AnalyticDef-35">What makes <span class="process-math">\(f\)</span> continuous at <span class="process-math">\(a\)</span> is the arbitrary nature of <span class="process-math">\(\eps\)</span> (as long as it is positive).  As <span class="process-math">\(\eps\)</span> becomes smaller, this forces <span class="process-math">\(f(x)\)</span> to be closer to <span class="process-math">\(f(a)\text{.}\)</span>  That we can always find a positive distance <span class="process-math">\(\delta\)</span> to work is what we mean when we say that we can make <span class="process-math">\(f(x)\)</span> as close to <span class="process-math">\(f(a)\)</span> as we wish, provided we get <span class="process-math">\(x\)</span> close enough to <span class="process-math">\(a\text{.}\)</span>  The sequence of pictures below illustrates that the phrase “for any <span class="process-math">\(\eps&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(|\,x-a|\lt \delta\)</span> then <span class="process-math">\(|f(x)-f(a)|\lt \eps\)</span>” can be replaced by the equivalent formulation “for any <span class="process-math">\(\eps&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(a-\delta\lt x\lt a+\delta\)</span> then <span class="process-math">\(f(a)-\eps\lt f(x)\lt
 f(a)+\eps\text{.}\)</span>” This could also be replaced by the phrase “for any <span class="process-math">\(\eps&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(x\in(a-\delta,a+\delta)\)</span> then <span class="process-math">\(f(x)\in(f(a)-\eps,f(a)+\eps)\text{.}\)</span>” All of these equivalent formulations convey the idea that we can get <span class="process-math">\(f(x)\)</span> to within <span class="process-math">\(\eps\)</span> of <span class="process-math">\(f(a)\text{,}\)</span> provided we make <span class="process-math">\(x\)</span> within <span class="process-math">\(\delta\)</span> of <span class="process-math">\(a\text{,}\)</span> and we will use whichever formulation suits our needs in a particular application.</div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
 <div class="sbspanel middle" style="width:47.3684210526316%;"><img src="external/images/Ch5fig3a.png" class="contained"></div>
@@ -425,25 +351,25 @@ f(a)+\eps\text{.}\)</span>” This could also be replaced by the phrase “for a
 <div class="sbspanel middle" style="width:47.3684210526316%;"><img src="external/images/Ch5fig3c.png" class="contained"></div>
 <div class="sbspanel middle" style="width:47.3684210526316%;"><img src="external/images/Ch5fig3d.png" class="contained"></div>
 </div></div>
-<div class="para" id="p-755">The precision of the definition is what allows us to examine continuity without relying on pictures or vague notions such as “nearness” or “getting closer to.” We will now consider some examples to illustrate this precision.</div>
-<article class="example example-like" id="example-9"><h3 class="heading">
+<div class="para" id="Continuity-AnalyticDef-37">The precision of the definition is what allows us to examine continuity without relying on pictures or vague notions such as “nearness” or “getting closer to.” We will now consider some examples to illustrate this precision.</div>
+<article class="example example-like" id="Continuity-AnalyticDef-38"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.1.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-756">Use the definition of continuity to show that <span class="process-math">\(f(x)=x\)</span> is continuous at any point <span class="process-math">\(a\text{.}\)</span>
-</div></article><div class="para" id="p-757">If we were to draw the graph of this line, then you would likely say that this is obvious.  The point behind the definition is that we can back up your intuition in a rigorous manner.</div>
-<article class="proof" id="proof-11"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3>
-<div class="para logical" id="p-758">
+<div class="para" id="Continuity-AnalyticDef-38-1-1">Use the definition of continuity to show that <span class="process-math">\(f(x)=x\)</span> is continuous at any point <span class="process-math">\(a\text{.}\)</span>
+</div></article><div class="para" id="Continuity-AnalyticDef-39">If we were to draw the graph of this line, then you would likely say that this is obvious.  The point behind the definition is that we can back up your intuition in a rigorous manner.</div>
+<article class="proof" id="Continuity-AnalyticDef-40"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3>
+<div class="para logical" id="Continuity-AnalyticDef-40-1">
 <div class="para">Let <span class="process-math">\(\eps&gt;0\text{.}\)</span> Let <span class="process-math">\(\delta=\eps\text{.}\)</span> If <span class="process-math">\(|\,x-a|\lt \delta\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 |f(x)-f(a)|=|\,x-a|\lt \eps
 \end{equation*}
 </div>
-</div> <div class="para" id="p-759">Thus by the definition, <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span>
-</div></article><article class="problem example-like" id="problem-101"><h3 class="heading">
+</div> <div class="para" id="Continuity-AnalyticDef-40-2">Thus by the definition, <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span>
+</div></article><article class="problem example-like" id="Continuity-AnalyticDef-41"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.1.9</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-760">
+<div class="para logical" id="Continuity-AnalyticDef-41-1-1">
 <div class="para"> Use the definition of continuity to show that if <span class="process-math">\(m\)</span> and <span class="process-math">\(b\)</span> are fixed (but unspecified) real numbers then the function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -452,34 +378,34 @@ f(x) = mx+b
 </div>
 <div class="para">is continuous at every real number <span class="process-math">\(a\text{.}\)</span>
 </div>
-</div></article><article class="example example-like" id="example-10"><h3 class="heading">
+</div></article><article class="example example-like" id="Continuity-AnalyticDef-42"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.1.10</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-761">Use the definition of continuity to show that <span class="process-math">\(f(x)=x^2\)</span> is continuous at <span class="process-math">\(a=0\text{.}\)</span>
-</div></article><article class="proof" id="proof-12"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3>
-<div class="para logical" id="p-762">
+<div class="para" id="Continuity-AnalyticDef-42-1-1">Use the definition of continuity to show that <span class="process-math">\(f(x)=x^2\)</span> is continuous at <span class="process-math">\(a=0\text{.}\)</span>
+</div></article><article class="proof" id="Continuity-AnalyticDef-43"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3>
+<div class="para logical" id="Continuity-AnalyticDef-43-1">
 <div class="para">Let <span class="process-math">\(\eps&gt;0\text{.}\)</span> Let <span class="process-math">\(\delta=\sqrt{\eps}\text{.}\)</span> If <span class="process-math">\(|\,x-0|\lt \delta\text{,}\)</span> then <span class="process-math">\(|\,x|\lt \sqrt{\eps}\text{.}\)</span> Thus</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \abs{x^2-0^2}=|\,x|^2\lt \left(\sqrt{\eps}\right)^2=\eps\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-763">Thus by the definition, <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(0\text{.}\)</span>
-</div></article><div class="para" id="p-764">Notice that in these proofs, the challenge of an <span class="process-math">\(\eps&gt;0\)</span> was first given.  This is because the choice of <span class="process-math">\(\delta\)</span> must depend upon <span class="process-math">\(\eps\text{.}\)</span>  Also notice that there was no explanation for our choice of <span class="process-math">\(\delta\text{.}\)</span>  We just supplied it and showed that it worked.  As long as <span class="process-math">\(\delta&gt;0\text{,}\)</span> then this is all that is required.  In point of fact, the <span class="process-math">\(\delta\)</span> we chose in each example was not the only choice that worked; any smaller <span class="process-math">\(\delta\)</span> would work as well.</div>
-<article class="problem example-like" id="problem-102"><h3 class="heading">
+</div> <div class="para" id="Continuity-AnalyticDef-43-2">Thus by the definition, <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(0\text{.}\)</span>
+</div></article><div class="para" id="Continuity-AnalyticDef-44">Notice that in these proofs, the challenge of an <span class="process-math">\(\eps&gt;0\)</span> was first given.  This is because the choice of <span class="process-math">\(\delta\)</span> must depend upon <span class="process-math">\(\eps\text{.}\)</span>  Also notice that there was no explanation for our choice of <span class="process-math">\(\delta\text{.}\)</span>  We just supplied it and showed that it worked.  As long as <span class="process-math">\(\delta&gt;0\text{,}\)</span> then this is all that is required.  In point of fact, the <span class="process-math">\(\delta\)</span> we chose in each example was not the only choice that worked; any smaller <span class="process-math">\(\delta\)</span> would work as well.</div>
+<article class="problem example-like" id="Continuity-AnalyticDef-45"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.1.11</span><span class="period">.</span>
 </h3>
-<article class="task exercise-like" id="task-98"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-765">Given a particular <span class="process-math">\(\eps&gt;0\)</span> in the definition of continuity, show that if a particular <span class="process-math">\(\delta_0&gt;0\)</span> satisfies the definition, then any <span class="process-math">\(\delta\)</span> with <span class="process-math">\(0\lt \delta\lt \delta_0\)</span> will also work for this <span class="process-math">\(\eps\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-99"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-766">Show that if a <span class="process-math">\(\delta\)</span> can be found to satisfy the conditions of the definition of continuity for a particular <span class="process-math">\(\eps_0&gt;0\text{,}\)</span> then this <span class="process-math">\(\delta\)</span> will also work for any <span class="process-math">\(\,\eps\)</span> with <span class="process-math">\(0\lt \eps_0\lt
+<article class="task exercise-like" id="Continuity-AnalyticDef-45-4"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="Continuity-AnalyticDef-45-4-1-1">Given a particular <span class="process-math">\(\eps&gt;0\)</span> in the definition of continuity, show that if a particular <span class="process-math">\(\delta_0&gt;0\)</span> satisfies the definition, then any <span class="process-math">\(\delta\)</span> with <span class="process-math">\(0\lt \delta\lt \delta_0\)</span> will also work for this <span class="process-math">\(\eps\text{.}\)</span>
+</div></article><article class="task exercise-like" id="Continuity-AnalyticDef-45-5"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="Continuity-AnalyticDef-45-5-1-1">Show that if a <span class="process-math">\(\delta\)</span> can be found to satisfy the conditions of the definition of continuity for a particular <span class="process-math">\(\eps_0&gt;0\text{,}\)</span> then this <span class="process-math">\(\delta\)</span> will also work for any <span class="process-math">\(\,\eps\)</span> with <span class="process-math">\(0\lt \eps_0\lt
 \eps\text{.}\)</span>
-</div></article></article><div class="para" id="p-767">It wasn’t explicitly stated in the definition but when we say “if <span class="process-math">\(\abs{x-a}\lt \delta\)</span> then <span class="process-math">\(|f(x)-f(a)|\lt
+</div></article></article><div class="para" id="Continuity-AnalyticDef-46">It wasn’t explicitly stated in the definition but when we say “if <span class="process-math">\(\abs{x-a}\lt \delta\)</span> then <span class="process-math">\(|f(x)-f(a)|\lt
 \eps\text{,}\)</span>” we should be restricting ourselves to <span class="process-math">\(x\)</span> values which are in the domain of the function <span class="process-math">\(f\text{,}\)</span> otherwise <span class="process-math">\(f(x)\)</span> doesn’t make sense.  We didn’t put it in the definition because that definition was complicated enough without this technicality.  Also in the above examples, the functions were defined everywhere so this was a moot point.  We will continue with the convention that when we say “if <span class="process-math">\(|\,x-a|\lt \delta\)</span> then <span class="process-math">\(|f(x)-f(a)|\lt \eps\text{,}\)</span>” we will be restricting ourselves to <span class="process-math">\(x\)</span> values which are in the domain of the function <span class="process-math">\(f\text{.}\)</span>  This will allow us to examine continuity of functions not defined for all <span class="process-math">\(x\)</span> without restating this restriction each time.</div>
 <article class="problem example-like" id="prob_extended_sqrt_is_continuous_at_zero"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.1.12</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="p-768">
+<div class="para logical" id="prob_extended_sqrt_is_continuous_at_zero-1-1">
 <div class="para"> Use the definition of continuity to show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -488,16 +414,16 @@ f(x)= \begin{cases}\sqrt{x} \amp  \text{ if }  x\ge0\\ -\sqrt{-x} \amp  \text{ i
 </div>
 <div class="para">is continuous at <span class="process-math">\(a=0\text{.}\)</span>
 </div>
-</div></article><article class="problem example-like" id="problem-104"><h3 class="heading">
+</div></article><article class="problem example-like" id="Continuity-AnalyticDef-48"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.1.13</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-769"> Use the definition of continuity to show that <span class="process-math">\(f(x)=
-\sqrt{x}\)</span> is continuous at <span class="process-math">\(a=0\text{.}\)</span>  How is this problem different from <a href="" class="xref" data-knowl="./knowl/prob_extended_sqrt_is_continuous_at_zero.html" title="Problem 9.1.12">problem 9.1.12</a>? How is it similar?</div></article><div class="para" id="p-770">Sometimes the <span class="process-math">\(\delta\)</span> that will work for a particular <span class="process-math">\(\eps\)</span> is fairly obvious to see, especially after you’ve gained some experience.  This is the case in the above examples (at least after looking back at the proofs).  However, the task of finding a <span class="process-math">\(\delta\)</span> to work is usually not so obvious and requires some scrapwork.  This scrapwork is vital toward producing a <span class="process-math">\(\delta\text{,}\)</span> but again is not part of the polished proof.  This can be seen in the following example.</div>
+<div class="para" id="Continuity-AnalyticDef-48-1-1"> Use the definition of continuity to show that <span class="process-math">\(f(x)=
+\sqrt{x}\)</span> is continuous at <span class="process-math">\(a=0\text{.}\)</span>  How is this problem different from <a href="" class="xref" data-knowl="./knowl/xref/prob_extended_sqrt_is_continuous_at_zero.html" title="Problem 9.1.12">problem 9.1.12</a>? How is it similar?</div></article><div class="para" id="Continuity-AnalyticDef-49">Sometimes the <span class="process-math">\(\delta\)</span> that will work for a particular <span class="process-math">\(\eps\)</span> is fairly obvious to see, especially after you’ve gained some experience.  This is the case in the above examples (at least after looking back at the proofs).  However, the task of finding a <span class="process-math">\(\delta\)</span> to work is usually not so obvious and requires some scrapwork.  This scrapwork is vital toward producing a <span class="process-math">\(\delta\text{,}\)</span> but again is not part of the polished proof.  This can be seen in the following example.</div>
 <article class="example example-like" id="example_SqrtContinuous"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.1.14</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-771">Use the definition of continuity to prove that <span class="process-math">\(f(x)=\sqrt{x}\)</span> is continuous at <span class="process-math">\(a=1\text{.}\)</span>
-</div> <div class="para" id="p-772"><dfn class="terminology">SCRAPWORK</dfn></div> <div class="para logical" id="p-773">
+<div class="para" id="example_SqrtContinuous-1-1">Use the definition of continuity to prove that <span class="process-math">\(f(x)=\sqrt{x}\)</span> is continuous at <span class="process-math">\(a=1\text{.}\)</span>
+</div> <div class="para" id="example_SqrtContinuous-1-2"><dfn class="terminology">SCRAPWORK</dfn></div> <div class="para logical" id="example_SqrtContinuous-1-3">
 <div class="para">As before, the scrapwork for these problems often consists of simply working backwards.  Specifically, given an <span class="process-math">\(\eps&gt;0\text{,}\)</span> we need to find a <span class="process-math">\(\delta&gt;0\)</span> so that <span class="process-math">\(|\sqrt{x}-\sqrt{1}|\lt \eps\text{,}\)</span> whenever <span class="process-math">\(|\,x-1|\lt
 \delta\text{.}\)</span>  We work backwards from what we want, keeping an eye on the fact that we can control the size of <span class="process-math">\(\abs{x-1}\text{.}\)</span>
 </div>
@@ -506,48 +432,44 @@ f(x)= \begin{cases}\sqrt{x} \amp  \text{ if }  x\ge0\\ -\sqrt{-x} \amp  \text{ i
 |\sqrt{x}-\sqrt{1}|=|\frac{\left(\sqrt{x}-1\right)\left(\sqrt{x}+1\right)}{\sqrt{x}+1}|=\frac{|\,x-1|}{\sqrt{x}+1}\lt |\,x-1|\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-774">This seems to suggest that we should make <span class="process-math">\(\delta=\eps\text{.}\)</span> We’re now ready for the formal proof.</div></article><article class="proof" id="proof-13"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3>
-<div class="para logical" id="p-775">
+</div> <div class="para" id="example_SqrtContinuous-1-4">This seems to suggest that we should make <span class="process-math">\(\delta=\eps\text{.}\)</span> We’re now ready for the formal proof.</div></article><article class="proof" id="Continuity-AnalyticDef-51"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3>
+<div class="para logical" id="Continuity-AnalyticDef-51-1">
 <div class="para">Let <span class="process-math">\(\eps&gt;0\text{.}\)</span> Let <span class="process-math">\(\delta=\eps\text{.}\)</span> If <span class="process-math">\(|\,x-1|\lt \delta\text{,}\)</span> then <span class="process-math">\(|\,x-1|\lt \eps\text{,}\)</span> and so</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \abs{\sqrt{x}-\sqrt{1}}=|\frac{\left(\sqrt{x}-1\right)\left(\sqrt{x}+1\right)}{ \sqrt{x}+1}|=\frac{|x-1|}{\sqrt{x}+1}\lt \abs{x-1}\lt \eps\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-776">Thus by definition, <span class="process-math">\(f(x)=\sqrt{x}\)</span> is continuous at <span class="process-math">\(1\text{.}\)</span>
-</div></article><figure class="figure figure-like" id="figure-36"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Halmos.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.1.15<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Halmos/" target="_blank">Paul Halmos</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-17" id="fn-17"><sup> 17 </sup></a></figcaption></figure><div class="para" id="p-777">Bear in mind that someone reading the formal proof will not have seen the scrapwork, so the choice of <span class="process-math">\(\delta\)</span> might seem rather mysterious.  However, you are in no way bound to motivate this choice of <span class="process-math">\(\delta\)</span> and usually you should not, unless it is necessary for the formal proof.  All you have to do is find this <span class="process-math">\(\delta\)</span> and show that it works.  Furthermore, to a trained reader, your ideas will come through when you demonstrate that your choice of <span class="process-math">\(\delta\)</span> works.</div>
-<div class="para" id="p-778">Now reverse this last statement.  <em class="emphasis">As</em> a trained reader, when you read the proof of a theorem it is <em class="emphasis">your</em> responsibility to find the scrapwork, to see how the proof works and understand it fully.  As the renowned mathematical expositor Paul Halmos  (1916-2006) said, “Don’t just read it; fight it! Ask your own questions, look for your own examples, discover your own proofs. Is the hypothesis necessary? Is the converse true? What happens in the classical special case? What about the degenerate cases? Where does the proof use the hypothesis?”</div>
-<div class="para" id="p-779">This is the way to learn mathematics.  It is really the only way.</div>
-<article class="problem example-like" id="problem-105"><h3 class="heading">
+</div> <div class="para" id="Continuity-AnalyticDef-51-2">Thus by definition, <span class="process-math">\(f(x)=\sqrt{x}\)</span> is continuous at <span class="process-math">\(1\text{.}\)</span>
+</div></article><figure class="figure figure-like" id="Continuity-AnalyticDef-52"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Halmos.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.1.15<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Halmos/" target="_blank">Paul Halmos</a><a class="xref" id="Continuity-AnalyticDef-52-1-2" href="" data-knowl="./knowl/fn/Continuity-AnalyticDef-52-1-2.html" title="Footnote 17"><sup> 17 </sup></a></figcaption></figure><div class="para" id="Continuity-AnalyticDef-53">Bear in mind that someone reading the formal proof will not have seen the scrapwork, so the choice of <span class="process-math">\(\delta\)</span> might seem rather mysterious.  However, you are in no way bound to motivate this choice of <span class="process-math">\(\delta\)</span> and usually you should not, unless it is necessary for the formal proof.  All you have to do is find this <span class="process-math">\(\delta\)</span> and show that it works.  Furthermore, to a trained reader, your ideas will come through when you demonstrate that your choice of <span class="process-math">\(\delta\)</span> works.</div>
+<div class="para" id="Continuity-AnalyticDef-54">Now reverse this last statement.  <em class="emphasis">As</em> a trained reader, when you read the proof of a theorem it is <em class="emphasis">your</em> responsibility to find the scrapwork, to see how the proof works and understand it fully.  As the renowned mathematical expositor Paul Halmos  (1916-2006) said, “Don’t just read it; fight it! Ask your own questions, look for your own examples, discover your own proofs. Is the hypothesis necessary? Is the converse true? What happens in the classical special case? What about the degenerate cases? Where does the proof use the hypothesis?”</div>
+<div class="para" id="Continuity-AnalyticDef-55">This is the way to learn mathematics.  It is really the only way.</div>
+<article class="problem example-like" id="Continuity-AnalyticDef-56"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.1.16</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-780">Use the definition of continuity to show that <span class="process-math">\(f(x)=\sqrt{x}\)</span> is continuous at any positive real number <span class="process-math">\(a\text{.}\)</span>
-</div></article><article class="problem example-like" id="problem-106"><h3 class="heading">
+<div class="para" id="Continuity-AnalyticDef-56-2-1">Use the definition of continuity to show that <span class="process-math">\(f(x)=\sqrt{x}\)</span> is continuous at any positive real number <span class="process-math">\(a\text{.}\)</span>
+</div></article><article class="problem example-like" id="Continuity-AnalyticDef-57"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.1.17</span><span class="period">.</span>
 </h3>
-<article class="task exercise-like" id="task-100"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-781">Use a unit circle to show that for <span class="process-math">\(0\leq\theta\lt
+<article class="task exercise-like" id="Continuity-AnalyticDef-57-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="Continuity-AnalyticDef-57-2-1-1">Use a unit circle to show that for <span class="process-math">\(0\leq\theta\lt
 \frac{\pi}{2}\text{,}\)</span> <span class="process-math">\(\sin \theta\leq\theta\)</span> and <span class="process-math">\(1-\cos \theta\leq\theta\)</span> and conclude <span class="process-math">\(\abs{\sin
 \theta}\leq\abs{\theta}\)</span> and <span class="process-math">\(\abs{1-\cos
 \theta}\leq\abs{\theta}\)</span> for <span class="process-math">\(-\frac{\pi}{2}\lt
 \theta\)</span> <span class="process-math">\(\lt \frac{\pi}{2}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-101"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-782">Use the definition of continuity to prove that <span class="process-math">\(f(x)=\sin x\)</span> is continuous at any point <span class="process-math">\(a\text{.}\)</span>
+</div></article><article class="task exercise-like" id="Continuity-AnalyticDef-57-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="Continuity-AnalyticDef-57-3-1-1">Use the definition of continuity to prove that <span class="process-math">\(f(x)=\sin x\)</span> is continuous at any point <span class="process-math">\(a\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-22" id="hint-22"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-22"><div class="hint solution-like"><div class="para" id="p-783"><span class="process-math">\(\sin x=\sin\left(x-a+a\right)\text{.}\)</span></div></div></div>
-</div></article></article><article class="problem example-like" id="problem-107"><h3 class="heading">
+<div class="solutions"><details id="Continuity-AnalyticDef-57-3-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="Continuity-AnalyticDef-57-3-2-1"><span class="process-math">\(\sin x=\sin\left(x-a+a\right)\text{.}\)</span></div></div></details></div></article></article><article class="problem example-like" id="Continuity-AnalyticDef-58"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.1.18</span><span class="period">.</span>
 </h3>
-<article class="task exercise-like" id="task-102"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-784">Use the definition of continuity to show that <span class="process-math">\(f(x)=e^x\)</span> is continuous at <span class="process-math">\(a=0\text{.}\)</span>
-</div></article><article class="task exercise-like" id="task-103"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-785">Show that <span class="process-math">\(f(x)=e^x\)</span> is continuous at any point <span class="process-math">\(a\text{.}\)</span>
+<article class="task exercise-like" id="Continuity-AnalyticDef-58-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="Continuity-AnalyticDef-58-3-1-1">Use the definition of continuity to show that <span class="process-math">\(f(x)=e^x\)</span> is continuous at <span class="process-math">\(a=0\text{.}\)</span>
+</div></article><article class="task exercise-like" id="Continuity-AnalyticDef-58-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="Continuity-AnalyticDef-58-4-1-1">Show that <span class="process-math">\(f(x)=e^x\)</span> is continuous at any point <span class="process-math">\(a\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-23" id="hint-23"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-23"><div class="hint solution-like"><div class="para" id="p-786">Rewrite <span class="process-math">\(e^x-e^a\)</span> as <span class="process-math">\(e^{a+(x-a)}-e^a\)</span> and use what you proved in part a.</div></div></div>
-</div></article></article><div class="para logical" id="p-787">
+<div class="solutions"><details id="Continuity-AnalyticDef-58-4-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="Continuity-AnalyticDef-58-4-2-1">Rewrite <span class="process-math">\(e^x-e^a\)</span> as <span class="process-math">\(e^{a+(x-a)}-e^a\)</span> and use what you proved in part a.</div></div></details></div></article></article><div class="para logical" id="Continuity-AnalyticDef-59">
 <div class="para">In the above problems, we used the definition of continuity to verify our intuition about the continuity of familiar functions.  The advantage of this analytic definition is that it can be applied when the function is not so intuitive.  Consider, for example, the function given at the end of the last chapter.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -558,13 +480,13 @@ x\,\sin\left(\frac{1}{x}\right),\amp \text{ if } x\neq 0\\
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-788">Near zero, the graph of <span class="process-math">\(f(x)\)</span> looks like this:</div>
+<div class="para" id="Continuity-AnalyticDef-60">Near zero, the graph of <span class="process-math">\(f(x)\)</span> looks like this:</div>
 <div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/Ch5fig4.png" class="contained"></div>
-<div class="para" id="p-789">As we mentioned in the previous chapter, since sin<span class="process-math">\(\left(\frac{1}{x}\right)\)</span> oscillates infinitely often as <span class="process-math">\(x\)</span> nears zero this graph must be viewed with a certain amount of suspicion.  However our completely analytic definition of continuity shows that this function is, in fact, continuous at 0.</div>
-<article class="problem example-like" id="problem-108"><h3 class="heading">
+<div class="para" id="Continuity-AnalyticDef-62">As we mentioned in the previous chapter, since sin<span class="process-math">\(\left(\frac{1}{x}\right)\)</span> oscillates infinitely often as <span class="process-math">\(x\)</span> nears zero this graph must be viewed with a certain amount of suspicion.  However our completely analytic definition of continuity shows that this function is, in fact, continuous at 0.</div>
+<article class="problem example-like" id="Continuity-AnalyticDef-63"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.1.19</span><span class="period">.</span><span class="space"> </span><span class="title">The Topologist’s Sine Function.</span>
 </h3>
-<div class="para logical" id="p-790">
+<div class="para logical" id="Continuity-AnalyticDef-63-2-1">
 <div class="para"> Use the definition of continuity to show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -576,7 +498,7 @@ x\,\sin\left(\frac{1}{x}\right),\amp \text{ if } x\neq 0\\
 </div>
 <div class="para">is continuous at <span class="process-math">\(0\text{.}\)</span>
 </div>
-</div></article><div class="para logical" id="p-791">
+</div></article><div class="para logical" id="Continuity-AnalyticDef-64">
 <div class="para">Even more perplexing is the function defined by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -591,14 +513,14 @@ x\text{,} \amp \text{ if } x\text{ is rational } \\
 </div>
 <div class="para">     </div>
 </div>
-<div class="para" id="p-792">To the naked eye, the graph of this function looks like the lines <span class="process-math">\(y=0\)</span> and <span class="process-math">\(y=x\text{.}\)</span>  Of course, such a graph would not be the graph of a function.  Actually, both of these lines have holes in them.  Wherever there is a point on one line there is a “hole” on the other.  Each of these holes is the width of a single point (that is, their “width” is zero!) so they are invisible to the naked eye (or even magnified under the most powerful microscope available).  This idea is illustrated in the following graph</div>
+<div class="para" id="Continuity-AnalyticDef-65">To the naked eye, the graph of this function looks like the lines <span class="process-math">\(y=0\)</span> and <span class="process-math">\(y=x\text{.}\)</span>  Of course, such a graph would not be the graph of a function.  Actually, both of these lines have holes in them.  Wherever there is a point on one line there is a “hole” on the other.  Each of these holes is the width of a single point (that is, their “width” is zero!) so they are invisible to the naked eye (or even magnified under the most powerful microscope available).  This idea is illustrated in the following graph</div>
 <div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/images/Ch5fig5.png" class="contained"></div>
-<div class="para" id="p-793">Can such a function so “full of holes” actually be continuous anywhere?  It turns out that we can use our definition to show that this function is, in fact, continuous at <span class="process-math">\(0\)</span> and at no other point.</div>
-<article class="problem example-like" id="problem-109"><h3 class="heading">
+<div class="para" id="Continuity-AnalyticDef-67">Can such a function so “full of holes” actually be continuous anywhere?  It turns out that we can use our definition to show that this function is, in fact, continuous at <span class="process-math">\(0\)</span> and at no other point.</div>
+<article class="problem example-like" id="Continuity-AnalyticDef-68"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.1.20</span><span class="period">.</span>
 </h3>
-<article class="task exercise-like" id="task-104"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="p-794">
+<article class="task exercise-like" id="Continuity-AnalyticDef-68-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="Continuity-AnalyticDef-68-2-1-1">
 <div class="para">Use the definition of continuity to show that the function</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -609,17 +531,12 @@ x,\amp \text{ if } x\text{ is rational } \\
 </div>
 <div class="para">is continuous at <span class="process-math">\(0\text{.}\)</span>
 </div>
-</div></article><article class="task exercise-like" id="task-105"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-795">Let <span class="process-math">\(a\neq 0\text{.}\)</span>  Use the definition of continuity to show that <span class="process-math">\(D\)</span> is not continuous at <span class="process-math">\(a\text{.}\)</span>
+</div></article><article class="task exercise-like" id="Continuity-AnalyticDef-68-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="Continuity-AnalyticDef-68-3-1-1">Let <span class="process-math">\(a\neq 0\text{.}\)</span>  Use the definition of continuity to show that <span class="process-math">\(D\)</span> is not continuous at <span class="process-math">\(a\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-24" id="hint-24"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-24"><div class="hint solution-like"><div class="para" id="p-796">You might want to break this up into two cases where <span class="process-math">\(a\)</span> is rational or irrational.  Show that no choice of <span class="process-math">\(\delta&gt;0\)</span> will work for <span class="process-math">\(\eps=|\,a|\text{.}\)</span>  Note that <a href="" class="xref" data-knowl="./knowl/thm_IrrationalBetweenIrrationals.html" title="Theorem 3.0.11">Theorem 3.0.11</a> of <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a> will probably help here.</div></div></div>
-</div></article></article></section><div class="hidden-content tex2jax_ignore" id="hk-fn-15"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Weierstrass/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-16"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Bolzano/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Halmos/</code></div></div>
-</div>
+<div class="solutions"><details id="Continuity-AnalyticDef-68-3-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="Continuity-AnalyticDef-68-3-2-1">You might want to break this up into two cases where <span class="process-math">\(a\)</span> is rational or irrational.  Show that no choice of <span class="process-math">\(\delta&gt;0\)</span> will work for <span class="process-math">\(\eps=|\,a|\text{.}\)</span>  Note that <a href="" class="xref" data-knowl="./knowl/xref/thm_IrrationalBetweenIrrationals.html" title="Theorem 3.0.11">Theorem 3.0.11</a> of <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a> will probably help here.</div></div></details></div></article></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="Continuity.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="SequencesAndContinuity.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="Continuity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="SequencesAndContinuity.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

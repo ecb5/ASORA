@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
+</h3>
+<div class="para">Solve the following Initial Value problem: Find <span class="process-math">\(y(x)\)</span> given that <span class="process-math">\(\frac{\dx{ y}}{\dx{ x}}=y,\,y(0)=1\text{.}\)</span>
+</div> <aside class="aside aside-like"><div class="para">A few seconds of thought should convince you that the solution of this problem is <span class="process-math">\(y(x) = e^x\text{.}\)</span>  We will ignore this for now in favor of emphasising the technique.</div></aside> <div class="para logical">
+<div class="para">Assuming the solution can be expressed as a power series we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y=\sum_{n=0}^\infty a_nx^n=a_0+a_1x+a_2x^2+\cdots\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Differentiating gives us</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\dx{ y}}{\dx{ x}}=a_1+2a_2x+3a_3x^2+4a_4x^3+\ldots\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Since <span class="process-math">\(\frac{\dx{ y}}{\dx{ x}}=y\)</span> we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_1=a_0\,,\,2a_2=a_1\,,\,3a_3=a_2\,,\,\ldots,\,na_n=a_{n-1}\,,\ldots\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">This leads to the relationship</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_n=\frac{1}{n}a_{n-1}=\frac{1}{n(n-1)}a_{n-2}=\cdots=\frac{1}{n!}a_0\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Thus the series solution of the differential equation is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y=\sum_{n=0}^\infty\frac{a_0}{n!}x^n=a_0\sum_{n=0}^\infty\frac{1}{n!}x^n\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical">
+<div class="para">Using the initial condition <span class="process-math">\(y(0)=1\text{,}\)</span> we get <span class="process-math">\(1=a_0(1+0+\frac{1}{2!}0^2+\cdots)=a_0\text{.}\)</span> Thus the solution to the initial problem is <span class="process-math">\(y=\sum_{n=0}^\infty\frac{1}{n!}x^n\text{.}\)</span> Let’s call this function <span class="process-math">\(E(x)\text{.}\)</span> Then by definition</div>
+<div class="displaymath process-math">
+\begin{equation*}
+E(x)=\sum_{n=0}^\infty\frac{1}{n!}x^n=1+\frac{x^1}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+\,\ldots\text{.}
+\end{equation*}
+</div>
+</div></article><span class="incontext"><a class="internal" href="ExponentAdditionProperty.html#ExponentAdditionProperty-12">in-context</a></span>
+</body>
+</html>

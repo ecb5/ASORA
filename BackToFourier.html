@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Back to the Real Numbers</title>
@@ -15,172 +15,99 @@
 <meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
 <meta property="book:author" content="Robert Rogers">
 <meta property="book:author" content="Eugene C. Boman">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/colors_red_blue.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/colors_red_blue.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
 <p class="byline">Robert Rogers, Eugene C. Boman</p>
 </div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-8-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
-</h2>
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
 <div id="searchempty" class="searchempty"><span>No results.</span></div>
 <ol id="searchresults" class="searchresults"></ol>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
-<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden avatar">
-<li data-val="You!" tabindex="-1">
-<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
-<li data-val="😺" tabindex="-1">
-<span id="the😺" class="avatarcheck"></span>😺</li>
-<li data-val="👤" tabindex="-1">
-<span id="the👤" class="avatarcheck"></span>👤</li>
-<li data-val="👽" tabindex="-1">
-<span id="the👽" class="avatarcheck"></span>👽</li>
-<li data-val="🐶" tabindex="-1">
-<span id="the🐶" class="avatarcheck"></span>🐶</li>
-<li data-val="🐼" tabindex="-1">
-<span id="the🐼" class="avatarcheck"></span>🐼</li>
-<li data-val="🌈" tabindex="-1">
-<span id="the🌈" class="avatarcheck"></span>🌈</li>
-</ol>
-</li>
-<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fontfamily">
-<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
-<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
-<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-</ol>
-</li>
-<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fonts">
-<li>Size</li>
-<li><span id="thesize">12</span></li>
-<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
-<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
-<li>Width</li>
-<li><span id="thewdth">100</span></li>
-<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
-<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
-<li>Weight</li>
-<li><span id="thewght">400</span></li>
-<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
-<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
-<li>Letter spacing</li>
-<li>
-<span id="thelspace">0</span><span class="byunits">/200</span>
-</li>
-<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
-<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
-<li>Word spacing</li>
-<li>
-<span id="thewspace">0</span><span class="byunits">/50</span>
-</li>
-<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
-<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
-<li>Line Spacing</li>
-<li>
-<span id="theheight">135</span><span class="byunits">/100</span>
-</li>
-<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
-<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
-</ol>
-</li>
-<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden atmosphere">
-<li data-val="default" tabindex="-1">
-<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
-<li data-val="pastel" tabindex="-1">
-<span id="thepastel" class="atmospherecheck"></span>pastel</li>
-<li data-val="darktwilight" tabindex="-1">
-<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
-<li data-val="dark" tabindex="-1">
-<span id="thedark" class="atmospherecheck"></span>dark</li>
-<li data-val="darkmidnight" tabindex="-1">
-<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
-</ol>
-</li>
-<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden ruler">
-<li data-val="none" tabindex="-1">
-<span id="thenone" class="rulercheck">✔️</span>none</li>
-<li data-val="underline" tabindex="-1">
-<span id="theunderline" class="rulercheck"></span>underline</li>
-<li data-val="lunderline" tabindex="-1">
-<span id="thelunderline" class="rulercheck"></span>L-underline</li>
-<li data-val="greybar" tabindex="-1">
-<span id="thegreybar" class="rulercheck"></span>grey bar</li>
-<li data-val="lightbox" tabindex="-1">
-<span id="thelightbox" class="rulercheck"></span>light box</li>
-<li data-val="sunrise" tabindex="-1">
-<span id="thesunrise" class="rulercheck"></span>sunrise</li>
-<li data-val="sunriseunderline" tabindex="-1">
-<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
-<li class="moveQ">Motion by:</li>
-<li data-val="mouse" tabindex="-1">
-<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
-<li data-val="arrow" tabindex="-1">
-<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
-<li data-val="eye" tabindex="-1">
-<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
-</ol>
-</li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="PowerSeriesRedux-AbelsThm.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="FindingAnswers.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="BackToFourier-InfiniteSets.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="PowerSeriesRedux-AbelsThm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="FindingAnswers.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="BackToFourier-InfiniteSets.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
 \newcommand{\dx}[1]{\,{\rm d}#1}
 
 
@@ -203,161 +130,160 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural">
-<li>
-<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="ASORA-2.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="ASORA-2-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
-<li>
-<div class="toc-item"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
-<li><div class="toc-item"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
-<li><div class="toc-item"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="Instructor.html" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Threelessons.html" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons-lesson-one.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Lesson One</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons_lesson-two.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Lesson Two</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ThreeLessons_lesson-three.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lesson Three</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="AskingQuestions.html" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="NumbersRealRational.html" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="CalcIn17th18thCentury.html" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Newton and Leibniz Get Started</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#sec_leibn-calc-rules" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Leibniz’s Calculus Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#LeibnizProductRule" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Leibniz’s Approach to the Product Rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="CalcIn17th18thCentury-NewtLeibStart.html#NewtonsApproach" class="internal"><span class="codenumber">4.1.3</span> <span class="title">Newton’s Approach to the Product Rule</span></a></div></li>
 </ul>
 </li>
-<li><div class="toc-item"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
-<li><div class="toc-item"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ExponentAdditionProperty.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Power Series as Infinite Polynomials</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="CalcIn17th18thCentury-AddProb.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="PowerSeriesQuestions.html" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-TaylorsFormula.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Taylor’s Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-SeriesAnomalies.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Series Anomalies</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesQuestions-AddProb.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
-<ul class="structural"><li>
-<div class="toc-item"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="Interregnum.html" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Interegnum.html" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="Interegnum-2.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Joseph Fourier and His Series</span></a></div></li></ul>
 </li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
-<li><div class="toc-item"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
-<li><div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="FindingAnswers.html" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Convergence.html" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SeqRealNum.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="LimitAsPrimary.html" class="internal"><span class="codenumber">7.2</span> <span class="title">The Limit as a Primary Tool</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="DivergentSeq.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Divergence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Convergence-5.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
-<li><div class="toc-item"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="TaylorSeries.html" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-IntFormRem.html" class="internal"><span class="codenumber">8.1</span> <span class="title">The Integral Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-LagrFormRem.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Lagrange’s Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-CauchyFormRem.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Cauchy’s Form of the Remainder</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="TaylorSeries-AddProb.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
-<li><div class="toc-item"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
-<li><div class="toc-item"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Continuity.html" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn’t and What It Is</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-AnalyticDef.html" class="internal"><span class="codenumber">9.1</span> <span class="title">An Analytic Definition of Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="SequencesAndContinuity.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Sequences and Continuity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-DefLimit.html" class="internal"><span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-DerivativeAfterthought.html" class="internal"><span class="codenumber">9.4</span> <span class="title">The Derivative, An Afterthought</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Continuity-AddProb.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="IVTandEVT.html" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-Completeness.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Completeness of the Real Number System</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-ProofOfIVT.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Proof of the Intermediate Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-BWT.html" class="internal"><span class="codenumber">10.3</span> <span class="title">The Bolzano-Weierstrass Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-SupremumAndEVT.html" class="internal"><span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="IVTandEVT-AddProb.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Additional Problems</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
-<li>
-<div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#subsection-4" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="PowerSeriesRedux.html" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Uniform Convergence: Integrals and Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Cauchy Sequences</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
-<li><div class="toc-item"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-RadiusOfConv.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Radius of Convergence of a Power Series</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="PowerSeriesRedux-AbelsThm.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Boundary Issues and Abel’s Theorem</span></a></div></li>
 </ul>
 </li>
-<li class="active">
-<div class="toc-item"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
-<li><div class="toc-item"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
+<li class="toc-item toc-chapter active">
+<div class="toc-title-box"><a href="BackToFourier.html" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="Epilogues-NatureNumbers.html#subsection-5" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Epilogues.html" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Epilogues-NatureNumbers.html" class="internal"><span class="codenumber">13.1</span> <span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-NatureNumbers.html#Epilogues-NatureNumbers-3" class="internal"><span class="codenumber">13.1.1</span> <span class="title">Additional Problems</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
-<li><div class="toc-item"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#DecimalExpansion" class="internal"><span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#CauchySequences" class="internal"><span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Epilogues-BuildRealNumbers.html#DedekindCuts" class="internal"><span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="references-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
-<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="ASORA-8.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="ASORA-8-1.html" class="internal"><span class="title">Bibliography</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="ASORA-8-2.html" class="internal"><span class="title">Index</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content">
-<section class="chapter" id="BackToFourier"><h2 class="heading">
-<span class="type">Chapter</span> <span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="BackToFourier"><h2 class="heading">
+<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">12</span><span class="space"> </span><span class="title">Back to the Real Numbers</span>
 </h2>
-<section class="introduction" id="introduction-28"><div class="para" id="p-1269">As we have seen, when they converge, power series are very well behaved and Fourier (trigonometric) series are not necessarily. The fact that trigonometric series were so interesting made them a lightning rod for mathematical study in the late nineteenth century.</div> <div class="para logical" id="p-1270">
+<section class="introduction" id="BackToFourier-2"><div class="para" id="BackToFourier-2-1">As we have seen, when they converge, power series are very well behaved and Fourier (trigonometric) series are not necessarily. The fact that trigonometric series were so interesting made them a lightning rod for mathematical study in the late nineteenth century.</div> <div class="para logical" id="BackToFourier-2-2">
 <div class="para">For example, consider the question of uniqueness. We saw in <a href="TaylorSeries.html" class="internal" title='Chapter 8: A "Tayl" of Three Remainders'>Chapter 8</a> that if a function could be represented by a power series, then that series must be the Taylor series. More precisely, if</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/TaylorSeries.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/TaylorSeries.html">
 \begin{equation*}
 f(x)=\sum_{n=0}^\infty a_n(x-a)^n, \text{  then  }  a_n=\frac{f^{(n)}(a)}{n!}\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-1271">
+</div> <div class="para logical" id="BackToFourier-2-3">
 <div class="para">But what can be said about the uniqueness of a trigonometric series? If we can represent a function <span class="process-math">\(f\)</span> as a general trigonometric series</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -365,35 +291,35 @@ f(x)=\sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x)\text{,}
 \end{equation*}
 </div>
 <div class="para">then must this be the Fourier series with the coefficients as determined by Fourier? </div>
-</div> <div class="para" id="p-1272">For example, if <span class="process-math">\(\sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x)\)</span> converges to <span class="process-math">\(f\)</span> uniformly on the interval <span class="process-math">\((0,1)\text{,}\)</span> then because of the uniform convergence, Fourier’s term-by-term integration which we saw in <a href="Interregnum.html" class="internal" title="Part II: Interregnum">Part II</a> is perfectly legitimate and the coefficients are, of necessity, the coefficients he computed. However we have seen that the convergence of a Fourier series need not be uniform. This does not mean that we cannot integrate term-by-term, but it does say that we can’t be sure that term-by-term integration of a Fourier series will yield the integral of the associated function.</div> <div class="para" id="p-1273"> This led to a generalization of the integral by Henri Lebesgue in 1905.  Lebesgue’s profound work settled the issue of whether or not a bounded pointwise converging trigonometric series is the Fourier series of a function, but we will not go in this direction.  We will instead focus on work that Georg Cantor (1845-1918) did in the years just prior. Cantor’s work was also profound and had far reaching implications in modern mathematics.  It also leads to some very weird conclusions.</div> <aside class="aside aside-like" id="aside-19"><div class="para" id="p-1274">’Weird’ does not mean false.  It simply means that some of Cantor’s results can be hard to accept, even after you have seen the proof and verified its validity.</div></aside> <div class="para logical" id="p-1275">
+</div> <div class="para" id="BackToFourier-2-4">For example, if <span class="process-math">\(\sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x)\)</span> converges to <span class="process-math">\(f\)</span> uniformly on the interval <span class="process-math">\((0,1)\text{,}\)</span> then because of the uniform convergence, Fourier’s term-by-term integration which we saw in <a href="Interregnum.html" class="internal" title="Part II: Interregnum">Part II</a> is perfectly legitimate and the coefficients are, of necessity, the coefficients he computed. However we have seen that the convergence of a Fourier series need not be uniform. This does not mean that we cannot integrate term-by-term, but it does say that we can’t be sure that term-by-term integration of a Fourier series will yield the integral of the associated function.</div> <div class="para" id="BackToFourier-2-5"> This led to a generalization of the integral by Henri Lebesgue in 1905.  Lebesgue’s profound work settled the issue of whether or not a bounded pointwise converging trigonometric series is the Fourier series of a function, but we will not go in this direction.  We will instead focus on work that Georg Cantor (1845-1918) did in the years just prior. Cantor’s work was also profound and had far reaching implications in modern mathematics.  It also leads to some very weird conclusions.</div> <aside class="aside aside-like" id="BackToFourier-2-6"><div class="para" id="BackToFourier-2-6-1">’Weird’ does not mean false.  It simply means that some of Cantor’s results can be hard to accept, even after you have seen the proof and verified its validity.</div></aside> <div class="para logical" id="BackToFourier-2-7">
 <div class="para">To begin, let’s suppress the underlying function and suppose we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x) = \sum_{n=0}^\infty(a^\prime_n\cos n\pi x\,+b^\prime_n\sin n\pi x)\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="p-1276">
+</div> <div class="para logical" id="BackToFourier-2-8">
 <div class="para">We ask: If these two series are equal must it be true that <span class="process-math">\(a_n=a^\prime_n\)</span> and <span class="process-math">\(b_n=b^\prime_n?\)</span> We can reformulate this uniqueness question as follows: Suppose</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=0}^\infty\left((a_n-a^\prime_n)\cos n\pi x\,+(b_n-b^\prime_n)\sin n\pi x\right) = 0\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1277">If we let <span class="process-math">\(c_n = a_n-a^\prime_n\)</span> and <span class="process-math">\(d_n = b_n-b^\prime_n\text{,}\)</span> then the question becomes: If <span class="process-math">\(\sum_{n=0}^\infty\left(c_n\cos n\pi x\,+d_n\sin n\pi x\right) = 0\text{,}\)</span> then will <span class="process-math">\(c_n=d_n=0?\)</span> It certainly seems reasonable to suppose so, but at this point we have enough experience with infinite sums to know that we need to be <em class="emphasis">very</em> careful about relying on the intuition we have honed on finite sums.</div> <div class="para" id="p-1278"> The answer to this seemingly basic question leads to some very profound results.  In particular, answering this question led the mathematician  Cantor  to study the makeup of the real number system.  This in turn opened the door to the modern view of mathematics of the twentieth century.  In particular, Cantor proved the following result in 1871 (<a href="" class="xref" data-knowl="./knowl/jahnke03__histor_analy.html" title="Bibliographic Entry 6">[6]</a>, p. 305).</div> <article class="theorem theorem-like" id="thm_Cantor-uniqueness-of-trig-series"><h2 class="heading">
+</div> <div class="para" id="BackToFourier-2-9">If we let <span class="process-math">\(c_n = a_n-a^\prime_n\)</span> and <span class="process-math">\(d_n = b_n-b^\prime_n\text{,}\)</span> then the question becomes: If <span class="process-math">\(\sum_{n=0}^\infty\left(c_n\cos n\pi x\,+d_n\sin n\pi x\right) = 0\text{,}\)</span> then will <span class="process-math">\(c_n=d_n=0?\)</span> It certainly seems reasonable to suppose so, but at this point we have enough experience with infinite sums to know that we need to be <em class="emphasis">very</em> careful about relying on the intuition we have honed on finite sums.</div> <div class="para" id="BackToFourier-2-10"> The answer to this seemingly basic question leads to some very profound results.  In particular, answering this question led the mathematician  Cantor  to study the makeup of the real number system.  This in turn opened the door to the modern view of mathematics of the twentieth century.  In particular, Cantor proved the following result in 1871 (<a href="" class="xref" data-knowl="./knowl/xref/jahnke03__histor_analy.html" title="Bibliographic Entry 6">[6]</a>, p. 305).</div> <article class="theorem theorem-like" id="thm_Cantor-uniqueness-of-trig-series"><h2 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.0.1</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-1279"><em class="alert">Cantor</em></div> <div class="para logical" id="p-1280">
+<div class="para" id="thm_Cantor-uniqueness-of-trig-series-1-1"><em class="alert">Cantor</em></div> <div class="para logical" id="thm_Cantor-uniqueness-of-trig-series-1-2">
 <div class="para"> If the trigonometric series</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=0}^\infty\left(c_n\cos n\pi  x\,+d_n\sin n\pi x\right) = 0\text{,}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1281">“with the exception of certain values of <span class="process-math">\(x\text{,}\)</span>” then all of its coefficients vanish.</div></article> <div class="para" id="p-1282">In his attempts to nail down precisely which “certain values” could be exceptional, Cantor was led to examine the nature of subsets of real numbers and ultimately to give a precise definition of the concept of infinite sets and to define an arithmetic of “infinite numbers.”</div> <aside class="aside aside-like" id="aside-20"><h2 class="heading"><span class="title">Transfinite Numbers.</span></h2>
-<div class="para" id="p-1283">Actually, he called them <em class="emphasis">transfinite numbers</em> because, by definition, numbers are finite.</div></aside> <div class="para" id="p-1284">As a first step toward identifying those “certain values,” Cantor proved the following theorem, which we will state but not prove.</div> <article class="theorem theorem-like" id="thm_Cantor_1870"><h2 class="heading">
+</div> <div class="para" id="thm_Cantor-uniqueness-of-trig-series-1-3">“with the exception of certain values of <span class="process-math">\(x\text{,}\)</span>” then all of its coefficients vanish.</div></article> <div class="para" id="BackToFourier-2-12">In his attempts to nail down precisely which “certain values” could be exceptional, Cantor was led to examine the nature of subsets of real numbers and ultimately to give a precise definition of the concept of infinite sets and to define an arithmetic of “infinite numbers.”</div> <aside class="aside aside-like" id="BackToFourier-2-13"><h2 class="heading"><span class="title">Transfinite Numbers.</span></h2>
+<div class="para" id="BackToFourier-2-13-2">Actually, he called them <em class="emphasis">transfinite numbers</em> because, by definition, numbers are finite.</div></aside> <div class="para" id="BackToFourier-2-14">As a first step toward identifying those “certain values,” Cantor proved the following theorem, which we will state but not prove.</div> <article class="theorem theorem-like" id="thm_Cantor_1870"><h2 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.0.2</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-1285"><em class="alert">Cantor, (1870)</em></div> <div class="para logical" id="p-1286">
+<div class="para" id="thm_Cantor_1870-1-1"><em class="alert">Cantor, (1870)</em></div> <div class="para logical" id="thm_Cantor_1870-1-2">
 <div class="para"> If the trigonometric series</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -401,10 +327,10 @@ f(x)=\sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x)\text{,}
 \end{equation*}
 </div>
 <div class="para">for all <span class="process-math">\(x\in\RR\)</span> then all of its coefficients vanish.</div>
-</div></article> <div class="para" id="p-1287">He then extended this to the following:</div> <article class="theorem theorem-like" id="thm_Cantor-1871-b"><h2 class="heading">
+</div></article> <div class="para" id="BackToFourier-2-16">He then extended this to the following:</div> <article class="theorem theorem-like" id="thm_Cantor-1871-b"><h2 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.0.3</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-1288"><em class="alert">Cantor, (1871)</em></div> <div class="para logical" id="p-1289">
+<div class="para" id="thm_Cantor-1871-b-1-1"><em class="alert">Cantor, (1871)</em></div> <div class="para logical" id="thm_Cantor-1871-b-1-2">
 <div class="para"> If the trigonometric series</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -412,71 +338,70 @@ f(x)=\sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x)\text{,}
 \end{equation*}
 </div>
 <div class="para">for all but finitely many <span class="process-math">\(x\in\RR\)</span> then all of its coefficients vanish.</div>
-</div></article> <figure class="figure figure-like" id="figure-37"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Cantor.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.0.4<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Cantor/" target="_blank">Georg Cantor</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-18" id="fn-18"><sup> 18 </sup></a></figcaption></figure> <div class="para" id="p-1290">Observe that this is not a trivial generalization. Although the exceptional points are constrained to be finite in number, this number could still be extraordinarily large. That is, even if the series given above differed from zero on <span class="process-math">\(10^{10^{100000}}\)</span> distinct points in the interval <span class="process-math">\((0, 10^{-10^{100000}})\)</span> the coefficients still vanish. This remains true even if at each of these <span class="process-math">\(10^{10^{100000}}\)</span> points the series converges to <span class="process-math">\(10^{10^{100000}}\text{.}\)</span> This is truly remarkable when you think of it this way.</div> <div class="para" id="p-1291">At this point Cantor became more interested in these exceptional points than in the Fourier series problem that he’d started with. The next task he set for himself was to see just how general the set of exceptional points could be. Following Cantor’s lead we make the following definitions.</div> <article class="definition definition-like" id="def_accumulation-point"><h2 class="heading">
+</div></article> <figure class="figure figure-like" id="BackToFourier-2-18"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Cantor.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.0.4<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Cantor/" target="_blank">Georg Cantor</a><a class="xref" id="BackToFourier-2-18-1-2" href="" data-knowl="./knowl/fn/BackToFourier-2-18-1-2.html" title="Footnote 18"><sup> 18 </sup></a></figcaption></figure> <div class="para" id="BackToFourier-2-19">Observe that this is not a trivial generalization. Although the exceptional points are constrained to be finite in number, this number could still be extraordinarily large. That is, even if the series given above differed from zero on <span class="process-math">\(10^{10^{100000}}\)</span> distinct points in the interval <span class="process-math">\((0, 10^{-10^{100000}})\)</span> the coefficients still vanish. This remains true even if at each of these <span class="process-math">\(10^{10^{100000}}\)</span> points the series converges to <span class="process-math">\(10^{10^{100000}}\text{.}\)</span> This is truly remarkable when you think of it this way.</div> <div class="para" id="BackToFourier-2-20">At this point Cantor became more interested in these exceptional points than in the Fourier series problem that he’d started with. The next task he set for himself was to see just how general the set of exceptional points could be. Following Cantor’s lead we make the following definitions.</div> <article class="definition definition-like" id="def_accumulation-point"><h2 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.0.5</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-1292"> Let <span class="process-math">\(S\subseteq \RR\)</span> and let <span class="process-math">\(a\)</span> be a real number. We say that <span class="process-math">\(a\)</span> is a <dfn class="terminology">limit point</dfn> (or an <dfn class="terminology">accumulation point</dfn>) of <span class="process-math">\(S\)</span> if there is a sequence <span class="process-math">\((a_n)\)</span> with <span class="process-math">\(a_n\in S-\left\{a\right\}\)</span> which converges to <span class="process-math">\(a\text{.}\)</span>
-</div></article> <article class="problem example-like" id="problem-196"><h2 class="heading">
+<div class="para" id="def_accumulation-point-1-1"> Let <span class="process-math">\(S\subseteq \RR\)</span> and let <span class="process-math">\(a\)</span> be a real number. We say that <span class="process-math">\(a\)</span> is a <dfn class="terminology">limit point</dfn> (or an <dfn class="terminology">accumulation point</dfn>) of <span class="process-math">\(S\)</span> if there is a sequence <span class="process-math">\((a_n)\)</span> with <span class="process-math">\(a_n\in S-\left\{a\right\}\)</span> which converges to <span class="process-math">\(a\text{.}\)</span>
+</div></article> <article class="problem example-like" id="BackToFourier-2-22"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.0.6</span><span class="period">.</span>
 </h2>
-<div class="para logical" id="p-1293">
+<div class="para logical" id="BackToFourier-2-22-1-1">
 <div class="para"> Let <span class="process-math">\(S\subseteq\RR\)</span> and let <span class="process-math">\(a\)</span> be a real number. Prove that <span class="process-math">\(a\)</span> is a limit point of <span class="process-math">\(S\)</span> if and only if for every <span class="process-math">\(\eps&gt;0\)</span> the intersection</div>
 <div class="displaymath process-math">
 \begin{equation*}
 (a-\eps, a+\eps) \cap S-\left\{a\right\} \neq \emptyset.{}
 \end{equation*}
 </div>
-</div></article> <div class="para" id="p-1294">The following definition gets to the heart of the matter.</div> <article class="definition definition-like" id="def_derived-set"><h2 class="heading">
+</div></article> <div class="para" id="BackToFourier-2-23">The following definition gets to the heart of the matter.</div> <article class="definition definition-like" id="def_derived-set"><h2 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.0.7</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-1295"> Let <span class="process-math">\(S\subseteq\RR\text{.}\)</span> The set of all limit points of <span class="process-math">\(S\)</span> is called the <dfn class="terminology">derived set</dfn> of <span class="process-math">\(S\text{.}\)</span> The derived set is denoted <span class="process-math">\(S^{\prime}\text{.}\)</span>
-</div></article> <div class="para" id="p-1296">Don’t confuse the derived set of a set with the derivative of a function. They are completely different objects despite the similarity of both the language and notation. The only thing that they have in common is that they were somehow “derived” from something else.</div> <article class="problem example-like" id="problem-197"><h2 class="heading">
+<div class="para" id="def_derived-set-1-1"> Let <span class="process-math">\(S\subseteq\RR\text{.}\)</span> The set of all limit points of <span class="process-math">\(S\)</span> is called the <dfn class="terminology">derived set</dfn> of <span class="process-math">\(S\text{.}\)</span> The derived set is denoted <span class="process-math">\(S^{\prime}\text{.}\)</span>
+</div></article> <div class="para" id="BackToFourier-2-25">Don’t confuse the derived set of a set with the derivative of a function. They are completely different objects despite the similarity of both the language and notation. The only thing that they have in common is that they were somehow “derived” from something else.</div> <article class="problem example-like" id="BackToFourier-2-26"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.0.8</span><span class="period">.</span>
 </h2>
-<div class="para logical" id="p-1297">
+<div class="para logical" id="BackToFourier-2-26-2-1">
 <div class="para">Determine the derived set, <span class="process-math">\(S^\prime\text{,}\)</span> of each of the following sets.</div>
 <ol class="lower-alpha">
-<li id="li-101"><div class="para" id="p-1298"><span class="process-math">\(\displaystyle S=\left\{\frac11, \frac12, \frac13, \ldots\right\}\)</span></div></li>
-<li id="li-102"><div class="para" id="p-1299"><span class="process-math">\(\displaystyle S=\left\{0,\frac11, \frac12, \frac13, \ldots\right\}\)</span></div></li>
-<li id="li-103"><div class="para" id="p-1300"><span class="process-math">\(\displaystyle S=(0,1]\)</span></div></li>
-<li id="li-104"><div class="para" id="p-1301"><span class="process-math">\(\displaystyle S=\left[\left.0,1/2\right)\right.\cup\left.\left(1/2,1\right.\right]\)</span></div></li>
-<li id="li-105"><div class="para" id="p-1302"><span class="process-math">\(\displaystyle S=\QQ\)</span></div></li>
-<li id="li-106"><div class="para" id="p-1303"><span class="process-math">\(\displaystyle S=\RR-\QQ\)</span></div></li>
-<li id="li-107"><div class="para" id="p-1304"><span class="process-math">\(\displaystyle S=\ZZ\)</span></div></li>
-<li id="li-108"><div class="para" id="p-1305">Any finite set <span class="process-math">\(S\text{.}\)</span>
+<li id="BackToFourier-2-26-2-1-2-1"><div class="para" id="BackToFourier-2-26-2-1-2-1-1"><span class="process-math">\(\displaystyle S=\left\{\frac11, \frac12, \frac13, \ldots\right\}\)</span></div></li>
+<li id="BackToFourier-2-26-2-1-2-2"><div class="para" id="BackToFourier-2-26-2-1-2-2-1"><span class="process-math">\(\displaystyle S=\left\{0,\frac11, \frac12, \frac13, \ldots\right\}\)</span></div></li>
+<li id="BackToFourier-2-26-2-1-2-3"><div class="para" id="BackToFourier-2-26-2-1-2-3-1"><span class="process-math">\(\displaystyle S=(0,1]\)</span></div></li>
+<li id="BackToFourier-2-26-2-1-2-4"><div class="para" id="BackToFourier-2-26-2-1-2-4-1"><span class="process-math">\(\displaystyle S=\left[\left.0,1/2\right)\right.\cup\left.\left(1/2,1\right.\right]\)</span></div></li>
+<li id="BackToFourier-2-26-2-1-2-5"><div class="para" id="BackToFourier-2-26-2-1-2-5-1"><span class="process-math">\(\displaystyle S=\QQ\)</span></div></li>
+<li id="BackToFourier-2-26-2-1-2-6"><div class="para" id="BackToFourier-2-26-2-1-2-6-1"><span class="process-math">\(\displaystyle S=\RR-\QQ\)</span></div></li>
+<li id="BackToFourier-2-26-2-1-2-7"><div class="para" id="BackToFourier-2-26-2-1-2-7-1"><span class="process-math">\(\displaystyle S=\ZZ\)</span></div></li>
+<li id="BackToFourier-2-26-2-1-2-8"><div class="para" id="BackToFourier-2-26-2-1-2-8-1">Any finite set <span class="process-math">\(S\text{.}\)</span>
 </div></li>
 </ol>
-</div></article> <article class="problem example-like" id="problem-198"><h2 class="heading">
+</div></article> <article class="problem example-like" id="BackToFourier-2-27"><h2 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.0.9</span><span class="period">.</span>
 </h2>
-<div class="para logical" id="p-1306">
+<div class="para logical" id="BackToFourier-2-27-1-1">
 <div class="para"> Let <span class="process-math">\(S\subseteq\RR\text{.}\)</span>
 </div>
 <ol class="lower-alpha">
-<li id="li-109"><div class="para" id="p-1307">Prove that <span class="process-math">\(\left(S^{\,\prime}\right)^{\,\prime}\subseteq S^{\,\prime}\text{.}\)</span>
+<li id="BackToFourier-2-27-1-1-3-1"><div class="para" id="BackToFourier-2-27-1-1-3-1-1">Prove that <span class="process-math">\(\left(S^{\,\prime}\right)^{\,\prime}\subseteq S^{\,\prime}\text{.}\)</span>
 </div></li>
-<li id="li-110"><div class="para" id="p-1308">Give an example where these two sets are equal.</div></li>
-<li id="li-111"><div class="para" id="p-1309">Give an example where these two sets are not equal.</div></li>
+<li id="BackToFourier-2-27-1-1-3-2"><div class="para" id="BackToFourier-2-27-1-1-3-2-1">Give an example where these two sets are equal.</div></li>
+<li id="BackToFourier-2-27-1-1-3-3"><div class="para" id="BackToFourier-2-27-1-1-3-3-1">Give an example where these two sets are not equal.</div></li>
 </ol>
-</div></article> <div class="para logical" id="p-1310">
+</div></article> <div class="para logical" id="BackToFourier-2-28">
 <div class="para">The notion of the derived set forms the foundation of Cantor’s exceptional set of values. Specifically, let <span class="process-math">\(S\)</span> again be a set of real numbers and consider the following sequence of sets:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 S^{\,\prime}\supseteq \left(S^\prime\right)^\prime\supseteq \left(\left(S^\prime\right)^\prime\right)^\prime\supseteq \cdots\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="p-1311">Cantor  showed that if, at some point, one of these derived sets is empty, then the uniqueness property still holds. Specifically, we have:</div> <article class="theorem theorem-like" id="thm_Cantor-1871"><h2 class="heading">
+</div> <div class="para" id="BackToFourier-2-29">Cantor  showed that if, at some point, one of these derived sets is empty, then the uniqueness property still holds. Specifically, we have:</div> <article class="theorem theorem-like" id="thm_Cantor-1871"><h2 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.0.10</span><span class="period">.</span>
 </h2>
-<div class="para" id="p-1312"><em class="alert">Cantor, (1871)</em></div> <div class="para" id="p-1313"> Let <span class="process-math">\(S\)</span> be a subset of the real numbers with the property that one of its derived sets is empty.  Then if the trigonometric series <span class="process-math">\(\sum_{n=0}^\infty\left(c_n\cos n\pi
+<div class="para" id="thm_Cantor-1871-1-1"><em class="alert">Cantor, (1871)</em></div> <div class="para" id="thm_Cantor-1871-1-2"> Let <span class="process-math">\(S\)</span> be a subset of the real numbers with the property that one of its derived sets is empty.  Then if the trigonometric series <span class="process-math">\(\sum_{n=0}^\infty\left(c_n\cos n\pi
 x\,+d_n\sin n\pi x\right)\)</span> is zero for all <span class="process-math">\(x\in\RR-S\text{,}\)</span> then all of the coefficients of the series vanish.</div></article></section><nav class="summary-links"><ul>
 <li><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></li>
 <li><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor’s Theorem and Its Consequences</span></a></li>
-</ul></nav></section><div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Cantor/</code></div></div>
-</div>
+</ul></nav></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="PowerSeriesRedux-AbelsThm.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="BackToFourier-InfiniteSets.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="PowerSeriesRedux-AbelsThm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="BackToFourier-InfiniteSets.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="problem example-like"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="period">.</span>
+</h3>
+<div class="introduction"><div class="para logical">
+<div class="para">This problem investigates the Taylor series representation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{1+x}=1-x+x^2-x^3+\cdots\text{.}
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para">Use the fact that <span class="process-math">\(\frac{1-(-x)^{n+1}}{1+x}=1-x+x^2-x^3+\cdots+(-x)^n\)</span> to compute the remainder <span class="process-math">\(\frac{1}{1+x}-\left(1-x+x^2-x^3+\cdots+(-x)^n\right)\text{.}\)</span> Specifically, compute this remainder when <span class="process-math">\(x=1\)</span> and conclude that the Taylor series does not converge to <span class="process-math">\(\frac{1}{1+x}\)</span> when <span class="process-math">\(x=1\text{.}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para">Compare the remainder in part a with the Lagrange form of the remainder to determine what <span class="process-math">\(c\)</span> is when <span class="process-math">\(x=1\text{.}\)</span>
+</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical">
+<div class="para">Consider the following argument: If <span class="process-math">\(f(x)=\frac{1}{1+x}\text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prob_sequences3.html ./knowl/xref/Convergence.html">
+\begin{equation*}
+f^{(n+1)}(c)=\frac{(-1)^{n+1}(n+1)!}{(1+c)^{n+2}}
+\end{equation*}
+</div>
+<div class="para">so the Lagrange form of the remainder when <span class="process-math">\(x=1\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prob_sequences3.html ./knowl/xref/Convergence.html">
+\begin{equation*}
+\frac{(-1)^{n+1}(n+1)!}{(n+1)!(1+c)^{n+2}}=\frac{(-1)^{n+1}}{(1+c)^{n+2}}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c\in[\,0,1]\text{.}\)</span>  It can be seen in part b that <span class="process-math">\(c\neq 0\text{.}\)</span>  Thus <span class="process-math">\(1+c&gt;1\)</span> and so by <a href="" class="xref" data-knowl="./knowl/xref/prob_sequences3.html" title="Problem 7.1.7">Problem 7.1.7</a> of <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a>, the Lagrange remainder converges to <span class="process-math">\(0\)</span> as <span class="process-math">\(n\rightarrow\infty\text{.}\)</span>  This argument would suggest that the Taylor series converges to <span class="process-math">\(\frac{1}{1+x}\)</span> for <span class="process-math">\(x=1\text{.}\)</span>  However, we know from part (a) that this is incorrect.  What is wrong with the argument?</div>
+</div></article></article><span class="incontext"><a class="internal" href="TaylorSeries-LagrFormRem.html#TaylorSeries-LagrFormRem-8">in-context</a></span>
+</body>
+</html>
