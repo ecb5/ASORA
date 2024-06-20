@@ -52,7 +52,9 @@
           implications in modern mathematics.  It also leads to some
           very weird conclusions.
     </p>
-<aside><p> 'Weird' does not mean false.  It
+<aside>
+<title>Comment</title>
+<p> 'Weird' does not mean false.  It
           simply means that some of Cantor's results can be hard to
           accept, even after you have seen the proof and verified its
           validity.</p>
@@ -136,7 +138,7 @@
 Transfinite Numbers
 </title>
 <p> Actually,
-      he called them <em>transfinite numbers</em> because,
+      he called them <term>transfinite numbers</term> because,
       by definition, numbers are finite.</p>
 </aside>
 
@@ -279,7 +281,7 @@ Transfinite Numbers
       <statement>
         <p>
           Determine the derived set, <m>S^\prime</m>, of each of the following sets.
-          <ol label="(a)">
+          <ol marker="a">
             <li>
               <p>
                 <m>S=\left\{\frac11, \frac12, \frac13, \ldots\right\}</m>
@@ -338,7 +340,7 @@ Transfinite Numbers
               <idx><h>derived sets</h></idx>
           Let <m>S\subseteq\RR</m>.
 
-          <ol label="(a)">
+          <ol marker="a">
             <li>
               <p>
                 Prove that <m>\left(S^{\,\prime}\right)^{\,\prime}\subseteq S^{\,\prime}</m>.
@@ -474,7 +476,9 @@ Transfinite Numbers
         real numbers.  There is a real number <m>c</m>, which is not
         in  <m>S</m>.
       </p>
-<aside> <p>To streamline things, we are abusing notation here as
+<aside> 
+<title>Notation</title>
+<p>To streamline things, we are abusing notation here as
         we are letting <m>S</m> denote both the sequence (which is
         ordered) and the underlying (unordered) set of entries in the
         sequence.</p>  </aside>
@@ -651,6 +655,8 @@ Transfinite Numbers
 Thus the cardinality of any countably infinite set is <m>\aleph_0</m>.
   </p>
 <aside>
+<title>Notation</title>
+
 <p>
     <m>\aleph{}</m> is the first letter of the Hebrew alphabet and is pronounced "aleph."
     <m>\aleph_0</m> is pronounced "aleph null."</p>
@@ -895,8 +901,14 @@ Thus the cardinality of any countably infinite set is <m>\aleph_0</m>.
             <idx><h>measure zero</h><h><m>\QQ</m> has measure zero in <m>\RR</m></h></idx>
         Prove <xref ref="cor_Q-MeasureZero">Corollary</xref>. 
       </p>
+<p>
+
+</p>
     </statement>
       <hint>
+<p>
+
+</p>
         <p>
           If we had only finitely many rationals to deal with this would be easy.
           Let <m>\left\{r_1, r_2, \ldots,
@@ -928,6 +940,8 @@ Thus the cardinality of any countably infinite set is <m>\aleph_0</m>.
     like they should be uncountable are in fact countable. This makes the uncountability of <m>\RR</m> all the more remarkable.
   </p>
 <aside>
+<title>Comment</title>
+
 <p>    
 The failure is in the methods we've used so far.  It is possible to
 build an uncountable set using just two symbols if we're clever
@@ -948,8 +962,14 @@ enough, but this would take us too far away from our main topic.</p>
           cardinality by constructing a one-to-one onto function
           between them.
         </p>
+<p>
+
+</p>
       </statement>
       <hint>
+<p>
+
+</p>
         <p>
           A linear function should do the trick.
         </p>
@@ -960,8 +980,14 @@ enough, but this would take us too far away from our main topic.</p>
         <p>
           Show that any open interval of real numbers has the same cardinality as <m>\RR</m>. 
         </p>
+<p>
+
+</p>
       </statement>
       <hint>
+<p>
+
+</p>
         <p>
           Consider the interval <m>(-\pi/2,\pi/2)</m>.
         </p>
@@ -972,8 +998,14 @@ enough, but this would take us too far away from our main topic.</p>
         <p>
           Show that <m>(0,1]</m> and <m>(0,1)</m> have the same cardinality. 
         </p>
+<p>
+
+</p>
       </statement>
       <hint>
+<p>
+
+</p>
         <p>
           Note that <m>\left\{1,1/2,1/3,\ldots\right\}</m> and
           <m>\left\{1/2, 1/3, \ldots\right\}</m> have the same cardinality.
@@ -1119,8 +1151,14 @@ enough, but this would take us too far away from our main topic.</p>
       <p>
         Prove: If <m>\abs{S}=n</m>, then <m>\abs{ P(S)}=2^n</m>. 
       </p>
+<p>
+
+</p>
     </statement>
             <hint>
+<p>
+
+</p>
               <p>
                 Let <m>S=\left\{a_1,a_2,\ldots,a_n\right\}</m>.
                 Consider the following correspondence between the elements of <m>P(S)</m> and the set <m>T</m> of all <m>n</m>-tuples of yes (Y) or no (N):
@@ -1144,8 +1182,14 @@ enough, but this would take us too far away from our main topic.</p>
       <p>
         Prove <xref ref="thm_CantorsTheorem">Cantor's Theorem</xref>.
       </p>
+<p>
+
+</p>
     </statement>
-    <hint> 
+    <hint>
+<p>
+
+</p> 
       <p>
         Assume for contradiction, that there is a one-to-one
         correspondence <m>f:S\rightarrow P(S)</m>.
@@ -1226,8 +1270,14 @@ enough, but this would take us too far away from our main topic.</p>
       <p>
         Prove that <m>X</m> and <m>X-Y</m> have the same cardinality.
       </p>
+<p>
+
+</p>
     </statement>
     <hint>
+<p>
+
+</p>
       <p>
         Let <m>Y=Y_0</m>.
         If <m>X-Y_0</m> is an infinite set,

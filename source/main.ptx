@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-
   <docinfo>
 
     <macros>
@@ -55,6 +54,8 @@
     </latex-image-preamble>
   </docinfo>
 
+
+
   <book xml:id="ASORA">
     <title>How We Got From There To Here: A Story of Real Analysis</title>
     <frontmatter>
@@ -84,8 +85,13 @@
       </titlepage>
 
       <colophon xml:id="FrontColophon">
-        <edition>2.0 kasdlf</edition>
-
+        <edition>2.0.2</edition>
+<pre>
+ISBN: 978-1-956862-03-4
+Published by Milne Open Textbooks, Milne Library
+State University of New York at Geneseo,
+Geneseo, NY 14454
+</pre>
         <copyright>
           <year>2014</year>
           <holder>Robert Rogers and Eugene Boman</holder>
@@ -95,13 +101,11 @@
 <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/" visual="creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</url>.
           </shortlicense>
         </copyright>
-<p>
-<alert>ISBN:</alert> 978-1-956862-03-4
-</p>
-      </colophon>
-      <acknowledgement>
 
-<p>
+      </colophon>
+
+      <acknowledgement>
+        <p>
         <dl>
           <li>
             <title>Mactutor</title>
@@ -172,14 +176,15 @@
 <!-- The interactive figures in <xref ref="Interegnum">Chapter</xref> were created using the <url href="https://www.desmos.com/">Desmos online calculator</url>. -->
 <!-- </p> -->
 </acknowledgement>
+    <xi:include href="./Instructor.ptx" />
     </frontmatter>
 
-    <xi:include href="./Instructor.ptx" />
-
-    <xi:include href="./ThreeLessons.ptx" />
 
     <part xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AskingQuestions">
       <title>In Which We Raise A Number Of Questions</title>
+
+    <xi:include href="./ThreeLessons.ptx" />
+
 
 
       <xi:include href="./NumbersRealRational.ptx" />

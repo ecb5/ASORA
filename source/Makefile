@@ -1,23 +1,22 @@
 all: jing html pdf
 
-jing: *.ptx
-	java -classpath jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar ~/jing-trang/build/jing.jar /home/ecb5/PreText/mathbook/schema/pretext.rng ASORA.ptx
-
+jing: *.ptx 
+	jing /home/ecb5/.ptx/schema/pretext.rng main.ptx
 
 tex: *.ptx Makefile
 	/home/ecb5/.local/bin/pretext build latex
 
 pdf: *.ptx Makefile
-	/home/ecb5/.local/bin/pretext build pdf
+	/home/ecb5/.local/bin/pretext build print
 
-html: *.ptx Makefile
-	/home/ecb5/.local/bin/pretext build html
+web: *.ptx Makefile
+	/home/ecb5/.local/bin/pretext build web
 
-webview: 
-	/home/ecb5/.local/bin/pretext view html
+view: 
+	/home/ecb5/.local/bin/pretext view web
 
 pdfview:
-	/home/ecb5/.local/bin/pretext view pdf
+	/usr/bin/evince /home/ecb5/Dropbox/Books/ASORA/output/pdf/main.pdf
 
 deploy:
 	/home/ecb5/.local/bin/pretext deploy -u

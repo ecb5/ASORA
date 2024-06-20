@@ -74,8 +74,14 @@
         Use the physics of the problem to show that if <m>u</m> is not constantly zero,
         then <m>k\lt 0</m>. 
       </p>
+<p>
+
+</p>
     </statement>
-    <hint> 
+    <hint>
+<p>
+
+</p> 
       <p>
         Consider <m>\lim_{t\rightarrow\infty}u(x,t)</m>.
       </p>
@@ -260,18 +266,19 @@
     <!-- </sidebyside> -->
     <!-- </sbsgroup> -->
   </p>
-  <figure>
+  <!-- <figure> -->
     <!-- <caption>The slider controls the number of terms in the partial sum. </caption> -->
     <!-- <interactive desmos="eru5fcn1ct" width="90%" aspect="2:1" preview="images/FourierEx4-1.png" /> -->
     <!-- <interactive desmos="eru5fcn1ct" width="90%" aspect="2:1"> --> 
     <!-- <interactive desmos="https://www.desmos.com/calculator/k3f5wcw8j6" width="90%" aspect="2:1"> -->
-    <interactive desmos="jp8nvhadqk" width="125%" aspect="2:1">
-    <static>
+    <!-- <interactive desmos="jp8nvhadqk" width="125%" aspect="2:1"> -->
+    <!-- <static> -->
+<!-- <caption></caption> -->
       <image source="images/FourierEx4.png">
       </image>
-    </static>
-    </interactive>
-  </figure>
+    <!-- </static> -->
+    <!-- </interactive> -->
+  <!-- </figure> -->
 
   <p>
     As you can see,
@@ -316,7 +323,7 @@
   </p>
 
   <p>
-    Again, if we let <m>C_N(x)=\frac{4}{\pi}\sum_{k=0}^N\frac{\left(-1\right)^k}{\left(2k+1\right)} \cos\left(\left(2k+1\right)\pi x\right)</m> be the <m>N^{th}</m> partial sum of this Fourier cosine series and plot <m>C_N(x)</m> for <m>N=1,2,5,50</m>,
+    Again, if we let <m>C_N(x)=\frac{4}{\pi}\sum_{k=0}^N\frac{\left(-1\right)^k}{\left(2k+1\right)} \cos\left(\left(2k+1\right)\pi x\right)</m> be the <m>N^{th}</m> partial sum of this Fourier cosine series and plot <m>C_N(x)</m> for <m>N=5</m>,
     we obtain 
   </p>
   <!-- <sbsgroup widths="45% 45%" margins="auto" valign="middle"> -->
@@ -328,15 +335,15 @@
   <!--     <image width="75%" source="images/FourierEx8.png" /> <image width="75%" source="images/FourierEx9.png" /> -->
   <!--   </sidebyside> -->
   <!-- </sbsgroup> -->
-  <figure>
-    <!-- <caption>The slider controls the number of terms being. .</caption> -->
-    <interactive desmos="0qatde8f0w" width="125%" aspect="2:1" >
-<static>
-      <image source="images/FourierEx8.png">
+<!--   <figure> -->
+<!--     <!-\- <caption>The slider controls the number of terms being. .</caption> -\-> -->
+<!--     <interactive desmos="0qatde8f0w" width="125%" aspect="2:1" >   -->
+<!-- <static> -->
+      <image width="75%" source="images/FourierEx8.png">
       </image>
-</static>
-    </interactive>
-  </figure>
+<!-- </static> -->
+<!--     </interactive> -->
+<!--   </figure> -->
 
 
   <p>
@@ -388,18 +395,19 @@
   <p>
     If we sum the first forty terms of this series,
     we get 
-  <figure>
+ 
+  <!-- <figure> -->
     <!-- <caption>The slider controls the number of terms being. .</caption> -->
-    <interactive desmos="pvcgqtqso6" width="125%" aspect="2:1" >
-<static>
-      <image source="images/FourierEx11.png">
-      </image>
-</static>
-    </interactive>
-  </figure>
+<!--     <interactive desmos="pvcgqtqso6" width="125%" aspect="2:1" > -->
+<!-- <static> -->
+      <!-- <image source="images/FourierEx11.png"> -->
+      <!-- </image> -->
+<!-- </static> -->
+<!--     </interactive> -->
+<!--   </figure> -->
 
   </p>
-  <!-- <image width="75%" source="images/FourierEx11.png" /> -->
+  <image width="75%" source="images/FourierEx11.png" />
   <p>
     We knew that there might be a problem at <m>x=\frac{1}{2}</m> but this is crazy!
     The series seems to not be converging to zero at all!

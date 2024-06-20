@@ -1,0 +1,817 @@
+
+
+<section xml:id="sec_nature-numb-dial">
+  <title>On the Nature of Numbers: A Dialogue (with Apologies to
+  Galileo)</title>
+  <introduction>
+    <p>
+      <alert>Interlocuters</alert>:<em> Salviati, Sagredo,
+        and Simplicio; Three Friends of Galileo Galilei</em>
+    </p>
+    <p> <alert>Setting</alert>: Three friends meet in a garden for
+      lunch in Renassaince Italy.  Prior to their meal they discuss
+      the book
+      <em>How We Got From There to Here: A Story of Real Analysis.</em>
+      How they obtained a copy is not clear.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>: My good sirs.
+      I have read this very strange volume as I hope you have?
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>: I have and I also found it very strange.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Very strange indeed;
+      at once silly and mystifying.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>: Silly?
+      How so?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: 
+      These authors begin their tome with the question,
+      <q>What is a number?</q> This is an unusually silly question,
+      don't you think?
+      Numbers are numbers.
+      Everyone knows what they are.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>: 
+      I thought so as well until I reached the last chapter.
+      But now I am not so certain.
+      What about this quantity <m>\aleph_0?</m> If this counts the positive integers,
+      isn't it a number?
+      If not, then how can it count anything?
+      If so, then what number is it?
+      These questions plague me 'til I scarcely believe I know anything anymore.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Of course <m>\aleph_0</m> is not a number!
+      It is simply a new name for the infinite,
+      and infinity is not a number.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>: But isn't
+      <m>\aleph_0</m> the cardinality of the set of natural numbers,
+      <m>\NN</m>,
+      in just the same way that the cardinality of the set
+      <m>S=\left\{Salviati, Sagredo, Simplicio\right\}</m> is <m>3?</m> If <m>3</m> is a number,
+      then why isn't <m>\aleph_0?</m>
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Ah, my friend,
+      like our authors you are simply playing with words.
+      You count the elements in the set
+      <m>S=\left\{Salviati, Sagredo, Simplicio\right\};</m> you see plainly that the
+      <em>number of elements</em>
+      it contains is <m>3</m> and then you change your language.
+      Rather than saying that the <em>number of elements</em>
+      in <m>S</m> is <m>3</m> you say that the
+      <em>cardinality</em> is <m>3</m>.
+      But clearly <q>cardinality</q>
+      and <q>number of elements</q> mean the same thing.
+    </p>
+
+    <p>
+      Similarly you use the symbol <m>\NN</m> to denote the set of positive integers.
+      With your new word and symbol you make the statement
+      <q>the <em>cardinality</em>
+      (number of elements)
+      of <m>\NN</m> is <m>\aleph_0</m>.</q>
+      This statement has the same grammatical form as the statement <q>the
+      <em>number of elements</em>
+      (cardinality) of <m>S</m> is three.</q> Since three <em>is</em>
+      a number you conclude that <m>\aleph_0</m> is also a number.
+    </p>
+
+    <p>
+      But this is simply nonsense dressed up to sound sensible.
+      If we unwind our notation and language, your statement is simply,
+      <q>The number of positive integers is infinite.</q>
+      This is obviously nonsense because infinity is <em>not</em> a number.
+    </p>
+
+    <p>
+      Even if we take infinity as an undefined term and try to define it by your statement this is still nonsense since you are using the word <q>number</q>
+      to define a new <q>number</q> called infinity.
+      This definition is circular.
+      Thus it is no definition at all.
+      It is nonsense.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>: Your reasoning on this certainly seems sound.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Thank you.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  However,
+      there are a couple of small points I would like to examine more closely if you will indulge me?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Of course.
+      What troubles you?
+    </p>
+
+    <p>
+      <alert>Salviati</alert>: You've said that we cannot use the word <q>number</q>
+      to define numbers because this would be circular reasoning.
+      I entirely agree,
+      but I am not sure this is what our authors are doing.
+    </p>
+
+    <p>
+      Consider the set <m>\left\{1, 2, 3\right\}</m>.
+      Do you agree that it contains three elements?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Obviously.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>: Ah!
+      I see your point!
+      That there are three elements does <em>not</em>
+      depend on what those elements are.
+      Any set with three elements has three elements regardless of the nature of the elements.
+      Thus saying that the set <m>\left\{1, 2, 3\right\}</m> contains three elements does not define the word <q>number</q>
+      in a circular manner because it is irrelevant that the <em>number</em>
+      3 is one of the elements of the set.
+      Thus to say that three is the cardinality of the set
+      <m>\left\{1, 2, 3\right\}</m> has the same meaning as saying that there are three elements in the set <m>\left\{Salviati, Sagredo, Simplicio\right\}</m>.
+      In both cases the number <q><m>3</m></q>
+      is the name that we give to the totality of the elements of each set.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  Precisely.
+      In exactly the same way <m>\aleph_0</m> is the symbol we use to denote the totality of the set of positive integers.
+    </p>
+
+    <p>
+      Thus <m>\aleph_0</m> is a number in the same sense that '<m>3</m>' is a number,
+      is it not?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  I see that we can say in a meaningful way that three is the cardinality of any set with<nbsp />.<nbsp />.<nbsp />.<nbsp />well,<nbsp />.<nbsp />.<nbsp />.<nbsp />with three elements
+      (it becomes very difficult to talk about these things)
+      but this is simply a tautology!
+      It is a way of saying that a set which has three elements has three elements!
+    </p>
+
+    <p>
+      This means only that we have counted them and we had to stop at three.
+      In order to do this we must have numbers first.
+      Which, of course, we do.
+      As I said, everyone knows what numbers are.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  I must confess,
+      my friend, that I become more confused as we speak.
+      I am no longer certain that I really know what a number is.
+      Since you seem to have retained your certainty can you clear this up for me?
+      Can you tell me what a number is?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Certainly.
+      A number is what we have just been discussing.
+      It is what you have when you stop counting.
+      For example, three is the totality
+      (to use your phrase)
+      of the elements of the sets <m>\left\{Salviati, Sagredo, Simplicio\right\}</m> or
+      <m>\left\{1, 2, 3\right\}</m> because when I count the elements in either set I have to stop at three.
+      Nothing less, nothing more.
+      Thus three is a number.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  But this definition only confuses me!
+      Surely you will allow that fractions are numbers?
+      What is counted when we end with,
+      say <m>4/5</m> or <m>1/5?</m>
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  This is simplicity itself.
+      <m>4/5</m> is the number we get when we have divided something into <m>5</m> equal pieces and we have counted four of these fifths.
+      This is four-fifths.
+      You see?
+      Even the language we use naturally bends itself to our purpose.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  But what of one-fifth?
+      In order to count one fifth we must first divide something into fifths.
+      To do this we must know what one-fifth is, musn't we?
+      We seem to be using the word <q>number</q> to define itself again.
+      Have we not come full circle and gotten nowhere?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  I confess this had not occurred to me before.
+      But your objection is easily answered.
+      To count one-fifth we simply divide our
+      <q>something</q> into tenths.
+      Then we count two of them.
+      Since two-tenths is the same as one-fifth the problem is solved.
+      Do you see?
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  I see your point but it will not suffice at all!
+      It merely replaces the question,
+      <q>What is one-fifth?</q> with,
+      <q>What is one-tenth?</q> Nor will it do to say that one-tenth is merely two-twentieths.
+      This simply shifts the question back another level.
+    </p>
+
+    <p>
+      Archimedes said,
+      <q>Give me a place to stand and a lever long enough and I will move the earth.</q>
+      But of course he never moved the earth because he had nowhere to stand.
+      We seem to find ourselves in Archimedes' predicament: We have no place to stand.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  I confess I don't see a way to answer this right now.
+      However I'm sure an answer can be found if we only think hard enough.
+      In the meantime I cannot accept that <m>\aleph_0</m> is a number.
+      It is, as I said before, infinity and infinity is not a number!
+      We may as well believe in fairies and leprechauns if we call infinity a number.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  But again we've come full circle.
+      We cannot say definitively that
+      <m>\aleph_n</m> is or is not a number until we can state with confidence what a number is.
+      And even if we could find solid ground on which to solve the problem of fractions,
+      what of <m>\sqrt{2}?</m> Or <m>\pi?</m> Certainly these are numbers but I see no way to count to either of them.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Alas!
+      I am beset by demons!
+      I am bewitched!
+      I no longer believe what I <em>know</em> to be true!
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  Perhaps things are not quite as bad as that.
+      Let us consider further.
+      You said earlier that we all know what numbers are, and I agree.
+      But perhaps your statement needs to be more precisely formulated.
+      Suppose we say instead that we all know what numbers <em>need</em> to be?
+      Or that we know what we <em>want</em> numbers to be?
+    </p>
+
+    <p>
+      Even if we cannot say with certainly what numbers <em>are</em>
+      surely we can say what we want and need for them to be.
+      Do you agree?
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  I do.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  And so do I.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  Then let us invent numbers anew,
+      as if we've never seen them before,
+      always keeping in mind those properties we need for numbers to have.
+      If we take this as a starting point then the question we need to address is,
+      <q>What do we need numbers to be?</q>
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  This is obvious!
+      We need to be able to add them and we need to be able to multiply them together,
+      and the result should also be a number.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  And subtract and divide too, of course.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  I am not so sure we actually need these.
+      Could we not <em>define</em> <q>subtract two from three</q>
+      to be <q>add negative two to three</q>
+      and thus dispense with subtraction and division?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  I suppose we can but I see no advantage in doing so.
+      Why not simply have subtraction and division as we've always known them?
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  The advantage is parsimony.
+      Two arithmetic operations are easier to keep track of than four.
+      I suggest we go forward with only addition and multiplication for now.
+      If we find we need subtraction or division we can consider them later.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Agreed.
+      And I now see another advantage.
+      Obviously addition and multiplication must not depend on order.
+      That is, if <m>x</m> and <m>y</m> are numbers then <m>x+y</m> must be equal to <m>y+x</m> and <m>xy</m> must be equal to <m>yx</m>.
+      This is not true for subtraction,
+      for <m>3-2</m> does <em>not</em> equal <m>2-3</m>.
+      But if we define subtraction as you suggest then this symmetry is preserved:
+      <me>
+        x+(-y) = (-y)+x
+      </me>.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  Excellent!
+      Another property we will require of numbers occurs to me now.
+      When adding or multiplying more than two numbers it should not matter where we begin.
+      That is, if <m>x</m>,
+      <m>y</m> and <m>z</m> are numbers it should be true that
+      <me>
+        (x+y)+z = x+(y+z)
+      </me>
+      and
+      <me>
+        (x\cdot y)\cdot z = x\cdot(y\cdot z)
+      </me>.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Yes!
+      We have it!
+      Any objects which combine in these precise ways can be called numbers.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  Certainly these properties are necessary,
+      but I don't think they are yet sufficient to our purpose.
+      For example,
+      the number <m>1</m> is unique in that it is the only number which,
+      when multiplying another number leaves it unchanged.
+    </p>
+
+    <p>
+      For example:  <m>1\cdot3=3</m>.
+      Or, in general, if <m>x</m> is a number then <m>1\cdot x =x</m>.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  Yes.
+      Indeed.
+      It occurs to me that the number zero plays a similar role for addition:
+      <m>0+x=x</m>.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  It does not seem to me that addition and multiplication,
+      as we have defined them,
+      force <m>1</m> or <m>0</m> into existence so I believe we will have to postulate their existence independently.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  Is this everything then?
+      Is this all we require of numbers?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  I don't think we are quite done yet.
+      How shall we get division?
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  In the same way that we defined subtraction to be the addition of a negative number,
+      can we not define division to be multiplication by a reciprocal?
+      For example,
+      <m>3</m> divided by <m>2</m> can be considered <m>3</m> <em>multiplied</em>
+      by <m>1/2</m>, can it not?
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  I think it can.
+      But observe that <em>every</em>
+      number will need to have a corresponding negative so that we can subtract any amount.
+      And again nothing we've discussed so far forces these negative numbers into existence so we will have to postulate their existence separately.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  And in the same way every number will need a reciprocal so that we can divide by any amount.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  Every number that is, except zero.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Yes, this is true.
+      Strange is it not,
+      that of them all only this one number needs no reciprocal?
+      Shall we also postulate that zero has no reciprocal?
+    </p>
+
+    <p>
+      <alert>Salviati</alert>: I don't see why we should.
+      Possibly <m>\aleph_0</m> is the reciprocal of zero.
+      Or possibly not.
+      But I see no need to concern ourselves with things we do not need.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Is this everything then?
+      Have we discovered all that we need for numbers to be?
+    </p>
+
+    <p>
+      <alert>Salviati</alert>: I believe there is only one property missing.
+      We have postulated addition and we have postulated multiplication and we have described the numbers zero and one which play similar roles for addition and multiplication respectively.
+      But we have not described how addition and multiplication work together.
+    </p>
+
+    <p>
+      That is, we need a rule of distribution:  If <m>x</m>,
+      <m>y</m> and <m>z</m> are all numbers then
+      <me>
+        x\cdot(y+z) = x\cdot y+x\cdot z
+      </me>.
+    </p>
+
+    <p>
+      With this in place I believe we have everything we need.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Indeed.
+      We can also see from this that
+      <m>\aleph_0</m> cannot be a number since,
+      in the first place,
+      it cannot be added to another number and in the second,
+      even if it could be added to a number the result is surely not also a number.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  My dear Simplicio, I fear you have missed the point entirely!
+      Our axioms do not declare what a number is,
+      only how it behaves with respect to addition and multiplication with other numbers.
+      Thus it is a mistake to presume that <q>numbers</q>
+      are only those objects that we have always believed them to be.
+      In fact, it now occurs to me that
+      <q>addition</q> and <q>multiplication</q>
+      also needn't be seen as the operations we have always believed them to be.
+    </p>
+
+    <p>
+      For example suppose we have three objects,
+      <m>\left\{a, b, c\right\}</m> and suppose that we define <q>addition</q>
+      and <q>multiplication</q> by the following tables: 
+<md>
+<mrow>
+        \begin{array}{c|ccc} 
+        +\amp a\amp b\amp c\\\hline 
+        a\amp a\amp b\amp c\\
+        b\amp b\amp c\amp a\\ 
+        c\amp c\amp a\amp b 
+        \end{array}  
+\amp \amp \amp \amp \amp \amp 
+        \begin{array}{c|ccc} 
+        \cdot\amp a\amp b\amp c\\\hline 
+        a\amp a\amp a\amp a\\ 
+        b\amp a\amp b\amp c\\ 
+        c\amp a\amp c\amp b 
+        \end{array} 
+</mrow>
+</md>
+</p>
+
+    <p>
+      I submit that our set along with these definitions satisfy all of our axioms and thus <m>a</m>,
+      <m>b</m> and <m>c</m> qualify to be called <q>numbers.</q>
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  This cannot be!
+      There is no zero, no one!
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  But there is.
+      Do you not see that <m>a</m> plays the role of zero <mdash /> if you add it to any number you get that number back.
+      Similarly <m>b</m> plays the role of one.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:
+      This is astonishing!
+      If <m>a, b</m> and <m>c</m> can be numbers then I am less sure than ever that I know what numbers are!
+      Why, if we replace <m>a, b</m>,
+      and <m>c</m> with <em>Simplicio</em> <em>Sagredo,</em>
+      and <em>Salviati</em> then <em>we</em>
+      become numbers ourselves!
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  Perhaps we will have to be content with knowing how numbers behave rather than knowing what they are.
+    </p>
+
+    <p>
+      However I confess that I have a certain affection for the numbers I grew up with.
+      Let us call those the <q>real</q> numbers.
+      Any other set of numbers,
+      such as our <m>\left\{a,b,c\right\}</m> above we will call a field of numbers,
+      since they seem to provide us with new ground to explore.
+      Or perhaps just a <em>number field</em>?
+    </p>
+
+    <p>
+      As we have been discussing this I have been writing down our
+      axioms.  They are these.  Numbers are any objects which satisfy
+      all of the following properties:
+    </p>
+<p>
+      <alert>AXIOMS OF NUMBERS</alert>
+</p>
+<dl>
+<li>
+<title>Axiom I: <p>Definition of Operations</p></title>
+They can be combined by two operations,
+            denoted <q><m>\cdot</m></q> and <q>+</q>.
+</li>
+<li>
+<title>Axiom II: <p>Closure</p></title>
+           If <m>x</m>,
+            <m>y</m> and <m>z</m> are numbers then <m>x+y</m> is also a number.
+            <m>x\cdot y</m> is also a number.
+ </li>
+<li>
+<title>Axiom II: <p>Commutativity</p></title>
+      <m>x+y=y+x</m> <m>x\cdot y=y\cdot x</m>
+</li>
+<li>
+<title>Axiom III: <p>Associativity</p></title>
+            <m>(x+y)+z=x+(y+z)</m> <m>(x\cdot y)\cdot z = x\cdot(y\cdot z)</m>
+</li>
+<li>
+<title>Axiom IV: <p>Additive Identity</p></title>
+        There is a number, denoted <m>0</m>,
+        such that for any number, <m>x</m>,
+        <me>
+          x+0=x
+        </me>.
+</li>
+<li>
+<title>Axiom V: <p>Multiplicative Identity</p></title>
+            There is a number, denoted <m>1</m>,
+            such that for any number, <m>x</m>,
+            <me>
+              1\cdot x=x
+            </me>.
+</li>
+<li>
+<title>Axiom VI: <p>Additive Inverses</p></title>
+            Given any number, <m>x</m>,
+            there is a number, denoted <m>-x</m>, with the property that
+            <me>
+              x+(-x)=0
+            </me>.
+</li>
+<li>
+<title>Axiom VII: <p>Multiplicative Inverse</p></title>
+        Given any number, <m>x\ne0</m>,
+        there is a number, denoted <m>x^{-1}</m>, with the property that
+        <me>
+          x\cdot x^{-1} =1
+        </me>.
+</li>
+<li>
+<title>Axiom VIII: <p>The Distributive Property</p></title>
+            If <m>x</m>, <m>y</m> and <m>z</m> are numbers then
+            <me>
+              x\cdot(y+z) = x\cdot y+x\cdot z
+            </me>.
+</li>
+</dl>
+    <!-- <p> -->
+    <!--   Numbers are any objects which satisfy all of the following properties: -->
+    <!--   <axiom> <alert>Axiom I: (Definition of Operations): </alert> -->
+    <!--        <p> They can be combined by two operations, -->
+    <!--         denoted <q>+</q> and <q><m>\cdot</m>.</q></p> -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>Axiom II: (Closure):</alert> -->
+    <!--         If <m>x</m>, -->
+    <!--         <m>y</m> and <m>z</m> are numbers then <m>x+y</m> is also a number. -->
+    <!--         <m>x\cdot y</m> is also a number. -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--   <alert>Axiom III: (Commutativity)</alert> -->
+    <!--   <m>x+y=y+x</m> <m>x\cdot y=y\cdot x</m> -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>Axiom IV: (Associativity)</alert> -->
+    <!--         <m>(x+y)+z=x+(y+z)</m> <m>(x\cdot y)\cdot z = x\cdot(y\cdot z)</m> -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>Axiom V: (Additive Identity)</alert>:  -->
+    <!--     There is a number, denoted <m>0</m>, -->
+    <!--     such that for any number, <m>x</m>, -->
+    <!--     <me> -->
+    <!--       x+0=x -->
+    <!--     </me>. -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>Multiplicative Identity</alert>:  -->
+    <!--         There is a number, denoted <m>1</m>, -->
+    <!--         such that for any number, <m>x</m>, -->
+    <!--         <me> -->
+    <!--           1\cdot x=x -->
+    <!--         </me>. -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>Additive Inverse</alert>:  -->
+    <!--         Given any number, <m>x</m>, -->
+    <!--         there is a number, denoted <m>-x</m>, with the property that -->
+    <!--         <me> -->
+    <!--           x+(-x)=0 -->
+    <!--         </me>. -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>Multiplicative Inverse</alert>:  -->
+    <!--     Given any number, <m>x\ne0</m>, -->
+    <!--     there is a number, denoted <m>x^{-1}</m>, with the property that -->
+    <!--     <me> -->
+    <!--       x\cdot x^{-1} =1 -->
+    <!--     </me>. -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>The Distributive Property</alert>:  -->
+    <!--         If <m>x</m>, <m>y</m> and <m>z</m> are numbers then -->
+    <!--         <me> -->
+    <!--           x\cdot(y+z) = x\cdot y+x\cdot z -->
+    <!--         </me>. -->
+    <!--   </axiom> -->
+    <!-- </p> -->
+    <p>
+      <alert>Sagredo</alert>: My friend, this is a thing of surpassing beauty!
+      All seems clear to me now.
+      Numbers are any group of objects which satisfy our axioms.
+      That is, a number is anything that
+      <em>acts</em> like a number.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  Yes this seems to be true.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  But wait!
+      We have not settled the question: Is <m>\aleph_0</m> a number or not?
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  If everything we have just done is valid then <m>\aleph_0</m>
+      <em>could be</em> a number.
+      And so could <m>\aleph_1</m>,<m>\aleph_2 \ldots</m> <em>if</em>
+      we can find a way to define addition and multiplication on the set
+      <m>\left\{\aleph_0, \aleph_1, \aleph_2 \ldots\right\}</m> in a manner that agrees with our axioms.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  An arithmetic of infinities!
+      This is a very strange idea.
+      Can such a thing be made sensible?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Not, I think, before lunch.
+      Shall we retire to our meal?
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>Additional Problems</title>
+    <problem>
+      <statement>
+        <p>
+          <idx><h><m>0\neq 1</m></h></idx>
+               Show that <m>0\neq 1</m>. 
+          <hint>
+            Show that if <m>x\neq0</m>,
+            then <m>0\cdot x \neq x</m>.
+          </hint>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>number field</h><h><m>\QQ</m> is a field</h></idx> 
+          Consider the set of ordered pairs of integers:
+          <m>\left\{(x,y)|s, y \in \ZZ\right\}</m>,
+          and define addition and multiplication as follows:
+
+          <ol label="(a)">
+            <li>
+              <title>Addition:</title>
+              <p>
+                <m>(a,b)+(c,d) = (ad+bc, bd)</m>
+              </p>
+            </li>
+
+            <li>
+              <title>Multiplication:</title>
+              <p>
+                <m>(a,b)\cdot(c,d) = (ac, bd)</m>.
+              </p>
+            </li>
+          </ol>
+
+          <ol label="(a)">
+            <li>
+              <p>
+                If we add the convention that
+                <me>
+                  (ab, ad) = (b,d)
+                </me>
+                show that this set with these operations forms a number field.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Which number field is this?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>number field</h><h><m>\CC</m> is a field</h></idx> 
+
+          Consider the set of ordered pairs of real numbers,
+          <m>\left\{(x,y)|x, y\in\RR\right\}</m>,
+          and define addition and multiplication as follows:
+
+          <ul>
+            <li>
+              <title>Addition:</title>
+              <p>
+                <m>(a,b)+(c,d) = (a+c, b+d)</m>
+              </p>
+            </li>
+
+            <li>
+              <title>Multiplication:</title>
+              <p>
+                <m>(a,b)\cdot(c,d) = (ac- bd,ad+bc)</m>.
+              </p>
+            </li>
+          </ul>
+
+          <ol label="(a)">
+            <li>
+              <p>
+                Show that this set with these operations forms a number field.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Which number field is this?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+  </subsection>
+</section>
+

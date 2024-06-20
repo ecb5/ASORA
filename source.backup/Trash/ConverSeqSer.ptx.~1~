@@ -1,0 +1,10 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chpt_Convergence">
+  <title>Convergence of Sequences and Series</title>
+  <xi:include  href="sec_Convergence.ptx" />
+  <xi:include  href="sec_proving-limit-rules.ptx" />
+  <xi:include  href="sec_divergence.ptx" />
+  <xi:include  href="section4-4x.ptx" />
+</chapter>
+

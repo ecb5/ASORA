@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:32-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Definition of the Limit of a Function</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="SequencesAndContinuity.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Continuity.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Continuity-DerivativeAfterthought.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="SequencesAndContinuity.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Continuity.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Continuity-DerivativeAfterthought.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="active">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="Continuity-DefLimit"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">The Definition of the Limit of a Function</span>
+</h2>
+<p id="p-848">Since these days the limit concept is generally regarded as the starting point for calculus, you might think it is a little strange that we've chosen to talk about continuity first. But historically, the formal definition of a limit came after the formal definition of continuity. In some ways, the limit concept was part of a unification of all the ideas of calculus that were studied previously and, subsequently, it became the basis for all ideas in calculus. For this reason it is logical to make it the first topic covered in a calculus course.</p>
+<p id="p-849">To be sure, limits were always lurking in the background. In his attempts to justify his calculations, Newton  used what he called his doctrine of “Ultimate Ratios.” Specifically the ratio <span class="process-math">\(\frac{(x+h)^2-x^2}{h} = \frac{2xh+h^2}{h} = 2x+h\)</span> becomes the ultimate ratio <span class="process-math">\(2x\)</span> at the last instant of time before <span class="process-math">\(h\)</span> - an “evanescent quantity” - vanishes (<a href="" class="xref" data-knowl="./knowl/grabiner81__origin_cauch_rigor_calculy.html" title="Bibliographic Entry 4">[4]</a>, p. 33). Similarly Leibniz's “infinitely small” differentials <span class="process-math">\(\dx{ x}\)</span> and <span class="process-math">\(\dx{ y}\)</span> can be seen as an attempt to get “arbitrarily close” to <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> respectively. This is the idea at the heart of calculus: to get arbitrarily close to, say, <span class="process-math">\(x\)</span> without actually reaching it.</p>
+<p id="p-850">As we saw in <a href="PowerSeriesQuestions.html" class="internal" title="Chapter 5: Questions Concerning Power Series">Chapter 5</a>, Lagrange  tried to avoid the entire issue of “arbitrary closesness,” both in the limit and differential forms when, in 1797, he attempted to found calculus on infinite series.</p>
+<p id="p-851">Although Lagrange's  efforts failed, they set the stage for Cauchy  to provide a definition of derivative which in turn relied on his precise formulation of a limit. Consider the following example: to determine the slope of the tangent line (derivative) of <span class="process-math">\(f(x) = \sin x\)</span> at <span class="process-math">\(x=0\text{.}\)</span> We consider the graph of the difference quotient <span class="process-math">\(D(x) =\frac{\sin x }{x}\text{.}\)</span></p>
+<div class="image-box" style="width: 56%; margin-left: 22%; margin-right: 22%;"><img src="images/SinGraph.png" class="contained"></div>
+<p id="p-852">From the graph, it appears that <span class="process-math">\(D(0) =1\)</span> but we must be careful.  <span class="process-math">\(D(0)\)</span> doesn't even exist!  Somehow we must convey the idea that <span class="process-math">\(D(x)\)</span> will approach <span class="process-math">\(1\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(0\text{,}\)</span> even though the function is not defined at <span class="process-math">\(0\text{.}\)</span>  Cauchy's idea was that the limit of <span class="process-math">\(D(x)\)</span> would equal <span class="process-math">\(1\)</span> because we can make <span class="process-math">\(D(x)\)</span> differ from 1 by as little as we wish (<a href="" class="xref" data-knowl="./knowl/jahnke03__histor_analy.html" title="Bibliographic Entry 6">[6]</a>, p. 158).</p>
+<p id="p-853">Karl Weierstrass  made these ideas precise in his lectures on analysis at the University of Berlin (1859-60) and provided us with our modern formulation.</p>
+<article class="definition definition-like" id="def_limit"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.3.1</span><span class="period">.</span>
+</h3>
+<p id="p-854"> We say <span class="process-math">\(\limit{x}{a}{f(x)} =L\)</span> provided that for each <span class="process-math">\(\eps&gt;0\text{,}\)</span> there exists <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(0\lt \abs{x-a}\lt \delta\)</span> then <span class="process-math">\(\abs{f(x)-L}\lt \eps\text{.}\)</span></p></article><p id="p-855">Before we delve into this, notice that it is very similar to the definition of the continuity of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=a\text{.}\)</span> In fact we can readily see that <span class="process-math">\(f \text{ is continuous at } x=a \text{ if and only if } \limit{x}{a}{f(x)} = f(a)\text{.}\)</span></p>
+<p id="p-856">There are two differences between this definition and the definition of continuity and they are related.  The first is that we replace the value <span class="process-math">\(f(a)\)</span> with <span class="process-math">\(L\text{.}\)</span>  This is because the function may not be defined at <span class="process-math">\(a\text{.}\)</span>  In a sense the limiting value <span class="process-math">\(L\)</span> is the value <span class="process-math">\(f\)</span> would have <em class="emphasis">if it were defined and continuous at <span class="process-math">\(a\text{.}\)</span></em> The second is that we have replaced</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\abs{x-a}\lt \delta
+\end{equation*}
+</div>
+<p class="continuation">with</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+0\lt \abs{x-a}\lt \delta\text{.}
+\end{equation*}
+</div>
+<p id="p-857">Again, since <span class="process-math">\(f\)</span> needn't be defined at <span class="process-math">\(a\text{,}\)</span> we will not even consider what happens when <span class="process-math">\(x=a\text{.}\)</span> This is the only purpose for this change.</p>
+<p id="p-858">As with the definition of the limit of a sequence, this definition does not determine what <span class="process-math">\(L\)</span> is, it only verifies that your guess for the value of the limit is correct.</p>
+<p id="p-859">Finally, a few comments on the differences and similiarities between this limit and the limit of a sequence are in order, if for no other reason than because we use the same notation (<span class="process-math">\(\lim\)</span>) for both.</p>
+<p id="p-860">When we were working with sequences in <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a> and wrote things like <span class="process-math">\(\limit{n}{\infty}{a_n}\)</span> we were thinking of <span class="process-math">\(n\)</span> as an integer that got bigger and bigger.  To put that more mathematically, the limit parameter <span class="process-math">\(n\)</span> was taken from the set of positive integers, or <span class="process-math">\(n\in \NN\text{.}\)</span></p>
+<p id="p-861">For both continuity and the limit of a function we write things like <span class="process-math">\(\limit{x}{a}{f(x)}\)</span> and think of <span class="process-math">\(x\)</span> as a variable that gets arbitrarily close to the number <span class="process-math">\(a\text{.}\)</span>  Again, to be more mathematical in our language we would say that the limit parameter <span class="process-math">\(x\)</span> is taken from the <span class="process-math">\(\ldots\)</span> Well, actually, this is interesting isn't it?  Do we need to take <span class="process-math">\(x\)</span> from <span class="process-math">\(\QQ\)</span> or from <span class="process-math">\(\RR?\)</span> The requirement in both cases is simply that we be able to choose <span class="process-math">\(x\)</span> arbitrarily close to <span class="process-math">\(a\text{.}\)</span> From <a href="" class="xref" data-knowl="./knowl/thm_IrrationalBetweenIrrationals.html" title="Theorem 3.0.11">Theorem 3.0.11</a> of <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a> we see that this is possible whether <span class="process-math">\(x\)</span> is rational or not, so it seems either will work.  This leads to the pardoxical sounding conclusion that we do not need a continuum (<span class="process-math">\(\RR\)</span>) to have continuity.  This seems strange.</p>
+<p id="p-862">Before we look at the above example, let's look at some algebraic examples to see the definition in use.</p>
+<article class="example example-like" id="example-13"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-13"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-13"><article class="example example-like"><p id="p-863">Consider the function <span class="process-math">\(D(x)=\frac{x^2-1}{x-1}\text{,}\)</span> <span class="process-math">\(x\neq 1\text{.}\)</span>  You probably recognize this as the difference quotient used to compute the derivative of <span class="process-math">\(f(x)=x^2\)</span> at <span class="process-math">\(x=1\text{,}\)</span> so we strongly suspect that <span class="process-math">\(\limit{x}{1}{\frac{x^2-1}{x-1}}=2\text{.}\)</span>  Just as when we were dealing with limits of sequences, we should be able to use the definition to verify this.  And as before, we will start with some scrapwork.</p>
+<p id="p-864"><dfn class="terminology">SCRAPWORK</dfn></p>
+<p id="p-865">Let <span class="process-math">\(\eps&gt;0\text{.}\)</span>  We wish to find a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(0\lt \abs{x-1}\lt \delta\)</span> then <span class="process-math">\(\abs{\frac{x^2-1}{x-1}-2}\lt \eps\text{.}\)</span>  With this in mind, we perform the following calculations</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\abs{\frac{x^2-1}{x-1}-2}=\abs{(x+1)-2} = \abs{x-1}\text{.}
+\end{equation*}
+</div>
+<p id="p-866">Now we have a handle on <span class="process-math">\(\delta\)</span> that will work in the definition and we'll give the formal proof that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\limit{x}{1}{\frac{x^2-1}{x-1}}=2\text{.}
+\end{equation*}
+</div></article></div>
+<article class="hiddenproof" id="proof-17"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><p id="p-867">Let <span class="process-math">\(\eps&gt;0\)</span> and let <span class="process-math">\(\delta=\eps\text{.}\)</span> If <span class="process-math">\(0\lt \abs{x-1}\lt \delta\text{,}\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\abs{\frac{x^2-1}{x-1}-2}=\abs{(x+1)-2}=\abs{x-1}\lt \delta=\eps\text{.}
+\end{equation*}
+</div></article></div>
+<p id="p-868">As in our previous work with sequences and continuity, notice that the scrapwork is not part of the formal proof (though it was necessary to determine an appropriate <span class="process-math">\(\delta)\text{.}\)</span>  Also, notice that <span class="process-math">\(0\lt \abs{x-1}\)</span> was not really used except to ensure that <span class="process-math">\(x\neq 1\text{.}\)</span></p>
+<article class="problem example-like" id="problem-121"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-121"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.3.3</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-121"><article class="problem example-like"><p id="p-869">Use the definition of a limit to verify that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\limit{x}{a}{\frac{x^2-a^2}{x-a}}=2a.{}
+\end{equation*}
+</div></article></div>
+<article class="problem example-like" id="problem-122"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-122"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.3.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-122"><article class="problem example-like"><div class="introduction" id="introduction-22"><p id="p-870">Use the definition of a limit to verify each of the following limits.</p></div>
+<article class="task exercise-like" id="task-115"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-871"><span class="process-math">\(\limit{x}{1}{\frac{x^3-1}{x-1}}=3\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-26" id="hint-26"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-26"><div class="hint solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="md-45">
+\begin{align*}
+\abs{\frac{x^3-1}{x-1}-3} \amp = \abs{x^2+x+1-3}\\
+\amp \leq\abs{x^2-1}+\abs{x-1}\\
+\amp =\abs{(x-1+1)^2-1}+\abs{x-1}\\
+\amp =\abs{(x-1)^2+2(x-1)}+\abs{x-1}\\
+\amp \leq\abs{x-1}^2 + 3\abs{x-1}\text{.}
+\end{align*}
+</div></div></div>
+</div></article><article class="task exercise-like" id="task-116"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-873"><span class="process-math">\(\limit{x}{1}{\frac{\sqrt{x}-1}{x-1}}=1/2\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-27" id="hint-27"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-27"><div class="hint solution-like"><div class="displaymath process-math" data-contains-math-knowls="" id="md-46">
+\begin{align*}
+\abs{\frac{\sqrt{x}-1}{x-1}-\frac12}\amp = \abs{\frac{1}{\sqrt{x}+1}-\frac12}\\
+\amp =\abs{\frac{2-\left(\sqrt{x}+1\right)}{2\left(\sqrt{x}+1\right)}}\\
+\amp =\abs{\frac{1-x}{2\left(1+\sqrt{x}\right)^2}}\\
+\amp \leq\frac12\abs{x-1}.{}
+\end{align*}
+</div></div></div>
+</div></article></article></div>
+<p id="p-875">Let's go back to the original problem: to show that <span class="process-math">\(\limit{x}{0}{\textstyle\frac{\sin x}{x}}=1\text{.}\)</span></p>
+<p id="p-876">While rigorous, our definition of continuity is quite cumbersome. We really need to develop some tools we can use to show continuity rigorously without having to refer directly to the definition. We have already seen in <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> one way to do this. Here is another. The key is the observation we made after the definition of a limit:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_LimDefOfContinuity.html">
+\begin{equation*}
+f \text{ is continuous at } x=a \text{ if and only if } \limit{x}{a}{f(x)}=f(a)\text{.}
+\end{equation*}
+</div>
+<p id="p-877">Read another way, we could say that <span class="process-math">\(\limit{x}{a}{f(x)}=L\)</span> provided that if we redefine <span class="process-math">\(f(a)=L\)</span> (or define <span class="process-math">\(f(a)=L\)</span> in the case where <span class="process-math">\(f(a)\)</span> is not defined) then <span class="process-math">\(f\)</span> becomes continuous at <span class="process-math">\(a\text{.}\)</span> This allows us to use all of the machinery we proved about continuous functions and limits of sequences.</p>
+<p id="p-878">For example, the following corollary to <a href="" class="xref" data-knowl="./knowl/thm_LimDefOfContinuity.html" title="Theorem 9.2.1">Theorem 9.2.1</a> comes virtually for free once we've made the observation above.</p>
+<article class="corollary theorem-like" id="cor_limit-by-sequences"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.3.5</span><span class="period">.</span>
+</h3>
+<p id="p-879"><span class="process-math">\(\limit{x}{a}{f(x)}=L\)</span> if and only if <span class="process-math">\(f\)</span> satisfies the following property:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\forall \text{ sequences }  (x_n), x_n\ne a, \text{ if } \limit{n}{\infty}{x_n}=a \text{ then }   \limit{n}{\infty}{f(x_n)}=L. {}
+\end{equation*}
+</div></article><p id="p-880">Armed with this, we can prove the following familiar limit theorems from calculus.</p>
+<article class="theorem theorem-like" id="thm_CalcLimits"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.6</span><span class="period">.</span>
+</h3>
+<p id="p-881"> Suppose <span class="process-math">\(\limit{x}{a}{f(x)}=L\)</span> and <span class="process-math">\(\limit{x}{a}{g(x)}=M\text{,}\)</span> then</p>
+<ol class="lower-alpha">
+<li id="li-46"><p id="p-882"><span class="process-math">\(\displaystyle \limit{x}{a}{\left(f(x)+g(x)\right)}=L+M\)</span></p></li>
+<li id="li-47"><p id="p-883"><span class="process-math">\(\displaystyle \limit{x}{a}{\left(f(x)\cdot g(x)\right)}=L\cdot M\)</span></p></li>
+<li id="li-48"><p id="p-884"><span class="process-math">\(\limit{x}{a}{\left(\frac{f(x)}{g(x)}\right)}=L/M\)</span> provided <span class="process-math">\(M\ne0\)</span> and <span class="process-math">\(g(x)\ne{}0\text{,}\)</span> for <span class="process-math">\(x\)</span> sufficiently close to a (but not equal to <span class="process-math">\(a\)</span>).</p></li>
+</ol></article><p id="p-885">We will prove part (a) to give you a feel for this and let you prove parts (b) and (c).</p>
+<article class="hiddenproof" id="proof-18"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof"><p id="p-886">Let <span class="process-math">\(\left(x_n\right)\)</span> be a sequence such that <span class="process-math">\(x_n\ne
+a\)</span> and <span class="process-math">\(\limit{n}{\infty}{x_n}=a\text{.}\)</span>  Since <span class="process-math">\(\limit{x}{a}{f(x)} = L\)</span> and <span class="process-math">\(\limit{x}{a}{g(x)} =
+M\)</span> we see that <span class="process-math">\(\limit{n}{\infty}{f(x_n)} = L\)</span> and <span class="process-math">\(\limit{n}{\infty}{g(x_n)} = M\text{.}\)</span>  By <a href="" class="xref" data-knowl="./knowl/thm_SumOfSequences.html" title="Theorem 7.2.4">Theorem 7.2.4</a> of <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a>, we have <span class="process-math">\(\limit{n}{\infty}{f(x_n)+g(x_n)}=L+M\text{.}\)</span>  Since <span class="process-math">\(\left\{x_n\right\}\)</span> was an arbitrary sequence with <span class="process-math">\(x_n\ne a\)</span> and <span class="process-math">\(\limit{n}{\infty}{x_n} = a\)</span> we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_SumOfSequences.html ./knowl/Convergence.html">
+\begin{equation*}
+\limit{x}{a}{f(x)+g(x)} = L+M\text{.}
+\end{equation*}
+</div></article></div>
+<article class="problem example-like" id="problem-123"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-123"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.3.7</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-123"><article class="problem example-like"><p id="p-887"> Prove parts (b) and (c) of <a href="" class="xref" data-knowl="./knowl/thm_CalcLimits.html" title="Theorem 9.3.6">Theorem 9.3.6</a>.</p></article></div>
+<p id="p-888">More in line with our current needs, we have a reformulation of the Squeeze Theorem.</p>
+<article class="theorem theorem-like" id="thm_SqueezeTheoremFunctions"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.8</span><span class="period">.</span>
+</h3>
+<p id="p-889"><em class="alert">Squeeze Theorem for functions</em></p>
+<p id="p-890"> Suppose <span class="process-math">\(f(x)\le g(x) \le h(x)\text{,}\)</span> for <span class="process-math">\(x\)</span> sufficiently close to <span class="process-math">\(a\)</span> (but not equal to <span class="process-math">\(a\)</span>). If <span class="process-math">\(\limit{x}{a}{f(x)}=L=\limit{x}{a}{h(x)}\text{,}\)</span> then <span class="process-math">\(\limit{x}{a}{g(x)}=L\)</span> also.</p></article><article class="problem example-like" id="problem-124"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-124"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.3.9</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-124"><article class="problem example-like"><p id="p-891"> Prove <a href="" class="xref" data-knowl="./knowl/thm_SqueezeTheoremFunctions.html" title="Theorem 9.3.8">Theorem 9.3.8</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-28" id="hint-28"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-28"><div class="hint solution-like"><p id="p-892">Use <a href="" class="xref" data-knowl="./knowl/thm_SqueezeTheorem.html" title="Theorem 7.2.15">Theorem 7.2.15</a>, the Squeeze Theorem for sequences from <a href="Convergence.html" class="internal" title="Chapter 7: Convergence of Sequences and Series">Chapter 7</a>.</p></div></div>
+</div></article></div>
+<p id="p-893">Returning to <span class="process-math">\(\limit{x}{0}{\frac{\sin x}{x}}\)</span> we'll see that the Squeeze Theorem is just what we need.  First notice that since <span class="process-math">\(D(x)=\sin x/x\)</span> is an even function, we only need to focus on <span class="process-math">\(x&gt;0\)</span> in our inequalities.  Consider the unit circle.</p>
+<div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/UnitCircle.png" class="contained"></div>
+<article class="problem example-like" id="problem-125"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-125"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">9.3.10</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-125"><article class="problem example-like"><p id="p-894">Use the fact that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\text{ area } (\Delta OAC)\lt \text{ area } (\text{ sector } OAC)\lt \text{ area } (\Delta OAB)
+\end{equation*}
+</div>
+<p class="continuation">to show that if <span class="process-math">\(0\lt x\lt \pi/2\text{,}\)</span> then <span class="process-math">\(\cos x\lt
+\sin x/x\lt 1\text{.}\)</span>  Use the fact that all of these functions are even to extend the inequality for <span class="process-math">\(-\pi/2\lt x\lt
+0\)</span> and use the Squeeze Theorem to show <span class="process-math">\(\limit{x}{0}{\textstyle\frac{\sin x}{x}}=1\text{.}\)</span></p></article></div></section></div></main>
+</div>
+</body>
+</html>

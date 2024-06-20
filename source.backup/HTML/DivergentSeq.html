@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:29-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Divergence</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="LimitAsPrimary.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Convergence.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-15.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="LimitAsPrimary.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Convergence.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-15.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="active">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="DivergentSeq"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.3</span> <span class="title">Divergence</span>
+</h2>
+<p id="p-577">In <a href="" class="xref" data-knowl="./knowl/thm_rearrangements.html" title="Theorem 5.2.2">Theorem 5.2.2</a> we saw that there is a rearrangment of the alternating Harmonic series which diverges to <span class="process-math">\(\infty\)</span> or <span class="process-math">\(-\infty\text{.}\)</span> In that section we did not fuss over any formal notions of divergence. We assumed instead that you are already familiar with the concept of divergence, probably from taking calculus in the past.</p>
+<p id="p-578">However we are now in the process of building precise, formal definitions for the concepts we will be using so we define the divergence of a sequence as follows.</p>
+<article class="definition definition-like" id="thm_divergence_of_a_sequence"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.1</span><span class="period">.</span>
+</h3>
+<p id="p-579"> A sequence of real numbers <span class="process-math">\(\left(s_n\right)_{n=1}^\infty\)</span> diverges if it does not converge to any <span class="process-math">\(a\in\RR\text{.}\)</span></p></article><p id="p-580">It may seem unnecessarily pedantic of us to insist on formally stating such an obvious definition. After all “converge” and “diverge” are opposites in ordinary English. Why wouldn't they be mathematically opposite too? Why do we have to go to the trouble of formally defining both of them? Since they are opposites defining one implicitly defines the other doesn't it?</p>
+<p id="p-581">One way to answer that criticism is to state that in mathematics we <em class="emphasis">always</em> work from precisely stated definitions and tightly reasoned logical arguments.</p>
+<p id="p-582">But this is just more pedantry. It is a way of saying, “Because we said so” all dressed up in imposing language. We need to do better than that.</p>
+<p id="p-583">One reason for providing formal definitions of both convergence and divergence is that in mathematics we frequently co-opt words from natural languages like English and imbue them with mathematical meaning that is only tangentially related to the original English definition. When we take two such words which happen to be opposites in English and give them mathematical meanings which are <em class="emphasis">not</em> opposites it can be very confusing, especially at first.</p>
+<p id="p-584">This is what happened with the words “open” and “closed.” These are opposites in English: “not open” is “closed,” “not closed” is “open,” and there is nothing which is both open and closed. But recall that an open interval on the real line, <span class="process-math">\((a,b)\text{,}\)</span> is one that does not include <em class="emphasis">either</em> of its endpoints while a closed interval, <span class="process-math">\([a,b]\text{,}\)</span> is one that includes both of them.</p>
+<p id="p-585">These may seem like opposites at first but they are not.  To see this observe that the interval <span class="process-math">\((a,b]\)</span> is neither open nor closed since it only contains one of its endpoints. If “open” and “closed” were mathematically opposite then <em class="emphasis">every</em> interval would be either open or closed.</p>
+<aside class="aside aside-like" id="aside-12"><h3 class="heading"><span class="title">Open Sets vs. Closed Sets.</span></h3>
+<p id="p-586">It is also true that <span class="process-math">\((-\infty,\infty)\)</span> is <em class="emphasis">both</em> open and closed, but an explanation of this would take us too far afield.</p></aside><p id="p-587">Mathematicians have learned to be extremely careful about this sort of thing. In the case of convergence and divergence of a series, even though these words are actually opposites mathematically (every sequence either converges or diverges and no sequence converges <em class="emphasis">and</em> diverges) it is better to say this explicitly so there can be no confusion.</p>
+<p id="p-588">A sequence <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\)</span> can only converge to a real number, <span class="process-math">\(a\text{,}\)</span> in one way: by getting arbitrarily close to <span class="process-math">\(a\text{.}\)</span> However there are several ways a sequence might diverge.</p>
+<article class="example example-like" id="example-8"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.3.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-589">Consider the sequence, <span class="process-math">\(\left(n\right)_{n=1}^\infty\text{.}\)</span> This clearly diverges by getting larger and larger <span class="process-math">\(\ldots\)</span> Ooops! Let's be careful. The sequence <span class="process-math">\(\left(1-\frac1n\right)_{n=1}^\infty\)</span> gets larger and larger too, but it converges. What we meant to say was that the terms of the sequence <span class="process-math">\(\left(n\right)_{n=1}^\infty\)</span> become <em class="emphasis">arbitrarily</em> large as <span class="process-math">\(n\)</span> increases.</p>
+<p id="p-590">This is clearly a divergent sequence but it may not be clear how to prove this formally. Here's one way.</p>
+<p id="p-591">To show divergence we must show that the sequence satisfies the <em class="emphasis">negation</em> of the definition of convergence. That is, we must show that for every <span class="process-math">\(r\in\RR\)</span> there is an <span class="process-math">\(\eps&gt;0\)</span> such that for every <span class="process-math">\(N\in\RR\text{,}\)</span> there is an <span class="process-math">\(n&gt;N\)</span> with <span class="process-math">\(\left|n-r\right|\ge\eps\text{.}\)</span></p>
+<p id="p-592">So let <span class="process-math">\(\eps=1\text{,}\)</span> and let <span class="process-math">\(r\in\RR\)</span> be given. Let <span class="process-math">\(N=r+2\text{.}\)</span> Then for every <span class="process-math">\(n&gt;N\)</span> <span class="process-math">\(\abs{n-r} &gt; \abs{(r+2)-r}=2&gt;1\text{.}\)</span> Therefore the sequence diverges.</p></article></div>
+<p id="p-593">This seems to have been rather more work than we should have to do for such a simple problem. Here's another way which highlights this particular type of divergence.</p>
+<p id="p-594">First we'll need a new definition:</p>
+<article class="definition definition-like" id="def_DivToInf"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.3.3</span><span class="period">.</span>
+</h3>
+<p id="p-595"> A sequence, <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\text{,}\)</span> <dfn class="terminology">diverges to positive infinity</dfn> if for every real number <span class="process-math">\(r\text{,}\)</span> there is a real number <span class="process-math">\(N\)</span> such that <span class="process-math">\(n&gt;N\imp a_n&gt;r\text{.}\)</span></p>
+<p id="p-596"> A sequence, <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\text{,}\)</span> <dfn class="terminology">diverges to negative infinity</dfn> if for every real number <span class="process-math">\(r\text{,}\)</span> there is a real number <span class="process-math">\(N\)</span> such that <span class="process-math">\(n&gt;N\imp a_n\lt r\text{.}\)</span></p>
+<p id="p-597"> A sequence is said to <dfn class="terminology">diverge to infinity</dfn> if it diverges to either positive or negative infinity.</p></article><p id="p-598">In practice we want to think of <span class="process-math">\(\abs{r}\)</span> as a very large number. This definition says that a sequence diverges to infinity if it becomes arbitrarily large as <span class="process-math">\(n\)</span> increases, and similarly for divergence to negative infinity.</p>
+<article class="problem example-like" id="problem-74"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-74"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-74"><article class="problem example-like"><p id="p-599"> Show that <span class="process-math">\(\left(n\right)_{n=1}^\infty\)</span> diverges to infinity.</p></article></div>
+<article class="problem example-like" id="problem-75"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-75"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-75"><article class="problem example-like"><p id="p-600"> Show that if <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\)</span> diverges to infinity then <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\)</span> diverges.</p></article></div>
+<p id="p-601">We will denote divergence to infinity as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\limit{n}{\infty}{a_n}=\pm\infty\text{.}
+\end{equation*}
+</div>
+<p id="p-602">However, strictly speaking this is an abuse of notation since the symbol <span class="process-math">\(\infty\)</span> does not represent a real number. This notation can be very problematic since it looks so much like the notation we use to denote convergence: <span class="process-math">\(\limit{n}{\infty}{a_n}=a\text{.}\)</span></p>
+<p id="p-603">Nevertheless, the notation is appropriate because divergence to infinity is “nice” divergence in the sense that it shares many of the properties of convergence, as the next problem shows.</p>
+<article class="problem example-like" id="problem-76"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-76"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.6</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-76"><article class="problem example-like"><div class="introduction" id="introduction-11"><p id="p-604">Suppose <span class="process-math">\(\limit{n}{\infty}{a_n}=\infty\)</span> and <span class="process-math">\(\limit{n}{\infty}{b_n}=\infty\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-61"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-605">Show that <span class="process-math">\(\limit{n}{\infty}{a_n+b_n}=\infty\)</span></p></article><article class="task exercise-like" id="task-62"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-606">Show that <span class="process-math">\(\limit{n}{\infty}{a_nb_n}=\infty\)</span></p></article><article class="task exercise-like" id="task-63"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-607">Is it true that <span class="process-math">\(\limit{n}{\infty}{\frac{a_n}{b_n}}=\infty?\)</span> Explain.</p></article></article></div>
+<p id="p-608">Because divergence to positive or negative infinity shares some of the properties of convergence it is easy to get careless with it.  Remember that even though we write <span class="process-math">\(\limit{n}{\infty}{a_n}=\infty\)</span> this is still a divergent sequence in the sense that <span class="process-math">\(\limit{n}{\infty}{a_n}\)</span> does not exist.  The symbol <span class="process-math">\(\infty\)</span> does not represent a real number.  This is just a convenient notational shorthand telling us that the sequence diverges by becoming arbitrarily large.</p>
+<article class="problem example-like" id="problem-77"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-77"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.7</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-77"><article class="problem example-like"><div class="introduction" id="introduction-12"><p id="p-609">Suppose <span class="process-math">\(\limit{n}{\infty}{a_n}=\infty\)</span> and <span class="process-math">\(\limit{n}{\infty}{b_n}=-\infty\)</span> and <span class="process-math">\(\alpha\in\RR\text{.}\)</span>  Prove or give a counterexample:</p></div>
+<article class="task exercise-like" id="task-64"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-610"><span class="process-math">\(\limit{n}{\infty}{a_n+b_n}=\infty\)</span></p></article><article class="task exercise-like" id="task-65"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-611"><span class="process-math">\(\limit{n}{\infty}{a_nb_n}=-\infty\)</span></p></article><article class="task exercise-like" id="task-66"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-612"><span class="process-math">\(\limit{n}{\infty}{\alpha a_n}=\infty\)</span></p></article><article class="task exercise-like" id="task-67"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<p id="p-613"><span class="process-math">\(\limit{n}{\infty}{\alpha b_n}=-\infty\)</span></p></article></article></div>
+<p id="p-614">Finally, a sequence can diverge in other ways as the following problem displays.</p>
+<article class="problem example-like" id="problem-78"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-78"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.8</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-78"><article class="problem example-like"><div class="introduction" id="introduction-13"><p id="p-615">Show that each of the following sequences diverge.</p></div>
+<article class="task exercise-like" id="task-68"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-616"><span class="process-math">\(\left(\left(-1\right)^n\right)_{n=1}^\infty\)</span></p></article><article class="task exercise-like" id="task-69"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-617"><span class="process-math">\(\left(\left(-1\right)^nn\right)_{n=1}^\infty\)</span></p></article><article class="task exercise-like" id="task-70"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-618"><span class="process-math">\(a_n = \begin{cases}1\amp \text{ if \(n=2^p\) for some \(p\in\NN\) } \\ \frac1n\amp \text{ otherwise. } \end{cases}\)</span></p></article></article></div>
+<article class="problem example-like" id="problem-79"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-79"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.9</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-79"><article class="problem example-like"><div class="introduction" id="introduction-14"><p id="p-619">Suppose that <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\)</span> diverges but not to infinity and that <span class="process-math">\(\alpha\)</span> is a real number. What conditions on <span class="process-math">\(\alpha\)</span> will guarantee that:</p></div>
+<article class="task exercise-like" id="task-71"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-620"><span class="process-math">\(\left(\alpha a_n\right)_{n=1}^\infty\)</span> converges?</p></article><article class="task exercise-like" id="task-72"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-621"><span class="process-math">\(\left(\alpha a_n\right)_{n=1}^\infty\)</span> diverges?</p></article></article></div>
+<article class="problem example-like" id="problem-80"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-80"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.3.10</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-80"><article class="problem example-like"><p id="p-622">Show that if <span class="process-math">\(\abs{r}&gt;1\)</span> then <span class="process-math">\(\left(r^n\right)_{n=1}^\infty\)</span> diverges. Will it diverge to infinity?</p></article></div></section></div></main>
+</div>
+</body>
+</html>

@@ -54,8 +54,14 @@
         <idx><h>Taylor's Formula</h></idx>
         Prove <xref ref="TaylorSeriesThm">Theorem</xref>.
       </p>
+<p>
+
+</p>
     </statement>
     <hint>
+<p>
+
+</p>
       <p>
         <m>f(a)=a_0+a_1(a-a)+a_2(a-a)^2+\cdots=a_0</m>.
         Differentiate to obtain the other terms.
@@ -248,8 +254,14 @@
           Let <m>m</m> be a nonnegative integer.
           Show that <m>\limit{y}{\pm\infty}{\frac{y^m}{e^{y^2}}}=0</m>. 
         </p>
+<p>
+
+</p>
 </statement>
         <hint>
+<p>
+
+</p>
           <p>
             Induction and a dash of L'H&#xf4;pital's rule should do the trick.
           </p>

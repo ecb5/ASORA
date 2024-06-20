@@ -1,0 +1,70 @@
+
+
+<section>
+  <title>Additional Problems</title>
+  <!-- <problem> -->
+    <!-- <statement> -->
+<exercises>
+<problem>
+      <p>
+        <idx><h><m>\RR</m></h><h>sums and products of rational and irrational numbers</h></idx>
+        <idx><h>sums and products of rational and irrational numbers</h></idx>
+        Determine if each of the following is always rational or always irrational. Justify your answers.
+        <ol label="(a)">
+          <li>
+            <p>
+              The sum of two rational numbers.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The sum of two irrational numbers.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The sum of a rational and an irrational number.
+            </p>
+          </li>
+        </ol>
+      </p>
+    <!-- </statement> -->
+</problem>
+  <!-- </problem> -->
+
+<!-- <exercise> -->
+  <problem>
+    <statement>
+      <p>
+        <idx><h><m>\QQ</m></h><h>creating irrationals from rationals</h></idx>
+        <idx><h>irrational numbers</h></idx>
+        <idx><h><m>\QQ</m></h><h>is it possible to have two rational numbers, <m>a</m> and <m>b</m>, such that <m>a^b</m> is irrational</h>
+        </idx> 
+        Is it possible to have two rational numbers,
+        <m>a</m> and <m>b</m>, such that <m>a^b</m> is irrational?
+        If so, display an example of such <m>a</m> and <m>b</m>.
+        If not, prove that it is not possible.
+      </p>
+    </statement>
+  </problem>
+<!-- </exercise> -->
+
+<!-- <exercise> -->
+ <problem>
+    <statement>
+      <p>
+        <idx><h><m>\QQ</m></h><h>creating rationals from irrationals</h></idx>
+        <idx><h>irrational numbers</h></idx>
+        <idx><h><m>\QQ</m></h><h>is it possible to have two irrational numbers, <m>a</m> and <m>b</m>, such that <m>a^b</m> is rational</h></idx> 
+Decide if it is possible to have two irrational numbers,
+        <m>a</m> and <m>b</m>, such that <m>a^b</m> is rational.
+        Prove it in either case.
+      </p>
+    </statement>
+  </problem>
+<!-- </exercise> -->
+</exercises>
+</section>
+

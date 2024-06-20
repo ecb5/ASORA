@@ -1,0 +1,147 @@
+
+
+<section>
+  <title>Additional Problems</title>
+  <problem>
+    <statement>
+      <p>
+        <idx><h>series</h><h>Geometric series</h><h>alternating</h></idx>
+        <idx><h>series</h><h>Geometric series</h><h>derivation of the series representation of <m>\ln(1+x)</m> from</h></idx>
+        Use the geometric series to obtain the series
+        <md>
+          <mrow>\ln \left(1+x\right)\amp =x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots</mrow>
+          <mrow>\amp =\sum_{n=0}^\infty\frac{(-1)^n}{n+1}x^{n+1}.{}</mrow>
+        </md>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>power series</h><h> drills</h></idx>
+        <em>Without</em> using Taylor's Theorem, represent the
+        following functions as power series expanded about 0
+        (i.e., in the form <m>\sum_{n=0}^\infty a_nx^n</m>).
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>\ln\left(1-x^2\right)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\frac{x}{1+x^2}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\arctan \left(x^3\right)</m>
+            </p>
+          </li>
+
+          <li>
+            <statement>
+              <m>\ln\left(2+x\right)</m> 
+              <hint>
+                <m>2+x=2\left(1+\frac{x}{2}\right)</m>
+              </hint>
+            </statement>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>power series</h><h>for <m>a^x</m> expanded about 0</h></idx>
+        Let <m>a</m> be a positive real number.
+        Find a power series for <m>a^x</m> expanded about 0. 
+      </p>
+    </statement>
+    <hint>
+      <m>a^x=e^{\ln\,\left(a^x\right)}</m>
+    </hint>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>power series</h><h>of <m>\sin(x)</m>, expanded about <m>a</m></h></idx>
+        <idx><h><m>\sin x</m></h><h>as a power series</h></idx>
+        Represent the function <m></m>sin <m>x</m> as a power series expanded about <m>a</m> (i.e., in the form <m>\sum_{n=0}^\infty a_n\left(x-a\right)^n</m>). 
+      </p>
+    </statement>
+    <hint>
+      <m>\sin x=\sin \left(a+x-a\right)</m>.
+    </hint>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Maclaurin series drills</h></idx> <em>Without</em> using Taylor's Theorem, represent the following functions as a power series expanded about <m>a</m> for the given value of <m>a</m> (i.e., in the form <m>\sum_{n=0}^\infty a_n\left(x-a\right)^n</m>).
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>\ln x</m>, <m>a=1</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>e^x</m>, <m>a=3</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>x^3+2x^2+3</m> , <m>a=1</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\frac{1}{x}</m> , <m>a=5</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>series</h><h>term by term integration of </h></idx>
+        Evaluate the following integrals as series.
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>\displaystyle\int_{x=0}^1e^{x^2}\d x</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle\int_{x=0}^1\frac{1}{1+x^4}\d x</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle\int_{x=0}^1\sqrt[3]{1-x^3}\d x</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

@@ -1,0 +1,10 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chapt_taylor-series">
+  <title>Convergence of the Taylor Series: A <q>Tayl</q> of Three Remainders</title>
+  <xi:include  href="section5-1.ptx" />
+  <xi:include  href="section5-2.ptx" />
+  <xi:include  href="section5-3.ptx" />
+  <xi:include  href="section5-5x.ptx" />
+</chapter>
+

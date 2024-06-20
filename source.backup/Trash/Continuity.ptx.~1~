@@ -1,0 +1,11 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chpt_Continuity">
+  <title>Continuity: What It Isn't and What It Is</title>
+  <xi:include  href="section6-1.ptx" />
+  <xi:include  href="section6-2.ptx" />
+  <xi:include  href="section6-3.ptx" />
+  <xi:include  href="sec_deriv-an-afterth.ptx" />
+  <xi:include  href="section6-6x.ptx" />
+</chapter>
+

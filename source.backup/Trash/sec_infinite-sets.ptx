@@ -1,0 +1,573 @@
+
+
+<section xml:id="sec_infinite-sets">
+  <title>Infinite Sets</title>
+  <p>
+    The following theorem follows directly from our previous work with the NIP and will be very handy later.
+    It basically says that a sequence of nested closed intervals will still have a non-empty intersection even if their lengths do not converge to zero as in the NIP.
+  </p>
+
+  <theorem xml:id="thm_WeakNIP">
+    <statement>
+      <p>
+            <idx><h>Nested Interval Property (NIP)</h><h>weak form</h></idx>
+            <idx><h>weakened form of the NIP</h></idx>
+        Let <m>\left(\left[a_n, b_n\right]\right)_{n=1}^\infty</m> be a sequence of nested intervals such that <m>\limit{n}{\infty}{\abs{b_n-a_n}}>0</m>.
+        Then there is at least one <m>c\in\RR</m> such that
+        <m>c\in\left[a_n, b_n\right]</m> for all <m>n\in\NN</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      By <xref ref="cor_IncBoundedConverge">Corollary</xref>
+      of <xref ref="chpt_IVTEVT">Chapter</xref>,
+      we know that a bounded increasing sequence such as <m>(a_n)</m> converges,
+      say to <m>c</m>.
+      Since <m>a_n\leq a_m\leq b_n</m> for <m>m>n</m> and <m>\limit{m}{\infty}{a_m}=c</m>,
+      then for any fixed <m>n</m>, <m>a_n\leq c\leq b_n</m>.
+      This says <m>c\in\left[a_n, b_n\right]</m> for all <m>n\in\NN</m>.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Nested Interval Property (NIP)</h><h>weak form</h></idx>
+            <idx><h>weak NIP</h></idx>
+        Suppose <m>\limit{n}{\infty}{\abs{b_n-a_n}}>0</m>.
+        Show that there are at least two points, <m>c</m> and <m>d</m>,
+        such that <m>c\in[a_n, b_n]</m> and
+        <m>d\in[a_n, b_n]</m> for all <m>n\in\NN</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Our next theorem says that in a certain,
+    very technical sense there are more real numbers than there are counting numbers\cite{franks10:_cantor_other_proof_rr_uncoun}. This probably does not seem terribly significant.
+    After all, there are real numbers which are not counting numbers.
+    What will make this so startling is that the same cannot be said about all sets which strictly contain the counting numbers.
+    We will get into the details of this after the theorem is proved.
+  </p>
+
+  <theorem xml:id="thm_NoSeriesContainsAllReals">
+    <statement>
+      <p>
+        <alert>Cantor, (1874)</alert>
+      </p>
+      <p>
+        <idx>
+            <h>Cantor, Georg</h>
+             <h>first proof that <m>\RR</m> is uncountable</h>
+        </idx> 
+        <idx>
+            <h><m>\RR</m></h>
+             <h> is uncountable</h>
+              <h>Cantor's first proof</h>
+        </idx> 
+        Let <m>S=\left(s_n\right)_{n=1}^\infty</m> be a sequence of
+        real numbers.  There is a real number <m>c</m>, which is not
+        in<fn> To streamline things, we are abusing notation here as
+        we are letting <m>S</m> denote both the sequence (which is
+        ordered) and the underlying (unordered) set of entries in the
+        sequence.  </fn> <m>S</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      For the sake of obtaining a contradiction assume that the sequence <m>S</m> contains every real number;
+      that is, <m>S=\RR</m>.
+      As usual we will build a sequence of nested intervals <m>\left(\left[x_i, y_i\right]\right)_{i=1}^\infty</m>.
+    </p>
+
+    <p>
+      Let <m>x_1</m> be the smaller of the first two distinct elements of <m>S</m>,
+      let <m>y_1</m> be the larger and take
+      <m>\left[x_1,y_1\right]</m> to be the first interval.
+    </p>
+
+    <p>
+      Next we assume that <m>\left[x_{n-1}, y_{n-1}\right]</m> has been constructed and build <m>\left[x_n, y_n\right]</m> as follows.
+      Observe that there are infinitely many elements of <m>S</m> in <m>\left(x_{n-1}, y_{n-1}\right)</m> since <m>S=\RR</m>.
+      Let <m>s_m</m> and <m>s_k</m> be the <em>first</em>
+      two distinct elements of <m>S</m> such that
+      <me>
+        s_m, s_k \in \left(x_{n-1}, y_{n-1}\right) 
+      </me>.
+    </p>
+
+    <p>
+      Take <m>x_n</m> to be the smaller and <m>y_n</m> to be the larger of <m>s_m</m> and <m>s_k</m>.
+      Then <m>\left[x_n, y_n\right]</m> is the <m>n</m>th interval.
+    </p>
+
+    <p>
+      From the way we constructed them it is clear that
+      <me>
+        \left[x_1, y_1\right] \supseteq \left[x_2, y_2\right] \supseteq \left[x_3, y_3\right] \supseteq \ldots
+      </me>.
+    </p>
+
+    <p>
+      Therefore by <xref ref="thm_WeakNIP">Theorem</xref>
+      there is a real number, say <m>c</m>, such that
+      <me>
+        c\in\left[x_n, y_n\right] \text{ for all }  n\in\NN
+      </me>.
+    </p>
+
+    <p>
+      In fact, since <m>x_1\lt x_2\lt x_3\ldots\lt y_3\lt y_2\lt y_1</m> it is clear that
+      <men xml:id="eq_NIP-interval">
+        x_n\lt c\lt y_n, \ \forall n
+      </men>.
+    </p>
+
+    <p>
+      We will show that <m>c</m> is the number we seek.
+      That the inequalities in <xref ref="eq_NIP-interval">formula</xref>
+      are strict will play a crucial role.
+    </p>
+
+    <p>
+      To see that <m>c\not\in S</m> we suppose that <m>c\in S</m> and derive a contradiction.
+    </p>
+
+    <p>
+      So, suppose that <m>c=s_p</m> for some <m>p\in\NN</m>.
+      Then only <m>\left\{s_1, s_2,\ldots,
+      s_{p-1}\right\}</m> appear before <m>s_p</m> in the sequence <m>S</m>.
+      Since each <m>x_n</m> is taken from <m>S</m> it follows that only finitely many elements of the sequence <m>(x_n)</m> appear before <m>s_p=c</m> in the sequence as well.
+    </p>
+
+    <p>
+      Let <m>x_l</m> be the <em>last</em>
+      element of <m>(x_n)</m> which appears before <m>c=s_p</m> in the sequence and consider <m>x_{l+1}</m>.
+      The way it was constructed,
+      <m>x_{l+1}</m> was one of the first two distinct terms in the sequence <m>S</m> strictly between <m>x_l</m> and <m>y_l</m>,
+      the other being <m>y_{l+1}</m>.
+      Since <m>x_{l+1}</m> does not appear before <m>c=s_p</m> in the sequence and <m>x_l\lt c\lt y_l</m>,
+      it follows that either <m>c=x_{l+1}</m> or <m>c=y_{l+1}</m>.
+      However, this gives us a contradiction as we know from <xref ref="eq_NIP-interval">formula</xref>
+      that <m>x_{l+1}\lt c\lt y_{l+1}</m>.
+    </p>
+
+    <p>
+      Thus <m>c</m> is not an element of <m>S</m>.
+    </p>
+  </proof>
+
+  <p>
+    So how does this theorem show that there are <q>more</q>
+    real numbers than counting numbers?
+    Before we address that question we need to be very careful about the meaning of the word 'more' when we're talking about infinite sets.
+  </p>
+
+  <p>
+    First let's consider two finite sets,
+    say <m>A=\left\{\alpha,\beta,\gamma,\delta\right\}</m> and <m>B=\left\{a,b,c,d,e\right\}</m>.
+    How do we know that <m>B</m> is the bigger set? (It obviously is.) Clearly we can just count the number of elements in both <m>A</m> and <m>B</m>.
+    Since <m>\abs{A}=4</m> and
+    <m>\abs{B}=5</m> and <m>4\lt 5</m> <m>B</m> is clearly bigger.
+    But we're looking for a way to determine the relative size of two sets without counting them because we have no way of counting the number of elements of an infinite set.
+    Indeed, it isn't even clear what the phrase
+    <q>the number of elements</q> might <em>mean</em>
+    when applied to the elements of an infinite set.
+  </p>
+
+  <p>
+    When we count the number of elements in a finite set what we're really doing is matching up the elements of the set with a set of consecutive positive integers,
+    starting at <m>1</m>.
+    Thus since
+    <md>
+      <mrow>1\amp \leftrightarrow\alpha</mrow>
+      <mrow>2\amp \leftrightarrow\beta</mrow>
+      <mrow>3\amp \leftrightarrow\gamma</mrow>
+      <mrow>4\amp \leftrightarrow\delta</mrow>
+    </md>
+    we see that <m>\abs{A}=4</m>.
+    Moreover, the order of the match-up is unimportant.
+    Thus since
+    <md>
+      <mrow>2\amp \leftrightarrow e</mrow>
+      <mrow>3\amp \leftrightarrow a</mrow>
+      <mrow>5\amp \leftrightarrow b</mrow>
+      <mrow>4\amp \leftrightarrow d</mrow>
+      <mrow>1\amp \leftrightarrow c</mrow>
+    </md>
+    it is clear that the elements of <m>B</m> and the set
+    <m>\left\{1,2,3,4,5\right\}</m> can be matched up as well.
+    And it doesn't matter what order either set is in.
+    They both have <m>5</m> elements.
+  </p>
+
+  <p>
+    Such a match-up is called a one-to-one correspondence.
+    In general, if two sets can be put in one-to-one correspondence then they are the same <q>size.</q>
+    Of course the word <q>size</q>
+    has lots of connotations that will begin to get in the way when we talk about infinite sets,
+    so instead we will say that the two sets have the same
+    <em>cardinality.</em> Speaking loosely,
+    this just means that they are the same size.
+  </p>
+
+  <p>
+    More precisely,
+    if a given set <m>S</m> can be put in one-to-one correspondence with a finite set of consecutive integers,
+    say <m>\left\{1,2,3,\ldots, N\right\}</m>,
+    then we say that the cardinality of the set is <m>N</m>.
+    But this just means that both sets have the same cardinality.
+    It is this notion of one-to-one correspondence,
+    along with the next two definitions,
+    which will allow us to compare the sizes (cardinalities) of infinite sets.
+  </p>
+
+  <definition xml:id="def_CountableSets">
+    <statement>
+      <p>
+            <idx><h>cardinality</h><h>countable sets</h></idx>
+            <idx><h>countable sets</h><h>defintion of</h></idx>
+        Any set which can be put into one-to-one correspondence with
+        <m>\NN=\left\{1,2,3,\ldots\right\}</m> is called a <term>countably infinite</term> set.
+        Any set which is either finite or countably infinite is said to be <term>countable</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Since <m>\NN</m> is an infinite set,
+    we have no symbol to designate its cardinality so we have to invent one.
+    The symbol used by Cantor 
+        <idx><h>Cantor, Georg</h></idx>
+    and adopted by mathematicians ever since is <m>\aleph_0</m>.<fn>
+    <m>\aleph{}</m> is the first letter of the Hebrew alphabet and is pronounced "aleph."
+    <m>\aleph_0</m> is pronounced "aleph null."
+    </fn> Thus the cardinality of any countably infinite set is <m>\aleph_0</m>.
+  </p>
+
+  <p>
+    We have already given the following definition informally.
+    We include it formally here for later reference.
+  </p>
+
+  <definition xml:id="def_EqualCardinality">
+    <statement>
+      <p>
+            <idx><h>cardinality</h><h>equal cardinality</h></idx>
+            If two sets can be put into one-to-one correspondence then they are said to have the <alert>same cardinality</alert>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    With these two definitions in place we can see that <xref ref="thm_NoSeriesContainsAllReals">Theorem</xref>
+    is nothing less than the statement that the real numbers are not countably infinite.
+    Since it is certainly not finite,
+    then we say that the set of real numbers is uncountable and therefore <q>bigger</q>
+    than the natural numbers!
+  </p>
+
+  <p>
+    To see this let us suppose first that each real number appears in the sequence <m>(s_n)_{n=1}^\infty</m> exactly once.
+    In that case the indexing of our sequence is really just a one-to-one correspondence between the elements of the sequence and <m>\NN:</m>
+    <md>
+      <mrow>1\amp \leftrightarrow s_1</mrow>
+      <mrow>2\amp \leftrightarrow s_2</mrow>
+      <mrow>3\amp \leftrightarrow s_3</mrow>
+      <mrow>4\amp \leftrightarrow s_4</mrow>
+      <mrow>\amp \ \ \ \vdots</mrow>
+    </md>
+  </p>
+
+  <p>
+    If some real numbers are repeated in our sequence then all of the real numbers are a subset of our sequence and will therefore also be countable
+    (see <xref ref="prob_countable_sets_unions_of">Problem</xref>, part a).
+  </p>
+
+  <p>
+    In either case, every sequence is countable.
+    But our theorem says that <em>no</em>
+    sequence in <m>\RR</m> includes all of <m>\RR</m>.
+    Therefore <m>\RR</m> is uncountable.
+  </p>
+
+  <p>
+    Most of the sets you have encountered so far in your life have been countable.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>countable sets</h><h>countable sets drill, 5 parts</h></idx>
+        Show that each of the following sets is countable.
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>\left\{2,3,4,5,\ldots\right\}=\left\{n\right\}_{n=2}^\infty</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\left\{0,1,2,3,\ldots\right\}=\left\{n\right\}_{n=0}^\infty</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\left\{1,4,9,16,\ldots,n^2,\ldots\right\}=\left\{n^2\right\}_{n=1}^\infty</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The set of prime numbers
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ZZ</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    In fact, if we start with a countable set it is rather difficult to use it to build anything but another countable set.
+  </p>
+
+  <problem xml:id="prob_countable_sets_unions_of">
+    <statement>
+      <p>
+            <idx><h>countable sets</h><h>unions and intersections of</h></idx>
+            <idx><h>unions and intersections of countable sets</h></idx>
+        Let <m>\left\{A_i\right\}</m> be a collection of countable sets.
+        Show that each of the following sets is also countable:
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Any subset of <m>A_1</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>A_1\cup A_2</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>A_1\cup A_2 \cup A_3</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle\bigcup_{i=1}^nA_i</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle\bigcup_{i=1}^\infty A_i</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    It seems that no matter what we do the only example of an uncountably infinite set is <m>\RR</m>.
+    But wait!
+    Remember the rational numbers?
+    They were similar to the real numbers in many ways.
+    Perhaps they are uncountably infinite too?
+  </p>
+
+  <p>
+    Alas, no.
+    The rational numbers turn out to be countable too.
+  </p>
+
+  <theorem xml:id="thm_QisCountable">
+    <statement>
+      <p>
+            <idx><h><m>\QQ</m></h><h> is countable</h></idx>
+        Show that <m>\QQ</m> is countable.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+<title>Sketch of Proof</title>
+    <p>
+      First explain how you know that all of the non-negative rational numbers are in this list:
+      <me>
+        \frac{0}{1},\frac{0}{2},\frac{1}{1},\frac{0}{3}, \frac{1}{2},\frac{2}{1},\frac{0}{4},\frac{1}{3}, \frac{2}{2}, \frac{3}{1}, \cdots
+      </me>.
+    </p>
+
+    <p>
+      However there is clearly some duplication.
+      To handle this,
+      apply part (a) of <xref ref="prob_countable_sets_unions_of">Problem</xref>.
+      Does this complete the proof or is there more to do?
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h><m>\QQ</m></h><h><m>\QQ</m> is countable</h></idx>
+        Prove <xref ref="thm_QisCountable">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The following corollary says that the cardinality of the real numbers is <em>much</em>
+    larger than the cardinality of the rational numbers,
+    despite the fact that both are infinite.
+  </p>
+
+  <p>
+    That is, as a subset of the reals,
+    the rationals can be contained in a sequence of intervals,
+    the sum of whose lengths can be arbitrarily small.
+    In a sense this says that a countably infinite set is so small
+    (on the transfinite scale)
+    that it is <q>almost</q> finite.
+  </p>
+
+  <p>
+    Usually we express this idea with the statement,
+    <q><m>\QQ</m> is a set of <em>measure zero
+        <idx><h>measure zero</h></idx>
+    </em> in <m>\RR</m></q>. The term <q>measure</q>
+    has a precise meaning which we will not pursue.
+    The following corollary contains the essence of the idea.
+  </p>
+
+  <corollary xml:id="cor_Q-MeasureZero">
+    <statement>
+      <p>
+        Let <m>\eps>0</m> be given.
+        There is a collection of intervals in <m>\RR</m>,
+        <m>I_n=[a_n,b_n]</m> such that
+        <me>
+          \QQ \subset \bigcup_{n=1}^\infty I_n
+        </me>
+        and
+        <me>
+          \sum_{n=1}^\infty(b_n-a_n)\lt \eps
+        </me>.
+      </p>
+    </statement>
+  </corollary>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h><m>\QQ</m></h><h>has measure zero in <m>\RR</m></h></idx>
+            <idx><h>measure zero</h><h><m>\QQ</m> has measure zero in <m>\RR</m></h></idx>
+        Prove <xref ref="cor_Q-MeasureZero">Corollary</xref>. 
+      </p>
+      <hint>
+        <p>
+          If we had only finitely many rationals to deal with this would be easy.
+          Let <m>\left\{r_1, r_2, \ldots,
+            r_k\right\}</m> be these rational numbers and take
+          <m>a_n=r_n-\frac{\eps}{2k}</m> and <m>b_n=r_n+\frac{\eps}{2k}</m>.
+          Then for all <m>n=1,\ldots, k</m> <m>r_n\in[a_n,b_n]</m> and
+          <me>
+            \sum_{n=1}^kb_n-a_n = \sum_{n=1}^k \frac{\eps}{k}=\eps
+          </me>.
+        </p>
+      </hint>
+      <p>
+        The difficulty is,
+        how do we move from the finite to the infinite case?]
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Notice how this idea hearkens back to the discussion of Leibniz's<idx><h>Leibniz, Gottfried Wilhelm</h></idx> approach to the Product Rule (<xref ref="eq_LeibnizProductRule">equation</xref>).
+    He simply tossed aside the expression
+    <m>\d x\d y</m> because it was <em>infinitely small</em> compared to either <m>x\d y</m> or <m>y\d x</m>.
+    Although this isn't quite the same thing we are discussing here it is similar and it is clear that Leibniz's insight and intuition were extremely acute.
+    They were moving him in the right direction, at least.
+  </p>
+
+  <p>
+    All of our efforts to build an uncountable set from a countable one have come to nothing.
+    In fact many sets that at first <q>feel</q>
+    like they should be uncountable are in fact countable.<fn>
+    The failure is in the methods we've used so far.
+    It is possible to build an uncountable set using just two symbols if we're clever enough,
+    but this would take us too far away from our main topic.
+    </fn> This makes the uncountability of <m>\RR</m> all the more remarkable.
+  </p>
+
+  <p>
+    However if we <em>start</em> with an uncountable set it is relatively easy to build others from it.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>sets</h><h>uncountable</h></idx>
+            <idx><h>open intervals in <m>\RR</m> are uncountable sets</h></idx>
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Let <m>(a,b)</m> and <m>(c,d)</m> be two open intervals of real numbers.
+              Show that these two sets have the same cardinality by constructing a one-to-one onto function between them. 
+              <hint>
+                A linear function should do the trick.
+              </hint>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Show that any open interval of real numbers has the same cardinality as <m>\RR</m>. 
+              <hint>
+                Consider the interval <m>(-\pi/2,\pi/2)</m>.
+              </hint>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Show that <m>(0,1]</m> and <m>(0,1)</m> have the same cardinality. 
+              <hint>
+                Note that <m>\left\{1,1/2,1/3,\ldots\right\}</m> and
+                <m>\left\{1/2, 1/3, \ldots\right\}</m> have the same cardinality.
+              </hint>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Show that <m>[0,1]</m> and <m>(0,1)</m> have the same cardinality.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

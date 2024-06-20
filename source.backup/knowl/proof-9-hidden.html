@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:03:12-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><p>Note first that the result is true when <span class="process-math">\(x=a\)</span> as both sides reduce to 0 (in that case <span class="process-math">\(c=x=a\text{.}\)</span>) We will prove the case where <span class="process-math">\(a\lt x\text{;}\)</span> the case <span class="process-math">\(x\lt a\)</span> will be an exercise.</p>
+<p>First, we already have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)-\left(\sum_{j=0}^n\frac{f^{(j)}(a)}{j!}(x-a)^j\right)=\frac{1}{n!} \int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}
+\end{equation*}
+</div>
+<p class="continuation">so it suffices to show that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}=\,\frac{f^{\,(n+1)}(c)}{n+1}(x-a)^{n+1}
+\end{equation*}
+</div>
+<p class="continuation">for some <span class="process-math">\(c\)</span> with <span class="process-math">\(c\in[\,a,x]\text{.}\)</span> To this end, let</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+M=\max_{a\le t\le x}\left(f^{(n+1)}(t)\right)
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+m=\min_{a\le t\le x}\left(f^{(n+1)}(t)\right)\text{.}
+\end{equation*}
+</div>
+<p>Note that for all <span class="process-math">\(t\in[\,a,x]\text{,}\)</span> we have <span class="process-math">\(m\leq f^{(n+1)}(t)\leq M\text{.}\)</span> Since <span class="process-math">\(x-t\geq 0\text{,}\)</span> this gives us</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation}
+m\left(x-t\right)^n\leq f^{(n+1)}(t)(x-t)^n\leq M(x-t)^n\tag{8.2.1}
+\end{equation}
+</div>
+<p class="continuation">and so</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation}
+\int_{t=a}^xm\left(x-t\right)^n\dx{ t}\leq\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}\leq \int_{t=a}^xM(x-t)^n\dx{ t}\text{.}\tag{8.2.2}
+\end{equation}
+</div>
+<p>Computing the outside integrals, we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+m\int_{t=a}^x\left(x-t\right)^n\dx{ t}\leq\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}\leq M\int_{t=a}^x(x-t)^n\dx{ t}
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation}
+m\frac{(x-a)^{n+1}}{n+1}\leq\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}\leq M\frac{(x-a)^{n+1}}{n+1}\tag{8.2.3}
+\end{equation}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+m\leq\frac{\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}}{\left(\frac{(x-a)^{n+1}}{n+1} \right)}\leq M\text{.}
+\end{equation*}
+</div>
+<p>Since</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}}{\left(\frac{(x-a)^{n+1}}{n+1} \right)}
+\end{equation*}
+</div>
+<p class="continuation">is a value that lies between the maximum and minimum of <span class="process-math">\(f^{(n+1)}\)</span> on <span class="process-math">\([\,a,x]\text{,}\)</span> then by the Intermediate Value Theorem, there must exist a number <span class="process-math">\(c\in[\,a,x]\)</span> with</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f^{(n+1)}(c)=\frac{\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}}{\left( \frac{(x-a)^{n+1}}{n+1}\right)}\text{.}
+\end{equation*}
+</div>
+<p>This gives us</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\dx{ t}=\,\frac{f^{\,(n+1)}(c)}{n+1}(x-a)^{n+1}\text{.}
+\end{equation*}
+</div>
+<p>And the result follows.</p></article></body>
+</html>

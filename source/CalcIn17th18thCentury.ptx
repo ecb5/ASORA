@@ -810,6 +810,8 @@ or
           given that <m>\frac{\dx{ y}}{\dx{ x}}=y,\,y(0)=1</m>.
       </p>
       <aside>
+<title>Comment</title>
+
         <p>
           A few seconds of thought should convince you that the solution
           of this problem is <m>y(x) = e^x</m>.  We will ignore this for
@@ -1208,7 +1210,7 @@ or
     These two representations probably look the same at first.
     Take a moment and be sure you see where they differ.
   </p> 
-  <!--     <aside> -->
+
   <!-- <hint>      The <q>1</q> is missing in the last expression.</hint> -->
   <!-- </aside> -->
 
@@ -1325,7 +1327,7 @@ or
       <p>
         <idx><h><m>\pi</m></h><h>second series expansion</h></idx>
 
-        <ol label="(a)">
+        <ol marker="a">
           <li>
             <p>
               Show that
@@ -1575,7 +1577,7 @@ e^{i\theta} = cos\theta+i\sin\theta.
 <!--         <em>Without</em> using Taylor's Theorem, represent the -->
 <!--         following functions as power series expanded about 0 -->
 <!--         (i.e., in the form <m>\sum_{n=0}^\infty a_nx^n</m>). -->
-<!--         <ol label="(a)"> -->
+<!--         <ol marker="a"> -->
 <!--           <li> -->
 <!--             <p> -->
 <!--               <m>\ln\left(1-x^2\right)</m> -->
@@ -1642,7 +1644,7 @@ e^{i\theta} = cos\theta+i\sin\theta.
 <!--       <p> -->
 <!--         <idx><h>Maclaurin series drills</h></idx> <em>Without</em> using Taylor's Theorem, represent the following functions as a power series expanded about <m>a</m> for the given value of <m>a</m> (i.e., in the form <m>\sum_{n=0}^\infty a_n\left(x-a\right)^n</m>). -->
 
-<!--         <ol label="(a)"> -->
+<!--         <ol marker="a"> -->
 <!--           <li> -->
 <!--             <p> -->
 <!--               <m>\ln x</m>, <m>a=1</m> -->
@@ -1677,7 +1679,7 @@ e^{i\theta} = cos\theta+i\sin\theta.
 <!--         <idx><h>series</h><h>term by term integration of </h></idx> -->
 <!--         Evaluate the following integrals as series. -->
 
-<!--         <ol label="(a)"> -->
+<!--         <ol marker="a"> -->
 <!--           <li> -->
 <!--             <p> -->
 <!--               <m>\displaystyle\int_{x=0}^1e^{x^2}\dx{ x}</m> -->
@@ -1752,8 +1754,14 @@ e^{i\theta} = cos\theta+i\sin\theta.
         <p>
           <m>\ln\left(2+x\right)</m>
         </p>
+<p>
+
+</p>
       </statement>
       <hint>
+<p>
+
+</p>
         <p>
           <m>2+x=2\left(1+\frac{x}{2}\right)</m>
         </p>
@@ -1768,8 +1776,14 @@ e^{i\theta} = cos\theta+i\sin\theta.
         Let <m>a</m> be a positive real number.
         Find a power series for <m>a^x</m> expanded about 0. 
       </p>
+<p>
+
+</p>
     </statement>
     <hint>
+<p>
+
+</p>
       <p>
         <m>a^x=e^{\ln\,\left(a^x\right)}</m>
       </p>
@@ -1783,8 +1797,14 @@ e^{i\theta} = cos\theta+i\sin\theta.
         <idx><h><m>\sin x</m></h><h>as a power series</h></idx>
         Represent the function <m></m>sin <m>x</m> as a power series expanded about <m>a</m> (i.e., in the form <m>\sum_{n=0}^\infty a_n\left(x-a\right)^n</m>). 
       </p>
+<p>
+
+</p>
     </statement>
     <hint>
+<p>
+
+</p>
       <p>
         <m>\sin x=\sin \left(a+x-a\right)</m>.
       </p>

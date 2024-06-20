@@ -1,0 +1,107 @@
+<references>
+  <title>Bibliography</title>
+  <biblio type="raw" xml:id="bradley09__cauch_cours">
+    RobertE. Bradley and C. Edward Sandifer.
+    <em><foreign>Cauchy's Cours d'analyse</foreign>: An Annotated Translation</em>.
+    Sources and Studies in the History of Mathematics and Physical
+    Sciences. Springer, 2009.
+  </biblio>
+
+  <biblio type="raw" xml:id="dunham90__journ_throug_genius">
+    William Dunham.
+    <em>Journey Through Genius</em>.
+    Penguin Books, 1990.
+  </biblio>
+
+  <biblio type="raw" xml:id="franks10__cantor_other_proof_rr_uncoun">
+    John Franks.
+    Cantor's other proofs that <m>\RR</m> is uncountable.
+    <em>Mathematics Magazine</em>, 83(4):283--289, October 2010.
+  </biblio>
+
+  <biblio type="raw" xml:id="grabiner81__origin_cauch_rigor_calculy">
+    Judith Grabiner.
+    <em>The Origins of Cauchy's Rigorous Calculus</em>.
+    MIT Press, Cambridge MA, 1981.
+  </biblio>
+
+  <biblio type="raw" xml:id="hawking05__god_creat_integ">
+    Stephen Hawking, editor.
+    <em>God Created the Integers: The Mathematical Breakthroughs that
+      Changed History</em>.
+    Running Press, Philadelphia, London, 2005.
+  </biblio>
+
+  <biblio type="raw" xml:id="jahnke03__histor_analy">
+    H. Jahnke, editor.
+    <em>A History of Analysis</em>.
+    AMS Publications, Providence RI, 2003.
+  </biblio>
+
+  <biblio type="raw" xml:id="landau66__found_analy">
+    Edmund Landau.
+    <em>Foundations of Analysis</em>.
+    Chelsea Publishing Company, New York, NY, 1966.
+    Translated by F. Steinhardt, Columbia University.
+  </biblio>
+
+  <biblio type="raw" xml:id="levenson09__newton_count">
+    Thomas Levenson.
+    <em>Newton and the Counterfeiter</em>.
+    Houghton Mifflin Harcourt, 2009.
+  </biblio>
+
+  <biblio type="raw" xml:id="netz07__archim_codex">
+    Reviel Netz and William Noel.
+    <em>The Archimedes Codex</em>.
+    Da Capo Press, 2007.
+  </biblio>
+
+  <biblio type="raw" xml:id="newton45__sir_isaac_two_treat_quadr">
+    Isaac Newton.
+    <em>Sir Isaac Newton's Two Treatises of the Quadrature of Curves and
+      Analysis by Equation of an Infinite Number of Terms, Explained</em>.
+    Society for the Encouragement of Learning, 1745.
+    Translated from Latin by John Stewart, A. M. Professor of
+    Mathematicks in the Marishal College and University of Aberdeen.
+  </biblio>
+
+  <biblio type="raw" xml:id="Bernoulli_bio_mactutor">
+    J. J. O'Connor and E. F. Robertson.
+    <em>The Brachistochrone Problem</em>.
+    <em>http://www-gap.dcs.st-and.ac.uk", MacTutor History of Mathematics archive</em>
+  </biblio>
+
+  <biblio type="raw" xml:id="robinson74__non_stand_analy">
+    Abraham Robinson.
+    <em>Non-standard analysis</em>.
+    North-Holland Pub. Co., 1974.
+  </biblio>
+
+  <biblio type="raw" xml:id="russo96__forgot_revol">
+    Lucio Russo and Silvio Levy.
+    <em>The Forgotten Revolution: How Science Was Born in 300 BC and Why
+      It Had to Be Reborn</em>.
+    Springer, 1996.
+  </biblio>
+
+  <biblio type="raw" xml:id="sandifer07__early_mathem_leonar_euler">
+    C. Edward Sandifer.
+    <em>The Early Mathematics of Leonard Euler</em>.
+    Spectrum, 2007.
+    ISBN 10: 0883855593, ISBN 13: 978-0883855591.
+  </biblio>
+
+  <biblio type="raw" xml:id="struik69__sourc_book_mathem">
+    Dirk Struik, editor.
+    <em>Source Book in Mathematics, 1200-1800</em>.
+    Harvard University Press, Cambridge, MA, 1969.
+  </biblio>
+
+  <biblio type="raw" xml:id="thurston56__number_system">
+    H. A. Thurston.
+    <em>The Number System</em>.
+    Blackie and Son Limited, London, Glassgow, 1956.
+  </biblio>
+</references>
+

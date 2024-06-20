@@ -21,6 +21,8 @@ thoroughly understood,
  or so it was believed.
     </p>
 <aside>
+<title>Comment</title>
+
 <p>
       Some would say <q>re-invented.</q>
       See <xref ref="russo96__forgot_revol"></xref>, or <xref ref="netz07__archim_codex"></xref>.
@@ -381,7 +383,7 @@ This is a
       <statement>
         <p>
           <idx><h><m>\RR</m></h><h>real numbers exist between real numbers</h></idx>
-          <ol label="(a)">
+          <ol marker="a">
             <li>
               <p>
                 Between any two distinct real numbers there is a rational number.

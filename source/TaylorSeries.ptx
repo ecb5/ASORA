@@ -132,8 +132,14 @@
         <idx><h>Triangle Inequalities</h><h>for Integrals</h></idx>
         Prove <xref ref="lemma_TriangleForIntegral">Lemma</xref>.
       </p>
+<p>
+
+</p>
     </statement>
             <hint>
+<p>
+
+</p>
 <p>
               <m>-|f(t)|\leq f(t)\leq|f(t)|</m>.
       </p>
@@ -149,8 +155,14 @@
             </idx>
         Prove <xref ref="thm_TaylorSeries">Theorem</xref>.  
       </p>
+<p>
+
+</p>
     </statement>
 <hint>
+<p>
+
+</p>
 <p>
               You might want to use <xref
               ref="prob_RatioTest">Problem</xref> of <xref
@@ -228,6 +240,8 @@
 to show that <m>f^\prime(x) = f(x)</m>.
   </p>
 <aside>
+<title>Comment</title>
+
 <p>
     We can, but that proof will have to wait for a few more chapters.
 </p>
@@ -409,8 +423,14 @@ to show that <m>f^\prime(x) = f(x)</m>.
             <idx><h>Lagrange's form of the remainder</h><h><m>x\lt a</m></h></idx>
         Prove <xref ref="thm_LagrangeRemainder">Theorem</xref> for the case where <m>x\lt a</m>. 
       </p>
+<p>
+
+</p>
     </statement>
             <hint>
+<p>
+
+</p>
               <p>
                 Note that
                 <me>
@@ -694,6 +714,8 @@ to show that <m>f^\prime(x) = f(x)</m>.
     <m>x\in(-1,0).</m>
   </p>
     <aside>
+<title>Comment</title>
+
 <p>   
  Strictly speaking we only need to show this for <m>x\in(-1,-1/2).
     </m>In <xref ref="prob_Taylor_Series-Binomial_Series_and">problem</xref> 

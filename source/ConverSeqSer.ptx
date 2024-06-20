@@ -704,6 +704,9 @@
       </statement>
     </lemma>
 
+
+
+
     <problem xml:id="Tri-RevTri-Ineq_prob">
       <idx><h>Triangle Inequalities</h><h>Triangle Inequality</h></idx>
       <task>
@@ -711,9 +714,15 @@
           <p>
             Prove <xref ref="Tri-RevTri-Ineq">Lemma</xref>. 
           </p>
-        </statement>
-        <hint>
           <p>
+
+          </p>
+        </statement>
+          <hint>
+            <p>
+
+            </p>          
+            <p>
             For the Reverse Triangle Inequality,
             consider <m>|a|=|a-b+b|</m>.
           </p>
@@ -724,13 +733,20 @@
           <p>
             Show <m>||a|-|b||\leq|a-b|</m>. 
           </p>
+<p>
+
+</p>
         </statement>
         <hint>
+<p>
+
+</p>
           <p>
             You want to show
             <m>|a|-|b|\leq|a-b|</m> and <m>-(|a|-|b|)\leq|a-b|</m>.
           </p>
         </hint>
+
       </task>
     </problem>
 
@@ -873,8 +889,14 @@
         <p>
           Prove <xref ref="lemma_BoundedConvergent">Lemma</xref>. 
         </p>
+<p>
+
+</p>
       </statement>
       <hint>
+<p>
+
+</p>
         <p>
           We know that there exists <m>N</m> such that if
           <m>n>N</m>, then <m>\abs{a_n-a}\lt 1</m>.  Let
@@ -884,7 +906,9 @@
           that this is not a convergence proof so it is not safe to
           think of <m>N</m> as a large number.
         </p>
-          <aside> 
+          <aside>
+<title>Comment</title>
+ 
             <p>
               Actually, this is
               a dangerous habit to fall into even in convergence proofs.
@@ -1516,8 +1540,14 @@
           <p>
             Prove <m>s\leq t</m>. 
           </p>
+<p>
+
+</p>
         </statement>
         <hint>
+<p>
+
+</p>
           <p>
             Assume for contradiction, that <m>s>t</m> and use the
             definition of convergence with <m>\eps=\frac{s-t}{2}</m>
@@ -1635,8 +1665,14 @@
             Prove that if <m>L\lt 1</m>, then
             <m>\lim_{n\rightarrow\infty}s_n=0</m>.  
           </p>
+<p>
+
+</p>
         </statement>
         <hint> 
+<p>
+
+</p>
           <p>
             Choose <m>R</m> with <m>L\lt R\lt 1</m>.  By the
             previous problem, <m>\exists</m> <m>N</m> such that if

@@ -162,8 +162,14 @@
         Use the definition to show that
         <m>f_n\unif 0</m> on <m>[0,b]</m>. 
       </p>
+<p>
+
+</p>
     </statement>
         <hint>
+<p>
+
+</p>
     <p>
       <m>|x^n-0|=x^n\leq b^n</m>.
     </p>
@@ -287,8 +293,14 @@
           <idx><h>uniform convergence</h><h>integration and</h></idx>
           Prove <xref ref="th_UniformIntegralConvergence">Theorem</xref>. 
         </p>
+<p>
+
+</p>
       </statement>
-      <hint> 
+      <hint>
+<p>
+
+</p> 
         <p>
           For <m>\eps>0,</m> we need to make <m>|f_n(x)-f(x)|\lt \frac{\eps}{b-a},</m> for all <m>x\in[a,b]</m>.
         </p>
@@ -310,7 +322,7 @@
           <me>
             f_n(x)= \begin{cases}n\amp \text{ if } x\in\left(0,\frac{1}{n}\right)\\ 0\amp \text{ otherwise } \end{cases} 
           </me>.
-          <ol label="(a)">
+          <ol marker="a">
             <li>
               <p>
                 Show that <m>f_n\ptwise 0</m> on <m>[0,1],</m>
@@ -334,6 +346,8 @@
     </p>
 
 <aside>
+<title>Comment</title>
+
 <p>
           Notice that we must explicitly assume uniform convergence.
           This is because we have not <em>yet</em>
@@ -354,8 +368,14 @@
           <idx><h>power series</h><h>term by term integral of</h></idx>
           Prove <xref ref="cor_IntConvUni">Corollary</xref>. 
         </p>
+<p>
+
+</p>
       </statement>
-      <hint> 
+      <hint>
+<p>
+
+</p> 
         <p>
           Remember that
           <me>
@@ -393,8 +413,14 @@
         <p>
           Prove <xref ref="thm_UniformDerivativeConvergence">Theorem</xref>. 
         </p>
+<p>
+
+</p>
       </statement>
       <hint>
+<p>
+
+</p>
         <p>
           Let <m>a</m> be an arbitrary fixed point in <m>I</m> and let <m>x\in
           I</m>.  By the Fundamental Theorem of Calculus, we have
@@ -498,14 +524,16 @@
       Intuitively, this result makes sense.
       If the terms in a sequence are getting arbitrarily close to <m>s,</m>
       then they should be getting arbitrarily close to each other.
+ This is the basis of the proof.
+    </p>
 <aside>
+<title>Comment</title>
+
 <p>
       But the converse isn't nearly as clear.
       In fact, it isn't true in the rational numbers.
 </p>
       </aside>
- This is the basis of the proof.
-    </p>
 
     <problem>
       <idx><h>sequences</h><h>convergence</h></idx>
@@ -514,8 +542,14 @@
         <p>
           Prove <xref ref="thm_Converge-_Cauchy">Theorem</xref>. 
         </p>
+<p>
+
+</p>
       </statement>
       <hint>
+<p>
+
+</p>
         <p>
           <m>|s_m-s_n|=|s_m-s+s-s_n|\leq|s_m-s\mathopen|+|s-s_n|</m>.
         </p>
@@ -552,8 +586,14 @@
         <p>
           Prove <xref ref="lemma_Cauchy-_Bounded">Lemma</xref>. 
         </p>
+<p>
+
+</p>
       </statement>
-      <hint> 
+      <hint>
+<p>
+
+</p> 
         <p>
           This is similar to <xref ref="prob_BoundedConvergent">problem</xref> of <xref ref="Convergence">Chapter</xref>.
           There exists <m>N</m> such that if <m>m,n>N</m>then
@@ -627,8 +667,14 @@
         <p>
           Prove <xref ref="thm_ConvCauchyEquivNIP">Theorem</xref>. 
         </p>
+<p>
+
+</p>
       </statement>
-      <hint> 
+      <hint>
+<p>
+
+</p> 
         <p>
           If we start with two sequences <m>\left(x_n\right)</m>
           and <m>\left(y_n\right)</m>, satisfying all of the
@@ -719,8 +765,14 @@
         converges if and only
         if <m>\limit{n}{\infty}{\sum_{k=n+1}^\infty a_k}=0</m>.
       </p>
+<p>
+
+</p>
     </statement>
-    <hint> 
+    <hint>
+<p>
+
+</p> 
       <p>
         The hardest part of this problem is recognizing that
         it is really about the limit of a sequence as
@@ -761,8 +813,14 @@
         <p>
           Prove <xref ref="thm_ComparisonTest">Theorem</xref>. 
         </p>
+<p>
+
+</p>
       </statement>
-      <hint> 
+      <hint>
+<p>
+
+</p> 
         <p>
           Use the Cauchy criterion with the fact that <m>\abs{\sum_{k=n+1}^ma_k}\leq\sum_{k=n+1}^m\abs{a_k}</m>.
         </p>
@@ -1115,8 +1173,14 @@
       <p>
         Prove <xref ref="thm_PowerSeriesConvergeUniformly">Theorem</xref>. 
       </p>
+<p>
+
+</p>
     </statement>
-    <hint> 
+    <hint>
+<p>
+
+</p> 
       <p>
         We know that <m>\sum_{n=0}^\infty|a_nb^n|</m> converges.
         This should be all set for the Weierstrass-<m>M</m> test.
@@ -1161,8 +1225,14 @@
       <p>
         Show that <m>\sum_{n=1}^\infty nx^{n-1}</m> converges for <m>|x|\lt 1</m>. 
       </p>
+<p>
+
+</p>
     </statement>
-    <hint> 
+    <hint>
+<p>
+
+</p> 
       <p>
         We know
         that <m>\sum_{k=0}^nx^k=\frac{x^{n+1}-1}{x-1}</m>.
@@ -1188,8 +1258,14 @@
       <p>
         Prove <xref ref="thm_SeriesConv-_DerivConv">Theorem</xref>. 
       </p>
+<p>
+
+</p>
     </statement>
     <hint>
+<p>
+
+</p>
       <p>
         Let <m>b</m> be a number with <m>\abs{x}\lt b\lt r</m> and
         consider <m>\abs{a_nnx^{n-1}} =\abs{a_nb^n\cdot\frac{1}{b}\cdot
@@ -1272,8 +1348,14 @@
         Suppose the power series <m>\sum a_nx^n</m> has radius of convergence <m>r</m> and the series <m>\sum a_nr^n</m> converges absolutely.
         Then <m>\sum a_nx^n</m> converges uniformly on <m>[-r,r]</m>. 
       </p>
+<p>
+
+</p>
     </statement>
-    <hint> 
+    <hint>
+<p>
+
+</p> 
       <p>
         For <m>|x|\leq r</m>, <m>|a_nx^n|\leq |a_nr^n|</m>.
       </p>
@@ -1334,8 +1416,14 @@
       <p>
         Prove <xref ref="lemma_AbelsPartialSummationFormula">Lemma</xref>. 
       </p>
+<p>
+
+</p>
     </statement>
     <hint>
+<p>
+
+</p>
       <p>
         For <m>j>1</m>, <m>a_j=A_j-A_{j-1}</m>.
       </p>
@@ -1371,8 +1459,14 @@
       <p>
         Prove <xref ref="AbelsTheorem">Theorem</xref>. 
       </p>
+<p>
+
+</p>
     </statement>
-    <hint> 
+    <hint>
+<p>
+
+</p> 
       <p>
         Let <m>\epsilon>0</m>.
         Since <m>\sum_{n=0}^\infty a_nr^n</m> converges then by the Cauchy Criterion,
@@ -1411,8 +1505,14 @@
       <p>
         Prove <xref ref="cor_PowerSeriesConvUnif">Corollary</xref>. 
       </p>
+<p>
+
+</p>
     </statement>
-    <hint> 
+    <hint>
+<p>
+
+</p> 
       <p>
         Consider <m>\sum a_n\left(-x\right)^n</m>.
       </p>

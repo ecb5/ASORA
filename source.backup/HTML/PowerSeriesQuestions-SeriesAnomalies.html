@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:25-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Series Anomalies</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="PowerSeriesQuestions-TaylorsFormula.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="PowerSeriesQuestions.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="PowerSeriesQuestions-AddProb.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="PowerSeriesQuestions-TaylorsFormula.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="PowerSeriesQuestions.html" title="Up">Up</a><a class="next-button button toolbar-item" href="PowerSeriesQuestions-AddProb.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="active">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="PowerSeriesQuestions-SeriesAnomalies"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Series Anomalies</span>
+</h2>
+<p id="p-372">Up to this point, we have been somewhat frivolous in our approach to series. This approach mirrors eighteenth century mathematicians who ingeniously exploited calculus and series to provide mathematical and physical results which were virtually unobtainable before. Mathematicans were eager to push these techniques as far as they could to obtain their results and they often showed good intuition regarding what was mathematically acceptable and what was not. However, as the envelope was pushed, questions about the validity of the methods surfaced.</p>
+<p id="p-373">As an illustration consider the series expansion</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{1+x}=1-x+x^2-x^3+\cdots\text{.}
+\end{equation*}
+</div>
+<p id="p-374">If we substitute <span class="process-math">\(x=1\)</span> into this equation, we obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{2}=1-1+1-1+\cdots\text{.}
+\end{equation*}
+</div>
+<p id="p-375">If we group the terms as follows <span class="process-math">\((1-1)+(1-1)+\cdots\text{,}\)</span> the series would equal <span class="process-math">\(0\text{.}\)</span> A regrouping of <span class="process-math">\(1+(-1+1)+(-1+1)+\cdots\)</span> provides an answer of <span class="process-math">\(1\text{.}\)</span> This violation of the associative law of addition did not escape the mathematicians of the 1700's. In his 1760 paper <em class="emphasis">On Divergent Series</em> Euler  said:</p>
+<blockquote class="blockquote" id="blockquote-3"><p id="p-376">Notable enough, however are the controversies over the series <span class="process-math">\(1-1+1-1+etc\text{,}\)</span>  whose sum was given by Leibniz as <span class="process-math">\(\frac{1}{2}\text{,}\)</span> although others disagree . . . Understanding of this question is to be sought in the word “sum;” this idea, if thus conceived - namely, the sum of a series is said to be that quantity to which it is brought closer as more terms of a series are taken - has relevance only for the convergent series, and we should in general give up this idea of sum for divergent series. On the other hand, as series in analysis arise from the expansion of fractions or irrational quantities or even of transcendentals, it will, in turn, be permissible in calculation to substitute in place of such series that quantity out of whose development it is produced.</p></blockquote>
+<p id="p-377">Even with this formal approach to series, an interesting question arises. The series for the antiderivative of <span class="process-math">\(\frac{1}{1+x}\)</span> <em class="emphasis">does</em> converge for <span class="process-math">\(x=1\)</span> while this one does not. Specifically, taking the antiderivative of the above series, we obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\ln(1+x)=x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots\text{.}
+\end{equation*}
+</div>
+<p id="p-378">If we substitute <span class="process-math">\(x=1\)</span> into this series, we obtain <span class="process-math">\(\ln 2=1-\frac{1}{2}+\frac{1}{3}-\cdots\text{.}\)</span> It is not hard to see that such an alternating series converges. The following picture shows why. In this diagram, <span class="process-math">\(S_n\)</span> denotes the partial sum <span class="process-math">\(1-\frac{1}{2}+\frac{1}{3}-\cdots+\frac{(-1)^{n+1}}{n}\text{.}\)</span></p>
+<div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/AltHarmonic.png" class="contained"></div>
+<p id="p-379">From the diagram we can see <span class="process-math">\(S_2\leq S_4\leq S_6\leq\cdots\leq\cdots\leq S_5\leq S_3\leq S_1\)</span> and <span class="process-math">\(S_{2k+1}-S_{2k}=\frac{1}{2k+1}\text{.}\)</span> It seems that the sequence of partial sums will converge to whatever is in the “middle.” Our diagram indicates that it is ln <span class="process-math">\(2\)</span> in the middle but actually this is not obvious. Nonetheless it is interesting that one series converges for <span class="process-math">\(x=1\)</span> but the other does not.</p>
+<article class="problem example-like" id="problem-43"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-43"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-43"><article class="problem example-like"><p id="p-380"> Use the fact that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1-\frac{1}{2}+\frac{1}{3}-\cdots+\frac{(-1)^{2k+1}}{2k}\leq\ln 2\leq 1-\frac{1}{2}+\frac{1}{3}-\cdots+\frac{(-1)^{2k+2}}{2k+1}
+\end{equation*}
+</div>
+<p class="continuation">to determine how many terms of the series <span class="process-math">\(\sum_{n=1}^\infty\frac{(-1)^{n+1}}{n}\)</span> should be added together to approximate <span class="process-math">\(\ln 2\)</span> to within <span class="process-math">\(.0001\)</span> without actually computing what <span class="process-math">\(\ln 2\)</span> is.</p></article></div>
+<p id="p-381">There is an even more perplexing situation brought about by these examples. An infinite sum such as <span class="process-math">\(1-1+1-1+\cdots\)</span> appears to not satisfy the associative law for addition. While a convergent series such as <span class="process-math">\(1-\frac{1}{2}+\frac{1}{3}-\cdots\)</span> does satisfy the associative law, it does not satisfy the commutative law. In fact, it does not satisfy it rather spectacularly.</p>
+<p id="p-382">A generalization of the following result was stated and proved by Bernhard Riemann  in 1854.</p>
+<article class="theorem theorem-like" id="thm_rearrangements"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
+</h3>
+<p id="p-383">Let <span class="process-math">\(a\)</span> be any real number. There exists a rearrangement of the series <span class="process-math">\(1-\frac{1}{2}+\frac{1}{3}-\cdots\)</span> which converges to <span class="process-math">\(a\text{.}\)</span></p></article><p id="p-384">This theorem shows that a series is most decidedly <em class="emphasis">not</em> a great big sum. It follows that a power series is <em class="emphasis">not</em> a great big polynomial.</p>
+<p id="p-385">To set the stage, consider the <em class="emphasis">harmonic series</em> </p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=1}^\infty\frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\cdots\text{.}
+\end{equation*}
+</div>
+<p id="p-386">Even though the individual terms in this series converge to <span class="process-math">\(0\text{,}\)</span> the series still diverges (to infinity) as evidenced by the inequality</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-24">
+\begin{align*}
+\left(1+\frac{1}{2}\right)\amp +\left(\frac{1}{3}+\frac{1}{4}\right)+\left(\frac{1}{5}+\frac{1}{6}+ \frac{1}{7}+\frac{1}{8}\right)+\left(\frac{1}{9}+\cdots+\frac{1}{16}\right)+\cdots\\
+\amp &gt;\frac{1}{2}+\left(\frac{1}{4}+\frac{1}{4}\right)+\left(\frac{1}{8}+ \frac{1}{8}+\frac{1}{8}+\frac{1}{8}\right)+\left(\frac{1}{16}+\cdots+\frac{1}{16}\right)+\cdots\\
+\amp =\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\cdots\\
+\amp =   \infty\text{.}
+\end{align*}
+</div>
+<p id="p-387">Armed with this fact, we can see why <a href="" class="xref" data-knowl="./knowl/thm_rearrangements.html" title="Theorem 5.2.2">Theorem 5.2.2</a> is true. First note that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_rearrangements.html">
+\begin{equation*}
+-\frac{1}{2}-\frac{1}{4}-\frac{1}{6}-\cdots=-\frac{1}{2}(1+\frac{1}{2}+ \frac{1}{3}+\cdots)=-\infty
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_rearrangements.html">
+\begin{equation*}
+1+\frac{1}{3}+\frac{1}{5}+\cdots\geq\frac{1}{2}+\frac{1}{4}+\frac{1}{6}+\ldots= \infty\text{.}
+\end{equation*}
+</div>
+<p id="p-388">This says that if we add enough terms of <span class="process-math">\(-\frac{1}{2}-\frac{1}{4}-\frac{1}{6}-\cdots\)</span> we can make such a sum as small as we wish and if we add enough terms of <span class="process-math">\(1+\frac{1}{3}+\frac{1}{5}+\cdots\)</span> we can make such a sum as large as we wish. This provides us with the general outline of the proof. The trick is to add just enough positive terms until the sum is just greater than <span class="process-math">\(a\text{.}\)</span> Then we start to add on negative terms until the sum is just less than <span class="process-math">\(a\text{.}\)</span> Picking up where we left off with the positive terms, we add on just enough positive terms until we are just above <span class="process-math">\(a\)</span> again. We then add on negative terms until we are below <span class="process-math">\(a\text{.}\)</span> In essence, we are bouncing back and forth around <span class="process-math">\(a\text{.}\)</span> If we do this carefully, then we can get this rearrangement to converge to <span class="process-math">\(a\text{.}\)</span> The notation in the proof below gets a bit hairy, but keep this general idea in mind as you read through it.</p>
+<p id="p-389">Let <span class="process-math">\(O_1\)</span> be the first odd integer such that <span class="process-math">\(1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}&gt;a\text{.}\)</span> Now choose <span class="process-math">\(E_1\)</span> to be the first even integer such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+-\frac{1}{2}-\frac{1}{4}-\frac{1}{6}-\cdots-\frac{1}{E_1} \lt a-\left(1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}\right)\text{.}
+\end{equation*}
+</div>
+<p id="p-390">Thus</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4} - \frac{1}{6}-\cdots-\frac{1}{E_1}\lt a\text{.}
+\end{equation*}
+</div>
+<p id="p-391">Notice that we still have <span class="process-math">\(\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots=\infty\text{.}\)</span> With this in mind, choose <span class="process-math">\(O_2\)</span> to be the first odd integer with</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots\frac{1}{O_2}&gt;a-\left(1+\frac{1}{3}+ \frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}-\frac{1}{6}-\cdots- \frac{1}{E_1}\right)\text{.}
+\end{equation*}
+</div>
+<p id="p-392">Thus we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a\lt 1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}-\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}\text{.}
+\end{equation*}
+</div>
+<p id="p-393">Furthermore, since</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}-\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2-2}\lt a
+\end{equation*}
+</div>
+<p class="continuation">we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-25">
+\begin{align*}
+\amp \left|1+\frac{1}{3}+\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}-\cdots\right.\\
+\amp \left.-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}-a\right|\lt \frac{1}{O_2}\text{.}
+\end{align*}
+</div>
+<p id="p-394">In a similar fashion choose <span class="process-math">\(E_2\)</span> to be the first even integer such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-26">
+\begin{align*}
+1+\frac{1}{3}+\frac{1}{5}+\cdots\amp +\frac{1}{O_1}-\frac{1}{2}- \frac{1}{4}-\frac{1}{6}-\amp \cdots\\
+\amp -\frac{1}{E_1}+ \frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots\\
+\amp +\frac{1}{O_2}-\frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots\\
+\amp -\frac{1}{E_2}\lt a\text{.}
+\end{align*}
+</div>
+<p id="p-395">Since</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-27">
+\begin{align*}
+1+\frac{1}{3}+\frac{1}{5}\amp +\cdots+\frac{1}{O_1}-\frac{1}{2}- \frac{1}{4}-\frac{1}{6}-\cdots-\frac{1}{E_1}\\
+\amp +\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+\frac{1}{O_2}- \frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots-\frac{1}{E_2-2}&gt;a
+\end{align*}
+</div>
+<p class="continuation">then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-28">
+\begin{align*}
+\left|1+\frac{1}{3}\right.+\frac{1}{5}\amp +\cdots+\frac{1}{O_1}-\frac{1}{2}- \frac{1}{4}-\frac{1}{6}-\cdots-\frac{1}{E_1}\\
+\amp +\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+\frac{1}{O_2}- \frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots-\left.\frac{1}{E_2}-a\right|\\
+\amp \lt \frac{1}{E_2}\text{.}
+\end{align*}
+</div>
+<p id="p-396">Again choose <span class="process-math">\(O_3\)</span> to be the first odd integer such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-29">
+\begin{align*}
+a\lt 1+\frac{1}{3}\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}-\cdots\\
+\amp -\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}+ \cdots\\
+\amp -\frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots-\frac{1}{E_2}+\frac{1}{O_2+2}+ \frac{1}{O_2+4}+\cdots+\frac{1}{O_3}
+\end{align*}
+</div>
+<p class="continuation">and notice that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-30">
+\begin{align*}
+\left|1+\frac{1}{3}\right.\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}\\
+\amp -\frac{1}{6}-\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}+\cdots\\
+\amp -\frac{1}{E_1+2}-\frac{1}{E_1+4}-\cdots-\frac{1}{E_2}+\frac{1}{O_2+2}+ \frac{1}{O_2+4}+\cdots+\left.\frac{1}{O_3}-a\right|\\
+\amp \lt \frac{1}{O_3}\text{.}
+\end{align*}
+</div>
+<p id="p-397">Continue defining <span class="process-math">\(O_k\)</span>and <span class="process-math">\(E_k\)</span> in this fashion. Since <span class="process-math">\(\lim_{k\rightarrow\infty}\frac{1}{O_k}=\,\lim_{k\rightarrow\infty} \frac{1}{E_k}=0\text{,}\)</span> it is evident that the partial sums</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-31">
+\begin{align*}
+1+\frac{1}{3}\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}\\
+\amp -\frac{1}{6}-\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots\\
+\amp + \frac{1}{O_2}+\cdots -\frac{1}{E_{k-2}+2}-\frac{1}{E_{k-2}+4}-\cdots\\
+\amp -\frac{1}{E_{k-1}}+  \frac{1}{O_{k-1}+2}+\frac{1}{O_{k-1}+4}+\cdots+\frac{1}{O_k}
+\end{align*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-32">
+\begin{align*}
+1+\frac{1}{3}\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}\\
+\amp -\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}+\cdots\\
+\amp -\frac{1}{E_{k-2}+2}-\frac{1}{E_{k-2}+4}-\cdots-\frac{1}{E_{k-1}}
+\end{align*}
+</div>
+<p class="continuation">must converge to <span class="process-math">\(a\text{.}\)</span> Furthermore, it is evident that every partial sum of the rearrangement</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-33">
+\begin{align*}
+1+\frac{1}{3}\amp +\frac{1}{5}+\cdots+\frac{1}{O_1}-\frac{1}{2}-\frac{1}{4}- \frac{1}{6}\\
+\amp -\cdots-\frac{1}{E_1}+\frac{1}{O_1+2}+\frac{1}{O_1+4}+\cdots+ \frac{1}{O_2}+\cdots
+\end{align*}
+</div>
+<p class="continuation">is trapped between two such extreme partial sums. This forces the entire rearranged series to converge to <span class="process-math">\(a\text{.}\)</span></p>
+<p id="p-398">The next two problems are similar to the above, but notationally are easier since we don't need to worry about converging to an actual number. We only need to make the rearrangement grow (or shrink in the case of <a href="" class="xref" data-knowl="./knowl/prob_RearrangeDivToNegInf.html" title="Problem 5.2.4">problem 5.2.4</a>) without bound.</p>
+<article class="problem example-like" id="problem-44"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-44"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-44"><article class="problem example-like"><p id="p-399">Show that there is a rearrangement of <span class="process-math">\(1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots\)</span> which diverges to <span class="process-math">\(\infty\text{.}\)</span></p></article></div>
+<article class="problem example-like" id="prob_RearrangeDivToNegInf"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_RearrangeDivToNegInf"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_RearrangeDivToNegInf"><article class="problem example-like"><p id="p-400">Show that there is a rearrangement of <span class="process-math">\(1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots\)</span> which diverges to <span class="process-math">\(-\infty\text{.}\)</span></p></article></div>
+<p id="p-401">It is fun to know that we can rearrange some series to make them add up to anything you like but there is a more fundamental idea at play here. That the negative terms of the alternating Harmonic Series <em class="emphasis">diverge</em> to negative infinity and the positive terms <em class="emphasis">diverge</em> to positive infinity make the <em class="emphasis">convergence</em> of the alternating series very special.</p>
+<p id="p-402">Consider, first we add <span class="process-math">\(1\text{.}\)</span> This is one of the positive terms so our sum is starting to increase without bound. Next we add <span class="process-math">\(-1/2\)</span> which is one of the negative terms so our sum has turned around and is now starting to decrease without bound. Then another positive term is added: increasing without bound. Then another negative term: decreasing. And so on. The convergence of the alternating Harmonic Series is the result of a delicate balance between a tendency to run off to positive infinity and back to negative infinity. When viewed in this light it is not really too surprising that rearranging the terms can destroy this delicate balance.</p>
+<p id="p-403">Naturally, the alternating Harmonic Series is not the only such series. Any such series is said to converge “conditionally” — the condition being the specific arrangement of the terms.</p>
+<p id="p-404">To stir the pot a bit more, some series do satisfy the commutative property. More specifically, one can show that any rearrangement of the series <span class="process-math">\(1-\frac{1}{2^2}+\frac{1}{3^2}-\cdots\)</span> must converge to the same value as the original series (which happens to be <span class="process-math">\(\int_{x=0}^1\frac{\text{ ln } (1+x)}{x}dx\approx.8224670334\)</span>). Why does one series behave so nicely whereas the other does not?</p>
+<p id="p-405">Issues such as these and, more generally, the validity of using the infinitely small and infinitely large certainly existed in the 1700's, but they were overshadowed by the utility of the calculus. Indeed, foundational questions raised by the above examples, while certainly interesting and of importance, did not significantly deter the exploitation of calculus in studying physical phenomena. However, the envelope eventually was pushed to the point that not even the most practically oriented mathematician could avoid the foundational issues.</p></section></div></main>
+</div>
+</body>
+</html>

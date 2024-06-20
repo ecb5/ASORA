@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:35-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Supremum and the Extreme Value Theorem</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="IVTandEVT-BWT.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="IVTandEVT.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="IVTandEVT-AddProb.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="IVTandEVT-BWT.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="IVTandEVT.html" title="Up">Up</a><a class="next-button button toolbar-item" href="IVTandEVT-AddProb.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="active">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="IVTandEVT-SupremumAndEVT"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">10.4</span> <span class="title">The Supremum and the Extreme Value Theorem</span>
+</h2>
+<p id="p-1046"><a href="" class="xref" data-knowl="./knowl/thm_CompactBounded.html" title="Theorem 10.3.1">Theorem 10.3.1</a> says that a continuous function on a closed, bounded interval must be bounded. Boundedness, in and of itself, does not ensure the existence of a maximum or minimum. We must also have a closed, bounded interval. To illustrate this, consider the continuous function <span class="process-math">\(f(x)=\)</span>tan<span class="process-math">\(^{-1}x\)</span> defined on the (unbounded) interval <span class="process-math">\(\left(-\infty,\infty\right)\text{.}\)</span></p>
+<div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="images/Ch6fig8.png" class="contained"></div>
+<p id="p-1047">This function is bounded between <span class="process-math">\(-\frac{\pi}{2}\)</span>and <span class="process-math">\(\frac{\pi}{2}\text{,}\)</span> but it does not attain a maximum or minimum as the lines <span class="process-math">\(y=\pm\frac{\pi}{2}\)</span> are horizontal asymptotes. Notice that if we restricted the domain to a closed, bounded interval then it would attain its extreme values on that interval (as guaranteed by the <dfn class="terminology">EVT</dfn>).</p>
+<p id="p-1048">To find a maximum we need to find the smallest possible upper bound for the range of the function. This prompts the following definitions.</p>
+<article class="definition definition-like" id="def_UpperBound"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.4.1</span><span class="period">.</span>
+</h3>
+<p id="p-1049"> Let <span class="process-math">\(S\subseteq\mathbb{R}\)</span> and let <span class="process-math">\(b\)</span> be a real number. We say that <span class="process-math">\(b\)</span> is an upper bound of <span class="process-math">\(S\)</span> provided <span class="process-math">\(b\geq x\)</span> for all <span class="process-math">\(x\in S\text{.}\)</span></p></article><p id="p-1050">For example, if <span class="process-math">\(S=(0,1)\text{,}\)</span> then any <span class="process-math">\(b\)</span> with <span class="process-math">\(b\geq 1\)</span> would be an upper bound of <span class="process-math">\(S\text{.}\)</span> Furthermore, the fact that <span class="process-math">\(b\)</span> is not an element of the set <span class="process-math">\(S\)</span> is immaterial. Indeed, if <span class="process-math">\(T=[\,0,1]\text{,}\)</span> then any <span class="process-math">\(b\)</span> with <span class="process-math">\(b\geq 1\)</span> would still be an upper bound of <span class="process-math">\(T\text{.}\)</span> Notice that, in general, if a set has an upper bound, then it has infinitely many since any number larger than that upper bound would also be an upper bound. However, there is something special about the smallest upper bound.</p>
+<article class="definition definition-like" id="def_LeastUpperBound"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Least Upper Bound Property (<dfn class="terminology">LUBP</dfn>).</span>
+</h3>
+<p id="p-1051">Let <span class="process-math">\(S\subseteq\mathbb{R}\)</span> and let <span class="process-math">\(b\)</span> be a real number.  We say that <span class="process-math">\(b\)</span> is the <em class="emphasis">least upper bound</em> of <span class="process-math">\(S\)</span> provided</p>
+<ol id="p-1052" class="lower-alpha">
+<li id="li-71"><p id="p-1053"><span class="process-math">\(b\geq x\)</span> for all <span class="process-math">\(x\in S\text{.}\)</span> (<span class="process-math">\(b\)</span> is an upper bound of <span class="process-math">\(S\)</span>)</p></li>
+<li id="li-72"><p id="p-1054">If <span class="process-math">\(c\geq x\)</span> for all <span class="process-math">\(x\in S\text{,}\)</span> then <span class="process-math">\(c\geq b\text{.}\)</span> (Any upper bound of <span class="process-math">\(S\)</span> is at least as big as <span class="process-math">\(b\text{.}\)</span>)</p></li>
+</ol>
+<p id="p-1055">In this case, we also say that <span class="process-math">\(b\)</span> <em class="emphasis">is the supremum</em> of <span class="process-math">\(S\)</span> and we write</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+b=\sup\left(S\right)\text{.}
+\end{equation*}
+</div></article><p id="p-1056">Notice that the definition really says that <span class="process-math">\(b\)</span> is the smallest upper bound of <span class="process-math">\(S\text{.}\)</span> Also notice that the second condition can be replaced by its contrapositive so we can say that <span class="process-math">\(b=\sup S\)</span> if and only if</p>
+<ol class="lower-alpha">
+<li id="li-73">
+<span class="heading"><span class="title">(i).</span></span><p id="p-1057"><span class="process-math">\(\displaystyle b\,\geq\,x\text{ for all } x\,\in S\)</span></p>
+</li>
+<li id="li-74">
+<span class="heading"><span class="title">(ii).</span></span><p id="p-1058">If <span class="process-math">\(c\,\lt \,b\)</span> then there exists <span class="process-math">\(x\,\in S\)</span> such that <span class="process-math">\(c\,\lt \,x\text{.}\)</span></p>
+</li>
+</ol>
+<p id="p-1059">The second condition says that if a number <span class="process-math">\(c\)</span> is less than <span class="process-math">\(b\text{,}\)</span> then it can't be an upper bound, so that <span class="process-math">\(b\)</span> really is the smallest upper bound.</p>
+<p id="p-1060">Also notice that the supremum of the set may or may not be in the set itself. This is illustrated by the examples above as in both cases, <span class="process-math">\(1=\sup(0,1)\)</span> and <span class="process-math">\(1=\sup [0,1]\text{.}\)</span> Obviously, a set which is not bounded above such as <span class="process-math">\(\mathbb{N}=\{1,\,2,\,3,\,\ldots\}\)</span> cannot have a supremum. However, for non-empty sets which are bounded above, we have the following.</p>
+<article class="theorem theorem-like" id="thm_LUB"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Least Upper Bound Property (<dfn class="terminology">LUBP</dfn>).</span>
+</h3>
+<p id="p-1061">Let <span class="process-math">\(S\)</span> be a non-empty subset of <span class="process-math">\(\mathbb{R}\)</span> which is bounded above. Then <span class="process-math">\(S\)</span> has a supremum.</p></article><article class="hiddenproof" id="proof-25"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-25"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-25"><article class="hiddenproof"><p id="p-1062">Since <span class="process-math">\(S\neq\emptyset\text{,}\)</span> then there exists <span class="process-math">\(s\in S\text{.}\)</span> Since <span class="process-math">\(S\)</span> is bounded above then it has an upper bound, say <span class="process-math">\(b\text{.}\)</span> We will set ourselves up to use the Nested Interval Property. With this in mind, let <span class="process-math">\(x_1=s\)</span> and <span class="process-math">\(y_1=b\)</span> and notice that <span class="process-math">\(\exists\)</span> <span class="process-math">\(x\in S\)</span> such that <span class="process-math">\(x\geq x_1\)</span> (namely, <span class="process-math">\(x_1\)</span> itself) and <span class="process-math">\(\forall\,x\in S\text{,}\)</span> <span class="process-math">\(y_1\geq x\text{.}\)</span> You probably guessed what's coming next: let <span class="process-math">\(m_1\)</span>be the midpoint of <span class="process-math">\([\,x_1,y_1]\text{.}\)</span> Notice that either <span class="process-math">\(m_1\geq x,\,\forall\,x\in S\)</span> or <span class="process-math">\(\exists\)</span> <span class="process-math">\(x\in S\)</span> such that <span class="process-math">\(x\geq m_1\text{.}\)</span> In the former case, we relabel, letting <span class="process-math">\(x_2=x_1\)</span> and <span class="process-math">\(y_2=m_1\text{.}\)</span> In the latter case, we let <span class="process-math">\(x_2=m_1\)</span> and <span class="process-math">\(y_2=y_1\text{.}\)</span> In either case, we end up with <span class="process-math">\(x_1\leq x_2\leq y_2\leq y_1\text{,}\)</span> <span class="process-math">\(y_2-x_2=\frac{1}{2}\left(y_1-x_1\right)\text{,}\)</span> and <span class="process-math">\(\exists\)</span> <span class="process-math">\(x\in S\)</span> such that <span class="process-math">\(x\geq x_2\)</span> and <span class="process-math">\(\forall\,x\in S\text{,}\)</span> <span class="process-math">\(y_2\geq x\text{.}\)</span> If we continue this process, we end up with two sequences, <span class="process-math">\(\left(x_n\right)\)</span>and <span class="process-math">\(\left(y_n\right)\text{,}\)</span> satisfying the following conditions:</p>
+<ol class="decimal">
+<li id="li-75"><p id="p-1063"><span class="process-math">\(\displaystyle x_1\leq x_2\leq x_3\leq\ldots\)</span></p></li>
+<li id="li-76"><p id="p-1064"><span class="process-math">\(\displaystyle y_1\geq y_2\geq y_3\geq\ldots\)</span></p></li>
+<li id="li-77"><p id="p-1065"><span class="process-math">\(\forall\)</span> <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(x_n\leq y_n\)</span></p></li>
+<li id="li-78"><p id="p-1066"><span class="process-math">\(\displaystyle \lim_{n\rightarrow\infty}\left(y_n-x_n\right)=\lim_{n\rightarrow\infty} \frac{1}{2^{n-1}}\left(y_1-x_1\right)=0\)</span></p></li>
+<li id="li-79"><p id="p-1067"><span class="process-math">\(\forall\)</span> <span class="process-math">\(n,\exists\)</span> <span class="process-math">\(x\in S\)</span> such that <span class="process-math">\(x\geq x_n\)</span> and <span class="process-math">\(\forall\,x\in S\text{,}\)</span> <span class="process-math">\(y_n\geq x\text{,}\)</span></p></li>
+</ol>
+<p id="p-1068">By properties 1-5 and the NIP there exists <span class="process-math">\(c\)</span> such that <span class="process-math">\(x_n\leq c\leq y_n,\,\forall\,n\text{.}\)</span> We will leave it to you to use property 5 to show that <span class="process-math">\(c=\sup S\text{.}\)</span></p></article></div>
+<article class="problem example-like" id="problem-149"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-149"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.4.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-149"><article class="problem example-like"><p id="p-1069"> Complete the above ideas to provide a formal proof of <a href="" class="xref" data-knowl="./knowl/thm_LUB.html" title="Theorem 10.4.3: The Least Upper Bound Property (LUBP)">Theorem 10.4.3</a>.</p></article></div>
+<p id="p-1070">Notice that we really used the fact that <span class="process-math">\(S\)</span> was non-empty and bounded above in the proof of <a href="" class="xref" data-knowl="./knowl/thm_LUB.html" title="Theorem 10.4.3: The Least Upper Bound Property (LUBP)">Theorem 10.4.3</a>. This makes sense, since a set which is not bounded above cannot possibly have a least upper bound. In fact, any real number is an upper bound of the empty set so that the empty set would not have a least upper bound.</p>
+<p id="p-1071">The following corollary to <a href="" class="xref" data-knowl="./knowl/thm_LUB.html" title="Theorem 10.4.3: The Least Upper Bound Property (LUBP)">Theorem 10.4.3</a> can be very useful.</p>
+<article class="corollary theorem-like" id="cor_IncBoundedConverge"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">10.4.5</span><span class="period">.</span>
+</h3>
+<p id="p-1072">Let <span class="process-math">\((x_n)\)</span> be a bounded, increasing sequence of real numbers. That is, <span class="process-math">\(x_1\leq x_2\leq x_3\leq\cdots\text{.}\)</span> Then <span class="process-math">\((x_n)\)</span> converges to some real number <span class="process-math">\(c\text{.}\)</span></p></article><article class="problem example-like" id="problem-150"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-150"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.4.6</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-150"><article class="problem example-like"><p id="p-1073"> Prove <a href="" class="xref" data-knowl="./knowl/cor_IncBoundedConverge.html" title="Corollary 10.4.5">Corollary 10.4.5</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-33" id="hint-33"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-33"><div class="hint solution-like"><p id="p-1074">Let <span class="process-math">\(c=\sup\{x_n|\,n=1,2,3,\ldots\}\text{.}\)</span> To show that <span class="process-math">\(\limit{n}{\infty}{x_n}=c\text{,}\)</span> let <span class="process-math">\(\epsilon&gt;0.\)</span>Note that <span class="process-math">\(c-\epsilon\)</span> is not an upper bound. You take it from here!</p></div></div>
+</div></article></div>
+<article class="problem example-like" id="problem-151"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-151"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.4.7</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-151"><article class="problem example-like"><p id="p-1075"> Consider the following curious expression</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_IncBoundedConverge.html ./knowl/cor_IncBoundedConverge.html">
+\begin{equation*}
+\sqrt{2+\sqrt{2+\sqrt{2+\sqrt{...}}}}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We will use <a href="" class="xref" data-knowl="./knowl/cor_IncBoundedConverge.html" title="Corollary 10.4.5">Corollary 10.4.5</a> to show that this actually converges to some real number. After we know it converges we can actually compute what it is. Of course to do so, we need to define things a bit more precisely. With this in mind consider the following sequence <span class="process-math">\(\left(x_n\right)\)</span> defined as follows:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_IncBoundedConverge.html ./knowl/cor_IncBoundedConverge.html">
+\begin{equation*}
+x_1=\sqrt{2}
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/cor_IncBoundedConverge.html ./knowl/cor_IncBoundedConverge.html">
+\begin{equation*}
+x_{n+1}=\sqrt{2+x_n}\text{.}
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="li-80"><p id="p-1076">Use induction to show that <span class="process-math">\(x_n\lt 2\)</span> for <span class="process-math">\(n=1,\,2,\,3,\,\ldots\text{.}\)</span></p></li>
+<li id="li-81"><p id="p-1077">Use the result from part (a) to show that <span class="process-math">\(x_n\lt x_{n+1}\)</span> for <span class="process-math">\(n=1,\,2,\,3,\,\ldots\)</span> .</p></li>
+<li id="li-82"><p id="p-1078">From <a href="" class="xref" data-knowl="./knowl/cor_IncBoundedConverge.html" title="Corollary 10.4.5">Corollary 10.4.5</a>, we have that <span class="process-math">\(\left(x_n\right)\)</span> must converge to some number <span class="process-math">\(c\text{.}\)</span> Use the fact that <span class="process-math">\(\left(x_{n+1}\right)\)</span> must converge to <span class="process-math">\(c\)</span> as well to compute what <span class="process-math">\(c\)</span> must be.</p></li>
+</ol></article></div>
+<p id="p-1079">We now have all the tools we need to tackle the Extreme Value Theorem.</p>
+<article class="theorem theorem-like" id="thm_EVT"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.4.8</span><span class="period">.</span>
+</h3>
+<p id="p-1080"><em class="alert">Extreme Value Theorem (<dfn class="terminology">EVT</dfn>)</em></p>
+<p id="p-1081"> Suppose <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([\,a,b]\text{.}\)</span> Then there exists <span class="process-math">\(c,d\in[\,a,b]\)</span> such that <span class="process-math">\(f(d)\leq f(x)\leq f(c)\text{,}\)</span> for all <span class="process-math">\(x\in[\,a,b]\text{.}\)</span></p></article><article class="hiddenproof" id="proof-26"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-26"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-26"><article class="hiddenproof"><p id="p-1082">We will first show that <span class="process-math">\(f\)</span> attains its maximum. To this end, recall that <a href="" class="xref" data-knowl="./knowl/thm_CompactBounded.html" title="Theorem 10.3.1">Theorem 10.3.1</a> tells us that <span class="process-math">\(f[\,a,b]=\{f(x)|\,x\in[\,a,b]\}\)</span> is a bounded set. By the LUBP, <span class="process-math">\(f[\,a,b]\)</span> must have a least upper bound which we will label <span class="process-math">\(s\text{,}\)</span> so that <span class="process-math">\(s=\sup f[\,a,b]\text{.}\)</span> This says that <span class="process-math">\(s\geq f(x)\text{,}\)</span>for all <span class="process-math">\(x\in[\,a,b]\text{.}\)</span> All we need to do now is find a <span class="process-math">\(c\in[\,a,b]\)</span> with <span class="process-math">\(f(c)=s\text{.}\)</span> With this in mind, notice that since <span class="process-math">\(s=\sup f[\,a,b]\text{,}\)</span> then for any positive integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(s-\frac{1}{n}\)</span> is not an upper bound of <span class="process-math">\(f[\,a,b]\text{.}\)</span> Thus there exists <span class="process-math">\(x_n\in[\,a,b]\)</span> with<span class="process-math">\(\,s-\frac{1}{n}\lt f(x_n)\leq s\text{.}\)</span> Now, by the Bolzano-Weierstrass Theorem, <span class="process-math">\(\left(x_n\right)\)</span> has a convergent subsequence<span class="process-math">\(\,\left(x_{n_k}\right)\)</span> converging to some <span class="process-math">\(c\in[\,a,b]\text{.}\)</span> Using the continuity of <span class="process-math">\(f\)</span> at <span class="process-math">\(c\text{,}\)</span> you should be able to show that <span class="process-math">\(f(c)=s\text{.}\)</span> To find the minimum of <span class="process-math">\(f\text{,}\)</span> find the maximum of <span class="process-math">\(-f\text{.}\)</span></p></article></div>
+<article class="problem example-like" id="problem-152"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-152"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.4.9</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-152"><article class="problem example-like"><p id="p-1083"> Formalize the above ideas into a proof of <a href="" class="xref" data-knowl="./knowl/thm_EVT.html" title="Theorem 10.4.8">Theorem 10.4.8</a>.</p></article></div>
+<p id="p-1084">Notice that we used the NIP to prove both the Bolzano-Weierstrass Theorem and the LUBP. This is really unavoidable, as it turns out that all of those statements are equivalent in the sense that any one of them can be taken as the completeness axiom for the real number system and the others proved as theorems. This is not uncommon in mathematics, as people tend to gravitate toward ideas that suit the particular problem they are working on. In this case, people realized at some point that they needed some sort of completeness property for the real number system to prove various theorems. Each individual's formulation of completeness fit in with his understanding of the problem at hand. Only in hindsight do we see that they were really talking about the same concept: the completeness of the real number system. In point of fact, most modern textbooks use the LUBP as the axiom of completeness and prove all other formulations as theorems. We will finish this section by showing that either the Bolzano-Weierstrass Theorem or the LUBP can be used to prove the NIP. This says that they are all equivalent and that any one of them could be taken as the completeness axiom.</p>
+<article class="problem example-like" id="problem-153"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-153"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.4.10</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-153"><article class="problem example-like"><p id="p-1085"> Use the Bolzano-Weierstrass Theorem to prove the NIP. That is, assume that the Bolzano-Weierstrass Theorem holds and suppose we have two sequences of real numbers, <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\text{,}\)</span> satisfying:</p>
+<ol class="decimal">
+<li id="li-83"><p id="p-1086"><span class="process-math">\(\displaystyle x_1\le x_2 \le x_3 \le \ldots\)</span></p></li>
+<li id="li-84"><p id="p-1087"><span class="process-math">\(\displaystyle y_1\ge y_2 \ge y_3 \ge \ldots\)</span></p></li>
+<li id="li-85"><p id="p-1088"><span class="process-math">\(\displaystyle \forall\ n,\ x_n\le y_n\)</span></p></li>
+<li id="li-86"><p id="p-1089"><span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\left(y_n-x_n\right) = 0\text{.}\)</span></p></li>
+</ol>
+<p id="p-1090">Prove that there is a real number <span class="process-math">\(c\)</span> such that <span class="process-math">\(x_n\le c\le y_n\text{,}\)</span> for all <span class="process-math">\(n\text{.}\)</span></p></article></div>
+<p id="p-1091">Since the Bolzano-Weierstrass Theorem and the Nested Interval Property are equivalent, it follows that the Bolzano-Weierstrass Theorem will not work for the rational number system.</p>
+<article class="problem example-like" id="problem-154"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-154"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.4.11</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-154"><article class="problem example-like"><p id="p-1092"> Find a bounded sequence of rational numbers such that no subsequence of it converges to a rational number.</p></article></div>
+<article class="problem example-like" id="problem-155"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-155"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.4.12</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-155"><article class="problem example-like"><p id="p-1093"> Use the Least Upper Bound Property to prove the Nested Interval Property. That is, assume that every non-empty subset of the real numbers which is bounded above has a least upper bound; and suppose that we have two sequences of real numbers <span class="process-math">\(\left(x_n\right)\)</span> and <span class="process-math">\(\left(y_n\right)\text{,}\)</span> satisfying:</p>
+<ol class="decimal">
+<li id="li-87"><p id="p-1094"><span class="process-math">\(\displaystyle x_1\le x_2 \le x_3 \le \ldots\)</span></p></li>
+<li id="li-88"><p id="p-1095"><span class="process-math">\(\displaystyle y_1\ge y_2 \ge y_3 \ge \ldots\)</span></p></li>
+<li id="li-89"><p id="p-1096"><span class="process-math">\(\displaystyle \forall\ n, x_n\le y_n\)</span></p></li>
+<li id="li-90"><p id="p-1097"><span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\left(y_n-x_n\right) = 0\text{.}\)</span></p></li>
+</ol>
+<p id="p-1098">Prove that there exists a real number <span class="process-math">\(c\)</span> such that <span class="process-math">\(x_n\le c\le y_n\text{,}\)</span> for all n. (Again, the <span class="process-math">\(c\)</span> will, of necessity, be unique, but don't worry about that.)</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-34" id="hint-34"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-34"><div class="hint solution-like"><p id="p-1099"><a href="" class="xref" data-knowl="./knowl/cor_IncBoundedConverge.html" title="Corollary 10.4.5">Corollary 10.4.5</a> might work well here.</p></div></div>
+</div></article></div>
+<article class="problem example-like" id="problem-156"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-156"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.4.13</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-156"><article class="problem example-like"><p id="p-1100"> Since the LUBP is equivalent to the NIP it does not hold for the rational number system. Demonstrate this by finding a non-empty set of rational numbers which is bounded above, but whose supremum is an irrational number.</p></article></div>
+<p id="p-1101">We have the machinery in place to clean up a matter that was introduced in <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a>. If you recall (or look back) we introduced the Archimedean Property of the real number system. This property says that given any two positive real numbers <span class="process-math">\(a, b\text{,}\)</span> there exists a positive integer <span class="process-math">\(n\)</span> with <span class="process-math">\(na&gt;b\text{.}\)</span> As we mentioned in <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a>, this was taken to be intuitively obvious. The analogy we used there was to emptying an ocean <span class="process-math">\(b\)</span> with a teaspoon <span class="process-math">\(a\)</span> provided we are willing to use it enough times <span class="process-math">\(n\text{.}\)</span> The completeness of the real number system allows us to prove it as a formal theorem.</p>
+<article class="theorem theorem-like" id="thm_ArchmedeanProperty"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.4.14</span><span class="period">.</span>
+</h3>
+<p id="p-1102"><em class="alert">Archimedean Property of <span class="process-math">\(\RR\)</span></em></p>
+<p id="p-1103">Given any positive real numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> there exists a positive integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(na&gt;b\text{.}\)</span></p></article><article class="problem example-like" id="problem-157"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-157"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.4.15</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-157"><article class="problem example-like"><p id="p-1104">Prove <a href="" class="xref" data-knowl="./knowl/thm_ArchmedeanProperty.html" title="Theorem 10.4.14">Theorem 10.4.14</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-35" id="hint-35"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-35"><div class="hint solution-like"><p id="p-1105">Assume that there are positive real numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> such that <span class="process-math">\(na\le b\)</span> <span class="process-math">\(\forall n\in \NN\text{.}\)</span> Then <span class="process-math">\(\NN\)</span> would be bounded above by <span class="process-math">\(b/a\text{.}\)</span> Let <span class="process-math">\(s=\sup(\NN)\)</span> and consider <span class="process-math">\(s-1\text{.}\)</span></p></div></div>
+</div></article></div>
+<p id="p-1106">Given what we've been doing, one might ask if the Archimedean Property is equivalent to the LUBP (and thus could be taken as an axiom). The answer lies in the following problem.</p>
+<article class="problem example-like" id="problem-158"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-158"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.4.16</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-158"><article class="problem example-like"><p id="p-1107">  Does <span class="process-math">\(\QQ\)</span> satisfy the Archimedean Property and what does this have to do with the question of taking the Archimedean Property as an axiom of completeness?</p></article></div></section></div></main>
+</div>
+</body>
+</html>

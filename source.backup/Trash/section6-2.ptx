@@ -1,0 +1,500 @@
+
+
+<section>
+  <title>Sequences and Continuity</title>
+  <p>
+    There is an alternative way to prove that the function
+    <me>
+      D(x)=\left\{ \begin{matrix}x\text{,} \amp \text{ if } x\text{ is rational } \\ 0\text{,} \amp \text{ if } x\text{ is irrational } \end{matrix} \right.
+    </me>
+    is not continuous at <m>a\neq 0</m>.
+    We will examine this by looking at the relationship between our definitions of convergence and continuity.
+    The two ideas are actually quite closely connected,
+    as illustrated by the following very useful theorem.
+  </p>
+
+  <theorem xml:id="thm_LimDefOfContinuity">
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>via limits</h></idx>
+        The function <m>f</m> is continuous at <m>a</m> if and only if <m>f</m> satisfies the following property:
+        <me>
+          \forall\text{ sequences } \left(x_n\right)\text{, if } \,\,\lim_{n\rightarrow\infty}x_n=a \text{ then} \lim_{n\rightarrow\infty}f(x_n)=f(a).{}
+        </me>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    <xref ref="thm_LimDefOfContinuity">Theorem</xref>
+    says that in order for <m>f</m> to be continuous,
+    it is necessary and sufficient that any sequence
+    <m>\left(x_n\right)</m> converging to <m>a</m> must force the sequence
+    <m>\left(f(x_n)\right)</m> to converge to <m>f(a)</m>.
+    A picture of this situation is below though,
+    as always, the formal proof will not rely on the diagram.
+<sidebyside>
+    <image width="37%" source="images/Ch5fig6.png" />
+</sidebyside>
+  </p>
+
+  <p>
+    This theorem is especially useful for showing that a function <m>f,</m> is not continuous at a point <m>a</m>;
+    all we need to do is exhibit a sequence
+    <m>\left(x_n\right)</m> converging to <m>a</m> such that the sequence <m>\lim_{n\rightarrow\infty}f(x_n)</m> does
+    <em>not</em> converge to <m>f(a)</m>.
+    Let's demonstrate this idea before we tackle the proof of <xref ref="thm_LimDefOfContinuity">Theorem</xref>.
+  </p>
+
+  <example xml:id="example_HeavisideNotContinuous">
+    <statement>
+      <p>
+        Use <xref ref="thm_LimDefOfContinuity">Theorem</xref> to prove that
+        <me>
+          f(x)= \begin{cases}\frac{|x|}{x}\text{,} \amp \text{ if } x\neq 0\\ 0\text{,} \amp \text{ if } x=0 \end{cases}
+        </me>
+        is not continuous at <m>0</m>.
+      </p>
+
+    <proof>
+      <p>
+        First notice that <m>f</m> can be written as
+        <me>
+          f(x)= \begin{cases}1\amp \text{ if } x>0\\ -1\amp \text{ if } x\lt 0\\ 0\amp \text{ if } x=0 \end{cases} 
+        </me>.
+      </p>
+
+      <p>
+        To show that <m>f</m> is not continuous at <m>0</m>,
+        all we need to do is create a single sequence
+        <m>\left(x_n\right)</m>which converges to <m>0</m>,
+        but for which the sequence
+        <m>\left(f\left(x_n\right)\right)</m> does not converge to <m>f(0)=0</m>.
+        For a function like this one,
+        just about any sequence will do,
+        but let's use <m>\left(\frac{1}{n}\right)</m>,
+        just because it is an old familiar friend.
+      </p>
+
+      <p>
+        We have <m>\displaystyle\lim_{n\rightarrow\infty}\frac{1}{n}=0</m>,
+        but <m>\displaystyle\lim_{n\rightarrow\infty}f\left(\frac{1}{n}\right)=\lim_{n\rightarrow \infty}1=1\neq 0=f(0)</m>.
+        Thus by <xref ref="thm_LimDefOfContinuity">Theorem</xref>,
+        <m>f</m> is not continuous at <m>0</m>.
+      </p>
+    </proof>
+    </statement>
+  </example>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>continuity</h><h>Heaviside's function is not continuous at zero</h></idx>
+        Use <xref ref="thm_LimDefOfContinuity">Theorem</xref> to show that
+        <me>
+          f(x)= \begin{cases}\frac{\abs{x}}{x},\amp \text{ if } x\neq 0\\ a,                   \amp \text{ if } x=0 \end{cases}
+        </me>
+        is not continuous at <m>0</m>,
+        no matter what value <m>a</m> is.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>of <m>                D(x)= \begin{cases}x,\amp \text{ if } x\text{ is rational } \\ 0,\amp \text{ if } x\text{ is irrational } \end{cases}
+</m></h></idx>
+        Use <xref ref="thm_LimDefOfContinuity">Theorem</xref> to show that
+        <me>
+          D(x)= \begin{cases}x\text{,} \amp \text{ if } x\text{ is rational } \\ 0\text{,} \amp \text{ if } x\text{ is irrational } \end{cases}
+        </me>
+        is not continuous at <m>a\neq 0</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Topologist's sine function</h><h>modified version is not continuous at zero</h></idx>
+        The function <m>T(x)=\sin\left(\frac{1}{x}\right)</m> is often called the topologist's sine curve.
+        Whereas <m>\sin x</m> has roots at <m>n\pi</m>,
+        <m>n\in\ZZ</m> and oscillates infinitely often as <m>x\rightarrow\pm\infty</m>,
+        <m>T</m> has roots at <m>\frac{1}{n\pi},\,n\in\ZZ,\,n\neq 0</m>,
+        and oscillates infinitely often as <m>x</m> approaches zero.
+        A rendition of the graph follows.
+        <image width="75%" source="images/Ch5fig7.png" />
+      </p>
+
+      <p>
+        Notice that <m>T</m> is not even defined at <m>x=0</m>.
+        We can extend <m>T</m> to be defined at 0 by simply choosing a value for <m>T(0):</m>
+        <me>
+          T(x)= \begin{cases}\sin\left(\frac{1}{x}\right),\amp \text{ if } x\neq 0\\ b,\amp \text{ if } x=0 \end{cases} 
+        </me>.
+      </p>
+
+      <p>
+        Use <xref ref="thm_LimDefOfContinuity">Theorem</xref>
+        to show that <m>T</m> is not continuous at <m>0</m>,
+        no matter what value is chosen for <m>b</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <proof>
+<title>Sketch of Proof</title>
+<p>
+<term>Sketch of proof of <xref ref="thm_LimDefOfContinuity">Theorem</xref></term>
+</p>
+    <p>
+      We've seen how we can use <xref ref="thm_LimDefOfContinuity">Theorem</xref>,
+      now we need to prove <xref ref="thm_LimDefOfContinuity">Theorem</xref>.
+      The forward direction is fairly straightforward.
+      So we assume that <m>f</m> is continuous at <m>a</m> and start with a sequence
+      <m>\left(x_n\right)</m> which converges to <m>a</m>.
+      What is left to show is that <m>\lim_{n\rightarrow\infty}f(x_n)=f(a)</m>.
+      If you write down the definitions of <m>f</m> being continuous at <m>a</m>,
+      <m>\lim_{n\rightarrow\infty}x_n=a</m>,
+      and <m>\lim_{n\rightarrow\infty}f(x_n)=f(a)</m>,
+      you should be able to get from what you are assuming to what you want to conclude.
+    </p>
+
+    <p>
+      To prove the converse, it is convenient to prove its contrapositive.
+      That is, we want to prove that if <m>f</m> is not continuous at <m>a</m> then we can construct a sequence
+      <m>\left(x_n\right)</m> that converges to <m>a</m> but
+      <m>\left(f(x_n)\right)</m>does not converge to <m>f(a)</m>.
+      First we need to recognize what it means for <m>f</m> to not be continuous at <m>a</m>.
+      This says that somewhere there exists an <m>\eps>0</m>,
+      such that no choice of <m>\delta>0</m> will work for this.
+      That is, for any such <m>\delta</m>,
+      there will exist <m>x</m>,
+      such that <m>|\,x-a|\lt \delta</m>,
+      but <m>|f(x)-f(a)|\geq\eps</m>.
+      With this in mind, if <m>\delta=1</m>,
+      then there will exist an <m>x_1</m> such that <m>|\,x_1-a|\lt 1</m>,
+      but <m>|f(x_1)-f(a)|\geq\eps</m>.
+      Similarly, if <m>\delta=\frac{1}{2}</m>,
+      then there will exist an <m>x_2</m> such that <m>|\,x_2-a|\lt \frac{1}{2}</m>,
+      but <m>|\,f(x_2)-f(a)|\geq\eps</m>.
+      If we continue in this fashion,
+      we will create a sequence <m>\left(x_n\right)</m> such that <m>|\,x_n-a|\lt \frac{1}{n}</m>,
+      but <m>|f(x_n)-f(a)|\geq\eps</m>.
+      This should do the trick.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>via limits</h></idx>
+            <idx><h>limit</h><h><m>\limit{x}{a}{f(x)}=f(a)</m> implies <m>f(x)</m> is continuous</h></idx>
+        Turn the ideas of the previous two paragraphs into a formal proof of <xref ref="thm_LimDefOfContinuity">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <xref ref="thm_LimDefOfContinuity">Theorem</xref> is a very useful result.
+    It is a bridge between the ideas of convergence and continuity so it allows us to bring all of the theory we developed in <xref ref="chpt_Convergence">Chapter</xref>
+    to bear on continuity questions.
+    For example consider the following.
+  </p>
+
+  <theorem xml:id="thm_ContSumProd">
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h>sum of continuous functions is continuous</h></idx>
+        Suppose <m>f</m> and <m>g</m> are both continuous at <m>a</m>.
+        Then <m>f+g</m> and <m>f\cdot g</m> are continuous at <m>a</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      We could use the definition of continuity to prove <xref ref="thm_ContSumProd">Theorem</xref>,
+      but <xref ref="thm_LimDefOfContinuity">Theorem</xref> makes our job much easier.
+      For example, to show that <m>f+g</m> is continuous,
+      consider any sequence <m>\left(x_n\right)</m> which converges to <m>a</m>.
+      Since <m>f</m> is continuous at <m>a</m>,
+      then by <xref ref="thm_LimDefOfContinuity">Theorem</xref>,
+      <m>\lim_{n\rightarrow\infty}f(x_n)=f(a)</m>.
+      Likewise, since <m>g</m> is continuous at <m>a</m>,
+      then <m>\lim_{n\rightarrow\infty}g(x_n)=g(a)</m>.
+      By <xref ref="thm_SumOfSequences">Theorem</xref>
+      of <xref ref="chpt_Convergence">Chapter</xref>,<m></m> <m>\lim_{n\rightarrow\infty}(f+g)(x_n)=\,\lim_{n\rightarrow\infty} \left(f(x_n)+g(x_n)\right)=\,\,\,\lim_{n\rightarrow\infty}f(x_n)+\,\lim_{n \rightarrow\infty}g(x_n)=f(a)+g(a)=(f+g)(a)</m>.
+      Thus by <xref ref="thm_LimDefOfContinuity">Theorem</xref>,
+      <m>f+g</m> is continuous at <m>a</m>.
+      The proof that <m>f\cdot g</m> is continuous at <m>a</m> is similar.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h>the product of continuous functions is continuous</h></idx>
+        Use <xref ref="thm_LimDefOfContinuity">Theorem</xref> to show that if <m>f</m> and <m>g</m> are continuous at <m>a</m>, then <m>f\cdot g</m> is continuous at <m>a</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    By employing <xref ref="thm_ContSumProd">Theorem</xref> a finite number of times,
+    we can see that a finite sum of continuous functions is continuous.
+    That is, if <m>f_1,\,f_2,\,\ldots,\,f_n</m> are all continuous at <m>a</m> then
+    <m>\sum_{j=1}^nf_j</m> is continuous at <m>a</m>.
+    But what about an infinite sum?
+    Specifically,
+    suppose <m>f_1,\,f_2,f_3,\ldots</m> are all continuous at <m>a</m>.
+    Consider the following argument.
+  </p>
+
+  <p>
+    Let <m>\eps>0</m>.
+    Since <m>f_j</m> is continuous at <m>a</m>,
+    then there exists <m>\delta_j>0</m> such that if <m>|\,x-a|\lt \delta_j</m>,
+    then <m>|f_j(x)-f_j(a)|\lt \frac{\eps}{2^j}</m>.
+    Let <m>\delta=</m>min<m>\left(\delta_1,\,\delta_2,\,\ldots\right)</m>.
+    If <m>|\,x-a|\lt \delta</m>, then
+    <me>
+      \left|\sum_{j=1}^\infty f_j(x)-\sum_{j=1}^\infty f_j(a)\right|=\left|\sum_{j=1}^\infty\left(f_j(x)-f_j(a)\right)\right|
+    </me>
+    <me>
+      \leq\,\sum_{j=1}^\infty|f_j(x)-f_j(a)|\lt \sum_{j=1}^\infty\frac{ \eps}{2^j}=\eps
+    </me>.
+  </p>
+
+  <p>
+    Thus by definition,
+    <m>\sum_{j=1}^\infty f_j</m> is continuous at <m>a</m>.
+  </p>
+
+  <p>
+    This argument seems to say that an infinite sum of continuous functions must be continuous
+    (provided it converges).
+    However we know that the Fourier series
+    <me>
+      \frac{4}{\pi}\sum_{k=0}^\infty\frac{\left(-1\right)^k}{\left(2k+1\right)}\cos\left(\left(2k+1\right)\pi x\right)
+    </me>
+    is a counterexample to this,
+    as it is an infinite sum of continuous functions which does not converge to a continuous function.
+    Something fundamental seems to have gone wrong here.
+    Can you tell what it is?
+  </p>
+
+  <p>
+    This is a question we will spend considerable time addressing in <xref ref="chpt_PowerSeriesRedux">Chapter</xref>
+    (in particular,
+    see <xref ref="prob_Cauchy_s_incorrect_proof">problem</xref>)
+    so if you don't see the difficulty, don't worry; you will.
+    In the meantime keep this problem tucked away in your consciousness.
+    It is, as we said, fundamental.
+  </p>
+
+  <p>
+    <xref ref="thm_LimDefOfContinuity">Theorem</xref>
+    will also handle quotients of continuous functions.
+    There is however a small detail that needs to be addressed first.
+    Obviously, when we consider the continuity of <m>f/g</m> at <m>a</m>,<m></m>we need to assume that <m>g(a)\neq 0</m>.
+    However, <m>g</m> may be zero at other values.
+    How do we know that when we choose our sequence
+    <m>\left(x_n\right)</m> converging to <m>a</m> that <m>g(x_n)</m> is not zero?
+    This would mess up our idea of using the corresponding theorem for sequences
+    (<xref ref="thm_LimitOfQuotient">Theorem</xref>
+    from <xref ref="chpt_Convergence">Chapter</xref>).
+    This can be handled with the following lemma.
+  </p>
+
+  <lemma xml:id="lem_BoundedAwayFromZero">
+    <statement>
+      <p>
+      If <m>g</m> is continuous at <m>a</m> and <m>g(a)\neq 0</m>,
+        then there exists <m>\delta>0</m> such that
+        <m>g(x)\neq 0</m> for all <m>x\in(a-\delta,a+\delta)</m>.
+      </p>
+    </statement>
+  </lemma>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuous functions</h>><h>if
+            <m>f</m> is continuouse and <m>f(a)\neq0</m> then <m>f</m>
+            is bounded away from zero near a</h></idx> Prove <xref
+            ref="lem_BoundedAwayFromZero">Lemma</xref>.
+            <hint>
+              Consider the case where <m>g(a)>0</m>.
+              Use the definition with <m>\eps=\frac{g(a)}{2}</m>.
+              The picture is below; make it formal.
+              <image width="75%" source="images/Ch5fig8.png" /> For the case <m>g(a)\lt 0</m>,
+              consider the function <m>-g</m>.
+            </hint>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    A consequence of this lemma is that if we start with a sequence
+    <m>\left(x_n\right)</m> converging to <m>a</m>,
+    then for <m>n</m> sufficiently large, <m>g(x_n)\neq 0</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h>the quotient of continuous functions is continuous</h></idx>
+        Use <xref ref="thm_LimDefOfContinuity">Theorem</xref>, to prove that if <m>f</m> and <m>g</m> are continuous at <m>a</m> and <m>g(a)\neq 0</m>, then <m>f/g</m> is continuous at <m>a</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <theorem xml:id="thm_ContComp">
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h>the composition of continuous functions is continuous</h></idx>
+        Suppose <m>f</m> is continuous at <m>a</m> and <m>g</m> is continuous at <m>f(a)</m>.
+        Then <m>g\circ f</m> is continuous at <m>a.</m> 
+(Note that <m>(g\circ f)(x)=g(f(x))</m>.)
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuous functions</h><h>the composition of continuous functions is continuous</h></idx>
+        Prove <xref ref="thm_ContComp">Theorem</xref>
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Using the definition of continuity.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Using <xref ref="thm_LimDefOfContinuity">Theorem</xref>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The above theorems allow us to build continuous functions from other continuous functions.
+    For example,
+    knowing that <m>f(x)=x</m> and <m>g(x)=c</m> are continuous,
+    we can conclude that any polynomial,
+    <me>
+      p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
+    </me>
+    is continuous as well.
+    We also know that functions such as
+    <m>f(x)=\sin\left(e^x\right)</m> are continuous without having to rely on the definition.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>drill problems</h></idx>
+        Show that each of the following is a continuous function at every point in its domain.
+
+        <ol>
+          <li>
+            <p>
+              Any polynomial.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Any rational function. (A rational function is defined to be a ratio of polynomials.)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\cos x</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The other trig functions: <m>\tan(x)</m>,
+              <m>\cot(x)</m>, <m>\sec(x)</m>, and <m>\csc(x)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h><m>\sin e^x</m> is continuous everywhere</h></idx>
+        What allows us to conclude that <m>f(x)=\sin\left(e^x\right)</m> is continuous at any point <m>a</m> without referring back to the definition of continuity?
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <xref ref="thm_LimDefOfContinuity">Theorem</xref>
+    can also be used to study the convergence of sequences.
+    For example,
+    since <m>f(x)=e^x</m> is continuous at any point and <m>\lim_{n\rightarrow\infty}\frac{n+1}{n}=1</m>,
+    then <m>\lim_{n\rightarrow\infty}e^{\left(\frac{n+1}{n}\right)}=e</m>.
+    This also illustrates a certain way of thinking about continuous functions.
+    They are the ones where we can <q>commute</q>
+    the function and a limit of a sequence.
+    Specifically,
+    if <m>f</m> is continuous at <m>a</m> and <m>\lim_{n\rightarrow\infty}x_n=a</m>,
+    then <m>\lim_{n\rightarrow\infty}f(x_n)=f(a)=f\left(\lim_{n\rightarrow\infty}x_n\right)</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>continuity</h><h>via sequences</h></idx>
+        Compute the following limits.
+        Be sure to point out how continuity is involved.
+
+        <ol label="(a)">
+          <li>
+            <p>
+              <m>\displaystyle\lim_{n\rightarrow\infty}\sin\left(\frac{n\pi}{2n+1}\right)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle\lim_{n\rightarrow\infty}\sqrt{\frac{n}{n^2+1}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle\lim_{n\rightarrow\infty}e^{\left(\text{ sin } \left(1/n\right)\right)}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Having this rigorous formulation of continuity is necessary for proving the Extreme Value Theorem and the Mean Value Theorem.
+    However there is one more piece of the puzzle to address before we can prove these theorems.
+  </p>
+
+  <p>
+    We will do this in the next chapter,
+    but before we go on it is time to define a fundamental concept that was probably one of the first you learned in calculus: limits.
+  </p>
+</section>
+

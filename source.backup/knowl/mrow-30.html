@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:03:01-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_brach_vel.html">
+\begin{align*}
+\frac{a}{g}\amp = \dfdx{y}{s}\\
+a \amp = g\dfdx{y}{s}.\\
+\end{align*}
+<p class="intertext">Moreover, since acceleration is the derivative of velocity this is the same as:</p>
+\begin{align*}
+\dfdx{v}{t} \amp = g\dfdx{y}{s}.\\
+\end{align*}
+<p class="intertext">Now observe that by the Chain Rule <span class="process-math">\(\dfdx{v}{t} = \dfdx{v}{s}\dfdx{s}{t}\text{.}\)</span> The physical interpretation of this formula is that velocity will depend on <span class="process-math">\(s\text{,}\)</span> how far down the wire the bead has moved, but that the distance traveled will depend on how much time has elapsed. Therefore</p>
+\begin{align*}
+\dfdx{v}{s}\dfdx{s}{t} \amp = g\dfdx{y}{s}\\
+\end{align*}
+<p class="intertext">or</p>
+\begin{align*}
+\dfdx{s}{t}\dfdx{v}{s} \amp = g\dfdx{y}{s}\\
+\end{align*}
+<p class="intertext">and since <span class="process-math">\(\dfdx{s}{t} = v\)</span> we have</p>
+\begin{align*}
+v\dfdx{v}{s} \amp = g\dfdx{y}{s}\\
+\end{align*}
+<p class="intertext">Integrating both sides with respect to <span class="process-math">\(s\)</span> gives:</p>
+\begin{align*}
+\int{}v\dfdx{v}{s}d s \amp = g\int{}\dfdx{y}{s}d s\\
+\int{}vd v \amp = g\int{}d y\\
+\end{align*}
+<p class="intertext">and integrating gives</p>
+\begin{align*}
+\frac{v^2}{2} \amp = gy
+\end{align*}
+</div>
+<span class="incontext"><a href="CalcIn17th18thCentury-NewtLeibStart.html#md-7" class="internal">in-context</a></span>
+</body>
+</html>

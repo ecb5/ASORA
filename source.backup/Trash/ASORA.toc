@@ -1,0 +1,67 @@
+\hypertarget {x:book:ASORA}{}
+\contentsline {chapter}{Acknowledgements}{iv}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}To the Instructor}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Prologue: Three Lessons Before We Begin}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Lesson One}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Lesson Two}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Lesson Three}{7}{section.2.3}%
+\contentsline {part}{\numberline {I}In Which We Raise A Number Of Questions}{10}{part.1}%
+\contentsline {chapter}{\numberline {3}Numbers, Real (\(\mathbb {R}\)) and Rational (\(\mathbb {Q}\))}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Additional Problems}{18}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Calculus in the 17th and 18th Centuries}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Newton and Leibniz Get Started}{19}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Leibniz's Calculus Rules}{19}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Leibniz's Approach to the Product Rule}{20}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Newton's Approach to the Product Rule}{21}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Power Series as Infinite Polynomials}{29}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Additional Problems}{39}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Questions Concerning Power Series}{40}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Taylor's Formula}{40}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Series Anomalies}{45}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Additional Problems}{50}{section.5.3}%
+\contentsline {part}{\numberline {II}Interregnum}{51}{part.2}%
+\contentsline {chapter}{\numberline {6}Joseph Fourier: The Man Who Broke Calculus}{52}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Joseph Fourier and His Series}{52}{section.6.1}%
+\contentsline {part}{\numberline {III}In Which We Find (Some) Answers}{60}{part.3}%
+\contentsline {chapter}{\numberline {7}Convergence of Sequences and Series}{61}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Sequences of Real Numbers}{61}{section.7.1}%
+\contentsline {section}{\numberline {7.2}The Limit as a Primary Tool}{66}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Divergence}{70}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Additional Problems}{72}{section.7.4}%
+\contentsline {chapter}{\numberline {8}A ``Tayl'' of Three Remainders}{74}{chapter.8}%
+\contentsline {section}{\numberline {8.1}The Integral Form of the Remainder}{74}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Lagrange's Form of the Remainder}{77}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Cauchy's Form of the Remainder}{81}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Additional Problems}{84}{section.8.4}%
+\contentsline {chapter}{\numberline {9}Continuity: What It Isn't and What It Is}{85}{chapter.9}%
+\contentsline {section}{\numberline {9.1}An Analytic Definition of Continuity}{85}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Sequences and Continuity}{94}{section.9.2}%
+\contentsline {section}{\numberline {9.3}The Definition of the Limit of a Function}{99}{section.9.3}%
+\contentsline {section}{\numberline {9.4}The Derivative, An Afterthought}{103}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Additional Problems}{106}{section.9.5}%
+\contentsline {chapter}{\numberline {10}Intermediate and Extreme Values}{108}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Completeness of the Real Number System}{108}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Proof of the Intermediate Value Theorem}{113}{section.10.2}%
+\contentsline {section}{\numberline {10.3}The Bolzano-Weierstrass Theorem}{114}{section.10.3}%
+\contentsline {section}{\numberline {10.4}The Supremum and the Extreme Value Theorem}{116}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Additional Problems}{120}{section.10.5}%
+\contentsline {chapter}{\numberline {11}Back to Power Series}{122}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Uniform Convergence}{122}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Uniform Convergence: Integrals and Derivatives}{125}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Cauchy Sequences}{126}{subsection.11.2.1}%
+\contentsline {section}{\numberline {11.3}Radius of Convergence of a Power Series}{129}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Boundary Issues and Abel's Theorem}{131}{section.11.4}%
+\contentsline {chapter}{\numberline {12}Back to the Real Numbers}{134}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Infinite Sets}{137}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Cantor's Theorem and Its Consequences}{142}{section.12.2}%
+\contentsline {chapter}{\numberline {13}Epilogues}{147}{chapter.13}%
+\contentsline {section}{\numberline {13.1}On the Nature of Numbers: A Dialogue (with Apologies to Galileo)}{147}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}Additional Problems}{152}{subsection.13.1.1}%
+\contentsline {section}{\numberline {13.2}Building the Real Numbers}{153}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}The Decimal Expansion}{155}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Cauchy Sequences}{157}{subsection.13.2.2}%
+\contentsline {subsection}{\numberline {13.2.3}Dedekind Cuts}{159}{subsection.13.2.3}%
+\contentsline {part}{Back Matter}{166}{section*.426}%
+\contentsline {chapter}{Bibliography}{166}{chapter*.427}%
+\contentsline {chapter}{Index}{168}{section*.428}%
+\contentsfinish 

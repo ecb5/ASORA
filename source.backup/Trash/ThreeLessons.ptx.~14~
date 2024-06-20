@@ -1,0 +1,659 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Threelessons">
+  <title>Prologue: Three Lessons Before We Begin</title>
+
+
+  <section xml:id="ThreeLessons-lesson-one">
+    <title>Lesson One</title>
+    <p>
+      Get a pad of paper and write down the answer to this question:
+      What is .<nbsp />.<nbsp />.<nbsp />No, really.  We're serious.
+      <em>Get a writing pad.</em> We'll wait.
+    </p>
+
+<aside><p>
+      We <em>really</em> are serious about this.
+      Get a pad of paper!</p>
+      </aside>
+    <p>
+      Got it?
+      Good. Now write down your answer to this question: What is a number?
+      Don't think about it.
+      Don't analyze it.
+      Don't consider it.
+      Just write down the best answer you can without thinking.
+      You are the only person who ever needs to see what you've written.
+    </p>
+
+    <p>
+      Done?
+      Good.
+    </p>
+
+    <p>
+      Now consider this: All of the objects listed below are <q>numbers</q>
+      in a sense we will not make explicit here.
+      How many of them does your definition include?
+    </p>
+
+    <p>
+      <ul>
+        <li> 
+          <m>1</m>
+        </li>
+        <li> 
+          <m>-1</m>
+        </li>
+        <li> 
+          <m>0</m>
+        </li>
+        <li> 
+          <m>3/5</m>
+        </li>
+        <li> 
+          <m>\sqrt{2}</m>
+        </li>
+        <li> 
+          <m>\sqrt{-1}</m>
+        </li>
+        <li> 
+          <m>i^i</m>
+        </li>
+        <li> 
+          <m>e^{5i}</m>
+        </li>
+        <li> 
+          <m>4+3i-2j+6k</m> (this is called a quaternion) 
+        </li>
+        <li> 
+          <m>\dx{x}</m> (this is the differential you learned all about in calculus)
+        </li>
+        <li> <m>\begin{pmatrix}
+        1\amp 2\\-2\amp 1
+        \end{pmatrix}</m> (yes, matrices can be considered numbers).
+      </li>
+    </ul>
+  </p>
+
+  <p>
+    Surely you included <m>1</m>.
+    Almost surely you included <m>3/5</m>.
+    But what about <m>0?</m> <m>-1?</m> Does your definition include
+    <m>\sqrt{2}?</m> Do you consider <m>\dx{x}</m> a number?
+    Leibniz<idx><h>Leibniz, Gottfried Wilhelm</h></idx> did.
+    Any of the others? (And, yes,
+    they really are all <q>numbers.</q>)
+  </p>
+
+  <p>
+    The lesson in this little demonstration is this: You don't really have a clear notion of what we mean when we use the word
+    <q>number.</q> And this is fine.
+    Not knowing <aside>
+<p>
+    Sometimes it is even encouraged.
+</p>
+    </aside> is acceptable. A principal goal of this  course of study is to rectify this,
+    at least a little bit.
+    When the course is over you may or may not be able to give a better definition of the word <q>number</q>
+    but you will have a deeper understanding of the real numbers at least.
+    That is enough for now.
+  </p>
+</section>
+
+
+
+
+<section xml:id="ThreeLessons_lesson-two">
+  <title>Lesson Two</title>
+  <p>
+    Read and understand the following development of the Quadratic Formula.
+  </p>
+
+  <p>
+    Suppose <m>a\neq0</m>.
+    If
+    <mdn>
+      <mrow xml:id="eq_QForm1">ax^2+bx+c =0</mrow>
+      <intertext>then</intertext>
+      <mrow xml:id="eq_QForm2">x^2+\frac{b}{a}x\amp =-\frac{c}{a}</mrow>
+      <intertext>Now let <m>x=y-\frac{b}{2a}</m> giving</intertext>
+      <mrow xml:id="eq_QForm3">y^2\amp = -\frac{c}{a} +\frac{b^2}{4a^2}</mrow>
+      <mrow>y\amp = \frac{\pm \sqrt{b^2-4ac}}{2a}</mrow>
+      <mrow xml:id="eq_QForm4">x\amp = \frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
+    </mdn>
+  </p>
+
+  <p>
+    Were you able to follow the argument?
+    Probably the step from <xref ref="eq_QForm1">equation</xref>
+    to <xref ref="eq_QForm2">equation</xref> presented no difficulties.
+    But what about the next step?
+    Do you see where <xref ref="eq_QForm3">equation</xref> came from?
+    If so, good for you.
+    Most students, in fact most mathematicians,
+    cannot make that step in their heads.
+    But are you sure?
+    Is there, perhaps, some small detail you've overlooked?
+  </p>
+
+
+  <p>
+    Check to see.
+  </p>
+
+  <p>
+    That is, let <m>x=y-\frac{b}{2a}</m> in <xref ref="eq_QForm2">equation</xref>
+    and see if you can get <xref ref="eq_QForm3">equation</xref>.
+    Do it on that handy pad of paper we told you to get out earlier.
+    Do it now.
+    We'll wait.
+  </p>
+  <aside><p>
+    If you <em>still</em> haven't gotten out a pad of paper,
+    give up now.
+    You're going to fail this course.
+    Seriously.
+    Do you think we would spend so much time on this,
+    that we would repeat it so many times, if it weren't important.
+    <em><em>GET OUT A PAD OF PAPER NOW!</em></em> Last chance.
+    You've been warned.</p>
+  </aside> 
+
+<p>
+  Done?
+  Good.
+</p>
+
+<p>
+  Perhaps you haven't been able to fill in the details on your own.
+  That's ok.
+  Many people can't.
+  If not then get help: from a classmate,
+  a friend, your instructor, whomever.
+  Unfortunately most people won't get help in this situation.
+  Instead they will perceive this as <q>failure,</q>
+  hide it and berate themselves or the problem as <q>stupid.</q>
+  In short they will let their personal insecurities and demons overwhelm them.
+  <em>Don't do this.
+  Get help.</em> You are neither dumb nor incapable.
+  There are a thousand reasons that on any given day you might not be able to solve this problem.
+  But don't let a bad day interfere with the education you are here for.
+  Get someone to help you over this hump.
+  Later you will be able to help your helper in the same way.
+  Really.
+</p>
+
+<p>
+  At this point we assume that you've successfully negotiated the transition from <xref ref="eq_QForm2">equation</xref>
+  to <xref ref="eq_QForm4">equation</xref>.
+</p>
+
+<p>
+  See?
+  It really wasn't that bad after all.
+  Just a lot of elementary algebra.
+  Now that you've done it
+  (or seen it done),
+  it is easy to see that there really wasn't much there.
+</p>
+
+
+<p>
+  But this is the point!
+  We left those computations out precisely because we knew that they were routine and that you could fill in the details.
+  Moreover, filling in the details yourself gives you a little better insight into the computations.
+  If we'd filled them in for you we would have robbed you of that insight.
+  And we would have made this book longer than it needs to be.
+  We don't want to do either of those things.
+  If we fill in all of the details of every computation for you,
+  you won't learn to have confidence in your ability to do them yourself.
+  And this book will easily double in length.
+</p>
+
+<p>
+  So the lesson here is this: Keep that pad of paper handy whenever you are reading this
+  (or any other)
+  mathematics text.
+  You will need it.
+  Routine computations will often be skipped.
+  But calling them <q>routine</q>
+  and skipping them does not mean that they are unimportant.
+  If they were truly unimportant we would leave them out entirely.
+</p>
+
+<p>
+  Moreover <q>routine</q> does not mean <q>obvious.</q>
+  Every step we took in the development of the Quadratic Formula was <q>routine.</q>
+  But even routine computations need to be understood and the best way to understand them is to do them.
+  This is the way to learn mathematics;
+  it is the <em>only</em> way that really works.
+  Don't deprive yourself of your mathematics education by skipping the most important parts.
+</p>
+
+<aside>
+<p>  If you didn't fill in those details you're being stupid
+  (or at least unduly stubborn).
+  There is a good reason for putting these three lessons first.
+  Stop wasting your time and intellect!
+  Go do it now.</p>
+  </aside>
+<p>
+  As you saw when you filled in the details of our development of the Quadratic Formula the substitution
+  <m>x=y-\frac{b}{2a}</m> was crucial because it turned
+  <me>
+    x^2+\frac{b}{a}x +\frac{c}{a}=0
+  </me>
+  into
+  <me>
+    y^2=k
+  </me>
+  where <m>k</m> depends only on <m>a</m>, <m>b</m>, and <m>c</m>.
+  In the sixteenth century a similar technique was used by Ludovico Ferrari (1522-1565) to reduce the general cubic equation
+  <men xml:id="eq_GenCubic">
+    ax^3+bx^2+cx+d=0
+  </men>
+  into the so-called <q>depressed cubic</q>
+  <me>
+    y^3 +py+q=0
+  </me>
+  where <m>p</m>, and <m>q</m> depend only on <m>a</m>,
+  <m>b</m>, <m>c</m>, and <m>d</m>.
+</p>
+
+<p>
+  The general depressed cubic had previously been solved by Tartaglia (the <aside><p>
+  It is not entirely clear why eliminating the quadratic term should be depressing,
+  but there it is.</p>
+  </aside> 
+  Stutterer, 1500-1557) 
+  so converting the general cubic into a depressed cubic provided a path for Ferrari to compute the <q>Cubic Formula</q>
+  <mdash /> like the Quadratic Formula but better.
+</p>
+<figure>
+  <caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/" visual="mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/">Tartaglia </url>, <q>The Stutterer</q></caption>
+  <image width="28%" source="images/Tartaglia.png" />
+</figure>
+
+<p>
+  Ferrari also knew how to compute the general solution of the
+  <q>depressed quartic</q> so when he and his teacher Girolomo
+  Cardano (1501-1576) figured out how to depress a general
+  quartic they had a complete solution of the general quartic as
+  well.
+  <figure>
+    <caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Cardan" visual="mathshistory.st-andrews.ac.uk/Biographies/Cardan">Girolomo Cardano</url></caption>
+    <idx><h>Cardano, Girolomo</h></idx>
+    <image width="28%" source="images/Cardan.png" />
+  </figure>
+  Alas, their methods broke down entirely when they tried
+  to solve the general quintic equation.  Unfortunately the rest
+  of this story belongs in a course on Abstract Algebra, not
+  Real Analysis.  But the lesson in this story applies to all of
+  mathematics: Every problem solved is a new theorem which then
+  becomes a tool for later use.  Depressing a cubic would have
+  been utterly useless had not Tartaglia had a solution of the
+  depressed cubic in hand.  The technique they used, with slight
+  modifications, then allowed for a solution of the general
+  quartic as well.
+</p>
+
+<p>
+  Keep this in mind as you proceed through this course and your mathematical education.
+  Every problem you solve is really a theorem,
+  a potential tool that you can use later.
+  We have chosen the problems in this text deliberately with this in mind.
+  Don't just solve the problems and move on.
+  Just because you have solved a problem does not mean you should stop thinking about it.
+  Keep thinking about the problems you've solved.
+  Internalize them.
+  Make the ideas your own so that when you need them later you will have them at hand to use.
+</p>
+  <problem>
+    <!-- <title></title> -->
+        <idx><h>Quadratic Formula</h><h>first proof</h></idx>
+    <statement>
+<p>        <ol label="(a)">
+          <li>
+            <p>
+              Find <m>M</m> so that the substitution <m>x=y-M</m> depresses <xref ref="eq_GenCubic">equation</xref>,
+              the general cubic equation.
+              Then find <m>p</m> and <m>q</m> in terms of <m>a</m>,
+              <m>b</m>, <m>c</m>, and <m>d</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find <m>K</m> so that the substitution <m>x=y-K</m> depresses the general quartic equation.
+              Make sure you demonstrate how you obtained that value or why it works
+              (if you guessed it).
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find <m>N</m> so that the substitution <m>x=y-N</m> depresses a polynomial of degree <m>n</m>.
+              Ditto on showing that this value works or showing how you obtained it.
+            </p>
+          </li>
+        </ol>
+</p>    </statement>
+  </problem>
+
+  <problem>    <title>Another Derivation of the Quadratic Formula</title>
+  <statement>
+    <p>
+      <idx><h>Quadratic Formula</h><h>second proof</h></idx>
+      Here is yet another way to solve a quadratic equation.
+      Read the development below with pencil and paper handy.
+      Confirm all of the computations that are not completely transparent to you.
+      Then use your notes to present the solution with
+      <em>all</em> steps filled in.
+  </p>
+<aside>
+<p>
+      Be sure you are clear on the purpose of this problem before you begin.
+      This is not about solving the Quadratic Equation.
+      You already know how to do that.
+      Our purpose here is to give you practice filling in the skipped details of mathematical exposition.
+      We've chosen this particular problem because it should be a comfortable setting for you,
+      but this particular solution is probably outside of your previous experience.
+</p>
+    </aside> 
+
+  <p>
+    Suppose that <m>r_1</m> and <m>r_2</m> are solutions of
+    <m>ax^2+bx+c=0</m>. Without loss of generality suppose that
+    <m>a>0</m>.  Suppose further that <m>r_1\ge r_2</m>.  Then
+    <md>
+      <mrow>ax^2+bx+c \amp = a(x-r_1)(x-r_2)</mrow>
+      <mrow>\amp = a\left[x^2-(r_1+r_2)x+(r_1+r_2)^2-(r_1-r_2)^2-3r_1r_2\right]</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Therefore
+      <mdn>
+        <mrow xml:id="eq_LagrangeQuadratic1">r_1+r_2\amp = -\frac{b}{a}</mrow>
+        <intertext>and</intertext>
+        <mrow xml:id="eq_LagrangeQuadratic2">r_1-r_2 \amp = \sqrt{\left(\frac{b}{a}\right)^2-\frac{4c}{a}}</mrow>
+        </mdn>.
+      </p>
+
+      <p>
+        Equations <xref ref="eq_LagrangeQuadratic1"></xref>
+        and <xref ref="eq_LagrangeQuadratic2"></xref>
+        can be solved simultaneously to yield
+        <md>
+          <mrow>r_1\amp =\frac{-b+\sqrt{b^2-4ac}}{2a}</mrow>
+          <mrow>r_2\amp =\frac{-b-\sqrt{b^2-4ac}}{2a}</mrow>
+          </md>.
+        </p>
+      </statement>
+    </problem>
+    </section>
+
+
+
+  <section xml:id="ThreeLessons_lesson-three">
+    <title>Lesson Three</title>
+    <p>
+      In the hustle and bustle of a typical college semester,
+      with a lot of demands on your time and very little time to think,
+      it becomes very easy to see each problem you solve as a small,
+      isolated victory and then move on to the next challenge.
+      This is understandable.
+Each problem you solve <em>is</em>
+a small victory and you've every right to be proud of it.
+But it is not isolated and it is a mistake to think that it is.
+</p>
+<figure>
+<caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Polya/" visual="mathshistory.st-andrews.ac.uk/Biographies/Polya/">George Polya</url></caption>
+<image width="28%" source="images/Polya.png" />
+</figure>
+
+<p>
+  In his book <em>How to Solve It</em> the mathematician and teacher George Polya gave four steps for problem solving.
+  The steps may be paraphrased as
+
+  <ol>
+    <li>
+      <p>
+        Understand the problem.
+</p>
+</li>
+
+<li>
+  <p>
+    Formulate a plan.
+</p>
+</li>
+
+<li>
+  <p>
+    Execute the plan.
+</p>
+</li>
+
+<li>
+  <p>
+    Reflect on what you've done.
+</p>
+</li>
+</ol>
+</p>
+
+<p>
+  This process is iterative.
+  That is, once a plan is formulated and executed we often find that our plan was not up to the task.
+  So we have to ask what went wrong,
+  form a new plan and try again.
+  This is the fourth step: Reflect on what you've done.
+</p>
+
+<p>
+  Almost everyone remembers this fourth step when their plan <em>doesn't</em> work.
+  After all, you've got to try again so you have to ask what went wrong.
+  But it is all too easy to neglect that crucial fourth step when the plan succeeds.
+  In that case,
+  flush with success we usually move on to the next problem and start over from scratch.
+</p>
+
+<p>
+  This is a mistake.
+  Having solved a problem is no reason to stop thinking about it.
+</p>
+
+<p>
+  That fourth step is at least as important when we have succeeded as when we have failed.
+  Each time you solve a problem stop and ask yourself a few questions:
+
+  <ul>
+    <li>
+      <p>
+        Are there any easy consequences that follow from the result?
+</p>
+</li>
+
+<li>
+  <p>
+    How does it fit into the broader scheme of other problems you have solved?
+</p>
+</li>
+
+<li>
+  <p>
+    How might it be used in the future?
+</p>
+</li>
+</ul>
+</p>
+
+
+<p>
+  Also, notice the structure of the problem.
+  Some assumptions had to be made.
+  What were they?
+  Were they all necessary?
+  That is, did your solution use everything that was assumed?
+  If not, you may have something considerably more general than it at first appears.
+  What is that more general statement?
+  Even if you used all of the assumptions,
+  was that really necessary?
+  Can you solve a similar problem with weaker assumptions?
+</p>
+
+<p>
+  Take a moment to pack all of these questions
+  (and their answers)
+  away in your mind so that when you see something similar in the future you will be reminded of it.
+  <em>Don't</em> solve any problem and then forget it and move on.
+  The nature of mathematics is cumulative.
+  Remember, you are not here to accumulate grade points.
+  You are here to learn and understand the concepts and methods of mathematics,
+to gain <q>mathematical maturity.</q>
+Part of that maturation process is the accumulation of a body of facts (theorems),
+and techniques that can be used to prove new theorems
+(solve new problems).
+</p>
+
+<p>
+  This text has been written with the maturation process in mind.
+  You will frequently find that the problems you solve today can be used to good effect in the ones you attempt tomorrow,
+  but only if you remember them.
+  So take a moment after you've solved each problem to think about how it fits into the patterns you already know.
+  This is important enough to bear repeating: <em>A problem,
+once solved, becomes a tool for solving subsequent problems!</em>
+</p>
+
+<p>
+  The purpose of the following sequence of problems is to help you become accustomed to this notion
+  (if you aren't already).
+  It is a progression of results about prime numbers.
+  As you probably recall,
+  a prime number is any integer greater than <m>1</m> whose only factors are itself and <m>1</m>.
+  For example, <m>2</m>, <m>3</m>, <m>5</m>, <m>7</m>,
+  <m>11</m> are prime, while <m>4</m>,
+  <m>6</m>, <m>9</m> are not.
+  A major result about prime numbers is the following:
+</p>
+
+<theorem xml:id="thm_FTA">
+  <statement>
+    <p>  
+<alert> The Fundamental Theorem of Arithmetic</alert>
+</p>
+<p>
+  Any integer greater than <m>1</m> is either prime or it is a product of prime numbers. 
+  Furthermore,
+  this prime decomposition is unique up to the order of the factors.
+</p>
+</statement>
+</theorem>
+<p>
+  We will not prove this,
+  but we will use it as a starting point to examine the following problems.
+  As you do these problems,
+  notice how subsequent problems make use of the previous results.
+</p>
+
+<p>
+  Notice that the notation <m>p\,|a</m> simply means that the
+  integer <m>p</m> divides the integer <m>a</m> with no remainder.
+</p>
+
+<problem><title>Fermat's Little Theorem, step 1</title>
+<statement>
+  <p>
+<idx><h>Fermat's Little Theorem</h><h>problems leading to</h><h>if a prime divides a product of two numbers then it divides one of the factors</h></idx>
+Let <m>p</m> be a prime number and <m>a, b</m> positive integers such that <m>p\, | (a\cdot b)</m>.
+Show that <m>p\,|a</m> or <m>p\,|b</m>. 
+</p>
+</statement>
+<hint> 
+  <p>
+    If <m>p\,|a</m> then we are done.
+    If not then notice that <m>p</m> is a prime factor of <m>a\cdot b</m>.
+    What does the Fundamental Theorem of Arithmetic say about the prime factors of
+<m>a\cdot b</m> compared to the prime factors of <m>a</m> and <m>b?</m>
+</p>
+</hint>
+</problem>
+
+<problem><title>Fermat's Little Theorem, step 2</title>
+<statement>
+  <p>
+<idx><h>Fermat's Little Theorem</h><h>problems leading to</h><h>if a prime divides an arbitrary product then it divides one of the factors</h></idx>
+Let <m>p</m> be a prime number and let <m>a_1, a_2, \ldots,
+a_n</m> be positive integers such that <m>p\,|\left(a_1\cdot
+a_2\cdot a_3\cdot\ldots\cdot a_n\right)</m>.  Show that
+<m>p\,|a_k</m> for some <m>k\in\{1, 2, 3, \ldots, n\}</m>.
+</p>
+</statement>
+<hint> 
+  <p>
+    Use induction on <m>n</m> and the result of the previous problem.
+</p>
+</hint>
+</problem>
+
+<problem><title>Fermat's Little Theorem, step 3</title>
+<statement>
+  <p>
+<idx><h>Fermat's Little Theorem</h><h>problems leading to</h><h>if <m>p</m> is prime then <m>p</m> divides <m>p \choose{}k</m></h></idx>
+Let <m>p</m> be a prime number and let <m>k</m> be an integer with <m>1\le k\le p-1</m>.
+Prove that <m>p\left|{p \choose{}k}\right.</m>,
+where <m>{p \choose{}k}</m> is the binomial coefficient
+<m>\frac{p!}{k!(p-k)!}</m>. 
+</p>
+</statement>
+<hint> 
+  <p>
+    We know <m>p\,|p\,!</m>, so <m>p\,|{p
+    \choose{}k}k!(p-k)!</m>.  How does the previous result
+    apply?
+</p>
+</hint>
+</problem>
+
+<p>
+  We now have all the machinery in place to prove one of the really cool theorems from number theory.
+</p>
+
+<theorem xml:id="thm_FermatsLittleTheorem">
+  <statement>
+    <p>
+<alert>Fermat's Little Theorem</alert>
+</p>
+<p>
+<idx><h>Fermat's Little Theorem</h></idx>
+Let <m>p</m> be any prime number.
+Then <m>p\,|(n^p-n)</m> for all positive integers <m>n</m>.
+</p>
+</statement>
+</theorem>
+
+<problem><title>Fermat's Little Theorem</title>
+<statement>
+  <p>
+<idx><h>Fermat's Little Theorem</h></idx>
+Prove Fermat's Little Theorem. 
+</p>
+</statement>
+<hint>
+  <p>
+    Use induction on <m>n</m>.
+    To get from <m>n</m> to <m>n+1</m>,
+    use the binomial theorem on <m>(n+1)^p</m>.
+</p>
+</hint>
+</problem>
+
+<p>
+  Fermat's Little Theorem is the foundational basis for a number of results in number theory and encryption.
+</p>
+
+</section>
+
+
+</chapter>
+

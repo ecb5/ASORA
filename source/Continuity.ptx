@@ -677,8 +677,14 @@
             Use the definition of continuity to prove that
             <m>f(x)=\sin x</m> is continuous at any point <m>a</m>.
           </p>
+<p>
+
+</p>
         </statement>
         <hint>
+<p>
+
+</p>
           <p>
             <m>\sin x=\sin\left(x-a+a\right)</m>.
           </p>
@@ -703,8 +709,14 @@
           <p>
             Show that <m>f(x)=e^x</m> is continuous at any point <m>a</m>.  
           </p>
+<p>
+
+</p>
         </statement>
         <hint>
+<p>
+
+</p>
           <p>
             Rewrite <m>e^x-e^a</m> as
             <m>e^{a+(x-a)}-e^a</m> and use what you proved in part a.
@@ -814,8 +826,14 @@
             Let <m>a\neq 0</m>.  Use the definition of continuity to
             show that <m>D</m> is not continuous at <m>a</m>.
           </p>
+<p>
+
+</p>
         </statement>
         <hint>
+<p>
+
+</p>
           <p>
             You might want to break this up into two cases where
             <m>a</m> is rational or irrational.  Show that no choice
@@ -1175,8 +1193,14 @@ Thus by
         <p>
           Prove <xref ref="lem_BoundedAwayFromZero">Lemma</xref>.
         </p>
+<p>
+
+</p>
       </statement>
       <hint>
+<p>
+
+</p>
         <p>
           Consider the case where <m>g(a)>0</m>.
           Use the definition with <m>\eps=\frac{g(a)}{2}</m>.
@@ -1451,16 +1475,18 @@ Thus by
     <p>
       Before we delve into this, notice that it is very similar to the
       definition of the 
+continuity of <m>f(x)</m> at <m>x=a</m>.  In fact we can readily see
+that <m>f \text{ is continuous at } x=a \text{ if and only if }
+\limit{x}{a}{f(x)} = f(a)</m>.
+    </p>
 <aside>
+<title>Comment</title>
+
 <p>This presumes that <m>a</m> is an <term>accumulation point</term>
 of the domain of <m>f</m> (<xref ref="def_accumulation-point">Definition</xref>). We will discuss
 accumulation points in <xref ref="BackToFourier">Chapter</xref>.
 </p>
 </aside>
-continuity of <m>f(x)</m> at <m>x=a</m>.  In fact we can readily see
-that <m>f \text{ is continuous at } x=a \text{ if and only if }
-\limit{x}{a}{f(x)} = f(a)</m>.
-    </p>
 
     <p>
       There are two differences between this definition and the
@@ -1610,8 +1636,14 @@ that <m>f \text{ is continuous at } x=a \text{ if and only if }
           <p>
             <m>\limit{x}{1}{\frac{x^3-1}{x-1}}=3</m>
           </p>
+<p>
+
+</p>
         </statement>
         <hint>
+<p>
+
+</p>
           <p>
             <md>
               <mrow>\abs{\frac{x^3-1}{x-1}-3} \amp = \abs{x^2+x+1-3}</mrow>
@@ -1628,8 +1660,14 @@ that <m>f \text{ is continuous at } x=a \text{ if and only if }
           <p>
             <m>\limit{x}{1}{\frac{\sqrt{x}-1}{x-1}}=1/2</m>
           </p>
+<p>
+
+</p>
         </statement>
         <hint>
+<p>
+
+</p>
           <p>
             <md>
               <mrow>\abs{\frac{\sqrt{x}-1}{x-1}-\frac12}\amp = \abs{\frac{1}{\sqrt{x}+1}-\frac12}</mrow>
@@ -1693,7 +1731,7 @@ that <m>f \text{ is continuous at } x=a \text{ if and only if }
           <idx><h>limit</h><h>properties of</h></idx>
           Suppose <m>\limit{x}{a}{f(x)}=L</m> and <m>\limit{x}{a}{g(x)}=M</m>, then
 
-          <ol label="(a)">
+          <ol marker="a">
             <li>
               <p>
                 <m>\limit{x}{a}{\left(f(x)+g(x)\right)}=L+M</m>
@@ -1777,8 +1815,14 @@ that <m>f \text{ is continuous at } x=a \text{ if and only if }
           <idx><h>Squeeze Theorem</h><h>for functions</h></idx>
           Prove <xref ref="thm_SqueezeTheoremFunctions">Theorem</xref>. 
         </p>
+<p>
+
+</p>
       </statement>
       <hint>
+<p>
+
+</p>
         <p>
           Use <xref ref="thm_SqueezeTheorem">Theorem</xref>, the
           Squeeze Theorem for sequences from <xref
@@ -1958,9 +2002,16 @@ Theorem</h></idx> <statement> <p> <term>Rolle's Theorem</term> </p>
         <p> Then there is a real number <m>c\in(a,b)</m> such that
 <me> f^\prime(c)=0 </me>.  </p> </statement> </theorem>
 
-    <proof> <aside> <p> Any proof that relies on the Extreme Value
+    <proof> 
+<aside>
+<title>Comment</title>
+ <p> Any proof that relies on the Extreme Value
 Theorem is not complete until the EVT has been proved.  We'll get to
-this in <xref ref="IVTandEVT">Chapter</xref>.  </p> </aside> <p> Since
+this in <xref ref="IVTandEVT">Chapter</xref>.  
+</p> 
+</aside>
+ <p> 
+Since
 <m>f</m> is continuous on <m>[a,b]</m> we see, by the Extreme Value
 Theorem,<idx><h>Extreme Value Theorem (EVT)</h><h>Rolle's Theorem,
 and</h></idx> that <m>f</m> has both a maximum and a minimum on
@@ -2072,8 +2123,14 @@ ref="cor_PosDerivIncFunc2">Corollary</xref>.  </p> </statement>
     <p>
       Use the definition of continuity to prove that <m>\ln x</m> is continuous at <m>1</m>. 
 </p>
+<p>
+
+</p>
 </statement>
 <hint>
+<p>
+
+</p>
   <p>
     You may want to use the fact
     <m>\abs{\ln x}\lt \eps\,\Leftrightarrow-\eps\lt \ln x\lt \eps</m> to find a <m>\delta</m>.
@@ -2085,8 +2142,14 @@ ref="cor_PosDerivIncFunc2">Corollary</xref>.  </p> </statement>
     <p>
       Use part (a) to prove that <m>\ln x</m> is continuous at any positive real number <m>a</m>. 
 </p>
+<p>
+
+</p>
 </statement>
 <hint>
+<p>
+
+</p>
   <p>
     <m>\ln(x)=\ln(x/a)+\ln(a)</m>.
     This is a combination of functions which are continuous at <m>a</m>.

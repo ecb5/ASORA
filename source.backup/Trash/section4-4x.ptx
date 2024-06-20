@@ -1,0 +1,166 @@
+
+
+<section>
+  <title>Additional Problems</title>
+  <problem>
+    <statement>
+      <p>
+        <idx><h>convergence</h><h> of a sequence</h><h>implies the convergence of the absolute sequence</h></idx>
+    Prove that if
+        <m>\lim_{n\rightarrow\infty}s_n=s</m> then <m>\lim_{n\rightarrow\infty}|s_n|=|s|</m>.
+        Prove that the converse is true when <m>s=0</m>,
+        but it is not necessarily true otherwise.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>sequences</h><h>limit is unique</h></idx>
+        <ol label="(a)">
+          <li>
+            <p>
+              Let <m>\left(s_n\right)</m> and
+              <m>\left(t_n\right)</m> be sequences with <m>s_n\leq t_n,\forall n</m>.
+              Suppose <m>\lim_{n\rightarrow\infty}s_n=s</m> and <m>\lim_{n\rightarrow\infty}t_n=t</m>.
+              Prove <m>s\leq t</m>. 
+              <hint>
+                Assume for contradiction,
+                that <m>s>t</m> and use the definition of convergence with
+                <m>\eps=\frac{s-t}{2}</m> to produce an <m>n</m> with <m>s_n>t_n</m>.
+              </hint>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Prove that if a sequence converges, then its limit is unique.
+              That is, prove that if <m>\lim_{n\rightarrow\infty}s_n=s</m> and <m>\lim_{n\rightarrow\infty}s_n=t</m>,
+              then <m>s=t</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>if the sequence <m>\left(s_n\right)</m> is bounded then
+        <m>\lim_{n\rightarrow\infty}\left(\frac{s_n}{n}\right)=0</m></h></idx> Prove that if the sequence
+        <m>\left(s_n\right)</m> is bounded then <m>\lim_{n\rightarrow\infty}\left(\frac{s_n}{n}\right)=0</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="prob_series-geometric">
+    <statement>
+      <p>
+            <idx><h>series</h><h>Geometric series</h><h>convergence/divergence conditions for</h></idx>
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Prove that if <m>x\neq 1</m>, then
+              <me>
+                1+x+x^2+\cdots+x^n=\frac{1-x^{n+1}}{1-x}
+              </me>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use (a) to prove that if <m>|x|\lt 1</m>,
+              then <m>\lim_{n\rightarrow\infty}\left(\sum_{j=0}^nx^j\right)=\frac{1}{1-x}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>limit</h><h> of ratios of polynomials</h></idx>
+        Prove
+        <me>
+          \lim_{n\rightarrow\infty}\frac{a_0+a_1n+a_2n^2+ \cdots+a_kn^k}{b_0+b_1n+b_2n^2+\cdots+b_kn^k}=\frac{a_k}{b_k}
+        </me>,
+        provided <m>b_k\neq 0</m>. [Notice that since a polynomial only has finitely many roots,
+        then the denominator will be non-zero when <m>n</m> is sufficiently large.]
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>sequences</h><h>difference of</h></idx>
+            <idx><h>limit</h><h>of the difference of sequences</h></idx>
+        Prove that if <m>\lim_{n\rightarrow\infty}s_n=s</m> and <m>\lim_{n\rightarrow\infty}\left(s_n-t_n\right)=0</m>, then <m>\lim_{n\rightarrow\infty}t_n=s</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>sequences</h><h>lower and upper bounds for</h></idx>
+        <ol label="(a)">
+          <li>
+            <p>
+              Prove that if <m>\lim_{n\rightarrow\infty}s_n=s</m> and <m>s\lt t</m>,
+              then there exists a real number <m>N</m> such that if <m>n>N</m> then <m>s_n\lt t</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Prove that if <m>\lim_{n\rightarrow\infty}s_n=s</m> and <m>r\lt s</m>,
+              then there exists a real number <m>M</m> such that if <m>n>M</m> then <m>r\lt s_n</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="prob_RatioTest">
+    <statement>
+      <p>
+            <idx><h>sequences</h><h>Ratio Test for</h></idx>
+            <idx><h>Ratio Test</h><h>for sequences</h></idx>
+        Suppose <m>\left(s_n\right)</m> is a sequence of positive numbers such that
+        <me>
+          \lim_{n\rightarrow\infty}\left(\frac{s_{n+1}}{s_n}\right)=L
+        </me>.
+        <ol label="(a)">
+          <li>
+            <p>
+              Prove that if <m>L\lt 1</m>,
+              then <m>\lim_{n\rightarrow\infty}s_n=0</m>. 
+              <hint> Choose <m>R</m> with <m>L\lt R\lt 1</m>.
+                By the previous problem,
+                <m>\exists</m> <m>N</m> such that if <m>n>N</m>,
+                then <m>\frac{s_{n+1}}{s_n}\lt R</m>.
+                Let <m>n_0>N</m> be fixed and show <m>s_{n_0+k}\lt R^ks_{n_0}</m>.
+                Conclude that <m>\lim_{k\rightarrow\infty}s_{n_0+k}=0</m> and let <m>n=n_0+k</m>.
+              </hint>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Let <m>c</m> be a positive real number.
+              Prove <m>\displaystyle\lim_{n\rightarrow\infty}\left(\frac{c^n}{n!}\right)=0</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:27-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sequences of Real Numbers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Convergence.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Convergence.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="LimitAsPrimary.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Convergence.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Convergence.html" title="Up">Up</a><a class="next-button button toolbar-item" href="LimitAsPrimary.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="active">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="SeqRealNum"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">Sequences of Real Numbers</span>
+</h2>
+<p id="p-455">In <a href="CalcIn17th18thCentury.html" class="internal" title="Chapter 4: Calculus in the 17th and 18th Centuries">Chapter 4</a>, we developed the equation <span class="process-math">\(1+x+x^2+x^3+\cdots=\frac{1}{1-x}\text{,}\)</span> and we mentioned there were limitations to this power series representation.  For example, substituting <span class="process-math">\(x=1\)</span> and <span class="process-math">\(x=-1\)</span> into this expression leads to</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/CalcIn17th18thCentury.html">
+\begin{equation*}
+1+1+1+\cdots=\frac{1}{0} \text{ and }  1-1+1-1+\cdots=\frac{1}{2}\
+\end{equation*}
+</div>
+<p class="continuation">which are rather hard to accept.  On the other hand, if we substitute <span class="process-math">\(x=\frac{1}{2}\)</span> into the expression we get <span class="process-math">\(1+\frac{1}{2}+\left(\frac{1}{2}\right)^2+\left(\frac{1}{2}\right)^3+\cdots=2\)</span> which seems more palatable until we think about it.  We can add two numbers together by the method we all learned in elementary school.  Or three.  Or any finite set of numbers, at least in principle.  But infinitely many?  What does that even mean? Before we can add infinitely many numbers together we must find a way to give meaning to the idea.</p>
+<p id="p-456">To do this, we examine an infinite sum by thinking of it as a sequence of finite partial sums. In our example, we would have the following sequence of partial sums.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left(1,1+\frac{1}{2},1+\frac{1}{2}+\left(\frac{1}{2}\right)^2,1+ \frac{1}{2}+\left(\frac{1}{2}\right)^3,\ldots,\sum_{j=0}^n\left(\frac{1}{2} \right)^j,\ldots\right)\text{.}
+\end{equation*}
+</div>
+<p id="p-457">We can plot these sums on a number line to see what they tend toward as <span class="process-math">\(n\)</span> gets large.</p>
+<div class="image-box" style="width: 84%; margin-left: 8%; margin-right: 8%;"><img src="images/NumberLine.png" class="contained"></div>
+<p id="p-458">Since each partial sum is located at the midpoint between the previous partial sum and <span class="process-math">\(2\text{,}\)</span> it is reasonable to suppose that these sums tend to the number 2. Indeed, you probably have seen an expression such as <span class="process-math">\(\lim_{n\rightarrow\infty}\)</span> <span class="process-math">\(\left(\sum_{j=0}^n\left(\frac{1}{2}\right)^j\right)=2\)</span> justified by a similar argument. Of course, the reliance on such pictures and words is fine if we are satisfied with intuition. However, we must be able to make these intuitions rigorous without relying on pictures or nebulous words such as “approaches.”</p>
+<p id="p-459">No doubt you are wondering “What's wrong with the word ‘approaches’? It seems clear enough to me.” This is often a sticking point. But if we think carefully about what we mean by the word “approach” we see that there is an implicit assumption that will cause us some difficulties later if we don't expose it.</p>
+<p id="p-460">To see this consider the sequence <span class="process-math">\(\left(1,\frac12,\frac13,\frac14,\ldots\right)\text{.}\)</span> Clearly it “approaches” zero, right? But, doesn't it also “approach” <span class="process-math">\(-1?\)</span> It does, in the sense that each term gets closer to <span class="process-math">\(-1\)</span> than the one previous. But it also “approaches” <span class="process-math">\(-2\text{,}\)</span> <span class="process-math">\(-3\text{,}\)</span> or even <span class="process-math">\(-1000\)</span> in the same sense. That's the problem with the word “approaches.” It just says that we're getting closer to something than we were in the previous step. It does <em class="emphasis">not</em> tell us that we are actually getting close. Since the moon moves in an elliptical orbit about the earth for part of each month it is “approaching” the earth. The moon gets clos<em class="emphasis">er</em> to the earth but, thankfully, it does not get <em class="emphasis">close</em> to the earth. The implicit assumption we alluded to earlier is this: When we say that the sequence <span class="process-math">\(\left(\frac1n\right)_{n=1}^\infty\)</span> “approaches” zero we mean that it is getting <em class="emphasis">close</em> not clos<em class="emphasis">er</em>. Ordinarily this kind of vagueness in our language is pretty innocuous. When we say “approaches” in casual conversation we can usually tell from the context of the conversation whether we mean “getting close to” or “getting closer to.” But when speaking mathematically we need to be more careful, more explicit, in the language we use.</p>
+<p id="p-461">So how can we change the language we use so that this ambiguity is eliminated? Let's start out by recognizing, rigorously, what we mean when we say that a sequence converges to zero. For example, you would probably want to say that the sequence <span class="process-math">\(\left(1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\,\ldots\right)=\left( \frac{1}{n}\right)_{n=1}^\infty\)</span> converges to zero. Is there a way to give this meaning without relying on pictures or intuition?</p>
+<p id="p-462">One way would be to say that we can make <span class="process-math">\(\frac{1}{n}\)</span> as close to zero as we wish, provided we make <span class="process-math">\(n\)</span> large enough. But even this needs to be made more specific. For example, we can get <span class="process-math">\(\frac{1}{n}\)</span> to within a distance of <span class="process-math">\(.1\)</span> of <span class="process-math">\(0\)</span> provided we make <span class="process-math">\(n&gt;10\text{,}\)</span> we can get <span class="process-math">\(\frac{1}{n}\)</span> to within a distance of <span class="process-math">\(.01\)</span> of <span class="process-math">\(0\)</span> provided we make <span class="process-math">\(n&gt;100\text{,}\)</span> etc. After a few such examples it is apparent that given any arbitrary distance <span class="process-math">\(\eps&gt;0\text{,}\)</span> we can get <span class="process-math">\(\frac{1}{n}\)</span> to within <span class="process-math">\(\eps\)</span> of <span class="process-math">\(0\)</span> provided we make <span class="process-math">\(n&gt;\frac{1}{\eps}\text{.}\)</span> This leads to the following definition.</p>
+<article class="definition definition-like" id="def_ConvergeToZero"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.1</span><span class="period">.</span>
+</h3>
+<p id="p-463"> Let <span class="process-math">\(\left(s_n\right)=\left(s_1,s_2,s_3,\ldots\right)\)</span> be a sequence of real numbers. We say that <span class="process-math">\(\left(\boldsymbol{s}_{\boldsymbol{n}}\right)\)</span> <dfn class="terminology">converges to 0</dfn> and write <span class="process-math">\(\lim_{n\rightarrow\infty}s_n=0\)</span> provided for any <span class="process-math">\(\eps&gt;0\text{,}\)</span> there is a real number <span class="process-math">\(N\)</span> such that if <span class="process-math">\(n&gt;N\text{,}\)</span> then <span class="process-math">\(|s_n|\lt \eps\text{.}\)</span></p></article><p id="p-464"><dfn class="terminology">Notes on <a href="" class="xref" data-knowl="./knowl/def_ConvergeToZero.html" title="Definition 7.1.1">Definition 7.1.1</a></dfn>:</p>
+<ol class="decimal">
+<li id="li-30"><p id="p-465">This definition is the formal version of the idea we just talked about; that is, given an arbitrary distance <span class="process-math">\(\eps\text{,}\)</span> we must be able to find a specific number <span class="process-math">\(N\)</span> such that <span class="process-math">\(s_n\)</span> is within <span class="process-math">\(\eps\)</span> of <span class="process-math">\(0\text{,}\)</span> whenever <span class="process-math">\(n&gt;N\text{.}\)</span> The <span class="process-math">\(N\)</span> is the answer to the question of how large is “large enough” to put <span class="process-math">\(s_n\)</span> this close to <span class="process-math">\(0\text{.}\)</span></p></li>
+<li id="li-31"><p id="p-466">Even though we didn't need it in the example <span class="process-math">\(\left(\frac{1}{n}\right)\text{,}\)</span> the absolute value appears in the definition because we need to make the <em class="emphasis">distance</em> from <span class="process-math">\(s_n\)</span> to 0 smaller than <span class="process-math">\(\eps\text{.}\)</span> Without the absolute value in the definition, we would be able to “prove” such outrageous statements as <span class="process-math">\(\lim_{n\rightarrow\infty}-n=0\text{,}\)</span> which we obviously don't want.</p></li>
+<li id="li-32"><p id="p-467">The statement <span class="process-math">\(|s_n|\lt \eps\)</span> can also be written as <span class="process-math">\(-\eps\lt s_n\lt \eps\)</span> or <span class="process-math">\(s_n\in\left(-\eps,\eps\right)\text{.}\)</span> (See the <a href="" class="xref" data-knowl="./knowl/prob_absolute_value.html" title="Problem 7.1.2">Problem 7.1.2</a> below.) Any one of these equivalent formulations can be used to prove convergence. Depending on the application, one of these may be more advantageous to use than the others.</p></li>
+<li id="li-33"><p id="p-468">Any time an <span class="process-math">\(N\)</span> can be found that works for a particular <span class="process-math">\(\eps\text{,}\)</span> any number <span class="process-math">\(M&gt;N\)</span> will work for that <span class="process-math">\(\eps\)</span> as well, since if <span class="process-math">\(n&gt;M\)</span> then <span class="process-math">\(n&gt;N\text{.}\)</span></p></li>
+</ol>
+<article class="problem example-like" id="prob_absolute_value"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_absolute_value"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.1.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_absolute_value"><article class="problem example-like"><p id="p-469"> Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be real numbers with <span class="process-math">\(b&gt;0\text{.}\)</span> Prove <span class="process-math">\(|a|\lt b\)</span> if and only if <span class="process-math">\(-b\lt a\lt b\text{.}\)</span> Notice that this can be extended to <span class="process-math">\(|a|\leq b\)</span> if and only if <span class="process-math">\(-b\leq a\leq b\text{.}\)</span></p></article></div>
+<p id="p-470">To illustrate how this definition makes the above ideas rigorous, let's use it to prove that <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\frac{1}{n}=0\text{.}\)</span></p>
+<article class="hiddenproof" id="proof-3"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-3"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-3"><article class="hiddenproof"><p id="p-471">Let <span class="process-math">\(\eps&gt;0\)</span> be given. Let <span class="process-math">\(N=\frac{1}{\eps}\text{.}\)</span> If <span class="process-math">\(n&gt;N\text{,}\)</span> then <span class="process-math">\(n&gt;\frac{1}{\eps}\)</span> and so <span class="process-math">\(|\frac{1}{n}|=\frac{1}{n}\lt \eps\text{.}\)</span> Hence by definition, <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{1}{n}=0\text{.}\)</span></p></article></div>
+<p id="p-472">Notice that this proof is rigorous and makes no reference to vague notions such as “getting smaller” or “approaching infinity.” It has three components:</p>
+<ol class="decimal">
+<li id="li-34"><p id="p-derived-li-34">provide the challenge of a distance <span class="process-math">\(\eps&gt;0\text{,}\)</span></p></li>
+<li id="li-35"><p id="p-derived-li-35">identify a real number <span class="process-math">\(N\text{,}\)</span> and</p></li>
+<li id="li-36"><p id="p-derived-li-36">show that this <span class="process-math">\(N\)</span> works for this given <span class="process-math">\(\eps\text{.}\)</span></p></li>
+</ol>
+<p class="continuation">There is also no explanation about where <span class="process-math">\(N\)</span> came from. While it is true that this choice of <span class="process-math">\(N\)</span> is not surprising in light of the “scrapwork” we did before the definition, the motivation for how we got it is not in the formal proof nor is it required.  In fact, such scrapwork is typically not included in a formal proof.  For example, consider the following.</p>
+<article class="example example-like" id="example-3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-3"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.3</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-3"><article class="example example-like"><p id="p-473">Use the definition of convergence to zero to prove</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\frac{\sin n}{n}=0\text{.}
+\end{equation*}
+</div></article></div>
+<article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-474">Let <span class="process-math">\(\eps&gt;0\text{.}\)</span> Let <span class="process-math">\(N=\frac{1}{\eps}\text{.}\)</span> If <span class="process-math">\(n&gt;N\text{,}\)</span> then <span class="process-math">\(n&gt;\frac{1}{\eps}\)</span> and <span class="process-math">\(\frac{1}{n}\lt \eps\text{.}\)</span> Thus <span class="process-math">\(\abs{\frac{\sin(n)}{n}}\leq\frac{1}{n}\lt \eps\text{.}\)</span> Hence by definition, <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{\sin n}{n}=0\text{.}\)</span></p></article></div>
+<p id="p-475">Notice that the <span class="process-math">\(N\)</span> came out of nowhere, but you can probably see the thought process that went into this choice: We needed to use the inequality <span class="process-math">\(\abs{\sin n}\leq 1\text{.}\)</span> Again this scrapwork is not part of the formal proof, but it is typically necessary for finding what <span class="process-math">\(N\)</span> should be. You might be able to do the next problem without doing any scrapwork first, but don't hesitate to do scrapwork if you need it.</p>
+<article class="problem example-like" id="problem-58"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-58"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.1.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-58"><article class="problem example-like"><div class="introduction" id="introduction-9"><p id="p-476"> Use the definition of convergence to zero to prove the following.</p></div>
+<article class="task exercise-like" id="task-53"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-477"><span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\frac{1}{n^2}=0\)</span></p></article><article class="task exercise-like" id="task-54"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-478"><span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\frac{1}{\sqrt{n}}=0\)</span></p></article></article></div>
+<p id="p-479">As the sequences get more complicated, doing scrapwork ahead of time will become more necessary.</p>
+<article class="example example-like" id="sec_defin-conv-sequ"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-sec_defin-conv-sequ"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.5</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-sec_defin-conv-sequ"><article class="example example-like"><p id="p-480">Use the definition of convergence to zero to prove</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\frac{n+4}{n^2+1}=0\text{.}
+\end{equation*}
+</div>
+<p id="p-481"><dfn class="terminology">SCRAPWORK</dfn></p>
+<p id="p-482">Given an <span class="process-math">\(\eps&gt;0\text{,}\)</span> we need to see how large to make <span class="process-math">\(n\)</span> in order to guarantee that <span class="process-math">\(|\frac{n+4}{n^2+1}|\lt \eps\text{.}\)</span> First notice that <span class="process-math">\(\frac{n+4}{n^2+1}\lt \frac{n+4}{n^2}\text{.}\)</span> Also, notice that if <span class="process-math">\(n&gt;4\text{,}\)</span> then <span class="process-math">\(n+4\lt n+n=2n\text{.}\)</span> So as long as <span class="process-math">\(n&gt;4\text{,}\)</span> we have <span class="process-math">\(\frac{n+4}{n^2+1}\lt \frac{n+4}{n^2}\lt \frac{2n}{n^2}=\frac{2}{n}\text{.}\)</span> We can make this less than <span class="process-math">\(\eps\)</span> if we make <span class="process-math">\(n&gt;\frac{2}{\eps}\text{.}\)</span> This means we need to make <span class="process-math">\(n&gt;4\)</span> and <span class="process-math">\(n&gt;\frac{2}{\eps}\text{,}\)</span> simultaneously. These can be done if we let <span class="process-math">\(N\)</span> be the maximum of these two numbers. This sort of thing comes up regularly, so the notation <span class="process-math">\(N=\max\left(4,\frac{2}{\eps}\right)\)</span> was developed to mean the maximum of these two numbers. Notice that if <span class="process-math">\(N=\max\left(4, \frac{2}{\eps}\right)\)</span> then <span class="process-math">\(N\geq 4\)</span> and <span class="process-math">\(N\geq\frac{2}{\eps}\text{.}\)</span> We're now ready for the formal proof.</p></article></div>
+<article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><p id="p-483">Let <span class="process-math">\(\eps&gt;0\text{.}\)</span> Let <span class="process-math">\(N=\max\left(4,\frac{2}{\eps}\right)\text{.}\)</span> If <span class="process-math">\(n&gt;N\text{,}\)</span> then <span class="process-math">\(n&gt;4\)</span> and <span class="process-math">\(n&gt;\frac{2}{\eps}\text{.}\)</span> Thus we have <span class="process-math">\(n&gt;4\)</span> and <span class="process-math">\(\frac{2}{n}\lt \eps\text{.}\)</span> Therefore</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\abs{\frac{n+4}{n^2+1}}=\frac{n+4}{n^2+1}\lt \frac{n+4}{n^2}\lt \frac{2n}{n^2}= \frac{2}{n}\lt \eps\text{.}
+\end{equation*}
+</div>
+<p id="p-484">Hence by definition, <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\frac{n+4}{n^2+1}=0\text{.}\)</span></p></article></div>
+<p id="p-485">Again we emphasize that the scrapwork is not <em class="alert">explicitly</em> a part of the formal proof.  However, if you look carefully, you can always find the scrapwork in the formal proof.</p>
+<article class="problem example-like" id="problem-59"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-59"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.1.6</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-59"><article class="problem example-like"><p id="p-486"> Use the definition of convergence to zero to prove</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n\rightarrow\infty}\frac{n^2+4n+1}{n^3}=0.{}
+\end{equation*}
+</div></article></div>
+<article class="problem example-like" id="prob_sequences3"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_sequences3"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.1.7</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_sequences3"><article class="problem example-like"><div class="introduction" id="introduction-10"><p id="p-487">Let <span class="process-math">\(b\)</span> be a nonzero real number with <span class="process-math">\(|b|\lt 1\)</span> and let <span class="process-math">\(\eps&gt;0\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-55"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-488">Solve the inequality <span class="process-math">\(|b|^n\lt \eps\)</span> for <span class="process-math">\(n\)</span></p></article><article class="task exercise-like" id="task-56"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-489">Use part (a) to prove <span class="process-math">\(\lim_{n\rightarrow\infty}b^n=0\text{.}\)</span></p></article></article></div>
+<p id="p-490">We can negate this definition to prove that a particular sequence does not converge to zero.</p>
+<article class="example example-like" id="ex_zero-two-not-converge"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex_zero-two-not-converge"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.8</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex_zero-two-not-converge"><article class="example example-like"><p id="p-491">Use the definition to prove that the sequence</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left(1+(-1)^n\right)_{n=0}^\infty=(2,0,2,0,2,\ldots)
+\end{equation*}
+</div>
+<p class="continuation">does not converge to zero.</p></article></div>
+<p id="p-492">Before we provide this proof, let's analyze what it means for a sequence <span class="process-math">\(\left(s_n\right)\)</span> to <em class="emphasis">not</em> converge to zero.  Converging to zero means that any time a distance <span class="process-math">\(\eps&gt;0\)</span> is given, we must be able to respond with a number <span class="process-math">\(N\)</span> such that <span class="process-math">\(|s_n|\lt \eps\)</span> for every <span class="process-math">\(n&gt;N\text{.}\)</span>  To have this not happen, we must be able to find some <span class="process-math">\(\eps&gt;0\)</span> such that no choice of <span class="process-math">\(N\)</span> will work.  Of course, if we find such an <span class="process-math">\(\eps\text{,}\)</span> then any smaller one will fail to have such an <span class="process-math">\(N\text{,}\)</span> but we only need one to mess us up.  If you stare at the example long enough, you see that any <span class="process-math">\(\eps\)</span> with <span class="process-math">\(0\lt
+\eps\leq 2\)</span> will cause problems.  For our purposes, we will let <span class="process-math">\(\eps=2\text{.}\)</span></p>
+<article class="hiddenproof" id="proof-6"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-6"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-6"><article class="hiddenproof"><p id="p-493">Let <span class="process-math">\(\eps=2\)</span> and let <span class="process-math">\(N\in\NN\)</span> be any integer. If we let <span class="process-math">\(k\)</span> be any non-negative integer with <span class="process-math">\(k&gt;\frac{N}{2}\text{,}\)</span> then <span class="process-math">\(n=2k&gt;N\text{,}\)</span> but <span class="process-math">\(|1+(-1)^n|=2\text{.}\)</span> Thus no choice of <span class="process-math">\(N\)</span> will satisfy the conditions of the definition for this <span class="process-math">\(\eps\text{,}\)</span> (namely that <span class="process-math">\(|1+(-1)^n|\lt 2\)</span> for all <span class="process-math">\(n&gt;N\)</span>) and so <span class="process-math">\(\lim_{n\rightarrow\infty}\left(1+(-1)^n\right)\neq 0\text{.}\)</span></p></article></div>
+<article class="problem example-like" id="prob_sequences-not_converge_to_zero"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_sequences-not_converge_to_zero"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.1.9</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_sequences-not_converge_to_zero"><article class="problem example-like"><p id="p-494"> Negate the definition of <span class="process-math">\(\lim_{n\rightarrow\infty}s_n=0\)</span> to provide a formal definition for <span class="process-math">\(\lim_{n\rightarrow\infty}s_n\neq 0\text{.}\)</span></p></article></div>
+<article class="problem example-like" id="prob_sequences4"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_sequences4"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.1.10</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_sequences4"><article class="problem example-like"><p id="p-495">Use the definition to prove <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{n}{n+100}\neq 0\text{.}\)</span></p></article></div>
+<p id="p-496">Now that we have a handle on how to rigorously prove that a sequence converges to zero, let's generalize this to a formal definition for a sequence converging to something else. Basically, we want to say that a sequence <span class="process-math">\(\left(s_n\right)\)</span> converges to a real number <span class="process-math">\(s\text{,}\)</span> provided the difference <span class="process-math">\(\left(s_n-s\right)\)</span> converges to zero. This leads to the following definition:</p>
+<article class="definition definition-like" id="def_ConvergenceOfASequence"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.11</span><span class="period">.</span>
+</h3>
+<p id="p-497"> Let <span class="process-math">\(\left(s_n\right)=\left(s_1,s_2,s_3,\ldots\right)\)</span> be a sequence of real numbers and let <span class="process-math">\(s\)</span> be a real number. We say that <span class="process-math">\(\left(\boldsymbol{s}_{\boldsymbol{n}}\right)\)</span> {converges to} <span class="process-math">\(\boldsymbol{s}\)</span> and write <span class="process-math">\(\lim_{n\rightarrow\infty}s_n=s\)</span> provided for any <span class="process-math">\(\eps&gt;0\text{,}\)</span> there is a real number <span class="process-math">\(N\)</span> such that if <span class="process-math">\(n&gt;N\text{,}\)</span> then <span class="process-math">\(|s_n-s|\lt \eps\text{.}\)</span></p></article><p id="p-498">{Notes on <a href="" class="xref" data-knowl="./knowl/def_ConvergenceOfASequence.html" title="Definition 7.1.11">Definition 7.1.11</a>}</p>
+<ol id="p-499" class="decimal">
+<li id="li-37">
+<p id="p-500">Clearly</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\lim_{n\rightarrow\infty}s_n=s \text{ if and only if } \lim_{n\rightarrow\infty}\left(s_n-s\right)=0\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="li-38"><p id="p-501">Again notice that this says that we can make <span class="process-math">\(s_n\)</span> as close to <span class="process-math">\(s\)</span> as we wish (within <span class="process-math">\(\eps\)</span>) by making <span class="process-math">\(n\)</span> large enough (<span class="process-math">\(&gt;N)\text{.}\)</span> As before, this definition makes these notions very specific.</p></li>
+<li id="li-39">
+<p id="p-502">Notice that <span class="process-math">\(|s_n-s|\lt \eps\)</span> can be written in the following equivalent forms</p>
+<ol id="p-503" class="lower-alpha">
+<li id="li-40"><p id="p-504"><span class="process-math">\(\displaystyle |s_n-s|\lt \eps\)</span></p></li>
+<li id="li-41"><p id="p-505"><span class="process-math">\(\displaystyle -\eps\lt s_n-s\lt \eps\)</span></p></li>
+<li id="li-42"><p id="p-506"><span class="process-math">\(\displaystyle s-\eps\lt s_n\lt s+\eps\)</span></p></li>
+<li id="li-43"><p id="p-507"><span class="process-math">\(\displaystyle s_n\in\left(s-\eps,s+\eps\right)\)</span></p></li>
+</ol>
+<p id="p-508">and we are free to use any one of these which is convenient at the time.</p>
+</li>
+</ol>
+<p id="p-509">As an example, let's use this definition to prove that the sequence in <a href="" class="xref" data-knowl="./knowl/prob_sequences4.html" title="Problem 7.1.10">Problem 7.1.10</a>, in fact, converges to 1.</p>
+<article class="example example-like" id="example_SeriesConverge"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example_SeriesConverge"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.12</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example_SeriesConverge"><article class="example example-like"><p id="p-510">Prove <span class="process-math">\(\displaystyle\lim_{n\rightarrow\infty}\frac{n}{n+100}=1\text{.}\)</span></p>
+<p id="p-511"><dfn class="terminology">SCRAPWORK</dfn></p>
+<p id="p-512">Given an <span class="process-math">\(\eps&gt;0\text{,}\)</span> we need to get <span class="process-math">\(\abs{\frac{n}{n+100}-1}\lt \eps\text{.}\)</span> This prompts us to do some algebra.</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left|\frac{n}{n+100}-1\right|=\left|\frac{n-(n+100)}{n+100}\right|\leq\frac{100}{n}\text{.}
+\end{equation*}
+</div>
+<p id="p-513">This in turn, seems to suggest that <span class="process-math">\(N=\frac{100}{\eps}\)</span> should work.</p></article></div>
+<article class="hiddenproof" id="proof-7"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><p id="p-514">Let <span class="process-math">\(\eps&gt;0\text{.}\)</span> Let <span class="process-math">\(N=\frac{100}{\eps}\text{.}\)</span> If <span class="process-math">\(n&gt;N\text{,}\)</span> then <span class="process-math">\(n&gt;\frac{100}{\eps}\)</span> and so <span class="process-math">\(\frac{100}{n}\lt \eps\text{.}\)</span> Hence</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left|\frac{n}{n+100}-1\right|=\left|\frac{n-(n+100)}{n+100}\right|= \frac{100}{n+100}\lt \frac{100}{n}\lt \eps\text{.}
+\end{equation*}
+</div>
+<p id="p-515">Thus by definition <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{n}{n+100} =1\text{.}\)</span></p></article></div>
+<p id="p-516">Notice again that the scrapwork is not part of the formal proof and the author of a proof is not obligated to tell where the choice of <span class="process-math">\(N\)</span> came from (although the thought process can usually be seen in the formal proof). The formal proof contains only the requisite three parts: provide the challenge of an arbitrary <span class="process-math">\(\eps&gt;0\text{,}\)</span> provide a specific <span class="process-math">\(N\text{,}\)</span> and show that this <span class="process-math">\(N\)</span> works for the given <span class="process-math">\(\eps\text{.}\)</span></p>
+<p id="p-517">Also notice that given a specific sequence such as <span class="process-math">\(\left(\frac{n}{n+100}\right)\text{,}\)</span> the definition does not indicate what the limit would be if, in fact, it exists. Once an educated guess is made as to what the limit should be, the definition only verifies that this intuition is correct.</p>
+<p id="p-518">This leads to the following question: If intuition is needed to determine what a limit of a sequence should be, then what is the purpose of this relatively non-intuitive, complicated definition?</p>
+<p id="p-519">Remember that when these rigorous formulations were developed, intuitive notions of convergence were already in place and had been used with great success. This definition was developed to address the foundational issues. Could our intuitions be verified in a concrete fashion that was above reproach? This was the purpose of this non-intuitive definition. It was to be used to verify that our intuition was, in fact, correct and do so in a very prescribed manner. For example, if <span class="process-math">\(b&gt;0\)</span> is a fixed number, then you would probably say as <span class="process-math">\(n\)</span> approaches infinity, <span class="process-math">\(b^{\left(\frac{1}{n}\right)}\)</span> approaches <span class="process-math">\(b^0=1\text{.}\)</span> After all, we did already prove that <span class="process-math">\(\lim_{n\rightarrow\infty}\frac{1}{n}=0\text{.}\)</span> We should be able to back up this intuition with our rigorous definition.</p>
+<article class="problem example-like" id="problem-63"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-63"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.1.13</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-63"><article class="problem example-like"><p id="p-520"> Let <span class="process-math">\(b&gt;0\text{.}\)</span> Use the definition to prove <span class="process-math">\(\limit{n}{\infty}{b^{\left(\frac{1}{n}\right)}}=1\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-521">You will probably need to separate this into two cases: <span class="process-math">\(0\lt b\lt 1\)</span> and <span class="process-math">\(b\geq 1\text{.}\)</span></p></div></div>
+</div></article></div>
+<article class="problem example-like" id="problem-64"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-64"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.1.14</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-64"><article class="problem example-like"><article class="task exercise-like" id="task-57"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-522">Provide a rigorous definition for <span class="process-math">\(\limit{n}{\infty}{s_n}\neq s\text{.}\)</span></p></article><article class="task exercise-like" id="task-58"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-523">Use your definition to show that for any real number <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(\limit{n}{\infty}{\left(\left(-1\right)^n\right)}\neq a\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-524">Choose <span class="process-math">\(\eps=1\)</span> and use the fact that <span class="process-math">\(\Big|a-(-1)^n\Big|\lt 1\)</span> is equivalent to <span class="process-math">\(\left(-1\right)^n-1\lt a\lt \left(-1\right)^n+1\)</span> to show that no choice of <span class="process-math">\(N\)</span> will work for this <span class="process-math">\(\eps\text{.}\)</span></p></div></div>
+</div></article></article></div></section></div></main>
+</div>
+</body>
+</html>

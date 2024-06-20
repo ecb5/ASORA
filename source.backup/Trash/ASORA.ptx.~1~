@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+
+  <docinfo>
+
+<macros>
+\def\theindex{}
+\def\subitem{
+
+\hangindent 40pt \hspace{20pt}}
+\def\subsubitem{
+
+\hangindent 40pt \hspace{30pt}}
+\def\indexspace{
+
+plus 5pt minus 3pt\relax}
+%\newcommand{\see}[2]{\emph{see} #1}
+\def\halmos{\mbox{\rule{0.1in}{0.1in}}}
+\newcommand{\xqedhere}[2]{
+\rlap{\hbox to#1{\hfil\llap{#2}}}}
+\newcommand{\xqed}[1]{
+\leavevmode\unskip \hbox{}\hfill
+\quad\hbox{#1}}
+\def\IndexCorollaryGeneral#1#2{\index{#2!Corollary~\ref{#1}}}
+\def\IndexCorollaryTheorems#1#2{\index{corollaries}{Corollary~\ref{#1}!{#2}}}
+\def\IndexLemmaGeneral#1#2{\index{#2!Lemma~\ref{#1}}}
+\def\IndexLemmaTheorems#1#2{\index{lemmas}{Lemma~\ref{#1}!{#2}}}
+%\newcommand{\abs}[1]{\left|#1\right|}
+\def\ShowSolutionsP{0}
+\newcommand{\solution}[1]{\ifnum\ShowSolutionsP=1 {\textbf{Solution: }#1}\fi}
+\def\imp{\ \Rightarrow\ }
+\newcommand{\d}[1]{\,{ d}#1}
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+</macros>
+
+<latex-image-preamble>
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tkz-euclide}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+
+\usepackage{pgfplots}
+
+</latex-image-preamble>
+  </docinfo>
+
+  <book xml:id="ASORA">
+    <title>asoraHow We Got From There To Here: A Story of Real Analysis</title>
+    <frontmatter>
+
+      <titlepage>
+
+        <author>
+          <personname>Robert Rogers</personname>
+          <department>Department of Mathematics and Computer Science</department>
+          <institution>
+            <line>SUNY, Fredonia</line>
+            <line>Fredonia, New York, USA</line>
+          </institution>
+          <email>Robert.Rogers@fredonia.edu</email>
+        </author>
+        <author>
+          <personname>Eugene C. Boman</personname>
+          <department>Department of Mathematics and Computer Science</department>
+          <institution>
+            <line>Penn State, Harrisburg campus</line>
+            <line>Harrisburg, PA, USA</line>
+          </institution>
+          <email>ecb5@psu.edu</email>
+        </author>
+
+       
+      </titlepage>
+
+    <colophon xml:id="front-colophon">
+
+      <copyright>
+            <year>2014</year>
+        <url href="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+        <holder>Robert Rogers and Eugene Boman</holder>
+        <shortlicense>
+          How We Got from There to Here: A Story of Real Analysis by
+          Eugene Boman and Robert Rogers is licensed under a <url
+          href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+          Commons Attribution-NonCommercial-ShareAlike 4.0
+          International License</url>.  .</shortlicense>
+      </copyright>
+
+    </colophon>
+
+    </frontmatter>
+
+    <xi:include href="./Instructor.ptx" />
+
+    <xi:include href="./ThreeLessons.ptx" />
+
+<part xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AskingQuestions">
+<title>In Which We Raise A Number Of Questions</title>
+
+
+    <xi:include href="./NumbersRealRational.ptx" />
+
+    <xi:include href="./CalcIn17th18thCentury.ptx" />
+
+    <xi:include href="./PowerSeriesQuestions.ptx" />
+</part>
+
+<part xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Interregnum">
+  <title>Interregnum</title>
+    <xi:include href="./Interegnum.ptx" />
+</part>
+  
+  <part xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="FindingAnswers">
+    <title>In Which We Find (Some) Answers</title>
+    <xi:include href="./ConverSeqSer.ptx" />
+    
+    <xi:include href="./TaylorSeries.ptx" />
+
+    <xi:include href="./Continuity.ptx" />
+
+    <xi:include href="./IVTEVT.ptx" />
+
+    <xi:include href="./PowerSeriesRedux.ptx" />
+
+    <xi:include href="./BackToFourier.ptx" />
+
+    <xi:include href="./Epilogue.ptx" />
+
+  </part>
+
+    <backmatter>
+      <xi:include href="./Bibliography.ptx" />
+
+      <index>
+        <title>Index</title>
+        <index-list />
+      </index>
+    </backmatter>
+
+  </book>
+
+</pretext>
+

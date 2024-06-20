@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:03:30-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><p>For the sake of obtaining a contradiction assume that the sequence <span class="process-math">\(S\)</span> contains every real number; that is, <span class="process-math">\(S=\RR\text{.}\)</span> As usual we will build a sequence of nested intervals <span class="process-math">\(\left(\left[x_i, y_i\right]\right)_{i=1}^\infty\text{.}\)</span></p>
+<p>Let <span class="process-math">\(x_1\)</span> be the smaller of the first two distinct elements of <span class="process-math">\(S\text{,}\)</span> let <span class="process-math">\(y_1\)</span> be the larger and take <span class="process-math">\(\left[x_1,y_1\right]\)</span> to be the first interval.</p>
+<p>Next we assume that <span class="process-math">\(\left[x_{n-1}, y_{n-1}\right]\)</span> has been constructed and build <span class="process-math">\(\left[x_n, y_n\right]\)</span> as follows. Observe that there are infinitely many elements of <span class="process-math">\(S\)</span> in <span class="process-math">\(\left(x_{n-1}, y_{n-1}\right)\)</span> since <span class="process-math">\(S=\RR\text{.}\)</span> Let <span class="process-math">\(s_m\)</span> and <span class="process-math">\(s_k\)</span> be the <em class="emphasis">first</em> two distinct elements of <span class="process-math">\(S\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+s_m, s_k \in \left(x_{n-1}, y_{n-1}\right) \text{.}
+\end{equation*}
+</div>
+<p>Take <span class="process-math">\(x_n\)</span> to be the smaller and <span class="process-math">\(y_n\)</span> to be the larger of <span class="process-math">\(s_m\)</span> and <span class="process-math">\(s_k\text{.}\)</span> Then <span class="process-math">\(\left[x_n, y_n\right]\)</span> is the <span class="process-math">\(n\)</span>th interval.</p>
+<p>From the way we constructed them it is clear that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left[x_1, y_1\right] \supseteq \left[x_2, y_2\right] \supseteq \left[x_3, y_3\right] \supseteq \ldots\text{.}
+\end{equation*}
+</div>
+<p>Therefore by <a href="" class="xref" data-knowl="./knowl/thm_WeakNIP.html" title="Theorem 12.1.1">Theorem 12.1.1</a> there is a real number, say <span class="process-math">\(c\text{,}\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm_WeakNIP.html">
+\begin{equation*}
+c\in\left[x_n, y_n\right] \text{ for all }  n\in\NN\text{.}
+\end{equation*}
+</div>
+<p>In fact, since <span class="process-math">\(x_1\lt x_2\lt x_3\ldots\lt y_3\lt y_2\lt y_1\)</span> it is clear that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation}
+x_n\lt c\lt y_n, \ \forall n\text{.}\tag{12.1.1}
+\end{equation}
+</div>
+<p>We will show that <span class="process-math">\(c\)</span> is the number we seek. That the inequalities in <a href="" class="xref" data-knowl="./knowl/eq_NIP-interval.html" title="Equation 12.1.1">formula (12.1.1)</a> are strict will play a crucial role.</p>
+<p>To see that <span class="process-math">\(c\not\in S\)</span> we suppose that <span class="process-math">\(c\in S\)</span> and derive a contradiction.</p>
+<p>So, suppose that <span class="process-math">\(c=s_p\)</span> for some <span class="process-math">\(p\in\NN\text{.}\)</span> Then only <span class="process-math">\(\left\{s_1, s_2,\ldots,
+s_{p-1}\right\}\)</span> appear before <span class="process-math">\(s_p\)</span> in the sequence <span class="process-math">\(S\text{.}\)</span> Since each <span class="process-math">\(x_n\)</span> is taken from <span class="process-math">\(S\)</span> it follows that only finitely many elements of the sequence <span class="process-math">\((x_n)\)</span> appear before <span class="process-math">\(s_p=c\)</span> in the sequence as well.</p>
+<p>Let <span class="process-math">\(x_l\)</span> be the <em class="emphasis">last</em> element of <span class="process-math">\((x_n)\)</span> which appears before <span class="process-math">\(c=s_p\)</span> in the sequence and consider <span class="process-math">\(x_{l+1}\text{.}\)</span> The way it was constructed, <span class="process-math">\(x_{l+1}\)</span> was one of the first two distinct terms in the sequence <span class="process-math">\(S\)</span> strictly between <span class="process-math">\(x_l\)</span> and <span class="process-math">\(y_l\text{,}\)</span> the other being <span class="process-math">\(y_{l+1}\text{.}\)</span> Since <span class="process-math">\(x_{l+1}\)</span> does not appear before <span class="process-math">\(c=s_p\)</span> in the sequence and <span class="process-math">\(x_l\lt c\lt y_l\text{,}\)</span> it follows that either <span class="process-math">\(c=x_{l+1}\)</span> or <span class="process-math">\(c=y_{l+1}\text{.}\)</span> However, this gives us a contradiction as we know from <a href="" class="xref" data-knowl="./knowl/eq_NIP-interval.html" title="Equation 12.1.1">formula (12.1.1)</a> that <span class="process-math">\(x_{l+1}\lt c\lt y_{l+1}\text{.}\)</span></p>
+<p>Thus <span class="process-math">\(c\)</span> is not an element of <span class="process-math">\(S\text{.}\)</span></p></article></body>
+</html>

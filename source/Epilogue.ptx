@@ -740,8 +740,14 @@ We seem to find ourselves in Archimedes' predicament: We have no place to stand.
       <p>
         Show that <m>0\neq 1</m>. 
       </p>
+<p>
+
+</p>
     </statement>
     <hint>
+<p>
+
+</p>
       <p>
         Show that if <m>x\neq0</m>,
         then <m>0\cdot x \neq x</m>.
@@ -1261,8 +1267,14 @@ The man who proved <url href="https://mathshistory.st-andrews.ac.uk/HistTopics/F
         <p>
           Define addition on infinite decimals in a manner that is closed. 
         </p>
+<p>
+
+</p>
       </statement>
-      <hint> 
+      <hint>
+<p>
+
+</p> 
         <p>
           Find an appropriate <q>carry</q> operation for our definition.
         </p>
@@ -1605,6 +1617,8 @@ The man who proved <url href="https://mathshistory.st-andrews.ac.uk/HistTopics/F
     </problem>
 
       <aside>
+<title>Comment</title>
+
         <p>
           We will not address this issue here,
           but you should give some thought to how this might be accomplished.
@@ -1643,6 +1657,8 @@ The man who proved <url href="https://mathshistory.st-andrews.ac.uk/HistTopics/F
       <em>The Number System</em> by H.<nbsp />A.<nbsp />Thurston<nbsp /><xref ref="thurston56__number_system" />.
     </p>
 <aside>
+<title>Comment</title>
+
 <p>
       Thurston first builds <m>\RR</m> as we've indicated in this section.
       Then as a final remark he shows that the real numbers must be exactly the infinite decimals we saw in the previous section.</p>
@@ -1677,6 +1693,8 @@ The man who proved <url href="https://mathshistory.st-andrews.ac.uk/HistTopics/F
       It is also straightforward to show that most of the field axioms are satisfied.
     </p>
 <aside>
+<title>Comment</title>
+
 <p>
       <q>Clear</q> does not mean <q>easy to do</q> as we will see.
 </p>
@@ -1756,6 +1774,8 @@ The man who proved <url href="https://mathshistory.st-andrews.ac.uk/HistTopics/F
           A set of <em>positive</em> rational numbers is called a <em>cut</em> if
         </p>
 <aside>
+<title>Comment</title>
+
 <p> 
 Take special notice that we
           are not using the negative rational numbers or zero to build
@@ -2259,6 +2279,8 @@ Take special notice that we
     </definition>
 
 <aside>
+<title>Comment</title>
+
 <p>
       Notice also that the fifth case refers to the addition as
       defined in the second case.
@@ -2353,8 +2375,14 @@ Take special notice that we
         <p>
           Prove <xref ref="lem_Technical">Lemma</xref>. 
         </p>
+<p>
+
+</p>
       </statement>
-      <hint> 
+      <hint>
+<p>
+
+</p> 
         <p>
           Since <m>\beta</m> is a cut there exists <m>r_1\in\beta</m>.
           Let <m>s_1=y\not\in\beta</m>.  We know that <m>r_1\lt s_1\lt
@@ -2374,8 +2402,14 @@ Take special notice that we
           Let <m>\alpha</m> and <m>\beta</m> be cuts with <m>\beta\lt
           \alpha</m>.  Prove that <m>\beta+(\alpha-\beta)=\alpha</m>.
         </p>
+<p>
+
+</p>
       </statement>
       <hint>
+<p>
+
+</p>
         <p>
           It is pretty straightforward to show that
           <m>\beta+(\alpha-\beta)\subseteq\alpha</m>.  To show
@@ -2398,7 +2432,9 @@ Take special notice that we
       number system, there is really only one.  More precisely we have
       the following theorem which we state without proof. 
     </p>
-    <aside> 
+    <aside>
+<title>Comment</title>
+ 
       <p>
         In fact, <em>not</em> proving this result seems to be standard in real
         analysis references.  Most often it is simply stated as we do

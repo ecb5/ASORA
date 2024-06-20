@@ -174,8 +174,14 @@
           no rational number <m>c</m> satisfying the conclusion of
           the NIP.
         </p>
+<p>
+
+</p>
       </statement>
       <hint>
+<p>
+
+</p>
         <p>
           Consider the decimal expansion of an irrational number.
         </p>
@@ -804,8 +810,14 @@
         Prove that <m>\lim_{k\rightarrow\infty}x_{n_k}=c</m> for any subsequence
         <m>\left(x_{n_k}\right)</m> of <m>\left(x_n\right)</m>. 
       </p>
+<p>
+
+</p>
     </statement>
         <hint>
+<p>
+
+</p>
 <p>
 First prove that <m>n_k\geq k</m>.
 </p>
@@ -1057,7 +1069,7 @@ First prove that <m>n_k\geq k</m>.
         bound</em> of <m>S</m> provided
       </p>
 <p>
-      <ol label="(a)">
+      <ol marker="a">
         <li>
           <p>
             <m>b\geq x</m> for all <m>x\in S</m>. (<m>b</m> is an upper bound of <m>S</m>)
@@ -1085,7 +1097,7 @@ First prove that <m>n_k\geq k</m>.
     Notice that the definition really says that <m>b</m> is the smallest upper bound of <m>S</m>.
     Also notice that the second condition can be replaced by its contrapositive so we can say that <m>b=\sup S</m> if and only if
 
-    <ol label="(a)">
+    <ol marker="a">
       <li>
         <!-- <title>(i)</title> -->
         <p>
@@ -1229,8 +1241,14 @@ First prove that <m>n_k\geq k</m>.
         <idx><h>sequences</h><h>bounded and non-decreasing</h></idx>
         Prove <xref ref="cor_IncBoundedConverge">Corollary</xref>.
       </p>
+<p>
+
+</p>
     </statement>
     <hint>
+<p>
+
+</p>
       <p>
         Let <m>c=\sup\{x_n|\,n=1,2,3,\ldots\}</m>.
         To show that <m>\limit{n}{\infty}{x_n}=c</m>,
@@ -1257,7 +1275,7 @@ First prove that <m>n_k\geq k</m>.
         <me>
           x_{n+1}=\sqrt{2+x_n}
         </me>.
-        <ol label="(a)">
+        <ol marker="a">
           <li>
             <p>
               Use induction to show that
@@ -1445,8 +1463,14 @@ First prove that <m>n_k\geq k</m>.
         (Again, the <m>c</m> will,
         of necessity, be unique, but don't worry about that.)
       </p>
+<p>
+
+</p>
     </statement>
-      <hint> 
+      <hint>
+<p>
+
+</p> 
         <p>
           <xref ref="cor_IncBoundedConverge">Corollary</xref> might work well here.
         </p>
@@ -1496,8 +1520,14 @@ First prove that <m>n_k\geq k</m>.
       <p>
         Prove <xref ref="thm_ArchmedeanProperty">Theorem</xref>. 
       </p>
+<p>
+
+</p>
     </statement>
-    <hint> 
+    <hint>
+<p>
+
+</p> 
       <p>
         Assume that there are positive real numbers <m>a</m> and <m>b</m>, such that <m>na\le b</m> <m>\forall n\in \NN</m>.
         Then <m>\NN</m> would be bounded above by <m>b/a</m>.
@@ -1547,7 +1577,7 @@ First prove that <m>n_k\geq k</m>.
             <idx><h>Least Upper Bound Property (LUBP)</h><h>identifying suprema and infima</h></idx>
         Find the least upper bound (supremum) and greatest lower bound (infimum) of the following sets of real numbers, if they exist. (If one does not exist then say so.)
 
-        <ol label="(a)">
+        <ol marker="a">
           <li>
             <p>
               <m>S=\left\{\frac{1}{n}\,|\,n=1,2,3,\ldots\right\}</m>
@@ -1595,7 +1625,7 @@ First prove that <m>n_k\geq k</m>.
             <idx><h><m>b</m> is an upper bound of <m>S\subseteq \RR</m> if and only if <m>-b</m> is a lower bound of <m>-S</m></h></idx>
         Let <m>S\subseteq\RR</m> and let <m>T=\{-x|\,x\in S\}</m>.
 
-        <ol label="(a)">
+        <ol marker="a">
           <li>
             <p>
               Prove that <m>b</m> is an upper bound of <m>S</m> if and only if <m>-b</m> is a lower bound of <m>T</m>.

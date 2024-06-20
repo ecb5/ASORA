@@ -1,0 +1,286 @@
+
+
+<section xml:id="sec_lesson-two">
+  <title>Lesson Two</title>
+  <p>
+    Read and understand the following development of the Quadratic Formula.
+  </p>
+
+  <p>
+    Suppose <m>a\neq0</m>.
+    If
+    <mdn>
+    <mrow xml:id="eq_QForm1">ax^2+bx+c =0</mrow>
+      <intertext>then</intertext>
+      <mrow xml:id="eq_QForm2">x^2+\frac{b}{a}x\amp =-\frac{c}{a}</mrow>
+      <intertext>Now let <m>x=y-\frac{b}{2a}</m> giving</intertext>
+      <mrow xml:id="eq_QForm3">y^2\amp = -\frac{c}{a} +\frac{b^2}{4a^2}</mrow>
+      <mrow>y\amp = \frac{\pm \sqrt{b^2-4ac}}{2a}</mrow>
+      <mrow xml:id="eq_QForm4">x\amp = \frac{-b\pm\sqrt{b^2-4ac}}{2a}</mrow>
+    </mdn>
+  </p>
+
+  <p>
+    Were you able to follow the argument?
+    Probably the step from <xref ref="eq_QForm1">equation</xref>
+    to <xref ref="eq_QForm2">equation</xref> presented no difficulties.
+    But what about the next step?
+    Do you see where <xref ref="eq_QForm3">equation</xref> came from?
+    If so, good for you.
+    Most students, in fact most mathematicians,
+    cannot make that step in their heads.
+    But are you sure?
+    Is there, perhaps, some small detail you've overlooked?
+  </p>
+
+  <figure>
+    <caption>Tartaglia, <q>The Stutterer</q></caption>
+    <image width="28%" source="images/Tartaglia.png" />
+  </figure>
+
+  <p>
+    Check to see.
+  </p>
+
+  <p>
+    That is, let <m>x=y-\frac{b}{2a}</m> in <xref ref="eq_QForm2">equation</xref>
+    and see if you can get <xref ref="eq_QForm3">equation</xref>.
+    Do it on that handy pad of paper we told you to get out earlier.
+    Do it now.
+    We'll wait.<fn>
+    If you <em>still</em> haven't gotten out a pad of paper,
+    give up now.
+    You're going to fail this course.
+    Seriously.
+    Do you think we would spend so much time on this,
+    that we would repeat it so many times, if it weren't important.
+    <em><em>GET OUT A PAD OF PAPER NOW!</em></em> Last chance.
+    You've been warned.
+    </fn> 
+  </p>
+
+  <p>
+    Done?
+    Good.
+  </p>
+
+  <p>
+    Perhaps you haven't been able to fill in the details on your own.
+    That's ok.
+    Many people can't.
+    If not then get help: from a classmate,
+    a friend, your instructor, whomever.
+    Unfortunately most people won't get help in this situation.
+    Instead they will perceive this as <q>failure,</q>
+    hide it and berate themselves or the problem as <q>stupid.</q>
+    In short they will let their personal insecurities and demons overwhelm them.
+    <em>Don't do this.
+    Get help.</em> You are neither dumb nor incapable.
+    There are a thousand reasons that on any given day you might not be able to solve this problem.
+    But don't let a bad day interfere with the education you are here for.
+    Get someone to help you over this hump.
+    Later you will be able to help your helper in the same way.
+    Really.
+  </p>
+
+  <p>
+    At this point we assume that you've successfully negotiated the transition from <xref ref="eq_QForm2">equation</xref>
+    to <xref ref="eq_QForm4">equation</xref>.
+  </p>
+
+  <p>
+    See?
+    It really wasn't that bad after all.
+    Just a lot of elementary algebra.
+    Now that you've done it
+    (or seen it done),
+    it is easy to see that there really wasn't much there.
+  </p>
+
+  <figure>
+    <caption>Girolomo Cardano<idx><h>Cardano, Girolomo</h></idx></caption>
+    <image width="28%" source="images/Cardan.png" />
+  </figure>
+
+  <p>
+    But this is the point!
+    We left those computations out precisely because we knew that they were routine and that you could fill in the details.
+    Moreover, filling in the details yourself gives you a little better insight into the computations.
+    If we'd filled them in for you we would have robbed you of that insight.
+    And we would have made this book longer than it needs to be.
+    We don't want to do either of those things.
+    If we fill in all of the details of every computation for you,
+    you won't learn to have confidence in your ability to do them yourself.
+    And this book will easily double in length.
+  </p>
+
+  <p>
+    So the lesson here is this: Keep that pad of paper handy whenever you are reading this
+    (or any other)
+    mathematics text.
+    You will need it.
+    Routine computations will often be skipped.
+    But calling them <q>routine</q>
+    and skipping them does not mean that they are unimportant.
+    If they were truly unimportant we would leave them out entirely.
+  </p>
+
+  <p>
+    Moreover <q>routine</q> does not mean <q>obvious.</q>
+    Every step we took in the development of the Quadratic Formula was <q>routine.</q>
+    But even routine computations need to be understood and the best way to understand them is to do them.
+    This is the way to learn mathematics;
+    it is the <em>only</em> way that really works.
+    Don't deprive yourself of your mathematics education by skipping the most important parts.
+  </p>
+
+  <problem>
+    <title>Alternative Quadratic Formula</title>
+    <statement>
+      <p>
+            <idx><h>Quadratic Formula</h><h>First Alternate Method</h></idx>
+            <idx><h>Quadratic Formula</h><h>first proof</h></idx>
+            <idx><h>first proof of the Quadratic Formula</h></idx>
+        As you saw when you filled in the details of our development of the Quadratic Formula<fn>
+        If you didn't fill in those details you're being stupid
+        (or at least unduly stubborn).
+        There is a good reason for putting these three lessons first.
+        Stop wasting your time and intellect!
+        Go do it now.
+        </fn> the substitution
+        <m>x=y-\frac{b}{2a}</m> was crucial because it turned
+        <me>
+          x^2+\frac{b}{a}x +\frac{c}{a}=0
+        </me>
+        into
+        <me>
+          y^2=k
+        </me>
+        where <m>k</m> depends only on <m>a</m>, <m>b</m>, and <m>c</m>.
+        In the sixteenth century a similar technique was used by Ludovico Ferrari (1522-1565) to reduce the general cubic equation
+        <men xml:id="eq_GenCubic">
+          ax^3+bx^2+cx+d=0
+        </men>
+        into the so-called <q>depressed cubic</q>
+        <me>
+          y^3 +py+q=0
+        </me>
+        where <m>p</m>, and <m>q</m> depend only on <m>a</m>,
+        <m>b</m>, <m>c</m>, and <m>d</m>.
+      </p>
+
+      <p>
+        The general depressed cubic<fn>
+        It is not entirely clear why eliminating the quadratic term should be depressing,
+        but there it is.
+        </fn> had previously been solved by Tartaglia
+        (the Stutterer, 1500-1557)
+        so converting the general cubic into a depressed cubic provided a path for Ferrari to compute the <q>Cubic Formula</q>
+        <mdash /> like the Quadratic Formula but better.
+      </p>
+
+      <p>
+        Ferrari also knew how to compute the general solution of the
+        <q>depressed quartic</q>
+        so when he and his teacher Girolomo Cardano (1501-1576) figured out how to depress a general quartic they had a complete solution of the general quartic as well.
+        Alas, their methods broke down entirely when they tried to solve the general quintic equation.
+        Unfortunately the rest of this story belongs in a course on Abstract Algebra,
+        not Real Analysis.
+        But the lesson in this story applies to all of mathematics: Every problem solved is a new theorem which then becomes a tool for later use.
+        Depressing a cubic would have been utterly useless had not Tartaglia had a solution of the depressed cubic in hand.
+        The technique they used, with slight modifications,
+        then allowed for a solution of the general quartic as well.
+      </p>
+
+      <p>
+        Keep this in mind as you proceed through this course and your mathematical education.
+        Every problem you solve is really a theorem,
+        a potential tool that you can use later.
+        We have chosen the problems in this text deliberately with this in mind.
+        Don't just solve the problems and move on.
+        Just because you have solved a problem does not mean you should stop thinking about it.
+        Keep thinking about the problems you've solved.
+        Internalize them.
+        Make the ideas your own so that when you need them later you will have them at hand to use.
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Find <m>M</m> so that the substitution <m>x=y-M</m> depresses <xref ref="eq_GenCubic">equation</xref>,
+              the general cubic equation.
+              Then find <m>p</m> and <m>q</m> in terms of <m>a</m>,
+              <m>b</m>, <m>c</m>, and <m>d</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find <m>K</m> so that the substitution <m>x=y-K</m> depresses the general quartic equation.
+              Make sure you demonstrate how you obtained that value or why it works
+              (if you guessed it).
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find <m>N</m> so that the substitution <m>x=y-N</m> depresses a polynomial of degree <m>n</m>.
+              Ditto on showing that this value works or showing how you obtained it.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Quadratic Formula</h><h>Second Alternate Method</h></idx>
+            <idx><h>Quadratic Formula</h><h>second proof</h></idx>
+            <idx><h>second proof of the Quadratic Formula</h></idx>
+        Here is yet another way to solve a quadratic equation.
+        Read the development below with pencil and paper handy.
+        Confirm all of the computations that are not completely transparent to you.
+        Then use your notes to present the solution with
+        <em>all</em> steps filled in.<fn>
+        Be sure you are clear on the purpose of this problem before you begin.
+        This is not about solving the Quadratic Equation.
+        You already know how to do that.
+        Our purpose here is to give you practice filling in the skipped details of mathematical exposition.
+        We've chosen this particular problem because it should be a comfortable setting for you,
+        but this particular solution is probably outside of your previous experience.
+        </fn> 
+      </p>
+
+      <p>
+        Suppose that <m>r_1</m> and <m>r_2</m> are solutions of <m>ax^2+bx+c=0</m>.
+        Suppose further that <m>r_1\ge r_2</m>.
+        Then
+        <md>
+          <mrow>ax^2+bx+c \amp = a(x-r_1)(x-r_2)</mrow>
+          <mrow>\amp = a\left[x^2-(r_1+r_2)x+(r_1+r_2)^2-(r_1-r_2)^2-3r_1r_2\right]</mrow>
+        </md>.
+      </p>
+
+      <p>
+        Therefore
+        <mdn>
+          <mrow xml:id="eq_LagrangeQuadratic1">r_1+r_2\amp = -\frac{b}{a}</mrow>
+          <intertext>and</intertext>
+          <mrow xml:id="eq_LagrangeQuadratic2">r_1-r_2 \amp = \sqrt{\left(\frac{b}{a}\right)^2-\frac{4c}{a}}</mrow>
+        </mdn>.
+      </p>
+
+      <p>
+        Equations <xref ref="eq_LagrangeQuadratic1"></xref>
+        and <xref ref="eq_LagrangeQuadratic2"></xref>
+        can be solved simultaneously to yield
+        <md>
+          <mrow>r_1\amp =\frac{-b+\sqrt{b^2-4ac}}{2a}</mrow>
+          <mrow>r_2\amp =\frac{-b-\sqrt{b^2-4ac}}{2a}</mrow>
+        </md>.
+      </p>
+    </statement>
+  </problem>
+</section>
+

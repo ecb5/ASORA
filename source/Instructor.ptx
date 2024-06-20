@@ -1,4 +1,4 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Instructor">
+<preface xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Instructor">
   <title>To the Instructor</title>
   <p>
     The irony of this section is that it exists to tell you that this book was not written for you;
@@ -108,5 +108,5 @@
       \begin{array}{lcl} \text{ Robert R. Rogers } \amp \amp  \text{ Eugene C. Boman } \\ \text{ robert.rogers@fredonia.edu }  \amp \amp  \text{ ecb5@psu.edu } \end{array}
     </me>
   </p>
-</chapter>
+</preface>
 

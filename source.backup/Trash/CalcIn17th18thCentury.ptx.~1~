@@ -1,0 +1,9 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="chpt_17thCentury">
+  <title>Calculus in the 17th and 18th Centuries</title>
+  <xi:include  href="section2-1.ptx" />
+  <xi:include  href="ExponentAdditionProperty.ptx" />
+  <xi:include  href="section2-2x.ptx" />
+</chapter>
+

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:43-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Building the Real Numbers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Epilogues-NatureNumbers.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Epilogues.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Epilogues-NatureNumbers.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Epilogues.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="active">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="Epilogues-BuildRealNumbers"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">13.2</span> <span class="title">Building the Real Numbers</span>
+</h2>
+<section class="introduction" id="introduction-34"><p id="p-1530">Contrary to the title of this section we will not be rigorously building the real numbers here. Instead our goal is to show why such a build is logically necessary, and to give a sense of some of the ways this has been accomplished in the past. This may seem odd given our uniform emphasis on mathematical rigor, especially in the third part of the text, but there are very good reasons for this.</p>
+<p id="p-1531">One is simple practicality. The fact is that rigorously building the real numbers and then showing that they have the required properties is extraordinarily detailed work, even for mathematics. If we want to keep this text to a manageable size (we do), we simply don't have the room.</p>
+<p id="p-1532">The second reason is that there is, as far as we know, very little for you to gain by it. When we are done we will have the real numbers. The same real numbers you have been using all of your life. They have the same properties, and quirks, they've always had. To be sure, they will not have lost any of their charm; They will be the same delightful mix of the mundane and the bizarre, and they are still well worth exploring and getting to know better. But nothing we do in the course of building them up logically from simpler ideas will help with that exploration.</p>
+<p id="p-1533">A reasonable question then, is, “Why bother?” If the process is overwhelmingly, tediously detailed (it is) and gives us nothing new for our efforts, why do it at all?</p>
+<aside class="aside aside-like" id="aside-23"><p id="p-1534">By Andrew Wiles, the man who proved Fermat's Last Theorem.</p></aside><p id="p-1535">Doing mathematics has been compared to entering a dark room.  At first you are lost.  The layout of the room and furniture are unknown so you fumble about for a bit and slowly get a sense of your immediate environs, perhaps a vague notion of the organization of the room as a whole.  Eventually, after much, often tedious exploration, you become quite comfortable in your room.  But always there will be dark corners; hidden areas you have not yet explored.  Such a dark area may hide anything; the latches to unopened doors you didn't know were there; a clamp whose presence explains why you couldn't move that little desk in the corner; even the light switch that would allow you to illuminate an area more clearly than you would have imagined possible.</p>
+<p id="p-1536">But, and this is the point, there is no way to know what you will find there until you walk into that dark corner and begin exploring.  Perhaps nothing.  But perhaps something wonderful.</p>
+<p id="p-1537">This is what happened in the late nineteenth century.  The real numbers had been used since the Pythagoreans learned that <span class="process-math">\(\sqrt{2}\)</span> was irrational.  But really, most calculuations were (and still are) done with just the rational numbers. Moreover, since <span class="process-math">\(\QQ\)</span> forms a “set of measure zero,”  it is clear that most of the real numbers had gone completely unused. The set of real numbers was thus one of those “dark corners” of mathematics. It had to be explored.</p>
+<aside class="aside aside-like" id="aside-24"><h3 class="heading"><span class="title">Measure Zero Sets.</span></h3>
+<p id="p-1538">See <a href="" class="xref" data-knowl="./knowl/cor_Q-MeasureZero.html" title="Corollary 12.1.10">Corollary 12.1.10</a> of <a href="BackToFourier.html" class="internal" title="Chapter 12: Back to the Real Numbers">Chapter 12</a>.</p></aside><p id="p-1539">“But even if that is true,” you might ask, ``I have no interest in the logical foundations of the real numbers, especially if such knowledge won't tell me anything I don't already know. Why do I need to know all of the details of constructing <span class="process-math">\(\RR\)</span> from <span class="process-math">\(\QQ?\)</span></p>
+<p id="p-1540">The answer to this is very simple: You don't.</p>
+<p id="p-1541">That's the other reason we're not covering all of the details of this material. We will explain enough to light up, dimly perhaps, this little corner of mathematics. Later, should you need (or want) to come back to this and explore further you will have a foundation to start with. Nothing more.</p>
+<p id="p-1542">Until the nineteenth century the geometry of Euclid, as given in his book <em class="emphasis">The Elements,</em> was universally regarded as the touchstone of mathematical perfection. This belief was so deeply embedded in Western culture that as recently as 1923, Edna St. Vincent Millay opened one of the poems in her book <em class="emphasis">The Harp Weaver and Other Poems</em> with the line “Euclid alone has looked on beauty bare.”</p>
+<p id="p-1543">Euclid begins his book by stating <span class="process-math">\(5\)</span> simple axioms and proceeds, step by logical step, to build up his geometry. Although far from actual perfection, his methods are clean, precise and efficient — he arrives at the Pythagorean Theorem in only <span class="process-math">\(47\)</span> steps (theorems) — and even today Euclid's <em class="emphasis">Elements</em> still sets a very high standard of mathematical exposition and parsimony.</p>
+<p id="p-1544">The goal of starting with what is clear and simple and proceeding logically, rigorously, to what is complex is still a guiding principle of all mathematics for a variety of reasons. In the late nineteenth century, this principle was brought to bear on the real numbers. That is, some properties of the real numbers that at first seem simple and intuitively clear turn out on closer examination, as we have seen, to be rather counter-intuitive. This alone is not really a problem. We can have counter-intuitive properties in our mathematics — indeed, this is a big part of what makes mathematics interesting — as long as we arrive at them logically, starting from simple assumptions the same way Euclid did.</p>
+<p id="p-1545">Having arrived at a view of the real numbers which is comparable to that of our nineteenth century colleagues, it should now be clear that the real numbers and their properties must be built up from simpler concepts as suggested by our Italian friends in the previous section.</p>
+<p id="p-1546">In addition to those properties we have discovered so far, both <span class="process-math">\(\QQ\)</span> and <span class="process-math">\(\RR\)</span> share another property which will be useful. We have used it throughout this text but have not heretofore made it explicit. They are both <em class="emphasis">linearly ordered.</em> We will now make this property explicit.</p>
+<article class="definition definition-like" id="def_NumberField"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Linear Ordering.</span>
+</h3>
+<p id="p-1547">A number field is said to be <em class="emphasis">linearly ordered</em> if there is a relation, denoted “<span class="process-math">\(\lt \)</span>”, on the elements of the field which satisfies all of the following for all <span class="process-math">\(x, y\text{,}\)</span> and <span class="process-math">\(z\)</span> in the field.</p>
+<ol id="p-1548" class="decimal">
+<li id="li-125">
+<p id="p-1549">For all numbers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> in the field, exactly one of the following holds:</p>
+<ol id="p-1550" class="lower-alpha">
+<li id="li-126"><p id="p-1551"><span class="process-math">\(\displaystyle x\lt y\)</span></p></li>
+<li id="li-127"><p id="p-1552"><span class="process-math">\(\displaystyle x=y\)</span></p></li>
+<li id="li-128"><p id="p-1553"><span class="process-math">\(\displaystyle y\lt x\)</span></p></li>
+</ol>
+</li>
+<li id="li-129"><p id="p-1554">If <span class="process-math">\(x\lt y\text{,}\)</span> then <span class="process-math">\(x+z\lt y+z\)</span> for all <span class="process-math">\(z\)</span> in the field.</p></li>
+<li id="li-130"><p id="p-1555">If <span class="process-math">\(x\lt y\text{,}\)</span> and <span class="process-math">\(0\lt z\text{,}\)</span> then <span class="process-math">\(x\cdot z \lt y\cdot z\text{.}\)</span></p></li>
+<li id="li-131"><p id="p-1556">If <span class="process-math">\(x\lt y\)</span> and <span class="process-math">\(y\lt z\)</span> then <span class="process-math">\(x\lt z\text{.}\)</span></p></li>
+</ol></article><p id="p-1557">Any number field with such a relation is called a <dfn class="terminology">linearly ordered number field</dfn> and as the following problem shows, not every number field is linearly ordered.</p>
+<article class="problem example-like" id="problem-214"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-214"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.2.2</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-214"><article class="problem example-like"><article class="task exercise-like" id="task-156"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-1558">Prove that the following must hold in <em class="emphasis">any</em> linearly ordered number field.</p>
+<ol id="p-1559" class="decimal">
+<li id="li-132"><p id="p-1560"><span class="process-math">\(0\lt x\)</span> if and only if <span class="process-math">\(-x\lt 0\text{.}\)</span></p></li>
+<li id="li-133"><p id="p-1561">If <span class="process-math">\(x\lt y\)</span> and <span class="process-math">\(z\lt 0\)</span> then <span class="process-math">\(y\cdot z\lt x\cdot z\text{.}\)</span></p></li>
+<li id="li-134"><p id="p-1562">For all <span class="process-math">\(x\neq 0\text{,}\)</span> <span class="process-math">\(0\lt x^2\text{.}\)</span></p></li>
+<li id="li-135"><p id="p-1563"><span class="process-math">\(0\lt 1\text{.}\)</span></p></li>
+</ol></article><article class="task exercise-like" id="task-157"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-1564">Show that the set of complex numbers (<span class="process-math">\(\CC\)</span>) is not a linearly ordered field.</p></article></article></div>
+<p id="p-1565">In a thorough, rigorous presentation we would now assume the existence of the natural numbers <span class="process-math">\((\NN)\text{,}\)</span> and their properties and use these to define the integers, <span class="process-math">\((\ZZ)\text{.}\)</span> We would then use the integers to define the rational numbers, <span class="process-math">\((\QQ)\text{.}\)</span> We could then show that the rationals satisfy the field axioms worked out in the previous section, and that they are linearly ordered.</p>
+<p id="p-1566">Then — at last — we would use <span class="process-math">\(\QQ\)</span> to define the real numbers <span class="process-math">\((\RR)\text{,}\)</span> show that these also satisfy the field axioms and also have the other properties we expect: Continuity, the Nested Interval Property, the Least Upper Bound Property, the Bolzano-Weierstrass Theorem, the convergence of all Cauchy sequences, and linear ordering.</p>
+<p id="p-1567">We would start with the natural numbers because they seem to be simple enough that we can simply assume their properties. As Leopold Kronecker (1823-1891) said: “God made the natural numbers, all else is the work of man.”</p>
+<p id="p-1568">Unfortunately this is rather a lot to fit into this epilogue so we will have to abbreviate the process rather severely.</p>
+<p id="p-1569">We will assume the existence and properties of the rational numbers.  Building <span class="process-math">\(\QQ\)</span> from the integers is not especially hard and it is easy to show that they satisfy the axioms worked out by Salviati, Sagredo and Simplicio in the previous section.  But the level of detail required for rigor quickly becomes onerous.</p>
+<p id="p-1570">Even starting at this fairly advanced position in the chain of logic there is still a considerable level of detail needed to complete the process. Therefore our exposition will necessarily be incomplete.</p>
+<p id="p-1571">Rather than display, in full rigor, how the real numbers can be built up from the rationals we will show, in fairly broad terms, three ways this has been done in the past. We will give references later in case you'd like to follow up and learn more.</p></section><section class="subsection" id="DecimalExpansion"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">13.2.1</span> <span class="title">The Decimal Expansion</span>
+</h3>
+<p id="p-1572">This is by far the most straightforward method we will examine. Since we begin with <span class="process-math">\(\QQ\text{,}\)</span> we already have some numbers whose decimal expansion is infinite. For example, <span class="process-math">\(\frac13= 0.333\ldots\text{.}\)</span> We also know that if <span class="process-math">\(x\in\QQ\)</span> then expressing <span class="process-math">\(x\)</span> as a decimal gives either a finite or a <em class="emphasis">repeating infinite</em> decimal.</p>
+<p id="p-1573">More simply, we can say that <span class="process-math">\(\QQ\)</span> consists of the set of all decimal expressions which eventually repeat. (If it eventually repeats zeros then it is what we've called a finite decimal.)</p>
+<p id="p-1574">We then define the real numbers to be the set of all infinite decimals, repeating or not.</p>
+<p id="p-1575">It may feel as if all we have to do is define addition and multiplication in the obvious fashion and we are finished. This set with these definitions obviously satisfy all of the field axioms worked out by our Italian friends in the previous section. Moreover it seems clear that all of our equivalent completeness axioms are satisfied.</p>
+<p id="p-1576">However, things are not quite as clear cut as they seem.</p>
+<p id="p-1577">The primary difficulty in this approach is that the decimal representation of the real numbers is so familiar that everything we need to show <em class="emphasis">seems</em> obvious. But stop and think for a moment. Is it really obvious how to define addition and multiplication of <em class="emphasis">infinite</em> decimals? Consider the addition algorithm we were all taught in grade school. That algorithm requires that we line up two numbers at their decimal points:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-56">
+\begin{align*}
+d_1d_2\amp .d_3d_4\\
++\   \delta_1\delta_2\amp .\delta_3\delta_4\text{.}
+\end{align*}
+</div>
+<p id="p-1578">We then begin adding in the rightmost column and proceed to the left. <em class="emphasis">But if our decimals are infinite we can't get started because there is no rightmost column!</em></p>
+<p id="p-1579">A similar problem occurs with multiplication.</p>
+<p id="p-1580">So our first problem is to define addition and multiplication in <span class="process-math">\(\RR\)</span> in a manner that re-captures addition and multiplication in <span class="process-math">\(\QQ\text{.}\)</span></p>
+<p id="p-1581">This is not a trivial task.</p>
+<p id="p-1582">One way to proceed is to recognize that the decimal notation we've used all of our lives is really shorthand for the sum of an infinite series. That is, if <span class="process-math">\(x=0.d_1d_2d_3\ldots\)</span> where <span class="process-math">\(0\leq d_i\leq 9\)</span> for all <span class="process-math">\(i\in\NN\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x=\sum_{i=1}^\infty\frac{d_i}{10^i}\text{.}
+\end{equation*}
+</div>
+<p id="p-1583">Addition is now apparently easy to define: If <span class="process-math">\(x=\sum_{i=1}^\infty\frac{d_i}{10^i}\)</span> and <span class="process-math">\(y=\sum_{i=1}^\infty\frac{\delta_i}{10^i}\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x+y= \sum_{i=1}^\infty\frac{e_i}{10^i} \text{ where \(e_i =d_i+\delta_i\). }
+\end{equation*}
+</div>
+<p id="p-1584">But there is a problem. Suppose for some <span class="process-math">\(j\in\NN\text{,}\)</span> <span class="process-math">\(e_j=d_j+\delta_j&gt;10\text{.}\)</span> In that case our sum does not satisfy the condition <span class="process-math">\(0\leq e_j\leq 9\)</span> so it is not even clear that the expression <span class="process-math">\(\sum_{j=1}^\infty\frac{e_j}{10^j}\)</span> represents a real number. That is, we may not have the closure property of a number field. We will have to define some sort of “carrying” operation to handle this.</p>
+<article class="problem example-like" id="problem-215"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-215"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.2.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-215"><article class="problem example-like"><p id="p-1585">Define addition on infinite decimals in a manner that is closed.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-60" id="hint-60"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-60"><div class="hint solution-like"><p id="p-1586">Find an appropriate “carry” operation for our definition.</p></div></div>
+</div></article></div>
+<p id="p-1587">A similar difficulty arises when we try to define multiplication. Once we have a notion of carrying in place, we could define multiplication as just the multiplication of series. Specifically, we could define</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-57">
+\begin{align*}
+(0.a_1a_2a_3\ldots)\cdot(0.b_1b_2b_3\ldots) \amp =\left(\frac{a_1}{10}+\frac{a_2}{10^2}+\cdots\right) \cdot\left(\frac{b_1}{10}+\frac{b_2}{10^2}+\cdots\right)\\
+\amp =\frac{a_1b_1}{10^2}+\frac{a_1b_2+a_2b_1}{10^3}+\frac{a_1b_3+a_2b_2+a_3b_1}{10^4}+\cdots\text{.}
+\end{align*}
+</div>
+<p id="p-1588">We could then convert this to a “proper” decimal using our carrying operation.</p>
+<p id="p-1589">Again the devil is in the details to show that such algebraic operations satisfy everything we want them to. Even then, we need to worry about linearly ordering these numbers and our completeness axiom.</p>
+<p id="p-1590">Another way of looking at this is to think of an infinite decimal representation as a (Cauchy) sequence of finite decimal approximations. Since we know how to add and multiply finite decimal representations, we can just add and multiply the individual terms in the sequences. Of course, there is no reason to restrict ourselves to only these specific types of Cauchy sequences, as we see in our next approach.</p></section><section class="subsection" id="CauchySequences"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">13.2.2</span> <span class="title">Cauchy Sequences</span>
+</h3>
+<p id="p-1591">As we've seen, Georg Cantor  began his career studying Fourier series and quickly moved on to more foundational matters in the theory of infinite sets.</p>
+<p id="p-1592">But he did not lose his fascination with real analysis when he moved on. Like many mathematicians of his time, he realized the need to build <span class="process-math">\(\RR\)</span> from <span class="process-math">\(\QQ\text{.}\)</span> He and his friend and mentor Richard Dedekind  (who's approach we will see in the next section) both found different ways to build <span class="process-math">\(\RR\)</span> from <span class="process-math">\(\QQ\text{.}\)</span></p>
+<p id="p-1593">Cantor started with Cauchy sequences in <span class="process-math">\(\QQ\text{.}\)</span></p>
+<p id="p-1594">That is, we consider the set of all Cauchy sequences of rational numbers. We would like to <em class="emphasis">define</em> each such sequence to be a real number. The goal should be clear. If <span class="process-math">\(\left(s_n\right)_{n=1}^\infty\)</span> is a sequence in <span class="process-math">\(\QQ\)</span> which converges to <span class="process-math">\(\sqrt{2}\)</span> then we will call <span class="process-math">\(\left(s_n\right)\)</span> the real number <span class="process-math">\(\sqrt{2}\text{.}\)</span></p>
+<p id="p-1595">This probably seems a bit startling at first. There are a <em class="emphasis">lot</em> of numbers in <span class="process-math">\(\left(s_n\right)\)</span> (countably infinitely many, to be precise) and we are proposing putting all of them into a big bag, tying it up in a ribbon, and calling the whole thing <span class="process-math">\(\sqrt{2}\text{.}\)</span> It seems a very odd thing to propose, but recall from the discussion in the previous section that we left the concept of “number” undefined. Thus if we can take <em class="emphasis">any</em> set of objects and define addition and multiplication in such a way that the field axioms are satisfied, then those objects are legitimately numbers. To show that they are, in fact, the <em class="emphasis">real</em> numbers we will also need the completeness property.</p>
+<p id="p-1596">A bag full of rational numbers works as well as anything <em class="emphasis">if</em> we can define addition and multiplication appropriately.</p>
+<p id="p-1597">Our immediate problem though is not addition or multiplication but uniqueness. If we take one sequence <span class="process-math">\(\left(s_n\right)\)</span> which converges to <span class="process-math">\(\sqrt{2}\)</span> and define it to be <span class="process-math">\(\sqrt{2}\text{,}\)</span> what will we do with all of the other sequences that converge to <span class="process-math">\(\sqrt{2}?\)</span></p>
+<p id="p-1598">Also, we have to be careful not to refer to any real numbers, like the square root of two for example, as we define the real numbers. This would be a circular — and thus useless — definition. Obviously though, we can refer to <em class="emphasis">rational</em> numbers, since these are the tools we'll be using.</p>
+<p id="p-1599">The solution is clear. We take <em class="emphasis">all</em> sequences of rational numbers that converge to <span class="process-math">\(\sqrt{2}\text{,}\)</span> throw them into our bag and call <em class="emphasis">that</em> <span class="process-math">\(\sqrt{2}\text{.}\)</span> Our bag is getting pretty full now.</p>
+<p id="p-1600">But we need to do this without using <span class="process-math">\(\sqrt{2}\)</span> because it is a real number. The following two definitions satisfy all of our needs.</p>
+<article class="definition definition-like" id="def_EquivCauchySeq"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.4</span><span class="period">.</span>
+</h4>
+<p id="p-1601"> Let <span class="process-math">\(x=\left(s_n\right)_{n=1}^\infty\)</span> and <span class="process-math">\(y=\left(\sigma_n\right)_{n=1}^\infty\)</span> be Cauchy sequences in <span class="process-math">\(\QQ\text{.}\)</span> <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are said to be equivalent if they satisfy the following property: For every <span class="process-math">\(\eps&gt;0\text{,}\)</span> <span class="process-math">\(\eps\in\QQ\text{,}\)</span> there is a rational number <span class="process-math">\(N\)</span> such that for all <span class="process-math">\(n&gt;N\text{,}\)</span> <span class="process-math">\(n\in\NN\text{,}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\abs{s_n-\sigma_n}\lt \eps\text{.}
+\end{equation*}
+</div>
+<p id="p-1602">We will denote equivalence by writing, <span class="process-math">\(x\equiv y\text{.}\)</span></p></article><article class="problem example-like" id="prob_EquivalentCauchySequences"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_EquivalentCauchySequences"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.2.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_EquivalentCauchySequences"><article class="problem example-like"><div class="introduction" id="introduction-35"><p id="p-1603">Show that:</p></div>
+<article class="task exercise-like" id="task-158"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1604"><span class="process-math">\(x\equiv x\)</span></p></article><article class="task exercise-like" id="task-159"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1605"><span class="process-math">\(x\equiv y \imp y\equiv x\)</span></p></article><article class="task exercise-like" id="task-160"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1606"><span class="process-math">\(x\equiv y\)</span> and <span class="process-math">\(y\equiv z \imp x\equiv z\)</span></p></article></article></div>
+<article class="definition definition-like" id="def_RealsViaCauchy"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.6</span><span class="period">.</span>
+</h4>
+<p id="p-1607"> Every set of all equivalent Cauchy sequences defines a real number.</p></article><p id="p-1608">A very nice feature of Cantor's method is that it is very clear how addition and multiplication should be defined.</p>
+<article class="definition definition-like" id="def_AddTimesViaCauchy"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.7</span><span class="period">.</span>
+</h4>
+<p id="p-1609"> If</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x= \left\{\left.\left(s_n\right)_{k=1}^\infty \right| \left(s_n\right)_{k=1}^\infty \text{ is Cauchy in \(\QQ\) } \right\}
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y= \left\{\left.\left(\sigma_n\right)_{k=1}^\infty \right| \left(\sigma_n\right)_{k=1}^\infty \text{ is Cauchy in \(\QQ\) } \right\}
+\end{equation*}
+</div>
+<p class="continuation">then we define the following:</p>
+<ul class="disc">
+<li id="li-136">
+<span class="heading"><span class="title">Addition:.</span></span><p id="p-1610"><span class="process-math">\(\displaystyle x+y = \left\{\left.\left(t_n\right)_{k=1}^\infty \right| t_k = s_k+\sigma_k, \forall (s_n) \in x, \text{ and } (\sigma_n)\in y\right\}\)</span></p>
+</li>
+<li id="li-137">
+<span class="heading"><span class="title">Multiplication:.</span></span><p id="p-1611"><span class="process-math">\(\displaystyle x\cdot y = \left\{\left.\left(t_n\right)_{k=1}^\infty \right| t_k = s_k\sigma_k, \forall (s_n) \in x, \text{ and } (\sigma_n)\in y\right\}\)</span></p>
+</li>
+</ul></article><p id="p-1612">The notation used in <a href="" class="xref" data-knowl="./knowl/def_RealsViaCauchy.html" title="Definition 13.2.6">Definition 13.2.6</a> can be difficult to read at first, but basically it says that addition and multiplication are done component-wise. However since <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> consist of all equivalent sequences we have to take <em class="emphasis">every</em> possible choice of <span class="process-math">\((s_n)\in x\)</span> and <span class="process-math">\((\sigma_n)\in y\text{,}\)</span> form the sum (product) <span class="process-math">\((s_n+\sigma_n)_{n=1}^\infty\)</span> (<span class="process-math">\((s_n\sigma_n)_{n=1}^\infty\)</span>) and then show that all such sums (products) are equivalent. Otherwise addition (multiplication) is not well-defined: It would depend on which sequence we choose to represent <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span></p>
+<article class="problem example-like" id="prob_CauchyAdditionWellDefined"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_CauchyAdditionWellDefined"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.2.8</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_CauchyAdditionWellDefined"><article class="problem example-like"><p id="p-1613"> Let <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> be real numbers (that is, let them be sets of equivalent Cauchy sequences  in <span class="process-math">\(\QQ\)</span>). If <span class="process-math">\((s_n)\)</span> and <span class="process-math">\((t_n)\)</span> are in <span class="process-math">\(x\)</span> and <span class="process-math">\((\sigma_n)\)</span> and <span class="process-math">\((\tau_n)\)</span> are in <span class="process-math">\(y\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(s_n+\tau_n)_{n=1}^\infty \equiv (\sigma_n+t_n)_{n=1}^\infty\text{.}
+\end{equation*}
+</div></article></div>
+<article class="theorem theorem-like" id="thm_ZeroInCauchySequences"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">13.2.9</span><span class="period">.</span>
+</h4>
+<p id="p-1614"> Let <span class="process-math">\(0^*\)</span> be the set of Cauchy sequences in <span class="process-math">\(\QQ\)</span> which are all equivalent to the sequence <span class="process-math">\((0, 0, 0, \ldots)\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+0^*+x=x\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-34"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-34"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof"><p id="p-1615">From <a href="" class="xref" data-knowl="./knowl/prob_CauchyAdditionWellDefined.html" title="Problem 13.2.8">Problem 13.2.8</a> it is clear that in forming <span class="process-math">\(0^*+x\)</span> we can choose any sequence in <span class="process-math">\(0^*\)</span> to represent <span class="process-math">\(0^*\)</span> and any sequence in <span class="process-math">\(x\)</span> to represent <span class="process-math">\(x\text{.}\)</span> (This is because any other choice will yield a sequence equivalent to <span class="process-math">\(0^*+x\text{.}\)</span>)</p>
+<p id="p-1616">Thus we choose <span class="process-math">\((0, 0, 0, \ldots)\)</span> to represent <span class="process-math">\(0^*\)</span> and any element of <span class="process-math">\(x\text{,}\)</span> say <span class="process-math">\((x_1, x_2, \ldots)\text{,}\)</span> to represent <span class="process-math">\(x\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-58">
+\begin{align*}
+(0, 0, 0, \ldots) + (x_1, x_2, x_3, \ldots) \amp = (x_1, x_2, x_3, \ldots)\\
+\amp = x\text{.}
+\end{align*}
+</div>
+<p id="p-1617">Since any other sequences taken from <span class="process-math">\(0^*\)</span> and <span class="process-math">\(x\)</span> respectively, will yield a sum equivalent to <span class="process-math">\(x\)</span> (see <a href="" class="xref" data-knowl="./knowl/prob_EquivalentCauchySequences.html" title="Problem 13.2.5">Problem 13.2.5</a>) we conclude that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prob_EquivalentCauchySequences.html">
+\begin{equation*}
+0^*+x=x\text{.}
+\end{equation*}
+</div></article></div>
+<article class="problem example-like" id="problem-218"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-218"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.2.10</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-218"><article class="problem example-like"><p id="p-1618"> Identify the set of equivalent Cauchy sequences, <span class="process-math">\(1^*\text{,}\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1^*\cdot x=x\text{.}
+\end{equation*}
+</div></article></div>
+<article class="problem example-like" id="problem-219"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-219"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.2.11</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-219"><article class="problem example-like"><div class="introduction" id="introduction-36"><p id="p-1619">Let <span class="process-math">\(x, y\text{,}\)</span> and <span class="process-math">\(z\)</span> be real numbers (equivalent sets of Cauchy sequences). Show that with addition and multiplication defined as above we have:</p></div>
+<article class="task exercise-like" id="task-161"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1620"><span class="process-math">\(x+y=y+x\)</span></p></article><article class="task exercise-like" id="task-162"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1621"><span class="process-math">\((x+y)+z=x+(y+z)\)</span></p></article><article class="task exercise-like" id="task-163"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1622"><span class="process-math">\(x\cdot y=y\cdot x\)</span></p></article><article class="task exercise-like" id="task-164"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1623"><span class="process-math">\((x\cdot y)\cdot z=x\cdot (y\cdot z)\)</span></p></article><article class="task exercise-like" id="task-165"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1624"><span class="process-math">\(x\cdot(y+z)=x\cdot y+x\cdot z\)</span></p></article></article></div>
+<aside class="aside aside-like" id="aside-25"><p id="p-1625">We will not address this issue here, but you should give some thought to how this might be accomplished.</p></aside><p id="p-1626">Once the existence of additive and multiplicative inverses is established the collection of all sets of equivalent Cauchy sequences, with addition and multiplication defined as above satisfy all of the field axioms.  It is clear that they form a number field and thus deserve to be called numbers.</p>
+<p id="p-1627">However this does not necessarily show that they form <span class="process-math">\(\RR\text{.}\)</span>  We also need to show that they are complete in the sense of <a href="IVTandEVT.html" class="internal" title="Chapter 10: Intermediate and Extreme Values">Chapter 10</a>.  It is perhaps not too surprising that when we build the real numbers using equivalent Cauchy sequences the most natural completeness property we can show is that if a sequence of real numbers is Cauchy then it converges.</p>
+<p id="p-1628">However we are not in a position to show that Cauchy sequences in <span class="process-math">\(\RR\)</span> converge.  To do this we would first need to show that these sets of equivalence classes of Cauchy sequences (real numbers) are linearly ordered.</p>
+<p id="p-1629">Unfortunately showing the linear ordering, while not especially hard, is time consuming. So we will again invoke the prerogatives of the teacher and brush all of the difficulties aside with the assertion that it is straightforward to show that the real numbers as we have constructed them in this section are linearly ordered and are complete. If you would like to see this construction in full rigor we recommend the book, <em class="emphasis">The Number System</em> by H. A. Thurston <a href="" class="xref" data-knowl="./knowl/thurston56__number_system.html" title="Bibliographic Entry 16">[16]</a>.</p>
+<aside class="aside aside-like" id="aside-26"><p id="p-1630">Thurston first builds <span class="process-math">\(\RR\)</span> as we've indicated in this section. Then as a final remark he shows that the real numbers must be exactly the infinite decimals we saw in the previous section.</p></aside></section><section class="subsection" id="DedekindCuts"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">13.2.3</span> <span class="title">Dedekind Cuts</span>
+</h3>
+<p id="p-1631">An advantage of building the reals via Cauchy sequences in the previous section is that once we've identified equivalent sequences with real numbers it is <em class="emphasis">very</em> clear how addition and multiplication should be defined.</p>
+<p id="p-1632">On the other hand, before we can even start to understand that construction, we need a fairly strong sense of what it means for a sequence to converge and enough experience with sequences to be comfortable with the notion of a Cauchy sequence. Thus a good deal of high level mathematics must be mastered before we can even begin.</p>
+<p id="p-1633">The method of “Dedekind cuts” first developed by Richard Dedekind  (though he just called them “cuts”) in his 1872 book, <em class="emphasis">Continuity and the Irrational Numbers</em> shares the advantage of the Cauchy sequence method in that, once the candidates for the real numbers have been identified, it is very clear how addition and multiplication should be defined. It is also straightforward to show that most of the field axioms are satisfied.</p>
+<aside class="aside aside-like" id="aside-27"><p id="p-1634">“Clear” does not mean “easy to do” as we will see.</p></aside><p id="p-1635">In addition, Dedekind's method also has the advantage that very little mathematical knowledge is required to get started. This is intentional. In the preface to the first edition of his book, Dedekind  states:</p>
+<blockquote class="blockquote" id="blockquote-5"><p id="p-1636">This memoir can be understood by anyone possessing what is usually called common sense; no technical philosophic, or mathematical, knowledge is in the least degree required. (quoted in <a href="" class="xref" data-knowl="./knowl/hawking05__god_creat_integ.html" title="Bibliographic Entry 5">[5]</a>)</p></blockquote>
+<p id="p-1637">While he may have overstated his case a bit, it is clear that his intention was to argue from very simple first principles just as Euclid did.</p>
+<p id="p-1638">His starting point was the observation we made in <a href="NumbersRealRational.html" class="internal" title="Chapter 3: Numbers, Real (\RR) and Rational (\QQ)">Chapter 3</a>: The rational number line is full of holes. More precisely we can “cut” the rational line in two distinct ways:</p>
+<ol class="decimal">
+<li id="li-138"><p id="p-1639">We can pick a rational number, <span class="process-math">\(r\text{.}\)</span> This choice divides all other rational numbers into two classes: Those greater than <span class="process-math">\(r\)</span> and those less than <span class="process-math">\(r\text{.}\)</span></p></li>
+<li id="li-139"><p id="p-1640">We can pick one of the holes in the rational number line. In this case <em class="emphasis">all</em> of the rationals fall into two classes: Those greater than the hole and those less.</p></li>
+</ol>
+<p id="p-1641">But to speak of rational numbers as less than or greater than something that is <em class="emphasis">not</em> there is utter nonsense. We'll need a better (that is, a rigorous) definition.</p>
+<p id="p-1642">As before we will develop an overall sense of this construction rather than a fully detailed presentation, as the latter would be far too long to include.</p>
+<p id="p-1643">Our presentation will closely follow that of Edmund Landau's in his classic 1951 text <em class="emphasis">Foundations of Analysis</em> <a href="" class="xref" data-knowl="./knowl/landau66__found_analy.html" title="Bibliographic Entry 7">[7]</a>. We do this so that if you choose to pursue this construction in more detail you will be able to follow Landau's presentation more easily.</p>
+<article class="definition definition-like" id="def_dedekind-cuts"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.12</span><span class="period">.</span>
+</h4>
+<p id="p-1644"><em class="alert">Dedekind Cut</em></p>
+<p id="p-1645"> A set of <em class="emphasis">positive</em> rational numbers is called a <em class="emphasis">cut</em> if</p>
+<aside class="aside aside-like" id="aside-28"><p id="p-1646">Take special notice that we are not using the negative rational numbers or zero to build our cuts.  The reason for this will become clear shortly.</p></aside><dl id="p-1647" class="description-list">
+<dt id="li-140">Property I</dt>
+<dd><p id="p-1648">It contains a positive rational number but does not contain all positive rational numbers.</p></dd>
+<dt id="li-141">Property II</dt>
+<dd><p id="p-1649">Every positive rational number in the set is less than every positive rational number not in the set.</p></dd>
+<dt id="li-142">Property III</dt>
+<dd><p id="p-1650">There is no element of the set which is greater than every other element of the set.</p></dd>
+</dl></article><p id="p-1651">Given their intended audiences, Dedekind  and Landau shied away from using too much notation. However, we will include the following for those who are more comfortable with the symbolism as it may help provide more perspective. Specifically the properties defining a Dedekind cut <span class="process-math">\(\alpha\)</span> can be written as follows.</p>
+<dl id="p-1652" class="description-list">
+<dt id="li-143">Property I</dt>
+<dd><p id="p-1653"><span class="process-math">\(\alpha\ne\emptyset\)</span> and <span class="process-math">\(\QQ^+-\alpha\ne\emptyset\text{.}\)</span></p></dd>
+<dt id="li-144">Property II</dt>
+<dd><p id="p-1654">If <span class="process-math">\(x\in\alpha\)</span> and <span class="process-math">\(y\in\QQ^+-\alpha\text{,}\)</span> then <span class="process-math">\(x\lt y\text{.}\)</span> (Alternatively, if <span class="process-math">\(x\in\alpha\)</span> and <span class="process-math">\(y\lt x\text{,}\)</span> then <span class="process-math">\(y\in\alpha\text{.}\)</span>)</p></dd>
+<dt id="li-145">Property III</dt>
+<dd><p id="p-1655">If <span class="process-math">\(x\in\alpha\text{,}\)</span> then <span class="process-math">\(\exists\ z\in\alpha\)</span> such that <span class="process-math">\(x\lt z\text{.}\)</span></p></dd>
+</dl>
+<p id="p-1656">Properties I-III really say that Dedekind cuts are bounded open intervals of rational numbers starting at <span class="process-math">\(0\text{.}\)</span> For example, <span class="process-math">\((0,3)\cap\QQ^+\)</span> is a Dedekind cut (which will eventually be the real number <span class="process-math">\(3\)</span>). Likewise, <span class="process-math">\(\left\{x|x^2\lt 2\right\}\cap\QQ^+\)</span> is a Dedekind cut (which will eventually be the real number <span class="process-math">\(\sqrt{2}\)</span>). Notice that care must be taken not to actually refer to irrational numbers in the properties as the purpose is to construct them from rational numbers, but it might help to ground you to anticipate what will happen.</p>
+<p id="p-1657">Take particular notice of the following three facts:</p>
+<ol class="decimal">
+<li id="li-146"><p id="p-1658">Very little mathematical knowledge is required to understand this definition. We need to know what a set is, we need to know what a rational number is, and we need to know that given two positive rational numbers either they are equal or one is greater.</p></li>
+<li id="li-147"><p id="p-1659">The language Landau uses is <em class="emphasis">very</em> precise. This is necessary in order to avoid such nonsense as trying to compare something with nothing like we did a couple of paragraphs up.</p></li>
+<li id="li-148"><p id="p-1660">We are only using the <em class="emphasis">positive</em> rational numbers for our construction. The reason for this will become clear shortly. As a practical matter for now, this means that the cuts we have just defined will (eventually) correspond to the <em class="emphasis">positive</em> real numbers.</p></li>
+</ol>
+<article class="definition definition-like" id="def_dedekind-cuts-ordering"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.13</span><span class="period">.</span>
+</h4>
+<p id="p-1661"> Let <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> be cuts. Then we say that <span class="process-math">\(\alpha\)</span> is less than <span class="process-math">\(\beta\text{,}\)</span> and write</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\alpha\lt \beta
+\end{equation*}
+</div>
+<p class="continuation">if there is a rational number in <span class="process-math">\(\beta\)</span> which is not in <span class="process-math">\(\alpha\text{.}\)</span></p></article><p id="p-1662">Note that, in light of what we said prior to <a href="" class="xref" data-knowl="./knowl/def_dedekind-cuts-ordering.html" title="Definition 13.2.13">Definition 13.2.13</a> (which is taken directly from Landau), we notice the following.</p>
+<article class="theorem theorem-like" id="thm_OrderingCuts"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">13.2.14</span><span class="period">.</span>
+</h4>
+<p id="p-1663"> Let <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> be cuts. Then <span class="process-math">\(\alpha\lt \beta\)</span> if and only if <span class="process-math">\(\alpha\subset\beta\text{.}\)</span></p></article><article class="problem example-like" id="problem-220"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-220"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.2.15</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-220"><article class="problem example-like"><p id="p-1664"> Prove <a href="" class="xref" data-knowl="./knowl/thm_OrderingCuts.html" title="Theorem 13.2.14">Theorem 13.2.14</a> and use this to conclude that if <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> are cuts then exactly one of the following is true:</p>
+<ol class="decimal">
+<li id="li-149"><p id="p-1665"><span class="process-math">\(\alpha=\beta\text{.}\)</span></p></li>
+<li id="li-150"><p id="p-1666"><span class="process-math">\(\alpha\lt \beta\text{.}\)</span></p></li>
+<li id="li-151"><p id="p-1667"><span class="process-math">\(\beta\lt \alpha\text{.}\)</span></p></li>
+</ol></article></div>
+<p id="p-1668">We will need first to define addition and multiplication for our cuts and eventually these will need to be extended to <span class="process-math">\(\RR\)</span> (once the non-positive reals have also been constructed). It will be necessary to show that the extended definitions satisfy the field axioms. As you can see there is a lot to do.</p>
+<p id="p-1669">As we did with Cauchy sequences and with infinite decimals, we will stop well short of the full construction. If you are interested in  exploring the details of Dedekind's construction, Landau's book <a href="" class="xref" data-knowl="./knowl/landau66__found_analy.html" title="Bibliographic Entry 7">[7]</a> is very thorough and was written with the explicit intention that it would be accessible to students. In his “Preface for the Teacher” he says</p>
+<blockquote class="blockquote" id="blockquote-6"><p id="p-1670">I hope that I have written this book, after a preparation stretching over decades, in such a way that a normal student can read it in two days.</p></blockquote>
+<p id="p-1671">This may be stretching things. Give yourself at least a week and make sure you have nothing else to do that week.</p>
+<p id="p-1672">Addition and multiplication are defined in the obvious way.</p>
+<article class="definition definition-like" id="def_dedekind-cuts-addition"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.16</span><span class="period">.</span>
+</h4>
+<p id="p-1673"><em class="alert">Addition on cuts</em></p>
+<p id="p-1674"> Let <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> be cuts. We will denote the set <span class="process-math">\(\left\{x+y|x\in\alpha,
+y\in\beta\right\}\)</span> by <span class="process-math">\(\alpha+\beta\text{.}\)</span></p></article><article class="definition definition-like" id="def_dedekind-cuts-multiplication"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.17</span><span class="period">.</span>
+</h4>
+<p id="p-1675"><em class="alert">Multiplication on cuts</em></p>
+<p id="p-1676"> Let <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> be cuts. We will denote the set <span class="process-math">\(\left\{xy|x\in\alpha,
+y\in\beta\right\}\)</span> by <span class="process-math">\(\alpha\beta \text{ or } \alpha\cdot\beta\text{.}\)</span></p></article><p id="p-1677">If we are to have a hope that these objects will serve as our real numbers we must have closure with respect to addition and multiplication. We will show closure with respect to addition.</p>
+<article class="theorem theorem-like" id="thm_dedekind-cuts-closure"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">13.2.18</span><span class="period">.</span>
+</h4>
+<p id="p-1678"><em class="alert">Closure with Respect to Addition</em></p>
+<p id="p-1679"> If <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> are cuts then <span class="process-math">\(\alpha+\beta\)</span> is a cut.</p></article><article class="hiddenproof" id="proof-35"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-35"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-35"><article class="hiddenproof"><p id="p-1680">We need to show that the set <span class="process-math">\(\alpha+\beta\)</span> satisfies all three of the properties of a cut.</p>
+<dl id="p-1681" class="description-list">
+<dt id="li-152">Property I</dt>
+<dd>
+<p id="p-1682">Let <span class="process-math">\(x\)</span> be <em class="emphasis">any</em> rational number in <span class="process-math">\(\alpha\)</span> and let <span class="process-math">\(x_1\)</span> be a rational number not in <span class="process-math">\(\alpha\text{.}\)</span>  Then by Property II <span class="process-math">\(x\lt x_1\text{.}\)</span></p>
+<p id="p-1683">Let <span class="process-math">\(y\)</span> be <em class="emphasis">any</em> rational number in <span class="process-math">\(\beta\)</span> and let <span class="process-math">\(y_1\)</span> be a rational number not in <span class="process-math">\(\beta\text{.}\)</span>  Then by Property II <span class="process-math">\(y\lt
+y_1\text{.}\)</span></p>
+<p id="p-1684">Thus since <span class="process-math">\(x+y\)</span> represents a generic element of <span class="process-math">\(\alpha+\beta\)</span> and <span class="process-math">\(x+y\lt x_1+y_1\text{,}\)</span> it follows that <span class="process-math">\(x_1+y_1\not\in\alpha+\beta\text{.}\)</span></p>
+</dd>
+<dt id="li-153">Property II</dt>
+<dd>
+<p id="p-1685">We will show that the contrapositive of <em class="alert">Property II</em> is true: If <span class="process-math">\(x\in\alpha+\beta\)</span> and <span class="process-math">\(y\lt x\)</span> then <span class="process-math">\(y\in\alpha+\beta\text{.}\)</span></p>
+<p id="p-1686">First, let <span class="process-math">\(x\in\alpha+\beta\text{.}\)</span> Then there are <span class="process-math">\(x_\alpha\in\alpha\)</span> and <span class="process-math">\(x_\beta\in\beta\)</span> such that <span class="process-math">\(y\lt x=x_\alpha+x_\beta\text{.}\)</span> Therefore <span class="process-math">\(\frac{y}{x_\alpha+x_\beta}\lt  1\text{,}\)</span> so that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-59">
+\begin{align*}
+x_\alpha\left(\frac{y}{x_\alpha+x_\beta}\right)\amp \lt  x_\alpha\\
+\end{align*}
+<p class="intertext">and</p>
+\begin{align*}
+x_\beta\left(\frac{y}{x_\alpha+x_\beta}\right)\amp \lt  x_\beta\text{.}
+\end{align*}
+</div>
+<p id="p-1687">Therefore <span class="process-math">\(x_\alpha\left(\frac{y}{x_\alpha+x_\beta}\right)\in\alpha\)</span> and <span class="process-math">\(x_\beta\left(\frac{y}{x_\alpha+x_\beta}\right)\in\beta\text{.}\)</span> Therefore</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y=x_\alpha\left(\frac{y}{x_\alpha+x_\beta}\right)+x_\beta\left(\frac{y}{x_\alpha+x_\beta}\right)\in\alpha+\beta\text{.}
+\end{equation*}
+</div>
+</dd>
+<dt id="li-154">Property III</dt>
+<dd>
+<p id="p-1688">Let <span class="process-math">\(z\in\alpha+\beta\text{.}\)</span> We need to find <span class="process-math">\(w&gt;z\text{,}\)</span> <span class="process-math">\(w\in\alpha+\beta\text{.}\)</span> Observe that for some <span class="process-math">\(x\in\alpha\)</span> and <span class="process-math">\(y\in\beta\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+z=x+y\text{.}
+\end{equation*}
+</div>
+<p id="p-1689">Since <span class="process-math">\(\alpha\)</span> is a cut, there is a rational number <span class="process-math">\(x_1\in\alpha\)</span> such that <span class="process-math">\(x_1&gt;x\text{.}\)</span> Take <span class="process-math">\(w=x_1+y\in\alpha+\beta\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+w=x_1+y&gt;x+y=z\text{.}
+\end{equation*}
+</div>
+</dd>
+</dl></article></div>
+<article class="problem example-like" id="problem-221"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-221"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.2.19</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-221"><article class="problem example-like"><p id="p-1690"> Show that if <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> are cuts then <span class="process-math">\(\alpha\cdot\beta\)</span> is also a cut.</p></article></div>
+<p id="p-1691">At this point we have built our cuts and we have defined addition and multiplication for cuts. However, as observed earlier the cuts we have will (very soon) correspond only to the positive real numbers. This may appear to be a problem but it really isn't because the non-positive real numbers can be defined in terms of the positives, that is, in terms of our cuts. We quote from Landau <a href="" class="xref" data-knowl="./knowl/landau66__found_analy.html" title="Bibliographic Entry 7">[7]</a>:</p>
+<blockquote class="blockquote" id="blockquote-7">
+<p id="p-1692">These cuts will henceforth be called the “positive numbers;”  .  .  .</p>
+<p id="p-1693">We create a new number <span class="process-math">\(0\)</span> (to be read “zero”), distinct from the positive numbers.</p>
+<p id="p-1694">We also create numbers which are distinct from the positive numbers as well as distinct from zero, and which we will call negative numbers, in such a way that to each <span class="process-math">\(\xi\)</span> (I.e. to each positive number) we assign a negative number denoted by <span class="process-math">\(-\xi\)</span> (<span class="process-math">\(-\)</span> to be read “minus”). In this, <span class="process-math">\(-\xi\)</span> and <span class="process-math">\(-\nu\)</span> will be considered as the same number (as equal) if and only if <span class="process-math">\(\xi\)</span> and <span class="process-math">\(\nu\)</span> are the same number.</p>
+<p id="p-1695">The totality consisting of all positive numbers, of <span class="process-math">\(0\text{,}\)</span> and of all negative numbers, will be called the real numbers.</p>
+</blockquote>
+<p id="p-1696">Of course it is not nearly enough to simply postulate the existence of the non-negative real numbers.</p>
+<p id="p-1697">All we have so far is a set of objects we're calling the real numbers.  For some of them (the positive reals -- that is, the cuts) we have defined addition and multiplication. These definitions will eventually turn out to correspond to the addition and multiplication we are familiar with.</p>
+<p id="p-1698">However we do not have either operation for our entire set of proposed real numbers. Before we do this we need first to define the <em class="emphasis">absolute value</em> of a real number. This is a concept you are very familiar with and you have probably seen the following definition: Let <span class="process-math">\(\alpha\in\RR\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\abs{\alpha} = \begin{cases}\alpha\amp  \text{ if \(\alpha\ge0,\) } \\ -\alpha\amp  \text{ if \(\alpha\lt 0.\) } \end{cases}
+\end{equation*}
+</div>
+<p id="p-1699">Unfortunately we cannot use this definition because we do not yet have a linear ordering on <span class="process-math">\(\RR\)</span> so the statement <span class="process-math">\(\alpha\ge0\)</span> is meaningless. Indeed, it will be our definition of absolute value that orders the real numbers. We must be careful.</p>
+<p id="p-1700">Notice that by definition a negative real number is denoted with the dash ('-') in front. That is <span class="process-math">\(\chi\)</span> is positive while <span class="process-math">\(-\chi\)</span> is negative. Thus if <span class="process-math">\(A\)</span> is <em class="emphasis">any</em> real number then one of the following is true:</p>
+<ol class="decimal">
+<li id="li-155"><p id="p-1701"><span class="process-math">\(A=\chi\)</span> for some <span class="process-math">\(\chi\in\RR\)</span> (<span class="process-math">\(A\)</span> is positive)</p></li>
+<li id="li-156"><p id="p-1702"><span class="process-math">\(A=-\chi\)</span> for some <span class="process-math">\(\chi\in\RR\)</span> (<span class="process-math">\(A\)</span> is negative)</p></li>
+<li id="li-157"><p id="p-1703"><span class="process-math">\(A=0\text{.}\)</span></p></li>
+</ol>
+<p id="p-1704">We define absolute value as follows:</p>
+<article class="definition definition-like" id="def_absolute-value"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.20</span><span class="period">.</span>
+</h4>
+<p id="p-1705"> Let <span class="process-math">\(A\in\RR\)</span> as above. Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\abs{A}= \begin{cases}\chi \amp  \text{ if \(A=\chi{}\)} \\ 0 \amp  \text{ if \(A=0\) } \\ \chi \amp  \text{ if \(A=-\chi{}.\)} {} \end{cases}
+\end{equation*}
+</div></article><p id="p-1706">With this definition in place it is possible to show that <span class="process-math">\(\RR\)</span> is linearly ordered. We will not do this explicitly. Instead we will simply assume that the symbols “<span class="process-math">\(\lt\)</span>” “<span class="process-math">\(&gt;\text{,}\)</span>” and “<span class="process-math">\(=\)</span>” have been defined and have all of the properties we have learned to expect from them.</p>
+<p id="p-1707">We now extend our definitions of addition and multiplication from the positive real numbers (cuts) to all of them. Curiously, multiplication is the simpler of the two.</p>
+<article class="definition definition-like" id="def_dedekind-multiplication"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.21</span><span class="period">.</span>
+</h4>
+<p id="p-1708"><em class="alert">Multiplication</em></p>
+<p id="p-1709"> Let <span class="process-math">\(\alpha, \beta\in\RR\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\alpha\cdot\beta = \begin{cases}-\abs{\alpha}\abs{\beta}\amp  \text{ if \(\alpha&gt;0,\beta\lt 0\) or \(\alpha\lt 0, \beta&gt;0,\) }  \\ \ \ \,\abs{\alpha}\abs{\beta}\amp  \text{ if \(\alpha\lt 0,\beta\lt 0,\) }  \\ \ \ \ \ \ \, 0\amp  \text{ if \(\alpha=0\) or \(\beta=0.\) }  {} \end{cases}
+\end{equation*}
+</div></article><p id="p-1710">Notice that the case where <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> are both positive was already handled by <a href="" class="xref" data-knowl="./knowl/def_dedekind-cuts-multiplication.html" title="Definition 13.2.17">Definition 13.2.17</a> because in that case they are both cuts.</p>
+<p id="p-1711">Next we define addition.</p>
+<article class="definition definition-like" id="def_dedekind-addition"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.22</span><span class="period">.</span>
+</h4>
+<p id="p-1712"><em class="alert">Addition</em></p>
+<p id="p-1713"> Let <span class="process-math">\(\alpha, \beta\in\RR\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\alpha+\beta= \begin{cases}-(\abs{\alpha}+\abs{\beta}) \amp  \text{ if \(\alpha\lt 0, \beta\lt 0 \) } \\ \ \ \ \abs{\alpha}-\abs{\beta}\amp  \text{ if \(\alpha&gt;0, \beta\lt 0, \abs{\alpha}&gt;\abs{\beta} \)} \\ \ \ \ \ \ \ \ \,0             \amp  \text{ if \(\alpha&gt;0, \beta\lt 0, \abs{\alpha}=\abs{\beta} \)} \\ -(\abs{\alpha}-\abs{\beta})   \amp  \text{ if \(\alpha&gt;0, \beta\lt 0, \abs{\alpha}\lt \abs{\beta} \)} \\ \ \ \ \ \ \beta+\alpha        \amp  \text{ if \(\alpha\lt 0, \beta&gt;0 \) } \\ \ \ \ \ \ \ \ \,\beta{}       \amp  \text{ if \(\alpha=0 \) } \\ \ \ \ \ \ \ \ \,\alpha        \amp  \text{ if \(\beta=0 \) } \end{cases} \text{.}
+\end{equation*}
+</div></article><aside class="aside aside-like" id="aside-29"><p id="p-1714">Notice also that the fifth case refers to the addition as defined in the second case.</p></aside><p id="p-1715">But wait!  In the second and fourth cases of our definition we've actually defined addition in terms of subtraction. But we haven't defined subtraction yet!  Oops!</p>
+<p id="p-1716">This is handled with the definition below, but it illuminates very clearly the care that must be taken in these constructions. The real numbers are <em class="emphasis">so</em> familiar to us that it is extraordinarily easy to make unjustified assumptions.</p>
+<p id="p-1717">Since the subtractions in the second and fourth cases above are done with positive numbers we only need to give meaning to the subtraction of cuts.</p>
+<article class="definition definition-like" id="def_CutSubtraction"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.23</span><span class="period">.</span>
+</h4>
+<p id="p-1718"> If <span class="process-math">\(\alpha\text{,}\)</span> <span class="process-math">\(\beta\)</span> and <span class="process-math">\(\delta\)</span> are cuts then the expression</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\alpha-\beta=\delta
+\end{equation*}
+</div>
+<p class="continuation">is defined to mean</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\alpha=\delta+\beta\text{.}
+\end{equation*}
+</div></article><p id="p-1719">Of course, there is the detail of showing that there is such a cut <span class="process-math">\(\delta\text{.}\)</span> (We warned you of the tediousness of all this.) Landau goes through the details of showing that such a cut exists. We will present an alternative by defining the cut <span class="process-math">\(\alpha-\beta\)</span> directly (assuming <span class="process-math">\(\beta\lt \alpha\)</span>). To motivate this definition, consider something we are familiar with: <span class="process-math">\(3-2=1\text{.}\)</span> In terms of cuts, we want to say that the open interval from <span class="process-math">\(0\)</span> to <span class="process-math">\(3\)</span> “minus” the open interval from <span class="process-math">\(0\)</span> to <span class="process-math">\(2\)</span> should give us the open interval from <span class="process-math">\(0\)</span> to <span class="process-math">\(1\text{.}\)</span> Taking elements from <span class="process-math">\((0,3)\)</span> and subtracting elements from <span class="process-math">\((0,2)\)</span> won't do it as we would have differences such as <span class="process-math">\(2.9-.9=2\)</span> which is not in the cut <span class="process-math">\((0,1)\text{.}\)</span> A moment's thought tells us that what we need to do is take all the elements from <span class="process-math">\((0,3)\)</span> and subtract all the elements from <span class="process-math">\((2,\infty)\text{,}\)</span> restricting ourselves only to those which are positive rational numbers. This prompts the following definition.</p>
+<article class="definition definition-like" id="def_SubtractionOfCutsAsSets"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.2.24</span><span class="period">.</span>
+</h4>
+<p id="p-1720"> Let <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> be cuts with <span class="process-math">\(\beta\lt \alpha\text{.}\)</span> Define <span class="process-math">\(\alpha-\beta\)</span> as follows:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\alpha-\beta =\left\{x-y|x\in\alpha \text{ and } y\not\in\beta\right\}\cap\QQ^+\text{.}
+\end{equation*}
+</div></article><p id="p-1721">To show that, in fact, <span class="process-math">\(\beta+(\alpha-\beta)=\alpha\text{,}\)</span> the following technical lemma will be helpful.</p>
+<article class="lemma theorem-like" id="lem_Technical"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">13.2.25</span><span class="period">.</span>
+</h4>
+<p id="p-1722">Let <span class="process-math">\(\beta\)</span> be a cut, <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> be positive rational numbers not in <span class="process-math">\(\beta\)</span> with <span class="process-math">\(y\lt z\text{,}\)</span> and let <span class="process-math">\(\eps&gt;0\)</span> be any rational number. Then there exist positive rational numbers <span class="process-math">\(r\)</span> and <span class="process-math">\(s\)</span> with <span class="process-math">\(r\in\beta\text{,}\)</span> and <span class="process-math">\(s\not\in\beta\text{,}\)</span> such that <span class="process-math">\(s\lt z\text{,}\)</span> and <span class="process-math">\(s-r\lt \eps\text{.}\)</span></p></article><article class="problem example-like" id="problem-222"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-222"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.2.26</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-222"><article class="problem example-like"><p id="p-1723">Prove <a href="" class="xref" data-knowl="./knowl/lem_Technical.html" title="Lemma 13.2.25">Lemma 13.2.25</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-61" id="hint-61"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-61"><div class="hint solution-like"><p id="p-1724">Since <span class="process-math">\(\beta\)</span> is a cut there exists <span class="process-math">\(r_1\in\beta\text{.}\)</span> Let <span class="process-math">\(s_1=y\not\in\beta\text{.}\)</span>  We know that <span class="process-math">\(r_1\lt s_1\lt
+z\text{.}\)</span>  Consider the midpoint <span class="process-math">\(\frac{s_1+r_1}{2}\text{.}\)</span>  If this is in <span class="process-math">\(\beta\)</span> then relabel it as <span class="process-math">\(r_2\)</span> and relabel <span class="process-math">\(s_1\)</span> as <span class="process-math">\(s_2\text{.}\)</span>  If it is not in <span class="process-math">\(\beta\)</span> then relabel it as <span class="process-math">\(s_2\)</span> and relabel <span class="process-math">\(r_1\)</span> as <span class="process-math">\(r_2\text{,}\)</span> etc.</p></div></div>
+</div></article></div>
+<article class="problem example-like" id="problem-223"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-223"><h4 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">13.2.27</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-223"><article class="problem example-like"><p id="p-1725">Let <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> be cuts with <span class="process-math">\(\beta\lt
+\alpha\text{.}\)</span>  Prove that <span class="process-math">\(\beta+(\alpha-\beta)=\alpha\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-62" id="hint-62"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-62"><div class="hint solution-like"><p id="p-1726">It is pretty straightforward to show that <span class="process-math">\(\beta+(\alpha-\beta)\subseteq\alpha\text{.}\)</span>  To show that <span class="process-math">\(\alpha\subseteq\beta+(\alpha-\beta)\text{,}\)</span> we let <span class="process-math">\(x\in\alpha\text{.}\)</span>  Since <span class="process-math">\(\beta\lt \alpha\text{,}\)</span> we have <span class="process-math">\(y\in\alpha\)</span> with <span class="process-math">\(y\not\in\beta\text{.}\)</span> We can assume without loss of generality that <span class="process-math">\(x\lt
+y\text{.}\)</span> (Why?) Choose <span class="process-math">\(z\in\alpha\)</span> with <span class="process-math">\(y\lt
+z\text{.}\)</span>  By the <a href="" class="xref" data-knowl="./knowl/lem_Technical.html" title="Lemma 13.2.25">Lemma 13.2.25</a>, there exists positive rational numbers <span class="process-math">\(r\)</span> and <span class="process-math">\(s\)</span> with <span class="process-math">\(r\in\beta\text{,}\)</span> <span class="process-math">\(s\in\beta\text{,}\)</span> <span class="process-math">\(s\lt z\text{,}\)</span> and <span class="process-math">\(s-r\lt z-x\text{.}\)</span>  Show that <span class="process-math">\(x\lt r+(z-s)\text{.}\)</span></p></div></div>
+</div></article></div>
+<p id="p-1727">We will end by saying that no matter how you construct the real number system, there is really only one.  More precisely we have the following theorem which we state without proof.</p>
+<aside class="aside aside-like" id="aside-30"><p id="p-1728">In fact, <em class="emphasis">not</em> proving this result seems to be standard in real analysis references.  Most often it is simply stated as we do here.</p></aside><article class="theorem theorem-like" id="thm_R-is-R"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">13.2.28</span><span class="period">.</span>
+</h4>
+<p id="p-1729"> Any complete, linearly ordered field is isomorphic to <span class="process-math">\(\RR\text{.}\)</span></p></article><p id="p-1730">Two linearly ordered number fields are said to be isomorphic if there is a one-to-one, onto mapping between them (such a mapping is called a bijection) which preserves addition, multiplication, and order. More precisely, if <span class="process-math">\({\cal F}_1\)</span> and <span class="process-math">\({\cal F}_2\)</span> are both linearly ordered fields, <span class="process-math">\(x,
+y \in{\cal F}_1\)</span> and <span class="process-math">\(\phi:{\cal F}_1\rightarrow{\cal F}_2\)</span> is the mapping then</p>
+<ol class="decimal">
+<li id="li-158"><p id="p-1731"><span class="process-math">\(\displaystyle \phi(x+y)=\phi(x)+\phi(y)\)</span></p></li>
+<li id="li-159"><p id="p-1732"><span class="process-math">\(\displaystyle \phi(x\cdot y) = \phi(x)\cdot\phi(y)\)</span></p></li>
+<li id="li-160"><p id="p-1733"><span class="process-math">\(x\lt y \imp \phi(x)\lt \phi(y)\text{.}\)</span></p></li>
+</ol>
+<p id="p-1734">Remember that we warned you that these constructions were fraught with technical details that are not necessarily illuminating. Nonetheless, at this point, you have everything you need to show that the set of all real numbers as defined above is linearly ordered and satisfies the Least Upper Bound property.</p>
+<p id="p-1735">But we will stop here in order, to paraphrase Descartes, to leave for you the joy of further discovery.</p></section></section></div></main>
+</div>
+</body>
+</html>

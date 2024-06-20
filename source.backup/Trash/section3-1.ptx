@@ -1,0 +1,428 @@
+
+
+<section>
+  <title>Taylor's Formula</title>
+  <p>
+    As we saw in the previous chapter,
+    representing functions as power series was a fruitful strategy for mathematicans in the eighteenth century
+    (as it still is).
+    Differentiating and integrating power series term by term was relatively easy,
+    <em>seemed</em> to work, and led to many applications.
+    Furthermore,
+    power series representations for all of the elementary functions could be obtained if one was clever enough.
+  </p>
+
+  <p>
+    However, cleverness is an unreliable tool.
+    Is there some systematic way to find a power series for a given function?
+    To be sure, there were nagging questions: If we can find a power series,
+    how do we know that the series we've created represents the function we started with?
+    Even worse, is it possible for a function to have more than one power series representation centered at a given value <m>a?</m> This uniqueness issue is addressed by the following theorem.
+  </p>
+
+  <theorem xml:id="TaylorSeriesThm">
+    <statement>
+      <p>
+        <idx><h>Taylor's Formula</h></idx>
+        If <m>f(x)=\sum_{n=0}^\infty a_n(x-a)^n</m>,
+        then <m>a_n=\frac{f^{(n)}(a)}{n!}</m>,
+        where <m>f^{(n)}(a)</m> represents the <m>n^{th}</m> derivative of <m>f</m> evaluated at <m>a</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    A few comments about <xref ref="TaylorSeriesThm">Theorem</xref> are in order.
+    Notice that we did <em>not</em>
+    start with a function and derive its series representation.
+    Instead we <em>defined</em> <m>f(x)</m> to be the series we wrote down.
+    This assumes that the expression <m>\sum_{n=0}^\infty a_n(x-a)^n</m> actually has meaning
+    (that it converges).
+    At this point we have every reason to expect that it does,
+    however expectation is not proof so we note that this is an assumption,
+    not an established truth.
+    Similarly, the idea that we can differentiate an infinite polynomial term-by-term as we would a finite polynomial is also assumed.
+    As before, we follow in the footsteps of our 18th century forebears in making these assumptions.
+    For now.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Taylor's Formula</h></idx>
+        Prove <xref ref="TaylorSeriesThm">Theorem</xref>.
+      </p>
+    </statement>
+    <hint>
+      <p>
+        <m>f(a)=a_0+a_1(a-a)+a_2(a-a)^2+\cdots=a_0</m>.
+        Differentiate to obtain the other terms.
+      </p>
+    </hint>
+  </problem>
+
+  <p>
+    From <xref ref="TaylorSeriesThm">Theorem</xref>
+    we see that if we do start with the function <m>f(x)</m> then no matter how we obtain its power series,
+    the result will always be the same.
+    The series
+    <me>
+      \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n=f(a)+f^\prime(a)(x-a)+\frac{f^{\prime\prime}(a)}{2!}(x-a)^2+\frac{f^{\prime\prime\prime}(a)}{3!}(x-a)^3+\cdots
+    </me>
+  </p>
+
+  <figure>
+    <caption>Brook Taylor<idx><h>Taylor, Brook</h><h>portrait of</h></idx></caption>
+    <image width="35%" source="images/Taylor.png" />
+  </figure>
+
+  <p>
+    is called the <em><alert>Taylor series</alert> for <m>f</m> expanded about
+    (centered at)
+    <m>a</m></em>.
+    Although this systematic <q>machine</q>
+    for obtaining power series for a function seems to have been known to a number of mathematicians in the early 1700's, Brook Taylor 
+        <idx><h>Taylor, Brook</h></idx>
+        was the first to publish this result in his <foreign>Methodus Incrementorum</foreign> (1715).
+    The special case when <m>a=0</m> was included by Colin Maclaurin
+        <idx><h>Maclaurin, Colin</h></idx>
+    in his <em>Treatise of Fluxions</em> (1742).
+    Thus when <m>a=0</m>,
+    the series <m>\sum_{n=0}^\infty\frac{f^{(n)}(0)}{n!}x^n</m> is often called the
+    <em> Maclaurin Series for <m>f</m></em>.
+  </p>
+
+  <p>
+    The <q>prime notation</q> for the derivative was not used by Taylor, 
+        <idx><h>Taylor, Brook</h></idx>
+    Maclaurin or their contemporaries.
+    It was introduced by Joseph Louis Lagrange
+        <idx><h>Lagrange, Joseph-Louis</h></idx>
+        in his 1779 work <foreign>Th&#xe9;orie des Fonctions Analytiques</foreign>. In that work, Lagrange sought to get rid of Leibniz's infinitesimals<idx><h>Leibniz, Gottfried Wilhelm</h></idx> and base calculus on the power series idea.
+    His idea was that by representing every function as a power series,
+    calculus could be done <q>algebraically</q>
+    by manipulating power series and examining various aspects of the series representation instead of appealing to the <q>controversial</q>
+    notion of infinitesimals.
+    He implicitly assumed that every continuous function could be replaced with its power series representation.
+  </p>
+
+  <p>
+    That is, he wanted to think of the Taylor series as a
+    <q>great big polynomial,</q>
+    because polynomials are easy to work with.
+    It was a very simple, yet exceedingly clever and far-reaching idea.
+    Since <m>e^x = 1 +x +x^2/2 +\ldots</m>, for example,
+    why not just define the exponential to be the series and work with the series.
+    After all, the series is just a very long polynomial.
+  </p>
+
+  <p>
+    This idea did not come out of nowhere.
+    Leonhard Euler 
+        <idx><h>Euler, Leonhard</h></idx>
+    had put exactly that idea to work to solve many problems throughout the 18th century.
+    Some of his solutions are still quite breath-taking when you first see them<nbsp /><xref ref="sandifer07__early_mathem_leonar_euler" />.
+  </p>
+
+  <p>
+    Taking his cue from the Taylor series
+    <me>
+      f(x) = \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n
+    </me>
+  </p>
+
+  <figure>
+    <caption>Joseph-Louis Lagrange<idx><h>Lagrange, Joseph-Louis</h><h>portrait of</h></idx></caption>
+    <image width="35%" source="images/Lagrange.png" />
+  </figure>
+
+  <p>
+    Lagrange observed that the coefficient of <m>(x-a)^n</m> provides the derivative of <m>f</m> at <m>a</m>
+    (divided by <m>n!</m>).
+    Modifying the formula above to suit his purpose, Lagrange supposed that every differentiable function could be represented as
+    <me>
+      f(x) = \sum_{n=0}^\infty g_n(a)(x-a)^n
+    </me>.
+  </p>
+
+  <p>
+    If we regard the parameter <m>a</m> as a variable then <m>g_1</m> is the derivative of <m>f</m>,
+    <m>g_2=2f^{\prime\prime}</m> and generally
+    <me>
+      g_n=n!f^{(n)}
+    </me>.
+  </p>
+
+  <p>
+    Lagrange dubbed his function <m>g_1</m> the
+    <foreign><q>fonction d&#xe9;riv&#xe9;e</q></foreign>
+    from which we get the modern name <q>derivative.</q>
+  </p>
+
+  <p>
+    All in all, this was a very clever and insightful idea whose only real flaw is that its fundamental assumption is not true.
+    It turns out that not every differentiable function can be represented as a Taylor series.
+    This was demonstrated very dramatically by Augustin Cauchy's
+        <idx><h>Cauchy, Augustin</h></idx>
+    famous counter-example
+    <men xml:id="eq_CauchyCounterEx">
+      f(x) = \begin{cases} e^{-\frac{1}{x^2}}\amp  x\ne0\\ 0 \amp x=0 \end{cases}
+    </men>.
+  </p>
+
+  <p>
+    This function is actually infinitely differentiable everywhere but its Maclaurin series
+    (that is, a Taylor series with <m>a=0</m>)
+    does not converge to <m>f</m> because all of its derivatives at the origin are equal to zero:
+    <m>f^{(n)}(0) = 0, \forall n\in\NN</m>.
+  </p>
+
+  <p>
+    Computing these derivatives using the definition you learned in calculus is not conceptually difficult but the formulas involved do become complicated rather quickly.
+    Some care must be taken to avoid error.
+  </p>
+
+  <p>
+    To begin with,
+    let's compute a few derivatives when <m>x \neq 0</m>.
+    <md>
+      <mrow>f^{(0)}(x) \amp = e^{x^{-2}}</mrow>
+      <mrow>f^{(1)}(x) \amp = 2x^{-3}e^{-x^{-2}}</mrow>
+      <mrow>f^{(2)}(x) \amp = \left(4x^{-6}-6x^{-4}\right)e^{-x^{-2}}</mrow>
+    </md>.
+  </p>
+
+  <p>
+    As you can see the calculations are already getting a little complicated and we've only taken the second derivative.
+    To streamline things a bit we take <m>y= x^{-1}</m>,
+    and define <m>p_2(x) = 4x^6-6x^4</m> so that
+    <me>
+      f^{(2)}(x) = p_2(x^{-1})e^{-x^{-2}} = p_2(y)e^{-y^2}
+    </me>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Cauchy, Augustin</h><h>Cauchy's counterexample</h><h> part 1</h></idx>
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Adopting the notation <m>y=x^{-1}</m> and <m>f^{(n)}(x) =p_n(y)e^{-y^2}</m>,
+              find <m>p_{n+1}(y)</m> in terms of
+              <m>p_{n}(y)</m>. 
+<!-- [Note: Don't forget that you are differentiating with respect to <m>x</m>, not <m>y</m>.] -->
+<note>
+  Don't forget that you are differentiating with respect to <m>x</m>, not <m>y</m>.
+</note>            </p>
+          </li>
+
+          <li>
+            <p>
+              Use induction on <m>n</m> to show that <m>p_n(y)</m> is a polynomial for all <m>n\in\NN</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Unfortunately everything we've done so far only gives us the derivatives we need when <m>x</m> is <em>not</em> zero,
+    and we need the derivatives when <m>x</m> <em>is</em> zero.
+    To find these we need to get back to very basic ideas.
+  </p>
+
+  <p>
+    Let's assume for the moment that we know that <m>f^{(n)}(0)=0</m> and recall that
+    <md>
+      <mrow>f^{(n+1)}(0) \amp = \limit{x}{0}{\frac{f^{(n)}(x)-f^{(n)}(0)}{x-0}}</mrow>
+      <mrow>f^{(n+1)}(0) \amp = \limit{x}{0}{x^{-1}p_n(x^{-1})e^{-x^{-2}}}</mrow>
+      <mrow>f^{(n+1)}(0) \amp = \limit{y}{\pm\infty}{\frac{yp_n(y)}{e^{y^2}}}</mrow>
+    </md>.
+  </p>
+
+  <p>
+    We can close the deal with the following problem.
+  </p>
+
+  <problem>
+    <idx><h>Cauchy, Augustin</h><h>Cauchy's counterexample</h><h>part 2</h></idx>
+        <ol label="(a)">
+          <li>
+<statement>
+<p>
+              Let <m>m</m> be a nonnegative integer.
+              Show that <m>\limit{y}{\pm\infty}{\frac{y^m}{e^{y^2}}}=0</m>. 
+</p>
+</statement>
+<hint> Induction and a dash of L'H&#xf4;pital's rule should do the trick.
+              </hint>
+          </li>
+
+          <li>
+            <p>
+              Prove that <m>\limit{y}{\pm\infty}{\frac{q(y)}{e^{y^2}}}=0</m> for any polynomial <m>q</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Let <m>f(x)</m> be as in <xref ref="eq_CauchyCounterEx">equation</xref>
+              and show that for every nonnegative integer <m>n</m>, <m>f^{(n)}(0)=0</m>.
+            </p>
+          </li>
+        </ol>
+  </problem>
+
+  <p>
+    This example showed that while it was fruitful to exploit Taylor series representations of various functions,
+    basing the foundations of calculus on power series was not a sound idea.
+  </p>
+
+  <p>
+    While Lagrange's
+        <idx><h>Lagrange, Joseph-Louis</h></idx>
+    approach wasn't totally successful,
+    it was a major step away from infinitesimals and toward the modern approach.
+    We still use aspects of it today.
+    For instance we still use his prime notation (<m>f^\prime</m>) to denote the derivative.
+  </p>
+
+  <p>
+    Turning Lagrange's idea on its head it is clear that if we know how to compute derivatives,
+    we can use this machine to obtain a power series when we are not <q>clever enough</q>
+    to obtain the series in other
+    (typically shorter)
+    ways.
+    For example,
+    consider Newton's binomial series when <m>\alpha=\frac{1}{2}</m>.
+    Originally, we obtained this series by extending the binomial theorem to non-integer exponents.
+    Taylor's formula provides a more systematic way to obtain this series:
+    <md>
+      <mrow>f(x)\amp =(1+x)^{\frac{1}{2}};\amp f(0)\amp =1</mrow>
+      <mrow>f^\prime(x)\amp =\frac{1}{2}(1+x)^{\frac{1}{2}-1};\amp  f^\prime(0)\amp =\frac{1}{2}</mrow>
+      <mrow>f^{\prime\prime}(x)\amp =\frac{1}{2}\left(\frac{1}{2}-1\right)(1+x)^{\frac{1}{2}-2}\amp f^{\prime\prime}(0)\amp =\frac{1}{2}\left(\frac{1}{2}-1\right)</mrow>
+    </md>
+    and in general since
+    <md>
+      <mrow>f^{(n)}(x)\amp =\frac{1}{2}\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-(n-1)\right)(1+x)^{\frac{1}{2}-n}</mrow>
+      <intertext>we have</intertext>
+      <mrow>f^{(n)}(0)\amp =\frac{1}{2}\left(\frac{1}{2}-1\right)\cdots\left(\frac{1}{2}-(n-1)\right)</mrow>
+    </md>.
+  </p>
+
+  <p>
+    Using Taylor's formula we obtain the series
+    <me>
+      \sum_{n=0}^\infty\frac{f^{(n)}(0)}{n!}x^n = 1+\sum_{n=1}^\infty\frac{\frac{1}{2}\left(\frac{1}{2}-1\right)\cdots\left( \frac{1}{2}-(n-1)\right)}{n!}x^n= 1+\sum_{n=1}^\infty\frac{\prod_{j=0}^{n-1}\left(\frac{1}{2}-j\right)}{n!}x^n
+    </me>
+    which agrees with <xref ref="eq_BinomialSeries">equation</xref> in the previous chapter.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Taylor's Formula</h><h>use to obtain the general binomial series</h></idx>
+        Use Taylor's formula to obtain the general binomial series
+        <me>
+          (1+x)^\alpha=1+\sum_{n=1}^\infty\frac{\prod_{j=0}^{n-1}\left(\alpha-j\right)}{n!}x^n.{}
+        </me>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h><m>e^x</m></h><h>Taylor's Series for</h></idx>
+        <idx><h>Taylor's Series</h><h>expansion of <m>e^x, \sin x</m>, and <m>\cos x</m></h></idx>
+        <idx><h><m>\sin x</m></h><h>Taylor's Series for</h></idx>
+        <idx><h><m>\cos x</m></h><h>Taylor's Series for</h></idx>
+Use Taylor's formula to obtain the Taylor series for the functions <m>e^x</m>,
+        sin <m>x</m>, and cos <m>x</m> expanded about <m>a</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    As you can see, Taylor's <q>machine</q>
+    will produce the power series for a function
+    (if it has one),
+    but is tedious to perform.
+    We will find, generally,
+    that this tediousness can be an obstacle to understanding.
+    In many cases it will be better to be clever if we can.
+    This is usually shorter.
+    However, it is comforting to have Taylor's formula available as a last resort.
+  </p>
+
+  <p>
+    The existence of a Taylor series is addressed
+    (to some degree)
+    by the following.
+  </p>
+
+  <theorem xml:id="TaylorsTheorem">
+    <statement>
+      <p>
+            <idx><h>Taylor's Theorem</h></idx>
+        If <m>f^\prime,\,f^{\prime\prime},\,\ldots,\,f^{(n+1)}</m> are all continuous on an interval containing <m>a</m> and <m>x</m>, then
+        <md>
+          <mrow>f(x)=f(a)+\frac{f^{\prime}(a)}{1!}(x-a)+\frac{f^{\prime \prime}(a)}{2!}(x-a)^2\amp +\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n</mrow>
+          <mrow>\amp + \frac{1}{n!}\int_{t=a}^xf^{(n+1)}(t)(x-t)^n\d{t}</mrow>
+        </md>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Before we address the proof, notice that the <m>n</m>-th degree polynomial
+    <me>
+      f(a)+\frac{f^{\,\prime}(a)}{1!}(x-a)+\frac{f^{\,\prime\prime}(a)}{2!}(x-a)^2+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n
+    </me>
+    resembles the Taylor series and, in fact,
+    is called the <em> <m>n</m>-th degree Taylor polynomial of
+    <m>f</m> about <m>a</m>.</em>
+    <xref ref="TaylorsTheorem">Theorem</xref>
+    says that a function can be written as the sum of this polynomial and a specific integral which we will analyze in the next chapter.
+    We will get the proof started and leave the formal induction proof as an exercise.
+  </p>
+
+  <p>
+    Notice that the case when <m>n=0</m> is really a restatement of the Fundamental Theorem of Calculus.
+    Specifically, the FTC says
+    <m>\int_{t=a}^xf^\prime(t)\d t=f(x)-f(a)</m> which we can rewrite as
+    <me>
+      f(x)=f(a)+\frac{1}{0!}\int_{t=a}^xf^\prime(t)(x-t)^0\d t
+    </me>
+    to provide the anchor step for our induction.
+  </p>
+
+  <p>
+    To derive the case where <m>n=1</m>,
+    we use integration by parts.
+    If we let
+    <md>
+      <mrow>u\amp =f^\prime(t)\amp  d v\amp =(x-t)^0d t</mrow>
+      <mrow>d u\amp =f^{\prime\prime}(t)d t\amp  v\amp =-\frac{1}{1}(x-t)^1</mrow>
+    </md>
+    we obtain
+    <md>
+      <mrow>f(x)\amp =f(a)+\frac{1}{0!}\left(-\frac{1}{1}f^\prime(t)(x-t)^1|_{t=a}^{^x}+\frac{1}{1} \int_{t=a}^xf^{\prime\prime}(t)(x-t)^1\d t\right)</mrow>
+      <mrow>\amp =f(a)+\frac{1}{0!}\left(-\frac{1}{1}f^\prime(x)(x-x)^1+ \frac{1}{1}f^\prime(a)(x-a)^1+\frac{1}{1}\int_{t=a}^xf^{\prime\prime}(t)(x-t)^1\d t\right)</mrow>
+      <mrow>\amp =f(a)+\frac{1}{1!}f^\prime(a)\left(x-a\right)^1 + \frac{1}{1!}\int_{t=a}^xf^{\prime\prime}(t)(x-t)^1\d t</mrow>
+    </md>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Taylor's Theorem</h></idx>
+        Provide a formal induction proof for <xref ref="TaylorsTheorem">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+</section>
+

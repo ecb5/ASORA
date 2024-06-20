@@ -10,7 +10,9 @@
       <em>Get a writing pad.</em> We'll wait.
     </p>
 
-<aside><p>
+<aside>
+<title>Comment</title>
+<p>
       We <em>really</em> are serious about this.
       Get a pad of paper!</p>
       </aside>
@@ -90,6 +92,8 @@
     Not knowing  is acceptable.
   </p>
 <aside>
+<title>Comment</title>
+
 <p>
     Sometimes it is even encouraged.
 </p>
@@ -151,7 +155,9 @@ A principal goal of this  course of study is to rectify this,
     Do it now.
     We'll wait.
   </p>
-  <aside><p>
+  <aside>
+<title>Comment</title>
+<p>
     If you <em>still</em> haven't gotten out a pad of paper,
     give up now.
     You're going to fail this course.
@@ -234,8 +240,9 @@ A principal goal of this  course of study is to rectify this,
 </p>
 
 <aside>
-<p>  If you didn't fill in those details you're being stupid
-  (or at least unduly stubborn).
+<title>Comment</title>
+
+<p>  If you didn't fill in those details then you are depriving yourself of the education you are here to obtain. This is sad.
   There is a good reason for putting these three lessons first.
   Stop wasting your time and intellect!
   Go do it now.</p>
@@ -270,7 +277,9 @@ A principal goal of this  course of study is to rectify this,
   so converting the general cubic into a depressed cubic provided a path for Ferrari to compute the <q>Cubic Formula</q>
   <mdash /> like the Quadratic Formula but better.
 </p>
-<aside><p>
+<aside>
+<title>Comment</title>
+<p>
   It is not entirely clear why eliminating the quadratic term should be depressing,
   but there it is.</p>
   </aside>
@@ -285,11 +294,14 @@ A principal goal of this  course of study is to rectify this,
   Cardano (1501-1576) figured out how to depress a general
   quartic they had a complete solution of the general quartic as
   well.
+</p>
+
   <figure>
     <caption><url href="https://mathshistory.st-andrews.ac.uk/Biographies/Cardan" visual="mathshistory.st-andrews.ac.uk/Biographies/Cardan">Girolomo Cardano</url></caption>
     <idx><h>Cardano, Girolomo</h></idx>
     <image width="28%" source="images/Cardan.png" />
   </figure>
+<p>
   Alas, their methods broke down entirely when they tried
   to solve the general quintic equation.  Unfortunately the rest
   of this story belongs in a course on Abstract Algebra, not
@@ -317,7 +329,7 @@ A principal goal of this  course of study is to rectify this,
     <!-- <title></title> -->
         <idx><h>Quadratic Formula</h><h>first proof</h></idx>
     <statement>
-<p>        <ol label="(a)">
+<p>        <ol marker="a">
           <li>
             <p>
               Find <m>M</m> so that the substitution <m>x=y-M</m> depresses <xref ref="eq_GenCubic">equation</xref>,
@@ -356,6 +368,8 @@ A principal goal of this  course of study is to rectify this,
       <em>all</em> steps filled in.
   </p>
 <aside>
+<title>Comment</title>
+
 <p>
       Be sure you are clear on the purpose of this problem before you begin.
       This is not about solving the Quadratic Equation.
@@ -574,8 +588,14 @@ once solved, becomes a tool for solving subsequent problems!</em>
 Let <m>p</m> be a prime number and <m>a, b</m> positive integers such that <m>p\, | (a\cdot b)</m>.
 Show that <m>p\,|a</m> or <m>p\,|b</m>. 
 </p>
+<p>
+
+</p>
 </statement>
-<hint> 
+<hint>
+<p>
+
+</p> 
   <p>
     If <m>p\,|a</m> then we are done.
     If not then notice that <m>p</m> is a prime factor of <m>a\cdot b</m>.
@@ -594,8 +614,14 @@ a_n</m> be positive integers such that <m>p\,|\left(a_1\cdot
 a_2\cdot a_3\cdot\ldots\cdot a_n\right)</m>.  Show that
 <m>p\,|a_k</m> for some <m>k\in\{1, 2, 3, \ldots, n\}</m>.
 </p>
+<p>
+
+</p>
 </statement>
-<hint> 
+<hint>
+<p>
+
+</p> 
   <p>
     Use induction on <m>n</m> and the result of the previous problem.
 </p>
@@ -611,8 +637,14 @@ Prove that <m>p\left|{p \choose{}k}\right.</m>,
 where <m>{p \choose{}k}</m> is the binomial coefficient
 <m>\frac{p!}{k!(p-k)!}</m>. 
 </p>
+<p>
+
+</p>
 </statement>
-<hint> 
+<hint>
+<p>
+
+</p> 
   <p>
     We know <m>p\,|p\,!</m>, so <m>p\,|{p
     \choose{}k}k!(p-k)!</m>.  How does the previous result
@@ -644,8 +676,14 @@ Then <m>p\,|(n^p-n)</m> for all positive integers <m>n</m>.
 <idx><h>Fermat's Little Theorem</h></idx>
 Prove Fermat's Little Theorem. 
 </p>
+<p>
+
+</p>
 </statement>
 <hint>
+<p>
+
+</p>
   <p>
     Use induction on <m>n</m>.
     To get from <m>n</m> to <m>n+1</m>,

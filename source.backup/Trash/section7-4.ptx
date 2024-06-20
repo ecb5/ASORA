@@ -1,0 +1,534 @@
+
+
+<section>
+  <title>The Supremum and the  Extreme
+  Value Theorem</title>
+  <p>
+    <xref ref="thm_CompactBounded">Theorem</xref>
+    says that a continuous function on a closed,
+    bounded interval must be bounded.
+    Boundedness, in and of itself,
+    does not ensure the existence of a maximum or minimum.
+    We must also have a closed, bounded interval.
+    To illustrate this,
+    consider the continuous function <m>f(x)=</m>tan<m>^{-1}x</m> defined on the (unbounded) interval <m>\left(-\infty,\infty\right)</m>.
+    <image width="75%" source="images/Ch6fig8.png" />
+  </p>
+
+  <p>
+    This function is bounded between
+    <m>-\frac{\pi}{2}</m>and <m>\frac{\pi}{2}</m>,
+    but it does not attain a maximum or minimum as the lines
+    <m>y=\pm\frac{\pi}{2}</m> are horizontal asymptotes.
+    Notice that if we restricted the domain to a closed,
+    bounded interval then it would attain its extreme values on that interval
+    (as guaranteed by the <term>EVT</term>).
+  </p>
+
+  <p>
+    To find a maximum we need to find the smallest possible upper bound for the range of the function.
+    This prompts the following definitions.
+  </p>
+
+  <definition xml:id="def_UpperBound">
+    <statement>
+      <p>
+            <idx><h>Upper Bound</h></idx>
+        Let <m>S\subseteq\mathbb{R}</m> and let <m>b</m> be a real number.
+        We say that <m>b</m> is an upper bound of
+        <m>S</m> provided <m>b\geq x</m> for all <m>x\in S</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    For example, if <m>S=(0,1)</m>,
+    then any <m>b</m> with <m>b\geq 1</m> would be an upper bound of <m>S</m>.
+    Furthermore,
+    the fact that <m>b</m> is not an element of the set <m>S</m> is immaterial.
+    Indeed, if <m>T=[\,0,1]</m>,
+    then any <m>b</m> with <m>b\geq 1</m> would still be an upper bound of <m>T</m>.
+    Notice that, in general, if a set has an upper bound,
+    then it has infinitely many since any number larger than that upper bound would also be an upper bound.
+    However, there is something special about the smallest upper bound.
+  </p>
+
+  <definition xml:id="def_LeastUpperBound">
+    <statement>
+      <p>
+            <idx><h>Least Upper Bound Property (LUBP)</h></idx>
+        Let <m>S\subseteq\mathbb{R}</m> and let <m>b</m> be a real number.
+            We say that <m>b</m> is the <em>least upper bound</em> of <m>S</m> provided
+
+        <ol label="(a)">
+          <li>
+            <title>(i)</title>
+            <p>
+              <m>b\geq x</m> for all <m>x\in S</m>. (<m>b</m> is an upper bound of <m>S</m>)
+            </p>
+          </li>
+
+          <li>
+            <title>(ii)</title>
+            <p>
+              If <m>c\geq x</m> for all <m>x\in S</m>, then <m>c\geq b</m>.
+              (Any upper bound of <m>S</m> is at least as big as <m>b</m>.)
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        In this case, we also say that
+        <m>b</m> <em>is the supremum</em> of <m>S</m> and we write
+        <me>
+          b=\sup\left(S\right)
+        </me>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Notice that the definition really says that <m>b</m> is the smallest upper bound of <m>S</m>.
+    Also notice that the second condition can be replaced by its contrapositive so we can say that <m>b=\sup S</m> if and only if
+
+    <ol label="(a)">
+      <li>
+        <title>(i)</title>
+        <p>
+          <m>b\,\geq\,x\text{ for all } x\,\in S</m>
+        </p>
+      </li>
+
+      <li>
+        <title>(ii)</title>
+        <p>
+          If <m>c\,\lt \,b</m> then there exists
+          <m>x\,\in S</m> such that <m>c\,\lt \,x</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    The second condition says that if a number <m>c</m> is less than <m>b</m>,
+    then it can't be an upper bound,
+    so that <m>b</m> really is the smallest upper bound.
+  </p>
+
+  <p>
+    Also notice that the supremum of the set may or may not be in the set itself.
+    This is illustrated by the examples above as in both cases,
+    <m>1=\sup(0,1)</m> and <m>1=\sup [0,1]</m>.
+    Obviously, a set which is not bounded above such as
+    <m>\mathbb{N}=\{1,\,2,\,3,\,\ldots\}</m> cannot have a supremum.
+    However, for non-empty sets which are bounded above, we have the following.
+  </p>
+
+  <theorem xml:id="thm_LUB">
+    <statement>
+      <p>
+        <alert>The Least Upper Bound Property (<term>LUBP</term>)</alert>
+      </p>
+      <p>
+        <idx><h>Least Upper Bound Property (LUBP)</h></idx> 
+        Let <m>S</m> be a non-empty subset of
+        <m>\mathbb{R}</m> which is bounded above.
+        Then <m>S</m> has a supremum.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+<title>Sketch of Proof</title>
+    <p>
+      Since <m>S\neq\emptyset</m>, then there exists <m>s\in S</m>.
+      Since <m>S</m> is bounded above then it has an upper bound,
+      say <m>b</m>.
+      We will set ourselves up to use the Nested Interval Property.
+      With this in mind,
+      let <m>x_1=s</m> and <m>y_1=b</m> and notice that <m>\exists</m> <m>x\in S</m> such that <m>x\geq x_1</m> (namely,
+      <m>x_1</m> itself) and <m>\forall\,x\in S</m>, <m>y_1\geq x</m>.
+      You probably guessed what's coming next:
+      let <m>m_1</m>be the midpoint of <m>[\,x_1,y_1]</m>.
+      Notice that either <m>m_1\geq x,\,\forall\,x\in S</m> or <m>\exists</m> <m>x\in S</m> such that <m>x\geq m_1</m>.
+      In the former case, we relabel,
+      letting <m>x_2=x_1</m> and <m>y_2=m_1</m>.
+      In the latter case, we let <m>x_2=m_1</m> and <m>y_2=y_1</m>.
+      In either case, we end up with <m>x_1\leq x_2\leq y_2\leq y_1</m>,
+      <m>y_2-x_2=\frac{1}{2}\left(y_1-x_1\right)</m>,
+      and <m>\exists</m> <m>x\in S</m> such that
+      <m>x\geq x_2</m> and <m>\forall\,x\in S</m>, <m>y_2\geq x</m>.
+      If we continue this process, we end up with two sequences,
+      <m>\left(x_n\right)</m>and <m>\left(y_n\right)</m>,
+      satisfying the following conditions:
+
+      <ol>
+        \item<m>x_1\leq x_2\leq x_3\leq\ldots</m>
+
+        <li>
+          <p>
+            <m>y_1\geq y_2\geq y_3\geq\ldots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\forall</m> <m>n</m>, <m>x_n\leq y_n</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\lim_{n\rightarrow\infty}\left(y_n-x_n\right)=\lim_{n\rightarrow\infty} \frac{1}{2^{n-1}}\left(y_1-x_1\right)=0</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\forall</m> <m>n,\exists</m> <m>x\in S</m> such that
+            <m>x\geq x_n</m> and <m>\forall\,x\in S</m>, <m>y_n\geq x</m>,
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      By properties 1-5 and the NIP there exists <m>c</m> such that <m>x_n\leq c\leq y_n,\,\forall\,n</m>.
+      We will leave it to you to use property 5 to show that <m>c=\sup S</m>.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Nested Interval Property (NIP)</h><h>implies the LUBP</h></idx>
+        Complete the above ideas to provide a formal proof of <xref ref="thm_LUB">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Notice that we really used the fact that <m>S</m> was non-empty and bounded above in the proof of <xref ref="thm_LUB">Theorem</xref>.
+    This makes sense,
+    since a set which is not bounded above cannot possibly have a least upper bound.
+    In fact, any real number is an upper bound of the empty set so that the empty set would not have a least upper bound.
+  </p>
+
+  <p>
+    The following corollary to <xref ref="thm_LUB">Theorem</xref> can be very useful.
+  </p>
+
+  <corollary xml:id="cor_IncBoundedConverge">
+    <statement>
+      <p>
+        Let <m>(x_n)</m> be a bounded,
+        increasing sequence of real numbers.
+        That is, <m>x_1\leq x_2\leq x_3\leq\cdots</m>.
+        Then <m>(x_n)</m> converges to some real number <m>c</m>.
+      </p>
+    </statement>
+  </corollary>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>sequences</h><h>bounded and non-decreasing</h></idx>
+            <idx><h>a bounded, non-decreasing sequence converges</h></idx>
+        Prove <xref ref="cor_IncBoundedConverge">Corollary</xref>.
+      </p>
+
+      <p>
+        <hint> Let <m>c=\sup\{x_n|\,n=1,2,3,\ldots\}</m>.
+        To show that <m>\limit{n}{\infty}{x_n}=c</m>,
+        let <m>\epsilon>0.</m>Note that 
+        <m>c-\epsilon</m> is not an upper bound.
+        You take it from here!
+        </hint>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>
+        <m>\sqrt{2+\sqrt{2+\sqrt{2+\sqrt{...}}}}</m></h><h>value of</h></idx> Consider the following curious expression <m>\sqrt{2+\sqrt{2+\sqrt{2+\sqrt{...}}}}</m>.
+        We will use <xref ref="cor_IncBoundedConverge">Corollary</xref>
+        to show that this actually converges to some real number.
+        After we know it converges we can actually compute what it is.
+        Of course to do so, we need to define things a bit more precisely.
+        With this in mind consider the following sequence <m>\left(x_n\right)</m> defined as follows:
+        <me>
+          x_1=\sqrt{2}
+        </me>
+        <me>
+          x_{n+1}=\sqrt{2+x_n}
+        </me>.
+        <ol label="(a)">
+          <li>
+            <p>
+              Use induction to show that
+              <m>x_n\lt 2</m> for <m>n=1,\,2,\,3,\,\ldots</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use the result from part (a) to show that
+              <m>x_n\lt x_{n+1}</m> for <m>n=1,\,2,\,3,\,\ldots</m> .
+            </p>
+          </li>
+
+          <li>
+            <p>
+              From <xref ref="cor_IncBoundedConverge">Corollary</xref>,
+              we have that <m>\left(x_n\right)</m> must converge to some number <m>c</m>.
+              Use the fact that <m>\left(x_{n+1}\right)</m> must converge to <m>c</m> as well to compute what <m>c</m> must be.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We now have all the tools we need to tackle the Extreme Value Theorem.
+  </p>
+
+  <theorem xml:id="thm_EVT">
+    <statement>
+      <p>
+        <alert>Extreme Value Theorem (<term>EVT</term>)</alert>
+      </p>
+      <p>
+        <idx><h>Extreme Value Theorem (EVT)</h></idx> 
+        Suppose <m>f</m> is continuous on <m>[\,a,b]</m>.
+        Then there exists <m>c,d\in[\,a,b]</m> such that <m>f(d)\leq f(x)\leq f(c)</m>,
+        for all <m>x\in[\,a,b]</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+<title>Sketch of Proof</title>
+    <p>
+      We will first show that <m>f</m> attains its maximum.
+      To this end,
+      recall that <xref ref="thm_CompactBounded">Theorem</xref>
+      tells us that <m>f[\,a,b]=\{f(x)|\,x\in[\,a,b]\}</m> is a bounded set.
+      By the LUBP, <m>f[\,a,b]</m> must have a least upper bound which we will label <m>s</m>,
+      so that <m>s=\sup f[\,a,b]</m>.
+      This says that <m>s\geq f(x)</m>,for all <m>x\in[\,a,b]</m>.
+      All we need to do now is find a <m>c\in[\,a,b]</m> with <m>f(c)=s</m>.
+      With this in mind, notice that since <m>s=\sup f[\,a,b]</m>,
+      then for any positive integer <m>n</m>,
+      <m>s-\frac{1}{n}</m> is not an upper bound of <m>f[\,a,b]</m>.
+      Thus there exists <m>x_n\in[\,a,b]</m> with<m>\,s-\frac{1}{n}\lt f(x_n)\leq s</m>.
+      Now, by the Bolzano-Weierstrass Theorem,
+      <m>\left(x_n\right)</m> has a convergent subsequence<m>\,\left(x_{n_k}\right)</m> converging to some <m>c\in[\,a,b]</m>.
+      Using the continuity of <m>f</m> at <m>c</m>,
+      you should be able to show that <m>f(c)=s</m>.
+      To find the minimum of <m>f</m>,
+      find the maximum of <m>-f</m>.
+    </p>
+  </proof>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Extreme Value Theorem (EVT)</h></idx>
+        Formalize the above ideas into a proof of <xref ref="thm_EVT">Theorem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Notice that we used the NIP to prove both the Bolzano-Weierstrass Theorem and the LUBP. This is really unavoidable,
+    as it turns out that all of those statements are equivalent in the sense that any one of them can be taken as the completeness axiom for the real number system and the others proved as theorems.
+    This is not uncommon in mathematics,
+    as people tend to gravitate toward ideas that suit the particular problem they are working on.
+    In this case,
+    people realized at some point that they needed some sort of completeness property for the real number system to prove various theorems.
+    Each individual's formulation of completeness fit in with his understanding of the problem at hand.
+    Only in hindsight do we see that they were really talking about the same concept:
+    the completeness of the real number system.
+    In point of fact,
+    most modern textbooks use the LUBP as the axiom of completeness and prove all other formulations as theorems.
+    We will finish this section by showing that either the Bolzano-Weierstrass Theorem or the LUBP can be used to prove the NIP. This says that they are all equivalent and that any one of them could be taken as the completeness axiom.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>Bolzano-Weierstrass Theorem (BWT)</h><h>implies the NIP</h></idx>
+        Use the Bolzano-Weierstrass Theorem to prove the NIP. That is,
+        assume that the Bolzano-Weierstrass Theorem holds and suppose we have two sequences of real numbers,
+        <m>\left(x_n\right)</m> and <m>\left(y_n\right)</m>, satisfying:
+
+        <ol>
+          <li>
+            <p>
+              <m>x_1\le x_2 \le x_3 \le \ldots</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>y_1\ge y_2 \ge y_3 \ge \ldots</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\forall\ n,\ x_n\le y_n</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle\lim_{n\rightarrow\infty}\left(y_n-x_n\right) = 0</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        Prove that there is a real number <m>c</m> such that <m>x_n\le c\le y_n</m>,
+        for all <m>n</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Since the Bolzano-Weierstrass Theorem and the Nested Interval Property are equivalent,
+    it follows that the Bolzano-Weierstrass Theorem will not work for the rational number system.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>find a bounded sequence of rational numbers such that no subsequence converges to a rational number</h></idx>
+    Find a bounded sequence of rational numbers such that no subsequence of it converges to a rational number.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Least Upper Bound Property (LUBP)</h><h>implies the Nested Interval Property (NIP)</h></idx>
+        Use the Least Upper Bound Property to prove the Nested Interval Property.
+        That is, assume that every non-empty subset of the real numbers which is bounded above has a least upper bound;
+        and suppose that we have two sequences of real numbers
+        <m>\left(x_n\right)</m> and <m>\left(y_n\right)</m>, satisfying:
+
+        <ol>
+          <li>
+            <p>
+              <m>x_1\le x_2 \le x_3 \le \ldots</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>y_1\ge y_2 \ge y_3 \ge \ldots</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\forall\ n, x_n\le y_n</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle\lim_{n\rightarrow\infty}\left(y_n-x_n\right) = 0</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        Prove that there exists a real number <m>c</m> such that <m>x_n\le c\le y_n</m>,
+        for all n.
+        (Again, the <m>c</m> will,
+        of necessity, be unique, but don't worry about that.)
+      </p>
+      <p>
+        <hint> 
+          <xref ref="cor_IncBoundedConverge">Corollary</xref> might work well here.
+        </hint>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Least Upper Bound Property (LUBP)</h><h>doesn't hold in <m>\QQ</m></h></idx>
+        Since the LUBP is equivalent to the NIP it does not hold for the rational number system.
+        Demonstrate this by finding a non-empty set of rational numbers which is bounded above,
+        but whose supremum is an irrational number.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We have the machinery in place to clean up a matter that was introduced in <xref ref="cha_numb-real-rati">Chapter</xref>.
+    If you recall
+    (or look back)
+    we introduced the Archimedean Property of the real number system.
+    This property says that given any two positive real numbers <m>a, b</m>,
+    there exists a positive integer <m>n</m> with <m>na>b</m>.
+    As we mentioned in <xref ref="cha_numb-real-rati">Chapter</xref>,
+    this was taken to be intuitively obvious.
+    The analogy we used there was to emptying an ocean <m>b</m> with a teaspoon <m>a</m> provided we are willing to use it enough times <m>n</m>.
+    The completeness of the real number system allows us to prove it as a formal theorem.
+  </p>
+
+  <theorem xml:id="thm_ArchmedeanProperty">
+    <statement>
+      <p>
+        <alert>Archimedean Property of <m>\RR</m></alert>
+      </p>
+      <p>
+            <idx><h>Archimedean Property</h></idx>
+        Given any positive real numbers <m>a</m> and <m>b</m>, there exists a positive integer <m>n</m>, such that <m>na>b</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Least Upper Bound Property (LUBP)</h><h>implies the Archimedean Property</h></idx>
+            <idx><h>Archimedean Property</h><h>and LUBP</h></idx>
+        Prove <xref ref="thm_ArchmedeanProperty">Theorem</xref>. 
+            <hint> Assume that there are positive real numbers <m>a</m> and <m>b</m>, such that <m>na\le b</m> <m>\forall n\in \NN</m>.
+              Then <m>\NN</m> would be bounded above by <m>b/a</m>.
+              Let <m>s=\sup(\NN)</m> and consider <m>s-1</m>.
+            </hint>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Given what we've been doing,
+    one might ask if the Archimedean Property is equivalent to the LUBP
+    (and thus could be taken as an axiom).
+    The answer lies in the following problem.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>Archimedean Property</h><h>and <m>\QQ</m></h></idx>
+            <!-- <idx><h>Archimedean Property in <m>\QQ</m></h></idx> -->
+        Does <m>\QQ</m> satisfy the Archimedean Property and what does this have to do with the question of taking the Archimedean Property as an axiom of completeness?
+      </p>
+    </statement>
+  </problem>
+</section>
+

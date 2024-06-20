@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:36-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Uniform Convergence</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="PowerSeriesRedux.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="PowerSeriesRedux.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="PowerSeriesRedux.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="PowerSeriesRedux.html" title="Up">Up</a><a class="next-button button toolbar-item" href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="active">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="PowerSeriesRedux-UnifConv"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">11.1</span> <span class="title">Uniform Convergence</span>
+</h2>
+<p id="p-1120">We have developed precise analytic definitions of the convergence of a sequence and continuity of a function and we have used these to prove the EVT and IVT for a continuous function. We will now draw our attention back to the question that originally motivated these definitions, “Why are Taylor series well behaved, but Fourier series are not necessarily?” More precisely, we mentioned that whenever a power series converges then whatever it converged to was continuous. Moreover, if we differentiate or integrate these series term by term then the resulting series will converge to the derivative or integral of the original series. This was not always the case for Fourier series. For example consider the function</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-47">
+\begin{align*}
+f(x) \amp = \frac{4}{\pi}\left(\sum_{k=0}^\infty\frac{(-1)^k}{2k+1}\cos\left((2k+1)\pi x\right)\right)\\
+\amp = \frac{4}{\pi}\left(\cos(\pi x)-\frac13\cos(3\pi x)+\frac15 (5\pi x)-\ldots\right)\text{.}
+\end{align*}
+</div>
+<p id="p-1121">We have seen that the graph of <span class="process-math">\(f\)</span> is given by</p>
+<div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="images/Ch7fig1.png" class="contained"></div>
+<p id="p-1122">If we consider the following sequence of functions</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-48">
+\begin{align*}
+f_1(x)=\amp \frac{4}{\pi}\cos\left(\pi x\right)\\
+f_2(x)=\amp \frac{4}{\pi}\left(\cos \left(\pi x\right)-\frac{1}{3}\cos\left( 3\pi x\right)\right)\\
+f_3(x)=\amp \frac{4}{\pi}\left(\cos\left(\pi x\right)-\frac{1}{3}\cos\left(3\pi x\right)+\frac{1}{5}\cos\left(5\pi x\right)\right)\\
+\amp \vdots
+\end{align*}
+</div>
+<p class="continuation">we see the sequence of continuous functions <span class="process-math">\(\left(f_n\right)\)</span> converges to the non-continuous function <span class="process-math">\(f\)</span> for each real number <span class="process-math">\(x\text{.}\)</span> This didn't happen with Taylor series. The partial sums for a Taylor series were polynomials and hence continuous but what they converged to was continuous as well.</p>
+<p id="p-1123">The difficulty is quite delicate and it took mathematicians a while to determine the problem. There are two very subtly different ways that a sequence of functions can converge: pointwise or uniformly. This  distinction was touched upon by Niels Henrik Abel (1802-1829) in 1826 while studying the domain of convergence of a power series. However, the necessary formal definitions were not made explicit until Weierstrass  did it in his 1841 paper <i class="foreign">Zur Theorie der Potenzreihen</i> <em class="emphasis">(On the Theory of Power Series)</em>. This was published in his collected works in 1894.</p>
+<p id="p-1124">It will be instructive to take a look at an argument that doesn't quite work before looking at the formal definitions we will need. In 1821 Augustin Cauchy  “proved” that the infinite sum of continuous functions is continuous. Of course, it is obvious (to us) that this is not true because we've seen several counterexamples. But Cauchy, who was a first rate mathematician was so sure of the correctness of his argument that he included it in his textbook on analysis, <i class="foreign">Cours d'analyse</i> (1821).</p>
+<article class="problem example-like" id="prob_Cauchy_s_incorrect_proof"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_Cauchy_s_incorrect_proof"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.1.1</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_Cauchy_s_incorrect_proof"><article class="problem example-like"><p id="p-1125"> Find the flaw in the following “proof” that <span class="process-math">\(f\)</span> is also continuous at <span class="process-math">\(a\text{.}\)</span></p>
+<p id="p-1126">Suppose <span class="process-math">\(f_1, f_2, f_3, f_4 \ldots\)</span> are all continuous at <span class="process-math">\(a\)</span> and that <span class="process-math">\(\sum_{n=1}^\infty f_n=f\text{.}\)</span> Let <span class="process-math">\(\eps&gt;0\text{.}\)</span> Since <span class="process-math">\(f_n\)</span> is continuous at <span class="process-math">\(a\text{,}\)</span> we can choose <span class="process-math">\(\delta_n&gt;0\)</span> such that if <span class="process-math">\(\abs{x-a}\lt \delta_n\text{,}\)</span> then <span class="process-math">\(\abs{f_n(x)-f_n(a)}\lt \frac{\eps}{2^n}\text{.}\)</span> Let <span class="process-math">\(\delta=\inf(\delta_1,\delta_2,\delta_3,\ldots)\text{.}\)</span> If <span class="process-math">\(\abs{x-a}\lt \delta\)</span> then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-49">
+\begin{align*}
+\abs{f(x)-f(a)} \amp =  \abs{\sum_{n=1}^\infty f_n(x)  -  \sum_{n=1}^\infty f_n(a) }\\
+\amp = \abs{\sum_{n=1}^\infty \left(f_n(x)-f_n(a)\right) }\\
+\amp \le \sum_{n=1}^\infty \abs{f_n(x)-f_n(a) }\\
+\amp \le \sum_{n=1}^\infty \frac{\eps}{2^n}\\
+\amp \le \eps\sum_{n=1}^\infty \frac{1}{2^n}\\
+\amp =   \eps\text{.}
+\end{align*}
+</div>
+<p id="p-1127">Thus <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span></p></article></div>
+<article class="definition definition-like" id="def_PointwiseConvergence"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">11.1.2</span><span class="period">.</span>
+</h3>
+<p id="p-1128"> Let <span class="process-math">\(S\)</span> be a subset of the real number system and let <span class="process-math">\(\left(f_n\right)=\left(f_1,f_2,f_3,\,\ldots\right)\)</span> be a sequence of functions defined on <span class="process-math">\(S\text{.}\)</span> Let <span class="process-math">\(f\)</span> be a function defined on <span class="process-math">\(S\)</span> as well. We say that  <span class="process-math">\(\left(f_n\right)\)</span> <em class="alert">converges to <span class="process-math">\(f\)</span> pointwise on <span class="process-math">\(S\)</span></em> provided that for all <span class="process-math">\(x\in S\text{,}\)</span> the sequence of real numbers <span class="process-math">\(\left(f_n(x)\right)\)</span> converges to the number <span class="process-math">\(f(x)\text{.}\)</span> In this case we write<span class="process-math">\(\,f_n\ptwise f\)</span> on <span class="process-math">\(S\text{.}\)</span></p></article><p id="p-1129">Symbolically, we have <span class="process-math">\(f_n\ptwise f\text{ on } S\Leftrightarrow \forall\,x\in S,\forall\ \eps&gt;0,\,\exists\ N\)</span> such that <span class="process-math">\(\left(n&gt;N \Rightarrow|f_n(x)-f(x)|\lt \eps\right)\text{.}\)</span></p>
+<p id="p-1130">This is the type of convergence we have been observing to this point. By contrast we have the following new definition.</p>
+<article class="definition definition-like" id="def_UniformConvergence"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">11.1.3</span><span class="period">.</span>
+</h3>
+<p id="p-1131"> Let <span class="process-math">\(S\)</span> be a subset of the real number system and let <span class="process-math">\(\left(f_n\right)=\left(f_1,f_2,f_3,\,\ldots\right)\)</span> be a sequence of functions defined on <span class="process-math">\(S\text{.}\)</span> Let <span class="process-math">\(f\)</span> be a function defined on <span class="process-math">\(S\)</span> as well. We say that <span class="process-math">\(\left(f_n\right)\)</span> <em class="alert">converges to <span class="process-math">\(f\)</span> uniformly on <span class="process-math">\(S\)</span></em> provided <span class="process-math">\(\forall\ \eps&gt;0,\,\exists\ N\)</span> such that <span class="process-math">\(n&gt;N\Rightarrow|f_n(x)-f(x)|\lt \eps\text{ , } \forall\
+x\in S\text{.}\)</span></p>
+<p id="p-1132">In this case we write <span class="process-math">\(f_n\unif f\)</span> on <span class="process-math">\(S\text{.}\)</span></p></article><p id="p-1133">The difference between these two definitions is subtle. In pointwise convergence, we are given a fixed <span class="process-math">\(x\in S\)</span> and an <span class="process-math">\(\eps&gt;0\text{.}\)</span> Then the task is to find an <span class="process-math">\(N\)</span> that works for that particular <span class="process-math">\(x\)</span> and <span class="process-math">\(\eps\text{.}\)</span> In uniform convergence, one is given <span class="process-math">\(\eps&gt;0\)</span> and must find a single <span class="process-math">\(N\)</span> that works for that particular <span class="process-math">\(\eps\)</span> but also simultaneously (uniformly) for all <span class="process-math">\(x\in S\text{.}\)</span> Clearly uniform convergence implies pointwise convergence as an <span class="process-math">\(N\)</span> which works uniformly for all <span class="process-math">\(x\text{,}\)</span> works for each individual <span class="process-math">\(x\)</span> also. However the reverse is not true. This will become evident, but first consider the following example.</p>
+<article class="problem example-like" id="prob_uniform_convergence"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-prob_uniform_convergence"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.1.4</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-prob_uniform_convergence"><article class="problem example-like"><p id="p-1134">Let <span class="process-math">\(0\lt b\lt 1\)</span> and consider the sequence of functions <span class="process-math">\(\left(f_n\right)\)</span> defined on <span class="process-math">\([0,b]\)</span> by <span class="process-math">\(f_n(x)=x^n\text{.}\)</span> Use the definition to show that <span class="process-math">\(f_n\unif 0\)</span> on <span class="process-math">\([0,b]\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-36" id="hint-36"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-36"><div class="hint solution-like"><p id="p-1135"><span class="process-math">\(|x^n-0|=x^n\leq b^n\text{.}\)</span></p></div></div>
+</div></article></div>
+<p id="p-1136">Uniform convergence is not only dependent on the sequence of functions but also on the set <span class="process-math">\(S\text{.}\)</span> For example, the sequence <span class="process-math">\(\left(f_n(x)\right)=\left(x^n\right)_{n=0}^\infty\)</span> of <a href="" class="xref" data-knowl="./knowl/prob_uniform_convergence.html" title="Problem 11.1.4">Problem 11.1.4</a> does not converge uniformly on <span class="process-math">\([0,1]\text{.}\)</span> We could use the negation of the definition to prove this, but instead, it will be a consequence of the following theorem.</p>
+<article class="theorem theorem-like" id="thm_UnifConv-_Continuity"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.1.5</span><span class="period">.</span>
+</h3>
+<p id="p-1137"> Consider a sequence of functions <span class="process-math">\(\left(f_n\right)\)</span> which are all continuous on an interval <span class="process-math">\(I\text{.}\)</span> Suppose <span class="process-math">\(f_n\unif f\)</span> on <span class="process-math">\(I\text{.}\)</span> Then <span class="process-math">\(f\)</span> must be continuous on <span class="process-math">\(I\text{.}\)</span></p></article><article class="hiddenproof" id="proof-27"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-27"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-27"><article class="hiddenproof"><p id="p-1138">Let <span class="process-math">\(a\in I\)</span> and let <span class="process-math">\(\eps&gt;0\text{.}\)</span> The idea is to use uniform convergence to replace <span class="process-math">\(f\)</span> with one of the known continuous functions <span class="process-math">\(f_n\text{.}\)</span> Specifically, by uncancelling, we can write</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-50">
+\begin{align*}
+\left|f(x)-f(a)\right|\amp =\left|f(x)-f_n(x)+f_n(x)-f_n(a)+f_n(a)-f(a)\right|\\
+\amp \leq \left|f(x)-f_n(x)\right|+\left|f_n(x)-f_n(a)\right|+\left|f_n(a)-f(a)\right|
+\end{align*}
+</div>
+<p id="p-1139">If we choose <span class="process-math">\(n\)</span> large enough, then we can make the first and last terms as small as we wish, noting that the uniform convergence makes the first term uniformly small for all <span class="process-math">\(x\text{.}\)</span> Once we have a specific <span class="process-math">\(n\text{,}\)</span> then we can use the continuity of <span class="process-math">\(f_n\)</span> to find a <span class="process-math">\(\delta&gt;0\)</span> such that the middle term is small whenever <span class="process-math">\(x\)</span> is within <span class="process-math">\(\delta\)</span> of <span class="process-math">\(a\text{.}\)</span></p></article></div>
+<article class="problem example-like" id="problem-164"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-164"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.1.6</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-164"><article class="problem example-like"><p id="p-1140"> Provide a formal proof of <a href="" class="xref" data-knowl="./knowl/thm_UnifConv-_Continuity.html" title="Theorem 11.1.5">Theorem 11.1.5</a> based on the above ideas.</p></article></div>
+<article class="problem example-like" id="problem-165"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-165"><h3 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">11.1.7</span><span class="period">.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-165"><article class="problem example-like"><p id="p-1141"> Consider the sequence of functions <span class="process-math">\(\left(f_n\right)\)</span> defined on <span class="process-math">\([0,1]\)</span> by <span class="process-math">\(f_n(x)=x^n\text{.}\)</span> Show that the sequence converges to the function</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)= \begin{cases}0\amp \text{ if  } x\in[0,1)\\ 1\amp \text{ if } x=1 \end{cases}
+\end{equation*}
+</div>
+<p class="continuation">pointwise on <span class="process-math">\(\,[0,1]\text{,}\)</span> but not uniformly on <span class="process-math">\([0,1]\text{.}\)</span></p></article></div>
+<p id="p-1142">Notice that for the Fourier series at the beginning of this chapter,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)=\frac{4}{\pi}\left(\cos\left(\frac{\pi}{2}x\right)-\frac{1}{3}\cos\left( 3\pi x\right)+\frac{1}{5}\cos\left(5\pi x\right)-\frac{1}{7}\cos\left(7\pi x\right)+\cdots\right)
+\end{equation*}
+</div>
+<p class="continuation">the convergence cannot be uniform on <span class="process-math">\((-\infty,\infty)\text{,}\)</span> as the function <span class="process-math">\(f\)</span> is not continuous. This never happens with a power series, since they converge to continuous functions whenever they converge. We will also see that uniform convergence is what allows us to integrate and differentiate a power series term by term.</p></section></div></main>
+</div>
+</body>
+</html>

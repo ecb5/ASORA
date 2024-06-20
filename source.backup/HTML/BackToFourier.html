@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-20T18:02:38-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Back to the Real Numbers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:author" content="Robert Rogers">
+<meta property="book:author" content="Eugene C. Boman">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+\newcommand{\dx}[1]{\,{\rm d}#1}
+
+
+\newcommand{\dfdx}[2]{\frac{\text{d}{#1}}{\text{d}{#2}}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\def\limit#1#2#3{{\displaystyle\lim_{#1\rightarrow #2}#3}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\unif}{\stackrel{unif}{\longrightarrow}}
+\newcommand{\ptwise}{\stackrel{ptwise}{\longrightarrow}}
+\newcommand{\CC}{\mathbb {C}}
+\newcommand{\DD}{\mathbb {D}}
+\newcommand{\RR}{\mathbb {R}}
+\newcommand{\QQ}{\mathbb {Q}}
+\newcommand{\NN}{\mathbb {N}}
+\newcommand{\ZZ}{\mathbb {Z}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
+<p class="byline">Robert Rogers, Eugene C. Boman</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="PowerSeriesRedux-AbelsThm.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="FindingAnswers.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="BackToFourier-InfiniteSets.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="PowerSeriesRedux-AbelsThm.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="FindingAnswers.html" title="Up">Up</a><a class="next-button button toolbar-item" href="BackToFourier-InfiniteSets.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="FrontColophon.html" data-scroll="FrontColophon" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="link"><a href="Instructor.html" data-scroll="Instructor" class="internal"><span class="codenumber">1</span> <span class="title">To the Instructor</span></a></li>
+<li class="link">
+<a href="Threelessons.html" data-scroll="Threelessons" class="internal"><span class="codenumber">2</span> <span class="title">Prologue: Three Lessons Before We Begin</span></a><ul>
+<li><a href="ThreeLessons-lesson-one.html" data-scroll="ThreeLessons-lesson-one" class="internal">Lesson One</a></li>
+<li><a href="ThreeLessons_lesson-two.html" data-scroll="ThreeLessons_lesson-two" class="internal">Lesson Two</a></li>
+<li><a href="ThreeLessons_lesson-three.html" data-scroll="ThreeLessons_lesson-three" class="internal">Lesson Three</a></li>
+</ul>
+</li>
+<li class="link part"><a href="AskingQuestions.html" data-scroll="AskingQuestions" class="internal"><span class="codenumber">I</span> <span class="title">In Which We Raise A Number Of Questions</span></a></li>
+<li class="link">
+<a href="NumbersRealRational.html" data-scroll="NumbersRealRational" class="internal"><span class="codenumber">3</span> <span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span></a><ul><li><a href="NumbersRealRational-AddProbs.html" data-scroll="NumbersRealRational-AddProbs" class="internal">Additional Problems</a></li></ul>
+</li>
+<li class="link">
+<a href="CalcIn17th18thCentury.html" data-scroll="CalcIn17th18thCentury" class="internal"><span class="codenumber">4</span> <span class="title">Calculus in the 17th and 18th Centuries</span></a><ul>
+<li><a href="CalcIn17th18thCentury-NewtLeibStart.html" data-scroll="CalcIn17th18thCentury-NewtLeibStart" class="internal">Newton and Leibniz Get Started</a></li>
+<li><a href="ExponentAdditionProperty.html" data-scroll="ExponentAdditionProperty" class="internal">Power Series as Infinite Polynomials</a></li>
+<li><a href="CalcIn17th18thCentury-AddProb.html" data-scroll="CalcIn17th18thCentury-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesQuestions.html" data-scroll="PowerSeriesQuestions" class="internal"><span class="codenumber">5</span> <span class="title">Questions Concerning Power Series</span></a><ul>
+<li><a href="PowerSeriesQuestions-TaylorsFormula.html" data-scroll="PowerSeriesQuestions-TaylorsFormula" class="internal">Taylor's Formula</a></li>
+<li><a href="PowerSeriesQuestions-SeriesAnomalies.html" data-scroll="PowerSeriesQuestions-SeriesAnomalies" class="internal">Series Anomalies</a></li>
+<li><a href="PowerSeriesQuestions-AddProb.html" data-scroll="PowerSeriesQuestions-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link part"><a href="Interregnum.html" data-scroll="Interregnum" class="internal"><span class="codenumber">II</span> <span class="title">Interregnum</span></a></li>
+<li class="link">
+<a href="Interegnum.html" data-scroll="Interegnum" class="internal"><span class="codenumber">6</span> <span class="title">Joseph Fourier: The Man Who Broke Calculus</span></a><ul><li><a href="section-11.html" data-scroll="section-11" class="internal">Joseph Fourier and His Series</a></li></ul>
+</li>
+<li class="link part"><a href="FindingAnswers.html" data-scroll="FindingAnswers" class="internal"><span class="codenumber">III</span> <span class="title">In Which We Find (Some) Answers</span></a></li>
+<li class="link">
+<a href="Convergence.html" data-scroll="Convergence" class="internal"><span class="codenumber">7</span> <span class="title">Convergence of Sequences and Series</span></a><ul>
+<li><a href="SeqRealNum.html" data-scroll="SeqRealNum" class="internal">Sequences of Real Numbers</a></li>
+<li><a href="LimitAsPrimary.html" data-scroll="LimitAsPrimary" class="internal">The Limit as a Primary Tool</a></li>
+<li><a href="DivergentSeq.html" data-scroll="DivergentSeq" class="internal">Divergence</a></li>
+<li><a href="section-15.html" data-scroll="section-15" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="TaylorSeries.html" data-scroll="TaylorSeries" class="internal"><span class="codenumber">8</span> <span class="title">A “Tayl” of Three Remainders</span></a><ul>
+<li><a href="TaylorSeries-IntFormRem.html" data-scroll="TaylorSeries-IntFormRem" class="internal">The Integral Form of the Remainder</a></li>
+<li><a href="TaylorSeries-LagrFormRem.html" data-scroll="TaylorSeries-LagrFormRem" class="internal">Lagrange's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-CauchyFormRem.html" data-scroll="TaylorSeries-CauchyFormRem" class="internal">Cauchy's Form of the Remainder</a></li>
+<li><a href="TaylorSeries-AddProb.html" data-scroll="TaylorSeries-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Continuity.html" data-scroll="Continuity" class="internal"><span class="codenumber">9</span> <span class="title">Continuity: What It Isn't and What It Is</span></a><ul>
+<li><a href="Continuity-AnalyticDef.html" data-scroll="Continuity-AnalyticDef" class="internal">An Analytic Definition of Continuity</a></li>
+<li><a href="SequencesAndContinuity.html" data-scroll="SequencesAndContinuity" class="internal">Sequences and Continuity</a></li>
+<li><a href="Continuity-DefLimit.html" data-scroll="Continuity-DefLimit" class="internal">The Definition of the Limit of a Function</a></li>
+<li><a href="Continuity-DerivativeAfterthought.html" data-scroll="Continuity-DerivativeAfterthought" class="internal">The Derivative, An Afterthought</a></li>
+<li><a href="Continuity-AddProb.html" data-scroll="Continuity-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="IVTandEVT.html" data-scroll="IVTandEVT" class="internal"><span class="codenumber">10</span> <span class="title">Intermediate and Extreme Values</span></a><ul>
+<li><a href="IVTandEVT-Completeness.html" data-scroll="IVTandEVT-Completeness" class="internal">Completeness of the Real Number System</a></li>
+<li><a href="IVTandEVT-ProofOfIVT.html" data-scroll="IVTandEVT-ProofOfIVT" class="internal">Proof of the Intermediate Value Theorem</a></li>
+<li><a href="IVTandEVT-BWT.html" data-scroll="IVTandEVT-BWT" class="internal">The Bolzano-Weierstrass Theorem</a></li>
+<li><a href="IVTandEVT-SupremumAndEVT.html" data-scroll="IVTandEVT-SupremumAndEVT" class="internal">The Supremum and the Extreme Value Theorem</a></li>
+<li><a href="IVTandEVT-AddProb.html" data-scroll="IVTandEVT-AddProb" class="internal">Additional Problems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="PowerSeriesRedux.html" data-scroll="PowerSeriesRedux" class="internal"><span class="codenumber">11</span> <span class="title">Back to Power Series</span></a><ul>
+<li><a href="PowerSeriesRedux-UnifConv.html" data-scroll="PowerSeriesRedux-UnifConv" class="internal">Uniform Convergence</a></li>
+<li><a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" data-scroll="PowerSeriesRedux-UnifConv-IntsAndDerivs" class="internal">Uniform Convergence: Integrals and Derivatives</a></li>
+<li><a href="PowerSeriesRedux-RadiusOfConv.html" data-scroll="PowerSeriesRedux-RadiusOfConv" class="internal">Radius of Convergence of a Power Series</a></li>
+<li><a href="PowerSeriesRedux-AbelsThm.html" data-scroll="PowerSeriesRedux-AbelsThm" class="internal">Boundary Issues and Abel's Theorem</a></li>
+</ul>
+</li>
+<li class="link active">
+<a href="BackToFourier.html" data-scroll="BackToFourier" class="internal"><span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span></a><ul>
+<li><a href="BackToFourier-InfiniteSets.html" data-scroll="BackToFourier-InfiniteSets" class="internal">Infinite Sets</a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" data-scroll="BackToFourier-CantorsTheorem" class="internal">Cantor's Theorem and Its Consequences</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="Epilogues.html" data-scroll="Epilogues" class="internal"><span class="codenumber">13</span> <span class="title">Epilogues</span></a><ul>
+<li><a href="Epilogues-NatureNumbers.html" data-scroll="Epilogues-NatureNumbers" class="internal">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</a></li>
+<li><a href="Epilogues-BuildRealNumbers.html" data-scroll="Epilogues-BuildRealNumbers" class="internal">Building the Real Numbers</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="references-1.html" data-scroll="references-1" class="internal"><span class="title">Bibliography</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="chapter" id="BackToFourier"><h2 class="heading">
+<span class="type">Chapter</span> <span class="codenumber">12</span> <span class="title">Back to the Real Numbers</span>
+</h2>
+<section class="introduction" id="introduction-28"><p id="p-1268">As we have seen, when they converge, power series are very well behaved and Fourier (trigonometric) series are not necessarily. The fact that trigonometric series were so interesting made them a lightning rod for mathematical study in the late nineteenth century.</p>
+<p id="p-1269">For example, consider the question of uniqueness. We saw in <a href="TaylorSeries.html" class="internal" title='Chapter 8: A "Tayl" of Three Remainders'>Chapter 8</a> that if a function could be represented by a power series, then that series must be the Taylor series. More precisely, if</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/TaylorSeries.html">
+\begin{equation*}
+f(x)=\sum_{n=0}^\infty a_n(x-a)^n, \text{  then  }  a_n=\frac{f^{(n)}(a)}{n!}\text{.}
+\end{equation*}
+</div>
+<p id="p-1270">But what can be said about the uniqueness of a trigonometric series? If we can represent a function <span class="process-math">\(f\)</span> as a general trigonometric series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x)=\sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">then must this be the Fourier series with the coefficients as determined by Fourier? </p>
+<p id="p-1271">For example, if <span class="process-math">\(\sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x)\)</span> converges to <span class="process-math">\(f\)</span> uniformly on the interval <span class="process-math">\((0,1)\text{,}\)</span> then because of the uniform convergence, Fourier's term-by-term integration which we saw in <a href="Interregnum.html" class="internal" title="Part II: Interregnum">Part II</a> is perfectly legitimate and the coefficients are, of necessity, the coefficients he computed. However we have seen that the convergence of a Fourier series need not be uniform. This does not mean that we cannot integrate term-by-term, but it does say that we can't be sure that term-by-term integration of a Fourier series will yield the integral of the associated function.</p>
+<p id="p-1272"> This led to a generalization of the integral by Henri Lebesgue in 1905.  Lebesgue's profound work settled the issue of whether or not a bounded pointwise converging trigonometric series is the Fourier series of a function, but we will not go in this direction.  We will instead focus on work that Georg Cantor did in the years just prior. Cantor's work was also profound and had far reaching implications in modern mathematics.  It also leads to some very weird conclusions.</p>
+<aside class="aside aside-like" id="aside-18"><p id="p-1273">'Weird' does not mean false.  It simply means that some of Cantor's results can be hard to accept, even after you have seen the proof and verified its validity.</p></aside><p id="p-1274">To begin, let's suppress the underlying function and suppose we have</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=0}^\infty(a_n\cos n\pi x\,+b_n\sin n\pi x) = \sum_{n=0}^\infty(a^\prime_n\cos n\pi x\,+b^\prime_n\sin n\pi x)\text{.}
+\end{equation*}
+</div>
+<p id="p-1275">We ask: If these two series are equal must it be true that <span class="process-math">\(a_n=a^\prime_n\)</span> and <span class="process-math">\(b_n=b^\prime_n?\)</span> We can reformulate this uniqueness question as follows: Suppose</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=0}^\infty\left((a_n-a^\prime_n)\cos n\pi x\,+(b_n-b^\prime_n)\sin n\pi x\right) = 0\text{.}
+\end{equation*}
+</div>
+<p id="p-1276">If we let <span class="process-math">\(c_n = a_n-a^\prime_n\)</span> and <span class="process-math">\(d_n = b_n-b^\prime_n\text{,}\)</span> then the question becomes: If <span class="process-math">\(\sum_{n=0}^\infty\left(c_n\cos n\pi x\,+d_n\sin n\pi x\right) = 0\text{,}\)</span> then will <span class="process-math">\(c_n=d_n=0?\)</span> It certainly seems reasonable to suppose so, but at this point we have enough experience with infinite sums to know that we need to be <em class="emphasis">very</em> careful about relying on the intuition we have honed on finite sums.</p>
+<p id="p-1277"> The answer to this seemingly basic question leads to some very profound results.  In particular, answering this question led the mathematician Georg Cantor (1845-1918) to study the makeup of the real number system.  This in turn opened the door to the modern view of mathematics of the twentieth century.  In particular, Cantor proved the following result in 1871 (<a href="" class="xref" data-knowl="./knowl/jahnke03__histor_analy.html" title="Bibliographic Entry 6">[6]</a>, p. 305).</p>
+<article class="theorem theorem-like" id="thm_Cantor-uniqueness-of-trig-series"><h2 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.0.1</span><span class="period">.</span>
+</h2>
+<p id="p-1278"><em class="alert">Cantor</em></p>
+<p id="p-1279"> If the trigonometric series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=0}^\infty\left(c_n\cos n\pi  x\,+d_n\sin n\pi x\right) = 0\text{,}
+\end{equation*}
+</div>
+<p id="p-1280">“with the exception of certain values of <span class="process-math">\(x\text{,}\)</span>” then all of its coefficients vanish.</p></article><p id="p-1281">In his attempts to nail down precisely which “certain values” could be exceptional, Cantor was led to examine the nature of subsets of real numbers and ultimately to give a precise definition of the concept of infinite sets and to define an arithmetic of “infinite numbers.” (Actually, he called them {transfinite numbers} because, by definition, numbers are finite.)</p>
+<p id="p-1282">As a first step toward identifying those “certain values,” Cantor proved the following theorem, which we will state but not prove.</p>
+<article class="theorem theorem-like" id="thm_Cantor_1870"><h2 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.0.2</span><span class="period">.</span>
+</h2>
+<p id="p-1283"><em class="alert">Cantor, (1870)</em></p>
+<p id="p-1284"> If the trigonometric series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=0}^\infty\left(c_n\cos n\pi  x\,+d_n\sin n\pi x\right) = 0\text{,}
+\end{equation*}
+</div>
+<p class="continuation">for all <span class="process-math">\(x\in\RR\)</span> then all of its coefficients vanish.</p></article><p id="p-1285">He then extended this to the following:</p>
+<article class="theorem theorem-like" id="thm_Cantor-1871-b"><h2 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.0.3</span><span class="period">.</span>
+</h2>
+<p id="p-1286"><em class="alert">Cantor, (1871)</em></p>
+<p id="p-1287"> If the trigonometric series</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{n=0}^\infty\left(c_n\cos n\pi  x\,+d_n\sin n\pi x\right) = 0\text{,}
+\end{equation*}
+</div>
+<p class="continuation">for all but finitely many <span class="process-math">\(x\in\RR\)</span> then all of its coefficients vanish.</p></article><figure class="figure figure-like" id="figure-37"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="images/Cantor.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">12.0.4<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Cantor/" target="_blank">Georg Cantor</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-18" id="fn-18"><sup> 1 </sup></a></figcaption></figure><p id="p-1288">Observe that this is not a trivial generalization. Although the exceptional points are constrained to be finite in number, this number could still be extraordinarily large. That is, even if the series given above differed from zero on <span class="process-math">\(10^{10^{100000}}\)</span> distinct points in the interval <span class="process-math">\((0, 10^{10^{-100000}})\)</span> the coefficients still vanish. This remains true even if at each of these <span class="process-math">\(10^{10^{100000}}\)</span> points the series converges to <span class="process-math">\(10^{10^{100000}}\text{.}\)</span> This is truly remarkable when you think of it this way.</p>
+<p id="p-1289">At this point Cantor became more interested in these exceptional points than in the Fourier series problem that he'd started with. The next task he set for himself was to see just how general the set of exceptional points could be. Following Cantor's lead we make the following definitions.</p>
+<article class="definition definition-like" id="def_accumulation-point"><h2 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.0.5</span><span class="period">.</span>
+</h2>
+<p id="p-1290"> Let <span class="process-math">\(S\subseteq \RR\)</span> and let <span class="process-math">\(a\)</span> be a real number. We say that <span class="process-math">\(a\)</span> is a <dfn class="terminology">limit point</dfn> (or an <dfn class="terminology">accumulation point</dfn>) of <span class="process-math">\(S\)</span> if there is a sequence <span class="process-math">\((a_n)\)</span> with <span class="process-math">\(a_n\in S-\left\{a\right\}\)</span> which converges to <span class="process-math">\(a\text{.}\)</span></p></article><article class="problem example-like" id="problem-196"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-196"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.0.6</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-196"><article class="problem example-like"><p id="p-1291"> Let <span class="process-math">\(S\subseteq\RR\)</span> and let <span class="process-math">\(a\)</span> be a real number. Prove that <span class="process-math">\(a\)</span> is a limit point of <span class="process-math">\(S\)</span> if and only if for every <span class="process-math">\(\eps&gt;0\)</span> the intersection</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(a-\eps, a+\eps) \cap S-\left\{a\right\} \neq \emptyset.{}
+\end{equation*}
+</div></article></div>
+<p id="p-1292">The following definition gets to the heart of the matter.</p>
+<article class="definition definition-like" id="def_derived-set"><h2 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.0.7</span><span class="period">.</span>
+</h2>
+<p id="p-1293"> Let <span class="process-math">\(S\subseteq\RR\text{.}\)</span> The set of all limit points of <span class="process-math">\(S\)</span> is called the <dfn class="terminology">derived set</dfn> of <span class="process-math">\(S\text{.}\)</span> The derived set is denoted <span class="process-math">\(S^{\prime}\text{.}\)</span></p></article><p id="p-1294">Don't confuse the derived set of a set with the derivative of a function. They are completely different objects despite the similarity of both the language and notation. The only thing that they have in common is that they were somehow “derived” from something else.</p>
+<article class="problem example-like" id="problem-197"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-197"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.0.8</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-197"><article class="problem example-like"><p id="p-1295">Determine the derived set, <span class="process-math">\(S^\prime\text{,}\)</span> of each of the following sets.</p>
+<ol class="lower-alpha">
+<li id="li-101"><p id="p-1296"><span class="process-math">\(\displaystyle S=\left\{\frac11, \frac12, \frac13, \ldots\right\}\)</span></p></li>
+<li id="li-102"><p id="p-1297"><span class="process-math">\(\displaystyle S=\left\{0,\frac11, \frac12, \frac13, \ldots\right\}\)</span></p></li>
+<li id="li-103"><p id="p-1298"><span class="process-math">\(\displaystyle S=(0,1]\)</span></p></li>
+<li id="li-104"><p id="p-1299"><span class="process-math">\(\displaystyle S=\left[\left.0,1/2\right)\right.\cup\left.\left(1/2,1\right.\right]\)</span></p></li>
+<li id="li-105"><p id="p-1300"><span class="process-math">\(\displaystyle S=\QQ\)</span></p></li>
+<li id="li-106"><p id="p-1301"><span class="process-math">\(\displaystyle S=\RR-\QQ\)</span></p></li>
+<li id="li-107"><p id="p-1302"><span class="process-math">\(\displaystyle S=\ZZ\)</span></p></li>
+<li id="li-108"><p id="p-1303">Any finite set <span class="process-math">\(S\text{.}\)</span></p></li>
+</ol></article></div>
+<article class="problem example-like" id="problem-198"><a href="" data-knowl="" class="id-ref problem-knowl original" data-refid="hk-problem-198"><h2 class="heading">
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.0.9</span><span class="period">.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-problem-198"><article class="problem example-like"><p id="p-1304"> Let <span class="process-math">\(S\subseteq\RR\text{.}\)</span></p>
+<ol class="lower-alpha">
+<li id="li-109"><p id="p-1305">Prove that <span class="process-math">\(\left(S^{\,\prime}\right)^{\,\prime}\subseteq S^{\,\prime}\text{.}\)</span></p></li>
+<li id="li-110"><p id="p-1306">Give an example where these two sets are equal.</p></li>
+<li id="li-111"><p id="p-1307">Give an example where these two sets are not equal.</p></li>
+</ol></article></div>
+<p id="p-1308">The notion of the derived set forms the foundation of Cantor's exceptional set of values. Specifically, let <span class="process-math">\(S\)</span> again be a set of real numbers and consider the following sequence of sets:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+S^{\,\prime}\supseteq \left(S^\prime\right)^\prime\supseteq \left(\left(S^\prime\right)^\prime\right)^\prime\supseteq \cdots\text{.}
+\end{equation*}
+</div>
+<p id="p-1309">Cantor  showed that if, at some point, one of these derived sets is empty, then the uniqueness property still holds. Specifically, we have:</p>
+<article class="theorem theorem-like" id="thm_Cantor-1871"><h2 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.0.10</span><span class="period">.</span>
+</h2>
+<p id="p-1310"><em class="alert">Cantor, (1871)</em></p>
+<p id="p-1311"> Let <span class="process-math">\(S\)</span> be a subset of the real numbers with the property that one of its derived sets is empty.  Then if the trigonometric series <span class="process-math">\(\sum_{n=0}^\infty\left(c_n\cos n\pi
+x\,+d_n\sin n\pi x\right)\)</span> is zero for all <span class="process-math">\(x\in\RR-S\text{,}\)</span> then all of the coefficients of the series vanish.</p></article></section><nav class="summary-links"><ul>
+<li><a href="BackToFourier-InfiniteSets.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Infinite Sets</span></a></li>
+<li><a href="BackToFourier-CantorsTheorem.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Cantor's Theorem and Its Consequences</span></a></li>
+</ul></nav></section><div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Cantor/</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

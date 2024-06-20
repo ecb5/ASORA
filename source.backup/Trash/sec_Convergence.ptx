@@ -1,0 +1,642 @@
+
+
+<section xml:id="sec_Convergence">
+  <title>Sequences of Real Numbers</title>
+  <p>
+    In <xref ref="chpt_17thCentury">Chapter</xref>,
+    we developed the equation <m>1+x+x^2+x^3+\cdots=\frac{1}{1-x}</m>,
+    and we mentioned there were limitations to this power series representation.
+    For example,
+    substituting <m>x=1</m> and <m>x=-1</m> into this expression leads to
+    <me>
+      1+1+1+\cdots=\frac{1}{0} \text{ and }  1-1+1-1+\cdots=\frac{1}{2}\
+    </me>
+    which are rather hard to accept.
+    On the other hand, if we substitute
+    <m>x=\frac{1}{2}</m> into the expression we get
+    <m>1+\frac{1}{2}+\left(\frac{1}{2}\right)^2+\left(\frac{1}{2}\right)^3+\cdots=2</m> which seems more palatable until we think about it.
+    We can add two numbers together by the method we all learned in elementary school.
+    Or three.
+    Or any finite set of numbers, at least in principle.
+    But infinitely many?
+    What does that even mean?
+    Before we can add infinitely many numbers together we must find a way to give meaning to the idea.
+  </p>
+
+  <p>
+    To do this, we examine an infinite sum by thinking of it as a sequence of finite partial sums.
+    In our example,
+    we would have the following sequence of partial sums.
+    <me>
+      \left(1,1+\frac{1}{2},1+\frac{1}{2}+\left(\frac{1}{2}\right)^2,1+ \frac{1}{2}+\left(\frac{1}{2}\right)^3,\ldots,\sum_{j=0}^n\left(\frac{1}{2} \right)^j,\ldots\right)
+    </me>.
+  </p>
+
+  <p>
+    We can plot these sums on a number line to see what they tend toward as <m>n</m> gets large.
+  </p>
+  <p>
+    <sidebyside width="90%" margins="auto" valign="middle">
+      <image width="84%" source="images/NumberLine.png" />
+    </sidebyside>
+  </p>
+
+  <p>
+    Since each partial sum is located at the midpoint between the previous partial sum and <m>2</m>,
+    it is reasonable to suppose that these sums tend to the number 2.
+    Indeed, you probably have seen an expression such as <m>\lim_{n\rightarrow\infty}</m>
+    <m>\left(\sum_{j=0}^n\left(\frac{1}{2}\right)^j\right)=2</m> justified by a similar argument.
+    Of course, the reliance on such pictures and words is fine if we are satisfied with intuition.
+    However, we must be able to make these intuitions rigorous without relying on pictures or nebulous words such as <q>approaches.</q>
+  </p>
+
+  <p>
+    No doubt you are wondering <q>What's wrong with the word <sq>approaches</sq>?
+    It seems clear enough to me.</q>
+    This is often a sticking point.
+    But if we think carefully about what we mean by the word <q>approach</q>
+    we see that there is an implicit assumption that will cause us some difficulties later if we don't expose it.
+  </p>
+
+  <p>
+    To see this consider the sequence <m>\left(1,\frac12,\frac13,\frac14,\ldots\right)</m>.
+    Clearly it <q>approaches</q> zero, right?
+    But, doesn't it also <q>approach</q> <m>-1?</m> It does,
+    in the sense that each term gets closer to <m>-1</m> than the one previous.
+    But it also <q>approaches</q> <m>-2</m>, <m>-3</m>,
+    or even <m>-1000</m> in the same sense.
+    That's the problem with the word <q>approaches.</q>
+    It just says that we're getting closer to something than we were in the previous step.
+    It does <em>not</em> tell us that we are actually getting close.
+    Since the moon moves in an elliptical orbit about the earth for part of each month it is
+    <q>approaching</q> the earth.
+    The moon gets clos<em>er</em> to the earth but,
+    thankfully, it does not get <em>close</em> to the earth.
+    The implicit assumption we alluded to earlier is this: When we say that the sequence <m>\left(\frac1n\right)_{n=1}^\infty</m> <q>approaches</q>
+    zero we mean that it is getting
+    <em>close</em> not clos<em>er</em>.
+    Ordinarily this kind of vagueness in our language is pretty innocuous.
+    When we say <q>approaches</q> in casual conversation we can usually tell from the context of the conversation whether we mean
+    <q>getting close to</q> or
+    <q>getting closer to.</q>
+    But when speaking mathematically we need to be more careful,
+    more explicit, in the language we use.
+  </p>
+
+  <p>
+    So how can we change the language we use so that this ambiguity is eliminated?
+    Let's start out by recognizing, rigorously,
+    what we mean when we say that a sequence converges to zero.
+    For example,
+    you would probably want to say that the sequence <m>\left(1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\,\ldots\right)=\left( \frac{1}{n}\right)_{n=1}^\infty</m> converges to zero.
+    Is there a way to give this meaning without relying on pictures or intuition?
+  </p>
+
+  <p>
+    One way would be to say that we can make
+    <m>\frac{1}{n}</m> as close to zero as we wish,
+    provided we make <m>n</m> large enough.
+    But even this needs to be made more specific.
+    For example,
+    we can get <m>\frac{1}{n}</m> to within a distance of <m>.1</m> of <m>0</m> provided we make <m>n>10</m>,
+    we can get <m>\frac{1}{n}</m> to within a distance of <m>.01</m> of <m>0</m> provided we make <m>n>100</m>, etc.
+    After a few such examples it is apparent that given any arbitrary distance <m>\eps>0</m>,
+    we can get <m>\frac{1}{n}</m> to within <m>\eps</m> of <m>0</m> provided we make <m>n>\frac{1}{\eps}</m>.
+    This leads to the following definition.
+  </p>
+
+  <definition xml:id="def_ConvergeToZero">
+    <statement>
+      <p>
+        <idx><h>sequences</h><h>convergence to zero</h></idx>
+        Let <m>\left(s_n\right)=\left(s_1,s_2,s_3,\ldots\right)</m> be a sequence of real numbers.
+        We say that <m>\left(\boldsymbol{s}_{\boldsymbol{n}}\right)</m>
+        <term>converges to 0</term>
+        and write <m>\lim_{n\rightarrow\infty}s_n=0</m> provided for any <m>\eps>0</m>,
+        there is a real number <m>N</m> such that if <m>n>N</m>,
+        then <m>|s_n|\lt \eps</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    <term>Notes on <xref ref="def_ConvergeToZero">Definition</xref></term>:
+
+    <ol>
+      <li>
+        <p>
+          This definition is the formal version of the idea we just talked about;
+          that is, given an arbitrary distance <m>\eps</m>,
+          we must be able to find a specific number <m>N</m> such that <m>s_n</m> is within <m>\eps</m> of <m>0</m>,
+          whenever <m>n>N</m>.
+          The <m>N</m> is the answer to the question of how large is <q>large enough</q>
+          to put <m>s_n</m> this close to <m>0</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Even though we didn't need it in the example <m>\left(\frac{1}{n}\right)</m>,
+          the absolute value appears in the definition because we need to make the <em>distance</em>
+          from <m>s_n</m> to 0 smaller than <m>\eps</m>.
+          Without the absolute value in the definition,
+          we would be able to <q>prove</q>
+          such outrageous statements as <m>\lim_{n\rightarrow\infty}-n=0</m>,
+          which we obviously don't want.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The statement <m>|s_n|\lt \eps</m> can also be written as
+          <m>-\eps\lt s_n\lt \eps</m> or <m>s_n\in\left(-\eps,\eps\right)</m>.
+          (See the <xref ref="prob_absolute_value">Problem</xref> below.)
+          Any one of these equivalent formulations can be used to prove convergence.
+          Depending on the application,
+          one of these may be more advantageous to use than the others.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Any time an <m>N</m> can be found that works for a particular <m>\eps</m>,
+          any number <m>M>N</m> will work for that <m>\eps</m> as well,
+          since if <m>n>M</m> then <m>n>N</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <problem xml:id="prob_absolute_value">
+    <statement>
+      <p>
+            <idx><h>absolute value</h></idx>
+        Let <m>a</m> and <m>b</m> be real numbers with <m>b>0</m>.
+        Prove <m>|a|\lt b</m> if and only if <m>-b\lt a\lt b</m>.
+        Notice that this can be extended to
+        <m>|a|\leq b</m> if and only if <m>-b\leq a\leq b</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    To illustrate how this definition makes the above ideas rigorous,
+    let's use it to prove that <m>\displaystyle\lim_{n\rightarrow\infty}\frac{1}{n}=0</m>.
+  </p>
+
+  <proof>
+    <p>
+      Let <m>\eps>0</m> be given.
+      Let <m>N=\frac{1}{\eps}</m>.
+      If <m>n>N</m>,
+      then <m>n>\frac{1}{\eps}</m> and so <m>|\frac{1}{n}|=\frac{1}{n}\lt \eps</m>.
+      Hence by definition, <m>\lim_{n\rightarrow\infty}\frac{1}{n}=0</m>.
+    </p>
+  </proof>
+
+  <p>
+    Notice that this proof is rigorous and makes no reference to vague notions such as <q>getting smaller</q>
+    or 
+    <q>approaching infinity.</q>
+    It has three components:
+<ol>
+<li>
+ (1) provide the challenge of a distance <m>\eps>0</m>, 
+</li>
+<li>
+(2) identify a real number <m>N</m>,
+    and 
+</li>
+<li>
+(3) show that this <m>N</m> works for this given <m>\eps</m>.
+</li>
+</ol>
+There is also no explanation about where <m>N</m> came from.
+    While it is true that this choice of <m>N</m> is not surprising in light of the <q>scrapwork</q>
+    we did before the definition,
+    the motivation for how we got it is not in the formal proof nor is it required.
+    In fact, such scrapwork is typically not included in a formal proof.
+    For example, consider the following.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Use the definition of convergence to zero to prove
+        <me>
+          \lim_{n\rightarrow\infty}\frac{\sin n}{n}=0
+        </me>.
+      </p>
+  <proof>
+    <p>
+      Let <m>\eps>0</m>.
+      Let <m>N=\frac{1}{\eps}</m>.
+      If <m>n>N</m>,
+      then <m>n>\frac{1}{\eps}</m> and <m>\frac{1}{n}\lt \eps</m>.
+      Thus
+    </p>
+    
+    <p>
+      <m>\abs{\frac{\sin(n)}{n}}\leq\frac{1}{n}\lt \eps</m>.
+      Hence by definition,
+      <m>\lim_{n\rightarrow\infty}\frac{\sin n}{n}=0</m>.
+    </p>
+  </proof>
+    </statement>
+    </example>
+
+
+
+  <p>
+    Notice that the <m>N</m> came out of nowhere,
+    but you can probably see the thought process that went into this choice:
+    We needed to use the inequality <m>\abs{\sin n}\leq 1</m>.
+    Again this scrapwork is not part of the formal proof,
+    but it is typically necessary for finding what <m>N</m> should be.
+    You might be able to do the next problem without doing any scrapwork first,
+    but don't hesitate to do scrapwork if you need it.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>convergence</h><h>of a sequence</h><h>convergence to zero drill</h></idx>
+        Use the definition of convergence to zero to prove the following.
+        <ol label="(a)">
+          <li>
+            <m>\displaystyle\lim_{n\rightarrow\infty}\frac{1}{n^2}=0</m>
+          </li>
+          <li>
+            <m>\displaystyle\lim_{n\rightarrow\infty}\frac{1}{\sqrt{n}}=0</m>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    As the sequences get more complicated,
+    doing scrapwork ahead of time will become more necessary.
+  </p>
+
+  <example xml:id="sec_defin-conv-sequ">
+    <statement>
+      <p>
+        Use the definition of convergence to zero to prove
+        <me>
+          \lim_{n\rightarrow\infty}\frac{n+4}{n^2+1}=0
+        </me>.
+      </p>
+      <p>
+        <term>SCRAPWORK</term>
+      </p>
+        <p>
+          Given an <m>\eps>0</m>,
+          we need to see how large to make <m>n</m> in order to guarantee that <m>|\frac{n+4}{n^2+1}|\lt \eps</m>.
+          First notice that <m>\frac{n+4}{n^2+1}\lt \frac{n+4}{n^2}</m>.
+          Also, notice that if <m>n>4</m>,
+          then <m>n+4\lt n+n=2n</m>.
+          So as long as <m>n>4</m>,
+          we have <m>\frac{n+4}{n^2+1}\lt \frac{n+4}{n^2}\lt \frac{2n}{n^2}=\frac{2}{n}</m>.
+          We can make this less than <m>\eps</m> if we make <m>n>\frac{2}{\eps}</m>.
+          This means we need to make <m>n>4</m> and <m>n>\frac{2}{\eps}</m>,
+          simultaneously.
+          These can be done if we let <m>N</m> be the maximum of these two numbers.
+          This sort of thing comes up regularly,
+          so the notation <m>N=\max\left(4,\frac{2}{\eps}\right)</m> was developed to mean the maximum of these two numbers.
+          Notice that if <m>N=\max\left(4, \frac{2}{\eps}\right)</m> then <m>N\geq 4</m> and <m>N\geq\frac{2}{\eps}</m>.
+          We're now ready for the formal proof.
+        </p>
+    <proof>
+      <p>
+        Let <m>\eps>0</m>.
+        Let <m>N=\max\left(4,\frac{2}{\eps}\right)</m>.
+        If <m>n>N</m>, then <m>n>4</m> and <m>n>\frac{2}{\eps}</m>.
+        Thus we have <m>n>4</m> and <m>\frac{2}{n}\lt \eps</m>.
+        Therefore
+        <me>
+          \abs{\frac{n+4}{n^2+1}}=\frac{n+4}{n^2+1}\lt \frac{n+4}{n^2}\lt \frac{2n}{n^2}= \frac{2}{n}\lt \eps
+        </me>.
+      </p>
+
+      <p>
+        Hence by definition,
+        <m>\displaystyle\lim_{n\rightarrow\infty}\frac{n+4}{n^2+1}=0</m>.
+      </p>
+    </proof>
+    </statement>
+  </example>
+
+  <p> 
+    Again we emphasize that the scrapwork is not <alert>explicitly</alert> a
+    part of the formal proof.  However,
+    if you look carefully, you can always find the scrapwork in the formal
+    proof.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>convergence</h><h>of a sequence</h><h>convergence to zero drill</h></idx>
+        Use the definition of convergence to zero to prove
+        <me>
+          \lim_{n\rightarrow\infty}\frac{n^2+4n+1}{n^3}=0.{}
+        </me>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="prob_sequences3">
+    <statement>
+      <p>
+        <idx><h>limit</h><h><m>\lim_{n\rightarrow\infty}b^n=0</m> if <m>-1\lt b\lt 1</m></h></idx>
+        Let <m>b</m> be a nonzero real number with <m>|b|\lt 1</m> and let <m>\eps>0</m>.
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Solve the inequality <m>|b|^n\lt \eps</m> for <m>n</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use part (a) to prove <m>\lim_{n\rightarrow\infty}b^n=0</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We can negate this definition to prove that a particular sequence does not converge to zero.
+  </p>
+
+  <example xml:id="ex_zero-two-not-converge">
+    <statement>
+      <p>
+        Use the definition to prove that the sequence
+        <me>
+          \left(1+(-1)^n\right)_{n=0}^\infty=(2,0,2,0,2,\ldots)
+        </me>
+        does not converge to zero.
+      </p>
+
+      <p>
+        <em>Before we provide this proof,
+        let's analyze what it means for a sequence
+          <m>\left(s_n\right)</m> to <em>not</em> converge to zero.
+        Converging to zero means that any time a distance <m>\eps>0</m> is given,
+        we must be able to respond with a number <m>N</m> such that
+        <m>|s_n|\lt \eps</m> for every <m>n>N</m>.
+        To have this not happen,
+        we must be able to find some <m>\eps>0</m> such that no choice of <m>N</m> will work.
+        Of course, if we find such an <m>\eps</m>,
+        then any smaller one will fail to have such an <m>N</m>,
+        but we only need one to mess us up.
+        If you stare at the example long enough,
+        you see that any <m>\eps</m> with <m>0\lt \eps\leq 2</m> will cause problems.
+        For our purposes, we will let <m>\eps=2</m>.</em>
+      </p>
+    <proof>
+      <p>
+        Let <m>\eps=2</m> and let <m>N\in\NN</m> be any integer.
+        If we let <m>k</m> be any non-negative integer with <m>k>\frac{N}{2}</m>,
+        then <m>n=2k>N</m>, but <m>|1+(-1)^n|=2</m>.
+        Thus no choice of <m>N</m> will satisfy the conditions of the definition for this <m>\eps</m>, (namely that
+        <m>|1+(-1)^n|\lt 2</m> for all <m>n>N</m>) and so <m>\lim_{n\rightarrow\infty}\left(1+(-1)^n\right)\neq 0</m>.
+      </p>
+    </proof>
+    </statement>
+  </example>
+
+
+  <problem xml:id="prob_sequences-not_converge_to_zero">
+    <statement>
+      <p>
+            <idx><h>limit</h><h>non-existence of</h></idx>
+        Negate the definition of <m>\lim_{n\rightarrow\infty}s_n=0</m> to provide a formal definition for <m>\lim_{n\rightarrow\infty}s_n\neq 0</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="prob_sequences4">
+    <statement>
+      <p>
+        <idx><h>limit</h><h>Use the definition in <xref ref="prob_sequences-not_converge_to_zero">problem</xref></h></idx>
+    Use the definition to prove <m>\lim_{n\rightarrow\infty}\frac{n}{n+100}\neq 0</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Now that we have a handle on how to rigorously prove that a sequence converges to zero,
+    let's generalize this to a formal definition for a sequence converging to something else.
+    Basically, we want to say that a sequence
+    <m>\left(s_n\right)</m> converges to a real number <m>s</m>,
+    provided the difference <m>\left(s_n-s\right)</m> converges to zero.
+    This leads to the following definition:
+  </p>
+
+  <definition xml:id="def_ConvergenceOfASequence">
+    <statement>
+      <p>
+            <idx><h>sequences</h><h>convergence</h></idx>
+            <idx><h>convergence</h><h>of a sequence</h></idx>
+        Let <m>\left(s_n\right)=\left(s_1,s_2,s_3,\ldots\right)</m> be a sequence of real numbers and let <m>s</m> be a real number.
+        We say that <m>\left(\boldsymbol{s}_{\boldsymbol{n}}\right)</m> {converges to} <m>\boldsymbol{s}</m> and write
+        <m>\lim_{n\rightarrow\infty}s_n=s</m> provided for any <m>\eps>0</m>,
+        there is a real number <m>N</m> such that if <m>n>N</m>,
+        then <m>|s_n-s|\lt \eps</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    {Notes on <xref ref="def_ConvergenceOfASequence">Definition</xref>}
+  </p>
+
+  <ol>
+    <li>
+      <p>
+        Clearly
+        <me>
+          \lim_{n\rightarrow\infty}s_n=s \text{ if and only if } \lim_{n\rightarrow\infty}\left(s_n-s\right)=0
+        </me>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Again notice that this says that we can make <m>s_n</m> as close to <m>s</m> as we wish
+        (within <m>\eps</m>)
+        by making <m>n</m> large enough (<m>>N)</m>.
+        As before, this definition makes these notions very specific.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Notice that <m>|s_n-s|\lt \eps</m> can be written in the following equivalent forms
+      </p>
+      <ol>
+        <li>
+          <p>
+            <m>|s_n-s|\lt \eps</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>-\eps\lt s_n-s\lt \eps</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>s-\eps\lt s_n\lt s+\eps</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>s_n\in\left(s-\eps,s+\eps\right)</m>
+          </p>
+        </li>
+      </ol>
+      <p>   
+      and we are free to use any one of these which is convenient at the time.
+      </p>
+    </li>
+  </ol>
+
+  <p>
+    As an example,
+    let's use this definition to prove that the sequence in <xref ref="prob_sequences4">Problem</xref>, in fact,
+    converges to 1.
+  </p>
+
+  <example xml:id="example_SeriesConverge">
+    <statement>
+      <p>
+        Prove <m>\displaystyle\lim_{n\rightarrow\infty}\frac{n}{n+100}=1</m>.
+      </p>
+      <p>
+        <term>SCRAPWORK</term>
+      </p>
+        <p>
+          Given an <m>\eps>0</m>, we need to get <m>\abs{\frac{n}{n+100}-1}\lt \eps</m>.
+          This prompts us to do some algebra.
+          <me>
+            \left|\frac{n}{n+100}-1\right|=\left|\frac{n-(n+100)}{n+100}\right|\leq\frac{100}{n}
+          </me>.
+        </p>
+
+        <p>
+          This in turn,
+          seems to suggest that <m>N=\frac{100}{\eps}</m> should work.
+        </p>
+    <proof>
+      <p>
+        Let <m>\eps>0</m>.
+        Let <m>N=\frac{100}{\eps}</m>.
+        If <m>n>N</m>,
+        then <m>n>\frac{100}{\eps}</m> and so <m>\frac{100}{n}\lt \eps</m>.
+        Hence
+        <me>
+          \left|\frac{n}{n+100}-1\right|=\left|\frac{n-(n+100)}{n+100}\right|= \frac{100}{n+100}\lt \frac{100}{n}\lt \eps
+        </me>.
+      </p>
+
+      <p>
+        Thus by definition <m>\lim_{n\rightarrow\infty}\frac{n}{n+100} =1</m>.
+      </p>
+    </proof>
+    </statement>
+  </example>
+
+
+  <p>
+    Notice again that the scrapwork is not part of the formal proof and the author of a proof is not obligated to tell where the choice of <m>N</m> came from
+    (although the thought process can usually be seen in the formal proof).
+    The formal proof contains only the requisite three parts:
+    provide the challenge of an arbitrary <m>\eps>0</m>,
+    provide a specific <m>N</m>,
+    and show that this <m>N</m> works for the given <m>\eps</m>.
+  </p>
+
+  <p>
+    Also notice that given a specific sequence such as <m>\left(\frac{n}{n+100}\right)</m>,
+    the definition does not indicate what the limit would be if, in fact,
+    it exists.
+    Once an educated guess is made as to what the limit should be,
+    the definition only verifies that this intuition is correct.
+  </p>
+
+  <p>
+    This leads to the following question: If intuition is needed to determine what a limit of a sequence should be,
+    then what is the purpose of this relatively non-intuitive,
+    complicated definition?
+  </p>
+
+  <p>
+    Remember that when these rigorous formulations were developed,
+    intuitive notions of convergence were already in place and had been used with great success.
+    This definition was developed to address the foundational issues.
+    Could our intuitions be verified in a concrete fashion that was above reproach?
+    This was the purpose of this non-intuitive definition.
+    It was to be used to verify that our intuition was,
+    in fact, correct and do so in a very prescribed manner.
+    For example, if <m>b>0</m> is a fixed number,
+    then you would probably say as <m>n</m> approaches infinity,
+    <m>b^{\left(\frac{1}{n}\right)}</m> approaches <m>b^0=1</m>.
+    After all, we did already prove that <m>\lim_{n\rightarrow\infty}\frac{1}{n}=0</m>.
+    We should be able to back up this intuition with our rigorous definition.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <idx><h>limit</h><h><m>\lim_{n\rightarrow\infty}b^{\left(\frac{1}{n}\right)}=1</m> if <m>b>0</m></h></idx>
+    Let <m>b>0</m>.
+        Use the definition to prove
+        <m>\limit{n}{\infty}{b^{\left(\frac{1}{n}\right)}}=1</m>. 
+      </p>
+</statement>
+<p>
+        <hint>
+          You will probably need to separate this into two cases:
+          <m>0\lt b\lt 1</m> and <m>b\geq 1</m>.
+        </hint>
+</p>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+            <idx><h>sequences</h><h>definition of divergence</h></idx>
+            <idx><h>convergence</h><h>definition of nonconvergence of a sequence</h></idx>
+
+        <ol label="(a)">
+          <li>
+            <p>
+              Provide a rigorous definition for <m>\limit{n}{\infty}{s_n}\neq s</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use your definition to show that for any real number <m>a</m>,
+              <m>\limit{n}{\infty}{\left(\left(-1\right)^n\right)}\neq a</m>. 
+<p>
+              <hint> 
+                Choose <m>\eps=1</m> and use the fact that <m>\Big|a-(-1)^n\Big|\lt 1</m> is equivalent to
+                <m>\left(-1\right)^n-1\lt a\lt \left(-1\right)^n+1</m> to show that no choice of <m>N</m> will work for this <m>\eps</m>.
+              </hint>
+</p>
+</p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

@@ -1,0 +1,2409 @@
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Epilogues">
+  <title>Epilogues</title>
+
+<section  xml:id="Epilogues-NatureNumbers">
+  <title>On the Nature of Numbers: A Dialogue (with Apologies to
+  Galileo)</title>
+  <introduction>
+    <p>
+      <alert>Interlocuters</alert>:<em> Salviati, Sagredo,
+        and Simplicio; Three Friends of Galileo Galilei</em>
+    </p>
+    <p> <alert>Setting</alert>: Three friends meet in a garden for
+      lunch in Renassaince Italy.  Prior to their meal they discuss
+      the book
+      <em>How We Got From There to Here: A Story of Real Analysis.</em>
+      How they obtained a copy is not clear.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>: My good sirs.
+      I have read this very strange volume as I hope you have?
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>: I have and I also found it very strange.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Very strange indeed;
+      at once silly and mystifying.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>: Silly?
+      How so?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: 
+      These authors begin their tome with the question,
+      <q>What is a number?</q> This is an unusually silly question,
+      don't you think?
+      Numbers are numbers.
+      Everyone knows what they are.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>: 
+      I thought so as well until I reached the last chapter.
+      But now I am not so certain.
+      What about this quantity <m>\aleph_0?</m> If this counts the positive integers,
+      isn't it a number?
+      If not, then how can it count anything?
+      If so, then what number is it?
+      These questions plague me 'til I scarcely believe I know anything anymore.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Of course <m>\aleph_0</m> is not a number!
+      It is simply a new name for the infinite,
+      and infinity is not a number.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>: But isn't
+      <m>\aleph_0</m> the cardinality of the set of natural numbers,
+      <m>\NN</m>,
+      in just the same way that the cardinality of the set
+      <m>S=\left\{Salviati, Sagredo, Simplicio\right\}</m> is <m>3?</m> If <m>3</m> is a number,
+      then why isn't <m>\aleph_0?</m>
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Ah, my friend,
+      like our authors you are simply playing with words.
+      You count the elements in the set
+      <m>S=\left\{Salviati, Sagredo, Simplicio\right\};</m> you see plainly that the
+      <em>number of elements</em>
+      it contains is <m>3</m> and then you change your language.
+      Rather than saying that the <em>number of elements</em>
+      in <m>S</m> is <m>3</m> you say that the
+      <em>cardinality</em> is <m>3</m>.
+      But clearly <q>cardinality</q>
+      and <q>number of elements</q> mean the same thing.
+    </p>
+
+    <p>
+      Similarly you use the symbol <m>\NN</m> to denote the set of positive integers.
+      With your new word and symbol you make the statement
+      <q>the <em>cardinality</em>
+      (number of elements)
+      of <m>\NN</m> is <m>\aleph_0</m>.</q>
+      This statement has the same grammatical form as the statement <q>the
+      <em>number of elements</em>
+      (cardinality) of <m>S</m> is three.</q> Since three <em>is</em>
+      a number you conclude that <m>\aleph_0</m> is also a number.
+    </p>
+
+    <p>
+      But this is simply nonsense dressed up to sound sensible.
+      If we unwind our notation and language, your statement is simply,
+      <q>The number of positive integers is infinite.</q>
+      This is obviously nonsense because infinity is <em>not</em> a number.
+    </p>
+
+    <p>
+      Even if we take infinity as an undefined term and try to define it by your statement this is still nonsense since you are using the word <q>number</q>
+      to define a new <q>number</q> called infinity.
+      This definition is circular.
+      Thus it is no definition at all.
+      It is nonsense.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>: Your reasoning on this certainly seems sound.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Thank you.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  However,
+      there are a couple of small points I would like to examine more closely if you will indulge me?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Of course.
+      What troubles you?
+    </p>
+
+    <p>
+      <alert>Salviati</alert>: You've said that we cannot use the word <q>number</q>
+      to define numbers because this would be circular reasoning.
+      I entirely agree,
+      but I am not sure this is what our authors are doing.
+    </p>
+
+    <p>
+      Consider the set <m>\left\{1, 2, 3\right\}</m>.
+      Do you agree that it contains three elements?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Obviously.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>: Ah!
+      I see your point!
+      That there are three elements does <em>not</em>
+      depend on what those elements are.
+      Any set with three elements has three elements regardless of the nature of the elements.
+      Thus saying that the set <m>\left\{1, 2, 3\right\}</m> contains three elements does not define the word <q>number</q>
+      in a circular manner because it is irrelevant that the <em>number</em>
+      3 is one of the elements of the set.
+      Thus to say that three is the cardinality of the set
+      <m>\left\{1, 2, 3\right\}</m> has the same meaning as saying that there are three elements in the set <m>\left\{Salviati, Sagredo, Simplicio\right\}</m>.
+      In both cases the number <q><m>3</m></q>
+      is the name that we give to the totality of the elements of each set.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  Precisely.
+      In exactly the same way <m>\aleph_0</m> is the symbol we use to denote the totality of the set of positive integers.
+    </p>
+
+    <p>
+      Thus <m>\aleph_0</m> is a number in the same sense that '<m>3</m>' is a number,
+      is it not?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  I see that we can say in a meaningful way that three is the cardinality of any set with<nbsp />.<nbsp />.<nbsp />.<nbsp />well,<nbsp />.<nbsp />.<nbsp />.<nbsp />with three elements
+      (it becomes very difficult to talk about these things)
+      but this is simply a tautology!
+      It is a way of saying that a set which has three elements has three elements!
+    </p>
+
+    <p>
+      This means only that we have counted them and we had to stop at three.
+      In order to do this we must have numbers first.
+      Which, of course, we do.
+      As I said, everyone knows what numbers are.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  I must confess,
+      my friend, that I become more confused as we speak.
+      I am no longer certain that I really know what a number is.
+      Since you seem to have retained your certainty can you clear this up for me?
+      Can you tell me what a number is?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Certainly.
+      A number is what we have just been discussing.
+      It is what you have when you stop counting.
+      For example, three is the totality
+      (to use your phrase)
+      of the elements of the sets <m>\left\{Salviati, Sagredo, Simplicio\right\}</m> or
+      <m>\left\{1, 2, 3\right\}</m> because when I count the elements in either set I have to stop at three.
+      Nothing less, nothing more.
+      Thus three is a number.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  But this definition only confuses me!
+      Surely you will allow that fractions are numbers?
+      What is counted when we end with,
+      say <m>4/5</m> or <m>1/5?</m>
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  This is simplicity itself.
+      <m>4/5</m> is the number we get when we have divided something into <m>5</m> equal pieces and we have counted four of these fifths.
+      This is four-fifths.
+      You see?
+      Even the language we use naturally bends itself to our purpose.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  But what of one-fifth?
+      In order to count one fifth we must first divide something into fifths.
+      To do this we must know what one-fifth is, musn't we?
+      We seem to be using the word <q>number</q> to define itself again.
+      Have we not come full circle and gotten nowhere?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  I confess this had not occurred to me before.
+      But your objection is easily answered.
+      To count one-fifth we simply divide our
+      <q>something</q> into tenths.
+      Then we count two of them.
+      Since two-tenths is the same as one-fifth the problem is solved.
+      Do you see?
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  I see your point but it will not suffice at all!
+      It merely replaces the question,
+      <q>What is one-fifth?</q> with,
+      <q>What is one-tenth?</q> Nor will it do to say that one-tenth is merely two-twentieths.
+      This simply shifts the question back another level.
+    </p>
+
+    <p>
+      Archimedes said,
+      <q>Give me a place to stand and a lever long enough and I will move the earth.</q>
+      But of course he never moved the earth because he had nowhere to stand.
+      We seem to find ourselves in Archimedes' predicament: We have no place to stand.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  I confess I don't see a way to answer this right now.
+      However I'm sure an answer can be found if we only think hard enough.
+      In the meantime I cannot accept that <m>\aleph_0</m> is a number.
+      It is, as I said before, infinity and infinity is not a number!
+      We may as well believe in fairies and leprechauns if we call infinity a number.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  But again we've come full circle.
+      We cannot say definitively that
+      <m>\aleph_n</m> is or is not a number until we can state with confidence what a number is.
+      And even if we could find solid ground on which to solve the problem of fractions,
+      what of <m>\sqrt{2}?</m> Or <m>\pi?</m> Certainly these are numbers but I see no way to count to either of them.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Alas!
+      I am beset by demons!
+      I am bewitched!
+      I no longer believe what I <em>know</em> to be true!
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  Perhaps things are not quite as bad as that.
+      Let us consider further.
+      You said earlier that we all know what numbers are, and I agree.
+      But perhaps your statement needs to be more precisely formulated.
+      Suppose we say instead that we all know what numbers <em>need</em> to be?
+      Or that we know what we <em>want</em> numbers to be?
+    </p>
+
+    <p>
+      Even if we cannot say with certainly what numbers <em>are</em>
+      surely we can say what we want and need for them to be.
+      Do you agree?
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  I do.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  And so do I.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  Then let us invent numbers anew,
+      as if we've never seen them before,
+      always keeping in mind those properties we need for numbers to have.
+      If we take this as a starting point then the question we need to address is,
+      <q>What do we need numbers to be?</q>
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  This is obvious!
+      We need to be able to add them and we need to be able to multiply them together,
+      and the result should also be a number.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  And subtract and divide too, of course.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  I am not so sure we actually need these.
+      Could we not <em>define</em> <q>subtract two from three</q>
+      to be <q>add negative two to three</q>
+      and thus dispense with subtraction and division?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  I suppose we can but I see no advantage in doing so.
+      Why not simply have subtraction and division as we've always known them?
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  The advantage is parsimony.
+      Two arithmetic operations are easier to keep track of than four.
+      I suggest we go forward with only addition and multiplication for now.
+      If we find we need subtraction or division we can consider them later.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Agreed.
+      And I now see another advantage.
+      Obviously addition and multiplication must not depend on order.
+      That is, if <m>x</m> and <m>y</m> are numbers then <m>x+y</m> must be equal to <m>y+x</m> and <m>xy</m> must be equal to <m>yx</m>.
+      This is not true for subtraction,
+      for <m>3-2</m> does <em>not</em> equal <m>2-3</m>.
+      But if we define subtraction as you suggest then this symmetry is preserved:
+      <me>
+        x+(-y) = (-y)+x
+      </me>.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  Excellent!
+      Another property we will require of numbers occurs to me now.
+      When adding or multiplying more than two numbers it should not matter where we begin.
+      That is, if <m>x</m>,
+      <m>y</m> and <m>z</m> are numbers it should be true that
+      <me>
+        (x+y)+z = x+(y+z)
+      </me>
+      and
+      <me>
+        (x\cdot y)\cdot z = x\cdot(y\cdot z)
+      </me>.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Yes!
+      We have it!
+      Any objects which combine in these precise ways can be called numbers.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  Certainly these properties are necessary,
+      but I don't think they are yet sufficient to our purpose.
+      For example,
+      the number <m>1</m> is unique in that it is the only number which,
+      when multiplying another number leaves it unchanged.
+    </p>
+
+    <p>
+      For example:  <m>1\cdot3=3</m>.
+      Or, in general, if <m>x</m> is a number then <m>1\cdot x =x</m>.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  Yes.
+      Indeed.
+      It occurs to me that the number zero plays a similar role for addition:
+      <m>0+x=x</m>.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  It does not seem to me that addition and multiplication,
+      as we have defined them,
+      force <m>1</m> or <m>0</m> into existence so I believe we will have to postulate their existence independently.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  Is this everything then?
+      Is this all we require of numbers?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  I don't think we are quite done yet.
+      How shall we get division?
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  In the same way that we defined subtraction to be the addition of a negative number,
+      can we not define division to be multiplication by a reciprocal?
+      For example,
+      <m>3</m> divided by <m>2</m> can be considered <m>3</m> <em>multiplied</em>
+      by <m>1/2</m>, can it not?
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  I think it can.
+      But observe that <em>every</em>
+      number will need to have a corresponding negative so that we can subtract any amount.
+      And again nothing we've discussed so far forces these negative numbers into existence so we will have to postulate their existence separately.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  And in the same way every number will need a reciprocal so that we can divide by any amount.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  Every number that is, except zero.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Yes, this is true.
+      Strange is it not,
+      that of them all only this one number needs no reciprocal?
+      Shall we also postulate that zero has no reciprocal?
+    </p>
+
+    <p>
+      <alert>Salviati</alert>: I don't see why we should.
+      Possibly <m>\aleph_0</m> is the reciprocal of zero.
+      Or possibly not.
+      But I see no need to concern ourselves with things we do not need.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>: Is this everything then?
+      Have we discovered all that we need for numbers to be?
+    </p>
+
+    <p>
+      <alert>Salviati</alert>: I believe there is only one property missing.
+      We have postulated addition and we have postulated multiplication and we have described the numbers zero and one which play similar roles for addition and multiplication respectively.
+      But we have not described how addition and multiplication work together.
+    </p>
+
+    <p>
+      That is, we need a rule of distribution:  If <m>x</m>,
+      <m>y</m> and <m>z</m> are all numbers then
+      <me>
+        x\cdot(y+z) = x\cdot y+x\cdot z
+      </me>.
+    </p>
+
+    <p>
+      With this in place I believe we have everything we need.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Indeed.
+      We can also see from this that
+      <m>\aleph_0</m> cannot be a number since,
+      in the first place,
+      it cannot be added to another number and in the second,
+      even if it could be added to a number the result is surely not also a number.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  My dear Simplicio, I fear you have missed the point entirely!
+      Our axioms do not declare what a number is,
+      only how it behaves with respect to addition and multiplication with other numbers.
+      Thus it is a mistake to presume that <q>numbers</q>
+      are only those objects that we have always believed them to be.
+      In fact, it now occurs to me that
+      <q>addition</q> and <q>multiplication</q>
+      also needn't be seen as the operations we have always believed them to be.
+    </p>
+
+    <p>
+      For example suppose we have three objects,
+      <m>\left\{a, b, c\right\}</m> and suppose that we define <q>addition</q>
+      and <q>multiplication</q> by the following tables: 
+<md>
+<mrow>
+        \begin{array}{c|ccc} 
+        +\amp a\amp b\amp c\\\hline 
+        a\amp a\amp b\amp c\\
+        b\amp b\amp c\amp a\\ 
+        c\amp c\amp a\amp b 
+        \end{array}  
+\amp \amp \amp \amp \amp \amp 
+        \begin{array}{c|ccc} 
+        \cdot\amp a\amp b\amp c\\\hline 
+        a\amp a\amp a\amp a\\ 
+        b\amp a\amp b\amp c\\ 
+        c\amp a\amp c\amp b 
+        \end{array} 
+</mrow>
+</md>
+</p>
+
+    <p>
+      I submit that our set along with these definitions satisfy all of our axioms and thus <m>a</m>,
+      <m>b</m> and <m>c</m> qualify to be called <q>numbers.</q>
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  This cannot be!
+      There is no zero, no one!
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  But there is.
+      Do you not see that <m>a</m> plays the role of zero <mdash /> if you add it to any number you get that number back.
+      Similarly <m>b</m> plays the role of one.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:
+      This is astonishing!
+      If <m>a, b</m> and <m>c</m> can be numbers then I am less sure than ever that I know what numbers are!
+      Why, if we replace <m>a, b</m>,
+      and <m>c</m> with <em>Simplicio</em> <em>Sagredo,</em>
+      and <em>Salviati</em> then <em>we</em>
+      become numbers ourselves!
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  Perhaps we will have to be content with knowing how numbers behave rather than knowing what they are.
+    </p>
+
+    <p>
+      However I confess that I have a certain affection for the numbers I grew up with.
+      Let us call those the <q>real</q> numbers.
+      Any other set of numbers,
+      such as our <m>\left\{a,b,c\right\}</m> above we will call a field of numbers,
+      since they seem to provide us with new ground to explore.
+      Or perhaps just a <em>number field</em>?
+    </p>
+
+    <p>
+      As we have been discussing this I have been writing down our
+      axioms.  They are these.  Numbers are any objects which satisfy
+      all of the following properties:
+    </p>
+<p>
+      <alert>AXIOMS OF NUMBERS</alert>
+</p>
+<dl>
+<li>
+<title>Axiom I: <p>Definition of Operations</p></title>
+They can be combined by two operations,
+            denoted <q><m>\cdot</m></q> and <q>+</q>.
+</li>
+<li>
+<title>Axiom II: <p>Closure</p></title>
+           If <m>x</m>,
+            <m>y</m> and <m>z</m> are numbers then <m>x+y</m> is also a number.
+            <m>x\cdot y</m> is also a number.
+ </li>
+<li>
+<title>Axiom II: <p>Commutativity</p></title>
+      <m>x+y=y+x</m> <m>x\cdot y=y\cdot x</m>
+</li>
+<li>
+<title>Axiom III: <p>Associativity</p></title>
+            <m>(x+y)+z=x+(y+z)</m> <m>(x\cdot y)\cdot z = x\cdot(y\cdot z)</m>
+</li>
+<li>
+<title>Axiom IV: <p>Additive Identity</p></title>
+        There is a number, denoted <m>0</m>,
+        such that for any number, <m>x</m>,
+        <me>
+          x+0=x
+        </me>.
+</li>
+<li>
+<title>Axiom V: <p>Multiplicative Identity</p></title>
+            There is a number, denoted <m>1</m>,
+            such that for any number, <m>x</m>,
+            <me>
+              1\cdot x=x
+            </me>.
+</li>
+<li>
+<title>Axiom VI: <p>Additive Inverses</p></title>
+            Given any number, <m>x</m>,
+            there is a number, denoted <m>-x</m>, with the property that
+            <me>
+              x+(-x)=0
+            </me>.
+</li>
+<li>
+<title>Axiom VII: <p>Multiplicative Inverse</p></title>
+        Given any number, <m>x\ne0</m>,
+        there is a number, denoted <m>x^{-1}</m>, with the property that
+        <me>
+          x\cdot x^{-1} =1
+        </me>.
+</li>
+<li>
+<title>Axiom VIII: <p>The Distributive Property</p></title>
+            If <m>x</m>, <m>y</m> and <m>z</m> are numbers then
+            <me>
+              x\cdot(y+z) = x\cdot y+x\cdot z
+            </me>.
+</li>
+</dl>
+    <!-- <p> -->
+    <!--   Numbers are any objects which satisfy all of the following properties: -->
+    <!--   <axiom> <alert>Axiom I: (Definition of Operations): </alert> -->
+    <!--        <p> They can be combined by two operations, -->
+    <!--         denoted <q>+</q> and <q><m>\cdot</m>.</q></p> -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>Axiom II: (Closure):</alert> -->
+    <!--         If <m>x</m>, -->
+    <!--         <m>y</m> and <m>z</m> are numbers then <m>x+y</m> is also a number. -->
+    <!--         <m>x\cdot y</m> is also a number. -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--   <alert>Axiom III: (Commutativity)</alert> -->
+    <!--   <m>x+y=y+x</m> <m>x\cdot y=y\cdot x</m> -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>Axiom IV: (Associativity)</alert> -->
+    <!--         <m>(x+y)+z=x+(y+z)</m> <m>(x\cdot y)\cdot z = x\cdot(y\cdot z)</m> -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>Axiom V: (Additive Identity)</alert>:  -->
+    <!--     There is a number, denoted <m>0</m>, -->
+    <!--     such that for any number, <m>x</m>, -->
+    <!--     <me> -->
+    <!--       x+0=x -->
+    <!--     </me>. -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>Multiplicative Identity</alert>:  -->
+    <!--         There is a number, denoted <m>1</m>, -->
+    <!--         such that for any number, <m>x</m>, -->
+    <!--         <me> -->
+    <!--           1\cdot x=x -->
+    <!--         </me>. -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>Additive Inverse</alert>:  -->
+    <!--         Given any number, <m>x</m>, -->
+    <!--         there is a number, denoted <m>-x</m>, with the property that -->
+    <!--         <me> -->
+    <!--           x+(-x)=0 -->
+    <!--         </me>. -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>Multiplicative Inverse</alert>:  -->
+    <!--     Given any number, <m>x\ne0</m>, -->
+    <!--     there is a number, denoted <m>x^{-1}</m>, with the property that -->
+    <!--     <me> -->
+    <!--       x\cdot x^{-1} =1 -->
+    <!--     </me>. -->
+    <!--   </axiom> -->
+    <!--   <axiom> -->
+    <!--     <alert>The Distributive Property</alert>:  -->
+    <!--         If <m>x</m>, <m>y</m> and <m>z</m> are numbers then -->
+    <!--         <me> -->
+    <!--           x\cdot(y+z) = x\cdot y+x\cdot z -->
+    <!--         </me>. -->
+    <!--   </axiom> -->
+    <!-- </p> -->
+    <p>
+      <alert>Sagredo</alert>: My friend, this is a thing of surpassing beauty!
+      All seems clear to me now.
+      Numbers are any group of objects which satisfy our axioms.
+      That is, a number is anything that
+      <em>acts</em> like a number.
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  Yes this seems to be true.
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  But wait!
+      We have not settled the question: Is <m>\aleph_0</m> a number or not?
+    </p>
+
+    <p>
+      <alert>Salviati</alert>:  If everything we have just done is valid then <m>\aleph_0</m>
+      <em>could be</em> a number.
+      And so could <m>\aleph_1</m>,<m>\aleph_2 \ldots</m> <em>if</em>
+      we can find a way to define addition and multiplication on the set
+      <m>\left\{\aleph_0, \aleph_1, \aleph_2 \ldots\right\}</m> in a manner that agrees with our axioms.
+    </p>
+
+    <p>
+      <alert>Sagredo</alert>:  An arithmetic of infinities!
+      This is a very strange idea.
+      Can such a thing be made sensible?
+    </p>
+
+    <p>
+      <alert>Simplicio</alert>:  Not, I think, before lunch.
+      Shall we retire to our meal?
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>Additional Problems</title>
+    <problem>
+      <statement>
+        <p>
+          <idx><h><m>0\neq 1</m></h></idx>
+               Show that <m>0\neq 1</m>. 
+          <hint>
+            Show that if <m>x\neq0</m>,
+            then <m>0\cdot x \neq x</m>.
+          </hint>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>number field</h><h><m>\QQ</m> is a field</h></idx> 
+          Consider the set of ordered pairs of integers:
+          <m>\left\{(x,y)|s, y \in \ZZ\right\}</m>,
+          and define addition and multiplication as follows:
+
+          <ol label="(a)">
+            <li>
+              <title>Addition:</title>
+              <p>
+                <m>(a,b)+(c,d) = (ad+bc, bd)</m>
+              </p>
+            </li>
+
+            <li>
+              <title>Multiplication:</title>
+              <p>
+                <m>(a,b)\cdot(c,d) = (ac, bd)</m>.
+              </p>
+            </li>
+          </ol>
+
+          <ol label="(a)">
+            <li>
+              <p>
+                If we add the convention that
+                <me>
+                  (ab, ad) = (b,d)
+                </me>
+                show that this set with these operations forms a number field.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Which number field is this?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>number field</h><h><m>\CC</m> is a field</h></idx> 
+
+          Consider the set of ordered pairs of real numbers,
+          <m>\left\{(x,y)|x, y\in\RR\right\}</m>,
+          and define addition and multiplication as follows:
+
+          <ul>
+            <li>
+              <title>Addition:</title>
+              <p>
+                <m>(a,b)+(c,d) = (a+c, b+d)</m>
+              </p>
+            </li>
+
+            <li>
+              <title>Multiplication:</title>
+              <p>
+                <m>(a,b)\cdot(c,d) = (ac- bd,ad+bc)</m>.
+              </p>
+            </li>
+          </ul>
+
+          <ol label="(a)">
+            <li>
+              <p>
+                Show that this set with these operations forms a number field.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Which number field is this?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+  </subsection>
+</section>
+
+
+
+
+<section  xml:id="Epilogues-BuildRealNumbers">
+  <title>Building the Real Numbers</title>
+  <introduction>
+    <p>
+      Contrary to the title of this section we will not be rigorously building the real numbers here.
+      Instead our goal is to show why such a build is logically necessary,
+      and to give a sense of some of the ways this has been accomplished in the past.
+      This may seem odd given our uniform emphasis on mathematical rigor,
+      especially in the third part of the text,
+      but there are very good reasons for this.
+    </p>
+
+    <p>
+      One is simple practicality.
+      The fact is that rigorously building the real numbers and then showing that they have the required properties is extraordinarily detailed work,
+      even for mathematics.
+      If we want to keep this text to a manageable size
+      (we do),
+      we simply don't have the room.
+    </p>
+
+    <p>
+      The second reason is that there is,
+      as far as we know, very little for you to gain by it.
+      When we are done we will have the real numbers.
+      The same real numbers you have been using all of your life.
+      They have the same properties,
+      and quirks, they've always had.
+      To be sure, they will not have lost any of their charm; They will be the same delightful mix of the mundane and the bizarre,
+      and they are still well worth exploring and getting to know better.
+      But nothing we do in the course of building them up logically from simpler ideas will help with that exploration.
+    </p>
+
+    <p>
+      A reasonable question then, is,
+      <q>Why bother?</q> If the process is overwhelmingly, tediously detailed
+      (it is)
+      and gives us nothing new for our efforts, why do it at all?
+    </p>
+
+    <p>
+      Doing mathematics has been compared<fn>
+      By Andrew Wiles, the man who proved Fermat's Last Theorem.
+      </fn> to entering a dark room.
+      At first you are lost.
+      The layout of the room and furniture are unknown so you fumble about for a bit and slowly get a sense of your immediate environs,
+      perhaps a vague notion of the organization of the room as a whole.
+      Eventually, after much, often tedious exploration,
+      you become quite comfortable in your room.
+      But always there will be dark corners;
+      hidden areas you have not yet explored.
+      Such a dark area may hide anything;
+      the latches to unopened doors you didn't know were there;
+      a clamp whose presence explains why you couldn't move that little desk in the corner;
+      even the light switch that would allow you to illuminate an area more clearly than you would have imagined possible.
+    </p>
+
+    <p>
+      But, and this is the point,
+      there is no way to know what you will find there until you walk into that dark corner and begin exploring.
+      Perhaps nothing.
+      But perhaps something wonderful.
+    </p>
+
+    <p>
+      This is what happened in the late nineteenth century.
+      The real numbers had been used since the Pythagoreans learned that <m>\sqrt{2}</m> was irrational.
+      But really, most calculuations were
+      (and still are)
+      done with just the rational numbers.
+      Moreover, since <m>\QQ</m> forms a
+      <q>set of measure zero,</q><fn>
+      See <xref ref="cor_Q-MeasureZero">Corollary</xref>
+      of <xref ref="chpt_BackToFourier">Chapter</xref>.
+      </fn>
+          <idx><h>measure zero</h></idx>
+      it is clear that most of the real numbers had gone completely unused.
+      The set of real numbers was thus one of those
+      <q>dark corners</q> of mathematics.
+      It had to be explored.
+    </p>
+
+    <p>
+      <q>But even if that is true,</q>
+      you might ask, ``I have no interest in the logical foundations of the real numbers,
+      especially if such knowledge won't tell me anything I don't already know.
+      Why do I need to know all of the details of constructing <m>\RR</m> from <m>\QQ?</m>
+    </p>
+
+    <p>
+      The answer to this is very simple: You don't.
+    </p>
+
+    <p>
+      That's the other reason we're not covering all of the details of this material.
+      We will explain enough to light up, dimly perhaps,
+      this little corner of mathematics.
+      Later, should you need
+      (or want)
+      to come back to this and explore further you will have a foundation to start with.
+      Nothing more.
+    </p>
+
+    <p>
+      Until the nineteenth century the geometry of Euclid,
+      as given in his book <em>The Elements,</em>
+      was universally regarded as the touchstone of mathematical perfection.
+      This belief was so deeply embedded in Western culture that as recently as 1923, Edna St.<nbsp />Vincent Millay opened one of the poems in her book
+      <em>The Harp Weaver and Other Poems</em>
+      with the line <q>Euclid alone has looked on beauty bare.</q>
+    </p>
+
+    <p>
+      Euclid begins his book by stating <m>5</m> simple axioms and proceeds,
+      step by logical step, to build up his geometry.
+      Although far from actual perfection, his methods are clean,
+      precise and efficient <mdash /> he arrives at the Pythagorean Theorem in only <m>47</m> steps (theorems) <mdash /> and even today Euclid's <em>Elements</em>
+      still sets a very high standard of mathematical exposition and parsimony.
+    </p>
+
+    <p>
+      The goal of starting with what is clear and simple and proceeding logically,
+      rigorously,
+      to what is complex is still a guiding principle of all mathematics for a variety of reasons.
+      In the late nineteenth century,
+      this principle was brought to bear on the real numbers.
+      That is, some properties of the real numbers that at first seem simple and intuitively clear turn out on closer examination,
+      as we have seen,
+      to be rather counter-intuitive.
+      This alone is not really a problem.
+      We can have counter-intuitive properties in our mathematics <mdash /> indeed,
+      this is a big part of what makes mathematics interesting <mdash /> as long as we arrive at them logically,
+      starting from simple assumptions the same way Euclid did.
+    </p>
+
+    <p>
+      Having arrived at a view of the real numbers which is comparable to that of our nineteenth century colleagues,
+      it should now be clear that the real numbers and their properties must be built up from simpler concepts as suggested by our Italian friends in the previous section.
+    </p>
+
+    <p>
+      In addition to those properties we have discovered so far,
+      both <m>\QQ</m> and <m>\RR</m> share another property which will be useful.
+      We have used it throughout this text but have not heretofore made it explicit.
+      They are both <em>linearly ordered.</em>
+      We will now make this property explicit.
+    </p>
+
+    <definition xml:id="def_NumberField">
+      <statement>
+        <p>
+              <idx><h>number field</h><h>linearly ordered</h></idx>
+          A number field is said to be <em>linearly ordered</em> if there is a relation,
+          denoted <q><m>\lt </m>,</q> on the elements of the field which satisfies all of the following for all
+          <m>x,
+          y</m>, and <m>z</m> in the field.
+        </p>
+
+        <ol>
+          <li>
+            <p>
+              For all numbers <m>x</m> and <m>y</m> in the field,
+              exactly one of the following holds:
+            </p>
+
+            <ol>
+              <li>
+                <p>
+                  <m>x\lt y</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>x=y</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>y\lt x</m>
+                </p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>
+              If <m>x\lt y</m>,
+              then <m>x+z\lt y+z</m> for all <m>z</m> in the field.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>x\lt y</m>, and <m>0\lt z</m>,
+              then <m>x\cdot z \lt y\cdot z</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>x\lt y</m> and <m>y\lt z</m> then <m>x\lt z</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </definition>
+
+    <p>
+      Any number field with such a relation is called a <term>linearly ordered number field</term> and as the following problem shows,
+      not every number field is linearly ordered.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>number field</h><h>linearly ordered</h></idx>
+          <ol label="(a)">
+            <li>
+              <p>
+                Prove that the following must hold in <em>any</em>
+                linearly ordered number field.
+
+                <ol>
+                  <li>
+                    <p>
+                      <m>0\lt x</m> if and only if <m>-x\lt 0</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      If <m>x\lt y</m> and <m>z\lt 0</m> then <m>y\cdot z\lt x\cdot z</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      For all <m>x\neq 0</m>, <m>0\lt x^2</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      <m>0\lt 1</m>.
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Show that the set of complex numbers (<m>\CC</m>) is not a linearly ordered field.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      In a thorough,
+      rigorous presentation we would now assume the existence of the natural numbers <m>(\NN)</m>,
+      and their properties and use these to define the integers,
+      <m>(\ZZ)</m>.
+      We would then use the integers to define the rational numbers,
+      <m>(\QQ)</m>.
+      We could then show that the rationals satisfy the field axioms worked out in the previous section,
+      and that they are linearly ordered.
+    </p>
+
+    <p>
+      Then <mdash /> at last <mdash /> we would use <m>\QQ</m> to define the real numbers <m>(\RR)</m>,
+      show that these also satisfy the field axioms and also have the other properties we expect: Continuity,
+      the Nested Interval Property,
+      the Least Upper Bound Property,
+      the Bolzano-Weierstrass Theorem,
+      the convergence of all Cauchy sequences, and linear ordering.
+    </p>
+
+    <p>
+      We would start with the natural numbers because they seem to be simple enough that we can simply assume their properties.
+      As Leopold Kronecker (1823-1891) said:
+      <q>God made the natural numbers,
+      all else is the work of man.</q>
+    </p>
+
+    <p>
+      Unfortunately this is rather a lot to fit into this epilogue so we will have to abbreviate the process rather severely.
+    </p>
+    <p>
+      We will assume the existence and properties of the rational
+      numbers.  Building <m>\QQ</m> from the integers is not
+      especially hard and it is easy to show that they satisfy the
+      axioms worked out by Salviati, Sagredo and Simplicio in the
+      previous section.  But the level of detail required for rigor
+      quickly becomes onerous.
+    </p>
+
+    <p>
+      Even starting at this fairly advanced position in the chain of logic there is still a considerable level of detail needed to complete the process.
+      Therefore our exposition will necessarily be incomplete.
+    </p>
+
+    <p>
+      Rather than display, in full rigor,
+      how the real numbers can be built up from the rationals we will show,
+      in fairly broad terms, three ways this has been done in the past.
+      We will give references later in case you'd like to follow up and learn more.
+    </p>
+  </introduction>
+
+  <subsection xml:id="sec_decimal-expansion">
+    <title>The Decimal Expansion</title>
+    <p>
+      This is by far the most straightforward method we will examine.
+      Since we begin with <m>\QQ</m>,
+      we already have some numbers whose decimal expansion is infinite.
+      For example, <m>\frac13= 0.333\ldots</m>.
+      We also know that if <m>x\in\QQ</m> then expressing <m>x</m> as a decimal gives either a finite or a
+      <em>repeating infinite</em> decimal.
+    </p>
+
+    <p>
+      More simply,
+      we can say that <m>\QQ</m> consists of the set of all decimal expressions which eventually repeat.
+      (If it eventually repeats zeros then it is what we've called a finite decimal.)
+    </p>
+
+    <p>
+      We then define the real numbers to be the set of all infinite decimals,
+      repeating or not.
+    </p>
+
+    <p>
+      It may feel as if all we have to do is define addition and multiplication in the obvious fashion and we are finished.
+      This set with these definitions obviously satisfy all of the field axioms worked out by our Italian friends in the previous section.
+      Moreover it seems clear that all of our equivalent completeness axioms are satisfied.
+    </p>
+
+    <p>
+      However, things are not quite as clear cut as they seem.
+    </p>
+
+    <p>
+      The primary difficulty in this approach is that the decimal representation of the real numbers is so familiar that everything we need to show <em>seems</em> obvious.
+      But stop and think for a moment.
+      Is it really obvious how to define addition and multiplication of
+      <em>infinite</em> decimals?
+      Consider the addition algorithm we were all taught in grade school.
+      That algorithm requires that we line up two numbers at their decimal points:
+      <md>
+        <mrow>d_1d_2\amp .d_3d_4</mrow>
+        <mrow>+\   \delta_1\delta_2\amp .\delta_3\delta_4</mrow>
+      </md>.
+    </p>
+
+    <p>
+      We then begin adding in the rightmost column and proceed to the left.
+      <em>But if our decimals are infinite we can't get started because there is no rightmost column!</em>
+    </p>
+
+    <p>
+      A similar problem occurs with multiplication.
+    </p>
+
+    <p>
+      So our first problem is to define addition and multiplication in <m>\RR</m> in a manner that re-captures addition and multiplication in <m>\QQ</m>.
+    </p>
+
+    <p>
+      This is not a trivial task.
+    </p>
+
+    <p>
+      One way to proceed is to recognize that the decimal notation we've used all of our lives is really shorthand for the sum of an infinite series.
+      That is, if <m>x=0.d_1d_2d_3\ldots</m> where
+      <m>0\leq d_i\leq 9</m> for all <m>i\in\NN</m> then
+      <me>
+        x=\sum_{i=1}^\infty\frac{d_i}{10^i}
+      </me>.
+    </p>
+
+    <p>
+      Addition is now apparently easy to define: If
+      <m>x=\sum_{i=1}^\infty\frac{d_i}{10^i}</m> and <m>y=\sum_{i=1}^\infty\frac{\delta_i}{10^i}</m> then
+      <me>
+        x+y= \sum_{i=1}^\infty\frac{e_i}{10^i} \text{ where \(e_i =d_i+\delta_i\). }
+      </me>
+    </p>
+
+    <p>
+      But there is a problem.
+      Suppose for some <m>j\in\NN</m>,
+      <m>e_j=d_i+\delta_i>10</m>.
+      In that case our sum does not satisfy the condition
+      <m>0\leq e_i\leq 9</m> so it is not even clear that the expression
+      <m>\sum_{i=1}^\infty\frac{e_i}{10^i}</m> represents a real number.
+      That is, we may not have the closure property of a number field.
+      We will have to define some sort of <q>carrying</q>
+      operation to handle this.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>infinite decimal addition</h></idx>
+              <idx><h><m>\RR</m></h><h>defining infinite decimal addition</h></idx>
+              <idx><h>defining infinite decimal addition</h></idx>
+              Define addition on infinite decimals in a manner that is closed. 
+              <hint> 
+                Find an appropriate <q>carry</q> operation for our definition.
+              </hint>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      A similar difficulty arises when we try to define multiplication.
+      Once we have a notion of carrying in place,
+      we could define multiplication as just the multiplication of series.
+      Specifically, we could define
+      <md>
+        <mrow>(0.a_1a_2a_3\ldots)\cdot(0.b_1b_2b_3\ldots) \amp =\left(\frac{a_1}{10}+\frac{a_2}{10^2}+\cdots\right) \cdot\left(\frac{b_1}{10}+\frac{b_2}{10^2}{10^3}+\cdots\right)</mrow>
+        <mrow>\amp =\frac{a_1b_1}{10^2}+\frac{a_1b_2+a_2b_1}{10^3}+\frac{a_1b_3+a_2b_2+a_3b_1}{10^4}+\cdots</mrow>
+      </md>.
+    </p>
+
+    <p>
+      We could then convert this to a <q>proper</q>
+      decimal using our carrying operation.
+    </p>
+
+    <p>
+      Again the devil is in the details to show that such algebraic operations satisfy everything we want them to.
+      Even then, we need to worry about linearly ordering these numbers and our completeness axiom.
+    </p>
+
+    <p>
+      Another way of looking at this is to think of an infinite decimal representation as a (Cauchy) sequence of finite decimal approximations.
+      Since we know how to add and multiply finite decimal representations,
+      we can just add and multiply the individual terms in the sequences.
+      Of course, there is no reason to restrict ourselves to only these specific types of Cauchy sequences,
+      as we see in our next approach.
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec_cauchy-sequences">
+    <title>Cauchy Sequences</title>
+    <p>
+      As we've seen, Georg Cantor 
+          <idx><h>Cantor, Georg</h></idx>
+      began his career studying Fourier series and quickly moved on to more foundational matters in the theory of infinite sets.
+    </p>
+
+    <p>
+      But he did not lose his fascination with real analysis when he moved on.
+      Like many mathematicians of his time,
+      he realized the need to build <m>\RR</m> from <m>\QQ</m>.
+      He and his friend and mentor Richard Dedekind 
+          <idx><h>Dedekind, Richard</h></idx>
+      (who's approach we will see in the next section) both found different ways to build <m>\RR</m> from <m>\QQ</m>.
+    </p>
+
+    <p>
+      Cantor started with Cauchy sequences in <m>\QQ</m>.
+    </p>
+
+    <p>
+      That is, we consider the set of all Cauchy sequences of rational numbers.
+      We would like to <em>define</em>
+      each such sequence to be a real number.
+      The goal should be clear.
+      If <m>\left(s_n\right)_{n=1}^\infty</m> is a sequence in <m>\QQ</m> which converges to <m>\sqrt{2}</m> then we will call
+      <m>\left(s_n\right)</m> the real number <m>\sqrt{2}</m>.
+    </p>
+
+    <p>
+      This probably seems a bit startling at first.
+      There are a <em>lot</em> of numbers in <m>\left(s_n\right)</m>
+      (countably infinitely many, to be precise)
+      and we are proposing putting all of them into a big bag,
+      tying it up in a ribbon, and calling the whole thing <m>\sqrt{2}</m>.
+      It seems a very odd thing to propose,
+      but recall from the discusion in the previous section that we left the concept of
+      <q>number</q> undefined.
+      Thus if we can take <em>any</em>
+      set of objects and define addition and multiplication in such a way that the field axioms are satisfied,
+      then those objects are legitimately numbers.
+      To show that they are, in fact,
+      the <em>real</em> numbers we will also need the completeness property.
+    </p>
+
+    <p>
+      A bag full of rational numbers works as well as anything <em>if</em>
+      we can define addition and multiplication appropriately.
+    </p>
+
+    <p>
+      Our immediate problem though is not addition or multiplication but uniqueness.
+      If we take one sequence <m>\left(s_n\right)</m> which converges to
+      <m>\sqrt{2}</m> and define it to be <m>\sqrt{2}</m>,
+      what will we do with all of the other sequences that converge to <m>\sqrt{2}?</m>
+    </p>
+
+    <p>
+      Also, we have to be careful not to refer to any real numbers,
+      like the square root of two for example,
+      as we define the real numbers.
+      This would be a circular <mdash /> and thus useless <mdash /> definition.
+      Obviously though, we can refer to
+      <em>rational</em> numbers,
+      since these are the tools we'll be using.
+    </p>
+
+    <p>
+      The solution is clear.
+      We take <em>all</em> sequences of rational numbers that converge to <m>\sqrt{2}</m>,
+      throw them into our bag and call
+      <em>that</em> <m>\sqrt{2}</m>.
+      Our bag is getting pretty full now.
+    </p>
+
+    <p>
+      But we need to do this without using
+      <m>\sqrt{2}</m> because it is a real number.
+      The following two definitions satisfy all of our needs.
+    </p>
+
+    <definition xml:id="def_EquivCauchySeq">
+      <statement>
+        <p>
+              <idx><h>sequences</h><h>Cauchy sequences</h><h>equivalent</h></idx>
+          Let <m>x=\left(s_n\right)_{k=1}^\infty</m> and <m>y=\left(\sigma_n\right)_{k=1}^\infty</m> be Cauchy sequences in <m>\QQ</m>.
+          <m>x</m> and <m>y</m> are said to be equivalent if they satisfy the following property: For every <m>\eps>0</m>,
+          <m>\eps\in\QQ</m>,
+          there is a rational number <m>N</m> such that for all <m>n>N</m>,
+          <m>n\in\NN</m>,
+          <me>
+            \abs{s_n-\sigma_n}\lt \eps
+          </me>.
+        </p>
+
+        <p>
+          We will denote equivalence by writing,
+          <m>x\equiv y</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <problem xml:id="prob_EquivalentCauchySequences">
+      <statement>
+        <p>
+              <idx><h>equivalent Cauchy sequences</h></idx>
+          Show that:
+
+          <ol label="(a)">
+            <li>
+              <p>
+                <m>x\equiv x</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>x\equiv y \imp y\equiv x</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>x\equiv y</m> and <m>y\equiv z \imp x\equiv z</m> 
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <definition xml:id="def_RealsViaCauchy">
+      <statement>
+        <p>
+          <idx><h>sequences</h><h>Cauchy sequences</h><h>real numbers as Cauchy sequences</h></idx>
+          Every set of all equivalent Cauchy sequences defines a real number.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      A very nice feature of Cantor's method is that it is very clear how addition and multiplication should be defined.
+    </p>
+
+    <definition xml:id="def_AddTimesViaCauchy">
+      <statement>
+        <p>
+          <idx><h>sequences</h><h>Cauchy sequences</h><h>addition and multiplication of</h></idx>
+          If
+          <me>
+            x= \left\{\left.\left(s_n\right)_{k=1}^\infty \right| \left(s_n\right)_{k=1}^\infty \text{ is Cauchy in \(\QQ\) } \right\}
+          </me>
+          and
+          <me>
+            y= \left\{\left.\left(\sigma_n\right)_{k=1}^\infty \right| \left(\sigma_n\right)_{k=1}^\infty \text{ is Cauchy in \(\QQ\) } \right\}
+          </me>
+          then we define the following:
+
+          <ul>
+            <li>
+              <title>\underline{Addition:}</title>
+              <p>
+                <m>x+y = \left\{\left.\left(t_n\right)_{k=1}^\infty \right| t_k = s_k+\sigma_k, \forall (s_n) \in x, \text{ and } (\sigma_n)\in y\right\}</m>
+              </p>
+            </li>
+
+            <li>
+              <title>\underline{Multiplication:}</title>
+              <p>
+                <m>x\cdot y = \left\{\left.\left(t_n\right)_{k=1}^\infty \right| t_k = s_k\sigma_k, \forall (s_n) \in x, \text{ and } (\sigma_n)\in y\right\}</m>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The notation used in <xref ref="def_RealsViaCauchy">Definition</xref>
+      can be difficult to read at first,
+      but basically it says that addition and multiplication are done component-wise.
+      However since <m>x</m> and <m>y</m> consist of all equivalent sequences we have to take <em>every</em>
+      possible choice of <m>(s_n)\in x</m> and <m>(\sigma_n)\in y</m>,
+      form the sum (product) <m>(s_n+\sigma_n)_{n=1}^\infty</m> (<m>(s_n\sigma_n)_{n=1}^\infty</m>) and then show that all such sums (products) are equivalent.
+      Otherwise addition (multiplication) is not well-defined: It would depend on which sequence we choose to represent <m>x</m> and <m>y</m>.
+    </p>
+
+    <problem xml:id="prob_CauchyAdditionWellDefined">
+      <statement>
+        <p>
+              <idx><h>sequences</h><h>Cauchy sequences</h><h>addition of is well defined</h></idx>
+              <idx><h><m>\RR</m></h><h>addition of Cauchy sequences</h></idx>
+          Let <m>x</m> and <m>y</m> be real numbers in <m>\QQ</m> (that is, let them be sets of equivalent Cauchy sequences).
+          If <m>(s_n)</m> and <m>(t_n)</m> are in <m>x</m> and
+          <m>(\sigma_n)</m> and <m>(\tau_n)</m> are in <m>y</m> then
+          <me>
+            (s_n+t_n)_{n=1}^\infty \equiv (\sigma_n+\tau_n)_{n=1}^\infty
+          </me>.
+        </p>
+      </statement>
+    </problem>
+
+    <theorem xml:id="thm_ZeroInCauchySequences">
+      <statement>
+        <p>
+          <idx><h>sequences</h><h>Cauchy sequences</h><h>zero as a Cauchy sequence</h></idx>
+          Let <m>0^*</m> be the set of Cauchy sequences in <m>\QQ</m> which are all equivalent to the sequence <m>(0, 0, 0, \ldots)</m>.
+          Then
+          <me>
+            0^*+x=x
+          </me>.
+        </p>
+      </statement>
+    </theorem>
+
+    <proof>
+      <p>
+        From <xref ref="prob_CauchyAdditionWellDefined">Problem</xref>
+        it is clear that in forming <m>0^*+x</m> we can choose any sequence in <m>0^*</m> to represent <m>0^*</m> and any sequence in <m>x</m> to represent <m>x</m>.
+        (This is because any other choice will yield a sequence equivalent to <m>0^*+x</m>.)
+      </p>
+
+      <p>
+        Thus we choose <m>(0, 0, 0, \ldots)</m> to represent <m>0^*</m> and any element of <m>x</m>,
+        say <m>(x_1, x_2, \ldots)</m>, to represent <m>x</m>.
+        Then
+        <md>
+          <mrow>(0, 0, 0, \ldots) + (x_1, x_2, x_3, \ldots) \amp = (x_1, x_2, x_3, \ldots)</mrow>
+          <mrow>\amp = x</mrow>
+        </md>.
+      </p>
+
+      <p>
+        Since any other sequences taken from <m>0^*</m> and <m>x</m> respectively,
+        will yield a sum equivalent to <m>x</m>
+        (see <xref ref="prob_EquivalentCauchySequences">Problem</xref>)
+        we conclude that
+        <me>
+          0^*+x=x
+        </me>.
+      </p>
+    </proof>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h><m>\RR</m></h><h>as Cauchy sequences</h><h>identify the multiplicative identity</h></idx>
+              <idx><h><m>\RR</m></h><h>the number <m>1</m> as a Cauchy sequence</h></idx>
+          Identify the set of equivalent Cauchy sequences, <m>1^*</m>, such that
+          <me>
+            1^*\cdot x=x
+          </me>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h><m>\RR</m></h><h>defined by Cauchy sequences</h></idx>
+              <idx><h>number field</h><h>for Cauchy sequences</h></idx>
+              <idx><h>sequences</h><h>Cauchy sequences</h><h>field axioms for</h></idx>
+          Let <m>x, y</m>, and <m>z</m> be real numbers (equivalent sets of Cauchy sequences).
+          Show that with addition and multiplication defined as above we have:
+
+          <ol label="(a)">
+            <li>
+              <title>a)</title>
+              <p>
+                <m>x+y=y+x</m>
+              </p>
+            </li>
+
+            <li>
+              <title>b)</title>
+              <p>
+                <m>(x+y)+z=x+(y+z)</m>
+              </p>
+            </li>
+
+            <li>
+              <title>c)</title>
+              <p>
+                <m>x\cdot y=y\cdot x</m>
+              </p>
+            </li>
+
+            <li>
+              <title>d)</title>
+              <p>
+                <m>(x\cdot y)\cdot z=x\cdot (y\cdot z)</m>
+              </p>
+            </li>
+
+            <li>
+              <title>e)</title>
+              <p>
+                <m>x\cdot(y+z)=x\cdot y+x\cdot z</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Once the existence of additive and multiplicative inverses is established<fn>
+      We will not address this issue here,
+      but you should give some thought to how this might be accomplished.
+      </fn> the collection of all sets of equivalent Cauchy sequences,
+      with addition and mulitiplication defined as above satisfy all of the field axioms.
+      It is clear that they form a number field and thus deserve to be called numbers.
+    </p>
+
+    <p>
+      However this does not necessarily show that they form <m>\RR</m>.
+      We also need to show that they are complete in the sense of <xref ref="chpt_IVTEVT">Chapter</xref>.
+      It is perhaps not too surprising that when we build the real numbers using equivalent Cauchy sequences the most natural completeness property we can show is that if a sequence of real numbers is Cauchy then it converges.
+    </p>
+
+    <p>
+      However we are not in a position to show that Cauchy sequences in <m>\RR</m> converge.
+      To do this we would first need to show that these sets of equivalence classes of Cauchy sequences
+      (real numbers)
+      are linearly ordered.
+    </p>
+
+    <p>
+      Unfortunately showing the linear ordering,
+      while not especially hard, is time consuming.
+      So we will again invoke the prerogatives of the teacher and brush all of the difficulties aside with the assertion that it is straightforward to show that the real numbers as we have constructed them in this section are linearly ordered and are complete.
+      If you would like to see this construction in full rigor we recommend the book,
+      <em>The Number System</em> by H.<nbsp />A.<nbsp />Thurston<nbsp /><xref ref="thurston56__number_system" />.<fn>
+      Thurston first builds <m>\RR</m> as we've indicated in this section.
+      Then as a final remark he shows that the real numbers must be exactly the infinite decimals we saw in the previous section.
+      </fn> 
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec_dedekind-cuts">
+    <title>Dedekind Cuts</title>
+    <p>
+      An advantage of building the reals via Cauchy sequences in the previous section is that once we've identified equivalent sequences with real numbers it is <em>very</em>
+      clear how addition and multiplication should be defined.
+    </p>
+
+    <p>
+      On the other hand,
+      before we can even start to understand that construction,
+      we need a fairly strong sense of what it means for a sequence to converge and enough experience with sequences to be comfortable with the notion of a Cauchy sequence.
+      Thus a good deal of high level mathematics must be mastered before we can even begin.
+    </p>
+
+    <p>
+      The method of <q>Dedekind cuts</q>
+      first developed by Richard Dedekind 
+          <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h></idx>
+      (though he just called them <q>cuts</q>) in his 1872 book,
+      <em>Continuity and the Irrational Numbers</em>
+      shares the advantage of the Cauchy sequence method in that,
+      once the candidates for the real numbers have been identified,
+      it is very clear<fn>
+      <q>Clear</q> does not mean <q>easy to do</q> as we will see.
+      </fn> how addition and multiplication should be defined.
+      It is also straightforward to show that most of the field axioms are satisfied.
+    </p>
+
+    <p>
+      In addition, Dedekind's method also has the advantage that very little mathematical knowledge is required to get started.
+      This is intentional.
+      In the preface to the first edition of his book, Dedekind 
+          <idx><h>Dedekind, Richard</h></idx>
+      states:
+    </p>
+
+    <sidebyside widths="85%" margins="auto" valign="middle">
+      <p>
+      This memoir can be understood by anyone possessing what is
+      usually called common sense; no technical philosophic, or
+      mathematical, knowledge is in the least degree required. (quoted
+      in<nbsp /><xref ref="hawking05__god_creat_integ" />)
+      </p>
+    </sidebyside>
+
+    <p>
+      While he may have overstated his case a bit,
+      it is clear that his intention was to argue from very simple first principles just as Euclid did.
+    </p>
+
+    <p>
+      His starting point was the observation we made in <xref ref="cha_numb-real-rati">Chapter</xref>: The rational number line is full of holes.
+      More precisely we can <q>cut</q>
+      the rational line in two distinct ways:
+
+      <ol>
+        <li>
+          <p>
+            We can pick a rational number, <m>r</m>.
+            This choice divides all other rational numbers into two classes: Those greater than <m>r</m> and those less than <m>r</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            We can pick one of the holes in the rational number line.
+            In this case <em>all</em> of the rational fall into two classes: Those greater than the hole and those less.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      But to speak of rational numbers as less than or greater than something that is
+      <em>not</em> there is utter nonsense.
+      We'll need a better
+      (that is, a rigorous)
+      definition.
+    </p>
+
+    <p>
+      As before we will develop an overall sense of this construction rather than a fully detailed presentation,
+      as the latter would be far too long to include.
+    </p>
+
+    <p>
+      Our presentation will closely follow that of Edmund Landau's in his classic 1951 text
+      <em>Foundations of Analysis</em><nbsp /><xref ref="landau66__found_analy" />.
+      We do this so that if you choose to pursue this construction in more detail you will be able to follow Landau's presentation more easily.
+    </p>
+
+    <definition xml:id="def_dedekind-cuts">
+      <statement>
+        <p>
+          <alert>Dedekind Cut </alert>
+        </p>
+        <p>
+          <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>definition of</h></idx> 
+          <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h></idx>
+          A set of <em>positive</em><fn>
+            Take special notice that we are not using the negative rational numbers or zero to build our cuts.
+            The reason for this will become clear shortly.
+          </fn> rational numbers is called a <em>cut</em> if
+        </p>
+
+        <dl>
+          <li>
+            <title>Property I</title>
+              It contains a positive rational number but does not contain all positive rational numbers.
+          </li>
+          <li>
+            <title>Property II</title>
+              Every positive rational number in the set is less than every positive rational number not in the set.
+          </li>
+          <li>
+            <title>Property III</title>
+              There is no element of the set which is greater than every other element of the set.
+          </li>
+        </dl>
+      </statement>
+    </definition>
+
+    <p>
+      Given their intended audiences, Dedekind 
+          <idx><h>Dedekind, Richard</h></idx>
+      and Landau shied away from using too much notation.
+      However, we will include the following for those who are more comfortable with the symbolism as it may help provide more perspective.
+      Specifically the properties defining a Dedekind cut <m>\alpha</m> can be written as follows.
+    </p>
+
+        <dl>
+          <li>
+            <title>Property I</title>
+            <p>
+              <m>\alpha\ne\emptyset</m> and <m>\QQ^+-\alpha\ne\emptyset</m>.
+            </p>
+          </li>
+          
+          <li>
+            <title>Property II</title>
+            <p>
+              If <m>x\in\alpha</m> and <m>y\in\QQ^+-\alpha</m>, then <m>x\lt y</m>.
+              (Alternatively,
+              if <m>x\in\alpha</m> and <m>y\lt x</m>, then <m>y\in\alpha</m>.)
+            </p>
+          </li>
+          
+          <li>
+            <title>Property III</title>
+            <p>
+              If <m>x\in\alpha</m>, then
+              <m>\exists\ z\in\alpha</m> such that <m>x\lt z</m>.
+            </p>
+          </li>
+        </dl>
+
+    <p>
+      Properties I-III really say that Dedekind cuts are bounded open intervals of rational numbers starting at <m>0</m>.
+      For example, <m>(0,3)\cap\QQ^+</m> is a Dedekind cut
+      (which will eventually be the real number <m>3</m>).
+      Likewise, <m>\left\{x|x^2\lt 2\right\}\cap\QQ^+</m> is a Dedekind cut
+      (which will eventually be the real number <m>\sqrt{2}</m>).
+      Notice that care must be taken not to actually refer to irrational numbers in the properties as the purpose is to construct them from rational numbers,
+      but it might help to ground you to anticipate what will happen.
+    </p>
+
+    <p>
+      Take particular notice of the following three facts:
+
+      <ol>
+        <li>
+          <p>
+            Very little mathematical knowledge is required to understand this definition.
+            We need to know what a set is,
+            we need to know what a rational number is,
+            and we need to know that given two positive rational numbers either they are equal or one is greater.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The language Landau uses is <em>very</em> precise.
+            This is necessary in order to avoid such nonsense as trying to compare something with nothing like we did a couple of paragraphs up.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            We are only using the <em>positive</em>
+            rational numbers for our construction.
+            The reason for this will become clear shortly.
+            As a practical matter for now,
+            this means that the cuts we have just defined will (eventually) correspond to the
+            <em>positive</em> real numbers.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <definition xml:id="def_dedekind-cuts-ordering">
+      <statement>
+        <p>
+              <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>ordering of</h></idx>
+          Let <m>\alpha</m> and <m>\beta</m> be cuts.
+          Then we say that <m>\alpha</m> is less than <m>\beta</m>,
+          and write
+          <me>
+            \alpha\lt \beta
+          </me>
+          if there is a rational number in <m>\beta</m> which is not in <m>\alpha</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Note that, in light of what we said prior to <xref ref="def_dedekind-cuts-ordering">Definition</xref>
+      (which is taken directly from Landau),
+      we notice the following.
+    </p>
+
+    <theorem xml:id="thm_OrderingCuts">
+      <statement>
+        <p>
+              <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>ordering of</h></idx>
+          Let <m>\alpha</m> and <m>\beta</m> be cuts.
+          Then <m>\alpha\lt \beta</m> if and only if
+          <m>\alpha\subset\beta</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>order properties</h></idx>
+              <idx><h><m>\RR</m></h><h>ordering Dedekind cuts</h></idx> 
+          Prove <xref ref="thm_OrderingCuts">Theorem</xref>
+          and use this to conclude that if <m>\alpha</m> and <m>\beta</m> are cuts then exactly one of the following is true:
+
+          <ol>
+            <li>
+              <p>
+                <m>\alpha=\beta</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\alpha\lt \beta</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\beta\lt \alpha</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      We will need first to define addition and multiplication for our cuts and eventually these will need to be extended of <m>\RR</m>
+      (once the non-positive reals have also been constructed).
+      It will be necessary to show that the extended definitions satisfy the field axioms.
+      As you can see there is a lot to do.
+    </p>
+
+    <p>
+      As we did with Cauchy sequences and with infinite decimals,
+      we will stop well short of the full construction.
+      If you are interested in 
+          <idx><h>Dedekind, Richard</h></idx>
+      exploring the details of Dedekind's construction, Landau's book<nbsp /><xref ref="landau66__found_analy" /> is very thorough and was written with the explicit intention that it would be accessible to students.
+      In his <q>Preface for the Teacher</q> he says
+    </p>
+
+    <sidebyside widths="85%" margins="auto" valign="middle">
+      <p>
+      I hope that I have written this book, after a preparation stretching
+      over decades, in such a way that a normal student can read it in two
+      days.
+      </p>
+    </sidebyside>
+
+    <p>
+      This may be stretching things.
+      Give yourself at least a week and make sure you have nothing else to do that week.
+    </p>
+
+    <p>
+      Addition and multiplication are defined in the obvious way.
+    </p>
+
+    <definition xml:id="def_dedekind-cuts-addition">
+      <statement>
+        <p>
+          <alert>Addition on cuts</alert>
+        </p>
+        <p> <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>addition of</h></idx> 
+Let <m>\alpha</m> and <m>\beta</m> be cuts.
+          We will denote the set <m>\left\{x+y|x\in\alpha,
+          y\in\beta\right\}</m> by <m>\alpha+\beta</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def_dedekind-cuts-multiplication">
+      <statement>
+        <p>
+          <alert>Multiplication on cuts</alert>
+        </p>
+        <p>
+          <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>multiplication of positive cuts</h></idx> 
+          Let <m>\alpha</m> and <m>\beta</m> be cuts.
+          We will denote the set <m>\left\{xy|x\in\alpha,
+          y\in\beta\right\}</m> by <m>\alpha\beta \text{ or } \alpha\cdot\beta</m>. 
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      If we are to have a hope that these objects will serve as our real numbers we must have closure with respect to addition and multiplication.
+      We will show closure with respect to addition.
+    </p>
+
+    <theorem xml:id="thm_dedekind-cuts-closure">
+      <statement>
+        <p>
+          <alert>Closure with Respect to Addition</alert>
+        </p>
+        <p>
+          <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>closure of</h></idx> 
+          If <m>\alpha</m> and <m>\beta</m> are cuts then <m>\alpha+\beta</m> is a cut.
+        </p>
+      </statement>
+    </theorem>
+
+      <p>
+        We need to show that the set
+        <m>\alpha+\beta</m> satisfies all three of the properties of a cut.
+      </p>
+
+<proof>
+  <p>
+    We need to show that the set
+    <m>\alpha+\beta</m> satisfies all three of the properties of a cut.
+  </p>
+  <dl width="wide">
+    <li>
+      <title>Property I</title>
+      <proof>
+      <p>
+        Let <m>x</m> be <em>any</em> rational number in <m>\alpha</m> and let <m>x_1</m> be a rational number not in <m>\alpha</m>.
+        Then by Property II <m>x\lt x_1</m>.
+      </p>
+
+      <p>
+        Let <m>y</m> be <em>any</em> rational number in <m>\beta</m> and let <m>y_1</m> be a rational number not in <m>\beta</m>.
+        Then by Property II <m>y\lt y_1</m>.
+      </p>
+
+      <p>
+        Thus since <m>x+y</m> represents a generic element of
+        <m>\alpha+\beta</m> and <m>x+y\lt x_1+y_1</m>,
+        it follows that <m>x_1+y_1\not\in\alpha+\beta</m>.
+      </p>
+      </proof>
+    </li>
+    <li>
+      <title>Property II</title>
+      <proof>
+      <p>
+        We will show that the contrapositive of <alert>Property II</alert> is true: If
+        <m>x\in\alpha+\beta</m> and <m>y\lt x</m> then <m>y\in\alpha+\beta</m>.
+      </p>
+      
+      <p>
+        First, let <m>x\in\alpha+\beta</m>.
+        Then there are <m>x_\alpha\in\alpha</m> and
+        <m>x_\beta\in\beta</m> such that <m>y\lt x=x_\alpha+x_\beta</m>.
+        Therefore <m>\frac{y}{x_\alpha+x_\beta}\lt  1</m>, so that
+        <md>
+          <mrow>x_\alpha\left(\frac{y}{x_\alpha+x_\beta}\right)\amp \lt  x_\alpha</mrow>
+          <intertext>and</intertext>
+          <mrow>x_\beta\left(\frac{y}{x_\alpha+x_\beta}\right)\amp \lt  x_\beta</mrow>
+        </md>.
+      </p>
+      
+      <p>
+        Therefore <m>x_\alpha\left(\frac{y}{x_\alpha+x_\beta}\right)\in\alpha</m> and <m>x_\beta\left(\frac{y}{x_\alpha+x_\beta}\right)\in\beta</m>.
+        Therefore
+        <me>
+          y=x_\alpha\left(\frac{y}{x_\alpha+x_\beta}\right)+x_\beta\left(\frac{y}{x_\alpha+x_\beta}\right)\in\alpha+\beta
+        </me>.
+      </p>
+      </proof>
+    </li>
+    <li>
+      <title>Property III</title>
+      <proof>
+      <p>
+        Let <m>z\in\alpha+\beta</m>.
+        We need to find <m>w>z</m>, <m>w\in\alpha+\beta</m>.
+        Observe that for some <m>x\in\alpha</m> and <m>y\in\beta</m>
+        <me>
+          z=x+y
+        </me>.
+      </p>
+
+      <p>
+        Since <m>\alpha</m> is a cut,
+        there is a rational number
+        <m>x_1\in\alpha</m> such that <m>x_1>x</m>.
+        Take <m>w=x_1+y\in\alpha+\beta</m>.
+        Then
+        <me>
+          w=x_1+y>x+y=z
+        </me>.
+      </p>
+      </proof>
+    </li>
+  </dl>
+</proof>
+    <problem>
+      <statement>
+        <p>
+              <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>multiplication of</h></idx>
+          Show that if <m>\alpha</m> and <m>\beta</m> are cuts then <m>\alpha\cdot\beta</m> is also a cut.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      At this point we have built our cuts and we have defined addition and multiplication for cuts.
+      However, as observed earlier the cuts we have will
+      (very soon)
+      correspond only to the positive real numbers.
+      This may appear to be a problem but it really isn't because the non-positive real numbers can be defined in terms of the positives,
+      that is, in terms of our cuts.
+      We quote from Landau<nbsp /><xref ref="landau66__found_analy" />:
+    </p>
+
+    <sidebyside widths="85%" margins="auto" valign="middle">
+      <p>
+      <statement>
+        <p>
+          These cuts will henceforth be called the <q>positive
+            numbers;</q>  .  .  .
+        </p>
+      </statement>
+      <statement>
+        <p>
+          We create a new number <m>0</m> (to be read <q>zero</q>),
+          distinct from the positive numbers.
+        </p>
+      </statement>
+<statement>
+<p>
+      We also create numbers which are distinct from the positive
+      numbers as well as distinct from zero, and which we will
+      call negative numbers, in such a way that to each <m>\xi</m>
+      (I.e. to each positive number) we assign a negative number
+      denoted by <m>-\xi</m> (<m>-</m> to be read
+      <q>minus</q>). In this, <m>-\xi</m> and <m>-\nu</m> will be
+      considered as the same number (as equal) if and only
+      if <m>\xi</m> and <m>\nu</m> are the same number.
+</p>
+</statement>
+<statement>
+<p>
+      The totality consisting of all positive numbers, of <m>0</m>,
+      and of all negative numbers, will be called the real numbers.
+</p>
+</statement>
+    </p>
+    </sidebyside>
+
+    <p>
+      Of course it is not nearly enough to simply postulate the existence of the non-negative real numbers.
+    </p>
+
+    <p>
+      All we have so far is a set of objects we're calling the real numbers.
+      For some of them
+      (the positive reals<fn>
+      That is, the cuts.
+      </fn>)
+      we have defined addition and multiplication.
+      These definitions will eventually turn out to correspond to the addition and multiplication we are familiar with.
+    </p>
+
+    <p>
+      However we do not have either operation for our entire set of proposed real numbers.
+      Before we do this we need first to define the
+      <em>absolute value</em> of a real number.
+      This is a concept you are very familiar with and you have probably seen the following definition: Let <m>\alpha\in\RR</m>.
+      Then
+      <me>
+        \abs{\alpha} = \begin{cases}\alpha\amp  \text{ if \(\alpha\ge0,\) } \\ -\alpha\amp  \text{ if \(\alpha\lt 0.\) } \end{cases}
+      </me>
+    </p>
+
+    <p>
+      Unfortunately we cannot use this definition because we do not yet have a linear ordering on <m>\RR</m> so the statement <m>\alpha\ge0</m> is meaningless.
+      Indeed, it will be our definition of absolute value that orders the real numbers.
+      We must be careful.
+    </p>
+
+    <p>
+      Notice that by definition a negative real number is denoted with the dash ('-') in front.
+      That is <m>\chi</m> is positive while <m>-\chi</m> is negative.
+      Thus if <m>A</m> is <em>any</em>
+      real number then one of the following is true:
+
+      <ol>
+        <li>
+          <p>
+            <m>A=\chi</m> for some <m>\chi\in\RR</m> (<m>A</m> is positive)
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>A=-\chi</m> for some <m>\chi\in\RR</m> (<m>A</m> is negative)
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>A=0</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      We define absolute value as follows:
+    </p>
+
+    <definition xml:id="def_absolute-value">
+      <statement>
+        <p>
+              <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>absolute value</h></idx>
+          Let <m>A\in\RR</m> as above.
+          Then
+          <me>
+            \abs{A}= \begin{cases}\chi \amp  \text{ if \(A=\chi{}\)} \\ 0 \amp  \text{ if \(A=0\) } \\ \chi \amp  \text{ if \(A=-\chi{}.\)} {} \end{cases}
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      With this definition in place it is possible to show that <m>\RR</m> is linearly ordered.
+      We will not do this explicitly.
+      Instead we will simply assume that the symbols <q><m>\lt</m></q>
+      <q><m>></m>,</q> and <q><m>=</m></q>
+      have been defined and have all of the properties we have learned to expect from them.
+    </p>
+
+    <p>
+      We now extend our definitions of addition and multiplication from the positive real numbers (cuts) to all of them.
+      Curiously, multiplication is the simpler of the two.
+    </p>
+
+    <definition xml:id="def_dedekind-multiplication">
+      <statement>
+        <p>
+          <alert>Multiplication</alert>
+        </p>
+        <p>
+          <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>multiplication of</h></idx> 
+          Let <m>\alpha, \beta\in\RR</m>.
+          Then
+          <me>
+            \alpha\cdot\beta = \begin{cases}-\abs{\alpha}\abs{\beta}\amp  \text{ if \(\alpha>0,\beta\lt 0\) or \(\alpha\lt 0, \beta>0,\) }  \\ \ \ \,\abs{\alpha}\abs{\beta}\amp  \text{ if \(\alpha\lt 0,\beta\lt 0,\) }  \\ \ \ \ \ \ \, 0\amp  \text{ if \(\alpha=0\) or \(\beta=0.\) }  {} \end{cases}
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Notice that the case where <m>\alpha</m> and <m>\beta</m> are both positive was already handled by <xref ref="def_dedekind-cuts-multiplication">Definition</xref>
+      because in that case they are both cuts.
+    </p>
+
+    <p>
+      Next we define addition.
+    </p>
+
+    <definition xml:id="def_dedekind-addition">
+      <statement>
+        <p>
+          <alert>Addition</alert>
+        </p>
+        <p>
+          <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>addition of</h></idx> 
+          Let <m>\alpha, \beta\in\RR</m>.
+          Then
+          <me>
+            \alpha+\beta= \begin{cases}-(\abs{\alpha}+\abs{\beta}) \amp  \text{ if \(\alpha\lt 0, \beta\lt 0 \) } \\ \ \ \ \abs{\alpha}-\abs{\beta}\amp  \text{ if \(\alpha>0, \beta\lt 0, \abs{\alpha}>\abs{\beta} \)} \\ \ \ \ \ \ \ \ \,0             \amp  \text{ if \(\alpha>0, \beta\lt 0, \abs{\alpha}=\abs{\beta} \)} \\ -(\abs{\alpha}-\abs{\beta})   \amp  \text{ if \(\alpha>0, \beta\lt 0, \abs{\alpha}\lt \abs{\beta} \)} \\ \ \ \ \ \ \beta+\alpha        \amp  \text{ if \(\alpha\lt 0, \beta>0 \) } \\ \ \ \ \ \ \ \ \,\beta{}       \amp  \text{ if \(\alpha=0 \) } \\ \ \ \ \ \ \ \ \,\alpha        \amp  \text{ if \(\beta=0 \) } \end{cases} 
+          </me>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      But wait!
+      In the second and fourth cases of our definition we've actually defined addition in terms of subtraction.<fn>
+      Notice also that the fifth case refers to the addition as defined in the second case.
+      </fn> But we haven't defined subtraction yet!
+      Oops!
+    </p>
+
+    <p>
+      This is handled with the definition below,
+      but it illuminates very clearly the care that must be taken in these constructions.
+      The real numbers are <em>so</em>
+      familiar to us that it is extraordinarily easy to make unjustified assumptions.
+    </p>
+
+    <p>
+      Since the subtractions in the second and fourth cases above are done with positive numbers we only need to give meaning to the subtraction of cuts.
+    </p>
+
+    <definition xml:id="def_CutSubtraction">
+      <statement>
+        <p>
+              <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>subtraction of</h></idx>
+          If <m>\alpha</m>, <m>\beta</m> and <m>\delta</m> are cuts then the expression
+          <me>
+            \alpha-\beta=\delta
+          </me>
+          is defined to mean
+          <me>
+            \alpha=\delta+\beta
+          </me>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Of course, there is the detail of showing that there is such a cut <m>\delta</m>.
+      (We warned you of the tediousness of all this.)
+      Landau goes through the details of showing that such a cut exists.
+      We will present an alternative by defining the cut <m>\alpha-\beta</m> directly
+      (assuming <m>\beta\lt \alpha</m>).
+      To motivate this definition,
+      consider something we are familiar with: <m>3-2=1</m>.
+      In terms of cuts,
+      we want to say that the open interval from <m>0</m> to <m>3</m> <q>minus</q>
+      the open interval from <m>0</m> to <m>2</m> should give us the open interval from <m>0</m> to <m>1</m>.
+      Taking elements from <m>(0,3)</m> and subtracting elements from <m>(0,2)</m> won't do it as we would have differences such as
+      <m>2.9-.9=2</m> which is not in the cut <m>(0,1)</m>.
+      A moment's thought tells us that what we need to do is take all the elements from <m>(0,3)</m> and subtract all the elements from <m>(2,\infty)</m>,
+      restricting ourselves only to those which are positive rational numbers.
+      This prompts the following definition.
+    </p>
+
+    <definition xml:id="def_SubtractionOfCutsAsSets">
+      <statement>
+        <p>
+              <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>as sets</h></idx>
+          Let <m>\alpha</m> and <m>\beta</m> be cuts with <m>\beta\lt \alpha</m>.
+          Define <m>\alpha-\beta</m> as follows:
+          <me>
+            \alpha-\beta =\left\{x-y|x\in\alpha \text{ and } y\not\in\beta\right\}\cap\QQ^+
+          </me>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      To show that, in fact, <m>\beta+(\alpha-\beta)=\alpha</m>,
+      the following technical lemma will be helpful.
+    </p>
+
+    <lemma xml:id="lem_Technical">
+      <statement>
+        <p>
+          Let <m>\beta</m> be a cut,
+          <m>y</m> and <m>z</m> be positive rational numbers not in <m>\beta</m> with <m>y\lt z</m>,
+          and let <m>\eps>0</m> be any rational number.
+          Then there exist positive rational numbers <m>r</m> and <m>s</m> with
+          <m>r\in\beta</m>, and <m>s\not\in\beta</m>,
+          such that <m>s\lt z</m>,
+          and <m>s-r\lt \eps</m>. 
+        </p>
+      </statement>
+    </lemma>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>technical lemma for</h></idx>
+          Prove <xref ref="lem_Technical">Lemma</xref>. 
+              <hint> 
+                Since <m>\beta</m> is a cut there exists <m>r_1\in\beta</m>.
+                Let <m>s_1=y\not\in\beta</m>.
+                We know that <m>r_1\lt s_1\lt z</m>.
+                Consider the midpoint <m>\frac{s_1+r_1}{2}</m>.
+                If this is in <m>\beta</m> then relabel it as <m>r_2</m> and relabel <m>s_1</m> as <m>s_2</m>.
+                If it is not in <m>\beta</m> then relabel it as <m>s_2</m> and relabel <m>r_1</m> as <m>r_2</m>,
+                etc.
+              </hint>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+              <idx><h>Dedekind, Richard</h><h>Dedekind cuts</h><h>subtraction of</h></idx>
+          Let <m>\alpha</m> and <m>\beta</m> be cuts with <m>\beta\lt \alpha</m>.
+          Prove that <m>\beta+(\alpha-\beta)=\alpha</m>. 
+              <hint>
+                It is pretty straightforward to show that <m>\beta+(\alpha-\beta)\subseteq\alpha</m>.
+                To show that <m>\alpha\subseteq\beta+(\alpha-\beta)</m>,
+                we let <m>x\in\alpha</m>.
+                Since <m>\beta\lt \alpha</m>,
+                we have <m>y\in\alpha</m> with <m>y\not\in\beta</m>.
+                We can assume without loss of generality that <m>x\lt y</m>. (Why?) Choose <m>z\in\alpha</m> with <m>y\lt z</m>.
+                By the <xref ref="lem_Technical">Lemma</xref>,
+                there exists positive rational numbers <m>r</m> and <m>s</m> with <m>r\in\beta</m>,
+                <m>s\in\beta</m>, <m>s\lt z</m>, and <m>s-r\lt z-x</m>.
+                Show that <m>x\lt r+(z-s)</m>.
+              </hint>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      We will end by saying that no matter how you construct the real number system,
+      there is really only one.
+      More precisely we have the following theorem which we state without proof.<fn>
+        In fact, <em>not</em> proving this result seems to be standard in real analysis references.
+        Most often it is simply stated as we've done here.
+      </fn> 
+    </p>
+    
+    <theorem xml:id="thm_R-is-R">
+      <statement>
+        <p>
+          <idx><h><m>\RR</m></h><h>any complete, linearly ordered field is isomorphic to</h></idx>
+          <idx><h>any complete, linearly ordered field is isomorphic to <m>\RR</m>.</h></idx>
+          Any complete, linearly ordered field is isomorphic
+          to <m>\RR</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Two linearly ordered number fields are said to be isomorphic if there is a one-to-one,
+      onto mapping between them
+      (such a mapping is called a bijection)
+      which preserves addition, multiplication, and order.
+      More precisely, if <m>{\cal F}_1</m> and
+      <m>{\cal F}_2</m> are both linearly ordered fields,
+      <m>x,
+        y \in{\cal F}_1</m> and <m>\phi:{\cal F}_1\rightarrow{\cal F}_2</m> is the mapping then 
+      
+      <ol>
+        <li>
+          <p>
+            <m>\phi(x+y)=\phi(x)+\phi(y)</m>
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            <m>\phi(x\cdot y) = \phi(x)\cdot\phi(y)</m>
+          </p>
+        </li>
+        
+        <li>
+          <p>
+            <m>x\lt y \imp \phi(x)\lt \phi(y)</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+      
+    <p>
+      Remember that we warned you that these constructions were fraught with technical details that are not necessarily illuminating.
+      Nonetheless, at this point,
+      you have everything you need to show that the set of all real numbers as defined above is linearly ordered and satisfies the Least Upper Bound property.
+    </p>
+
+    <p>
+      But we will stop here in order,
+      to paraphrase Descartes, to leave for you the joy of further discovery.
+    </p>
+  </subsection>
+</section>
+
+
+</chapter>
+
