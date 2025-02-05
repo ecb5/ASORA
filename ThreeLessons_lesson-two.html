@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="red_blue">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Lesson Two</title>
@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
 <meta property="book:author" content="Robert Rogers">
-<meta property="book:author" content="Eugene C. Boman">
+<meta property="book:author" content="Eugene Boman">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -58,7 +58,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -70,33 +70,153 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_red_blue.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<style>
+#ThreeLessons_lesson-two-24-3-1-1 { counter-set: ThreeLessons_lesson-two-24-3-1-1 0; }
+#ThreeLessons_lesson-two-24-3-1-1 > li::marker { content: ""counter(ThreeLessons_lesson-two-24-3-1-1,lower-alpha)""; }
+#ThreeLessons_lesson-two-24-3-1-1 > li { counter-increment: ThreeLessons_lesson-two-24-3-1-1; }
+#ThreeLessons_lesson-three-4-2 { counter-set: ThreeLessons_lesson-three-4-2 0; }
+#ThreeLessons_lesson-three-4-2 > li::marker { content: ""counter(ThreeLessons_lesson-three-4-2,decimal)"."; }
+#ThreeLessons_lesson-three-4-2 > li { counter-increment: ThreeLessons_lesson-three-4-2; }
+#thm_IrrationalBetweenIrrationals-1-1-2 { counter-set: thm_IrrationalBetweenIrrationals-1-1-2 0; }
+#thm_IrrationalBetweenIrrationals-1-1-2 > li::marker { content: ""counter(thm_IrrationalBetweenIrrationals-1-1-2,lower-alpha)""; }
+#thm_IrrationalBetweenIrrationals-1-1-2 > li { counter-increment: thm_IrrationalBetweenIrrationals-1-1-2; }
+#ExponentAdditionProperty-52-1-1-2 { counter-set: ExponentAdditionProperty-52-1-1-2 0; }
+#ExponentAdditionProperty-52-1-1-2 > li::marker { content: ""counter(ExponentAdditionProperty-52-1-1-2,lower-alpha)""; }
+#ExponentAdditionProperty-52-1-1-2 > li { counter-increment: ExponentAdditionProperty-52-1-1-2; }
+#SeqRealNum-12-2 { counter-set: SeqRealNum-12-2 0; }
+#SeqRealNum-12-2 > li::marker { content: ""counter(SeqRealNum-12-2,decimal)"."; }
+#SeqRealNum-12-2 > li { counter-increment: SeqRealNum-12-2; }
+#SeqRealNum-16-3 { counter-set: SeqRealNum-16-3 0; }
+#SeqRealNum-16-3 > li::marker { content: ""counter(SeqRealNum-16-3,decimal)"."; }
+#SeqRealNum-16-3 > li { counter-increment: SeqRealNum-16-3; }
+#SeqRealNum-36-1 { counter-set: SeqRealNum-36-1 0; }
+#SeqRealNum-36-1 > li::marker { content: ""counter(SeqRealNum-36-1,decimal)"."; }
+#SeqRealNum-36-1 > li { counter-increment: SeqRealNum-36-1; }
+#SeqRealNum-36-1-3-2-1 { counter-set: SeqRealNum-36-1-3-2-1 0; }
+#SeqRealNum-36-1-3-2-1 > li::marker { content: "("counter(SeqRealNum-36-1-3-2-1,lower-alpha)")"; }
+#SeqRealNum-36-1-3-2-1 > li { counter-increment: SeqRealNum-36-1-3-2-1; }
+#thm_CalcLimits-1-1-4 { counter-set: thm_CalcLimits-1-1-4 0; }
+#thm_CalcLimits-1-1-4 > li::marker { content: ""counter(thm_CalcLimits-1-1-4,lower-alpha)""; }
+#thm_CalcLimits-1-1-4 > li { counter-increment: thm_CalcLimits-1-1-4; }
+#Continuity-DerivativeAfterthought-7-1 { counter-set: Continuity-DerivativeAfterthought-7-1 0; }
+#Continuity-DerivativeAfterthought-7-1 > li::marker { content: ""counter(Continuity-DerivativeAfterthought-7-1,decimal)"."; }
+#Continuity-DerivativeAfterthought-7-1 > li { counter-increment: Continuity-DerivativeAfterthought-7-1; }
+#NIP-2-2-1 { counter-set: NIP-2-2-1 0; }
+#NIP-2-2-1 > li::marker { content: ""counter(NIP-2-2-1,decimal)"."; }
+#NIP-2-2-1 > li { counter-increment: NIP-2-2-1; }
+#IVTandEVT-Completeness-27-9-3 { counter-set: IVTandEVT-Completeness-27-9-3 0; }
+#IVTandEVT-Completeness-27-9-3 > li::marker { content: ""counter(IVTandEVT-Completeness-27-9-3,decimal)"."; }
+#IVTandEVT-Completeness-27-9-3 > li { counter-increment: IVTandEVT-Completeness-27-9-3; }
+#IVTandEVT-BWT-17-4-3 { counter-set: IVTandEVT-BWT-17-4-3 0; }
+#IVTandEVT-BWT-17-4-3 > li::marker { content: ""counter(IVTandEVT-BWT-17-4-3,decimal)"."; }
+#IVTandEVT-BWT-17-4-3 > li { counter-increment: IVTandEVT-BWT-17-4-3; }
+#def_LeastUpperBound-3-2-1 { counter-set: def_LeastUpperBound-3-2-1 0; }
+#def_LeastUpperBound-3-2-1 > li::marker { content: ""counter(def_LeastUpperBound-3-2-1,lower-alpha)""; }
+#def_LeastUpperBound-3-2-1 > li { counter-increment: def_LeastUpperBound-3-2-1; }
+#IVTandEVT-SupremumAndEVT-9-4 { counter-set: IVTandEVT-SupremumAndEVT-9-4 0; }
+#IVTandEVT-SupremumAndEVT-9-4 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-9-4,lower-alpha)""; }
+#IVTandEVT-SupremumAndEVT-9-4 > li { counter-increment: IVTandEVT-SupremumAndEVT-9-4; }
+#IVTandEVT-SupremumAndEVT-13-2-32 { counter-set: IVTandEVT-SupremumAndEVT-13-2-32 0; }
+#IVTandEVT-SupremumAndEVT-13-2-32 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-13-2-32,decimal)"."; }
+#IVTandEVT-SupremumAndEVT-13-2-32 > li { counter-increment: IVTandEVT-SupremumAndEVT-13-2-32; }
+#IVTandEVT-SupremumAndEVT-19-1-1-7 { counter-set: IVTandEVT-SupremumAndEVT-19-1-1-7 0; }
+#IVTandEVT-SupremumAndEVT-19-1-1-7 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-19-1-1-7,lower-alpha)""; }
+#IVTandEVT-SupremumAndEVT-19-1-1-7 > li { counter-increment: IVTandEVT-SupremumAndEVT-19-1-1-7; }
+#IVTandEVT-SupremumAndEVT-25-1-1-4 { counter-set: IVTandEVT-SupremumAndEVT-25-1-1-4 0; }
+#IVTandEVT-SupremumAndEVT-25-1-1-4 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-25-1-1-4,decimal)"."; }
+#IVTandEVT-SupremumAndEVT-25-1-1-4 > li { counter-increment: IVTandEVT-SupremumAndEVT-25-1-1-4; }
+#IVTandEVT-SupremumAndEVT-28-1-1-4 { counter-set: IVTandEVT-SupremumAndEVT-28-1-1-4 0; }
+#IVTandEVT-SupremumAndEVT-28-1-1-4 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-28-1-1-4,decimal)"."; }
+#IVTandEVT-SupremumAndEVT-28-1-1-4 > li { counter-increment: IVTandEVT-SupremumAndEVT-28-1-1-4; }
+#IVTandEVT-AddProb-3-1-1-2 { counter-set: IVTandEVT-AddProb-3-1-1-2 0; }
+#IVTandEVT-AddProb-3-1-1-2 > li::marker { content: ""counter(IVTandEVT-AddProb-3-1-1-2,lower-alpha)""; }
+#IVTandEVT-AddProb-3-1-1-2 > li { counter-increment: IVTandEVT-AddProb-3-1-1-2; }
+#IVTandEVT-AddProb-4-1-1-5 { counter-set: IVTandEVT-AddProb-4-1-1-5 0; }
+#IVTandEVT-AddProb-4-1-1-5 > li::marker { content: ""counter(IVTandEVT-AddProb-4-1-1-5,lower-alpha)""; }
+#IVTandEVT-AddProb-4-1-1-5 > li { counter-increment: IVTandEVT-AddProb-4-1-1-5; }
+#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6 { counter-set: PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6 0; }
+#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6 > li::marker { content: ""counter(PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6,lower-alpha)""; }
+#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6 > li { counter-increment: PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6; }
+#BackToFourier-2-26-2-1-2 { counter-set: BackToFourier-2-26-2-1-2 0; }
+#BackToFourier-2-26-2-1-2 > li::marker { content: ""counter(BackToFourier-2-26-2-1-2,lower-alpha)""; }
+#BackToFourier-2-26-2-1-2 > li { counter-increment: BackToFourier-2-26-2-1-2; }
+#BackToFourier-2-27-1-1-3 { counter-set: BackToFourier-2-27-1-1-3 0; }
+#BackToFourier-2-27-1-1-3 > li::marker { content: ""counter(BackToFourier-2-27-1-1-3,lower-alpha)""; }
+#BackToFourier-2-27-1-1-3 > li { counter-increment: BackToFourier-2-27-1-1-3; }
+#def_NumberField-3-2-1 { counter-set: def_NumberField-3-2-1 0; }
+#def_NumberField-3-2-1 > li::marker { content: ""counter(def_NumberField-3-2-1,decimal)"."; }
+#def_NumberField-3-2-1 > li { counter-increment: def_NumberField-3-2-1; }
+#def_NumberField-3-2-1-1-2-1 { counter-set: def_NumberField-3-2-1-1-2-1 0; }
+#def_NumberField-3-2-1-1-2-1 > li::marker { content: "("counter(def_NumberField-3-2-1-1-2-1,lower-alpha)")"; }
+#def_NumberField-3-2-1-1-2-1 > li { counter-increment: def_NumberField-3-2-1-1-2-1; }
+#Epilogues-BuildRealNumbers-2-20-2-1-2-1 { counter-set: Epilogues-BuildRealNumbers-2-20-2-1-2-1 0; }
+#Epilogues-BuildRealNumbers-2-20-2-1-2-1 > li::marker { content: ""counter(Epilogues-BuildRealNumbers-2-20-2-1-2-1,decimal)"."; }
+#Epilogues-BuildRealNumbers-2-20-2-1-2-1 > li { counter-increment: Epilogues-BuildRealNumbers-2-20-2-1-2-1; }
+#DedekindCuts-9-3 { counter-set: DedekindCuts-9-3 0; }
+#DedekindCuts-9-3 > li::marker { content: ""counter(DedekindCuts-9-3,decimal)"."; }
+#DedekindCuts-9-3 > li { counter-increment: DedekindCuts-9-3; }
+#DedekindCuts-17-1 { counter-set: DedekindCuts-17-1 0; }
+#DedekindCuts-17-1 > li::marker { content: ""counter(DedekindCuts-17-1,decimal)"."; }
+#DedekindCuts-17-1 > li { counter-increment: DedekindCuts-17-1; }
+#DedekindCuts-21-1-1-6 { counter-set: DedekindCuts-21-1-1-6 0; }
+#DedekindCuts-21-1-1-6 > li::marker { content: ""counter(DedekindCuts-21-1-1-6,decimal)"."; }
+#DedekindCuts-21-1-1-6 > li { counter-increment: DedekindCuts-21-1-1-6; }
+#DedekindCuts-39-5 { counter-set: DedekindCuts-39-5 0; }
+#DedekindCuts-39-5 > li::marker { content: ""counter(DedekindCuts-39-5,decimal)"."; }
+#DedekindCuts-39-5 > li { counter-increment: DedekindCuts-39-5; }
+#DedekindCuts-62-5 { counter-set: DedekindCuts-62-5 0; }
+#DedekindCuts-62-5 > li::marker { content: ""counter(DedekindCuts-62-5,decimal)"."; }
+#DedekindCuts-62-5 > li { counter-increment: DedekindCuts-62-5; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
-<p class="byline">Robert Rogers, Eugene C. Boman</p>
+<p class="byline">Robert Rogers, Eugene Boman</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -107,7 +227,8 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ThreeLessons-lesson-one.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Threelessons.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ThreeLessons_lesson-three.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ThreeLessons-lesson-one.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Threelessons.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ThreeLessons_lesson-three.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
 \newcommand{\dx}[1]{\,{\rm d}#1}
 
 
@@ -130,12 +251,12 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="ASORA-2.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="ASORA-2-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="ASORA-2-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="Instructor.html" class="internal"><span class="title">To the Instructor</span></a></div></li>
 </ul>
 </li>
@@ -278,16 +399,16 @@ window.MathJax = {
 </h2>
 <div class="para" id="ThreeLessons_lesson-two-2">Read and understand the following development of the Quadratic Formula.</div>
 <div class="para logical" id="ThreeLessons_lesson-two-3">
-<div class="para">Suppose <span class="process-math">\(a\neq0\text{.}\)</span> If</div>
+<div class="para">Suppose <span class="process-math">\(a\neq0\text{.}\)</span>  If</div>
 <div class="displaymath process-math" id="ThreeLessons_lesson-two-3-2">
 \begin{align}
 ax^2+bx+c =0\tag{1}\\
 \end{align}
-<p class="intertext">then</p>
+<div class="para intertext">then</div>
 \begin{align}
 x^2+\frac{b}{a}x\amp =-\frac{c}{a}\tag{2}\\
 \end{align}
-<p class="intertext">Now let <span class="process-math">\(x=y-\frac{b}{2a}\)</span> giving</p>
+<div class="para intertext">Now let <span class="process-math">\(x=y-\frac{b}{2a}\)</span> giving</div>
 \begin{align}
 y^2\amp = -\frac{c}{a} +\frac{b^2}{4a^2}\tag{3}\\
 y\amp = \frac{\pm \sqrt{b^2-4ac}}{2a}\tag{4}\\
@@ -295,19 +416,19 @@ x\amp = \frac{-b\pm\sqrt{b^2-4ac}}{2a}\tag{5}
 \end{align}
 </div>
 </div>
-<div class="para" id="ThreeLessons_lesson-two-4">Were you able to follow the argument? Probably the step from <a href="" class="xref" data-knowl="./knowl/xref/eq_QForm1.html" title="Equation 1">equation (1)</a> to <a href="" class="xref" data-knowl="./knowl/xref/eq_QForm2.html" title="Equation 2">equation (2)</a> presented no difficulties. But what about the next step? Do you see where <a href="" class="xref" data-knowl="./knowl/xref/eq_QForm3.html" title="Equation 3">equation (3)</a> came from? If so, good for you. Most students, in fact most mathematicians, cannot make that step in their heads. But are you sure? Is there, perhaps, some small detail you’ve overlooked?</div>
+<div class="para" id="ThreeLessons_lesson-two-4">Were you able to follow the argument?  Probably the step from <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1">equation (1)</a> to <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2">equation (2)</a> presented no difficulties.  But what about the next step?  Do you see where <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3">equation (3)</a> came from?  If so, good for you. Most students, in fact most mathematicians, cannot make that step in their heads.  But are you sure?  Is there, perhaps, some small detail you’ve overlooked?</div>
 <div class="para" id="ThreeLessons_lesson-two-5">Check to see.</div>
-<div class="para" id="ThreeLessons_lesson-two-6">That is, let <span class="process-math">\(x=y-\frac{b}{2a}\)</span> in <a href="" class="xref" data-knowl="./knowl/xref/eq_QForm2.html" title="Equation 2">equation (2)</a> and see if you can get <a href="" class="xref" data-knowl="./knowl/xref/eq_QForm3.html" title="Equation 3">equation (3)</a>. Do it on that handy pad of paper we told you to get out earlier. Do it now. We’ll wait.</div>
+<div class="para" id="ThreeLessons_lesson-two-6">That is, let <span class="process-math">\(x=y-\frac{b}{2a}\)</span> in <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2">equation (2)</a> and see if you can get <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3">equation (3)</a>.  Do it on that handy pad of paper we told you to get out earlier.  Do it now.  We’ll wait.</div>
 <aside class="aside aside-like" id="ThreeLessons_lesson-two-7"><h3 class="heading"><span class="title">Comment.</span></h3>
-<div class="para" id="ThreeLessons_lesson-two-7-2">If you <em class="emphasis">still</em> haven’t gotten out a pad of paper, give up now. You’re going to fail this course. Seriously. Do you think we would spend so much time on this, that we would repeat it so many times, if it weren’t important. <em class="emphasis"><em class="emphasis">GET OUT A PAD OF PAPER NOW!</em></em> Last chance. You’ve been warned.</div></aside><div class="para" id="ThreeLessons_lesson-two-8">Done? Good.</div>
-<div class="para" id="ThreeLessons_lesson-two-9">Perhaps you haven’t been able to fill in the details on your own. That’s ok. Many people can’t. If not then get help: from a classmate, a friend, your instructor, whomever. Unfortunately most people won’t get help in this situation. Instead they will perceive this as “failure,” hide it and berate themselves or the problem as “stupid.” In short they will let their personal insecurities and demons overwhelm them. <em class="emphasis">Don’t do this. Get help.</em> You are neither dumb nor incapable. There are a thousand reasons that on any given day you might not be able to solve this problem. But don’t let a bad day interfere with the education you are here for. Get someone to help you over this hump. Later you will be able to help your helper in the same way. Really.</div>
-<div class="para" id="ThreeLessons_lesson-two-10">At this point we assume that you’ve successfully negotiated the transition from <a href="" class="xref" data-knowl="./knowl/xref/eq_QForm2.html" title="Equation 2">equation (2)</a> to <a href="" class="xref" data-knowl="./knowl/xref/eq_QForm4.html" title="Equation 5">equation (5)</a>.</div>
-<div class="para" id="ThreeLessons_lesson-two-11">See? It really wasn’t that bad after all. Just a lot of elementary algebra. Now that you’ve done it (or seen it done), it is easy to see that there really wasn’t much there.</div>
-<div class="para" id="ThreeLessons_lesson-two-12">But this is the point! We left those computations out precisely because we knew that they were routine and that you could fill in the details. Moreover, filling in the details yourself gives you a little better insight into the computations. If we’d filled them in for you we would have robbed you of that insight. And we would have made this book longer than it needs to be. We don’t want to do either of those things. If we fill in all of the details of every computation for you, you won’t learn to have confidence in your ability to do them yourself. And this book will easily double in length.</div>
-<div class="para" id="ThreeLessons_lesson-two-13">So the lesson here is this: Keep that pad of paper handy whenever you are reading this (or any other) mathematics text. You will need it. Routine computations will often be skipped. But calling them “routine” and skipping them does not mean that they are unimportant. If they were truly unimportant we would leave them out entirely.</div>
-<div class="para" id="ThreeLessons_lesson-two-14">Moreover “routine” does not mean “obvious.” Every step we took in the development of the Quadratic Formula was “routine.” But even routine computations need to be understood and the best way to understand them is to do them. This is the way to learn mathematics; it is the <em class="emphasis">only</em> way that really works. Don’t deprive yourself of your mathematics education by skipping the most important parts.</div>
+<div class="para" id="ThreeLessons_lesson-two-7-2">If you <em class="emphasis">still</em> haven’t gotten out a pad of paper, give up now.  You’re going to fail this course.  Seriously. Do you think we would spend so much time on this, that we would repeat it so many times, if it weren’t important. <em class="emphasis"><em class="emphasis">GET OUT A PAD OF PAPER NOW!</em></em> Last chance. You’ve been warned.</div></aside><div class="para" id="ThreeLessons_lesson-two-8">Done?  Good.</div>
+<div class="para" id="ThreeLessons_lesson-two-9">Perhaps you haven’t been able to fill in the details on your own.  That’s ok.  Many people can’t.  If not then get help: from a classmate, a friend, your instructor, whomever.  Unfortunately most people won’t get help in this situation.  Instead they will perceive this as “failure,” hide it and berate themselves or the problem as “stupid.” In short they will let their personal insecurities and demons overwhelm them.  <em class="emphasis">Don’t do this.  Get help.</em> You are neither dumb nor incapable.  There are a thousand reasons that on any given day you might not be able to solve this problem.  But don’t let a bad day interfere with the education you are here for.  Get someone to help you over this hump.  Later you will be able to help your helper in the same way.  Really.</div>
+<div class="para" id="ThreeLessons_lesson-two-10">At this point we assume that you’ve successfully negotiated the transition from <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2">equation (2)</a> to <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm4.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5">equation (5)</a>.</div>
+<div class="para" id="ThreeLessons_lesson-two-11">See?  It really wasn’t that bad after all.  Just a lot of elementary algebra.  Now that you’ve done it (or seen it done), it is easy to see that there really wasn’t much there.</div>
+<div class="para" id="ThreeLessons_lesson-two-12">But this is the point!  We left those computations out precisely because we knew that they were routine and that you could fill in the details.  Moreover, filling in the details yourself gives you a little better insight into the computations.  If we’d filled them in for you we would have robbed you of that insight. And we would have made this book longer than it needs to be.  We don’t want to do either of those things.  If we fill in all of the details of every computation for you, you won’t learn to have confidence in your ability to do them yourself.  And this book will easily double in length.</div>
+<div class="para" id="ThreeLessons_lesson-two-13">So the lesson here is this: Keep that pad of paper handy whenever you are reading this (or any other) mathematics text. You will need it.  Routine computations will often be skipped. But calling them “routine” and skipping them does not mean that they are unimportant.  If they were truly unimportant we would leave them out entirely.</div>
+<div class="para" id="ThreeLessons_lesson-two-14">Moreover “routine” does not mean “obvious.” Every step we took in the development of the Quadratic Formula was “routine.” But even routine computations need to be understood and the best way to understand them is to do them. This is the way to learn mathematics; it is the <em class="emphasis">only</em> way that really works.  Don’t deprive yourself of your mathematics education by skipping the most important parts.</div>
 <aside class="aside aside-like" id="ThreeLessons_lesson-two-15"><h3 class="heading"><span class="title">Comment.</span></h3>
-<div class="para" id="ThreeLessons_lesson-two-15-2">If you didn’t fill in those details then you are depriving yourself of the education you are here to obtain. This is sad. There is a good reason for putting these three lessons first. Stop wasting your time and intellect! Go do it now.</div></aside><div class="para logical" id="ThreeLessons_lesson-two-16">
+<div class="para" id="ThreeLessons_lesson-two-15-2">If you didn’t fill in those details then you are depriving yourself of the education you are here to obtain. This is sad. There is a good reason for putting these three lessons first. Stop wasting your time and intellect!  Go do it now.</div></aside><div class="para logical" id="ThreeLessons_lesson-two-16">
 <div class="para">As you saw when you filled in the details of our development of the Quadratic Formula the substitution <span class="process-math">\(x=y-\frac{b}{2a}\)</span> was crucial because it turned</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -338,28 +459,29 @@ y^3 +py+q=0
 <div class="para" id="ThreeLessons_lesson-two-17">The general depressed cubic had previously been solved by Tartaglia (the Stutterer, 1500-1557) so converting the general cubic into a depressed cubic provided a path for Ferrari to compute the “Cubic Formula” — like the Quadratic Formula but better.</div>
 <aside class="aside aside-like" id="ThreeLessons_lesson-two-18"><h3 class="heading"><span class="title">Comment.</span></h3>
 <div class="para" id="ThreeLessons_lesson-two-18-2">It is not entirely clear why eliminating the quadratic term should be depressing, but there it is.</div></aside><figure class="figure figure-like" id="ThreeLessons_lesson-two-19"><div class="image-box" style="width: 28%; margin-left: 36%; margin-right: 36%;"><img src="external/images/Tartaglia.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/" target="_blank">Tartaglia</a><a class="xref" id="ThreeLessons_lesson-two-19-1-2" href="" data-knowl="./knowl/fn/ThreeLessons_lesson-two-19-1-2.html" title="Footnote 4"><sup> 4 </sup></a>, “The Stutterer”</figcaption></figure><div class="para" id="ThreeLessons_lesson-two-20">Ferrari also knew how to compute the general solution of the “depressed quartic” so when he and his teacher Girolomo Cardano (1501-1576) figured out how to depress a general quartic they had a complete solution of the general quartic as well.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/" target="_blank">Tartaglia</a><details class="ptx-footnote" aria-live="polite" id="ThreeLessons_lesson-two-19-1-2"><summary class="ptx-footnote__number" title="Footnote 5"><sup> 5 </sup></summary><div class="ptx-footnote__contents" id="ThreeLessons_lesson-two-19-1-2"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/</code></div></details>, “The Stutterer”</figcaption></figure><div class="para" id="ThreeLessons_lesson-two-20">Ferrari also knew how to compute the general solution of the “depressed quartic” so when he and his teacher Girolomo Cardano (1501-1576) figured out how to depress a general quartic they had a complete solution of the general quartic as well.</div>
 <figure class="figure figure-like" id="ThreeLessons_lesson-two-21"><div class="image-box" style="width: 28%; margin-left: 36%; margin-right: 36%;"><img src="external/images/Cardan.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.2<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Cardan" target="_blank">Girolomo Cardano</a><a class="xref" id="ThreeLessons_lesson-two-21-1-2" href="" data-knowl="./knowl/fn/ThreeLessons_lesson-two-21-1-2.html" title="Footnote 5"><sup> 5 </sup></a></figcaption></figure><div class="para" id="ThreeLessons_lesson-two-22">Alas, their methods broke down entirely when they tried to solve the general quintic equation.  Unfortunately the rest of this story belongs in a course on Abstract Algebra, not Real Analysis.  But the lesson in this story applies to all of mathematics: Every problem solved is a new theorem which then becomes a tool for later use.  Depressing a cubic would have been utterly useless had not Tartaglia had a solution of the depressed cubic in hand.  The technique they used, with slight modifications, then allowed for a solution of the general quartic as well.</div>
-<div class="para" id="ThreeLessons_lesson-two-23">Keep this in mind as you proceed through this course and your mathematical education. Every problem you solve is really a theorem, a potential tool that you can use later. We have chosen the problems in this text deliberately with this in mind. Don’t just solve the problems and move on. Just because you have solved a problem does not mean you should stop thinking about it. Keep thinking about the problems you’ve solved. Internalize them. Make the ideas your own so that when you need them later you will have them at hand to use.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.2<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Cardan" target="_blank">Girolomo Cardano</a><details class="ptx-footnote" aria-live="polite" id="ThreeLessons_lesson-two-21-1-2"><summary class="ptx-footnote__number" title="Footnote 6"><sup> 6 </sup></summary><div class="ptx-footnote__contents" id="ThreeLessons_lesson-two-21-1-2"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Cardan</code></div></details></figcaption></figure><div class="para" id="ThreeLessons_lesson-two-22">Alas, their methods broke down entirely when they tried to solve the general quintic equation.  Unfortunately the rest of this story belongs in a course on Abstract Algebra, not Real Analysis.  But the lesson in this story applies to all of mathematics: Every problem solved is a new theorem which then becomes a tool for later use.  Depressing a cubic would have been utterly useless had not Tartaglia had a solution of the depressed cubic in hand.  The technique they used, with slight modifications, then allowed for a solution of the general quartic as well.</div>
+<div class="para" id="ThreeLessons_lesson-two-23">Keep this in mind as you proceed through this course and your mathematical education.  Every problem you solve is really a theorem, a potential tool that you can use later.  We have chosen the problems in this text deliberately with this in mind. Don’t just solve the problems and move on.  Just because you have solved a problem does not mean you should stop thinking about it.  Keep thinking about the problems you’ve solved. Internalize them.  Make the ideas your own so that when you need them later you will have them at hand to use.</div>
 <article class="problem example-like" id="ThreeLessons_lesson-two-24"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Quadratic Formula.</span>
 </h3>
-<div class="para logical" id="ThreeLessons_lesson-two-24-2-1"><ol class="lower-alpha">
-<li id="ThreeLessons_lesson-two-24-2-1-1-1"><div class="para" id="ThreeLessons_lesson-two-24-2-1-1-1-1">Find <span class="process-math">\(M\)</span> so that the substitution <span class="process-math">\(x=y-M\)</span> depresses <a href="" class="xref" data-knowl="./knowl/xref/eq_GenCubic.html" title="Equation 6">equation (6)</a>, the general cubic equation. Then find <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> in terms of <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(d\text{.}\)</span>
+<div class="para logical" id="ThreeLessons_lesson-two-24-3-1"><ol class="lower-alpha" id="ThreeLessons_lesson-two-24-3-1-1">
+<li id="ThreeLessons_lesson-two-24-3-1-1-1"><div class="para" id="ThreeLessons_lesson-two-24-3-1-1-1-1">Find <span class="process-math">\(M\)</span> so that the substitution <span class="process-math">\(x=y-M\)</span> depresses <a href="ThreeLessons_lesson-two.html#eq_GenCubic" class="xref" data-knowl="./knowl/xref/eq_GenCubic.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6">equation (6)</a>, the general cubic equation.  Then find <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> in terms of <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(d\text{.}\)</span>
 </div></li>
-<li id="ThreeLessons_lesson-two-24-2-1-1-2"><div class="para" id="ThreeLessons_lesson-two-24-2-1-1-2-1">Find <span class="process-math">\(K\)</span> so that the substitution <span class="process-math">\(x=y-K\)</span> depresses the general quartic equation. Make sure you demonstrate how you obtained that value or why it works (if you guessed it).</div></li>
-<li id="ThreeLessons_lesson-two-24-2-1-1-3"><div class="para" id="ThreeLessons_lesson-two-24-2-1-1-3-1">Find <span class="process-math">\(N\)</span> so that the substitution <span class="process-math">\(x=y-N\)</span> depresses a polynomial of degree <span class="process-math">\(n\text{.}\)</span> Ditto on showing that this value works or showing how you obtained it.</div></li>
+<li id="ThreeLessons_lesson-two-24-3-1-1-2"><div class="para" id="ThreeLessons_lesson-two-24-3-1-1-2-1">Find <span class="process-math">\(K\)</span> so that the substitution <span class="process-math">\(x=y-K\)</span> depresses the general quartic equation.  Make sure you demonstrate how you obtained that value or why it works (if you guessed it).</div></li>
+<li id="ThreeLessons_lesson-two-24-3-1-1-3"><div class="para" id="ThreeLessons_lesson-two-24-3-1-1-3-1">Find <span class="process-math">\(N\)</span> so that the substitution <span class="process-math">\(x=y-N\)</span> depresses a polynomial of degree <span class="process-math">\(n\text{.}\)</span>  Ditto on showing that this value works or showing how you obtained it.</div></li>
 </ol></div></article><article class="problem example-like" id="ThreeLessons_lesson-two-25"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Another Derivation of the Quadratic Formula.</span>
 </h3>
-<div class="para" id="ThreeLessons_lesson-two-25-2-1"> Here is yet another way to solve a quadratic equation. Read the development below with pencil and paper handy. Confirm all of the computations that are not completely transparent to you. Then use your notes to present the solution with <em class="emphasis">all</em> steps filled in.</div> <aside class="aside aside-like" id="ThreeLessons_lesson-two-25-2-2"><h4 class="heading"><span class="title">Comment.</span></h4>
-<div class="para" id="ThreeLessons_lesson-two-25-2-2-2">Be sure you are clear on the purpose of this problem before you begin. This is not about solving the Quadratic Equation. You already know how to do that. Our purpose here is to give you practice filling in the skipped details of mathematical exposition. We’ve chosen this particular problem because it should be a comfortable setting for you, but this particular solution is probably outside of your previous experience.</div></aside> <div class="para logical" id="ThreeLessons_lesson-two-25-2-3">
+<div class="para" id="ThreeLessons_lesson-two-25-2-1"> Here is yet another way to solve a quadratic equation.  Read the development below with pencil and paper handy.  Confirm all of the computations that are not completely transparent to you.  Then use your notes to present the solution with <em class="emphasis">all</em> steps filled in.</div> <aside class="aside aside-like" id="ThreeLessons_lesson-two-25-2-2"><h4 class="heading"><span class="title">Comment.</span></h4>
+<div class="para" id="ThreeLessons_lesson-two-25-2-2-2">Be sure you are clear on the purpose of this problem before you begin.  This is not about solving the Quadratic Equation.  You already know how to do that.  Our purpose here is to give you practice filling in the skipped details of mathematical exposition.  We’ve chosen this particular problem because it should be a comfortable setting for you, but this particular solution is probably outside of your previous experience.</div></aside> <div class="para logical" id="ThreeLessons_lesson-two-25-2-3">
 <div class="para">Suppose that <span class="process-math">\(r_1\)</span> and <span class="process-math">\(r_2\)</span> are solutions of <span class="process-math">\(ax^2+bx+c=0\text{.}\)</span> Without loss of generality suppose that <span class="process-math">\(a&gt;0\text{.}\)</span>  Suppose further that <span class="process-math">\(r_1\ge r_2\text{.}\)</span>  Then</div>
 <div class="displaymath process-math" id="ThreeLessons_lesson-two-25-2-3-6">
 \begin{align*}
 ax^2+bx+c \amp = a(x-r_1)(x-r_2)\\
-\amp = a\left[x^2-(r_1+r_2)x+(r_1+r_2)^2-(r_1-r_2)^2-3r_1r_2\right]\text{.}
+\amp =
+a\left[x^2-(r_1+r_2)x+(r_1+r_2)^2-(r_1-r_2)^2-3r_1r_2\right].
 \end{align*}
 </div>
 </div> <div class="para logical" id="ThreeLessons_lesson-two-25-2-4">
@@ -368,13 +490,13 @@ ax^2+bx+c \amp = a(x-r_1)(x-r_2)\\
 \begin{align}
 r_1+r_2\amp = -\frac{b}{a}\tag{7}\\
 \end{align}
-<p class="intertext">and</p>
+<div class="para intertext">and</div>
 \begin{align}
 r_1-r_2 \amp = \sqrt{\left(\frac{b}{a}\right)^2-\frac{4c}{a}}\text{.}\tag{8}
 \end{align}
 </div>
 </div> <div class="para logical" id="ThreeLessons_lesson-two-25-2-5">
-<div class="para">Equations <a href="" class="xref" data-knowl="./knowl/xref/eq_LagrangeQuadratic1.html" title="Equation 7">(7)</a> and <a href="" class="xref" data-knowl="./knowl/xref/eq_LagrangeQuadratic2.html" title="Equation 8">(8)</a> can be solved simultaneously to yield</div>
+<div class="para">Equations <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-25-2-4-1" class="xref" data-knowl="./knowl/xref/eq_LagrangeQuadratic1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7">(7)</a> and <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-25-2-4-1" class="xref" data-knowl="./knowl/xref/eq_LagrangeQuadratic2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8">(8)</a> can be solved simultaneously to yield</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_LagrangeQuadratic1.html ./knowl/xref/eq_LagrangeQuadratic2.html" id="ThreeLessons_lesson-two-25-2-5-3">
 \begin{align*}
 r_1\amp =\frac{-b+\sqrt{b^2-4ac}}{2a}\\
@@ -387,7 +509,7 @@ r_2\amp =\frac{-b-\sqrt{b^2-4ac}}{2a}\text{.}
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>

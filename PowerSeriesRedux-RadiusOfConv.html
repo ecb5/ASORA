@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="red_blue">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Radius of Convergence of a Power Series</title>
@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
 <meta property="book:author" content="Robert Rogers">
-<meta property="book:author" content="Eugene C. Boman">
+<meta property="book:author" content="Eugene Boman">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -58,7 +58,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -70,33 +70,153 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_red_blue.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<style>
+#ThreeLessons_lesson-two-24-3-1-1 { counter-set: ThreeLessons_lesson-two-24-3-1-1 0; }
+#ThreeLessons_lesson-two-24-3-1-1 > li::marker { content: ""counter(ThreeLessons_lesson-two-24-3-1-1,lower-alpha)""; }
+#ThreeLessons_lesson-two-24-3-1-1 > li { counter-increment: ThreeLessons_lesson-two-24-3-1-1; }
+#ThreeLessons_lesson-three-4-2 { counter-set: ThreeLessons_lesson-three-4-2 0; }
+#ThreeLessons_lesson-three-4-2 > li::marker { content: ""counter(ThreeLessons_lesson-three-4-2,decimal)"."; }
+#ThreeLessons_lesson-three-4-2 > li { counter-increment: ThreeLessons_lesson-three-4-2; }
+#thm_IrrationalBetweenIrrationals-1-1-2 { counter-set: thm_IrrationalBetweenIrrationals-1-1-2 0; }
+#thm_IrrationalBetweenIrrationals-1-1-2 > li::marker { content: ""counter(thm_IrrationalBetweenIrrationals-1-1-2,lower-alpha)""; }
+#thm_IrrationalBetweenIrrationals-1-1-2 > li { counter-increment: thm_IrrationalBetweenIrrationals-1-1-2; }
+#ExponentAdditionProperty-52-1-1-2 { counter-set: ExponentAdditionProperty-52-1-1-2 0; }
+#ExponentAdditionProperty-52-1-1-2 > li::marker { content: ""counter(ExponentAdditionProperty-52-1-1-2,lower-alpha)""; }
+#ExponentAdditionProperty-52-1-1-2 > li { counter-increment: ExponentAdditionProperty-52-1-1-2; }
+#SeqRealNum-12-2 { counter-set: SeqRealNum-12-2 0; }
+#SeqRealNum-12-2 > li::marker { content: ""counter(SeqRealNum-12-2,decimal)"."; }
+#SeqRealNum-12-2 > li { counter-increment: SeqRealNum-12-2; }
+#SeqRealNum-16-3 { counter-set: SeqRealNum-16-3 0; }
+#SeqRealNum-16-3 > li::marker { content: ""counter(SeqRealNum-16-3,decimal)"."; }
+#SeqRealNum-16-3 > li { counter-increment: SeqRealNum-16-3; }
+#SeqRealNum-36-1 { counter-set: SeqRealNum-36-1 0; }
+#SeqRealNum-36-1 > li::marker { content: ""counter(SeqRealNum-36-1,decimal)"."; }
+#SeqRealNum-36-1 > li { counter-increment: SeqRealNum-36-1; }
+#SeqRealNum-36-1-3-2-1 { counter-set: SeqRealNum-36-1-3-2-1 0; }
+#SeqRealNum-36-1-3-2-1 > li::marker { content: "("counter(SeqRealNum-36-1-3-2-1,lower-alpha)")"; }
+#SeqRealNum-36-1-3-2-1 > li { counter-increment: SeqRealNum-36-1-3-2-1; }
+#thm_CalcLimits-1-1-4 { counter-set: thm_CalcLimits-1-1-4 0; }
+#thm_CalcLimits-1-1-4 > li::marker { content: ""counter(thm_CalcLimits-1-1-4,lower-alpha)""; }
+#thm_CalcLimits-1-1-4 > li { counter-increment: thm_CalcLimits-1-1-4; }
+#Continuity-DerivativeAfterthought-7-1 { counter-set: Continuity-DerivativeAfterthought-7-1 0; }
+#Continuity-DerivativeAfterthought-7-1 > li::marker { content: ""counter(Continuity-DerivativeAfterthought-7-1,decimal)"."; }
+#Continuity-DerivativeAfterthought-7-1 > li { counter-increment: Continuity-DerivativeAfterthought-7-1; }
+#NIP-2-2-1 { counter-set: NIP-2-2-1 0; }
+#NIP-2-2-1 > li::marker { content: ""counter(NIP-2-2-1,decimal)"."; }
+#NIP-2-2-1 > li { counter-increment: NIP-2-2-1; }
+#IVTandEVT-Completeness-27-9-3 { counter-set: IVTandEVT-Completeness-27-9-3 0; }
+#IVTandEVT-Completeness-27-9-3 > li::marker { content: ""counter(IVTandEVT-Completeness-27-9-3,decimal)"."; }
+#IVTandEVT-Completeness-27-9-3 > li { counter-increment: IVTandEVT-Completeness-27-9-3; }
+#IVTandEVT-BWT-17-4-3 { counter-set: IVTandEVT-BWT-17-4-3 0; }
+#IVTandEVT-BWT-17-4-3 > li::marker { content: ""counter(IVTandEVT-BWT-17-4-3,decimal)"."; }
+#IVTandEVT-BWT-17-4-3 > li { counter-increment: IVTandEVT-BWT-17-4-3; }
+#def_LeastUpperBound-3-2-1 { counter-set: def_LeastUpperBound-3-2-1 0; }
+#def_LeastUpperBound-3-2-1 > li::marker { content: ""counter(def_LeastUpperBound-3-2-1,lower-alpha)""; }
+#def_LeastUpperBound-3-2-1 > li { counter-increment: def_LeastUpperBound-3-2-1; }
+#IVTandEVT-SupremumAndEVT-9-4 { counter-set: IVTandEVT-SupremumAndEVT-9-4 0; }
+#IVTandEVT-SupremumAndEVT-9-4 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-9-4,lower-alpha)""; }
+#IVTandEVT-SupremumAndEVT-9-4 > li { counter-increment: IVTandEVT-SupremumAndEVT-9-4; }
+#IVTandEVT-SupremumAndEVT-13-2-32 { counter-set: IVTandEVT-SupremumAndEVT-13-2-32 0; }
+#IVTandEVT-SupremumAndEVT-13-2-32 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-13-2-32,decimal)"."; }
+#IVTandEVT-SupremumAndEVT-13-2-32 > li { counter-increment: IVTandEVT-SupremumAndEVT-13-2-32; }
+#IVTandEVT-SupremumAndEVT-19-1-1-7 { counter-set: IVTandEVT-SupremumAndEVT-19-1-1-7 0; }
+#IVTandEVT-SupremumAndEVT-19-1-1-7 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-19-1-1-7,lower-alpha)""; }
+#IVTandEVT-SupremumAndEVT-19-1-1-7 > li { counter-increment: IVTandEVT-SupremumAndEVT-19-1-1-7; }
+#IVTandEVT-SupremumAndEVT-25-1-1-4 { counter-set: IVTandEVT-SupremumAndEVT-25-1-1-4 0; }
+#IVTandEVT-SupremumAndEVT-25-1-1-4 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-25-1-1-4,decimal)"."; }
+#IVTandEVT-SupremumAndEVT-25-1-1-4 > li { counter-increment: IVTandEVT-SupremumAndEVT-25-1-1-4; }
+#IVTandEVT-SupremumAndEVT-28-1-1-4 { counter-set: IVTandEVT-SupremumAndEVT-28-1-1-4 0; }
+#IVTandEVT-SupremumAndEVT-28-1-1-4 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-28-1-1-4,decimal)"."; }
+#IVTandEVT-SupremumAndEVT-28-1-1-4 > li { counter-increment: IVTandEVT-SupremumAndEVT-28-1-1-4; }
+#IVTandEVT-AddProb-3-1-1-2 { counter-set: IVTandEVT-AddProb-3-1-1-2 0; }
+#IVTandEVT-AddProb-3-1-1-2 > li::marker { content: ""counter(IVTandEVT-AddProb-3-1-1-2,lower-alpha)""; }
+#IVTandEVT-AddProb-3-1-1-2 > li { counter-increment: IVTandEVT-AddProb-3-1-1-2; }
+#IVTandEVT-AddProb-4-1-1-5 { counter-set: IVTandEVT-AddProb-4-1-1-5 0; }
+#IVTandEVT-AddProb-4-1-1-5 > li::marker { content: ""counter(IVTandEVT-AddProb-4-1-1-5,lower-alpha)""; }
+#IVTandEVT-AddProb-4-1-1-5 > li { counter-increment: IVTandEVT-AddProb-4-1-1-5; }
+#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6 { counter-set: PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6 0; }
+#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6 > li::marker { content: ""counter(PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6,lower-alpha)""; }
+#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6 > li { counter-increment: PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6; }
+#BackToFourier-2-26-2-1-2 { counter-set: BackToFourier-2-26-2-1-2 0; }
+#BackToFourier-2-26-2-1-2 > li::marker { content: ""counter(BackToFourier-2-26-2-1-2,lower-alpha)""; }
+#BackToFourier-2-26-2-1-2 > li { counter-increment: BackToFourier-2-26-2-1-2; }
+#BackToFourier-2-27-1-1-3 { counter-set: BackToFourier-2-27-1-1-3 0; }
+#BackToFourier-2-27-1-1-3 > li::marker { content: ""counter(BackToFourier-2-27-1-1-3,lower-alpha)""; }
+#BackToFourier-2-27-1-1-3 > li { counter-increment: BackToFourier-2-27-1-1-3; }
+#def_NumberField-3-2-1 { counter-set: def_NumberField-3-2-1 0; }
+#def_NumberField-3-2-1 > li::marker { content: ""counter(def_NumberField-3-2-1,decimal)"."; }
+#def_NumberField-3-2-1 > li { counter-increment: def_NumberField-3-2-1; }
+#def_NumberField-3-2-1-1-2-1 { counter-set: def_NumberField-3-2-1-1-2-1 0; }
+#def_NumberField-3-2-1-1-2-1 > li::marker { content: "("counter(def_NumberField-3-2-1-1-2-1,lower-alpha)")"; }
+#def_NumberField-3-2-1-1-2-1 > li { counter-increment: def_NumberField-3-2-1-1-2-1; }
+#Epilogues-BuildRealNumbers-2-20-2-1-2-1 { counter-set: Epilogues-BuildRealNumbers-2-20-2-1-2-1 0; }
+#Epilogues-BuildRealNumbers-2-20-2-1-2-1 > li::marker { content: ""counter(Epilogues-BuildRealNumbers-2-20-2-1-2-1,decimal)"."; }
+#Epilogues-BuildRealNumbers-2-20-2-1-2-1 > li { counter-increment: Epilogues-BuildRealNumbers-2-20-2-1-2-1; }
+#DedekindCuts-9-3 { counter-set: DedekindCuts-9-3 0; }
+#DedekindCuts-9-3 > li::marker { content: ""counter(DedekindCuts-9-3,decimal)"."; }
+#DedekindCuts-9-3 > li { counter-increment: DedekindCuts-9-3; }
+#DedekindCuts-17-1 { counter-set: DedekindCuts-17-1 0; }
+#DedekindCuts-17-1 > li::marker { content: ""counter(DedekindCuts-17-1,decimal)"."; }
+#DedekindCuts-17-1 > li { counter-increment: DedekindCuts-17-1; }
+#DedekindCuts-21-1-1-6 { counter-set: DedekindCuts-21-1-1-6 0; }
+#DedekindCuts-21-1-1-6 > li::marker { content: ""counter(DedekindCuts-21-1-1-6,decimal)"."; }
+#DedekindCuts-21-1-1-6 > li { counter-increment: DedekindCuts-21-1-1-6; }
+#DedekindCuts-39-5 { counter-set: DedekindCuts-39-5 0; }
+#DedekindCuts-39-5 > li::marker { content: ""counter(DedekindCuts-39-5,decimal)"."; }
+#DedekindCuts-39-5 > li { counter-increment: DedekindCuts-39-5; }
+#DedekindCuts-62-5 { counter-set: DedekindCuts-62-5 0; }
+#DedekindCuts-62-5 > li::marker { content: ""counter(DedekindCuts-62-5,decimal)"."; }
+#DedekindCuts-62-5 > li { counter-increment: DedekindCuts-62-5; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
-<p class="byline">Robert Rogers, Eugene C. Boman</p>
+<p class="byline">Robert Rogers, Eugene Boman</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -107,7 +227,8 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="PowerSeriesRedux.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="PowerSeriesRedux-AbelsThm.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="PowerSeriesRedux.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="PowerSeriesRedux-AbelsThm.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
 \newcommand{\dx}[1]{\,{\rm d}#1}
 
 
@@ -130,12 +251,12 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="ASORA-2.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="ASORA-2-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="ASORA-2-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="Instructor.html" class="internal"><span class="title">To the Instructor</span></a></div></li>
 </ul>
 </li>
@@ -276,13 +397,14 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="PowerSeriesRedux-RadiusOfConv"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">10.3</span><span class="space"> </span><span class="title">Radius of Convergence of a Power Series</span>
 </h2>
-<div class="para" id="PowerSeriesRedux-RadiusOfConv-2">We’ve developed enough machinery to look at the convergence of power series. The fundamental result is the following theorem due to Abel.</div>
+<div class="para" id="PowerSeriesRedux-RadiusOfConv-2">We’ve developed enough machinery to look at the convergence of power series.  The fundamental result is the following theorem due to Abel.</div>
 <article class="theorem theorem-like" id="thm_RadiusOfConvergence"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.3.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="thm_RadiusOfConvergence-1-1"> Suppose <span class="process-math">\(\sum_{n=0}^\infty a_nc^n\)</span> converges for some nonzero real number <span class="process-math">\(c\text{.}\)</span> Then <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges absolutely for all <span class="process-math">\(x\)</span> such that <span class="process-math">\(|x|\lt |c|\text{.}\)</span>
+<div class="para" id="thm_RadiusOfConvergence-1-1"> Suppose <span class="process-math">\(\sum_{n=0}^\infty a_nc^n\)</span> converges for some nonzero real number <span class="process-math">\(c\text{.}\)</span>  Then <span class="process-math">\(\sum_{n=0}^\infty
+a_nx^n\)</span> converges absolutely for all <span class="process-math">\(x\)</span> such that <span class="process-math">\(|x|\lt |c|\text{.}\)</span>
 </div></article><div class="para logical" id="PowerSeriesRedux-RadiusOfConv-4">
-<div class="para">To prove <a href="" class="xref" data-knowl="./knowl/xref/thm_RadiusOfConvergence.html" title="Theorem 10.3.1">Theorem 10.3.1</a> first note that by <a href="" class="xref" data-knowl="./knowl/xref/prob_NthTermTest.html" title="Problem 10.2.22">Problem 10.2.22</a>, <span class="process-math">\(\limit{n}{\infty}{a_nc^n}=0\text{.}\)</span> Thus <span class="process-math">\(\left(a_nc^n\right)\)</span> is a bounded sequence. Let <span class="process-math">\(B\)</span> be a bound: <span class="process-math">\(\abs{a_nc^n}\le B\text{.}\)</span> Then</div>
+<div class="para">To prove <a href="PowerSeriesRedux-RadiusOfConv.html#thm_RadiusOfConvergence" class="xref" data-knowl="./knowl/xref/thm_RadiusOfConvergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 10.3.1">Theorem 10.3.1</a> first note that by <a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#prob_NthTermTest" class="xref" data-knowl="./knowl/xref/prob_NthTermTest.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 10.2.22">Problem 10.2.22</a>, <span class="process-math">\(\limit{n}{\infty}{a_nc^n}=0\text{.}\)</span>  Thus <span class="process-math">\(\left(a_nc^n\right)\)</span> is a bounded sequence.  Let <span class="process-math">\(B\)</span> be a bound: <span class="process-math">\(\abs{a_nc^n}\le B\text{.}\)</span>  Then</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm_RadiusOfConvergence.html ./knowl/xref/prob_NthTermTest.html">
 \begin{equation*}
 \abs{a_nx^n}=\abs{a_nc^n\cdot\left(\frac{x}{c}\right)^n}\leq B\abs{\frac{x}{c}}^n\text{.}
@@ -293,33 +415,40 @@ window.MathJax = {
 <article class="problem example-like" id="PowerSeriesRedux-RadiusOfConv-6"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.3.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="PowerSeriesRedux-RadiusOfConv-6-1-1"> Prove <a href="" class="xref" data-knowl="./knowl/xref/thm_RadiusOfConvergence.html" title="Theorem 10.3.1">Theorem 10.3.1</a>.</div></article><article class="corollary theorem-like" id="cor_RadiusOfDivergence"><h3 class="heading">
+<div class="para" id="PowerSeriesRedux-RadiusOfConv-6-1-1"> Prove <a href="PowerSeriesRedux-RadiusOfConv.html#thm_RadiusOfConvergence" class="xref" data-knowl="./knowl/xref/thm_RadiusOfConvergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 10.3.1">Theorem 10.3.1</a>.</div></article><article class="corollary theorem-like" id="cor_RadiusOfDivergence"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">10.3.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="cor_RadiusOfDivergence-1-1">Suppose <span class="process-math">\(\sum_{n=0}^\infty a_nc^n\)</span> diverges for some real number <span class="process-math">\(c\text{.}\)</span> Then <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> diverges for all <span class="process-math">\(x\)</span> such that <span class="process-math">\(|x|&gt;|c|\text{.}\)</span>
+<div class="para" id="cor_RadiusOfDivergence-1-1">Suppose <span class="process-math">\(\sum_{n=0}^\infty a_nc^n\)</span> diverges for some real number <span class="process-math">\(c\text{.}\)</span>  Then <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> diverges for all <span class="process-math">\(x\)</span> such that <span class="process-math">\(|x|&gt;|c|\text{.}\)</span>
 </div></article><article class="problem example-like" id="PowerSeriesRedux-RadiusOfConv-8"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.3.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="PowerSeriesRedux-RadiusOfConv-8-1-1"> Prove <a href="" class="xref" data-knowl="./knowl/xref/cor_RadiusOfDivergence.html" title="Corollary 10.3.3">Corollary 10.3.3</a>.</div></article><div class="para" id="PowerSeriesRedux-RadiusOfConv-9">As a result of <a href="" class="xref" data-knowl="./knowl/xref/thm_RadiusOfConvergence.html" title="Theorem 10.3.1">Theorem 10.3.1</a> and <a href="" class="xref" data-knowl="./knowl/xref/cor_RadiusOfDivergence.html" title="Corollary 10.3.3">Corollary 10.3.3</a>, we have the following: either <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges absolutely for all <span class="process-math">\(x\)</span> or there exists some nonnegative real number <span class="process-math">\(r\)</span> such that <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges absolutely when <span class="process-math">\(|x|\lt r\)</span> and diverges when <span class="process-math">\(|x|&gt;r\text{.}\)</span> In the latter case, we call <span class="process-math">\(r\)</span> the <em class="emphasis">radius of convergence</em> of the power series <span class="process-math">\(\sum_{n=0}^{\infty}a_{n} x^{n}\text{.}\)</span> In the former case, we say that the radius of convergence of <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> is <span class="process-math">\(\infty\text{.}\)</span> Though we can say that <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges absolutely when <span class="process-math">\(|x|\lt r\text{,}\)</span> we cannot say that the convergence is uniform. However, we can come close. We can show that the convergence is uniform for <span class="process-math">\(|x|\leq b\lt r\text{.}\)</span> To see this we will use the following result</div>
+<div class="para" id="PowerSeriesRedux-RadiusOfConv-8-1-1"> Prove <a href="PowerSeriesRedux-RadiusOfConv.html#cor_RadiusOfDivergence" class="xref" data-knowl="./knowl/xref/cor_RadiusOfDivergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 10.3.3">Corollary 10.3.3</a>.</div></article><div class="para" id="PowerSeriesRedux-RadiusOfConv-9">As a result of <a href="PowerSeriesRedux-RadiusOfConv.html#thm_RadiusOfConvergence" class="xref" data-knowl="./knowl/xref/thm_RadiusOfConvergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 10.3.1">Theorem 10.3.1</a> and <a href="PowerSeriesRedux-RadiusOfConv.html#cor_RadiusOfDivergence" class="xref" data-knowl="./knowl/xref/cor_RadiusOfDivergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 10.3.3">Corollary 10.3.3</a>, we have the following: either <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges absolutely for all <span class="process-math">\(x\)</span> or there exists some nonnegative real number <span class="process-math">\(r\)</span> such that <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges absolutely when <span class="process-math">\(|x|\lt r\)</span> and diverges when <span class="process-math">\(|x|&gt;r\text{.}\)</span>  In the latter case, we call <span class="process-math">\(r\)</span> the <em class="emphasis">radius of convergence</em> of the power series <span class="process-math">\(\sum_{n=0}^{\infty}a_{n} x^{n}\text{.}\)</span>  In the former case, we say that the radius of convergence of <span class="process-math">\(\sum_{n=0}^\infty
+a_nx^n\)</span> is <span class="process-math">\(\infty\text{.}\)</span>  Though we can say that <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges absolutely when <span class="process-math">\(|x|\lt r\text{,}\)</span> we cannot say that the convergence is uniform. However, we can come close.  We can show that the convergence is uniform for <span class="process-math">\(|x|\leq b\lt r\text{.}\)</span>  To see this we will use the following result</div>
 <article class="theorem theorem-like" id="thm_WeierstrassM"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.3.5</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">The Weierstrass-<span class="process-math">\(M\)</span> Test.</span>
 </h3>
-<div class="para" id="thm_WeierstrassM-1-1"><em class="alert">The Weierstrass-<span class="process-math">\(M\)</span> Test</em></div> <div class="para logical" id="thm_WeierstrassM-1-2">
+<div class="para logical" id="thm_WeierstrassM-2-1">
 <div class="para"> Let <span class="process-math">\(\left(f_n\right)_{n=1}^\infty\)</span> be a sequence of functions defined on <span class="process-math">\(S\subseteq\RR\)</span> and suppose that <span class="process-math">\(\left(M_n\right)_{n=1}^\infty\)</span> is a sequence of nonnegative real numbers such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \abs{f_n(x)}\leq M_n,\,\, \forall x\in S,\,\, n=1, 2, 3, \ldots\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="thm_WeierstrassM-1-3">If <span class="process-math">\(\sum_{n=1}^\infty M_n\)</span> converges then <span class="process-math">\(\sum_{n=1}^\infty f_n(x)\)</span> converges uniformly on <span class="process-math">\(S\)</span> to some function (which we will denote by <span class="process-math">\(f(x)\)</span>).</div></article><article class="proof" id="PowerSeriesRedux-RadiusOfConv-11"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3> <div class="para" id="PowerSeriesRedux-RadiusOfConv-11-2">Since the crucial feature of the theorem is the function <span class="process-math">\(f(x)\)</span> that our series converges to, our plan of attack is to first define <span class="process-math">\(f(x)\)</span> and then show that our series, <span class="process-math">\(\sum_{n=1}^\infty f_n(x)\text{,}\)</span> converges to it uniformly.</div> <div class="para" id="PowerSeriesRedux-RadiusOfConv-11-3">First observe that for any <span class="process-math">\(x\in S\text{,}\)</span> <span class="process-math">\(\sum_{n=1}^\infty f_n(x)\)</span> converges by the Comparison Test (in fact it converges absolutely) to some number we will denote by <span class="process-math">\(f(x)\text{.}\)</span> This actually defines the function <span class="process-math">\(f(x)\)</span> for all <span class="process-math">\(x\in S\text{.}\)</span> It follows that <span class="process-math">\(\sum_{n=1}^\infty f_n(x)\)</span> converges pointwise to <span class="process-math">\(f(x)\text{.}\)</span>
-</div> <div class="para logical" id="PowerSeriesRedux-RadiusOfConv-11-4">
-<div class="para">Next, let <span class="process-math">\(\eps&gt;0\)</span> be given. Notice that since <span class="process-math">\(\sum_{n=1}^\infty M_n\)</span> converges, say to <span class="process-math">\(M\text{,}\)</span> then there is a real number, <span class="process-math">\(N\text{,}\)</span> such that if <span class="process-math">\(n&gt;N\text{,}\)</span> then</div>
+</div> <div class="para" id="thm_WeierstrassM-2-2">If <span class="process-math">\(\sum_{n=1}^\infty M_n\)</span> converges then <span class="process-math">\(\sum_{n=1}^\infty f_n(x)\)</span> converges uniformly on <span class="process-math">\(S\)</span> to some function (which we will denote by <span class="process-math">\(f(x)\)</span>).</div></article><article class="proof" id="PowerSeriesRedux-RadiusOfConv-11"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3>
+<div class="para" id="PowerSeriesRedux-RadiusOfConv-11-2">Since the crucial feature of the theorem is the function <span class="process-math">\(f(x)\)</span> that our series converges to, our plan of attack is to first define <span class="process-math">\(f(x)\)</span> and then show that our series, <span class="process-math">\(\sum_{n=1}^\infty f_n(x)\text{,}\)</span> converges to it uniformly.</div>
+<div class="para" id="PowerSeriesRedux-RadiusOfConv-11-3">First observe that for any <span class="process-math">\(x\in S\text{,}\)</span> <span class="process-math">\(\sum_{n=1}^\infty
+f_n(x)\)</span> converges by the Comparison Test (in fact it converges absolutely) to some number we will denote by <span class="process-math">\(f(x)\text{.}\)</span>  This actually defines the function <span class="process-math">\(f(x)\)</span> for all <span class="process-math">\(x\in S\text{.}\)</span>  It follows that <span class="process-math">\(\sum_{n=1}^\infty
+f_n(x)\)</span> converges pointwise to <span class="process-math">\(f(x)\text{.}\)</span>
+</div>
+<div class="para logical" id="PowerSeriesRedux-RadiusOfConv-11-4">
+<div class="para">Next, let <span class="process-math">\(\eps&gt;0\)</span> be given.  Notice that since <span class="process-math">\(\sum_{n=1}^\infty M_n\)</span> converges, say to <span class="process-math">\(M\text{,}\)</span> then there is a real number, <span class="process-math">\(N\text{,}\)</span> such that if <span class="process-math">\(n&gt;N\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_{k=n+1}^\infty M_k = \abs{\sum_{k=n+1}^\infty M_k} = \abs{M-\sum_{k=1}^n M_k}\lt \eps\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="PowerSeriesRedux-RadiusOfConv-11-5">
+</div>
+<div class="para logical" id="PowerSeriesRedux-RadiusOfConv-11-5">
 <div class="para">You should be able to use this to show that if <span class="process-math">\(n&gt;N\text{,}\)</span> then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -329,12 +458,12 @@ window.MathJax = {
 </div></article><article class="problem example-like" id="PowerSeriesRedux-RadiusOfConv-12"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.3.6</span><span class="period">.</span>
 </h3>
-<div class="para" id="PowerSeriesRedux-RadiusOfConv-12-1-1"> Use the ideas above to provide a formal proof of <a href="" class="xref" data-knowl="./knowl/xref/thm_WeierstrassM.html" title="Theorem 10.3.5">Theorem 10.3.5</a>.</div></article><article class="problem example-like" id="PowerSeriesRedux-RadiusOfConv-13"><h3 class="heading">
+<div class="para" id="PowerSeriesRedux-RadiusOfConv-12-1-1"> Use the ideas above to provide a formal proof of <a href="PowerSeriesRedux-RadiusOfConv.html#thm_WeierstrassM" class="xref" data-knowl="./knowl/xref/thm_WeierstrassM.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 10.3.5: The Weierstrass-M Test">Theorem 10.3.5</a>.</div></article><article class="problem example-like" id="PowerSeriesRedux-RadiusOfConv-13"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.3.7</span><span class="period">.</span>
 </h3>
 <article class="task exercise-like" id="PowerSeriesRedux-RadiusOfConv-13-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para logical" id="PowerSeriesRedux-RadiusOfConv-13-3-1-1">
-<div class="para">Referring back to <a href="" class="xref" data-knowl="./knowl/xref/PDE_sol.html" title="Equation 1">equation (1)</a>, show that the Fourier series</div>
+<div class="para">Referring back to <a href="Interegnum-2.html#PDE_sol" class="xref" data-knowl="./knowl/xref/PDE_sol.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1">equation (1)</a>, show that the Fourier series</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/PDE_sol.html">
 \begin{equation*}
 \sum_{k=0}^\infty\frac{(-1)^k}{(2k+1)^2}\sin\left((2k+1)\pi x\right)
@@ -346,7 +475,8 @@ window.MathJax = {
 <div class="para" id="PowerSeriesRedux-RadiusOfConv-13-4-1-1">Does its differentiated series converge uniformly on <span class="process-math">\(\RR?\)</span> Explain.</div></article></article><article class="problem example-like" id="PowerSeriesRedux-RadiusOfConv-14"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.3.8</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="PowerSeriesRedux-RadiusOfConv-14-3"><div class="para" id="PowerSeriesRedux-RadiusOfConv-14-3-1">Observe that for all <span class="process-math">\(x \in [-1,1]\)</span> <span class="process-math">\(\abs{x}\le 1\text{.}\)</span> Identify which of the following series converges pointwise and which converges uniformly on the interval <span class="process-math">\([-1,1]\text{.}\)</span> In every case identify the limit function.</div></div>
+<div class="introduction" id="PowerSeriesRedux-RadiusOfConv-14-3"><div class="para" id="PowerSeriesRedux-RadiusOfConv-14-3-1">Observe that for all <span class="process-math">\(x \in [-1,1]\)</span> <span class="process-math">\(\abs{x}\le
+1\text{.}\)</span>  Identify which of the following series converges pointwise and which converges uniformly on the interval <span class="process-math">\([-1,1]\text{.}\)</span>  In every case identify the limit function.</div></div>
 <article class="task exercise-like" id="PowerSeriesRedux-RadiusOfConv-14-4"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="PowerSeriesRedux-RadiusOfConv-14-4-1-1"><span class="process-math">\(\displaystyle \sum_{n=1}^\infty\left(x^n-x^{n-1}\right)\)</span></div></article><article class="task exercise-like" id="PowerSeriesRedux-RadiusOfConv-14-5"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="PowerSeriesRedux-RadiusOfConv-14-5-1-1"><span class="process-math">\(\displaystyle \sum_{n=1}^\infty\frac{\left(x^n-x^{n-1}\right)}{n}\)</span></div></article><article class="task exercise-like" id="PowerSeriesRedux-RadiusOfConv-14-6"><h4 class="heading"><span class="codenumber">(c)</span></h4>
@@ -354,40 +484,36 @@ window.MathJax = {
 <article class="theorem theorem-like" id="thm_PowerSeriesConvergeUniformly"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.3.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="thm_PowerSeriesConvergeUniformly-1-1"> Suppose <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> has radius of convergence <span class="process-math">\(r\)</span> (where <span class="process-math">\(r\)</span> could be <span class="process-math">\(\infty\)</span> as well). Let <span class="process-math">\(b\)</span> be any nonnegative real number with <span class="process-math">\(b\lt r\text{.}\)</span> Then <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges uniformly on <span class="process-math">\([-b,b]\text{.}\)</span>
+<div class="para" id="thm_PowerSeriesConvergeUniformly-1-1"> Suppose <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> has radius of convergence <span class="process-math">\(r\)</span> (where <span class="process-math">\(r\)</span> could be <span class="process-math">\(\infty\)</span> as well).  Let <span class="process-math">\(b\)</span> be any nonnegative real number with <span class="process-math">\(b\lt r\text{.}\)</span>  Then <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> converges uniformly on <span class="process-math">\([-b,b]\text{.}\)</span>
 </div></article><article class="problem example-like" id="PowerSeriesRedux-RadiusOfConv-17"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.3.10</span><span class="period">.</span>
 </h3>
-<div class="para" id="PowerSeriesRedux-RadiusOfConv-17-2-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/thm_PowerSeriesConvergeUniformly.html" title="Theorem 10.3.9">Theorem 10.3.9</a>.</div> <div class="para" id="PowerSeriesRedux-RadiusOfConv-17-2-2"></div>
-<div class="solutions"><details id="PowerSeriesRedux-RadiusOfConv-17-3" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">
-<div class="para" id="PowerSeriesRedux-RadiusOfConv-17-3-1"></div> <div class="para" id="PowerSeriesRedux-RadiusOfConv-17-3-2">We know that <span class="process-math">\(\sum_{n=0}^\infty|a_nb^n|\)</span> converges. This should be all set for the Weierstrass-<span class="process-math">\(M\)</span> test.</div>
-</div></details></div></article><div class="para" id="PowerSeriesRedux-RadiusOfConv-18">To finish the story on differentiating and integrating power series, all we need to do is show that the power series, its integrated series, and its differentiated series all have the same radius of convergence. You might not realize it, but we already know that the integrated series has a radius of convergence at least as big as the radius of convergence of the original series. Specifically, suppose <span class="process-math">\(f(x)=\sum_{n=0}^\infty a_nx^n\)</span>has a radius of convergence <span class="process-math">\(r\)</span> and let <span class="process-math">\(|x|\lt r\text{.}\)</span> We know that <span class="process-math">\(\,\sum_{n=0}^\infty a_nx^n\)</span> converges uniformly on an interval containing <span class="process-math">\(0\)</span>and <span class="process-math">\(x\text{,}\)</span> and so by <a href="" class="xref" data-knowl="./knowl/xref/cor_IntConvUni.html" title="Corollary 10.2.4">Corollary 10.2.4</a>, <span class="process-math">\(\int_{t=0}^xf(t)\dx{ t}=\sum_{n=0}^\infty\left(\frac{a_n}{n+1}x^{n+1}\right)\text{.}\)</span> In other words, the integrated series converges for any <span class="process-math">\(x\)</span> with<span class="process-math">\(\,|x|\lt r\text{.}\)</span> This says that the radius of convergence of the integated series must be at least <span class="process-math">\(r\text{.}\)</span>
+<div class="para" id="PowerSeriesRedux-RadiusOfConv-17-2-1">Prove <a href="PowerSeriesRedux-RadiusOfConv.html#thm_PowerSeriesConvergeUniformly" class="xref" data-knowl="./knowl/xref/thm_PowerSeriesConvergeUniformly.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 10.3.9">Theorem 10.3.9</a>.</div>
+<div class="solutions"><details id="PowerSeriesRedux-RadiusOfConv-17-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="PowerSeriesRedux-RadiusOfConv-17-3-1">We know that <span class="process-math">\(\sum_{n=0}^\infty|a_nb^n|\)</span> converges. This should be all set for the Weierstrass-<span class="process-math">\(M\)</span> test.</div></div></details></div></article><div class="para" id="PowerSeriesRedux-RadiusOfConv-18">To finish the story on differentiating and integrating power series, all we need to do is show that the power series, its integrated series, and its differentiated series all have the same radius of convergence.  You might not realize it, but we already know that the integrated series has a radius of convergence at least as big as the radius of convergence of the original series.  Specifically, suppose <span class="process-math">\(f(x)=\sum_{n=0}^\infty a_nx^n\)</span>has a radius of convergence <span class="process-math">\(r\)</span> and let <span class="process-math">\(|x|\lt r\text{.}\)</span>  We know that <span class="process-math">\(\,\sum_{n=0}^\infty a_nx^n\)</span> converges uniformly on an interval containing <span class="process-math">\(0\)</span>and <span class="process-math">\(x\text{,}\)</span> and so by <a href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html#cor_IntConvUni" class="xref" data-knowl="./knowl/xref/cor_IntConvUni.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 10.2.4">Corollary 10.2.4</a>, <span class="process-math">\(\int_{t=0}^xf(t)\dx{
+t}=\sum_{n=0}^\infty\left(\frac{a_n}{n+1}x^{n+1}\right)\text{.}\)</span>  In other words, the integrated series converges for any <span class="process-math">\(x\)</span> with<span class="process-math">\(\,|x|\lt r\text{.}\)</span>  This says that the radius of convergence of the integated series must be at least <span class="process-math">\(r\text{.}\)</span>
 </div>
-<div class="para" id="PowerSeriesRedux-RadiusOfConv-19">To show that the radii of convergence are the same, all we need to show is that the radius of convergence of the differentiated series is at least as big as <span class="process-math">\(r\)</span> as well. Indeed, since the differentiated series of the integrated series is the original, then this would say that the original series and the integrated series have the same radii of convergence. Putting the differentiated series into the role of the original series, the original series is now the integrated series and so these would have the same radii of convergence as well. With this in mind, we want to show that if <span class="process-math">\(|x|\lt r\text{,}\)</span> then <span class="process-math">\(\sum_{n=0}^\infty a_nnx^{n-1}\)</span> converges. The strategy is to mimic what we did in <a href="" class="xref" data-knowl="./knowl/xref/thm_RadiusOfConvergence.html" title="Theorem 10.3.1">Theorem 10.3.1</a>, where we essentially compared our series with a converging geometric series. Only this time we need to start with the differentiated geometric series.</div>
+<div class="para" id="PowerSeriesRedux-RadiusOfConv-19">To show that the radii of convergence are the same, all we need to show is that the radius of convergence of the differentiated series is at least as big as <span class="process-math">\(r\)</span> as well.  Indeed, since the differentiated series of the integrated series is the original, then this would say that the original series and the integrated series have the same radii of convergence.  Putting the differentiated series into the role of the original series, the original series is now the integrated series and so these would have the same radii of convergence as well.  With this in mind, we want to show that if <span class="process-math">\(|x|\lt r\text{,}\)</span> then <span class="process-math">\(\sum_{n=0}^\infty a_nnx^{n-1}\)</span> converges.  The strategy is to mimic what we did in <a href="PowerSeriesRedux-RadiusOfConv.html#thm_RadiusOfConvergence" class="xref" data-knowl="./knowl/xref/thm_RadiusOfConvergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 10.3.1">Theorem 10.3.1</a>, where we essentially compared our series with a converging geometric series.  Only this time we need to start with the differentiated geometric series.</div>
 <article class="problem example-like" id="prob_PwrSeriesDiffConv"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.3.11</span><span class="period">.</span>
 </h3>
 <div class="para" id="prob_PwrSeriesDiffConv-3-1">Show that <span class="process-math">\(\sum_{n=1}^\infty nx^{n-1}\)</span> converges for <span class="process-math">\(|x|\lt 1\text{.}\)</span>
-</div> <div class="para" id="prob_PwrSeriesDiffConv-3-2"></div>
-<div class="solutions"><details id="prob_PwrSeriesDiffConv-4" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">
-<div class="para" id="prob_PwrSeriesDiffConv-4-1"></div> <div class="para" id="prob_PwrSeriesDiffConv-4-2">We know that <span class="process-math">\(\sum_{k=0}^nx^k=\frac{x^{n+1}-1}{x-1}\text{.}\)</span> Differentiate both sides and take the limit as <span class="process-math">\(n\)</span> approaches infinity.</div>
-</div></details></div></article><article class="theorem theorem-like" id="thm_SeriesConv-_DerivConv"><h3 class="heading">
+</div>
+<div class="solutions"><details id="prob_PwrSeriesDiffConv-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="prob_PwrSeriesDiffConv-4-1">We know that <span class="process-math">\(\sum_{k=0}^nx^k=\frac{x^{n+1}-1}{x-1}\text{.}\)</span> Differentiate both sides and take the limit as <span class="process-math">\(n\)</span> approaches infinity.</div></div></details></div></article><article class="theorem theorem-like" id="thm_SeriesConv-_DerivConv"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.3.12</span><span class="period">.</span>
 </h3>
-<div class="para" id="thm_SeriesConv-_DerivConv-1-1"> Suppose <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> has a radius of convergence <span class="process-math">\(r\)</span> and let <span class="process-math">\(|x|\lt r\text{.}\)</span> Then <span class="process-math">\(\sum_{n=1}^\infty a_nnx^{n-1}\)</span> converges.</div></article><article class="problem example-like" id="PowerSeriesRedux-RadiusOfConv-22"><h3 class="heading">
+<div class="para" id="thm_SeriesConv-_DerivConv-1-1"> Suppose <span class="process-math">\(\sum_{n=0}^\infty a_nx^n\)</span> has a radius of convergence <span class="process-math">\(r\)</span> and let <span class="process-math">\(|x|\lt r\text{.}\)</span>  Then <span class="process-math">\(\sum_{n=1}^\infty a_nnx^{n-1}\)</span> converges.</div></article><article class="problem example-like" id="PowerSeriesRedux-RadiusOfConv-22"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.3.13</span><span class="period">.</span>
 </h3>
-<div class="para" id="PowerSeriesRedux-RadiusOfConv-22-2-1">Prove <a href="" class="xref" data-knowl="./knowl/xref/thm_SeriesConv-_DerivConv.html" title="Theorem 10.3.12">Theorem 10.3.12</a>.</div> <div class="para" id="PowerSeriesRedux-RadiusOfConv-22-2-2"></div>
-<div class="solutions"><details id="PowerSeriesRedux-RadiusOfConv-22-3" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">
-<div class="para" id="PowerSeriesRedux-RadiusOfConv-22-3-1"></div> <div class="para" id="PowerSeriesRedux-RadiusOfConv-22-3-2">Let <span class="process-math">\(b\)</span> be a number with <span class="process-math">\(\abs{x}\lt b\lt r\)</span> and consider <span class="process-math">\(\abs{a_nnx^{n-1}} =\abs{a_nb^n\cdot\frac{1}{b}\cdot
-n\left(\frac{x}{b}\right)^{n-1}}\text{.}\)</span>  You should be able to use the Comparison Test and <a href="" class="xref" data-knowl="./knowl/xref/prob_PwrSeriesDiffConv.html" title="Problem 10.3.11">Problem 10.3.11</a>.</div>
-</div></details></div></article></section></div>
+<div class="para" id="PowerSeriesRedux-RadiusOfConv-22-2-1">Prove <a href="PowerSeriesRedux-RadiusOfConv.html#thm_SeriesConv-_DerivConv" class="xref" data-knowl="./knowl/xref/thm_SeriesConv-_DerivConv.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 10.3.12">Theorem 10.3.12</a>.</div>
+<div class="solutions"><details id="PowerSeriesRedux-RadiusOfConv-22-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="PowerSeriesRedux-RadiusOfConv-22-3-1">Let <span class="process-math">\(b\)</span> be a number with <span class="process-math">\(\abs{x}\lt b\lt r\)</span> and consider <span class="process-math">\(\abs{a_nnx^{n-1}}
+=\abs{a_nb^n\cdot\frac{1}{b}\cdot
+n\left(\frac{x}{b}\right)^{n-1}}\text{.}\)</span>  You should be able to use the Comparison Test and <a href="PowerSeriesRedux-RadiusOfConv.html#prob_PwrSeriesDiffConv" class="xref" data-knowl="./knowl/xref/prob_PwrSeriesDiffConv.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 10.3.11">Problem 10.3.11</a>.</div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="PowerSeriesRedux-AbelsThm.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>

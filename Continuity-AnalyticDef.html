@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="red_blue">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>An Analytic Definition of Continuity</title>
@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
 <meta property="book:author" content="Robert Rogers">
-<meta property="book:author" content="Eugene C. Boman">
+<meta property="book:author" content="Eugene Boman">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -58,7 +58,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://pretextbook.org/js/lib"
+      "pretext": "_static/pretext/js/lib"
     }
   },
   "startup": {
@@ -70,33 +70,153 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.33/pretext_search.js"></script><link href="https://pretextbook.org/css/0.83/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.33</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.33/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.33/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.33/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="https://pretextbook.org/css/0.83/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/colors_red_blue.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.83/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<style>
+#ThreeLessons_lesson-two-24-3-1-1 { counter-set: ThreeLessons_lesson-two-24-3-1-1 0; }
+#ThreeLessons_lesson-two-24-3-1-1 > li::marker { content: ""counter(ThreeLessons_lesson-two-24-3-1-1,lower-alpha)""; }
+#ThreeLessons_lesson-two-24-3-1-1 > li { counter-increment: ThreeLessons_lesson-two-24-3-1-1; }
+#ThreeLessons_lesson-three-4-2 { counter-set: ThreeLessons_lesson-three-4-2 0; }
+#ThreeLessons_lesson-three-4-2 > li::marker { content: ""counter(ThreeLessons_lesson-three-4-2,decimal)"."; }
+#ThreeLessons_lesson-three-4-2 > li { counter-increment: ThreeLessons_lesson-three-4-2; }
+#thm_IrrationalBetweenIrrationals-1-1-2 { counter-set: thm_IrrationalBetweenIrrationals-1-1-2 0; }
+#thm_IrrationalBetweenIrrationals-1-1-2 > li::marker { content: ""counter(thm_IrrationalBetweenIrrationals-1-1-2,lower-alpha)""; }
+#thm_IrrationalBetweenIrrationals-1-1-2 > li { counter-increment: thm_IrrationalBetweenIrrationals-1-1-2; }
+#ExponentAdditionProperty-52-1-1-2 { counter-set: ExponentAdditionProperty-52-1-1-2 0; }
+#ExponentAdditionProperty-52-1-1-2 > li::marker { content: ""counter(ExponentAdditionProperty-52-1-1-2,lower-alpha)""; }
+#ExponentAdditionProperty-52-1-1-2 > li { counter-increment: ExponentAdditionProperty-52-1-1-2; }
+#SeqRealNum-12-2 { counter-set: SeqRealNum-12-2 0; }
+#SeqRealNum-12-2 > li::marker { content: ""counter(SeqRealNum-12-2,decimal)"."; }
+#SeqRealNum-12-2 > li { counter-increment: SeqRealNum-12-2; }
+#SeqRealNum-16-3 { counter-set: SeqRealNum-16-3 0; }
+#SeqRealNum-16-3 > li::marker { content: ""counter(SeqRealNum-16-3,decimal)"."; }
+#SeqRealNum-16-3 > li { counter-increment: SeqRealNum-16-3; }
+#SeqRealNum-36-1 { counter-set: SeqRealNum-36-1 0; }
+#SeqRealNum-36-1 > li::marker { content: ""counter(SeqRealNum-36-1,decimal)"."; }
+#SeqRealNum-36-1 > li { counter-increment: SeqRealNum-36-1; }
+#SeqRealNum-36-1-3-2-1 { counter-set: SeqRealNum-36-1-3-2-1 0; }
+#SeqRealNum-36-1-3-2-1 > li::marker { content: "("counter(SeqRealNum-36-1-3-2-1,lower-alpha)")"; }
+#SeqRealNum-36-1-3-2-1 > li { counter-increment: SeqRealNum-36-1-3-2-1; }
+#thm_CalcLimits-1-1-4 { counter-set: thm_CalcLimits-1-1-4 0; }
+#thm_CalcLimits-1-1-4 > li::marker { content: ""counter(thm_CalcLimits-1-1-4,lower-alpha)""; }
+#thm_CalcLimits-1-1-4 > li { counter-increment: thm_CalcLimits-1-1-4; }
+#Continuity-DerivativeAfterthought-7-1 { counter-set: Continuity-DerivativeAfterthought-7-1 0; }
+#Continuity-DerivativeAfterthought-7-1 > li::marker { content: ""counter(Continuity-DerivativeAfterthought-7-1,decimal)"."; }
+#Continuity-DerivativeAfterthought-7-1 > li { counter-increment: Continuity-DerivativeAfterthought-7-1; }
+#NIP-2-2-1 { counter-set: NIP-2-2-1 0; }
+#NIP-2-2-1 > li::marker { content: ""counter(NIP-2-2-1,decimal)"."; }
+#NIP-2-2-1 > li { counter-increment: NIP-2-2-1; }
+#IVTandEVT-Completeness-27-9-3 { counter-set: IVTandEVT-Completeness-27-9-3 0; }
+#IVTandEVT-Completeness-27-9-3 > li::marker { content: ""counter(IVTandEVT-Completeness-27-9-3,decimal)"."; }
+#IVTandEVT-Completeness-27-9-3 > li { counter-increment: IVTandEVT-Completeness-27-9-3; }
+#IVTandEVT-BWT-17-4-3 { counter-set: IVTandEVT-BWT-17-4-3 0; }
+#IVTandEVT-BWT-17-4-3 > li::marker { content: ""counter(IVTandEVT-BWT-17-4-3,decimal)"."; }
+#IVTandEVT-BWT-17-4-3 > li { counter-increment: IVTandEVT-BWT-17-4-3; }
+#def_LeastUpperBound-3-2-1 { counter-set: def_LeastUpperBound-3-2-1 0; }
+#def_LeastUpperBound-3-2-1 > li::marker { content: ""counter(def_LeastUpperBound-3-2-1,lower-alpha)""; }
+#def_LeastUpperBound-3-2-1 > li { counter-increment: def_LeastUpperBound-3-2-1; }
+#IVTandEVT-SupremumAndEVT-9-4 { counter-set: IVTandEVT-SupremumAndEVT-9-4 0; }
+#IVTandEVT-SupremumAndEVT-9-4 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-9-4,lower-alpha)""; }
+#IVTandEVT-SupremumAndEVT-9-4 > li { counter-increment: IVTandEVT-SupremumAndEVT-9-4; }
+#IVTandEVT-SupremumAndEVT-13-2-32 { counter-set: IVTandEVT-SupremumAndEVT-13-2-32 0; }
+#IVTandEVT-SupremumAndEVT-13-2-32 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-13-2-32,decimal)"."; }
+#IVTandEVT-SupremumAndEVT-13-2-32 > li { counter-increment: IVTandEVT-SupremumAndEVT-13-2-32; }
+#IVTandEVT-SupremumAndEVT-19-1-1-7 { counter-set: IVTandEVT-SupremumAndEVT-19-1-1-7 0; }
+#IVTandEVT-SupremumAndEVT-19-1-1-7 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-19-1-1-7,lower-alpha)""; }
+#IVTandEVT-SupremumAndEVT-19-1-1-7 > li { counter-increment: IVTandEVT-SupremumAndEVT-19-1-1-7; }
+#IVTandEVT-SupremumAndEVT-25-1-1-4 { counter-set: IVTandEVT-SupremumAndEVT-25-1-1-4 0; }
+#IVTandEVT-SupremumAndEVT-25-1-1-4 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-25-1-1-4,decimal)"."; }
+#IVTandEVT-SupremumAndEVT-25-1-1-4 > li { counter-increment: IVTandEVT-SupremumAndEVT-25-1-1-4; }
+#IVTandEVT-SupremumAndEVT-28-1-1-4 { counter-set: IVTandEVT-SupremumAndEVT-28-1-1-4 0; }
+#IVTandEVT-SupremumAndEVT-28-1-1-4 > li::marker { content: ""counter(IVTandEVT-SupremumAndEVT-28-1-1-4,decimal)"."; }
+#IVTandEVT-SupremumAndEVT-28-1-1-4 > li { counter-increment: IVTandEVT-SupremumAndEVT-28-1-1-4; }
+#IVTandEVT-AddProb-3-1-1-2 { counter-set: IVTandEVT-AddProb-3-1-1-2 0; }
+#IVTandEVT-AddProb-3-1-1-2 > li::marker { content: ""counter(IVTandEVT-AddProb-3-1-1-2,lower-alpha)""; }
+#IVTandEVT-AddProb-3-1-1-2 > li { counter-increment: IVTandEVT-AddProb-3-1-1-2; }
+#IVTandEVT-AddProb-4-1-1-5 { counter-set: IVTandEVT-AddProb-4-1-1-5 0; }
+#IVTandEVT-AddProb-4-1-1-5 > li::marker { content: ""counter(IVTandEVT-AddProb-4-1-1-5,lower-alpha)""; }
+#IVTandEVT-AddProb-4-1-1-5 > li { counter-increment: IVTandEVT-AddProb-4-1-1-5; }
+#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6 { counter-set: PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6 0; }
+#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6 > li::marker { content: ""counter(PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6,lower-alpha)""; }
+#PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6 > li { counter-increment: PowerSeriesRedux-UnifConv-IntsAndDerivs-2-5-1-1-6; }
+#BackToFourier-2-26-2-1-2 { counter-set: BackToFourier-2-26-2-1-2 0; }
+#BackToFourier-2-26-2-1-2 > li::marker { content: ""counter(BackToFourier-2-26-2-1-2,lower-alpha)""; }
+#BackToFourier-2-26-2-1-2 > li { counter-increment: BackToFourier-2-26-2-1-2; }
+#BackToFourier-2-27-1-1-3 { counter-set: BackToFourier-2-27-1-1-3 0; }
+#BackToFourier-2-27-1-1-3 > li::marker { content: ""counter(BackToFourier-2-27-1-1-3,lower-alpha)""; }
+#BackToFourier-2-27-1-1-3 > li { counter-increment: BackToFourier-2-27-1-1-3; }
+#def_NumberField-3-2-1 { counter-set: def_NumberField-3-2-1 0; }
+#def_NumberField-3-2-1 > li::marker { content: ""counter(def_NumberField-3-2-1,decimal)"."; }
+#def_NumberField-3-2-1 > li { counter-increment: def_NumberField-3-2-1; }
+#def_NumberField-3-2-1-1-2-1 { counter-set: def_NumberField-3-2-1-1-2-1 0; }
+#def_NumberField-3-2-1-1-2-1 > li::marker { content: "("counter(def_NumberField-3-2-1-1-2-1,lower-alpha)")"; }
+#def_NumberField-3-2-1-1-2-1 > li { counter-increment: def_NumberField-3-2-1-1-2-1; }
+#Epilogues-BuildRealNumbers-2-20-2-1-2-1 { counter-set: Epilogues-BuildRealNumbers-2-20-2-1-2-1 0; }
+#Epilogues-BuildRealNumbers-2-20-2-1-2-1 > li::marker { content: ""counter(Epilogues-BuildRealNumbers-2-20-2-1-2-1,decimal)"."; }
+#Epilogues-BuildRealNumbers-2-20-2-1-2-1 > li { counter-increment: Epilogues-BuildRealNumbers-2-20-2-1-2-1; }
+#DedekindCuts-9-3 { counter-set: DedekindCuts-9-3 0; }
+#DedekindCuts-9-3 > li::marker { content: ""counter(DedekindCuts-9-3,decimal)"."; }
+#DedekindCuts-9-3 > li { counter-increment: DedekindCuts-9-3; }
+#DedekindCuts-17-1 { counter-set: DedekindCuts-17-1 0; }
+#DedekindCuts-17-1 > li::marker { content: ""counter(DedekindCuts-17-1,decimal)"."; }
+#DedekindCuts-17-1 > li { counter-increment: DedekindCuts-17-1; }
+#DedekindCuts-21-1-1-6 { counter-set: DedekindCuts-21-1-1-6 0; }
+#DedekindCuts-21-1-1-6 > li::marker { content: ""counter(DedekindCuts-21-1-1-6,decimal)"."; }
+#DedekindCuts-21-1-1-6 > li { counter-increment: DedekindCuts-21-1-1-6; }
+#DedekindCuts-39-5 { counter-set: DedekindCuts-39-5 0; }
+#DedekindCuts-39-5 > li::marker { content: ""counter(DedekindCuts-39-5,decimal)"."; }
+#DedekindCuts-39-5 > li { counter-increment: DedekindCuts-39-5; }
+#DedekindCuts-62-5 { counter-set: DedekindCuts-62-5 0; }
+#DedekindCuts-62-5 > li::marker { content: ""counter(DedekindCuts-62-5,decimal)"."; }
+#DedekindCuts-62-5 > li { counter-increment: DedekindCuts-62-5; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
-<p class="byline">Robert Rogers, Eugene C. Boman</p>
+<p class="byline">Robert Rogers, Eugene Boman</p>
 </div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -107,7 +227,8 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Continuity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Continuity.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="SequencesAndContinuity.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Continuity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Continuity.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="SequencesAndContinuity.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
 \newcommand{\dx}[1]{\,{\rm d}#1}
 
 
@@ -130,12 +251,12 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="ASORA-2.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="FrontColophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="ASORA-2-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="ASORA-2-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="Instructor.html" class="internal"><span class="title">To the Instructor</span></a></div></li>
 </ul>
 </li>
@@ -299,7 +420,7 @@ window.MathJax = {
 <figure class="figure figure-like" id="Continuity-AnalyticDef-14"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/Ch5fig2.png" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.2<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="Continuity-AnalyticDef-15">This function is not differentiable at the origin but it is differentiable everywhere else.  One could certainly come up with examples of functions which fail to be differentiable at any number of points but, intuitively, it would be reasonable</div>
 <figure class="figure figure-like" id="Continuity-AnalyticDef-16"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Weierstrass.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.3<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Weierstrass/" target="_blank">Karl Weierstrass</a><a class="xref" id="Continuity-AnalyticDef-16-2-2" href="" data-knowl="./knowl/fn/Continuity-AnalyticDef-16-2-2.html" title="Footnote 15"><sup> 15 </sup></a></figcaption></figure><div class="para" id="Continuity-AnalyticDef-17">to expect that a continuous function should be differentiable <em class="emphasis">somewhere</em>.  We might conjecture the following:</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.3<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Weierstrass/" target="_blank">Karl Weierstrass</a><details class="ptx-footnote" aria-live="polite" id="Continuity-AnalyticDef-16-2-2"><summary class="ptx-footnote__number" title="Footnote 16"><sup> 16 </sup></summary><div class="ptx-footnote__contents" id="Continuity-AnalyticDef-16-2-2"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Weierstrass/</code></div></details></figcaption></figure><div class="para" id="Continuity-AnalyticDef-17">to expect that a continuous function should be differentiable <em class="emphasis">somewhere</em>.  We might conjecture the following:</div>
 <article class="conjecture theorem-like" id="conj_ContImplyDiff"><h3 class="heading">
 <span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">8.1.4</span><span class="period">.</span>
 </h3>
@@ -324,9 +445,9 @@ x\right)\)</span> and use a computer algebra system to plot <span class="process
 <div class="para" id="Continuity-AnalyticDef-21-5-1-1">Plot <span class="process-math">\(f(x,10)\)</span> for <span class="process-math">\(x\in[\,0,c]\text{,}\)</span> where <span class="process-math">\(c=0.1,0.01,0.001,0.0001,0.00001\text{.}\)</span>  Based upon what you see in parts b and c, why would we describe the function to be somewhat “fractal” in nature?</div></article></article><div class="para" id="Continuity-AnalyticDef-22">Just as it was important to define convergence with a rigorous definition without appealing to intuition or geometric representations, it is imperative that we define continuity in a rigorous fashion not relying on graphs.</div>
 <div class="para" id="Continuity-AnalyticDef-23">The first appearance of a definition of continuity which did not rely on geometry or intuition was given in 1817 by Bernhard Bolzano  in a paper published in the Proceedings of the Prague Scientific Society entitled <i class="foreign">Rein analytischer Beweis des Lehrsatzes dass zwieschen je zwey Werthen, die ein entgegengesetztes Resultat gewaehren, wenigstens eine reele Wurzel der Gleichung liege</i> (Purely Analytic Proof of the Theorem that Between Any Two Values that Yield Results of Opposite Sign There Will be at Least One Real Root of the Equation).</div>
 <figure class="figure figure-like" id="Continuity-AnalyticDef-24"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Bolzano.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.6<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Bolzano/" target="_blank">Bernhard Bolzano</a><a class="xref" id="Continuity-AnalyticDef-24-1-2" href="" data-knowl="./knowl/fn/Continuity-AnalyticDef-24-1-2.html" title="Footnote 16"><sup> 16 </sup></a></figcaption></figure><div class="para" id="Continuity-AnalyticDef-25">From the title it should be clear that in this paper Bolzano is proving the Intermediate Value Theorem.  To do this he needs a completely analytic definition of continuity.  The substance of Bolzano’s idea is that if <span class="process-math">\(f\)</span> is continuous at a point <span class="process-math">\(a\)</span> then <span class="process-math">\(f(x)\)</span> should be “close to” <span class="process-math">\(f(a)\)</span> whenever <span class="process-math">\(x\)</span> is “close enough to” <span class="process-math">\(a\text{.}\)</span>  More precisely, Bolzano said that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\)</span> provided <span class="process-math">\(\abs{f(x)-f(a)}\)</span> can be made smaller than any given quantity provided we make <span class="process-math">\(\abs{x-a}\)</span> sufficiently small.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.6<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Bolzano/" target="_blank">Bernhard Bolzano</a><details class="ptx-footnote" aria-live="polite" id="Continuity-AnalyticDef-24-1-2"><summary class="ptx-footnote__number" title="Footnote 17"><sup> 17 </sup></summary><div class="ptx-footnote__contents" id="Continuity-AnalyticDef-24-1-2"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Bolzano/</code></div></details></figcaption></figure><div class="para" id="Continuity-AnalyticDef-25">From the title it should be clear that in this paper Bolzano is proving the Intermediate Value Theorem.  To do this he needs a completely analytic definition of continuity.  The substance of Bolzano’s idea is that if <span class="process-math">\(f\)</span> is continuous at a point <span class="process-math">\(a\)</span> then <span class="process-math">\(f(x)\)</span> should be “close to” <span class="process-math">\(f(a)\)</span> whenever <span class="process-math">\(x\)</span> is “close enough to” <span class="process-math">\(a\text{.}\)</span>  More precisely, Bolzano said that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\)</span> provided <span class="process-math">\(\abs{f(x)-f(a)}\)</span> can be made smaller than any given quantity provided we make <span class="process-math">\(\abs{x-a}\)</span> sufficiently small.</div>
 <div class="para" id="Continuity-AnalyticDef-26">The language Bolzano uses is very similar to the language Leibniz  used when he postulated the existence of infinitesimally small numbers. Leibniz said that infinitesimals are “smaller than any given quantity but not zero.” Bolzano says that “<span class="process-math">\(\abs{f(x)-f(a)}\)</span> can be made smaller than any given quantity provided we make <span class="process-math">\(\abs{x-a}\)</span> sufficiently small.” But Bolzano stops short of saying that <span class="process-math">\(\abs{x-a}\)</span> is <em class="emphasis">infinitesimally</em> small.  Given <span class="process-math">\(a\text{,}\)</span> we can choose <span class="process-math">\(x\)</span> so that <span class="process-math">\(\abs{x-a}\)</span> is smaller than any real number we could name, say <span class="process-math">\(b\text{,}\)</span> provided we name <span class="process-math">\(b\)</span> <em class="emphasis">first</em>, but for any given choice of <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\abs{x-a}\text{,}\)</span> and <span class="process-math">\(b\)</span> are both still real numbers.  Possibly very small real numbers to be sure, but real numbers nonetheless.  Infinitesimals have no place in Bolzano’s construction.</div>
-<div class="para" id="Continuity-AnalyticDef-27"> Bolzano’s paper was not well known when Cauchy  proposed a similar definition in his <em class="emphasis">Cours d’analyse</em> <a href="" class="xref" data-knowl="./knowl/xref/bradley09__cauch_cours.html" title="Bibliographic Entry 1">[1]</a> of 1821 so it is usually Cauchy who is credited with this definition, but even Cauchy’s definition is not quite tight enough for modern standards.  It was Karl Weierstrass in 1859 who finally gave the modern definition.</div>
+<div class="para" id="Continuity-AnalyticDef-27"> Bolzano’s paper was not well known when Cauchy  proposed a similar definition in his <em class="emphasis">Cours d’analyse</em> <a href="ASORA-6-1.html#bradley09__cauch_cours" class="xref" data-knowl="./knowl/xref/bradley09__cauch_cours.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 1">[1]</a> of 1821 so it is usually Cauchy who is credited with this definition, but even Cauchy’s definition is not quite tight enough for modern standards.  It was Karl Weierstrass in 1859 who finally gave the modern definition.</div>
 <article class="definition definition-like" id="def_continuity"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.7</span><span class="period">.</span>
 </h3>
@@ -365,7 +486,8 @@ f(a)+\eps\text{.}\)</span>” This could also be replaced by the phrase “for a
 |f(x)-f(a)|=|\,x-a|\lt \eps
 \end{equation*}
 </div>
-</div> <div class="para" id="Continuity-AnalyticDef-40-2">Thus by the definition, <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span>
+</div>
+<div class="para" id="Continuity-AnalyticDef-40-2">Thus by the definition, <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span>
 </div></article><article class="problem example-like" id="Continuity-AnalyticDef-41"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.1.9</span><span class="period">.</span>
 </h3>
@@ -390,7 +512,8 @@ f(x) = mx+b
 \abs{x^2-0^2}=|\,x|^2\lt \left(\sqrt{\eps}\right)^2=\eps\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="Continuity-AnalyticDef-43-2">Thus by the definition, <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(0\text{.}\)</span>
+</div>
+<div class="para" id="Continuity-AnalyticDef-43-2">Thus by the definition, <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(0\text{.}\)</span>
 </div></article><div class="para" id="Continuity-AnalyticDef-44">Notice that in these proofs, the challenge of an <span class="process-math">\(\eps&gt;0\)</span> was first given.  This is because the choice of <span class="process-math">\(\delta\)</span> must depend upon <span class="process-math">\(\eps\text{.}\)</span>  Also notice that there was no explanation for our choice of <span class="process-math">\(\delta\text{.}\)</span>  We just supplied it and showed that it worked.  As long as <span class="process-math">\(\delta&gt;0\text{,}\)</span> then this is all that is required.  In point of fact, the <span class="process-math">\(\delta\)</span> we chose in each example was not the only choice that worked; any smaller <span class="process-math">\(\delta\)</span> would work as well.</div>
 <article class="problem example-like" id="Continuity-AnalyticDef-45"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.1.11</span><span class="period">.</span>
@@ -418,7 +541,7 @@ f(x)= \begin{cases}\sqrt{x} \amp  \text{ if }  x\ge0\\ -\sqrt{-x} \amp  \text{ i
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.1.13</span><span class="period">.</span>
 </h3>
 <div class="para" id="Continuity-AnalyticDef-48-1-1"> Use the definition of continuity to show that <span class="process-math">\(f(x)=
-\sqrt{x}\)</span> is continuous at <span class="process-math">\(a=0\text{.}\)</span>  How is this problem different from <a href="" class="xref" data-knowl="./knowl/xref/prob_extended_sqrt_is_continuous_at_zero.html" title="Problem 8.1.12">problem 8.1.12</a>? How is it similar?</div></article><div class="para" id="Continuity-AnalyticDef-49">Sometimes the <span class="process-math">\(\delta\)</span> that will work for a particular <span class="process-math">\(\eps\)</span> is fairly obvious to see, especially after you’ve gained some experience.  This is the case in the above examples (at least after looking back at the proofs).  However, the task of finding a <span class="process-math">\(\delta\)</span> to work is usually not so obvious and requires some scrapwork.  This scrapwork is vital toward producing a <span class="process-math">\(\delta\text{,}\)</span> but again is not part of the polished proof.  This can be seen in the following example.</div>
+\sqrt{x}\)</span> is continuous at <span class="process-math">\(a=0\text{.}\)</span>  How is this problem different from <a href="Continuity-AnalyticDef.html#prob_extended_sqrt_is_continuous_at_zero" class="xref" data-knowl="./knowl/xref/prob_extended_sqrt_is_continuous_at_zero.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 8.1.12">problem 8.1.12</a>? How is it similar?</div></article><div class="para" id="Continuity-AnalyticDef-49">Sometimes the <span class="process-math">\(\delta\)</span> that will work for a particular <span class="process-math">\(\eps\)</span> is fairly obvious to see, especially after you’ve gained some experience.  This is the case in the above examples (at least after looking back at the proofs).  However, the task of finding a <span class="process-math">\(\delta\)</span> to work is usually not so obvious and requires some scrapwork.  This scrapwork is vital toward producing a <span class="process-math">\(\delta\text{,}\)</span> but again is not part of the polished proof.  This can be seen in the following example.</div>
 <article class="example example-like" id="example_SqrtContinuous"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.14</span><span class="period">.</span>
 </h3>
@@ -440,9 +563,10 @@ f(x)= \begin{cases}\sqrt{x} \amp  \text{ if }  x\ge0\\ -\sqrt{-x} \amp  \text{ i
 \abs{\sqrt{x}-\sqrt{1}}=|\frac{\left(\sqrt{x}-1\right)\left(\sqrt{x}+1\right)}{ \sqrt{x}+1}|=\frac{|x-1|}{\sqrt{x}+1}\lt \abs{x-1}\lt \eps\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="Continuity-AnalyticDef-51-2">Thus by definition, <span class="process-math">\(f(x)=\sqrt{x}\)</span> is continuous at <span class="process-math">\(1\text{.}\)</span>
+</div>
+<div class="para" id="Continuity-AnalyticDef-51-2">Thus by definition, <span class="process-math">\(f(x)=\sqrt{x}\)</span> is continuous at <span class="process-math">\(1\text{.}\)</span>
 </div></article><figure class="figure figure-like" id="Continuity-AnalyticDef-52"><div class="image-box" style="width: 35%; margin-left: 32.5%; margin-right: 32.5%;"><img src="external/images/Halmos.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.15<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Halmos/" target="_blank">Paul Halmos</a><a class="xref" id="Continuity-AnalyticDef-52-1-2" href="" data-knowl="./knowl/fn/Continuity-AnalyticDef-52-1-2.html" title="Footnote 17"><sup> 17 </sup></a></figcaption></figure><div class="para" id="Continuity-AnalyticDef-53">Bear in mind that someone reading the formal proof will not have seen the scrapwork, so the choice of <span class="process-math">\(\delta\)</span> might seem rather mysterious.  However, you are in no way bound to motivate this choice of <span class="process-math">\(\delta\)</span> and usually you should not, unless it is necessary for the formal proof.  All you have to do is find this <span class="process-math">\(\delta\)</span> and show that it works.  Furthermore, to a trained reader, your ideas will come through when you demonstrate that your choice of <span class="process-math">\(\delta\)</span> works.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1.15<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Halmos/" target="_blank">Paul Halmos</a><details class="ptx-footnote" aria-live="polite" id="Continuity-AnalyticDef-52-1-2"><summary class="ptx-footnote__number" title="Footnote 18"><sup> 18 </sup></summary><div class="ptx-footnote__contents" id="Continuity-AnalyticDef-52-1-2"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Halmos/</code></div></details></figcaption></figure><div class="para" id="Continuity-AnalyticDef-53">Bear in mind that someone reading the formal proof will not have seen the scrapwork, so the choice of <span class="process-math">\(\delta\)</span> might seem rather mysterious.  However, you are in no way bound to motivate this choice of <span class="process-math">\(\delta\)</span> and usually you should not, unless it is necessary for the formal proof.  All you have to do is find this <span class="process-math">\(\delta\)</span> and show that it works.  Furthermore, to a trained reader, your ideas will come through when you demonstrate that your choice of <span class="process-math">\(\delta\)</span> works.</div>
 <div class="para" id="Continuity-AnalyticDef-54">Now reverse this last statement.  <em class="emphasis">As</em> a trained reader, when you read the proof of a theorem it is <em class="emphasis">your</em> responsibility to find the scrapwork, to see how the proof works and understand it fully.  As the renowned mathematical expositor Paul Halmos  (1916-2006) said, “Don’t just read it; fight it! Ask your own questions, look for your own examples, discover your own proofs. Is the hypothesis necessary? Is the converse true? What happens in the classical special case? What about the degenerate cases? Where does the proof use the hypothesis?”</div>
 <div class="para" id="Continuity-AnalyticDef-55">This is the way to learn mathematics.  It is really the only way.</div>
 <article class="problem example-like" id="Continuity-AnalyticDef-56"><h3 class="heading">
@@ -460,20 +584,16 @@ f(x)= \begin{cases}\sqrt{x} \amp  \text{ if }  x\ge0\\ -\sqrt{-x} \amp  \text{ i
 \theta\)</span> <span class="process-math">\(\lt \frac{\pi}{2}\text{.}\)</span>
 </div></article><article class="task exercise-like" id="Continuity-AnalyticDef-57-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="Continuity-AnalyticDef-57-3-1-1">Use the definition of continuity to prove that <span class="process-math">\(f(x)=\sin x\)</span> is continuous at any point <span class="process-math">\(a\text{.}\)</span>
-</div> <div class="para" id="Continuity-AnalyticDef-57-3-1-2"></div>
-<div class="solutions"><details id="Continuity-AnalyticDef-57-3-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">
-<div class="para" id="Continuity-AnalyticDef-57-3-2-1"></div> <div class="para" id="Continuity-AnalyticDef-57-3-2-2"><span class="process-math">\(\sin x=\sin\left(x-a+a\right)\text{.}\)</span></div>
-</div></details></div></article></article><article class="problem example-like" id="Continuity-AnalyticDef-58"><h3 class="heading">
+</div>
+<div class="solutions"><details id="Continuity-AnalyticDef-57-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="Continuity-AnalyticDef-57-3-2-1"><span class="process-math">\(\sin x=\sin\left(x-a+a\right)\text{.}\)</span></div></div></details></div></article></article><article class="problem example-like" id="Continuity-AnalyticDef-58"><h3 class="heading">
 <span class="type">Problem</span><span class="space"> </span><span class="codenumber">8.1.18</span><span class="period">.</span>
 </h3>
 <article class="task exercise-like" id="Continuity-AnalyticDef-58-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="Continuity-AnalyticDef-58-3-1-1">Use the definition of continuity to show that <span class="process-math">\(f(x)=e^x\)</span> is continuous at <span class="process-math">\(a=0\text{.}\)</span>
 </div></article><article class="task exercise-like" id="Continuity-AnalyticDef-58-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="Continuity-AnalyticDef-58-4-1-1">Show that <span class="process-math">\(f(x)=e^x\)</span> is continuous at any point <span class="process-math">\(a\text{.}\)</span>
-</div> <div class="para" id="Continuity-AnalyticDef-58-4-1-2"></div>
-<div class="solutions"><details id="Continuity-AnalyticDef-58-4-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">
-<div class="para" id="Continuity-AnalyticDef-58-4-2-1"></div> <div class="para" id="Continuity-AnalyticDef-58-4-2-2">Rewrite <span class="process-math">\(e^x-e^a\)</span> as <span class="process-math">\(e^{a+(x-a)}-e^a\)</span> and use what you proved in part a.</div>
-</div></details></div></article></article><div class="para logical" id="Continuity-AnalyticDef-59">
+</div>
+<div class="solutions"><details id="Continuity-AnalyticDef-58-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="Continuity-AnalyticDef-58-4-2-1">Rewrite <span class="process-math">\(e^x-e^a\)</span> as <span class="process-math">\(e^{a+(x-a)}-e^a\)</span> and use what you proved in part a.</div></div></details></div></article></article><div class="para logical" id="Continuity-AnalyticDef-59">
 <div class="para">In the above problems, we used the definition of continuity to verify our intuition about the continuity of familiar functions.  The advantage of this analytic definition is that it can be applied when the function is not so intuitive.  Consider, for example, the function given at the end of the last chapter.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -537,16 +657,14 @@ x,\amp \text{ if } x\text{ is rational } \\
 </div>
 </div></article><article class="task exercise-like" id="Continuity-AnalyticDef-68-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="Continuity-AnalyticDef-68-3-1-1">Let <span class="process-math">\(a\neq 0\text{.}\)</span>  Use the definition of continuity to show that <span class="process-math">\(D\)</span> is not continuous at <span class="process-math">\(a\text{.}\)</span>
-</div> <div class="para" id="Continuity-AnalyticDef-68-3-1-2"></div>
-<div class="solutions"><details id="Continuity-AnalyticDef-68-3-2" class="hint solution-like born-hidden-knowl"><summary><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like">
-<div class="para" id="Continuity-AnalyticDef-68-3-2-1"></div> <div class="para" id="Continuity-AnalyticDef-68-3-2-2">You might want to break this up into two cases where <span class="process-math">\(a\)</span> is rational or irrational.  Show that no choice of <span class="process-math">\(\delta&gt;0\)</span> will work for <span class="process-math">\(\eps=|\,a|\text{.}\)</span>  Note that <a href="" class="xref" data-knowl="./knowl/xref/thm_IrrationalBetweenIrrationals.html" title="Theorem 2.0.11">Theorem 2.0.11</a> of <a href="NumbersRealRational.html" class="internal" title="Chapter 2: Numbers, Real (\RR) and Rational (\QQ)">Chapter 2</a> will probably help here.</div>
-</div></details></div></article></article></section></div>
+</div>
+<div class="solutions"><details id="Continuity-AnalyticDef-68-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="Continuity-AnalyticDef-68-3-2-1">You might want to break this up into two cases where <span class="process-math">\(a\)</span> is rational or irrational.  Show that no choice of <span class="process-math">\(\delta&gt;0\)</span> will work for <span class="process-math">\(\eps=|\,a|\text{.}\)</span>  Note that <a href="NumbersRealRational.html#thm_IrrationalBetweenIrrationals" class="xref" data-knowl="./knowl/xref/thm_IrrationalBetweenIrrationals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.11">Theorem 2.0.11</a> of <a href="NumbersRealRational.html" class="internal" title="Chapter 2: Numbers, Real (\RR) and Rational (\QQ)">Chapter 2</a> will probably help here.</div></div></details></div></article></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="Continuity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="SequencesAndContinuity.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>
