@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Acknowledgements",
   "number": "",
   "title": "Acknowledgements",
-  "body": "    Mactutor  While we have tried to tell the story of the development of Real Analysis as completely as possible, our overriding goal was always to teach mathematics, not history. Thus we have necessarily left the history incomplete.  The interested student can fill in the gaps we have left by making use of the extensive resources that can be found at the MacTutor history of mathematics repository.  All of the portraits of mathematicians used in this text have been taken from MacTutor.  MacTutor was created, and is maintained by Professor Edmund Robertson (Emeritus), and Professor John O'Connor (Emeritus), both of the University of St. Andrews in Scotland.    Desmos  The interactive figures in Chapter were created using the Desmos online calculator .    "
+  "body": "    Mactutor  While we have tried to tell the story of the development of Real Analysis as completely as possible, our overriding goal was always to teach mathematics, not history. Thus we have necessarily left the history incomplete.  The interested student can fill in the gaps we have left by making use of the extensive resources that can be found at the MacTutor history of mathematics repository.  All of the portraits of mathematicians used in this text have been taken from MacTutor.  MacTutor was created, and is maintained by Professor Edmund Robertson (Emeritus), and Professor John O'Connor (Emeritus), both of the University of St. Andrews in Scotland.               "
 },
 {
   "id": "Instructor",
