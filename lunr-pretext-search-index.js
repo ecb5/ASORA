@@ -3137,7 +3137,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-13",
   "type": "Proof",
-  "number": "10.2.1.1",
+  "number": "1",
   "title": "Sketch of Proof.",
   "body": " Sketch of Proof  We know that  is bounded, so by the Bolzano-Weierstrass Theorem, it has a convergent subsequence converging to some real number . We have . If we choose and large enough, we should be able to make each term arbitrarily small.  "
 },
@@ -3281,7 +3281,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "PowerSeriesRedux-UnifConv-IntsAndDerivs.html#PowerSeriesRedux-UnifConv-IntsAndDerivs-3-39",
   "type": "Proof",
-  "number": "10.2.1.2",
+  "number": "2",
   "title": "Sketch of Proof.",
   "body": " Sketch of Proof  We will first show that this result is true in the case where . If represents a rearrangement of , then notice that the sequence of partial sums is an increasing sequence which is bounded by . By Corollary of Chapter , this sequence must converge to some number and . Furthermore is also a rearrangement of . Thus the result holds for this special case. (Why?) For the general case, notice that and that and are both convergent series with nonnegative terms. By the special case  and  .  "
 },
@@ -3920,7 +3920,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Epilogues-BuildRealNumbers.html#CauchySequences-20",
   "type": "Proof",
-  "number": "12.2.2.1",
+  "number": "1",
   "title": "",
   "body": " From Problem it is clear that in forming we can choose any sequence in to represent and any sequence in to represent . (This is because any other choice will yield a sequence equivalent to .)  Thus we choose to represent and any element of , say , to represent . Then .  Since any other sequences taken from and respectively, will yield a sum equivalent to (see Problem ) we conclude that .  "
 },
@@ -4010,7 +4010,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Epilogues-BuildRealNumbers.html#DedekindCuts-31",
   "type": "Proof",
-  "number": "12.2.3.1",
+  "number": "1",
   "title": "",
   "body": " We need to show that the set satisfies all three of the properties of a cut.     Property I  Let be any rational number in and let be a rational number not in . Then by Property II .  Let be any rational number in and let be a rational number not in . Then by Property II .  Thus since represents a generic element of and , it follows that .    Property II  We will show that the contrapositive of Property II is true: If and then .  First, let . Then there are and such that . Therefore , so that .  Therefore and . Therefore .    Property III  Let . We need to find , . Observe that for some and  .  Since is a cut, there is a rational number such that . Take . Then .     "
 },
