@@ -6,77 +6,35 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Numbers, Real (\RR) and Rational (\QQ)</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
-<meta property="book:author" content="Robert Rogers, (Emeritus)">
-<meta property="book:author" content="Eugene Boman, (Emeritus)">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="og:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.42"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -98,31 +56,32 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.6.1';
+eBookConfig.runestone_version = '7.13.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c7804631fa963734.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f7a03b209751032d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
+<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.2f713d2360adcee7.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
 <p class="byline">Robert Rogers, (Emeritus), Eugene Boman, (Emeritus)</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
-</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ThreeLessons_lesson-three.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="AskingQuestions.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="NumbersRealRational-AddProbs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
@@ -291,141 +250,287 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="NumbersRealRational"><h2 class="heading">
-<span class="type">Chapter</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="NumbersRealRational">
+<h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Numbers, Real (<span class="process-math">\(\RR\)</span>) and Rational (<span class="process-math">\(\QQ\)</span>)</span>
 </h2>
-<section class="introduction" id="NumbersRealRational-2"><div class="para" id="NumbersRealRational-2-1">The set of real numbers (denoted, <span class="process-math">\(\RR\)</span>) is badly named. The real numbers are no more or less real — in the non-mathematical sense that they exist — than any other set of numbers, just like the set of rational numbers (<span class="process-math">\(\QQ\)</span>), the set of integers (<span class="process-math">\(\ZZ\)</span>), or the set of natural numbers (<span class="process-math">\(\NN\)</span>). The name “real numbers” is (almost) an historical anomaly not unlike the name “Pythagorean Theorem” which was actually known and understood long before Pythagoras lived.</div>
-<div class="para" id="NumbersRealRational-2-2">When calculus was being invented in the <span class="process-math">\(17\)</span>th century, numbers were thoroughly understood, or so it was believed.</div>
-<aside class="aside aside-like" id="NumbersRealRational-2-3"><h2 class="heading"><span class="title">Comment.</span></h2>
-<div class="para" id="NumbersRealRational-2-3-2">Some would say “re-invented.” See <a href="ASORA-6-1.html#russo96__forgot_revol" class="xref" data-knowl="./knowl/xref/russo96__forgot_revol.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 13">[13]</a>, or <a href="ASORA-6-1.html#netz07__archim_codex" class="xref" data-knowl="./knowl/xref/netz07__archim_codex.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 9">[9]</a>.  </div></aside><div class="para" id="NumbersRealRational-2-4">They were, after all, just numbers. Combine them. We call that addition. If you add them repeatedly we call it multiplication. Subtraction and division were similarly understood.</div>
-<div class="para" id="NumbersRealRational-2-5">It was (and still is) useful to visualize these things in a more concrete way. If we take a stick of length 2 and another of length 3 and lay them end-to-end we get a length of 5. This is addition. If we lay them end-to-end but at right angles then our two sticks are the length and width of a rectangle whose area is 6. This is multiplication.</div>
-<div class="para" id="NumbersRealRational-2-6">Of course measuring lengths with whole numbers has limitations, but these are not hard to fix. If we have a length (stick) of length 1 and another of length 2, then we can find another whose length when compared to 1 is the same (has the same proportion) as <span class="process-math">\(1\)</span> is to <span class="process-math">\(2\text{.}\)</span> That number of course, is <span class="process-math">\(1/2\text{.}\)</span>
+<section class="introduction" id="NumbersRealRational-2">
+<div class="para" id="NumbersRealRational-2-1">The set of real numbers (denoted, <span class="process-math">\(\RR\)</span>) is badly named. The real numbers are no more or less real — in the non-mathematical sense that they exist — than any other set of numbers, just like the set of rational numbers (<span class="process-math">\(\QQ\)</span>), the set of integers (<span class="process-math">\(\ZZ\)</span>), or the set of natural numbers (<span class="process-math">\(\NN\)</span>). The name “real numbers” is (almost) an historical anomaly not unlike the name “Pythagorean Theorem” which was actually known and understood long before Pythagoras lived.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-2">When calculus was being invented in the <span class="process-math">\(17\)</span>th century, numbers were thoroughly understood, or so it was believed.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="NumbersRealRational-2-3" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comment.</span>
+</h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="NumbersRealRational-2-3-2">Some would say “re-invented.” See <a href="ASORA-6-1.html#russo96__forgot_revol" class="xref" data-knowl="./knowl/xref/russo96__forgot_revol.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 13">[13]</a>, or <a href="ASORA-6-1.html#netz07__archim_codex" class="xref" data-knowl="./knowl/xref/netz07__archim_codex.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 9">[9]</a>.  <div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+<div class="para" id="NumbersRealRational-2-4">They were, after all, just numbers. Combine them. We call that addition. If you add them repeatedly we call it multiplication. Subtraction and division were similarly understood.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-5">It was (and still is) useful to visualize these things in a more concrete way. If we take a stick of length 2 and another of length 3 and lay them end-to-end we get a length of 5. This is addition. If we lay them end-to-end but at right angles then our two sticks are the length and width of a rectangle whose area is 6. This is multiplication.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-6">Of course measuring lengths with whole numbers has limitations, but these are not hard to fix. If we have a length (stick) of length 1 and another of length 2, then we can find another whose length when compared to 1 is the same (has the same proportion) as <span class="process-math">\(1\)</span> is to <span class="process-math">\(2\text{.}\)</span> That number of course, is <span class="process-math">\(1/2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="Fractions"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/Fractions.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.0.1<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="NumbersRealRational-2-8">Notice how fraction notation reflects the operation of comparing 1 to 2.  This comparison is usually referred to as the <em class="emphasis">ratio</em> of <span class="process-math">\(1\)</span> to <span class="process-math">\(2\)</span> so numbers of this sort are called <em class="emphasis">rational numbers.</em> The set of rational numbers is denoted <span class="process-math">\(\QQ\)</span> for quotients.  In grade school they were introduced to you as fractions.  Once fractions are understood, this visualization using line segments (sticks) leads quite naturally to their representation with the rational number line.</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 2.0.1: "><a href="#Fractions" title="Copy heading and permalink for Figure 2.0.1: " aria-label="Copy heading and permalink for Figure 2.0.1: ">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="NumbersRealRational-2-8">Notice how fraction notation reflects the operation of comparing 1 to 2.  This comparison is usually referred to as the <em class="emphasis">ratio</em> of <span class="process-math">\(1\)</span> to <span class="process-math">\(2\)</span> so numbers of this sort are called <em class="emphasis">rational numbers.</em> The set of rational numbers is denoted <span class="process-math">\(\QQ\)</span> for quotients.  In grade school they were introduced to you as fractions.  Once fractions are understood, this visualization using line segments (sticks) leads quite naturally to their representation with the rational number line.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="RationalNumberLine"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/RationalNumberLine.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.0.2<span class="period">.</span></span><span class="space"> </span>The Rational Number Line</figcaption></figure><div class="para" id="NumbersRealRational-2-10">This seems to work as a visualization because the rational numbers and the points on a line seem to share certain properties.  Chief among these is that between any two points on the rational line there is another point, just as between any two rational numbers there is another rational number.</div>
-<article class="problem example-like" id="NumbersRealRational-2-11"><h2 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.0.3</span><span class="period">.</span>
-</h2>
-<div class="para" id="NumbersRealRational-2-11-1-1"> Let <span class="process-math">\(a, b, c, d\in\NN\)</span> and find a rational number between <span class="process-math">\(a/b\)</span> and <span class="process-math">\(c/d\text{.}\)</span>
-</div></article><div class="para" id="NumbersRealRational-2-12">This is all very clean and satisfying until we examine it just a bit closer. Then it becomes quite mysterious. Consider again the rational numbers <span class="process-math">\(a/b\)</span> and <span class="process-math">\(c/d\text{.}\)</span> If we think of these as lengths we can ask, "Is there a third length, say <span class="process-math">\(\alpha\text{,}\)</span> such that we can divide <span class="process-math">\(a/b\)</span> into <span class="process-math">\(M\)</span> pieces, each of length <span class="process-math">\(\alpha\)</span> <em class="emphasis">and also</em> divide <span class="process-math">\(c/d\)</span> into <span class="process-math">\(N\)</span> pieces each of length <span class="process-math">\(\alpha?\)</span>" A few minutes thought should convince you that this is the same as the problem of finding a common denominator so <span class="process-math">\(\alpha=\frac{1}{bd}\)</span> will work nicely. (Confirm this yourself.)</div>
-<div class="para" id="NumbersRealRational-2-13">You may be wondering what we’re making all of this fuss about. <em class="emphasis">Obviously</em> this is <em class="emphasis">always</em> true. In fact the previous paragraph gives an outline of a very nice little proof of this. Here are the theorem and its proof presented formally.</div>
-<article class="theorem theorem-like" id="thm_CommonDenominatorsExist"><h2 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.0.4</span><span class="period">.</span>
-</h2>
-<div class="para" id="thm_CommonDenominatorsExist-1-1"> Suppose <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(d\)</span> are integers. There is a number <span class="process-math">\(\alpha\in\QQ\)</span> such that <span class="process-math">\(M\alpha=a/b\)</span> and <span class="process-math">\(N\alpha=c/d\)</span> where <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> are also integers.</div></article><article class="proof" id="NumbersRealRational-2-15"><h2 class="heading"><span class="type">Proof<span class="period">.</span></span></h2>
-<div class="para" id="NumbersRealRational-2-15-1">To prove this theorem we will display <span class="process-math">\(\alpha\text{,}\)</span> <span class="process-math">\(M\)</span> and <span class="process-math">\(N\text{.}\)</span> It is your responsibility to confirm that these actually work. Here they are: <span class="process-math">\(\alpha=1/bd\text{,}\)</span> <span class="process-math">\(M=ad\text{,}\)</span> and <span class="process-math">\(N=cb\text{.}\)</span>
-</div></article><article class="problem example-like" id="NumbersRealRational-2-16"><h2 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.0.5</span><span class="period">.</span>
-</h2>
-<div class="para" id="NumbersRealRational-2-16-1-1"> Confirm that <span class="process-math">\(\alpha, M, \text{ and } N\)</span> as given in the proof of <a href="NumbersRealRational.html#thm_CommonDenominatorsExist" class="xref" data-knowl="./knowl/xref/thm_CommonDenominatorsExist.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.4">Theorem 2.0.4</a> satisfy the requirements of the theorem.</div></article><div class="para" id="NumbersRealRational-2-17">
-<a href="NumbersRealRational.html#thm_CommonDenominatorsExist" class="xref" data-knowl="./knowl/xref/thm_CommonDenominatorsExist.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.4">Theorem 2.0.4</a> suggests the following very deep and important question: Are there lengths which can <em class="emphasis">not</em> be expressed as the ratio of two integer lengths? The answer, of course, is yes. Otherwise we wouldn’t have asked the question.  </div>
-<div class="para" id="NumbersRealRational-2-18">One of the best known examples of such a number is the circumference of a circle with diameter 1. This is the number usually denoted by <span class="process-math">\(\pi\text{.}\)</span> But circles are extremely complex objects — they only seem simple because they are so familiar. Arising as it does from a circle, you would expect the number <span class="process-math">\(\pi\)</span> to be very complex as well and this is true. In fact <span class="process-math">\(\pi\)</span> is an exceptionally weird number for a variety of reasons. Let’s start with something a little easier to think about.</div>
-<div class="para" id="NumbersRealRational-2-19"> Squares are simple. Two sets of parallel lines at right angles, all of the same length. What could be simpler? If we construct a square with sides having length 1 then its diagonal has length <span class="process-math">\(\sqrt{2}\text{.}\)</span>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The Rational Number Line<div class="autopermalink" data-description="Figure 2.0.2: "><a href="#RationalNumberLine" title="Copy heading and permalink for Figure 2.0.2: " aria-label="Copy heading and permalink for Figure 2.0.2: ">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="NumbersRealRational-2-10">This seems to work as a visualization because the rational numbers and the points on a line seem to share certain properties.  Chief among these is that between any two points on the rational line there is another point, just as between any two rational numbers there is another rational number.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="NumbersRealRational-2-11"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="NumbersRealRational-2-11-1-1"> Let <span class="process-math">\(a, b, c, d\in\NN\)</span> and find a rational number between <span class="process-math">\(a/b\)</span> and <span class="process-math">\(c/d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 2.0.3"><a href="#NumbersRealRational-2-11" title="Copy heading and permalink for Problem 2.0.3" aria-label="Copy heading and permalink for Problem 2.0.3">🔗</a></div>
+</article>
+<div class="para" id="NumbersRealRational-2-12">This is all very clean and satisfying until we examine it just a bit closer. Then it becomes quite mysterious. Consider again the rational numbers <span class="process-math">\(a/b\)</span> and <span class="process-math">\(c/d\text{.}\)</span> If we think of these as lengths we can ask, "Is there a third length, say <span class="process-math">\(\alpha\text{,}\)</span> such that we can divide <span class="process-math">\(a/b\)</span> into <span class="process-math">\(M\)</span> pieces, each of length <span class="process-math">\(\alpha\)</span> <em class="emphasis">and also</em> divide <span class="process-math">\(c/d\)</span> into <span class="process-math">\(N\)</span> pieces each of length <span class="process-math">\(\alpha?\)</span>" A few minutes thought should convince you that this is the same as the problem of finding a common denominator so <span class="process-math">\(\alpha=\frac{1}{bd}\)</span> will work nicely. (Confirm this yourself.)<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-13">You may be wondering what we’re making all of this fuss about. <em class="emphasis">Obviously</em> this is <em class="emphasis">always</em> true. In fact the previous paragraph gives an outline of a very nice little proof of this. Here are the theorem and its proof presented formally.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm_CommonDenominatorsExist"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm_CommonDenominatorsExist-1-1"> Suppose <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(d\)</span> are integers. There is a number <span class="process-math">\(\alpha\in\QQ\)</span> such that <span class="process-math">\(M\alpha=a/b\)</span> and <span class="process-math">\(N\alpha=c/d\)</span> where <span class="process-math">\(M\)</span> and <span class="process-math">\(N\)</span> are also integers.<div class="autopermalink" data-description="Paragraph"><a href="#thm_CommonDenominatorsExist-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.0.4"><a href="#thm_CommonDenominatorsExist" title="Copy heading and permalink for Theorem 2.0.4" aria-label="Copy heading and permalink for Theorem 2.0.4">🔗</a></div>
+</article>
+<article class="proof" id="NumbersRealRational-2-15"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div class="para" id="NumbersRealRational-2-15-1">To prove this theorem we will display <span class="process-math">\(\alpha\text{,}\)</span> <span class="process-math">\(M\)</span> and <span class="process-math">\(N\text{.}\)</span> It is your responsibility to confirm that these actually work. Here they are: <span class="process-math">\(\alpha=1/bd\text{,}\)</span> <span class="process-math">\(M=ad\text{,}\)</span> and <span class="process-math">\(N=cb\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1"><a href="#NumbersRealRational-2-15" title="Copy heading and permalink for Proof 1" aria-label="Copy heading and permalink for Proof 1">🔗</a></div>
+</article>
+<article class="problem example-like" id="NumbersRealRational-2-16"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="NumbersRealRational-2-16-1-1"> Confirm that <span class="process-math">\(\alpha, M, \text{ and } N\)</span> as given in the proof of <a href="NumbersRealRational.html#thm_CommonDenominatorsExist" class="xref" data-knowl="./knowl/xref/thm_CommonDenominatorsExist.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.4">Theorem 2.0.4</a> satisfy the requirements of the theorem.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 2.0.5"><a href="#NumbersRealRational-2-16" title="Copy heading and permalink for Problem 2.0.5" aria-label="Copy heading and permalink for Problem 2.0.5">🔗</a></div>
+</article>
+<div class="para" id="NumbersRealRational-2-17">
+<a href="NumbersRealRational.html#thm_CommonDenominatorsExist" class="xref" data-knowl="./knowl/xref/thm_CommonDenominatorsExist.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.4">Theorem 2.0.4</a> suggests the following very deep and important question: Are there lengths which can <em class="emphasis">not</em> be expressed as the ratio of two integer lengths? The answer, of course, is yes. Otherwise we wouldn’t have asked the question.  <div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-18">One of the best known examples of such a number is the circumference of a circle with diameter 1. This is the number usually denoted by <span class="process-math">\(\pi\text{.}\)</span> But circles are extremely complex objects — they only seem simple because they are so familiar. Arising as it does from a circle, you would expect the number <span class="process-math">\(\pi\)</span> to be very complex as well and this is true. In fact <span class="process-math">\(\pi\)</span> is an exceptionally weird number for a variety of reasons. Let’s start with something a little easier to think about.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-19"> Squares are simple. Two sets of parallel lines at right angles, all of the same length. What could be simpler? If we construct a square with sides having length 1 then its diagonal has length <span class="process-math">\(\sqrt{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="Sqrt2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Sqrt2.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.0.6<span class="period">.</span></span><span class="space"> </span>A construction of <span class="process-math">\(\sqrt{2}\)</span></figcaption></figure><div class="para" id="NumbersRealRational-2-21">This is a number which cannot be expressed as the <em class="emphasis">ratio</em> of two integers.  That is, it is <em class="emphasis">irrational.</em> This has been known since ancient times, but it is still quite disconcerting when first encountered.  It seems so counter-intuitive that the intellect rebels.  “This can’t be right,” it says. “That’s just crazy!”</div>
-<div class="para" id="NumbersRealRational-2-22">Nevertheless it is true and we can prove it is true as follows.</div>
-<div class="para" id="NumbersRealRational-2-23">What happens if we suppose that the square root of two <em class="emphasis">can</em> be expressed as a ratio of integers? We will show that this leads irrevocably to a conclusion that is manifestly not true.</div>
-<div class="para" id="NumbersRealRational-2-24">Suppose <span class="process-math">\(\sqrt{2}=a/b\)</span> where <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are integers. Suppose further that the fraction <span class="process-math">\(a/b\)</span> is in lowest terms. <em class="emphasis">This assumption is crucial because if <span class="process-math">\(a/b\)</span> is in lowest terms we know that at most only one of them is even.</em>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A construction of <span class="process-math">\(\sqrt{2}\)</span><div class="autopermalink" data-description="Figure 2.0.6: "><a href="#Sqrt2" title="Copy heading and permalink for Figure 2.0.6: " aria-label="Copy heading and permalink for Figure 2.0.6: ">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="NumbersRealRational-2-21">This is a number which cannot be expressed as the <em class="emphasis">ratio</em> of two integers.  That is, it is <em class="emphasis">irrational.</em> This has been known since ancient times, but it is still quite disconcerting when first encountered.  It seems so counter-intuitive that the intellect rebels.  “This can’t be right,” it says. “That’s just crazy!”<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-22">Nevertheless it is true and we can prove it is true as follows.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-23">What happens if we suppose that the square root of two <em class="emphasis">can</em> be expressed as a ratio of integers? We will show that this leads irrevocably to a conclusion that is manifestly not true.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-24">Suppose <span class="process-math">\(\sqrt{2}=a/b\)</span> where <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are integers. Suppose further that the fraction <span class="process-math">\(a/b\)</span> is in lowest terms. <em class="emphasis">This assumption is crucial because if <span class="process-math">\(a/b\)</span> is in lowest terms we know that at most only one of them is even.</em><div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="NumbersRealRational-2-25">
 <div class="para">So</div>
 <div class="displaymath process-math" id="NumbersRealRational-2-25-1">
 \begin{align*}
-\frac{a}{b} \amp = \sqrt{2}.\\
+\frac{a}{b} \amp = \sqrt{2}.
 \end{align*}
+</div>
 <div class="para intertext">Squaring both sides gives:</div>
+<div class="displaymath process-math" id="NumbersRealRational-2-25-3">
 \begin{align*}
-a^2 \amp = 2b^2.\\
+a^2 \amp = 2b^2.
 \end{align*}
+</div>
 <div class="para intertext">Therefore <span class="process-math">\(a^2\)</span> is even. But if <span class="process-math">\(a^2\)</span> is even then <span class="process-math">\(a\)</span> must be even also (why?). If <span class="process-math">\(a\)</span> is even then <span class="process-math">\(a=2k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> Therefore</div>
+<div class="displaymath process-math" id="NumbersRealRational-2-25-5">
 \begin{align*}
 4k^2\amp =2b^2\textit{ or}\\
 2k^2\amp = b^2\text{.}
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="NumbersRealRational-2-26">Therefore <span class="process-math">\(b^2\)</span> is also even and so <span class="process-math">\(b\)</span> must be even too. But this is impossible. We’ve just concluded that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both even and this conclusion follows directly from our initial assumption that at most one of them could be even.</div>
-<div class="para" id="NumbersRealRational-2-27">This is nonsense. Where is our error? It is not in any single step of our reasoning. That was all solid. Check it again to be sure.</div>
-<div class="para" id="NumbersRealRational-2-28">Therefore our error must be in the initial assumption that <span class="process-math">\(\sqrt{2}\)</span> could be expressed as a fraction. That assumption must therefore be false. In other words, <span class="process-math">\(\sqrt{2}\)</span> cannot be so expressed.</div>
-<article class="problem example-like" id="NumbersRealRational-2-29"><h2 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.0.7</span><span class="period">.</span><span class="space"> </span><span class="title">Irrational Numbers.</span>
-</h2>
-<div class="introduction" id="NumbersRealRational-2-29-3"><div class="para" id="NumbersRealRational-2-29-3-1">Show that each of the following numbers is irrational:</div></div>
-<article class="task exercise-like" id="NumbersRealRational-2-29-4"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="NumbersRealRational-2-29-4-1-1"><span class="process-math">\(\sqrt{3}\)</span></div></article><article class="task exercise-like" id="NumbersRealRational-2-29-5"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="NumbersRealRational-2-29-5-1-1"><span class="process-math">\(\sqrt{5}\)</span></div></article><article class="task exercise-like" id="NumbersRealRational-2-29-6"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="NumbersRealRational-2-29-6-1-1"><span class="process-math">\(\sqrt[3]{2}\)</span></div></article><article class="task exercise-like" id="NumbersRealRational-2-29-7"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="NumbersRealRational-2-26">Therefore <span class="process-math">\(b^2\)</span> is also even and so <span class="process-math">\(b\)</span> must be even too. But this is impossible. We’ve just concluded that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both even and this conclusion follows directly from our initial assumption that at most one of them could be even.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-27">This is nonsense. Where is our error? It is not in any single step of our reasoning. That was all solid. Check it again to be sure.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-28">Therefore our error must be in the initial assumption that <span class="process-math">\(\sqrt{2}\)</span> could be expressed as a fraction. That assumption must therefore be false. In other words, <span class="process-math">\(\sqrt{2}\)</span> cannot be so expressed.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="NumbersRealRational-2-29"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Irrational Numbers.</span>
+</h3>
+<div class="introduction" id="NumbersRealRational-2-29-3">
+<div class="para" id="NumbersRealRational-2-29-3-1">Show that each of the following numbers is irrational:<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-29-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="NumbersRealRational-2-29-4"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="NumbersRealRational-2-29-4-1-1">
+<span class="process-math">\(\sqrt{3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-29-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.0.7.a"><a href="#NumbersRealRational-2-29-4" title="Copy heading and permalink for Task 2.0.7.a" aria-label="Copy heading and permalink for Task 2.0.7.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="NumbersRealRational-2-29-5"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="NumbersRealRational-2-29-5-1-1">
+<span class="process-math">\(\sqrt{5}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-29-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.0.7.b"><a href="#NumbersRealRational-2-29-5" title="Copy heading and permalink for Task 2.0.7.b" aria-label="Copy heading and permalink for Task 2.0.7.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="NumbersRealRational-2-29-6"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="NumbersRealRational-2-29-6-1-1">
+<span class="process-math">\(\sqrt[3]{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-29-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.0.7.c"><a href="#NumbersRealRational-2-29-6" title="Copy heading and permalink for Task 2.0.7.c" aria-label="Copy heading and permalink for Task 2.0.7.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="NumbersRealRational-2-29-7"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="NumbersRealRational-2-29-7-1-1">
-<span class="process-math">\(i\)</span> <span class="process-math">\((=\sqrt{-1})\)</span>
-</div></article><article class="task exercise-like" id="NumbersRealRational-2-29-8"><h3 class="heading"><span class="codenumber">(e)</span></h3>
-<div class="para" id="NumbersRealRational-2-29-8-1-1">The square root of every positive integer which is not the square of an integer.</div></article></article><div class="para" id="NumbersRealRational-2-30"> The fact that <span class="process-math">\(\sqrt{2}\)</span> is not rational is cute and interesting, but unless, like the Pythagoreans of ancient Greece, you have a strongly held religious conviction that all numbers are rational, it does not seem terribly important. On the other hand, the very existence of <span class="process-math">\(\sqrt{2}\)</span> raises some interesting questions. For example what can the symbol <span class="process-math">\(4^{\sqrt{2}}\)</span> possibly mean? If the exponent were a rational number, say <span class="process-math">\(m/n\text{,}\)</span> then clearly <span class="process-math">\(4^{m/n}=\sqrt[n]{4^m}\text{.}\)</span> But since <span class="process-math">\(\sqrt{2}\neq m/n\)</span> for <em class="emphasis">any</em> integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> how do we interpret <span class="process-math">\(4^{\sqrt{2}}?\)</span> Does it have any meaning at all? The more you think about this, the more puzzling the existence of irrational numbers becomes. Suppose for example we reconsider the construction of a line segment of length <span class="process-math">\(\sqrt{2}\text{.}\)</span> It is clear that the construction works and that we really can build such a line segment. It exists.</div>
-<div class="para" id="NumbersRealRational-2-31">Repeat the construction but this time let’s put the base side on the rational line.</div>
-<figure class="figure figure-like" id="Sqrt2OnRatLine"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Sqrt2OnRatLine.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.0.8<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="NumbersRealRational-2-33">We know that the diagonal of this square is <span class="process-math">\(\sqrt{2}\)</span> as indicated. And we know that <span class="process-math">\(\sqrt{2}\)</span> is not a rational number.</div>
-<div class="para" id="NumbersRealRational-2-34">Now leave the diagonal pinned at <span class="process-math">\((0,0)\)</span> but allow it to rotate down so that it coincides with the <span class="process-math">\(x-\)</span>axis.</div>
-<figure class="figure figure-like" id="Sqrt2Irrational"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Sqrt2Irrational.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.0.9<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="NumbersRealRational-2-36">The end of our diagonal will trace out an arc of the circle with radius <span class="process-math">\(\sqrt{2}\text{.}\)</span> When the diagonal coincides with the <span class="process-math">\(x-\)</span>axis, its endpoint will obviously be the point <span class="process-math">\((\sqrt{2}, 0)\)</span> as shown.</div>
-<div class="para" id="NumbersRealRational-2-37">But wait! We’re using the <em class="emphasis">rational</em> number line for our <span class="process-math">\(x-\)</span>axis. That means the only points on the <span class="process-math">\(x-\)</span>axis are those that correspond to rational numbers (fractions). But we know that <span class="process-math">\(\sqrt{2}\)</span> is not rational! Conclusion: There is no point <span class="process-math">\((\sqrt{2},0)\text{.}\)</span> It simply doesn’t exist.</div>
-<div class="para" id="NumbersRealRational-2-38">Put differently, there is a hole in the rational number line right where <span class="process-math">\(\sqrt{2}\)</span> should be.</div>
-<figure class="figure figure-like" id="RationalLineWithHoles"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/RationalLineWithHoles.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.0.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="NumbersRealRational-2-40">This is weird!</div>
-<div class="para" id="NumbersRealRational-2-41">Recall that between any two rational numbers there is always another. This fact is what led us to represent the rational numbers with a line in the first place.</div>
-<div class="para" id="NumbersRealRational-2-42">But it’s even worse than that. It’s straightforward to show that <span class="process-math">\(\sqrt{3}\text{,}\)</span> <span class="process-math">\(\sqrt{5}\text{,}\)</span> etc. are all irrational too. So are <span class="process-math">\(\pi\)</span> and <span class="process-math">\(e\text{,}\)</span> though they aren’t as easy to show. It seems that the rational line has a bunch of holes in it. Infinitely many.</div>
-<div class="para" id="NumbersRealRational-2-43">And yet, the following theorem is true</div>
-<article class="theorem theorem-like" id="thm_IrrationalBetweenIrrationals"><h2 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.0.11</span><span class="period">.</span>
-</h2>
-<div class="para logical" id="thm_IrrationalBetweenIrrationals-1-1"><ol class="lower-alpha ol-marker-1" id="thm_IrrationalBetweenIrrationals-1-1-2">
-<li id="thm_IrrationalBetweenIrrationals-1-1-2-1"><div class="para" id="thm_IrrationalBetweenIrrationals-1-1-2-1-1">Between any two distinct real numbers there is a rational number.</div></li>
-<li id="thm_IrrationalBetweenIrrationals-1-1-2-2"><div class="para" id="thm_IrrationalBetweenIrrationals-1-1-2-2-1">Between any two distinct real numbers there is an irrational number.</div></li>
-</ol></div></article><div class="para" id="NumbersRealRational-2-45">Both parts of this theorem rely on a judicious use of what is now called the Archimedean Property of the Real Number System, which can be formally stated as follows.</div>
-<article class="principle theorem-like" id="NumbersRealRational-2-46"><h2 class="heading">
-<span class="type">Principle</span><span class="space"> </span><span class="codenumber">2.0.12</span><span class="period">.</span><span class="space"> </span><span class="title">The Archimedean Property.</span>
-</h2>
-<div class="para" id="NumbersRealRational-2-46-2-1"> Given any two positive real numbers, <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> there is a positive integer, <span class="process-math">\(n\)</span> such that <span class="process-math">\(na&gt;b\text{.}\)</span>
-</div></article><div class="para" id="NumbersRealRational-2-47">Physically this says that we can empty an ocean <span class="process-math">\(b\)</span> with a teaspoon <span class="process-math">\(a\text{,}\)</span> provided we are willing to use the teaspoon a large number of times <span class="process-math">\(n\text{.}\)</span>
+<span class="process-math">\(i\)</span> <span class="process-math">\((=\sqrt{-1})\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-29-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="NumbersRealRational-2-48">This is such an intuitively straightforward concept that it is easy to accept it without proof. Until the invention of calculus, and even for some time after that, it was simply assumed. However as the foundational problems posed by the concepts of calculus were understood and solved we were eventually led to a deeper understanding of the complexities of the real number system. The Archimedean Property is no longer taken as an unproved axiom, but rather it is now understood to be a consequence of other axioms. We will show this later, but for now we will accept it as obviously true just as Archimedes did.</div>
-<div class="para" id="NumbersRealRational-2-49">With the invention of calculus, mathematicians of the seventeenth century began to use objects which didn’t satisfy the Archimedean Property (in fact, so did Archimedes). As we shall see in the next chapter, when Leibniz wrote the first paper on his version of the calculus, he followed this practice by explicitly laying out rules for manipulating infinitely small quantities (infinitesimals). These were taken to be actual numbers which are not zero and yet smaller than any real number. The notation he used was <span class="process-math">\(\dx{ x}\)</span> (an infinitely small displacement in the <span class="process-math">\(x\)</span> direction), and <span class="process-math">\(\dx{ y}\)</span> (an infinitely small displacement in the <span class="process-math">\(y\)</span> direction). These symbols should look familiar to you. They are the same <span class="process-math">\(\dx{ y}\)</span> and <span class="process-math">\(\dx{ x}\)</span> used to form the derivative symbol <span class="process-math">\(\dfdx{y}{x}\)</span> that you learned about in calculus.</div>
-<div class="para" id="NumbersRealRational-2-50">Mathematicians of the seventeenth and eighteenth centuries made amazing scientific and mathematical progress exploiting these infinitesimals, even though they were foundationally suspect. No matter how many times you add the infinitesimal <span class="process-math">\(\dx{ x}\)</span> to itself the result will not be bigger than, say <span class="process-math">\(10^{-1000}\text{,}\)</span> which is very bizarre.</div>
-<div class="para" id="NumbersRealRational-2-51">When foundational issues came to the forefront, infinitesimals fell somewhat out of favor. You probably didn’t use them very much in calculus. Most of the time you probably used the prime notation, <span class="process-math">\(f^\prime(x)\)</span> introduced by Lagrange  in the eighteenth century. Some of the themes in this book are: Why differentials fell out of favor, what were they replaced with and how the modern notations you learned in calculus evolved over time.</div>
-<div class="para" id="NumbersRealRational-2-52">To conclude this aside on the Archimedean Property, the idea of infinitesimals was revisited in the twentieth century by the logician Abraham Robinson in <a href="ASORA-6-1.html#robinson74__non_stand_analy" class="xref" data-knowl="./knowl/xref/robinson74__non_stand_analy.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 12">[12]</a>. Robinson was able to put the idea of infinitesimals on a solid logical foundation. But in the 18th century, the existence of infinitesimal numbers was shaky to say the very least. However this did not prevent mathematicians from successfully exploiting these infinitely small quantities.</div>
-<div class="para" id="NumbersRealRational-2-53">We will come back to this saga in later chapters, but for now we return to <a href="NumbersRealRational.html#thm_IrrationalBetweenIrrationals" class="xref" data-knowl="./knowl/xref/thm_IrrationalBetweenIrrationals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.11">Theorem 2.0.11</a>.</div>
-<article class="proof" id="NumbersRealRational-2-54"><h2 class="heading"><span class="title">Sketch of Proof.</span></h2>
-<div class="para" id="NumbersRealRational-2-54-2">We will outline the proof of part (a) of <a href="NumbersRealRational.html#thm_IrrationalBetweenIrrationals" class="xref" data-knowl="./knowl/xref/thm_IrrationalBetweenIrrationals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.11">Theorem 2.0.11</a> and indicate how it can be used to prove part b.</div>
+<div class="autopermalink" data-description="Task 2.0.7.d"><a href="#NumbersRealRational-2-29-7" title="Copy heading and permalink for Task 2.0.7.d" aria-label="Copy heading and permalink for Task 2.0.7.d">🔗</a></div>
+</article>
+<article class="task exercise-like" id="NumbersRealRational-2-29-8"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="NumbersRealRational-2-29-8-1-1">The square root of every positive integer which is not the square of an integer.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-29-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.0.7.e"><a href="#NumbersRealRational-2-29-8" title="Copy heading and permalink for Task 2.0.7.e" aria-label="Copy heading and permalink for Task 2.0.7.e">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 2.0.7: Irrational Numbers"><a href="#NumbersRealRational-2-29" title="Copy heading and permalink for Problem 2.0.7: Irrational Numbers" aria-label="Copy heading and permalink for Problem 2.0.7: Irrational Numbers">🔗</a></div>
+</article>
+<div class="para" id="NumbersRealRational-2-30"> The fact that <span class="process-math">\(\sqrt{2}\)</span> is not rational is cute and interesting, but unless, like the Pythagoreans of ancient Greece, you have a strongly held religious conviction that all numbers are rational, it does not seem terribly important. On the other hand, the very existence of <span class="process-math">\(\sqrt{2}\)</span> raises some interesting questions. For example what can the symbol <span class="process-math">\(4^{\sqrt{2}}\)</span> possibly mean? If the exponent were a rational number, say <span class="process-math">\(m/n\text{,}\)</span> then clearly <span class="process-math">\(4^{m/n}=\sqrt[n]{4^m}\text{.}\)</span> But since <span class="process-math">\(\sqrt{2}\neq m/n\)</span> for <em class="emphasis">any</em> integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> how do we interpret <span class="process-math">\(4^{\sqrt{2}}?\)</span> Does it have any meaning at all? The more you think about this, the more puzzling the existence of irrational numbers becomes. Suppose for example we reconsider the construction of a line segment of length <span class="process-math">\(\sqrt{2}\text{.}\)</span> It is clear that the construction works and that we really can build such a line segment. It exists.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-31">Repeat the construction but this time let’s put the base side on the rational line.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="Sqrt2OnRatLine"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Sqrt2OnRatLine.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 2.0.8: "><a href="#Sqrt2OnRatLine" title="Copy heading and permalink for Figure 2.0.8: " aria-label="Copy heading and permalink for Figure 2.0.8: ">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="NumbersRealRational-2-33">We know that the diagonal of this square is <span class="process-math">\(\sqrt{2}\)</span> as indicated. And we know that <span class="process-math">\(\sqrt{2}\)</span> is not a rational number.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-34">Now leave the diagonal pinned at <span class="process-math">\((0,0)\)</span> but allow it to rotate down so that it coincides with the <span class="process-math">\(x-\)</span>axis.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="Sqrt2Irrational"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/Sqrt2Irrational.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 2.0.9: "><a href="#Sqrt2Irrational" title="Copy heading and permalink for Figure 2.0.9: " aria-label="Copy heading and permalink for Figure 2.0.9: ">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="NumbersRealRational-2-36">The end of our diagonal will trace out an arc of the circle with radius <span class="process-math">\(\sqrt{2}\text{.}\)</span> When the diagonal coincides with the <span class="process-math">\(x-\)</span>axis, its endpoint will obviously be the point <span class="process-math">\((\sqrt{2}, 0)\)</span> as shown.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-37">But wait! We’re using the <em class="emphasis">rational</em> number line for our <span class="process-math">\(x-\)</span>axis. That means the only points on the <span class="process-math">\(x-\)</span>axis are those that correspond to rational numbers (fractions). But we know that <span class="process-math">\(\sqrt{2}\)</span> is not rational! Conclusion: There is no point <span class="process-math">\((\sqrt{2},0)\text{.}\)</span> It simply doesn’t exist.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-37" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-38">Put differently, there is a hole in the rational number line right where <span class="process-math">\(\sqrt{2}\)</span> should be.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-38" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="RationalLineWithHoles"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/RationalLineWithHoles.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 2.0.10: "><a href="#RationalLineWithHoles" title="Copy heading and permalink for Figure 2.0.10: " aria-label="Copy heading and permalink for Figure 2.0.10: ">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="NumbersRealRational-2-40">This is weird!<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-40" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-41">Recall that between any two rational numbers there is always another. This fact is what led us to represent the rational numbers with a line in the first place.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-41" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-42">But it’s even worse than that. It’s straightforward to show that <span class="process-math">\(\sqrt{3}\text{,}\)</span> <span class="process-math">\(\sqrt{5}\text{,}\)</span> etc. are all irrational too. So are <span class="process-math">\(\pi\)</span> and <span class="process-math">\(e\text{,}\)</span> though they aren’t as easy to show. It seems that the rational line has a bunch of holes in it. Infinitely many.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-42" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-43">And yet, the following theorem is true<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-43" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm_IrrationalBetweenIrrationals"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="thm_IrrationalBetweenIrrationals-1-1">
+<ol class="lower-alpha ol-marker-1" id="thm_IrrationalBetweenIrrationals-1-1-2">
+<li id="thm_IrrationalBetweenIrrationals-1-1-2-1">
+<div class="para" id="thm_IrrationalBetweenIrrationals-1-1-2-1-1">Between any two distinct real numbers there is a rational number.<div class="autopermalink" data-description="Paragraph"><a href="#thm_IrrationalBetweenIrrationals-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#thm_IrrationalBetweenIrrationals-1-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="thm_IrrationalBetweenIrrationals-1-1-2-2">
+<div class="para" id="thm_IrrationalBetweenIrrationals-1-1-2-2-1">Between any two distinct real numbers there is an irrational number.<div class="autopermalink" data-description="Paragraph"><a href="#thm_IrrationalBetweenIrrationals-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#thm_IrrationalBetweenIrrationals-1-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm_IrrationalBetweenIrrationals-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.0.11"><a href="#thm_IrrationalBetweenIrrationals" title="Copy heading and permalink for Theorem 2.0.11" aria-label="Copy heading and permalink for Theorem 2.0.11">🔗</a></div>
+</article>
+<div class="para" id="NumbersRealRational-2-45">Both parts of this theorem rely on a judicious use of what is now called the Archimedean Property of the Real Number System, which can be formally stated as follows.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-45" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="principle theorem-like" id="NumbersRealRational-2-46"><h3 class="heading">
+<span class="type">Principle</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Archimedean Property.</span>
+</h3>
+<div class="para" id="NumbersRealRational-2-46-2-1"> Given any two positive real numbers, <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> there is a positive integer, <span class="process-math">\(n\)</span> such that <span class="process-math">\(na&gt;b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-46-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Principle 2.0.12: The Archimedean Property"><a href="#NumbersRealRational-2-46" title="Copy heading and permalink for Principle 2.0.12: The Archimedean Property" aria-label="Copy heading and permalink for Principle 2.0.12: The Archimedean Property">🔗</a></div>
+</article>
+<div class="para" id="NumbersRealRational-2-47">Physically this says that we can empty an ocean <span class="process-math">\(b\)</span> with a teaspoon <span class="process-math">\(a\text{,}\)</span> provided we are willing to use the teaspoon a large number of times <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-47" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-48">This is such an intuitively straightforward concept that it is easy to accept it without proof. Until the invention of calculus, and even for some time after that, it was simply assumed. However as the foundational problems posed by the concepts of calculus were understood and solved we were eventually led to a deeper understanding of the complexities of the real number system. The Archimedean Property is no longer taken as an unproved axiom, but rather it is now understood to be a consequence of other axioms. We will show this later, but for now we will accept it as obviously true just as Archimedes did.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-48" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-49">With the invention of calculus, mathematicians of the seventeenth century began to use objects which didn’t satisfy the Archimedean Property (in fact, so did Archimedes). As we shall see in the next chapter, when Leibniz wrote the first paper on his version of the calculus, he followed this practice by explicitly laying out rules for manipulating infinitely small quantities (infinitesimals). These were taken to be actual numbers which are not zero and yet smaller than any real number. The notation he used was <span class="process-math">\(\dx{ x}\)</span> (an infinitely small displacement in the <span class="process-math">\(x\)</span> direction), and <span class="process-math">\(\dx{ y}\)</span> (an infinitely small displacement in the <span class="process-math">\(y\)</span> direction). These symbols should look familiar to you. They are the same <span class="process-math">\(\dx{ y}\)</span> and <span class="process-math">\(\dx{ x}\)</span> used to form the derivative symbol <span class="process-math">\(\dfdx{y}{x}\)</span> that you learned about in calculus.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-49" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-50">Mathematicians of the seventeenth and eighteenth centuries made amazing scientific and mathematical progress exploiting these infinitesimals, even though they were foundationally suspect. No matter how many times you add the infinitesimal <span class="process-math">\(\dx{ x}\)</span> to itself the result will not be bigger than, say <span class="process-math">\(10^{-1000}\text{,}\)</span> which is very bizarre.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-50" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-51">When foundational issues came to the forefront, infinitesimals fell somewhat out of favor. You probably didn’t use them very much in calculus. Most of the time you probably used the prime notation, <span class="process-math">\(f^\prime(x)\)</span> introduced by Lagrange  in the eighteenth century. Some of the themes in this book are: Why differentials fell out of favor, what were they replaced with and how the modern notations you learned in calculus evolved over time.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-51" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-52">To conclude this aside on the Archimedean Property, the idea of infinitesimals was revisited in the twentieth century by the logician Abraham Robinson in <a href="ASORA-6-1.html#robinson74__non_stand_analy" class="xref" data-knowl="./knowl/xref/robinson74__non_stand_analy.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 12">[12]</a>. Robinson was able to put the idea of infinitesimals on a solid logical foundation. But in the 18th century, the existence of infinitesimal numbers was shaky to say the very least. However this did not prevent mathematicians from successfully exploiting these infinitely small quantities.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-52" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-53">We will come back to this saga in later chapters, but for now we return to <a href="NumbersRealRational.html#thm_IrrationalBetweenIrrationals" class="xref" data-knowl="./knowl/xref/thm_IrrationalBetweenIrrationals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.11">Theorem 2.0.11</a>.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-53" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proof" id="NumbersRealRational-2-54"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3>
+<div class="para" id="NumbersRealRational-2-54-2">We will outline the proof of part (a) of <a href="NumbersRealRational.html#thm_IrrationalBetweenIrrationals" class="xref" data-knowl="./knowl/xref/thm_IrrationalBetweenIrrationals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.11">Theorem 2.0.11</a> and indicate how it can be used to prove part b.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-54-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="NumbersRealRational-2-54-3">
 <div class="para">Let <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> be real numbers with <span class="process-math">\(\alpha &gt; \beta\text{.}\)</span> There are two cases.</div>
 <ul class="disc" id="NumbersRealRational-2-54-3-4">
 <li id="NumbersRealRational-2-54-3-4-1">
-<span class="heading"><span class="title">Case 1:.</span></span><div class="para" id="NumbersRealRational-2-54-3-4-1-2">
-<span class="process-math">\(\alpha-\beta &gt; 1\text{.}\)</span> In this case there is at least one integer between <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\text{.}\)</span> Since integers are rational we are done.</div>
+<span class="heading li--heading"><span class="title li--heading-title">Case 1:.</span></span>
+<div class="para" id="NumbersRealRational-2-54-3-4-1-2">
+<span class="process-math">\(\alpha-\beta &gt; 1\text{.}\)</span> In this case there is at least one integer between <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\text{.}\)</span> Since integers are rational we are done.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-54-3-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Case 1:"><a href="#NumbersRealRational-2-54-3-4-1" title="Copy heading and permalink for Item: Case 1:" aria-label="Copy heading and permalink for Item: Case 1:">🔗</a></div>
 </li>
 <li id="NumbersRealRational-2-54-3-4-2">
-<span class="heading"><span class="title">Case 2:.</span></span><div class="para" id="NumbersRealRational-2-54-3-4-2-2">
+<span class="heading li--heading"><span class="title li--heading-title">Case 2:.</span></span>
+<div class="para" id="NumbersRealRational-2-54-3-4-2-2">
 <span class="process-math">\(\alpha-\beta \le 1\text{.}\)</span>  In this case, by the Archimedean Property there is a positive integer, say <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n(\alpha-\beta) = n\alpha-n\beta
-&gt; 1\text{.}\)</span>  Now there will be an integer between <span class="process-math">\(n\alpha\)</span> and <span class="process-math">\(n\beta\text{.}\)</span>  You should now be able to find a rational number between <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\text{.}\)</span>
+&gt; 1\text{.}\)</span>  Now there will be an integer between <span class="process-math">\(n\alpha\)</span> and <span class="process-math">\(n\beta\text{.}\)</span>  You should now be able to find a rational number between <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-54-3-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item: Case 2:"><a href="#NumbersRealRational-2-54-3-4-2" title="Copy heading and permalink for Item: Case 2:" aria-label="Copy heading and permalink for Item: Case 2:">🔗</a></div>
 </li>
 </ul>
-</div></article><div class="para" id="NumbersRealRational-2-55">For part b, divide <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> by any positive irrational number and apply part a. There are a couple of details to keep in mind. These are considered in the following problem.</div>
-<article class="problem example-like" id="NumbersRealRational-2-56"><h2 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">2.0.13</span><span class="period">.</span>
-</h2>
-<article class="task exercise-like" id="NumbersRealRational-2-56-2"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="NumbersRealRational-2-56-2-1-1">Prove that the product of a nonzero rational number and an irrational number is irrational.</div></article><article class="task exercise-like" id="NumbersRealRational-2-56-3"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="NumbersRealRational-2-56-3-1-1">Use the result of part (a) to prove <a href="NumbersRealRational.html#thm_IrrationalBetweenIrrationals" class="xref" data-knowl="./knowl/xref/thm_IrrationalBetweenIrrationals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.11">Theorem 2.0.11</a>.</div></article></article><div class="para" id="NumbersRealRational-2-57">As a practical matter, the existence of irrational numbers isn’t really very important. In light of <a href="NumbersRealRational.html#thm_IrrationalBetweenIrrationals" class="xref" data-knowl="./knowl/xref/thm_IrrationalBetweenIrrationals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.11">Theorem 2.0.11</a>, any irrational number can be approximated arbitrarily closely by a rational number. So if we’re designing a bridge and <span class="process-math">\(\sqrt{2}\)</span> is needed we just use <span class="process-math">\(1.414\)</span> instead. The error introduced is less than <span class="process-math">\(0.001 =1/1000\)</span> so it probably doesn’t matter.</div>
-<div class="para" id="NumbersRealRational-2-58">But from a theoretical point of view this is devastating. When calculus was invented, the rational numbers were suddenly not up to the task of justifying the concepts and operations we needed to work with.</div>
-<div class="para" id="NumbersRealRational-2-59">Newton explicitly founded his version of calculus on the assumption that we can think of variable quantities as being generated by a continuous motion. If our number system has holes in it such continuous motion is impossible because we have no way to jump over the gaps. So Newton simply postulated that there were no holes. He filled in the hole where <span class="process-math">\(\sqrt{2}\)</span> should be. He simply said, yes there is a number there called <span class="process-math">\(\sqrt{2}\)</span> and he did the same with all of the other holes.</div>
-<div class="para" id="NumbersRealRational-2-60">To be sure there is no record of Newton explicitly saying, “Here’s how I’m going to fill in the holes in the rational number line.” Along with everyone else at the time, he simply assumed there were no holes and moved on. It took about <span class="process-math">\(200\)</span> years of puzzling and arguing over the contradictions, anomalies and paradoxes to work out the consequences of that apparently simple assumption. The task may not yet be fully accomplished, but by the 20th century the properties of the real number system (<span class="process-math">\(\RR\)</span>) as an extension of the rational number system (<span class="process-math">\(\QQ\)</span>) were well understood. Here are both systems visualized as lines:</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-54-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 2: Sketch of Proof"><a href="#NumbersRealRational-2-54" title="Copy heading and permalink for Proof 2: Sketch of Proof" aria-label="Copy heading and permalink for Proof 2: Sketch of Proof">🔗</a></div>
+</article>
+<div class="para" id="NumbersRealRational-2-55">For part b, divide <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\)</span> by any positive irrational number and apply part a. There are a couple of details to keep in mind. These are considered in the following problem.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-55" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="NumbersRealRational-2-56"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<article class="task exercise-like" id="NumbersRealRational-2-56-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="NumbersRealRational-2-56-2-1-1">Prove that the product of a nonzero rational number and an irrational number is irrational.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-56-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.0.13.a"><a href="#NumbersRealRational-2-56-2" title="Copy heading and permalink for Task 2.0.13.a" aria-label="Copy heading and permalink for Task 2.0.13.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="NumbersRealRational-2-56-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="NumbersRealRational-2-56-3-1-1">Use the result of part (a) to prove <a href="NumbersRealRational.html#thm_IrrationalBetweenIrrationals" class="xref" data-knowl="./knowl/xref/thm_IrrationalBetweenIrrationals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.11">Theorem 2.0.11</a>.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-56-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.0.13.b"><a href="#NumbersRealRational-2-56-3" title="Copy heading and permalink for Task 2.0.13.b" aria-label="Copy heading and permalink for Task 2.0.13.b">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 2.0.13"><a href="#NumbersRealRational-2-56" title="Copy heading and permalink for Problem 2.0.13" aria-label="Copy heading and permalink for Problem 2.0.13">🔗</a></div>
+</article>
+<div class="para" id="NumbersRealRational-2-57">As a practical matter, the existence of irrational numbers isn’t really very important. In light of <a href="NumbersRealRational.html#thm_IrrationalBetweenIrrationals" class="xref" data-knowl="./knowl/xref/thm_IrrationalBetweenIrrationals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.0.11">Theorem 2.0.11</a>, any irrational number can be approximated arbitrarily closely by a rational number. So if we’re designing a bridge and <span class="process-math">\(\sqrt{2}\)</span> is needed we just use <span class="process-math">\(1.414\)</span> instead. The error introduced is less than <span class="process-math">\(0.001 =1/1000\)</span> so it probably doesn’t matter.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-57" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-58">But from a theoretical point of view this is devastating. When calculus was invented, the rational numbers were suddenly not up to the task of justifying the concepts and operations we needed to work with.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-58" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-59">Newton explicitly founded his version of calculus on the assumption that we can think of variable quantities as being generated by a continuous motion. If our number system has holes in it such continuous motion is impossible because we have no way to jump over the gaps. So Newton simply postulated that there were no holes. He filled in the hole where <span class="process-math">\(\sqrt{2}\)</span> should be. He simply said, yes there is a number there called <span class="process-math">\(\sqrt{2}\)</span> and he did the same with all of the other holes.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-59" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-60">To be sure there is no record of Newton explicitly saying, “Here’s how I’m going to fill in the holes in the rational number line.” Along with everyone else at the time, he simply assumed there were no holes and moved on. It took about <span class="process-math">\(200\)</span> years of puzzling and arguing over the contradictions, anomalies and paradoxes to work out the consequences of that apparently simple assumption. The task may not yet be fully accomplished, but by the 20th century the properties of the real number system (<span class="process-math">\(\RR\)</span>) as an extension of the rational number system (<span class="process-math">\(\QQ\)</span>) were well understood. Here are both systems visualized as lines:<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-60" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="RandQ"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/RandQ.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.0.14<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(\RR\)</span> and <span class="process-math">\(\QQ\)</span></figcaption></figure><div class="para" id="NumbersRealRational-2-62">Impressive, no?</div>
-<div class="para" id="NumbersRealRational-2-63">The reason they look alike, except for the labels <span class="process-math">\(\RR\)</span> and <span class="process-math">\(\QQ\)</span> of course, is that our ability to draw sketches of the objects we’re studying utterly fails when we try to sketch <span class="process-math">\(\RR\text{,}\)</span> as different from <span class="process-math">\(\QQ\text{.}\)</span> All of the holes in <span class="process-math">\(\QQ\)</span> really are there, but the non-holes are packed together so closely that we can’t separate them in a drawing. This inability to sketch the objects we study will be a frequent source of frustration.</div>
-<div class="para" id="NumbersRealRational-2-64">Of course, this will not stop us from drawing sketches. When we do, our imaginations will save us because it <em class="emphasis">is</em> possible to <em class="emphasis">imagine</em> <span class="process-math">\(\QQ\)</span> as distinct from <span class="process-math">\(\RR\text{.}\)</span> But put away the idea that a sketch is an accurate representation of anything. At best our sketches will only be aids to the imagination.</div>
-<div class="para" id="NumbersRealRational-2-65">So, at this point we will simply assume the existence of the real numbers. We will assume also that they have all of the properties that we are used to. This is perfectly acceptable as long as we make our assumptions explicit. However we need to be aware that, so far, the existence and properties of the real numbers is an <em class="emphasis">assumption</em> that has not been logically derived. Any time we make an assumption we need to be prepared to either abandon it completely if we find that it leads to nonsensical results, or to re-examine the assumption in the light of these results to see if we can find another assumption that subsumes the first and explains the (apparently) nonsensical results.</div></section><nav class="summary-links"><ul><li><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Additional Problems</span></a></li></ul></nav></section></div>
-<div class="ptx-content-footer">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.0.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(\RR\)</span> and <span class="process-math">\(\QQ\)</span><div class="autopermalink" data-description="Figure 2.0.14: "><a href="#RandQ" title="Copy heading and permalink for Figure 2.0.14: " aria-label="Copy heading and permalink for Figure 2.0.14: ">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="NumbersRealRational-2-62">Impressive, no?<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-62" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-63">The reason they look alike, except for the labels <span class="process-math">\(\RR\)</span> and <span class="process-math">\(\QQ\)</span> of course, is that our ability to draw sketches of the objects we’re studying utterly fails when we try to sketch <span class="process-math">\(\RR\text{,}\)</span> as different from <span class="process-math">\(\QQ\text{.}\)</span> All of the holes in <span class="process-math">\(\QQ\)</span> really are there, but the non-holes are packed together so closely that we can’t separate them in a drawing. This inability to sketch the objects we study will be a frequent source of frustration.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-63" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-64">Of course, this will not stop us from drawing sketches. When we do, our imaginations will save us because it <em class="emphasis">is</em> possible to <em class="emphasis">imagine</em> <span class="process-math">\(\QQ\)</span> as distinct from <span class="process-math">\(\RR\text{.}\)</span> But put away the idea that a sketch is an accurate representation of anything. At best our sketches will only be aids to the imagination.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-64" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NumbersRealRational-2-65">So, at this point we will simply assume the existence of the real numbers. We will assume also that they have all of the properties that we are used to. This is perfectly acceptable as long as we make our assumptions explicit. However we need to be aware that, so far, the existence and properties of the real numbers is an <em class="emphasis">assumption</em> that has not been logically derived. Any time we make an assumption we need to be prepared to either abandon it completely if we find that it leads to nonsensical results, or to re-examine the assumption in the light of these results to see if we can find another assumption that subsumes the first and explains the (apparently) nonsensical results.<div class="autopermalink" data-description="Paragraph"><a href="#NumbersRealRational-2-65" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><nav class="summary-links"><ul><li><a href="NumbersRealRational-AddProbs.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Additional Problems</span></a></li></ul></nav><div class="autopermalink" data-description="Chapter 2: Numbers, Real (\RR) and Rational (\QQ)"><a href="#NumbersRealRational" title="Copy heading and permalink for Chapter 2: Numbers, Real (\RR) and Rational (\QQ)" aria-label="Copy heading and permalink for Chapter 2: Numbers, Real (\RR) and Rational (\QQ)">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ThreeLessons_lesson-three.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="NumbersRealRational-AddProbs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

@@ -6,77 +6,35 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Lesson Two</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
-<meta property="book:author" content="Robert Rogers, (Emeritus)">
-<meta property="book:author" content="Eugene Boman, (Emeritus)">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="og:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.42"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -98,31 +56,32 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.6.1';
+eBookConfig.runestone_version = '7.13.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c7804631fa963734.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f7a03b209751032d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
+<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.2f713d2360adcee7.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
 <p class="byline">Robert Rogers, (Emeritus), Eugene Boman, (Emeritus)</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
-</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ThreeLessons-lesson-one.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Threelessons.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ThreeLessons_lesson-three.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
@@ -291,49 +250,79 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="ThreeLessons_lesson-two"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Lesson Two</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="ThreeLessons_lesson-two">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Lesson Two</span>
 </h2>
-<div class="para" id="ThreeLessons_lesson-two-2">Read and understand the following development of the Quadratic Formula.</div>
+<div class="para" id="ThreeLessons_lesson-two-2">Read and understand the following development of the Quadratic Formula.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="ThreeLessons_lesson-two-3">
 <div class="para">Suppose <span class="process-math">\(a\neq0\text{.}\)</span>  If</div>
 <div class="displaymath process-math" id="ThreeLessons_lesson-two-3-2">
-\begin{align}
-ax^2+bx+c =0\tag{1}\\
-\end{align}
+\begin{gather}
+ax^2+bx+c =0\tag{1}
+\end{gather}
+</div>
 <div class="para intertext">then</div>
+<div class="displaymath process-math" id="ThreeLessons_lesson-two-3-4">
 \begin{align}
-x^2+\frac{b}{a}x\amp =-\frac{c}{a}\tag{2}\\
+x^2+\frac{b}{a}x\amp =-\frac{c}{a}\tag{2}
 \end{align}
+</div>
 <div class="para intertext">Now let <span class="process-math">\(x=y-\frac{b}{2a}\)</span> giving</div>
+<div class="displaymath process-math" id="ThreeLessons_lesson-two-3-6">
 \begin{align}
 y^2\amp = -\frac{c}{a} +\frac{b^2}{4a^2}\tag{3}\\
 y\amp = \frac{\pm \sqrt{b^2-4ac}}{2a}\tag{4}\\
 x\amp = \frac{-b\pm\sqrt{b^2-4ac}}{2a}\tag{5}
 \end{align}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ThreeLessons_lesson-two-4">Were you able to follow the argument?  Probably the step from <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1">equation (1)</a> to <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2">equation (2)</a> presented no difficulties.  But what about the next step?  Do you see where <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3">equation (3)</a> came from?  If so, good for you. Most students, in fact most mathematicians, cannot make that step in their heads.  But are you sure?  Is there, perhaps, some small detail you’ve overlooked?</div>
-<div class="para" id="ThreeLessons_lesson-two-5">Check to see.</div>
-<div class="para" id="ThreeLessons_lesson-two-6">That is, let <span class="process-math">\(x=y-\frac{b}{2a}\)</span> in <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2">equation (2)</a> and see if you can get <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3">equation (3)</a>.  Do it on that handy pad of paper we told you to get out earlier.  Do it now.  We’ll wait.</div>
-<aside class="aside aside-like" id="ThreeLessons_lesson-two-7"><h3 class="heading"><span class="title">Comment.</span></h3>
-<div class="para" id="ThreeLessons_lesson-two-7-2">If you <em class="emphasis">still</em> haven’t gotten out a pad of paper, give up now.  You’re going to fail this course.  Seriously. Do you think we would spend so much time on this, that we would repeat it so many times, if it weren’t important. <em class="emphasis"><em class="emphasis">GET OUT A PAD OF PAPER NOW!</em></em> Last chance. You’ve been warned.</div></aside><div class="para" id="ThreeLessons_lesson-two-8">Done?  Good.</div>
-<div class="para" id="ThreeLessons_lesson-two-9">Perhaps you haven’t been able to fill in the details on your own.  That’s ok.  Many people can’t.  If not then get help: from a classmate, a friend, your instructor, whomever.  Unfortunately most people won’t get help in this situation.  Instead they will perceive this as “failure,” hide it and berate themselves or the problem as “stupid.” In short they will let their personal insecurities and demons overwhelm them.  <em class="emphasis">Don’t do this.  Get help.</em> You are neither dumb nor incapable.  There are a thousand reasons that on any given day you might not be able to solve this problem.  But don’t let a bad day interfere with the education you are here for.  Get someone to help you over this hump.  Later you will be able to help your helper in the same way.  Really.</div>
-<div class="para" id="ThreeLessons_lesson-two-10">At this point we assume that you’ve successfully negotiated the transition from <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2">equation (2)</a> to <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm4.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5">equation (5)</a>.</div>
-<div class="para" id="ThreeLessons_lesson-two-11">See?  It really wasn’t that bad after all.  Just a lot of elementary algebra.  Now that you’ve done it (or seen it done), it is easy to see that there really wasn’t much there.</div>
-<div class="para" id="ThreeLessons_lesson-two-12">But this is the point!  We left those computations out precisely because we knew that they were routine and that you could fill in the details.  Moreover, filling in the details yourself gives you a little better insight into the computations.  If we’d filled them in for you we would have robbed you of that insight. And we would have made this book longer than it needs to be.  We don’t want to do either of those things.  If we fill in all of the details of every computation for you, you won’t learn to have confidence in your ability to do them yourself.  And this book will easily double in length.</div>
-<div class="para" id="ThreeLessons_lesson-two-13">So the lesson here is this: Keep that pad of paper handy whenever you are reading this (or any other) mathematics text. You will need it.  Routine computations will often be skipped. But calling them “routine” and skipping them does not mean that they are unimportant.  If they were truly unimportant we would leave them out entirely.</div>
-<div class="para" id="ThreeLessons_lesson-two-14">Moreover “routine” does not mean “obvious.” Every step we took in the development of the Quadratic Formula was “routine.” But even routine computations need to be understood and the best way to understand them is to do them. This is the way to learn mathematics; it is the <em class="emphasis">only</em> way that really works.  Don’t deprive yourself of your mathematics education by skipping the most important parts.</div>
-<aside class="aside aside-like" id="ThreeLessons_lesson-two-15"><h3 class="heading"><span class="title">Comment.</span></h3>
-<div class="para" id="ThreeLessons_lesson-two-15-2">If you didn’t fill in those details then you are depriving yourself of the education you are here to obtain. This is sad. There is a good reason for putting these three lessons first. Stop wasting your time and intellect!  Go do it now.</div></aside><div class="para logical" id="ThreeLessons_lesson-two-16">
+<div class="para" id="ThreeLessons_lesson-two-4">Were you able to follow the argument?  Probably the step from <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-2" class="xref" data-knowl="./knowl/xref/eq_QForm1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1">equation (1)</a> to <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-4" class="xref" data-knowl="./knowl/xref/eq_QForm2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2">equation (2)</a> presented no difficulties.  But what about the next step?  Do you see where <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-6" class="xref" data-knowl="./knowl/xref/eq_QForm3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3">equation (3)</a> came from?  If so, good for you. Most students, in fact most mathematicians, cannot make that step in their heads.  But are you sure?  Is there, perhaps, some small detail you’ve overlooked?<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ThreeLessons_lesson-two-5">Check to see.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ThreeLessons_lesson-two-6">That is, let <span class="process-math">\(x=y-\frac{b}{2a}\)</span> in <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-4" class="xref" data-knowl="./knowl/xref/eq_QForm2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2">equation (2)</a> and see if you can get <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-6" class="xref" data-knowl="./knowl/xref/eq_QForm3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3">equation (3)</a>.  Do it on that handy pad of paper we told you to get out earlier.  Do it now.  We’ll wait.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ThreeLessons_lesson-two-7" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comment.</span>
+</h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ThreeLessons_lesson-two-7-2">If you <em class="emphasis">still</em> haven’t gotten out a pad of paper, give up now.  You’re going to fail this course.  Seriously. Do you think we would spend so much time on this, that we would repeat it so many times, if it weren’t important. <em class="emphasis"><em class="emphasis">GET OUT A PAD OF PAPER NOW!</em></em> Last chance. You’ve been warned.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+<div class="para" id="ThreeLessons_lesson-two-8">Done?  Good.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ThreeLessons_lesson-two-9">Perhaps you haven’t been able to fill in the details on your own.  That’s ok.  Many people can’t.  If not then get help: from a classmate, a friend, your instructor, whomever.  Unfortunately most people won’t get help in this situation.  Instead they will perceive this as “failure,” hide it and berate themselves or the problem as “stupid.” In short they will let their personal insecurities and demons overwhelm them.  <em class="emphasis">Don’t do this.  Get help.</em> You are neither dumb nor incapable.  There are a thousand reasons that on any given day you might not be able to solve this problem.  But don’t let a bad day interfere with the education you are here for.  Get someone to help you over this hump.  Later you will be able to help your helper in the same way.  Really.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ThreeLessons_lesson-two-10">At this point we assume that you’ve successfully negotiated the transition from <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-4" class="xref" data-knowl="./knowl/xref/eq_QForm2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2">equation (2)</a> to <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-3-6" class="xref" data-knowl="./knowl/xref/eq_QForm4.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5">equation (5)</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ThreeLessons_lesson-two-11">See?  It really wasn’t that bad after all.  Just a lot of elementary algebra.  Now that you’ve done it (or seen it done), it is easy to see that there really wasn’t much there.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ThreeLessons_lesson-two-12">But this is the point!  We left those computations out precisely because we knew that they were routine and that you could fill in the details.  Moreover, filling in the details yourself gives you a little better insight into the computations.  If we’d filled them in for you we would have robbed you of that insight. And we would have made this book longer than it needs to be.  We don’t want to do either of those things.  If we fill in all of the details of every computation for you, you won’t learn to have confidence in your ability to do them yourself.  And this book will easily double in length.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ThreeLessons_lesson-two-13">So the lesson here is this: Keep that pad of paper handy whenever you are reading this (or any other) mathematics text. You will need it.  Routine computations will often be skipped. But calling them “routine” and skipping them does not mean that they are unimportant.  If they were truly unimportant we would leave them out entirely.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ThreeLessons_lesson-two-14">Moreover “routine” does not mean “obvious.” Every step we took in the development of the Quadratic Formula was “routine.” But even routine computations need to be understood and the best way to understand them is to do them. This is the way to learn mathematics; it is the <em class="emphasis">only</em> way that really works.  Don’t deprive yourself of your mathematics education by skipping the most important parts.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ThreeLessons_lesson-two-15" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comment.</span>
+</h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ThreeLessons_lesson-two-15-2">If you didn’t fill in those details then you are depriving yourself of the education you are here to obtain. This is sad. There is a good reason for putting these three lessons first. Stop wasting your time and intellect!  Go do it now.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-15-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+<div class="para logical" id="ThreeLessons_lesson-two-16">
 <div class="para">As you saw when you filled in the details of our development of the Quadratic Formula the substitution <span class="process-math">\(x=y-\frac{b}{2a}\)</span> was crucial because it turned</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ThreeLessons_lesson-two-16-2">
 \begin{equation*}
 x^2+\frac{b}{a}x +\frac{c}{a}=0
 \end{equation*}
 </div>
 <div class="para">into</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ThreeLessons_lesson-two-16-3">
 \begin{equation*}
 y^2=k
 \end{equation*}
@@ -345,34 +334,74 @@ ax^3+bx^2+cx+d=0\tag{6}
 \end{equation}
 </div>
 <div class="para">into the so-called “depressed cubic”</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ThreeLessons_lesson-two-16-10">
 \begin{equation*}
 y^3 +py+q=0
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(p\text{,}\)</span> and <span class="process-math">\(q\)</span> depend only on <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(d\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ThreeLessons_lesson-two-17">The general depressed cubic had previously been solved by Tartaglia (the Stutterer, 1500-1557) so converting the general cubic into a depressed cubic provided a path for Ferrari to compute the “Cubic Formula” — like the Quadratic Formula but better.</div>
-<aside class="aside aside-like" id="ThreeLessons_lesson-two-18"><h3 class="heading"><span class="title">Comment.</span></h3>
-<div class="para" id="ThreeLessons_lesson-two-18-2">It is not entirely clear why eliminating the quadratic term should be depressing, but there it is.</div></aside><figure class="figure figure-like" id="ThreeLessons_lesson-two-19"><div class="image-box" style="width: 28%; margin-left: 36%; margin-right: 36%;"><img src="external/images/Tartaglia.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.1<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/" target="_blank">Tartaglia</a><details class="ptx-footnote" aria-live="polite" id="ThreeLessons_lesson-two-19-1-2"><summary class="ptx-footnote__number" title="Footnote 4"><sup> 4 </sup></summary><div class="ptx-footnote__contents" id="ThreeLessons_lesson-two-19-1-2"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/</code></div></details>, “The Stutterer”</figcaption></figure><div class="para" id="ThreeLessons_lesson-two-20">Ferrari also knew how to compute the general solution of the “depressed quartic” so when he and his teacher Girolomo Cardano (1501-1576) figured out how to depress a general quartic they had a complete solution of the general quartic as well.</div>
+<div class="para" id="ThreeLessons_lesson-two-17">The general depressed cubic had previously been solved by Tartaglia (the Stutterer, 1500-1557) so converting the general cubic into a depressed cubic provided a path for Ferrari to compute the “Cubic Formula” — like the Quadratic Formula but better.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ThreeLessons_lesson-two-18" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comment.</span>
+</h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ThreeLessons_lesson-two-18-2">It is not entirely clear why eliminating the quadratic term should be depressing, but there it is.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-18-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+<figure class="figure figure-like" id="ThreeLessons_lesson-two-19"><div class="image-box" style="width: 28%; margin-left: 36%; margin-right: 36%;"><img src="external/images/Tartaglia.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/" target="_blank">Tartaglia</a>, “The Stutterer”<div class="autopermalink" data-description="Figure 1.2.1"><a href="#ThreeLessons_lesson-two-19" title="Copy heading and permalink for Figure 1.2.1" aria-label="Copy heading and permalink for Figure 1.2.1">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ThreeLessons_lesson-two-20">Ferrari also knew how to compute the general solution of the “depressed quartic” so when he and his teacher Girolomo Cardano (1501-1576) figured out how to depress a general quartic they had a complete solution of the general quartic as well.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="ThreeLessons_lesson-two-21"><div class="image-box" style="width: 28%; margin-left: 36%; margin-right: 36%;"><img src="external/images/Cardan.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.2<span class="period">.</span></span><span class="space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Cardan" target="_blank">Girolomo Cardano</a><details class="ptx-footnote" aria-live="polite" id="ThreeLessons_lesson-two-21-1-2"><summary class="ptx-footnote__number" title="Footnote 5"><sup> 5 </sup></summary><div class="ptx-footnote__contents" id="ThreeLessons_lesson-two-21-1-2"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Cardan</code></div></details></figcaption></figure><div class="para" id="ThreeLessons_lesson-two-22">Alas, their methods broke down entirely when they tried to solve the general quintic equation.  Unfortunately the rest of this story belongs in a course on Abstract Algebra, not Real Analysis.  But the lesson in this story applies to all of mathematics: Every problem solved is a new theorem which then becomes a tool for later use.  Depressing a cubic would have been utterly useless had not Tartaglia had a solution of the depressed cubic in hand.  The technique they used, with slight modifications, then allowed for a solution of the general quartic as well.</div>
-<div class="para" id="ThreeLessons_lesson-two-23">Keep this in mind as you proceed through this course and your mathematical education.  Every problem you solve is really a theorem, a potential tool that you can use later.  We have chosen the problems in this text deliberately with this in mind. Don’t just solve the problems and move on.  Just because you have solved a problem does not mean you should stop thinking about it.  Keep thinking about the problems you’ve solved. Internalize them.  Make the ideas your own so that when you need them later you will have them at hand to use.</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Cardan" target="_blank">Girolomo Cardano</a><div class="autopermalink" data-description="Figure 1.2.2"><a href="#ThreeLessons_lesson-two-21" title="Copy heading and permalink for Figure 1.2.2" aria-label="Copy heading and permalink for Figure 1.2.2">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ThreeLessons_lesson-two-22">Alas, their methods broke down entirely when they tried to solve the general quintic equation.  Unfortunately the rest of this story belongs in a course on Abstract Algebra, not Real Analysis.  But the lesson in this story applies to all of mathematics: Every problem solved is a new theorem which then becomes a tool for later use.  Depressing a cubic would have been utterly useless had not Tartaglia had a solution of the depressed cubic in hand.  The technique they used, with slight modifications, then allowed for a solution of the general quartic as well.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ThreeLessons_lesson-two-23">Keep this in mind as you proceed through this course and your mathematical education.  Every problem you solve is really a theorem, a potential tool that you can use later.  We have chosen the problems in this text deliberately with this in mind. Don’t just solve the problems and move on.  Just because you have solved a problem does not mean you should stop thinking about it.  Keep thinking about the problems you’ve solved. Internalize them.  Make the ideas your own so that when you need them later you will have them at hand to use.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="problem example-like" id="ThreeLessons_lesson-two-24"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Quadratic Formula.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Quadratic Formula.</span>
 </h3>
-<div class="para logical" id="ThreeLessons_lesson-two-24-3-1"><ol class="lower-alpha ol-marker-1" id="ThreeLessons_lesson-two-24-3-1-1">
-<li id="ThreeLessons_lesson-two-24-3-1-1-1"><div class="para" id="ThreeLessons_lesson-two-24-3-1-1-1-1">Find <span class="process-math">\(M\)</span> so that the substitution <span class="process-math">\(x=y-M\)</span> depresses <a href="ThreeLessons_lesson-two.html#eq_GenCubic" class="xref" data-knowl="./knowl/xref/eq_GenCubic.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6">equation (6)</a>, the general cubic equation.  Then find <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> in terms of <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(d\text{.}\)</span>
-</div></li>
-<li id="ThreeLessons_lesson-two-24-3-1-1-2"><div class="para" id="ThreeLessons_lesson-two-24-3-1-1-2-1">Find <span class="process-math">\(K\)</span> so that the substitution <span class="process-math">\(x=y-K\)</span> depresses the general quartic equation.  Make sure you demonstrate how you obtained that value or why it works (if you guessed it).</div></li>
-<li id="ThreeLessons_lesson-two-24-3-1-1-3"><div class="para" id="ThreeLessons_lesson-two-24-3-1-1-3-1">Find <span class="process-math">\(N\)</span> so that the substitution <span class="process-math">\(x=y-N\)</span> depresses a polynomial of degree <span class="process-math">\(n\text{.}\)</span>  Ditto on showing that this value works or showing how you obtained it.</div></li>
-</ol></div></article><article class="problem example-like" id="ThreeLessons_lesson-two-25"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Another Derivation of the Quadratic Formula.</span>
+<div class="para logical" id="ThreeLessons_lesson-two-24-3-1">
+<ol class="lower-alpha ol-marker-1" id="ThreeLessons_lesson-two-24-3-1-1">
+<li id="ThreeLessons_lesson-two-24-3-1-1-1">
+<div class="para" id="ThreeLessons_lesson-two-24-3-1-1-1-1">Find <span class="process-math">\(M\)</span> so that the substitution <span class="process-math">\(x=y-M\)</span> depresses <a href="ThreeLessons_lesson-two.html#eq_GenCubic" class="xref" data-knowl="./knowl/xref/eq_GenCubic.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6">equation (6)</a>, the general cubic equation.  Then find <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> in terms of <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-24-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#ThreeLessons_lesson-two-24-3-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="ThreeLessons_lesson-two-24-3-1-1-2">
+<div class="para" id="ThreeLessons_lesson-two-24-3-1-1-2-1">Find <span class="process-math">\(K\)</span> so that the substitution <span class="process-math">\(x=y-K\)</span> depresses the general quartic equation.  Make sure you demonstrate how you obtained that value or why it works (if you guessed it).<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-24-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#ThreeLessons_lesson-two-24-3-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="ThreeLessons_lesson-two-24-3-1-1-3">
+<div class="para" id="ThreeLessons_lesson-two-24-3-1-1-3-1">Find <span class="process-math">\(N\)</span> so that the substitution <span class="process-math">\(x=y-N\)</span> depresses a polynomial of degree <span class="process-math">\(n\text{.}\)</span>  Ditto on showing that this value works or showing how you obtained it.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-24-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#ThreeLessons_lesson-two-24-3-1-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-24-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 1.2.3: The Quadratic Formula"><a href="#ThreeLessons_lesson-two-24" title="Copy heading and permalink for Problem 1.2.3: The Quadratic Formula" aria-label="Copy heading and permalink for Problem 1.2.3: The Quadratic Formula">🔗</a></div>
+</article>
+<article class="problem example-like" id="ThreeLessons_lesson-two-25"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Another Derivation of the Quadratic Formula.</span>
 </h3>
-<div class="para" id="ThreeLessons_lesson-two-25-2-1"> Here is yet another way to solve a quadratic equation.  Read the development below with pencil and paper handy.  Confirm all of the computations that are not completely transparent to you.  Then use your notes to present the solution with <em class="emphasis">all</em> steps filled in.</div> <aside class="aside aside-like" id="ThreeLessons_lesson-two-25-2-2"><h4 class="heading"><span class="title">Comment.</span></h4>
-<div class="para" id="ThreeLessons_lesson-two-25-2-2-2">Be sure you are clear on the purpose of this problem before you begin.  This is not about solving the Quadratic Equation.  You already know how to do that.  Our purpose here is to give you practice filling in the skipped details of mathematical exposition.  We’ve chosen this particular problem because it should be a comfortable setting for you, but this particular solution is probably outside of your previous experience.</div></aside> <div class="para logical" id="ThreeLessons_lesson-two-25-2-3">
+<div class="para" id="ThreeLessons_lesson-two-25-2-1"> Here is yet another way to solve a quadratic equation.  Read the development below with pencil and paper handy.  Confirm all of the computations that are not completely transparent to you.  Then use your notes to present the solution with <em class="emphasis">all</em> steps filled in.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-25-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<details id="ThreeLessons_lesson-two-25-2-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Comment.</span>
+</h4></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="ThreeLessons_lesson-two-25-2-2-2">Be sure you are clear on the purpose of this problem before you begin.  This is not about solving the Quadratic Equation.  You already know how to do that.  Our purpose here is to give you practice filling in the skipped details of mathematical exposition.  We’ve chosen this particular problem because it should be a comfortable setting for you, but this particular solution is probably outside of your previous experience.<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-25-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details> 
+<div class="para logical" id="ThreeLessons_lesson-two-25-2-3">
 <div class="para">Suppose that <span class="process-math">\(r_1\)</span> and <span class="process-math">\(r_2\)</span> are solutions of <span class="process-math">\(ax^2+bx+c=0\text{.}\)</span> Without loss of generality suppose that <span class="process-math">\(a&gt;0\text{.}\)</span>  Suppose further that <span class="process-math">\(r_1\ge r_2\text{.}\)</span>  Then</div>
 <div class="displaymath process-math" id="ThreeLessons_lesson-two-25-2-3-6">
 \begin{align*}
@@ -381,27 +410,38 @@ ax^2+bx+c \amp = a(x-r_1)(x-r_2)\\
 a\left[x^2-(r_1+r_2)x+(r_1+r_2)^2-(r_1-r_2)^2-3r_1r_2\right].
 \end{align*}
 </div>
-</div> <div class="para logical" id="ThreeLessons_lesson-two-25-2-4">
+<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-25-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ThreeLessons_lesson-two-25-2-4">
 <div class="para">Therefore</div>
 <div class="displaymath process-math" id="ThreeLessons_lesson-two-25-2-4-1">
 \begin{align}
-r_1+r_2\amp = -\frac{b}{a}\tag{7}\\
+r_1+r_2\amp = -\frac{b}{a}\tag{7}
 \end{align}
+</div>
 <div class="para intertext">and</div>
+<div class="displaymath process-math" id="ThreeLessons_lesson-two-25-2-4-3">
 \begin{align}
 r_1-r_2 \amp = \sqrt{\left(\frac{b}{a}\right)^2-\frac{4c}{a}}\text{.}\tag{8}
 \end{align}
 </div>
-</div> <div class="para logical" id="ThreeLessons_lesson-two-25-2-5">
-<div class="para">Equations <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-25-2-4-1" class="xref" data-knowl="./knowl/xref/eq_LagrangeQuadratic1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7">(7)</a> and <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-25-2-4-1" class="xref" data-knowl="./knowl/xref/eq_LagrangeQuadratic2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8">(8)</a> can be solved simultaneously to yield</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-25-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ThreeLessons_lesson-two-25-2-5">
+<div class="para">Equations <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-25-2-4-1" class="xref" data-knowl="./knowl/xref/eq_LagrangeQuadratic1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7">(7)</a> and <a href="ThreeLessons_lesson-two.html#ThreeLessons_lesson-two-25-2-4-3" class="xref" data-knowl="./knowl/xref/eq_LagrangeQuadratic2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8">(8)</a> can be solved simultaneously to yield</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_LagrangeQuadratic1.html ./knowl/xref/eq_LagrangeQuadratic2.html" id="ThreeLessons_lesson-two-25-2-5-3">
 \begin{align*}
 r_1\amp =\frac{-b+\sqrt{b^2-4ac}}{2a}\\
 r_2\amp =\frac{-b-\sqrt{b^2-4ac}}{2a}\text{.}
 \end{align*}
 </div>
-</div></article></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#ThreeLessons_lesson-two-25-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 1.2.4: Another Derivation of the Quadratic Formula"><a href="#ThreeLessons_lesson-two-25" title="Copy heading and permalink for Problem 1.2.4: Another Derivation of the Quadratic Formula" aria-label="Copy heading and permalink for Problem 1.2.4: Another Derivation of the Quadratic Formula">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 1.2: Lesson Two"><a href="#ThreeLessons_lesson-two" title="Copy heading and permalink for Section 1.2: Lesson Two" aria-label="Copy heading and permalink for Section 1.2: Lesson Two">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ThreeLessons-lesson-one.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ThreeLessons_lesson-three.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

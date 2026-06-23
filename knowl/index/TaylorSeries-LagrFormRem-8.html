@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -11,22 +18,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="problem example-like"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
-</h3>
-<div class="introduction"><div class="para logical">
+<article class="problem example-like"><h2 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="introduction">
+<div class="para logical">
 <div class="para">This problem investigates the Taylor series representation</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{1}{1+x}=1-x+x^2-x^3+\cdots\text{.}
 \end{equation*}
 </div>
-</div></div>
-<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para">Use the fact that <span class="process-math">\(\frac{1-(-x)^{n+1}}{1+x}=1-x+x^2-x^3+\cdots+(-x)^n\)</span> to compute the remainder <span class="process-math">\(\frac{1}{1+x}-\left(1-x+x^2-x^3+\cdots+(-x)^n\right)\text{.}\)</span> Specifically, compute this remainder when <span class="process-math">\(x=1\)</span> and conclude that the Taylor series does not converge to <span class="process-math">\(\frac{1}{1+x}\)</span> when <span class="process-math">\(x=1\text{.}\)</span>
-</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para">Compare the remainder in part a with the Lagrange form of the remainder to determine what <span class="process-math">\(c\)</span> is when <span class="process-math">\(x=1\text{.}\)</span>
-</div></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="autopermalink" data-description="Paragraph"><a href="#TaylorSeries-LagrFormRem-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para">Use the fact that <span class="process-math">\(\frac{1-(-x)^{n+1}}{1+x}=1-x+x^2-x^3+\cdots+(-x)^n\)</span> to compute the remainder <span class="process-math">\(\frac{1}{1+x}-\left(1-x+x^2-x^3+\cdots+(-x)^n\right)\text{.}\)</span> Specifically, compute this remainder when <span class="process-math">\(x=1\)</span> and conclude that the Taylor series does not converge to <span class="process-math">\(\frac{1}{1+x}\)</span> when <span class="process-math">\(x=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#TaylorSeries-LagrFormRem-8-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.3.a"><a href="#TaylorSeries-LagrFormRem-8-4" title="Copy heading and permalink for Task 7.2.3.a" aria-label="Copy heading and permalink for Task 7.2.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para">Compare the remainder in part a with the Lagrange form of the remainder to determine what <span class="process-math">\(c\)</span> is when <span class="process-math">\(x=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#TaylorSeries-LagrFormRem-8-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.3.b"><a href="#TaylorSeries-LagrFormRem-8-5" title="Copy heading and permalink for Task 7.2.3.b" aria-label="Copy heading and permalink for Task 7.2.3.b">🔗</a></div>
+</article>
+<article class="task exercise-like"><h3 class="heading"><span class="codenumber">(c)</span></h3>
 <div class="para logical">
 <div class="para">Consider the following argument: If <span class="process-math">\(f(x)=\frac{1}{1+x}\text{,}\)</span> then</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prob_sequences3.html ./knowl/xref/Convergence.html">
@@ -41,6 +57,10 @@ f^{(n+1)}(c)=\frac{(-1)^{n+1}(n+1)!}{(1+c)^{n+2}}
 \end{equation*}
 </div>
 <div class="para">where <span class="process-math">\(c\in[\,0,1]\text{.}\)</span>  It can be seen in part b that <span class="process-math">\(c\neq 0\text{.}\)</span>  Thus <span class="process-math">\(1+c&gt;1\)</span> and so by <a href="SeqRealNum.html#prob_sequences3" class="xref" data-knowl="./knowl/xref/prob_sequences3.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 6.1.7">Problem 6.1.7</a> of <a href="Convergence.html" class="internal" title="Chapter 6: Convergence of Sequences and Series">Chapter 6</a>, the Lagrange remainder converges to <span class="process-math">\(0\)</span> as <span class="process-math">\(n\rightarrow\infty\text{.}\)</span>  This argument would suggest that the Taylor series converges to <span class="process-math">\(\frac{1}{1+x}\)</span> for <span class="process-math">\(x=1\text{.}\)</span>  However, we know from part (a) that this is incorrect.  What is wrong with the argument?</div>
-</div></article></article><span class="incontext"><a class="internal" href="TaylorSeries-LagrFormRem.html#TaylorSeries-LagrFormRem-8">in-context</a></span>
+<div class="autopermalink" data-description="Paragraph"><a href="#TaylorSeries-LagrFormRem-8-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 7.2.3.c"><a href="#TaylorSeries-LagrFormRem-8-6" title="Copy heading and permalink for Task 7.2.3.c" aria-label="Copy heading and permalink for Task 7.2.3.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 7.2.3"><a href="#TaylorSeries-LagrFormRem-8" title="Copy heading and permalink for Problem 7.2.3" aria-label="Copy heading and permalink for Problem 7.2.3">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="TaylorSeries-LagrFormRem.html#TaylorSeries-LagrFormRem-8">In Context</a></span>
 </body>
 </html>

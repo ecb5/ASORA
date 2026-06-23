@@ -6,77 +6,35 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uniform Convergence</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
-<meta property="book:author" content="Robert Rogers, (Emeritus)">
-<meta property="book:author" content="Eugene Boman, (Emeritus)">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="og:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.42"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -98,31 +56,32 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.6.1';
+eBookConfig.runestone_version = '7.13.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c7804631fa963734.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f7a03b209751032d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
+<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.2f713d2360adcee7.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
 <p class="byline">Robert Rogers, (Emeritus), Eugene Boman, (Emeritus)</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
-</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="PowerSeriesRedux.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="PowerSeriesRedux.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
@@ -291,8 +250,10 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="PowerSeriesRedux-UnifConv"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">10.1</span><span class="space"> </span><span class="title">Uniform Convergence</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="PowerSeriesRedux-UnifConv">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Uniform Convergence</span>
 </h2>
 <div class="para logical" id="PowerSeriesRedux-UnifConv-2">
 <div class="para">We have developed precise analytic definitions of the convergence of a sequence and continuity of a function and we have used these to prove the EVT and IVT for a continuous function.  We will now draw our attention back to the question that originally motivated these definitions, “Why are Taylor series well behaved, but Fourier series are not necessarily?” More precisely, we mentioned that whenever a power series converges then whatever it converged to was continuous. Moreover, if we differentiate or integrate these series term by term then the resulting series will converge to the derivative or integral of the original series.  This was not always the case for Fourier series.  For example consider the function</div>
@@ -302,8 +263,10 @@ f(x) \amp = \frac{4}{\pi}\left(\sum_{k=0}^\infty\frac{(-1)^k}{2k+1}\cos\left((2k
 \amp = \frac{4}{\pi}\left(\cos(\pi x)-\frac13\cos(3\pi x)+\frac15 (5\pi x)-\ldots\right)\text{.}
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="PowerSeriesRedux-UnifConv-3">We have seen that the graph of <span class="process-math">\(f\)</span> is given by</div>
+<div class="para" id="PowerSeriesRedux-UnifConv-3">We have seen that the graph of <span class="process-math">\(f\)</span> is given by<div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="image-box" style="width: 85%; margin-left: 7.5%; margin-right: 7.5%;"><img src="external/images/Ch7fig1.png" class="contained"></div>
 <div class="para logical" id="PowerSeriesRedux-UnifConv-5">
 <div class="para">If we consider the following sequence of functions</div>
@@ -316,14 +279,18 @@ f_3(x)=\amp \frac{4}{\pi}\left(\cos\left(\pi x\right)-\frac{1}{3}\cos\left(3\pi 
 \end{align*}
 </div>
 <div class="para">we see the sequence of continuous functions <span class="process-math">\(\left(f_n\right)\)</span> converges to the non-continuous function <span class="process-math">\(f\)</span> for each real number <span class="process-math">\(x\text{.}\)</span>  This didn’t happen with Taylor series.  The partial sums for a Taylor series were polynomials and hence continuous but what they converged to was continuous as well.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="PowerSeriesRedux-UnifConv-6">The difficulty is quite delicate and it took mathematicians a while to determine the problem.  There are two very subtly different ways that a sequence of functions can converge: pointwise or uniformly.  This distinction was touched upon by Niels Henrik Abel (1802-1829) in 1826 while studying the domain of convergence of a power series.  However, the necessary formal definitions were not made explicit until Weierstrass did it in his 1841 paper <span class="booktitle">Zur Theorie der Potenzreihen (On the Theory of Power Series)</span>. This was published in his collected works in 1894.</div>
-<div class="para" id="PowerSeriesRedux-UnifConv-7">It will be instructive to take a look at an argument that doesn’t quite work before looking at the formal definitions we will need.  In 1821 Augustin Cauchy “proved” that the infinite sum of continuous functions is continuous.  Of course, it is obvious (to us) that this is not true because we’ve seen several counterexamples.  But Cauchy, who was a first rate mathematician was so sure of the correctness of his argument that he included it in his textbook on analysis, <i class="foreign">Cours d’analyse</i> (1821).</div>
+<div class="para" id="PowerSeriesRedux-UnifConv-6">The difficulty is quite delicate and it took mathematicians a while to determine the problem.  There are two very subtly different ways that a sequence of functions can converge: pointwise or uniformly.  This distinction was touched upon by Niels Henrik Abel (1802-1829) in 1826 while studying the domain of convergence of a power series.  However, the necessary formal definitions were not made explicit until Weierstrass did it in his 1841 paper <span class="booktitle">Zur Theorie der Potenzreihen (On the Theory of Power Series)</span>. This was published in his collected works in 1894.<div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="PowerSeriesRedux-UnifConv-7">It will be instructive to take a look at an argument that doesn’t quite work before looking at the formal definitions we will need.  In 1821 Augustin Cauchy “proved” that the infinite sum of continuous functions is continuous.  Of course, it is obvious (to us) that this is not true because we’ve seen several counterexamples.  But Cauchy, who was a first rate mathematician was so sure of the correctness of his argument that he included it in his textbook on analysis, <i class="foreign">Cours d’analyse</i> (1821).<div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="problem example-like" id="prob_Cauchy_s_incorrect_proof"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.1</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="prob_Cauchy_s_incorrect_proof-1-1"> Find the flaw in the following “proof” that <span class="process-math">\(f\)</span> is also continuous at <span class="process-math">\(a\text{.}\)</span>
-</div> <div class="para logical" id="prob_Cauchy_s_incorrect_proof-1-2">
+<div class="para" id="prob_Cauchy_s_incorrect_proof-1-1"> Find the flaw in the following “proof” that <span class="process-math">\(f\)</span> is also continuous at <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_Cauchy_s_incorrect_proof-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="prob_Cauchy_s_incorrect_proof-1-2">
 <div class="para">Suppose <span class="process-math">\(f_1, f_2, f_3, f_4 \ldots\)</span> are all continuous at <span class="process-math">\(a\)</span> and that <span class="process-math">\(\sum_{n=1}^\infty f_n=f\text{.}\)</span>  Let <span class="process-math">\(\eps&gt;0\text{.}\)</span>  Since <span class="process-math">\(f_n\)</span> is continuous at <span class="process-math">\(a,\)</span> we can choose <span class="process-math">\(\delta_n&gt;0\)</span> such that if <span class="process-math">\(\abs{x-a}\lt
 \delta_n,\)</span> then <span class="process-math">\(\abs{f_n(x)-f_n(a)}\lt
 \frac{\eps}{2^n}\text{.}\)</span>  Let <span class="process-math">\(\delta=\inf(\delta_1,\delta_2,\delta_3,\ldots)\text{.}\)</span>  If <span class="process-math">\(\abs{x-a}\lt \delta\)</span> then</div>
@@ -337,37 +304,66 @@ f_3(x)=\amp \frac{4}{\pi}\left(\cos\left(\pi x\right)-\frac{1}{3}\cos\left(3\pi 
 \amp =   \eps.
 \end{align*}
 </div>
-</div> <div class="para" id="prob_Cauchy_s_incorrect_proof-1-3">Thus <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span>
-</div></article><article class="definition definition-like" id="def_PointwiseConvergence"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.1.2</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#prob_Cauchy_s_incorrect_proof-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="prob_Cauchy_s_incorrect_proof-1-3">Thus <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_Cauchy_s_incorrect_proof-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.1.1"><a href="#prob_Cauchy_s_incorrect_proof" title="Copy heading and permalink for Problem 10.1.1" aria-label="Copy heading and permalink for Problem 10.1.1">🔗</a></div>
+</article>
+<article class="definition definition-like" id="def_PointwiseConvergence"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="def_PointwiseConvergence-1-1"> Let <span class="process-math">\(S\)</span> be a subset of the real number system and let <span class="process-math">\(\left(f_n\right)=\left(f_1,f_2,f_3,\,\ldots\right)\)</span> be a sequence of functions defined on <span class="process-math">\(S\text{.}\)</span>  Let <span class="process-math">\(f\)</span> be a function defined on <span class="process-math">\(S\)</span> as well.  We say that <span class="process-math">\(\left(f_n\right)\)</span> <em class="alert">converges to <span class="process-math">\(f\)</span> pointwise on <span class="process-math">\(S\)</span></em> provided that for all <span class="process-math">\(x\in
-S,\)</span> the sequence of real numbers <span class="process-math">\(\left(f_n(x)\right)\)</span> converges to the number <span class="process-math">\(f(x)\text{.}\)</span>  In this case we write<span class="process-math">\(\,f_n\ptwise f\)</span> on <span class="process-math">\(S\text{.}\)</span>
-</div></article><div class="para" id="PowerSeriesRedux-UnifConv-10">Symbolically, we have <span class="process-math">\(f_n\ptwise f\text{ on }
+S,\)</span> the sequence of real numbers <span class="process-math">\(\left(f_n(x)\right)\)</span> converges to the number <span class="process-math">\(f(x)\text{.}\)</span>  In this case we write<span class="process-math">\(\,f_n\ptwise f\)</span> on <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def_PointwiseConvergence-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 10.1.2"><a href="#def_PointwiseConvergence" title="Copy heading and permalink for Definition 10.1.2" aria-label="Copy heading and permalink for Definition 10.1.2">🔗</a></div>
+</article>
+<div class="para" id="PowerSeriesRedux-UnifConv-10">Symbolically, we have <span class="process-math">\(f_n\ptwise f\text{ on }
 S\Leftrightarrow \forall\,x\in S,\forall\ \eps&gt;0,\,\exists\
 N\)</span> such that <span class="process-math">\(\left(n&gt;N \Rightarrow|f_n(x)-f(x)|\lt
-\eps\right)\text{.}\)</span>
+\eps\right)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="PowerSeriesRedux-UnifConv-11">This is the type of convergence we have been observing to this point.  By contrast we have the following new definition.</div>
+<div class="para" id="PowerSeriesRedux-UnifConv-11">This is the type of convergence we have been observing to this point.  By contrast we have the following new definition.<div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="def_UniformConvergence"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.1.3</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="def_UniformConvergence-1-1"> Let <span class="process-math">\(S\)</span> be a subset of the real number system and let <span class="process-math">\(\left(f_n\right)=\left(f_1,f_2,f_3,\,\ldots\right)\)</span> be a sequence of functions defined on <span class="process-math">\(S\text{.}\)</span>  Let <span class="process-math">\(f\)</span> be a function defined on <span class="process-math">\(S\)</span> as well.  We say that <span class="process-math">\(\left(f_n\right)\)</span> <em class="alert">converges to <span class="process-math">\(f\)</span> uniformly on <span class="process-math">\(S\)</span></em> provided <span class="process-math">\(\forall\
 \eps&gt;0,\,\exists\ N\)</span> such that <span class="process-math">\(n&gt;N\Rightarrow|f_n(x)-f(x)|\lt \eps\text{ , } \forall\
-x\in S\text{.}\)</span>
-</div> <div class="para" id="def_UniformConvergence-1-2">In this case we write <span class="process-math">\(f_n\unif f\)</span> on <span class="process-math">\(S\text{.}\)</span>
-</div></article><div class="para" id="PowerSeriesRedux-UnifConv-13">The difference between these two definitions is subtle.  In pointwise convergence, we are given a fixed <span class="process-math">\(x\in S\)</span> and an <span class="process-math">\(\eps&gt;0\text{.}\)</span>  Then the task is to find an <span class="process-math">\(N\)</span> that works for that particular <span class="process-math">\(x\)</span> and <span class="process-math">\(\eps\text{.}\)</span>  In uniform convergence, one is given <span class="process-math">\(\eps&gt;0\)</span> and must find a single <span class="process-math">\(N\)</span> that works for that particular <span class="process-math">\(\eps\)</span> but also simultaneously (uniformly) for all <span class="process-math">\(x\in S\text{.}\)</span>  Clearly uniform convergence implies pointwise convergence as an <span class="process-math">\(N\)</span> which works uniformly for all <span class="process-math">\(x,\)</span> works for each individual <span class="process-math">\(x\)</span> also.  However the reverse is not true. This will become evident, but first consider the following example.</div>
-<article class="problem example-like" id="prob_uniform_convergence"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.4</span><span class="period">.</span>
-</h3>
-<div class="para" id="prob_uniform_convergence-3-1">Let <span class="process-math">\(0\lt b\lt 1\)</span> and consider the sequence of functions <span class="process-math">\(\left(f_n\right)\)</span> defined on <span class="process-math">\([0,b]\)</span> by <span class="process-math">\(f_n(x)=x^n\text{.}\)</span>  Use the definition to show that <span class="process-math">\(f_n\unif 0\)</span> on <span class="process-math">\([0,b]\text{.}\)</span>
+x\in S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def_UniformConvergence-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="def_UniformConvergence-1-2">In this case we write <span class="process-math">\(f_n\unif f\)</span> on <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def_UniformConvergence-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="prob_uniform_convergence-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="prob_uniform_convergence-4-1"><span class="process-math">\(|x^n-0|=x^n\leq b^n\text{.}\)</span></div></div></details></div></article><div class="para" id="PowerSeriesRedux-UnifConv-15">Uniform convergence is not only dependent on the sequence of functions but also on the set <span class="process-math">\(S\text{.}\)</span>  For example, the sequence <span class="process-math">\(\left(f_n(x)\right)=\left(x^n\right)_{n=0}^\infty\)</span> of <a href="PowerSeriesRedux-UnifConv.html#prob_uniform_convergence" class="xref" data-knowl="./knowl/xref/prob_uniform_convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 10.1.4">Problem 10.1.4</a> does not converge uniformly on <span class="process-math">\([0,1]\text{.}\)</span>  We could use the negation of the definition to prove this, but instead, it will be a consequence of the following theorem.</div>
-<article class="theorem theorem-like" id="thm_UnifConv-_Continuity"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.1.5</span><span class="period">.</span>
+<div class="autopermalink" data-description="Definition 10.1.3"><a href="#def_UniformConvergence" title="Copy heading and permalink for Definition 10.1.3" aria-label="Copy heading and permalink for Definition 10.1.3">🔗</a></div>
+</article>
+<div class="para" id="PowerSeriesRedux-UnifConv-13">The difference between these two definitions is subtle.  In pointwise convergence, we are given a fixed <span class="process-math">\(x\in S\)</span> and an <span class="process-math">\(\eps&gt;0\text{.}\)</span>  Then the task is to find an <span class="process-math">\(N\)</span> that works for that particular <span class="process-math">\(x\)</span> and <span class="process-math">\(\eps\text{.}\)</span>  In uniform convergence, one is given <span class="process-math">\(\eps&gt;0\)</span> and must find a single <span class="process-math">\(N\)</span> that works for that particular <span class="process-math">\(\eps\)</span> but also simultaneously (uniformly) for all <span class="process-math">\(x\in S\text{.}\)</span>  Clearly uniform convergence implies pointwise convergence as an <span class="process-math">\(N\)</span> which works uniformly for all <span class="process-math">\(x,\)</span> works for each individual <span class="process-math">\(x\)</span> also.  However the reverse is not true. This will become evident, but first consider the following example.<div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="problem example-like" id="prob_uniform_convergence"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="thm_UnifConv-_Continuity-1-1"> Consider a sequence of functions <span class="process-math">\(\left(f_n\right)\)</span> which are all continuous on an interval <span class="process-math">\(I\text{.}\)</span>  Suppose <span class="process-math">\(f_n\unif f\)</span> on <span class="process-math">\(I\text{.}\)</span>  Then <span class="process-math">\(f\)</span> must be continuous on <span class="process-math">\(I\text{.}\)</span>
-</div></article><article class="proof" id="PowerSeriesRedux-UnifConv-17"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3>
+<div class="para" id="prob_uniform_convergence-3-1">Let <span class="process-math">\(0\lt b\lt 1\)</span> and consider the sequence of functions <span class="process-math">\(\left(f_n\right)\)</span> defined on <span class="process-math">\([0,b]\)</span> by <span class="process-math">\(f_n(x)=x^n\text{.}\)</span>  Use the definition to show that <span class="process-math">\(f_n\unif 0\)</span> on <span class="process-math">\([0,b]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_uniform_convergence-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="prob_uniform_convergence-4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="prob_uniform_convergence-4-1">
+<span class="process-math">\(|x^n-0|=x^n\leq b^n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prob_uniform_convergence-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 10.1.4.1"><a href="#prob_uniform_convergence-4" title="Copy heading and permalink for Hint 10.1.4.1" aria-label="Copy heading and permalink for Hint 10.1.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Problem 10.1.4"><a href="#prob_uniform_convergence" title="Copy heading and permalink for Problem 10.1.4" aria-label="Copy heading and permalink for Problem 10.1.4">🔗</a></div>
+</article>
+<div class="para" id="PowerSeriesRedux-UnifConv-15">Uniform convergence is not only dependent on the sequence of functions but also on the set <span class="process-math">\(S\text{.}\)</span>  For example, the sequence <span class="process-math">\(\left(f_n(x)\right)=\left(x^n\right)_{n=0}^\infty\)</span> of <a href="PowerSeriesRedux-UnifConv.html#prob_uniform_convergence" class="xref" data-knowl="./knowl/xref/prob_uniform_convergence.html" data-reveal-label="Reveal" data-close-label="Close" title="Problem 10.1.4">Problem 10.1.4</a> does not converge uniformly on <span class="process-math">\([0,1]\text{.}\)</span>  We could use the negation of the definition to prove this, but instead, it will be a consequence of the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm_UnifConv-_Continuity"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm_UnifConv-_Continuity-1-1"> Consider a sequence of functions <span class="process-math">\(\left(f_n\right)\)</span> which are all continuous on an interval <span class="process-math">\(I\text{.}\)</span>  Suppose <span class="process-math">\(f_n\unif f\)</span> on <span class="process-math">\(I\text{.}\)</span>  Then <span class="process-math">\(f\)</span> must be continuous on <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_UnifConv-_Continuity-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 10.1.5"><a href="#thm_UnifConv-_Continuity" title="Copy heading and permalink for Theorem 10.1.5" aria-label="Copy heading and permalink for Theorem 10.1.5">🔗</a></div>
+</article>
+<article class="proof" id="PowerSeriesRedux-UnifConv-17"><h3 class="heading"><span class="title">Sketch of Proof.</span></h3>
 <div class="para logical" id="PowerSeriesRedux-UnifConv-17-2">
 <div class="para">Let <span class="process-math">\(a\in I\)</span> and let <span class="process-math">\(\eps&gt;0\text{.}\)</span>  The idea is to use uniform convergence to replace <span class="process-math">\(f\)</span> with one of the known continuous functions <span class="process-math">\(f_n\text{.}\)</span>  Specifically, by uncancelling, we can write</div>
 <div class="displaymath process-math" id="PowerSeriesRedux-UnifConv-17-2-5">
@@ -376,33 +372,49 @@ x\in S\text{.}\)</span>
 \amp \leq \left|f(x)-f_n(x)\right|+\left|f_n(x)-f_n(a)\right|+\left|f_n(a)-f(a)\right|
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-17-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="PowerSeriesRedux-UnifConv-17-3">If we choose <span class="process-math">\(n\)</span> large enough, then we can make the first and last terms as small as we wish, noting that the uniform convergence makes the first term uniformly small for all <span class="process-math">\(x\text{.}\)</span>  Once we have a specific <span class="process-math">\(n,\)</span> then we can use the continuity of <span class="process-math">\(f_n\)</span> to find a <span class="process-math">\(\delta&gt;0\)</span> such that the middle term is small whenever <span class="process-math">\(x\)</span> is within <span class="process-math">\(\delta\)</span> of <span class="process-math">\(a\text{.}\)</span>
-</div></article><article class="problem example-like" id="PowerSeriesRedux-UnifConv-18"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.6</span><span class="period">.</span>
+<div class="para" id="PowerSeriesRedux-UnifConv-17-3">If we choose <span class="process-math">\(n\)</span> large enough, then we can make the first and last terms as small as we wish, noting that the uniform convergence makes the first term uniformly small for all <span class="process-math">\(x\text{.}\)</span>  Once we have a specific <span class="process-math">\(n,\)</span> then we can use the continuity of <span class="process-math">\(f_n\)</span> to find a <span class="process-math">\(\delta&gt;0\)</span> such that the middle term is small whenever <span class="process-math">\(x\)</span> is within <span class="process-math">\(\delta\)</span> of <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-17-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 10.1.1: Sketch of Proof"><a href="#PowerSeriesRedux-UnifConv-17" title="Copy heading and permalink for Proof 10.1.1: Sketch of Proof" aria-label="Copy heading and permalink for Proof 10.1.1: Sketch of Proof">🔗</a></div>
+</article>
+<article class="problem example-like" id="PowerSeriesRedux-UnifConv-18"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="PowerSeriesRedux-UnifConv-18-1-1"> Provide a formal proof of <a href="PowerSeriesRedux-UnifConv.html#thm_UnifConv-_Continuity" class="xref" data-knowl="./knowl/xref/thm_UnifConv-_Continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 10.1.5">Theorem 10.1.5</a> based on the above ideas.</div></article><article class="problem example-like" id="PowerSeriesRedux-UnifConv-19"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">10.1.7</span><span class="period">.</span>
+<div class="para" id="PowerSeriesRedux-UnifConv-18-1-1"> Provide a formal proof of <a href="PowerSeriesRedux-UnifConv.html#thm_UnifConv-_Continuity" class="xref" data-knowl="./knowl/xref/thm_UnifConv-_Continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 10.1.5">Theorem 10.1.5</a> based on the above ideas.<div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.1.6"><a href="#PowerSeriesRedux-UnifConv-18" title="Copy heading and permalink for Problem 10.1.6" aria-label="Copy heading and permalink for Problem 10.1.6">🔗</a></div>
+</article>
+<article class="problem example-like" id="PowerSeriesRedux-UnifConv-19"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="PowerSeriesRedux-UnifConv-19-1-1">
 <div class="para"> Consider the sequence of functions <span class="process-math">\(\left(f_n\right)\)</span> defined on <span class="process-math">\([0,1]\)</span> by <span class="process-math">\(f_n(x)=x^n\text{.}\)</span>  Show that the sequence converges to the function</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="PowerSeriesRedux-UnifConv-19-1-1-7">
 \begin{equation*}
 f(x)= \begin{cases}0\amp \text{ if  } x\in[0,1)\\ 1\amp \text{ if } x=1 \end{cases}
 \end{equation*}
 </div>
 <div class="para">pointwise on <span class="process-math">\(\,[0,1],\)</span> but not uniformly on <span class="process-math">\([0,1]\text{.}\)</span>
 </div>
-</div></article><div class="para logical" id="PowerSeriesRedux-UnifConv-20">
+<div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 10.1.7"><a href="#PowerSeriesRedux-UnifConv-19" title="Copy heading and permalink for Problem 10.1.7" aria-label="Copy heading and permalink for Problem 10.1.7">🔗</a></div>
+</article>
+<div class="para logical" id="PowerSeriesRedux-UnifConv-20">
 <div class="para">Notice that for the Fourier series at the beginning of this chapter,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="PowerSeriesRedux-UnifConv-20-1">
 \begin{equation*}
 f(x)=\frac{4}{\pi}\left(\cos\left(\frac{\pi}{2}x\right)-\frac{1}{3}\cos\left( 3\pi x\right)+\frac{1}{5}\cos\left(5\pi x\right)-\frac{1}{7}\cos\left(7\pi x\right)+\cdots\right)
 \end{equation*}
 </div>
 <div class="para">the convergence cannot be uniform on <span class="process-math">\((-\infty,\infty),\)</span> as the function <span class="process-math">\(f\)</span> is not continuous.  This never happens with a power series, since they converge to continuous functions whenever they converge.  We will also see that uniform convergence is what allows us to integrate and differentiate a power series term by term.</div>
-</div></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#PowerSeriesRedux-UnifConv-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 10.1: Uniform Convergence"><a href="#PowerSeriesRedux-UnifConv" title="Copy heading and permalink for Section 10.1: Uniform Convergence" aria-label="Copy heading and permalink for Section 10.1: Uniform Convergence">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="PowerSeriesRedux.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="PowerSeriesRedux-UnifConv-IntsAndDerivs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

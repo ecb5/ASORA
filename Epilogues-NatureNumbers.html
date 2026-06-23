@@ -6,77 +6,35 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
-<meta property="book:author" content="Robert Rogers, (Emeritus)">
-<meta property="book:author" content="Eugene Boman, (Emeritus)">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="og:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.42"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -98,31 +56,32 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.6.1';
+eBookConfig.runestone_version = '7.13.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c7804631fa963734.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f7a03b209751032d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
+<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.2f713d2360adcee7.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
 <p class="byline">Robert Rogers, (Emeritus), Eugene Boman, (Emeritus)</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
-</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="Epilogues.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Epilogues.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Epilogues-BuildRealNumbers.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
@@ -291,166 +250,232 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="Epilogues-NatureNumbers"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">12.1</span><span class="space"> </span><span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="Epilogues-NatureNumbers">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">On the Nature of Numbers: A Dialogue (with Apologies to Galileo)</span>
 </h2>
-<section class="introduction" id="Epilogues-NatureNumbers-2"><div class="para" id="Epilogues-NatureNumbers-2-1">
-<em class="alert">Interlocuters</em>:<em class="emphasis">Salviati, Sagredo, and Simplicio; Three Friends of Galileo Galilei</em>
+<section class="introduction" id="Epilogues-NatureNumbers-2">
+<div class="para" id="Epilogues-NatureNumbers-2-1">
+<em class="alert">Interlocuters</em>:<em class="emphasis">Salviati, Sagredo, and Simplicio; Three Friends of Galileo Galilei</em><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="Epilogues-NatureNumbers-2-2">
-<em class="alert">Setting</em>: Three friends meet in a garden for lunch in Renassaince Italy.  Prior to their meal they discuss the book <em class="emphasis">How We Got From There to Here: A Story of Real Analysis.</em> How they obtained a copy is not clear.</div>
+<em class="alert">Setting</em>: Three friends meet in a garden for lunch in Renassaince Italy.  Prior to their meal they discuss the book <em class="emphasis">How We Got From There to Here: A Story of Real Analysis.</em> How they obtained a copy is not clear.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-3">
-<em class="alert">Salviati</em>: My good sirs. I have read this very strange volume as I hope you have?</div>
+<em class="alert">Salviati</em>: My good sirs. I have read this very strange volume as I hope you have?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-4">
-<em class="alert">Sagredo</em>: I have and I also found it very strange.</div>
+<em class="alert">Sagredo</em>: I have and I also found it very strange.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-5">
-<em class="alert">Simplicio</em>: Very strange indeed; at once silly and mystifying.</div>
+<em class="alert">Simplicio</em>: Very strange indeed; at once silly and mystifying.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-6">
-<em class="alert">Salviati</em>: Silly? How so?</div>
+<em class="alert">Salviati</em>: Silly? How so?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-7">
-<em class="alert">Simplicio</em>: These authors begin their tome with the question, “What is a number?” This is an unusually silly question, don’t you think? Numbers are numbers. Everyone knows what they are.</div>
+<em class="alert">Simplicio</em>: These authors begin their tome with the question, “What is a number?” This is an unusually silly question, don’t you think? Numbers are numbers. Everyone knows what they are.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-8">
-<em class="alert">Sagredo</em>: I thought so as well until I reached the last chapter. But now I am not so certain. What about this quantity <span class="process-math">\(\aleph_0?\)</span> If this counts the positive integers, isn’t it a number? If not, then how can it count anything? If so, then what number is it? These questions plague me ’til I scarcely believe I know anything anymore.</div>
+<em class="alert">Sagredo</em>: I thought so as well until I reached the last chapter. But now I am not so certain. What about this quantity <span class="process-math">\(\aleph_0?\)</span> If this counts the positive integers, isn’t it a number? If not, then how can it count anything? If so, then what number is it? These questions plague me ’til I scarcely believe I know anything anymore.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-9">
-<em class="alert">Simplicio</em>: Of course <span class="process-math">\(\aleph_0\)</span> is not a number! It is simply a new name for the infinite, and infinity is not a number.</div>
+<em class="alert">Simplicio</em>: Of course <span class="process-math">\(\aleph_0\)</span> is not a number! It is simply a new name for the infinite, and infinity is not a number.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-10">
-<em class="alert">Sagredo</em>: But isn’t <span class="process-math">\(\aleph_0\)</span> the cardinality of the set of natural numbers, <span class="process-math">\(\NN\text{,}\)</span> in just the same way that the cardinality of the set <span class="process-math">\(S=\left\{Salviati, Sagredo, Simplicio\right\}\)</span> is <span class="process-math">\(3?\)</span> If <span class="process-math">\(3\)</span> is a number, then why isn’t <span class="process-math">\(\aleph_0?\)</span>
+<em class="alert">Sagredo</em>: But isn’t <span class="process-math">\(\aleph_0\)</span> the cardinality of the set of natural numbers, <span class="process-math">\(\NN\text{,}\)</span> in just the same way that the cardinality of the set <span class="process-math">\(S=\left\{Salviati, Sagredo, Simplicio\right\}\)</span> is <span class="process-math">\(3?\)</span> If <span class="process-math">\(3\)</span> is a number, then why isn’t <span class="process-math">\(\aleph_0?\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="Epilogues-NatureNumbers-2-11">
-<em class="alert">Simplicio</em>: Ah, my friend, like our authors you are simply playing with words. You count the elements in the set <span class="process-math">\(S=\left\{Salviati, Sagredo, Simplicio\right\};\)</span> you see plainly that the <em class="emphasis">number of elements</em> it contains is <span class="process-math">\(3\)</span> and then you change your language. Rather than saying that the <em class="emphasis">number of elements</em> in <span class="process-math">\(S\)</span> is <span class="process-math">\(3\)</span> you say that the <em class="emphasis">cardinality</em> is <span class="process-math">\(3\text{.}\)</span> But clearly “cardinality” and “number of elements” mean the same thing.</div>
-<div class="para" id="Epilogues-NatureNumbers-2-12">Similarly you use the symbol <span class="process-math">\(\NN\)</span> to denote the set of positive integers. With your new word and symbol you make the statement “the <em class="emphasis">cardinality</em> (number of elements) of <span class="process-math">\(\NN\)</span> is <span class="process-math">\(\aleph_0\text{.}\)</span>” This statement has the same grammatical form as the statement “the <em class="emphasis">number of elements</em> (cardinality) of <span class="process-math">\(S\)</span> is three.” Since three <em class="emphasis">is</em> a number you conclude that <span class="process-math">\(\aleph_0\)</span> is also a number.</div>
-<div class="para" id="Epilogues-NatureNumbers-2-13">But this is simply nonsense dressed up to sound sensible. If we unwind our notation and language, your statement is simply, “The number of positive integers is infinite.” This is obviously nonsense because infinity is <em class="emphasis">not</em> a number.</div>
-<div class="para" id="Epilogues-NatureNumbers-2-14">Even if we take infinity as an undefined term and try to define it by your statement this is still nonsense since you are using the word “number” to define a new “number” called infinity. This definition is circular. Thus it is no definition at all. It is nonsense.</div>
+<em class="alert">Simplicio</em>: Ah, my friend, like our authors you are simply playing with words. You count the elements in the set <span class="process-math">\(S=\left\{Salviati, Sagredo, Simplicio\right\};\)</span> you see plainly that the <em class="emphasis">number of elements</em> it contains is <span class="process-math">\(3\)</span> and then you change your language. Rather than saying that the <em class="emphasis">number of elements</em> in <span class="process-math">\(S\)</span> is <span class="process-math">\(3\)</span> you say that the <em class="emphasis">cardinality</em> is <span class="process-math">\(3\text{.}\)</span> But clearly “cardinality” and “number of elements” mean the same thing.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Epilogues-NatureNumbers-2-12">Similarly you use the symbol <span class="process-math">\(\NN\)</span> to denote the set of positive integers. With your new word and symbol you make the statement “the <em class="emphasis">cardinality</em> (number of elements) of <span class="process-math">\(\NN\)</span> is <span class="process-math">\(\aleph_0\text{.}\)</span>” This statement has the same grammatical form as the statement “the <em class="emphasis">number of elements</em> (cardinality) of <span class="process-math">\(S\)</span> is three.” Since three <em class="emphasis">is</em> a number you conclude that <span class="process-math">\(\aleph_0\)</span> is also a number.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Epilogues-NatureNumbers-2-13">But this is simply nonsense dressed up to sound sensible. If we unwind our notation and language, your statement is simply, “The number of positive integers is infinite.” This is obviously nonsense because infinity is <em class="emphasis">not</em> a number.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Epilogues-NatureNumbers-2-14">Even if we take infinity as an undefined term and try to define it by your statement this is still nonsense since you are using the word “number” to define a new “number” called infinity. This definition is circular. Thus it is no definition at all. It is nonsense.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-15">
-<em class="alert">Salviati</em>: Your reasoning on this certainly seems sound.</div>
+<em class="alert">Salviati</em>: Your reasoning on this certainly seems sound.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-16">
-<em class="alert">Simplicio</em>: Thank you.</div>
+<em class="alert">Simplicio</em>: Thank you.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-17">
-<em class="alert">Salviati</em>:  However, there are a couple of small points I would like to examine more closely if you will indulge me?</div>
+<em class="alert">Salviati</em>:  However, there are a couple of small points I would like to examine more closely if you will indulge me?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-18">
-<em class="alert">Simplicio</em>: Of course. What troubles you?</div>
+<em class="alert">Simplicio</em>: Of course. What troubles you?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-19">
-<em class="alert">Salviati</em>: You’ve said that we cannot use the word “number” to define numbers because this would be circular reasoning. I entirely agree, but I am not sure this is what our authors are doing.</div>
-<div class="para" id="Epilogues-NatureNumbers-2-20">Consider the set <span class="process-math">\(\left\{1, 2, 3\right\}\text{.}\)</span> Do you agree that it contains three elements?</div>
+<em class="alert">Salviati</em>: You’ve said that we cannot use the word “number” to define numbers because this would be circular reasoning. I entirely agree, but I am not sure this is what our authors are doing.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Epilogues-NatureNumbers-2-20">Consider the set <span class="process-math">\(\left\{1, 2, 3\right\}\text{.}\)</span> Do you agree that it contains three elements?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-21">
-<em class="alert">Simplicio</em>: Obviously.</div>
+<em class="alert">Simplicio</em>: Obviously.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-22">
-<em class="alert">Sagredo</em>: Ah! I see your point! That there are three elements does <em class="emphasis">not</em> depend on what those elements are. Any set with three elements has three elements regardless of the nature of the elements. Thus saying that the set <span class="process-math">\(\left\{1, 2, 3\right\}\)</span> contains three elements does not define the word “number” in a circular manner because it is irrelevant that the <em class="emphasis">number</em> 3 is one of the elements of the set. Thus to say that three is the cardinality of the set <span class="process-math">\(\left\{1, 2, 3\right\}\)</span> has the same meaning as saying that there are three elements in the set <span class="process-math">\(\left\{Salviati, Sagredo, Simplicio\right\}\text{.}\)</span> In both cases the number “<span class="process-math">\(3\)</span>” is the name that we give to the totality of the elements of each set.</div>
+<em class="alert">Sagredo</em>: Ah! I see your point! That there are three elements does <em class="emphasis">not</em> depend on what those elements are. Any set with three elements has three elements regardless of the nature of the elements. Thus saying that the set <span class="process-math">\(\left\{1, 2, 3\right\}\)</span> contains three elements does not define the word “number” in a circular manner because it is irrelevant that the <em class="emphasis">number</em> 3 is one of the elements of the set. Thus to say that three is the cardinality of the set <span class="process-math">\(\left\{1, 2, 3\right\}\)</span> has the same meaning as saying that there are three elements in the set <span class="process-math">\(\left\{Salviati, Sagredo, Simplicio\right\}\text{.}\)</span> In both cases the number “<span class="process-math">\(3\)</span>” is the name that we give to the totality of the elements of each set.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-23">
-<em class="alert">Salviati</em>:  Precisely. In exactly the same way <span class="process-math">\(\aleph_0\)</span> is the symbol we use to denote the totality of the set of positive integers.</div>
-<div class="para" id="Epilogues-NatureNumbers-2-24">Thus <span class="process-math">\(\aleph_0\)</span> is a number in the same sense that ’<span class="process-math">\(3\)</span>’ is a number, is it not?</div>
+<em class="alert">Salviati</em>:  Precisely. In exactly the same way <span class="process-math">\(\aleph_0\)</span> is the symbol we use to denote the totality of the set of positive integers.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Epilogues-NatureNumbers-2-24">Thus <span class="process-math">\(\aleph_0\)</span> is a number in the same sense that ’<span class="process-math">\(3\)</span>’ is a number, is it not?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-25">
-<em class="alert">Simplicio</em>:  I see that we can say in a meaningful way that three is the cardinality of any set with . . . well, . . . with three elements (it becomes very difficult to talk about these things) but this is simply a tautology! It is a way of saying that a set which has three elements has three elements!</div>
-<div class="para" id="Epilogues-NatureNumbers-2-26">This means only that we have counted them and we had to stop at three. In order to do this we must have numbers first. Which, of course, we do. As I said, everyone knows what numbers are.</div>
+<em class="alert">Simplicio</em>:  I see that we can say in a meaningful way that three is the cardinality of any set with . . . well, . . . with three elements (it becomes very difficult to talk about these things) but this is simply a tautology! It is a way of saying that a set which has three elements has three elements!<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Epilogues-NatureNumbers-2-26">This means only that we have counted them and we had to stop at three. In order to do this we must have numbers first. Which, of course, we do. As I said, everyone knows what numbers are.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-27">
-<em class="alert">Sagredo</em>:  I must confess, my friend, that I become more confused as we speak. I am no longer certain that I really know what a number is. Since you seem to have retained your certainty can you clear this up for me? Can you tell me what a number is?</div>
+<em class="alert">Sagredo</em>:  I must confess, my friend, that I become more confused as we speak. I am no longer certain that I really know what a number is. Since you seem to have retained your certainty can you clear this up for me? Can you tell me what a number is?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-28">
-<em class="alert">Simplicio</em>:  Certainly. A number is what we have just been discussing. It is what you have when you stop counting. For example, three is the totality (to use your phrase) of the elements of the sets <span class="process-math">\(\left\{Salviati, Sagredo, Simplicio\right\}\)</span> or <span class="process-math">\(\left\{1, 2, 3\right\}\)</span> because when I count the elements in either set I have to stop at three. Nothing less, nothing more. Thus three is a number.</div>
+<em class="alert">Simplicio</em>:  Certainly. A number is what we have just been discussing. It is what you have when you stop counting. For example, three is the totality (to use your phrase) of the elements of the sets <span class="process-math">\(\left\{Salviati, Sagredo, Simplicio\right\}\)</span> or <span class="process-math">\(\left\{1, 2, 3\right\}\)</span> because when I count the elements in either set I have to stop at three. Nothing less, nothing more. Thus three is a number.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-29">
-<em class="alert">Salviati</em>:  But this definition only confuses me! Surely you will allow that fractions are numbers? What is counted when we end with, say <span class="process-math">\(4/5\)</span> or <span class="process-math">\(1/5?\)</span>
+<em class="alert">Salviati</em>:  But this definition only confuses me! Surely you will allow that fractions are numbers? What is counted when we end with, say <span class="process-math">\(4/5\)</span> or <span class="process-math">\(1/5?\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="Epilogues-NatureNumbers-2-30">
-<em class="alert">Simplicio</em>:  This is simplicity itself. <span class="process-math">\(4/5\)</span> is the number we get when we have divided something into <span class="process-math">\(5\)</span> equal pieces and we have counted four of these fifths. This is four-fifths. You see? Even the language we use naturally bends itself to our purpose.</div>
+<em class="alert">Simplicio</em>:  This is simplicity itself. <span class="process-math">\(4/5\)</span> is the number we get when we have divided something into <span class="process-math">\(5\)</span> equal pieces and we have counted four of these fifths. This is four-fifths. You see? Even the language we use naturally bends itself to our purpose.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-31">
-<em class="alert">Salviati</em>:  But what of one-fifth? In order to count one fifth we must first divide something into fifths. To do this we must know what one-fifth is, musn’t we? We seem to be using the word “number” to define itself again. Have we not come full circle and gotten nowhere?</div>
+<em class="alert">Salviati</em>:  But what of one-fifth? In order to count one fifth we must first divide something into fifths. To do this we must know what one-fifth is, musn’t we? We seem to be using the word “number” to define itself again. Have we not come full circle and gotten nowhere?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-32">
-<em class="alert">Simplicio</em>:  I confess this had not occurred to me before. But your objection is easily answered. To count one-fifth we simply divide our “something” into tenths. Then we count two of them. Since two-tenths is the same as one-fifth the problem is solved. Do you see?</div>
+<em class="alert">Simplicio</em>:  I confess this had not occurred to me before. But your objection is easily answered. To count one-fifth we simply divide our “something” into tenths. Then we count two of them. Since two-tenths is the same as one-fifth the problem is solved. Do you see?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-33">
-<em class="alert">Sagredo</em>:  I see your point but it will not suffice at all! It merely replaces the question, “What is one-fifth?” with, “What is one-tenth?” Nor will it do to say that one-tenth is merely two-twentieths. This simply shifts the question back another level.</div>
-<div class="para" id="Epilogues-NatureNumbers-2-34">Archimedes said, “Give me a place to stand and a lever long enough and I will move the earth.” But of course he never moved the earth because he had nowhere to stand. We seem to find ourselves in Archimedes’ predicament: We have no place to stand.</div>
+<em class="alert">Sagredo</em>:  I see your point but it will not suffice at all! It merely replaces the question, “What is one-fifth?” with, “What is one-tenth?” Nor will it do to say that one-tenth is merely two-twentieths. This simply shifts the question back another level.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Epilogues-NatureNumbers-2-34">Archimedes said, “Give me a place to stand and a lever long enough and I will move the earth.” But of course he never moved the earth because he had nowhere to stand. We seem to find ourselves in Archimedes’ predicament: We have no place to stand.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-35">
-<em class="alert">Simplicio</em>:  I confess I don’t see a way to answer this right now. However I’m sure an answer can be found if we only think hard enough. In the meantime I cannot accept that <span class="process-math">\(\aleph_0\)</span> is a number. It is, as I said before, infinity and infinity is not a number! We may as well believe in fairies and leprechauns if we call infinity a number.</div>
+<em class="alert">Simplicio</em>:  I confess I don’t see a way to answer this right now. However I’m sure an answer can be found if we only think hard enough. In the meantime I cannot accept that <span class="process-math">\(\aleph_0\)</span> is a number. It is, as I said before, infinity and infinity is not a number! We may as well believe in fairies and leprechauns if we call infinity a number.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-36">
-<em class="alert">Sagredo</em>:  But again we’ve come full circle. We cannot say definitively that <span class="process-math">\(\aleph_0\)</span> is or is not a number until we can state with confidence what a number is. And even if we could find solid ground on which to solve the problem of fractions, what of <span class="process-math">\(\sqrt{2}?\)</span> Or <span class="process-math">\(\pi?\)</span> Certainly these are numbers but I see no way to count to either of them.</div>
+<em class="alert">Sagredo</em>:  But again we’ve come full circle. We cannot say definitively that <span class="process-math">\(\aleph_0\)</span> is or is not a number until we can state with confidence what a number is. And even if we could find solid ground on which to solve the problem of fractions, what of <span class="process-math">\(\sqrt{2}?\)</span> Or <span class="process-math">\(\pi?\)</span> Certainly these are numbers but I see no way to count to either of them.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-37">
-<em class="alert">Simplicio</em>:  Alas! I am beset by demons! I am bewitched! I no longer believe what I <em class="emphasis">know</em> to be true!</div>
+<em class="alert">Simplicio</em>:  Alas! I am beset by demons! I am bewitched! I no longer believe what I <em class="emphasis">know</em> to be true!<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-37" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-38">
-<em class="alert">Salviati</em>:  Perhaps things are not quite as bad as that. Let us consider further. You said earlier that we all know what numbers are, and I agree. But perhaps your statement needs to be more precisely formulated. Suppose we say instead that we all know what numbers <em class="emphasis">need</em> to be? Or that we know what we <em class="emphasis">want</em> numbers to be?</div>
-<div class="para" id="Epilogues-NatureNumbers-2-39">Even if we cannot say with certainly what numbers <em class="emphasis">are</em> surely we can say what we want and need for them to be. Do you agree?</div>
+<em class="alert">Salviati</em>:  Perhaps things are not quite as bad as that. Let us consider further. You said earlier that we all know what numbers are, and I agree. But perhaps your statement needs to be more precisely formulated. Suppose we say instead that we all know what numbers <em class="emphasis">need</em> to be? Or that we know what we <em class="emphasis">want</em> numbers to be?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-38" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Epilogues-NatureNumbers-2-39">Even if we cannot say with certainly what numbers <em class="emphasis">are</em> surely we can say what we want and need for them to be. Do you agree?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-39" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-40">
-<em class="alert">Sagredo</em>:  I do.</div>
+<em class="alert">Sagredo</em>:  I do.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-40" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-41">
-<em class="alert">Simplicio</em>:  And so do I.</div>
+<em class="alert">Simplicio</em>:  And so do I.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-41" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-42">
-<em class="alert">Salviati</em>:  Then let us invent numbers anew, as if we’ve never seen them before, always keeping in mind those properties we need for numbers to have. If we take this as a starting point then the question we need to address is, “What do we need numbers to be?”</div>
+<em class="alert">Salviati</em>:  Then let us invent numbers anew, as if we’ve never seen them before, always keeping in mind those properties we need for numbers to have. If we take this as a starting point then the question we need to address is, “What do we need numbers to be?”<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-42" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-43">
-<em class="alert">Sagredo</em>:  This is obvious! We need to be able to add them and we need to be able to multiply them together, and the result should also be a number.</div>
+<em class="alert">Sagredo</em>:  This is obvious! We need to be able to add them and we need to be able to multiply them together, and the result should also be a number.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-43" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-44">
-<em class="alert">Simplicio</em>:  And subtract and divide too, of course.</div>
+<em class="alert">Simplicio</em>:  And subtract and divide too, of course.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-44" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-45">
-<em class="alert">Sagredo</em>:  I am not so sure we actually need these. Could we not <em class="emphasis">define</em> “subtract two from three” to be “add negative two to three” and thus dispense with subtraction and division?</div>
+<em class="alert">Sagredo</em>:  I am not so sure we actually need these. Could we not <em class="emphasis">define</em> “subtract two from three” to be “add negative two to three” and thus dispense with subtraction and division?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-45" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-46">
-<em class="alert">Simplicio</em>:  I suppose we can but I see no advantage in doing so. Why not simply have subtraction and division as we’ve always known them?</div>
+<em class="alert">Simplicio</em>:  I suppose we can but I see no advantage in doing so. Why not simply have subtraction and division as we’ve always known them?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-46" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-47">
-<em class="alert">Sagredo</em>:  The advantage is parsimony. Two arithmetic operations are easier to keep track of than four. I suggest we go forward with only addition and multiplication for now. If we find we need subtraction or division we can consider them later.</div>
+<em class="alert">Sagredo</em>:  The advantage is parsimony. Two arithmetic operations are easier to keep track of than four. I suggest we go forward with only addition and multiplication for now. If we find we need subtraction or division we can consider them later.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-47" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="Epilogues-NatureNumbers-2-48">
 <div class="para">
 <em class="alert">Simplicio</em>:  Agreed. And I now see another advantage. Obviously addition and multiplication must not depend on order. That is, if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are numbers then <span class="process-math">\(x+y\)</span> must be equal to <span class="process-math">\(y+x\)</span> and <span class="process-math">\(xy\)</span> must be equal to <span class="process-math">\(yx\text{.}\)</span> This is not true for subtraction, for <span class="process-math">\(3-2\)</span> does <em class="emphasis">not</em> equal <span class="process-math">\(2-3\text{.}\)</span> But if we define subtraction as you suggest then this symmetry is preserved:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="Epilogues-NatureNumbers-2-48-11">
 \begin{equation*}
 x+(-y) = (-y)+x\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-48" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="Epilogues-NatureNumbers-2-49">
 <div class="para">
 <em class="alert">Sagredo</em>:  Excellent! Another property we will require of numbers occurs to me now. When adding or multiplying more than two numbers it should not matter where we begin. That is, if <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> are numbers it should be true that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="Epilogues-NatureNumbers-2-49-5">
 \begin{equation*}
 (x+y)+z = x+(y+z)
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="Epilogues-NatureNumbers-2-49-6">
 \begin{equation*}
 (x\cdot y)\cdot z = x\cdot(y\cdot z)\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-49" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="Epilogues-NatureNumbers-2-50">
-<em class="alert">Simplicio</em>:  Yes! We have it! Any objects which combine in these precise ways can be called numbers.</div>
+<em class="alert">Simplicio</em>:  Yes! We have it! Any objects which combine in these precise ways can be called numbers.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-50" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-51">
-<em class="alert">Salviati</em>:  Certainly these properties are necessary, but I don’t think they are yet sufficient to our purpose. For example, the number <span class="process-math">\(1\)</span> is unique in that it is the only number which, when multiplying another number leaves it unchanged.</div>
-<div class="para" id="Epilogues-NatureNumbers-2-52">For example:  <span class="process-math">\(1\cdot3=3\text{.}\)</span> Or, in general, if <span class="process-math">\(x\)</span> is a number then <span class="process-math">\(1\cdot x =x\text{.}\)</span>
+<em class="alert">Salviati</em>:  Certainly these properties are necessary, but I don’t think they are yet sufficient to our purpose. For example, the number <span class="process-math">\(1\)</span> is unique in that it is the only number which, when multiplying another number leaves it unchanged.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-51" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Epilogues-NatureNumbers-2-52">For example:  <span class="process-math">\(1\cdot3=3\text{.}\)</span> Or, in general, if <span class="process-math">\(x\)</span> is a number then <span class="process-math">\(1\cdot x =x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-52" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="Epilogues-NatureNumbers-2-53">
-<em class="alert">Sagredo</em>:  Yes. Indeed. It occurs to me that the number zero plays a similar role for addition: <span class="process-math">\(0+x=x\text{.}\)</span>
+<em class="alert">Sagredo</em>:  Yes. Indeed. It occurs to me that the number zero plays a similar role for addition: <span class="process-math">\(0+x=x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-53" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="Epilogues-NatureNumbers-2-54">
-<em class="alert">Salviati</em>:  It does not seem to me that addition and multiplication, as we have defined them, force <span class="process-math">\(1\)</span> or <span class="process-math">\(0\)</span> into existence so I believe we will have to postulate their existence independently.</div>
+<em class="alert">Salviati</em>:  It does not seem to me that addition and multiplication, as we have defined them, force <span class="process-math">\(1\)</span> or <span class="process-math">\(0\)</span> into existence so I believe we will have to postulate their existence independently.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-54" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-55">
-<em class="alert">Sagredo</em>:  Is this everything then? Is this all we require of numbers?</div>
+<em class="alert">Sagredo</em>:  Is this everything then? Is this all we require of numbers?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-55" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-56">
-<em class="alert">Simplicio</em>:  I don’t think we are quite done yet. How shall we get division?</div>
+<em class="alert">Simplicio</em>:  I don’t think we are quite done yet. How shall we get division?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-56" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-57">
-<em class="alert">Sagredo</em>:  In the same way that we defined subtraction to be the addition of a negative number, can we not define division to be multiplication by a reciprocal? For example, <span class="process-math">\(3\)</span> divided by <span class="process-math">\(2\)</span> can be considered <span class="process-math">\(3\)</span> <em class="emphasis">multiplied</em> by <span class="process-math">\(1/2\text{,}\)</span> can it not?</div>
+<em class="alert">Sagredo</em>:  In the same way that we defined subtraction to be the addition of a negative number, can we not define division to be multiplication by a reciprocal? For example, <span class="process-math">\(3\)</span> divided by <span class="process-math">\(2\)</span> can be considered <span class="process-math">\(3\)</span> <em class="emphasis">multiplied</em> by <span class="process-math">\(1/2\text{,}\)</span> can it not?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-57" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-58">
-<em class="alert">Salviati</em>:  I think it can. But observe that <em class="emphasis">every</em> number will need to have a corresponding negative so that we can subtract any amount. And again nothing we’ve discussed so far forces these negative numbers into existence so we will have to postulate their existence separately.</div>
+<em class="alert">Salviati</em>:  I think it can. But observe that <em class="emphasis">every</em> number will need to have a corresponding negative so that we can subtract any amount. And again nothing we’ve discussed so far forces these negative numbers into existence so we will have to postulate their existence separately.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-58" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-59">
-<em class="alert">Simplicio</em>:  And in the same way every number will need a reciprocal so that we can divide by any amount.</div>
+<em class="alert">Simplicio</em>:  And in the same way every number will need a reciprocal so that we can divide by any amount.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-59" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-60">
-<em class="alert">Sagredo</em>:  Every number that is, except zero.</div>
+<em class="alert">Sagredo</em>:  Every number that is, except zero.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-60" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-61">
-<em class="alert">Simplicio</em>:  Yes, this is true. Strange is it not, that of them all only this one number needs no reciprocal? Shall we also postulate that zero has no reciprocal?</div>
+<em class="alert">Simplicio</em>:  Yes, this is true. Strange is it not, that of them all only this one number needs no reciprocal? Shall we also postulate that zero has no reciprocal?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-61" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-62">
-<em class="alert">Salviati</em>: I don’t see why we should. Possibly <span class="process-math">\(\aleph_0\)</span> is the reciprocal of zero. Or possibly not. But I see no need to concern ourselves with things we do not need.</div>
+<em class="alert">Salviati</em>: I don’t see why we should. Possibly <span class="process-math">\(\aleph_0\)</span> is the reciprocal of zero. Or possibly not. But I see no need to concern ourselves with things we do not need.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-62" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-63">
-<em class="alert">Simplicio</em>: Is this everything then? Have we discovered all that we need for numbers to be?</div>
+<em class="alert">Simplicio</em>: Is this everything then? Have we discovered all that we need for numbers to be?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-63" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-64">
-<em class="alert">Salviati</em>: I believe there is only one property missing. We have postulated addition and we have postulated multiplication and we have described the numbers zero and one which play similar roles for addition and multiplication respectively. But we have not described how addition and multiplication work together.</div>
+<em class="alert">Salviati</em>: I believe there is only one property missing. We have postulated addition and we have postulated multiplication and we have described the numbers zero and one which play similar roles for addition and multiplication respectively. But we have not described how addition and multiplication work together.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-64" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="Epilogues-NatureNumbers-2-65">
 <div class="para">That is, we need a rule of distribution:  If <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> are all numbers then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="Epilogues-NatureNumbers-2-65-4">
 \begin{equation*}
 x\cdot(y+z) = x\cdot y+x\cdot z\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-65" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Epilogues-NatureNumbers-2-66">With this in place I believe we have everything we need.</div>
+<div class="para" id="Epilogues-NatureNumbers-2-66">With this in place I believe we have everything we need.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-66" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-67">
-<em class="alert">Simplicio</em>:  Indeed. We can also see from this that <span class="process-math">\(\aleph_0\)</span> cannot be a number since, in the first place, it cannot be added to another number and in the second, even if it could be added to a number the result is surely not also a number.</div>
+<em class="alert">Simplicio</em>:  Indeed. We can also see from this that <span class="process-math">\(\aleph_0\)</span> cannot be a number since, in the first place, it cannot be added to another number and in the second, even if it could be added to a number the result is surely not also a number.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-67" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-68">
-<em class="alert">Salviati</em>:  My dear Simplicio, I fear you have missed the point entirely! Our axioms do not declare what a number is, only how it behaves with respect to addition and multiplication with other numbers. Thus it is a mistake to presume that “numbers” are only those objects that we have always believed them to be. In fact, it now occurs to me that “addition” and “multiplication” also needn’t be seen as the operations we have always believed them to be.</div>
+<em class="alert">Salviati</em>:  My dear Simplicio, I fear you have missed the point entirely! Our axioms do not declare what a number is, only how it behaves with respect to addition and multiplication with other numbers. Thus it is a mistake to presume that “numbers” are only those objects that we have always believed them to be. In fact, it now occurs to me that “addition” and “multiplication” also needn’t be seen as the operations we have always believed them to be.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-68" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="Epilogues-NatureNumbers-2-69">
 <div class="para">For example suppose we have three objects, <span class="process-math">\(\left\{a, b, c\right\}\)</span> and suppose that we define “addition” and “multiplication” by the following tables:</div>
 <div class="displaymath process-math" id="Epilogues-NatureNumbers-2-69-4">
@@ -470,142 +495,250 @@ c\amp a\amp c\amp b
 \end{array} 
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-69" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="Epilogues-NatureNumbers-2-70">I submit that our set along with these definitions satisfy all of our axioms and thus <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> qualify to be called “numbers.”</div>
+<div class="para" id="Epilogues-NatureNumbers-2-70">I submit that our set along with these definitions satisfy all of our axioms and thus <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> qualify to be called “numbers.”<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-70" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-71">
-<em class="alert">Simplicio</em>:  This cannot be! There is no zero, no one!</div>
+<em class="alert">Simplicio</em>:  This cannot be! There is no zero, no one!<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-71" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-72">
-<em class="alert">Sagredo</em>:  But there is. Do you not see that <span class="process-math">\(a\)</span> plays the role of zero — if you add it to any number you get that number back. Similarly <span class="process-math">\(b\)</span> plays the role of one.</div>
+<em class="alert">Sagredo</em>:  But there is. Do you not see that <span class="process-math">\(a\)</span> plays the role of zero — if you add it to any number you get that number back. Similarly <span class="process-math">\(b\)</span> plays the role of one.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-72" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-73">
-<em class="alert">Simplicio</em>: This is astonishing! If <span class="process-math">\(a, b\)</span> and <span class="process-math">\(c\)</span> can be numbers then I am less sure than ever that I know what numbers are! Why, if we replace <span class="process-math">\(a, b\text{,}\)</span> and <span class="process-math">\(c\)</span> with <em class="emphasis">Simplicio</em> <em class="emphasis">Sagredo,</em> and <em class="emphasis">Salviati</em> then <em class="emphasis">we</em> become numbers ourselves!</div>
+<em class="alert">Simplicio</em>: This is astonishing! If <span class="process-math">\(a, b\)</span> and <span class="process-math">\(c\)</span> can be numbers then I am less sure than ever that I know what numbers are! Why, if we replace <span class="process-math">\(a, b\text{,}\)</span> and <span class="process-math">\(c\)</span> with <em class="emphasis">Simplicio</em> <em class="emphasis">Sagredo,</em> and <em class="emphasis">Salviati</em> then <em class="emphasis">we</em> become numbers ourselves!<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-73" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-74">
-<em class="alert">Salviati</em>:  Perhaps we will have to be content with knowing how numbers behave rather than knowing what they are.</div>
-<div class="para" id="Epilogues-NatureNumbers-2-75">However I confess that I have a certain affection for the numbers I grew up with. Let us call those the “real” numbers. Any other set of numbers, such as our <span class="process-math">\(\left\{a,b,c\right\}\)</span> above we will call a field of numbers, since they seem to provide us with new ground to explore. Or perhaps just a <em class="emphasis">number field</em>?</div>
-<div class="para" id="Epilogues-NatureNumbers-2-76">As we have been discussing this I have been writing down our axioms.  They are these.  Numbers are any objects which satisfy all of the following properties:</div>
-<div class="para" id="Epilogues-NatureNumbers-2-77"><em class="alert">AXIOMS OF NUMBERS</em></div>
-<div class="para logical" id="Epilogues-NatureNumbers-2-78"><dl class="description-list">
-<dt id="Epilogues-NatureNumbers-2-78-1-1">Axiom I: Definition of Operations</dt>
-<dd><div class="para" id="Epilogues-NatureNumbers-2-78-1-1-2">They can be combined by two operations, denoted “<span class="process-math">\(\cdot\)</span>” and “+”.</div></dd>
-<dt id="Epilogues-NatureNumbers-2-78-1-2">Axiom II: Closure</dt>
-<dd><div class="para" id="Epilogues-NatureNumbers-2-78-1-2-2">If <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> are numbers then <span class="process-math">\(x+y\)</span> is also a number. <span class="process-math">\(x\cdot y\)</span> is also a number.</div></dd>
-<dt id="Epilogues-NatureNumbers-2-78-1-3">Axiom II: Commutativity</dt>
-<dd><div class="para" id="Epilogues-NatureNumbers-2-78-1-3-2">
-<span class="process-math">\(x+y=y+x\)</span> <span class="process-math">\(x\cdot y=y\cdot x\)</span>
-</div></dd>
-<dt id="Epilogues-NatureNumbers-2-78-1-4">Axiom III: Associativity</dt>
-<dd><div class="para" id="Epilogues-NatureNumbers-2-78-1-4-2">
-<span class="process-math">\((x+y)+z=x+(y+z)\)</span> <span class="process-math">\((x\cdot y)\cdot z = x\cdot(y\cdot z)\)</span>
-</div></dd>
-<dt id="Epilogues-NatureNumbers-2-78-1-5">Axiom IV: Additive Identity</dt>
-<dd><div class="para logical" id="Epilogues-NatureNumbers-2-78-1-5-2">
+<em class="alert">Salviati</em>:  Perhaps we will have to be content with knowing how numbers behave rather than knowing what they are.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-74" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Epilogues-NatureNumbers-2-75">However I confess that I have a certain affection for the numbers I grew up with. Let us call those the “real” numbers. Any other set of numbers, such as our <span class="process-math">\(\left\{a,b,c\right\}\)</span> above we will call a field of numbers, since they seem to provide us with new ground to explore. Or perhaps just a <em class="emphasis">number field</em>?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-75" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Epilogues-NatureNumbers-2-76">As we have been discussing this I have been writing down our axioms.  They are these.  Numbers are any objects which satisfy all of the following properties:<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-76" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Epilogues-NatureNumbers-2-77">
+<em class="alert">AXIOMS OF NUMBERS</em><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-77" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Epilogues-NatureNumbers-2-78">
+<dl class="description-list">
+<dt id="Epilogues-NatureNumbers-2-78-1-1">Axiom I: Definition of Operations<div class="autopermalink" data-description="Item: Axiom I: Definition of Operations"><a href="#Epilogues-NatureNumbers-2-78-1-1" title="Copy heading and permalink for Item: Axiom I: Definition of Operations" aria-label="Copy heading and permalink for Item: Axiom I: Definition of Operations">🔗</a></div>
+</dt>
+<dd>
+<div class="para" id="Epilogues-NatureNumbers-2-78-1-1-2">They can be combined by two operations, denoted “<span class="process-math">\(\cdot\)</span>” and “+”.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-78-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="Epilogues-NatureNumbers-2-78-1-2">Axiom II: Closure<div class="autopermalink" data-description="Item: Axiom II: Closure"><a href="#Epilogues-NatureNumbers-2-78-1-2" title="Copy heading and permalink for Item: Axiom II: Closure" aria-label="Copy heading and permalink for Item: Axiom II: Closure">🔗</a></div>
+</dt>
+<dd>
+<div class="para" id="Epilogues-NatureNumbers-2-78-1-2-2">If <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> are numbers then <span class="process-math">\(x+y\)</span> is also a number. <span class="process-math">\(x\cdot y\)</span> is also a number.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-78-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="Epilogues-NatureNumbers-2-78-1-3">Axiom II: Commutativity<div class="autopermalink" data-description="Item: Axiom II: Commutativity"><a href="#Epilogues-NatureNumbers-2-78-1-3" title="Copy heading and permalink for Item: Axiom II: Commutativity" aria-label="Copy heading and permalink for Item: Axiom II: Commutativity">🔗</a></div>
+</dt>
+<dd>
+<div class="para" id="Epilogues-NatureNumbers-2-78-1-3-2">
+<span class="process-math">\(x+y=y+x\)</span> <span class="process-math">\(x\cdot y=y\cdot x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-78-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="Epilogues-NatureNumbers-2-78-1-4">Axiom III: Associativity<div class="autopermalink" data-description="Item: Axiom III: Associativity"><a href="#Epilogues-NatureNumbers-2-78-1-4" title="Copy heading and permalink for Item: Axiom III: Associativity" aria-label="Copy heading and permalink for Item: Axiom III: Associativity">🔗</a></div>
+</dt>
+<dd>
+<div class="para" id="Epilogues-NatureNumbers-2-78-1-4-2">
+<span class="process-math">\((x+y)+z=x+(y+z)\)</span> <span class="process-math">\((x\cdot y)\cdot z = x\cdot(y\cdot z)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-78-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="Epilogues-NatureNumbers-2-78-1-5">Axiom IV: Additive Identity<div class="autopermalink" data-description="Item: Axiom IV: Additive Identity"><a href="#Epilogues-NatureNumbers-2-78-1-5" title="Copy heading and permalink for Item: Axiom IV: Additive Identity" aria-label="Copy heading and permalink for Item: Axiom IV: Additive Identity">🔗</a></div>
+</dt>
+<dd>
+<div class="para logical" id="Epilogues-NatureNumbers-2-78-1-5-2">
 <div class="para">There is a number, denoted <span class="process-math">\(0\text{,}\)</span> such that for any number, <span class="process-math">\(x\text{,}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="Epilogues-NatureNumbers-2-78-1-5-2-3">
 \begin{equation*}
 x+0=x\text{.}
 \end{equation*}
 </div>
-</div></dd>
-<dt id="Epilogues-NatureNumbers-2-78-1-6">Axiom V: Multiplicative Identity</dt>
-<dd><div class="para logical" id="Epilogues-NatureNumbers-2-78-1-6-2">
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-78-1-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="Epilogues-NatureNumbers-2-78-1-6">Axiom V: Multiplicative Identity<div class="autopermalink" data-description="Item: Axiom V: Multiplicative Identity"><a href="#Epilogues-NatureNumbers-2-78-1-6" title="Copy heading and permalink for Item: Axiom V: Multiplicative Identity" aria-label="Copy heading and permalink for Item: Axiom V: Multiplicative Identity">🔗</a></div>
+</dt>
+<dd>
+<div class="para logical" id="Epilogues-NatureNumbers-2-78-1-6-2">
 <div class="para">There is a number, denoted <span class="process-math">\(1\text{,}\)</span> such that for any number, <span class="process-math">\(x\text{,}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="Epilogues-NatureNumbers-2-78-1-6-2-3">
 \begin{equation*}
 1\cdot x=x\text{.}
 \end{equation*}
 </div>
-</div></dd>
-<dt id="Epilogues-NatureNumbers-2-78-1-7">Axiom VI: Additive Inverses</dt>
-<dd><div class="para logical" id="Epilogues-NatureNumbers-2-78-1-7-2">
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-78-1-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="Epilogues-NatureNumbers-2-78-1-7">Axiom VI: Additive Inverses<div class="autopermalink" data-description="Item: Axiom VI: Additive Inverses"><a href="#Epilogues-NatureNumbers-2-78-1-7" title="Copy heading and permalink for Item: Axiom VI: Additive Inverses" aria-label="Copy heading and permalink for Item: Axiom VI: Additive Inverses">🔗</a></div>
+</dt>
+<dd>
+<div class="para logical" id="Epilogues-NatureNumbers-2-78-1-7-2">
 <div class="para">Given any number, <span class="process-math">\(x\text{,}\)</span> there is a number, denoted <span class="process-math">\(-x\text{,}\)</span> with the property that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="Epilogues-NatureNumbers-2-78-1-7-2-3">
 \begin{equation*}
 x+(-x)=0\text{.}
 \end{equation*}
 </div>
-</div></dd>
-<dt id="Epilogues-NatureNumbers-2-78-1-8">Axiom VII: Multiplicative Inverse</dt>
-<dd><div class="para logical" id="Epilogues-NatureNumbers-2-78-1-8-2">
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-78-1-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="Epilogues-NatureNumbers-2-78-1-8">Axiom VII: Multiplicative Inverse<div class="autopermalink" data-description="Item: Axiom VII: Multiplicative Inverse"><a href="#Epilogues-NatureNumbers-2-78-1-8" title="Copy heading and permalink for Item: Axiom VII: Multiplicative Inverse" aria-label="Copy heading and permalink for Item: Axiom VII: Multiplicative Inverse">🔗</a></div>
+</dt>
+<dd>
+<div class="para logical" id="Epilogues-NatureNumbers-2-78-1-8-2">
 <div class="para">Given any number, <span class="process-math">\(x\ne0\text{,}\)</span> there is a number, denoted <span class="process-math">\(x^{-1}\text{,}\)</span> with the property that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="Epilogues-NatureNumbers-2-78-1-8-2-3">
 \begin{equation*}
 x\cdot x^{-1} =1\text{.}
 \end{equation*}
 </div>
-</div></dd>
-<dt id="Epilogues-NatureNumbers-2-78-1-9">Axiom VIII: The Distributive Property</dt>
-<dd><div class="para logical" id="Epilogues-NatureNumbers-2-78-1-9-2">
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-78-1-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+<dt id="Epilogues-NatureNumbers-2-78-1-9">Axiom VIII: The Distributive Property<div class="autopermalink" data-description="Item: Axiom VIII: The Distributive Property"><a href="#Epilogues-NatureNumbers-2-78-1-9" title="Copy heading and permalink for Item: Axiom VIII: The Distributive Property" aria-label="Copy heading and permalink for Item: Axiom VIII: The Distributive Property">🔗</a></div>
+</dt>
+<dd>
+<div class="para logical" id="Epilogues-NatureNumbers-2-78-1-9-2">
 <div class="para">If <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> and <span class="process-math">\(z\)</span> are numbers then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="Epilogues-NatureNumbers-2-78-1-9-2-4">
 \begin{equation*}
 x\cdot(y+z) = x\cdot y+x\cdot z\text{.}
 \end{equation*}
 </div>
-</div></dd>
-</dl></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-78-1-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</dd>
+</dl>
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-78" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-79">
-<em class="alert">Sagredo</em>: My friend, this is a thing of surpassing beauty! All seems clear to me now. Numbers are any group of objects which satisfy our axioms. That is, a number is anything that <em class="emphasis">acts</em> like a number.</div>
+<em class="alert">Sagredo</em>: My friend, this is a thing of surpassing beauty! All seems clear to me now. Numbers are any group of objects which satisfy our axioms. That is, a number is anything that <em class="emphasis">acts</em> like a number.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-79" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-80">
-<em class="alert">Salviati</em>:  Yes this seems to be true.</div>
+<em class="alert">Salviati</em>:  Yes this seems to be true.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-80" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-81">
-<em class="alert">Simplicio</em>:  But wait! We have not settled the question: Is <span class="process-math">\(\aleph_0\)</span> a number or not?</div>
+<em class="alert">Simplicio</em>:  But wait! We have not settled the question: Is <span class="process-math">\(\aleph_0\)</span> a number or not?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-81" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-82">
-<em class="alert">Salviati</em>:  If everything we have just done is valid then <span class="process-math">\(\aleph_0\)</span> <em class="emphasis">could be</em> a number. And so could <span class="process-math">\(\aleph_1\text{,}\)</span><span class="process-math">\(\aleph_2 \ldots\)</span> <em class="emphasis">if</em> we can find a way to define addition and multiplication on the set <span class="process-math">\(\left\{\aleph_0, \aleph_1, \aleph_2 \ldots\right\}\)</span> in a manner that agrees with our axioms.</div>
+<em class="alert">Salviati</em>:  If everything we have just done is valid then <span class="process-math">\(\aleph_0\)</span> <em class="emphasis">could be</em> a number. And so could <span class="process-math">\(\aleph_1\text{,}\)</span><span class="process-math">\(\aleph_2 \ldots\)</span> <em class="emphasis">if</em> we can find a way to define addition and multiplication on the set <span class="process-math">\(\left\{\aleph_0, \aleph_1, \aleph_2 \ldots\right\}\)</span> in a manner that agrees with our axioms.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-82" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-83">
-<em class="alert">Sagredo</em>:  An arithmetic of infinities! This is a very strange idea. Can such a thing be made sensible?</div>
+<em class="alert">Sagredo</em>:  An arithmetic of infinities! This is a very strange idea. Can such a thing be made sensible?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-83" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="Epilogues-NatureNumbers-2-84">
-<em class="alert">Simplicio</em>:  Not, I think, before lunch. Shall we retire to our meal?</div></section><section class="subsection" id="Epilogues-NatureNumbers-3"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Additional Problems</span>
+<em class="alert">Simplicio</em>:  Not, I think, before lunch. Shall we retire to our meal?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-2-84" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="Epilogues-NatureNumbers-3">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Additional Problems</span>
 </h3>
 <article class="problem example-like" id="Epilogues-NatureNumbers-3-2"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.1.1</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="Epilogues-NatureNumbers-3-2-2-1">Show that <span class="process-math">\(0\neq 1\text{.}\)</span>
+<div class="para" id="Epilogues-NatureNumbers-3-2-2-1">Show that <span class="process-math">\(0\neq 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="Epilogues-NatureNumbers-3-2-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="Epilogues-NatureNumbers-3-2-3-1">Show that if <span class="process-math">\(x\neq0\text{,}\)</span> then <span class="process-math">\(0\cdot x \neq x\text{.}\)</span>
-</div></div></details></div></article><article class="problem example-like" id="Epilogues-NatureNumbers-3-3"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.1.2</span><span class="period">.</span>
+<div class="solutions">
+<details id="Epilogues-NatureNumbers-3-2-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="Epilogues-NatureNumbers-3-2-3-1">Show that if <span class="process-math">\(x\neq0\text{,}\)</span> then <span class="process-math">\(0\cdot x \neq x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 12.1.1.1"><a href="#Epilogues-NatureNumbers-3-2-3" title="Copy heading and permalink for Hint 12.1.1.1" aria-label="Copy heading and permalink for Hint 12.1.1.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Problem 12.1.1"><a href="#Epilogues-NatureNumbers-3-2" title="Copy heading and permalink for Problem 12.1.1" aria-label="Copy heading and permalink for Problem 12.1.1">🔗</a></div>
+</article>
+<article class="problem example-like" id="Epilogues-NatureNumbers-3-3"><h4 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="introduction" id="Epilogues-NatureNumbers-3-3-2">
-<div class="para" id="Epilogues-NatureNumbers-3-3-2-1">Consider the set of ordered pairs of integers: <span class="process-math">\(\left\{(x,y)|x, y \in \ZZ\right\}\text{,}\)</span> and define addition and multiplication as follows:</div>
-<div class="para logical" id="Epilogues-NatureNumbers-3-3-2-2"><ul class="disc" id="Epilogues-NatureNumbers-3-3-2-2-1">
+<div class="para" id="Epilogues-NatureNumbers-3-3-2-1">Consider the set of ordered pairs of integers: <span class="process-math">\(\left\{(x,y)|x, y \in \ZZ\right\}\text{,}\)</span> and define addition and multiplication as follows:<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Epilogues-NatureNumbers-3-3-2-2">
+<ul class="disc" id="Epilogues-NatureNumbers-3-3-2-2-1">
 <li id="Epilogues-NatureNumbers-3-3-2-2-1-1">
-<span class="heading"><span class="title">Addition:.</span></span><div class="para" id="Epilogues-NatureNumbers-3-3-2-2-1-1-2"><span class="process-math">\(\displaystyle (a,b)+(c,d) = (ad+bc, bd)\)</span></div>
+<span class="heading li--heading"><span class="title li--heading-title">Addition:.</span></span>
+<div class="para" id="Epilogues-NatureNumbers-3-3-2-2-1-1-2">
+<span class="process-math">\(\displaystyle (a,b)+(c,d) = (ad+bc, bd)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-3-2-2-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Addition:"><a href="#Epilogues-NatureNumbers-3-3-2-2-1-1" title="Copy heading and permalink for Item: Addition:" aria-label="Copy heading and permalink for Item: Addition:">🔗</a></div>
 </li>
 <li id="Epilogues-NatureNumbers-3-3-2-2-1-2">
-<span class="heading"><span class="title">Multiplication:.</span></span><div class="para" id="Epilogues-NatureNumbers-3-3-2-2-1-2-2"><span class="process-math">\((a,b)\cdot(c,d) = (ac, bd)\text{.}\)</span></div>
+<span class="heading li--heading"><span class="title li--heading-title">Multiplication:.</span></span>
+<div class="para" id="Epilogues-NatureNumbers-3-3-2-2-1-2-2">
+<span class="process-math">\((a,b)\cdot(c,d) = (ac, bd)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-3-2-2-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Multiplication:"><a href="#Epilogues-NatureNumbers-3-3-2-2-1-2" title="Copy heading and permalink for Item: Multiplication:" aria-label="Copy heading and permalink for Item: Multiplication:">🔗</a></div>
 </li>
-</ul></div>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 </div>
 <article class="task exercise-like" id="Epilogues-NatureNumbers-3-3-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para logical" id="Epilogues-NatureNumbers-3-3-3-1-1">
 <div class="para">If we add the convention that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="Epilogues-NatureNumbers-3-3-3-1-1-1">
 \begin{equation*}
 (ab, ad) = (b,d)
 \end{equation*}
 </div>
 <div class="para">show that this set with these operations forms a number field.</div>
-</div></article><article class="task exercise-like" id="Epilogues-NatureNumbers-3-3-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="Epilogues-NatureNumbers-3-3-4-1">Which number field is this?</div></article></article><article class="problem example-like" id="Epilogues-NatureNumbers-3-4"><h4 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">12.1.3</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 12.1.2.a"><a href="#Epilogues-NatureNumbers-3-3-3" title="Copy heading and permalink for Task 12.1.2.a" aria-label="Copy heading and permalink for Task 12.1.2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="Epilogues-NatureNumbers-3-3-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="Epilogues-NatureNumbers-3-3-4-1">Which number field is this?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 12.1.2.b"><a href="#Epilogues-NatureNumbers-3-3-4" title="Copy heading and permalink for Task 12.1.2.b" aria-label="Copy heading and permalink for Task 12.1.2.b">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 12.1.2"><a href="#Epilogues-NatureNumbers-3-3" title="Copy heading and permalink for Problem 12.1.2" aria-label="Copy heading and permalink for Problem 12.1.2">🔗</a></div>
+</article>
+<article class="problem example-like" id="Epilogues-NatureNumbers-3-4"><h4 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="introduction" id="Epilogues-NatureNumbers-3-4-2">
-<div class="para" id="Epilogues-NatureNumbers-3-4-2-1">Consider the set of ordered pairs of real numbers, <span class="process-math">\(\left\{(x,y)|x, y\in\RR\right\}\text{,}\)</span> and define addition and multiplication as follows:</div>
-<div class="para logical" id="Epilogues-NatureNumbers-3-4-2-2"><ul class="disc" id="Epilogues-NatureNumbers-3-4-2-2-1">
+<div class="para" id="Epilogues-NatureNumbers-3-4-2-1">Consider the set of ordered pairs of real numbers, <span class="process-math">\(\left\{(x,y)|x, y\in\RR\right\}\text{,}\)</span> and define addition and multiplication as follows:<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Epilogues-NatureNumbers-3-4-2-2">
+<ul class="disc" id="Epilogues-NatureNumbers-3-4-2-2-1">
 <li id="Epilogues-NatureNumbers-3-4-2-2-1-1">
-<span class="heading"><span class="title">Addition:.</span></span><div class="para" id="Epilogues-NatureNumbers-3-4-2-2-1-1-2"><span class="process-math">\(\displaystyle (a,b)+(c,d) = (a+c, b+d)\)</span></div>
+<span class="heading li--heading"><span class="title li--heading-title">Addition:.</span></span>
+<div class="para" id="Epilogues-NatureNumbers-3-4-2-2-1-1-2">
+<span class="process-math">\(\displaystyle (a,b)+(c,d) = (a+c, b+d)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-4-2-2-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Addition:"><a href="#Epilogues-NatureNumbers-3-4-2-2-1-1" title="Copy heading and permalink for Item: Addition:" aria-label="Copy heading and permalink for Item: Addition:">🔗</a></div>
 </li>
 <li id="Epilogues-NatureNumbers-3-4-2-2-1-2">
-<span class="heading"><span class="title">Multiplication:.</span></span><div class="para" id="Epilogues-NatureNumbers-3-4-2-2-1-2-2"><span class="process-math">\((a,b)\cdot(c,d) = (ac- bd,ad+bc)\text{.}\)</span></div>
+<span class="heading li--heading"><span class="title li--heading-title">Multiplication:.</span></span>
+<div class="para" id="Epilogues-NatureNumbers-3-4-2-2-1-2-2">
+<span class="process-math">\((a,b)\cdot(c,d) = (ac- bd,ad+bc)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-4-2-2-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Multiplication:"><a href="#Epilogues-NatureNumbers-3-4-2-2-1-2" title="Copy heading and permalink for Item: Multiplication:" aria-label="Copy heading and permalink for Item: Multiplication:">🔗</a></div>
 </li>
-</ul></div>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 </div>
 <article class="task exercise-like" id="Epilogues-NatureNumbers-3-4-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="Epilogues-NatureNumbers-3-4-3-1-1">Show that this set with these operations forms a number field.</div></article><article class="task exercise-like" id="Epilogues-NatureNumbers-3-4-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="Epilogues-NatureNumbers-3-4-4-1-1">Which number field is this?</div></article></article></section></section></div>
-<div class="ptx-content-footer">
+<div class="para" id="Epilogues-NatureNumbers-3-4-3-1-1">Show that this set with these operations forms a number field.<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 12.1.3.a"><a href="#Epilogues-NatureNumbers-3-4-3" title="Copy heading and permalink for Task 12.1.3.a" aria-label="Copy heading and permalink for Task 12.1.3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="Epilogues-NatureNumbers-3-4-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="Epilogues-NatureNumbers-3-4-4-1-1">Which number field is this?<div class="autopermalink" data-description="Paragraph"><a href="#Epilogues-NatureNumbers-3-4-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 12.1.3.b"><a href="#Epilogues-NatureNumbers-3-4-4" title="Copy heading and permalink for Task 12.1.3.b" aria-label="Copy heading and permalink for Task 12.1.3.b">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 12.1.3"><a href="#Epilogues-NatureNumbers-3-4" title="Copy heading and permalink for Problem 12.1.3" aria-label="Copy heading and permalink for Problem 12.1.3">🔗</a></div>
+</article><div class="autopermalink" data-description="Subsection: Additional Problems"><a href="#Epilogues-NatureNumbers-3" title="Copy heading and permalink for Subsection: Additional Problems" aria-label="Copy heading and permalink for Subsection: Additional Problems">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 12.1: On the Nature of Numbers: A Dialogue (with Apologies to Galileo)"><a href="#Epilogues-NatureNumbers" title="Copy heading and permalink for Section 12.1: On the Nature of Numbers: A Dialogue (with Apologies to Galileo)" aria-label="Copy heading and permalink for Section 12.1: On the Nature of Numbers: A Dialogue (with Apologies to Galileo)">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="Epilogues.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Epilogues-BuildRealNumbers.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

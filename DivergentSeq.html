@@ -6,77 +6,35 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Divergence</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
-<meta property="book:author" content="Robert Rogers, (Emeritus)">
-<meta property="book:author" content="Eugene Boman, (Emeritus)">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "extpfeil",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/extpfeil",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js/lib"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="og:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta property="book:title" content="How We Got From There To Here: A Story of Real Analysis">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.42"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -98,31 +56,32 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.6.1';
+eBookConfig.runestone_version = '7.13.7';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c7804631fa963734.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f7a03b209751032d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
+<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.2f713d2360adcee7.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="ASORA.html"><span class="title">How We Got From There To Here: A Story of Real Analysis</span></a></h1>
 <p class="byline">Robert Rogers, (Emeritus), Eugene Boman, (Emeritus)</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="ASORA-6-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
-</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="LimitAsPrimary.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Convergence.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Convergence-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\imp}{\ \Rightarrow\ }
@@ -291,93 +250,217 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="DivergentSeq"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">6.3</span><span class="space"> </span><span class="title">Divergence</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="DivergentSeq">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Divergence</span>
 </h2>
-<div class="para" id="DivergentSeq-2">In <a href="PowerSeriesQuestions-SeriesAnomalies.html#thm_rearrangements" class="xref" data-knowl="./knowl/xref/thm_rearrangements.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.2">Theorem 4.2.2</a> we saw that there is a rearrangment of the alternating Harmonic series which diverges to <span class="process-math">\(\infty\)</span> or <span class="process-math">\(-\infty\text{.}\)</span> In that section we did not fuss over any formal notions of divergence. We assumed instead that you are already familiar with the concept of divergence, probably from taking calculus in the past.</div>
-<div class="para" id="DivergentSeq-3">However we are now in the process of building precise, formal definitions for the concepts we will be using so we define the divergence of a sequence as follows.</div>
+<div class="para" id="DivergentSeq-2">In <a href="PowerSeriesQuestions-SeriesAnomalies.html#thm_rearrangements" class="xref" data-knowl="./knowl/xref/thm_rearrangements.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.2.2">Theorem 4.2.2</a> we saw that there is a rearrangment of the alternating Harmonic series which diverges to <span class="process-math">\(\infty\)</span> or <span class="process-math">\(-\infty\text{.}\)</span> In that section we did not fuss over any formal notions of divergence. We assumed instead that you are already familiar with the concept of divergence, probably from taking calculus in the past.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="DivergentSeq-3">However we are now in the process of building precise, formal definitions for the concepts we will be using so we define the divergence of a sequence as follows.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="thm_divergence_of_a_sequence"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.1</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="thm_divergence_of_a_sequence-1-1"> A sequence of real numbers <span class="process-math">\(\left(s_n\right)_{n=1}^\infty\)</span> diverges if it does not converge to any <span class="process-math">\(a\in\RR\text{.}\)</span>
-</div></article><div class="para" id="DivergentSeq-5">It may seem unnecessarily pedantic of us to insist on formally stating such an obvious definition. After all “converge” and “diverge” are opposites in ordinary English. Why wouldn’t they be mathematically opposite too? Why do we have to go to the trouble of formally defining both of them? Since they are opposites defining one implicitly defines the other doesn’t it?</div>
-<div class="para" id="DivergentSeq-6">One way to answer that criticism is to state that in mathematics we <em class="emphasis">always</em> work from precisely stated definitions and tightly reasoned logical arguments.</div>
-<div class="para" id="DivergentSeq-7">But this is just more pedantry. It is a way of saying, “Because we said so” all dressed up in imposing language. We need to do better than that.</div>
-<div class="para" id="DivergentSeq-8">One reason for providing formal definitions of both convergence and divergence is that in mathematics we frequently co-opt words from natural languages like English and imbue them with mathematical meaning that is only tangentially related to the original English definition. When we take two such words which happen to be opposites in English and give them mathematical meanings which are <em class="emphasis">not</em> opposites it can be very confusing, especially at first.</div>
-<div class="para" id="DivergentSeq-9">This is what happened with the words “open” and “closed.” These are opposites in English: “not open” is “closed,” “not closed” is “open,” and there is nothing which is both open and closed. But recall that an open interval on the real line, <span class="process-math">\((a,b)\text{,}\)</span> is one that does not include <em class="emphasis">either</em> of its endpoints while a closed interval, <span class="process-math">\([a,b]\text{,}\)</span> is one that includes both of them.</div>
-<div class="para" id="DivergentSeq-10">These may seem like opposites at first but they are not.  To see this observe that the interval <span class="process-math">\((a,b]\)</span> is neither open nor closed since it only contains one of its endpoints. If “open” and “closed” were mathematically opposite then <em class="emphasis">every</em> interval would be either open or closed.</div>
-<aside class="aside aside-like" id="DivergentSeq-11"><h3 class="heading"><span class="title">Open Sets vs. Closed Sets.</span></h3>
-<div class="para" id="DivergentSeq-11-2">It is also true that <span class="process-math">\((-\infty,\infty)\)</span> is <em class="emphasis">both</em> open and closed, but an explanation of this would take us too far afield.</div></aside><div class="para" id="DivergentSeq-12">Mathematicians have learned to be extremely careful about this sort of thing. In the case of convergence and divergence of a series, even though these words are actually opposites mathematically (every sequence either converges or diverges and no sequence converges <em class="emphasis">and</em> diverges) it is better to say this explicitly so there can be no confusion.</div>
-<div class="para" id="DivergentSeq-13">A sequence <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\)</span> can only converge to a real number, <span class="process-math">\(a\text{,}\)</span> in one way: by getting arbitrarily close to <span class="process-math">\(a\text{.}\)</span> However there are several ways a sequence might diverge.</div>
+<div class="para" id="thm_divergence_of_a_sequence-1-1"> A sequence of real numbers <span class="process-math">\(\left(s_n\right)_{n=1}^\infty\)</span> diverges if it does not converge to any <span class="process-math">\(a\in\RR\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm_divergence_of_a_sequence-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 6.3.1"><a href="#thm_divergence_of_a_sequence" title="Copy heading and permalink for Definition 6.3.1" aria-label="Copy heading and permalink for Definition 6.3.1">🔗</a></div>
+</article>
+<div class="para" id="DivergentSeq-5">It may seem unnecessarily pedantic of us to insist on formally stating such an obvious definition. After all “converge” and “diverge” are opposites in ordinary English. Why wouldn’t they be mathematically opposite too? Why do we have to go to the trouble of formally defining both of them? Since they are opposites defining one implicitly defines the other doesn’t it?<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="DivergentSeq-6">One way to answer that criticism is to state that in mathematics we <em class="emphasis">always</em> work from precisely stated definitions and tightly reasoned logical arguments.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="DivergentSeq-7">But this is just more pedantry. It is a way of saying, “Because we said so” all dressed up in imposing language. We need to do better than that.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="DivergentSeq-8">One reason for providing formal definitions of both convergence and divergence is that in mathematics we frequently co-opt words from natural languages like English and imbue them with mathematical meaning that is only tangentially related to the original English definition. When we take two such words which happen to be opposites in English and give them mathematical meanings which are <em class="emphasis">not</em> opposites it can be very confusing, especially at first.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="DivergentSeq-9">This is what happened with the words “open” and “closed.” These are opposites in English: “not open” is “closed,” “not closed” is “open,” and there is nothing which is both open and closed. But recall that an open interval on the real line, <span class="process-math">\((a,b)\text{,}\)</span> is one that does not include <em class="emphasis">either</em> of its endpoints while a closed interval, <span class="process-math">\([a,b]\text{,}\)</span> is one that includes both of them.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="DivergentSeq-10">These may seem like opposites at first but they are not.  To see this observe that the interval <span class="process-math">\((a,b]\)</span> is neither open nor closed since it only contains one of its endpoints. If “open” and “closed” were mathematically opposite then <em class="emphasis">every</em> interval would be either open or closed.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="DivergentSeq-11" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Aside<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Open Sets vs. Closed Sets.</span>
+</h3></summary>
+<aside class="aside aside-like knowl__content">
+<div class="para" id="DivergentSeq-11-2">It is also true that <span class="process-math">\((-\infty,\infty)\)</span> is <em class="emphasis">both</em> open and closed, but an explanation of this would take us too far afield.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</aside></details>
+<div class="para" id="DivergentSeq-12">Mathematicians have learned to be extremely careful about this sort of thing. In the case of convergence and divergence of a series, even though these words are actually opposites mathematically (every sequence either converges or diverges and no sequence converges <em class="emphasis">and</em> diverges) it is better to say this explicitly so there can be no confusion.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="DivergentSeq-13">A sequence <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\)</span> can only converge to a real number, <span class="process-math">\(a\text{,}\)</span> in one way: by getting arbitrarily close to <span class="process-math">\(a\text{.}\)</span> However there are several ways a sequence might diverge.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="example example-like" id="DivergentSeq-14"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3.2</span><span class="period">.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="DivergentSeq-14-1-1">Consider the sequence, <span class="process-math">\(\left(n\right)_{n=1}^\infty\text{.}\)</span> This clearly diverges by getting larger and larger <span class="process-math">\(\ldots\)</span> Ooops! Let’s be careful. The sequence <span class="process-math">\(\left(1-\frac1n\right)_{n=1}^\infty\)</span> gets larger and larger too, but it converges. What we meant to say was that the terms of the sequence <span class="process-math">\(\left(n\right)_{n=1}^\infty\)</span> become <em class="emphasis">arbitrarily</em> large as <span class="process-math">\(n\)</span> increases.</div> <div class="para" id="DivergentSeq-14-1-2">This is clearly a divergent sequence but it may not be clear how to prove this formally. Here’s one way.</div> <div class="para" id="DivergentSeq-14-1-3">To show divergence we must show that the sequence satisfies the <em class="emphasis">negation</em> of the definition of convergence. That is, we must show that for every <span class="process-math">\(r\in\RR\)</span> there is an <span class="process-math">\(\eps&gt;0\)</span> such that for every <span class="process-math">\(N\in\RR\text{,}\)</span> there is an <span class="process-math">\(n&gt;N\)</span> with <span class="process-math">\(\left|n-r\right|\ge\eps\text{.}\)</span>
-</div> <div class="para" id="DivergentSeq-14-1-4">So let <span class="process-math">\(\eps=1\text{,}\)</span> and let <span class="process-math">\(r\in\RR\)</span> be given. Let <span class="process-math">\(N=r+2\text{.}\)</span> Then for every <span class="process-math">\(n&gt;N\)</span> <span class="process-math">\(\abs{n-r} &gt; \abs{(r+2)-r}=2&gt;1\text{.}\)</span> Therefore the sequence diverges.</div></article><div class="para" id="DivergentSeq-15">This seems to have been rather more work than we should have to do for such a simple problem. Here’s another way which highlights this particular type of divergence.</div>
-<div class="para" id="DivergentSeq-16">First we’ll need a new definition:</div>
+<div class="para" id="DivergentSeq-14-1-1">Consider the sequence, <span class="process-math">\(\left(n\right)_{n=1}^\infty\text{.}\)</span> This clearly diverges by getting larger and larger <span class="process-math">\(\ldots\)</span> Ooops! Let’s be careful. The sequence <span class="process-math">\(\left(1-\frac1n\right)_{n=1}^\infty\)</span> gets larger and larger too, but it converges. What we meant to say was that the terms of the sequence <span class="process-math">\(\left(n\right)_{n=1}^\infty\)</span> become <em class="emphasis">arbitrarily</em> large as <span class="process-math">\(n\)</span> increases.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="DivergentSeq-14-1-2">This is clearly a divergent sequence but it may not be clear how to prove this formally. Here’s one way.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-14-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="DivergentSeq-14-1-3">To show divergence we must show that the sequence satisfies the <em class="emphasis">negation</em> of the definition of convergence. That is, we must show that for every <span class="process-math">\(r\in\RR\)</span> there is an <span class="process-math">\(\eps&gt;0\)</span> such that for every <span class="process-math">\(N\in\RR\text{,}\)</span> there is an <span class="process-math">\(n&gt;N\)</span> with <span class="process-math">\(\left|n-r\right|\ge\eps\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-14-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="DivergentSeq-14-1-4">So let <span class="process-math">\(\eps=1\text{,}\)</span> and let <span class="process-math">\(r\in\RR\)</span> be given. Let <span class="process-math">\(N=r+2\text{.}\)</span> Then for every <span class="process-math">\(n&gt;N\)</span> <span class="process-math">\(\abs{n-r} &gt; \abs{(r+2)-r}=2&gt;1\text{.}\)</span> Therefore the sequence diverges.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-14-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 6.3.2"><a href="#DivergentSeq-14" title="Copy heading and permalink for Example 6.3.2" aria-label="Copy heading and permalink for Example 6.3.2">🔗</a></div>
+</article>
+<div class="para" id="DivergentSeq-15">This seems to have been rather more work than we should have to do for such a simple problem. Here’s another way which highlights this particular type of divergence.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="DivergentSeq-16">First we’ll need a new definition:<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="def_DivToInf"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.3.3</span><span class="period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="def_DivToInf-1-1"> A sequence, <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\text{,}\)</span> <dfn class="terminology">diverges to positive infinity</dfn> if for every real number <span class="process-math">\(r\text{,}\)</span> there is a real number <span class="process-math">\(N\)</span> such that <span class="process-math">\(n&gt;N\imp a_n&gt;r\text{.}\)</span>
-</div> <div class="para" id="def_DivToInf-1-2"> A sequence, <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\text{,}\)</span> <dfn class="terminology">diverges to negative infinity</dfn> if for every real number <span class="process-math">\(r\text{,}\)</span> there is a real number <span class="process-math">\(N\)</span> such that <span class="process-math">\(n&gt;N\imp a_n\lt r\text{.}\)</span>
-</div> <div class="para" id="def_DivToInf-1-3"> A sequence is said to <dfn class="terminology">diverge to infinity</dfn> if it diverges to either positive or negative infinity.</div></article><div class="para" id="DivergentSeq-18">In practice we want to think of <span class="process-math">\(\abs{r}\)</span> as a very large number. This definition says that a sequence diverges to infinity if it becomes arbitrarily large as <span class="process-math">\(n\)</span> increases, and similarly for divergence to negative infinity.</div>
+<div class="para" id="def_DivToInf-1-1"> A sequence, <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\text{,}\)</span> <dfn class="terminology">diverges to positive infinity</dfn> if for every real number <span class="process-math">\(r\text{,}\)</span> there is a real number <span class="process-math">\(N\)</span> such that <span class="process-math">\(n&gt;N\imp a_n&gt;r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def_DivToInf-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="def_DivToInf-1-2"> A sequence, <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\text{,}\)</span> <dfn class="terminology">diverges to negative infinity</dfn> if for every real number <span class="process-math">\(r\text{,}\)</span> there is a real number <span class="process-math">\(N\)</span> such that <span class="process-math">\(n&gt;N\imp a_n\lt r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def_DivToInf-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="def_DivToInf-1-3"> A sequence is said to <dfn class="terminology">diverge to infinity</dfn> if it diverges to either positive or negative infinity.<div class="autopermalink" data-description="Paragraph"><a href="#def_DivToInf-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 6.3.3"><a href="#def_DivToInf" title="Copy heading and permalink for Definition 6.3.3" aria-label="Copy heading and permalink for Definition 6.3.3">🔗</a></div>
+</article>
+<div class="para" id="DivergentSeq-18">In practice we want to think of <span class="process-math">\(\abs{r}\)</span> as a very large number. This definition says that a sequence diverges to infinity if it becomes arbitrarily large as <span class="process-math">\(n\)</span> increases, and similarly for divergence to negative infinity.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="problem example-like" id="DivergentSeq-19"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.3.4</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="DivergentSeq-19-1-1"> Show that <span class="process-math">\(\left(n\right)_{n=1}^\infty\)</span> diverges to infinity.</div></article><article class="problem example-like" id="DivergentSeq-20"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.3.5</span><span class="period">.</span>
+<div class="para" id="DivergentSeq-19-1-1"> Show that <span class="process-math">\(\left(n\right)_{n=1}^\infty\)</span> diverges to infinity.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 6.3.4"><a href="#DivergentSeq-19" title="Copy heading and permalink for Problem 6.3.4" aria-label="Copy heading and permalink for Problem 6.3.4">🔗</a></div>
+</article>
+<article class="problem example-like" id="DivergentSeq-20"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="DivergentSeq-20-1-1"> Show that if <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\)</span> diverges to infinity then <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\)</span> diverges.</div></article><div class="para logical" id="DivergentSeq-21">
+<div class="para" id="DivergentSeq-20-1-1"> Show that if <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\)</span> diverges to infinity then <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\)</span> diverges.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 6.3.5"><a href="#DivergentSeq-20" title="Copy heading and permalink for Problem 6.3.5" aria-label="Copy heading and permalink for Problem 6.3.5">🔗</a></div>
+</article>
+<div class="para logical" id="DivergentSeq-21">
 <div class="para">We will denote divergence to infinity as</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="DivergentSeq-21-1">
 \begin{equation*}
 \limit{n}{\infty}{a_n}=\pm\infty\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="DivergentSeq-22">However, strictly speaking this is an abuse of notation since the symbol <span class="process-math">\(\infty\)</span> does not represent a real number. This notation can be very problematic since it looks so much like the notation we use to denote convergence: <span class="process-math">\(\limit{n}{\infty}{a_n}=a\text{.}\)</span>
+<div class="para" id="DivergentSeq-22">However, strictly speaking this is an abuse of notation since the symbol <span class="process-math">\(\infty\)</span> does not represent a real number. This notation can be very problematic since it looks so much like the notation we use to denote convergence: <span class="process-math">\(\limit{n}{\infty}{a_n}=a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="DivergentSeq-23">Nevertheless, the notation is appropriate because divergence to infinity is “nice” divergence in the sense that it shares many of the properties of convergence, as the next problem shows.</div>
+<div class="para" id="DivergentSeq-23">Nevertheless, the notation is appropriate because divergence to infinity is “nice” divergence in the sense that it shares many of the properties of convergence, as the next problem shows.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="problem example-like" id="DivergentSeq-24"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.3.6</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="DivergentSeq-24-2"><div class="para" id="DivergentSeq-24-2-1">Suppose <span class="process-math">\(\limit{n}{\infty}{a_n}=\infty\)</span> and <span class="process-math">\(\limit{n}{\infty}{b_n}=\infty\text{.}\)</span>
-</div></div>
+<div class="introduction" id="DivergentSeq-24-2">
+<div class="para" id="DivergentSeq-24-2-1">Suppose <span class="process-math">\(\limit{n}{\infty}{a_n}=\infty\)</span> and <span class="process-math">\(\limit{n}{\infty}{b_n}=\infty\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-24-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="DivergentSeq-24-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="DivergentSeq-24-3-1-1">Show that <span class="process-math">\(\limit{n}{\infty}{a_n+b_n}=\infty\)</span>
-</div></article><article class="task exercise-like" id="DivergentSeq-24-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="DivergentSeq-24-4-1-1">Show that <span class="process-math">\(\limit{n}{\infty}{a_nb_n}=\infty\)</span>
-</div></article><article class="task exercise-like" id="DivergentSeq-24-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="DivergentSeq-24-5-1-1">Is it true that <span class="process-math">\(\limit{n}{\infty}{\frac{a_n}{b_n}}=\infty?\)</span> Explain.</div></article></article><div class="para" id="DivergentSeq-25">Because divergence to positive or negative infinity shares some of the properties of convergence it is easy to get careless with it.  Remember that even though we write <span class="process-math">\(\limit{n}{\infty}{a_n}=\infty\)</span> this is still a divergent sequence in the sense that <span class="process-math">\(\limit{n}{\infty}{a_n}\)</span> does not exist.  The symbol <span class="process-math">\(\infty\)</span> does not represent a real number.  This is just a convenient notational shorthand telling us that the sequence diverges by becoming arbitrarily large.</div>
+<div class="para" id="DivergentSeq-24-3-1-1">Show that <span class="process-math">\(\limit{n}{\infty}{a_n+b_n}=\infty\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-24-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.3.6.a"><a href="#DivergentSeq-24-3" title="Copy heading and permalink for Task 6.3.6.a" aria-label="Copy heading and permalink for Task 6.3.6.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="DivergentSeq-24-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="DivergentSeq-24-4-1-1">Show that <span class="process-math">\(\limit{n}{\infty}{a_nb_n}=\infty\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-24-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.3.6.b"><a href="#DivergentSeq-24-4" title="Copy heading and permalink for Task 6.3.6.b" aria-label="Copy heading and permalink for Task 6.3.6.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="DivergentSeq-24-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="DivergentSeq-24-5-1-1">Is it true that <span class="process-math">\(\limit{n}{\infty}{\frac{a_n}{b_n}}=\infty?\)</span> Explain.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-24-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.3.6.c"><a href="#DivergentSeq-24-5" title="Copy heading and permalink for Task 6.3.6.c" aria-label="Copy heading and permalink for Task 6.3.6.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 6.3.6"><a href="#DivergentSeq-24" title="Copy heading and permalink for Problem 6.3.6" aria-label="Copy heading and permalink for Problem 6.3.6">🔗</a></div>
+</article>
+<div class="para" id="DivergentSeq-25">Because divergence to positive or negative infinity shares some of the properties of convergence it is easy to get careless with it.  Remember that even though we write <span class="process-math">\(\limit{n}{\infty}{a_n}=\infty\)</span> this is still a divergent sequence in the sense that <span class="process-math">\(\limit{n}{\infty}{a_n}\)</span> does not exist.  The symbol <span class="process-math">\(\infty\)</span> does not represent a real number.  This is just a convenient notational shorthand telling us that the sequence diverges by becoming arbitrarily large.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="problem example-like" id="DivergentSeq-26"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.3.7</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="DivergentSeq-26-2"><div class="para" id="DivergentSeq-26-2-1">Suppose <span class="process-math">\(\limit{n}{\infty}{a_n}=\infty\)</span> and <span class="process-math">\(\limit{n}{\infty}{b_n}=-\infty\)</span> and <span class="process-math">\(\alpha\in\RR\text{.}\)</span>  Prove or give a counterexample:</div></div>
+<div class="introduction" id="DivergentSeq-26-2">
+<div class="para" id="DivergentSeq-26-2-1">Suppose <span class="process-math">\(\limit{n}{\infty}{a_n}=\infty\)</span> and <span class="process-math">\(\limit{n}{\infty}{b_n}=-\infty\)</span> and <span class="process-math">\(\alpha\in\RR\text{.}\)</span>  Prove or give a counterexample:<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-26-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="DivergentSeq-26-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="DivergentSeq-26-3-1-1"><span class="process-math">\(\limit{n}{\infty}{a_n+b_n}=\infty\)</span></div></article><article class="task exercise-like" id="DivergentSeq-26-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="DivergentSeq-26-4-1-1"><span class="process-math">\(\limit{n}{\infty}{a_nb_n}=-\infty\)</span></div></article><article class="task exercise-like" id="DivergentSeq-26-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="DivergentSeq-26-5-1-1"><span class="process-math">\(\limit{n}{\infty}{\alpha a_n}=\infty\)</span></div></article><article class="task exercise-like" id="DivergentSeq-26-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="DivergentSeq-26-6-1-1"><span class="process-math">\(\limit{n}{\infty}{\alpha b_n}=-\infty\)</span></div></article></article><div class="para" id="DivergentSeq-27">Finally, a sequence can diverge in other ways as the following problem displays.</div>
+<div class="para" id="DivergentSeq-26-3-1-1">
+<span class="process-math">\(\limit{n}{\infty}{a_n+b_n}=\infty\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-26-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.3.7.a"><a href="#DivergentSeq-26-3" title="Copy heading and permalink for Task 6.3.7.a" aria-label="Copy heading and permalink for Task 6.3.7.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="DivergentSeq-26-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="DivergentSeq-26-4-1-1">
+<span class="process-math">\(\limit{n}{\infty}{a_nb_n}=-\infty\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-26-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.3.7.b"><a href="#DivergentSeq-26-4" title="Copy heading and permalink for Task 6.3.7.b" aria-label="Copy heading and permalink for Task 6.3.7.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="DivergentSeq-26-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="DivergentSeq-26-5-1-1">
+<span class="process-math">\(\limit{n}{\infty}{\alpha a_n}=\infty\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-26-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.3.7.c"><a href="#DivergentSeq-26-5" title="Copy heading and permalink for Task 6.3.7.c" aria-label="Copy heading and permalink for Task 6.3.7.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="DivergentSeq-26-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="DivergentSeq-26-6-1-1">
+<span class="process-math">\(\limit{n}{\infty}{\alpha b_n}=-\infty\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-26-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.3.7.d"><a href="#DivergentSeq-26-6" title="Copy heading and permalink for Task 6.3.7.d" aria-label="Copy heading and permalink for Task 6.3.7.d">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 6.3.7"><a href="#DivergentSeq-26" title="Copy heading and permalink for Problem 6.3.7" aria-label="Copy heading and permalink for Problem 6.3.7">🔗</a></div>
+</article>
+<div class="para" id="DivergentSeq-27">Finally, a sequence can diverge in other ways as the following problem displays.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="problem example-like" id="DivergentSeq-28"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.3.8</span><span class="period">.</span>
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="DivergentSeq-28-3"><div class="para" id="DivergentSeq-28-3-1">Show that each of the following sequences diverge.</div></div>
+<div class="introduction" id="DivergentSeq-28-3">
+<div class="para" id="DivergentSeq-28-3-1">Show that each of the following sequences diverge.<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-28-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="DivergentSeq-28-4"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="DivergentSeq-28-4-1-1"><span class="process-math">\(\left(\left(-1\right)^n\right)_{n=1}^\infty\)</span></div></article><article class="task exercise-like" id="DivergentSeq-28-5"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="DivergentSeq-28-5-1-1"><span class="process-math">\(\left(\left(-1\right)^nn\right)_{n=1}^\infty\)</span></div></article><article class="task exercise-like" id="DivergentSeq-28-6"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="DivergentSeq-28-6-1-1"><span class="process-math">\(a_n = \begin{cases}1\amp \text{ if \(n=2^p\) for some \(p\in\NN\) } \\ \frac1n\amp \text{ otherwise. } \end{cases}\)</span></div></article></article><article class="problem example-like" id="DivergentSeq-29"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.3.9</span><span class="period">.</span>
+<div class="para" id="DivergentSeq-28-4-1-1">
+<span class="process-math">\(\left(\left(-1\right)^n\right)_{n=1}^\infty\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-28-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.3.8.a"><a href="#DivergentSeq-28-4" title="Copy heading and permalink for Task 6.3.8.a" aria-label="Copy heading and permalink for Task 6.3.8.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="DivergentSeq-28-5"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="DivergentSeq-28-5-1-1">
+<span class="process-math">\(\left(\left(-1\right)^nn\right)_{n=1}^\infty\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-28-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.3.8.b"><a href="#DivergentSeq-28-5" title="Copy heading and permalink for Task 6.3.8.b" aria-label="Copy heading and permalink for Task 6.3.8.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="DivergentSeq-28-6"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="DivergentSeq-28-6-1-1">
+<span class="process-math">\(a_n = \begin{cases}1\amp \text{ if \(n=2^p\) for some \(p\in\NN\) } \\ \frac1n\amp \text{ otherwise. } \end{cases}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-28-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.3.8.c"><a href="#DivergentSeq-28-6" title="Copy heading and permalink for Task 6.3.8.c" aria-label="Copy heading and permalink for Task 6.3.8.c">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 6.3.8"><a href="#DivergentSeq-28" title="Copy heading and permalink for Problem 6.3.8" aria-label="Copy heading and permalink for Problem 6.3.8">🔗</a></div>
+</article>
+<article class="problem example-like" id="DivergentSeq-29"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="introduction" id="DivergentSeq-29-2"><div class="para" id="DivergentSeq-29-2-1">Suppose that <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\)</span> diverges but not to infinity and that <span class="process-math">\(\alpha\)</span> is a real number. What conditions on <span class="process-math">\(\alpha\)</span> will guarantee that:</div></div>
+<div class="introduction" id="DivergentSeq-29-2">
+<div class="para" id="DivergentSeq-29-2-1">Suppose that <span class="process-math">\(\left(a_n\right)_{n=1}^\infty\)</span> diverges but not to infinity and that <span class="process-math">\(\alpha\)</span> is a real number. What conditions on <span class="process-math">\(\alpha\)</span> will guarantee that:<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-29-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="DivergentSeq-29-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="DivergentSeq-29-3-1-1">
-<span class="process-math">\(\left(\alpha a_n\right)_{n=1}^\infty\)</span> converges?</div></article><article class="task exercise-like" id="DivergentSeq-29-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<span class="process-math">\(\left(\alpha a_n\right)_{n=1}^\infty\)</span> converges?<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-29-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.3.9.a"><a href="#DivergentSeq-29-3" title="Copy heading and permalink for Task 6.3.9.a" aria-label="Copy heading and permalink for Task 6.3.9.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="DivergentSeq-29-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="DivergentSeq-29-4-1-1">
-<span class="process-math">\(\left(\alpha a_n\right)_{n=1}^\infty\)</span> diverges?</div></article></article><article class="problem example-like" id="DivergentSeq-30"><h3 class="heading">
-<span class="type">Problem</span><span class="space"> </span><span class="codenumber">6.3.10</span><span class="period">.</span>
+<span class="process-math">\(\left(\alpha a_n\right)_{n=1}^\infty\)</span> diverges?<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-29-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.3.9.b"><a href="#DivergentSeq-29-4" title="Copy heading and permalink for Task 6.3.9.b" aria-label="Copy heading and permalink for Task 6.3.9.b">🔗</a></div>
+</article><div class="autopermalink" data-description="Problem 6.3.9"><a href="#DivergentSeq-29" title="Copy heading and permalink for Problem 6.3.9" aria-label="Copy heading and permalink for Problem 6.3.9">🔗</a></div>
+</article>
+<article class="problem example-like" id="DivergentSeq-30"><h3 class="heading">
+<span class="type">Problem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="DivergentSeq-30-3-1">Show that if <span class="process-math">\(\abs{r}&gt;1\)</span> then <span class="process-math">\(\left(r^n\right)_{n=1}^\infty\)</span> diverges.  Will it diverge to infinity?</div></article></section></div>
-<div class="ptx-content-footer">
+<div class="para" id="DivergentSeq-30-3-1">Show that if <span class="process-math">\(\abs{r}&gt;1\)</span> then <span class="process-math">\(\left(r^n\right)_{n=1}^\infty\)</span> diverges.  Will it diverge to infinity?<div class="autopermalink" data-description="Paragraph"><a href="#DivergentSeq-30-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Problem 6.3.10"><a href="#DivergentSeq-30" title="Copy heading and permalink for Problem 6.3.10" aria-label="Copy heading and permalink for Problem 6.3.10">🔗</a></div>
+</article><div class="autopermalink" data-description="Section 6.3: Divergence"><a href="#DivergentSeq" title="Copy heading and permalink for Section 6.3: Divergence" aria-label="Copy heading and permalink for Section 6.3: Divergence">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="LimitAsPrimary.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Convergence-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
